@@ -34,6 +34,8 @@ It does not issue careless truth verdicts.
 
 It does not accuse individuals or institutions.
 
+Evidence-risk classification is not a judgment about the person, institution, brand, organization, or event connected to the evidence.
+
 It does not claim absolute detection.
 
 It provides a governed framework for examining evidence before belief, action, publication, escalation, or institutional response.

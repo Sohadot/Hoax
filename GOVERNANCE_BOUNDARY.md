@@ -92,3 +92,24 @@ Approved framing:
 ## Governance Rule
 
 **Hoax.ai classifies evidence posture only. It does not perform the verdict.**
+
+## Artifact–Subject Separation Doctrine
+
+Hoax.ai classifies evidence artifacts. It does not classify the people, institutions, brands, organizations, or events connected to those artifacts.
+
+An artifact is a discrete item of digital evidence: an image, video, audio recording, document, screenshot, source record, claim record, or media object.
+
+A high-risk evidence posture on an artifact is a statement about the artifact's evidentiary condition: its provenance, coherence, verifiability, source confidence, contextual stability, and risk signals.
+
+It is not, and must never be presented as:
+
+- a statement that a connected person is deceptive, guilty, dishonest, or involved;
+- a statement that a connected institution acted in bad faith;
+- a statement that a connected event did or did not occur;
+- a legal, factual, moral, or reputational judgment about the subject.
+
+A weak, unstable, or high-risk evidence artifact connected to a person does not transfer that weakness to the person.
+
+Evidence about evidence is not evidence about people.
+
+Where an artifact depicts or references an identifiable subject, Hoax.ai confines its classification to the artifact's evidentiary condition and explicitly declines to characterize the subject.

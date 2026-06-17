@@ -16,6 +16,8 @@ Hoax.ai may claim:
 
 This means the asset is designed to classify evidence posture, synthetic risk signals, source confidence, contextual gaps, and deception patterns.
 
+All Hoax.ai claims are bounded by the Artifact–Subject Separation Doctrine. Evidence-risk classification applies to artifacts and evidence chains only, not to the person, institution, brand, organization, or event connected to them. See DEC-012 and GOVERNANCE_BOUNDARY.md.
+
 ## Approved Claim Types
 
 Hoax.ai may state that it:
@@ -43,7 +45,10 @@ Hoax.ai must not claim that it:
 - determines legal truth;
 - makes final judgments about people or institutions;
 - replaces journalists, investigators, courts, legal teams, or forensic experts;
-- or provides absolute certainty.
+- or provides absolute certainty;
+- any language that converts evidence risk into subject accusation;
+- any language implying guilt, intent, deception, dishonesty, fraud, or involvement by association;
+- any output that allows artifact risk to be read as a judgment about a person or institution.
 
 ## Restricted Claim Terms
 

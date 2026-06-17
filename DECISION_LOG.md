@@ -285,3 +285,31 @@ The surface is thesis-first, not product-first. It communicates evidence posture
 The first public surface is live on GitHub Pages before domain connection.
 
 Sprint 2 may proceed: Evidence Posture Taxonomy.
+
+---
+
+## DEC-012 — Classify the Artifact, Not the Subject
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai classifies the evidence artifact, not the person, institution, brand, organization, or event connected to it.
+
+This decision extends DEC-001 and DEC-002.
+
+### Rationale
+
+The primary legal and conceptual risk is not only explicit accusation.
+
+The deeper risk is implied accusation through association: classifying an evidence artifact connected to a person or institution as high-risk may lead readers to infer involvement, deception, guilt, or misconduct.
+
+Hoax.ai must prevent that interpretation from the beginning.
+
+### Implications
+
+- All classifications apply to the evidence artifact or evidence chain only.
+- Evidence posture, synthetic risk, provenance, source confidence, contextual uncertainty, and forensic coherence describe the condition of the artifact or evidence chain.
+- Public outputs must not state or imply that a classified artifact establishes intent, guilt, dishonesty, fraud, misconduct, deception, or involvement by any connected subject.
+- This boundary governs all future taxonomy, classifier outputs, reference pages, interface language, reports, and monetization products.
