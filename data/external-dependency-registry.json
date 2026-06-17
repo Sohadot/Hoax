@@ -1,0 +1,36 @@
+{
+  "registry_id": "EXTERNAL-DEPENDENCY-REGISTRY-001",
+  "name": "Hoax.ai External Dependency Registry",
+  "version": "v1.0.0",
+  "status": "active",
+  "approved_dependencies": [
+    {
+      "dependency_id": "DEP-LOCAL-0001",
+      "name": "styles.css",
+      "type": "first_party_local",
+      "location": "styles.css",
+      "status": "approved",
+      "notes": "Local first-party stylesheet. No remote import."
+    },
+    {
+      "dependency_id": "DEP-LOCAL-0002",
+      "name": "index.html",
+      "type": "first_party_local",
+      "location": "index.html",
+      "status": "approved",
+      "notes": "Local first-party thesis surface. No external scripts."
+    }
+  ],
+  "blocked_dependency_types": [
+    "external JavaScript",
+    "analytics scripts",
+    "tracking pixels",
+    "third-party embeds",
+    "CDN UI libraries",
+    "remote fonts",
+    "payment widgets",
+    "social widgets",
+    "external API clients"
+  ],
+  "last_reviewed": "2026-06-17"
+}

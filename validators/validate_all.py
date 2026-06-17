@@ -12,6 +12,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_factory_foundation.py",
     ROOT / "validators" / "validate_adversarial_enforcement.py",
     ROOT / "validators" / "validate_interface_governance.py",
+    ROOT / "validators" / "validate_security_privacy_boundary.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

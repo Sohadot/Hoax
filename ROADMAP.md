@@ -401,19 +401,52 @@ External deployment remains deferred (Sprint 1C). Interface governance is not_pu
 
 ## Sprint 9 — Security and Privacy Boundary v1
 
-**Status:** READY — G8 passed  
-**Goal:** Define security and privacy boundaries before any future interaction or deployment expansion.
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Define and enforce the zero-data, static-first, no-interaction security posture before any future tool, form, upload, analytics, API, or external dependency exists.
 
 ### Deliverables
 
-- security and privacy boundary governance (future — not in current scope)
+- SECURITY_PRIVACY_BOUNDARY.md
+- data/security-privacy-boundary.json
+- data/interaction-permission-registry.json
+- data/external-dependency-registry.json
+- validators/validate_security_privacy_boundary.py
+- SPRINT_9_SECURITY_PRIVACY_BOUNDARY_AUDIT.md
+- DEC-024 appended to DECISION_LOG.md
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Security/Privacy Scope
+
+- 10 interaction permissions (PERMISSION-0001 allowed; PERMISSION-0002–0010 blocked)
+- Zero-data static foundation maturity
+- External dependency registry (first-party local only)
+- No form, upload, analytics, cookie, API, or public tool created
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Security boundary is zero_data_static_foundation.
+
+---
+
+## Sprint 10 — Link and Route Integrity Hardening v1
+
+**Status:** READY — G9 passed  
+**Goal:** Harden link and route integrity across the repository public surface without adding routes or deployment expansion.
+
+### Deliverables
+
+- link and route integrity hardening (future — not in current scope)
 - no public classifier page
 - no upload workflow
 - no deployment expansion
 
 ### Required Principle
 
-Security and privacy boundaries must exist before future interaction. Public classifier remains blocked.
+Route integrity must be validated before reference expansion. Public classifier remains blocked.
 
 ---
 

@@ -134,6 +134,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Governed internal interface standard. Not a public tool or classifier."
+    },
+    {
+      "claim_id": "CLAIM-0013",
+      "claim_text": "Hoax.ai has adopted Security and Privacy Boundary v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "SECURITY_PRIVACY_BOUNDARY.md, DECISION_LOG.md (DEC-024)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Zero-data static foundation. No forms, uploads, analytics, or external scripts."
     }
   ]
 }

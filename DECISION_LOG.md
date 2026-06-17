@@ -592,3 +592,27 @@ For Hoax.ai, interface risk is governance risk. A visually impressive interface 
 - Existing public surface sections must be mapped to interface governance.
 - Visual language must express evidence layers, uncertainty, posture, source chain, and boundaries.
 - Interface validation becomes part of validate_all.py.
+
+---
+
+## DEC-024 — Security and Privacy Boundary v1 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Security and Privacy Boundary v1 to enforce a static-first, zero-data, no-upload, no-form, no-analytics, no-external-script posture until future interaction layers are separately governed, validated, and approved.
+
+### Rationale
+
+Hoax.ai is a trust-focused asset. Any collection of user data, file upload, tracking, analytics, API interaction, or third-party dependency before explicit governance would weaken trust and create unnecessary technical, privacy, legal, and reputational risk.
+
+### Implications
+
+- No forms may be added without a future interaction permission decision.
+- No uploads may be added without a future upload security model.
+- No analytics may be added without a privacy and measurement policy.
+- No cookies, local storage, tracking pixels, or external scripts may be added without explicit approval.
+- No public engine, classifier, or API may launch before security/privacy gates pass.
+- validate_all.py must fail if forbidden interaction patterns appear.

@@ -322,6 +322,56 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Interface embodiment governance validator."
+    },
+    {
+      "source_id": "SOURCE-0033",
+      "source_title": "SECURITY_PRIVACY_BOUNDARY.md",
+      "source_type": "internal_governance",
+      "location": "SECURITY_PRIVACY_BOUNDARY.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Human-readable Security and Privacy Boundary per DEC-024."
+    },
+    {
+      "source_id": "SOURCE-0034",
+      "source_title": "data/security-privacy-boundary.json",
+      "source_type": "internal_registry",
+      "location": "data/security-privacy-boundary.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Machine-readable security/privacy boundary. zero_data_static_foundation."
+    },
+    {
+      "source_id": "SOURCE-0035",
+      "source_title": "data/interaction-permission-registry.json",
+      "source_type": "internal_registry",
+      "location": "data/interaction-permission-registry.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Interaction permission registry. PERMISSION-0001 allowed; others blocked."
+    },
+    {
+      "source_id": "SOURCE-0036",
+      "source_title": "data/external-dependency-registry.json",
+      "source_type": "internal_registry",
+      "location": "data/external-dependency-registry.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "External dependency registry. First-party local only."
+    },
+    {
+      "source_id": "SOURCE-0037",
+      "source_title": "validators/validate_security_privacy_boundary.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_security_privacy_boundary.py",
+      "supports": ["operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Security and privacy boundary validator."
     }
   ]
 }

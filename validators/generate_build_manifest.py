@@ -17,6 +17,7 @@ GOVERNANCE_FILES = [
     "ADVERSARIAL_ENFORCEMENT_HARNESS.md",
     "INTERFACE_EMBODIMENT_GOVERNANCE.md",
     "INTERFACE_THESIS.md",
+    "SECURITY_PRIVACY_BOUNDARY.md",
     "INTERNAL_ENGINE_MODEL.md",
     "OUTPUT_BOUNDARY_SCHEMA.md",
     "EVIDENCE_POSTURE_CLASSIFICATION_PROTOCOL.md",
@@ -47,6 +48,9 @@ DATA_FILES = [
     "data/interface-grammar.json",
     "data/interface-component-registry.json",
     "data/interface-surface-map.json",
+    "data/security-privacy-boundary.json",
+    "data/interaction-permission-registry.json",
+    "data/external-dependency-registry.json",
 ]
 
 VALIDATORS = [
@@ -54,6 +58,7 @@ VALIDATORS = [
     "validators/validate_factory_foundation.py",
     "validators/validate_adversarial_enforcement.py",
     "validators/validate_interface_governance.py",
+    "validators/validate_security_privacy_boundary.py",
     "validators/generate_build_manifest.py",
 ]
 

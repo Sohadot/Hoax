@@ -1556,6 +1556,9 @@ def validate_json_files() -> bool:
         "data/interface-grammar.json",
         "data/interface-component-registry.json",
         "data/interface-surface-map.json",
+        "data/security-privacy-boundary.json",
+        "data/interaction-permission-registry.json",
+        "data/external-dependency-registry.json",
     ]:
         path = ROOT / rel
         try:

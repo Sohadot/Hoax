@@ -1,0 +1,113 @@
+{
+  "boundary_id": "SECURITY-PRIVACY-BOUNDARY-001",
+  "name": "Hoax.ai Security and Privacy Boundary",
+  "version": "v1.0.0",
+  "status": "governed_internal_security_privacy_boundary",
+  "maturity": "zero_data_static_foundation",
+  "governing_principle": "No interaction before a privacy and security boundary exists. A trust asset must not collect data before it can govern data.",
+  "current_posture": [
+    "static_first",
+    "zero_data",
+    "no_user_accounts",
+    "no_forms",
+    "no_uploads",
+    "no_user_submitted_evidence",
+    "no_analytics",
+    "no_cookies",
+    "no_tracking_pixels",
+    "no_third_party_scripts",
+    "no_external_javascript_libraries",
+    "no_api_endpoints",
+    "no_server_side_processing",
+    "no_payment_collection",
+    "no_newsletter_capture",
+    "no_personal_data_collection",
+    "readable_without_javascript",
+    "github_repository_source_of_truth"
+  ],
+  "prohibited_behaviors": [
+    "file_uploads",
+    "evidence_submission",
+    "scan_check_detect_forms",
+    "contact_forms",
+    "newsletter_forms",
+    "lead_forms",
+    "analytics_scripts",
+    "tracking_pixels",
+    "cookies",
+    "localStorage_sessionStorage_tracking",
+    "third_party_embeds",
+    "external_script_sources",
+    "uncontrolled_fonts_cdns",
+    "api_calls",
+    "login_account_systems",
+    "payment_widgets",
+    "data_collection_before_policy_approval"
+  ],
+  "future_interaction_gate": {
+    "required": [
+      "explicit_decision_log_entry",
+      "interaction_permission_registry_entry",
+      "threat_model",
+      "privacy_boundary",
+      "data_minimization_rule",
+      "retention_rule",
+      "user_disclosure_language",
+      "validation_coverage",
+      "audit_record",
+      "rollback_condition"
+    ]
+  },
+  "upload_gate": {
+    "status": "blocked",
+    "required_future_fields": [
+      "file_types_allowed",
+      "size_limits",
+      "storage_policy",
+      "retention_policy",
+      "deletion_policy",
+      "malware_scanning_posture",
+      "user_consent",
+      "abuse_prevention",
+      "no_public_accusation_output",
+      "no_automatic_verdict_output"
+    ]
+  },
+  "analytics_gate": {
+    "status": "blocked",
+    "required_future_fields": [
+      "what_is_measured",
+      "why_measured",
+      "what_is_not_collected",
+      "cookie_posture",
+      "anonymization_where_applicable",
+      "retention",
+      "disclosure",
+      "opt_out_posture_where_applicable"
+    ]
+  },
+  "external_dependency_gate": {
+    "status": "blocked_unless_registered",
+    "registry": "data/external-dependency-registry.json",
+    "required_approval": [
+      "decision_log_entry",
+      "necessity_justification",
+      "privacy_security_impact_review",
+      "validator_coverage"
+    ]
+  },
+  "approved_storage": [
+    "none"
+  ],
+  "approved_data_collection": [
+    "none"
+  ],
+  "prohibited_security_claims": [
+    "perfectly secure",
+    "no security gaps",
+    "fully secure",
+    "guaranteed safe",
+    "unhackable"
+  ],
+  "last_reviewed": "2026-06-17"
+}

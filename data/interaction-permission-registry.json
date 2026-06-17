@@ -1,0 +1,132 @@
+{
+  "registry_id": "INTERACTION-PERMISSION-REGISTRY-001",
+  "name": "Hoax.ai Interaction Permission Registry",
+  "version": "v1.0.0",
+  "status": "active",
+  "permissions": [
+    {
+      "permission_id": "PERMISSION-0001",
+      "name": "public_static_reading",
+      "status": "allowed",
+      "allowed_currently": true,
+      "required_future_gate": "none",
+      "prohibited_until_approved": [],
+      "notes": "Read-only thesis surface. No data collection."
+    },
+    {
+      "permission_id": "PERMISSION-0002",
+      "name": "user_file_upload",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_future_gate": "upload_security_model",
+      "prohibited_until_approved": [
+        "upload forms",
+        "file input",
+        "evidence submission"
+      ],
+      "notes": "Blocked until upload-security model and DEC approval."
+    },
+    {
+      "permission_id": "PERMISSION-0003",
+      "name": "evidence_submission_form",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_future_gate": "upload_security_model",
+      "prohibited_until_approved": [
+        "evidence forms",
+        "scan forms",
+        "detect forms"
+      ],
+      "notes": "Blocked until governed upload and output boundaries exist."
+    },
+    {
+      "permission_id": "PERMISSION-0004",
+      "name": "contact_form",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_future_gate": "interaction_privacy_policy",
+      "prohibited_until_approved": [
+        "contact forms",
+        "lead capture"
+      ],
+      "notes": "Blocked until data collection policy and retention rules exist."
+    },
+    {
+      "permission_id": "PERMISSION-0005",
+      "name": "newsletter_capture",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_future_gate": "interaction_privacy_policy",
+      "prohibited_until_approved": [
+        "newsletter forms",
+        "email capture"
+      ],
+      "notes": "Blocked until newsletter and retention governance exists."
+    },
+    {
+      "permission_id": "PERMISSION-0006",
+      "name": "analytics_tracking",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_future_gate": "measurement_policy",
+      "prohibited_until_approved": [
+        "analytics scripts",
+        "tracking pixels",
+        "cookies for tracking"
+      ],
+      "notes": "Blocked until measurement policy and disclosure exist."
+    },
+    {
+      "permission_id": "PERMISSION-0007",
+      "name": "public_classifier_interaction",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_future_gate": "engine_output_deployment_gates",
+      "prohibited_until_approved": [
+        "classifier UI",
+        "interactive detection",
+        "verdict output"
+      ],
+      "notes": "Blocked until engine, output schema, and deployment gates pass."
+    },
+    {
+      "permission_id": "PERMISSION-0008",
+      "name": "api_access",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_future_gate": "api_security_privacy_model",
+      "prohibited_until_approved": [
+        "public API",
+        "fetch calls",
+        "XHR endpoints"
+      ],
+      "notes": "Blocked until API security and privacy model exists."
+    },
+    {
+      "permission_id": "PERMISSION-0009",
+      "name": "payment_collection",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_future_gate": "monetization_boundary",
+      "prohibited_until_approved": [
+        "payment widgets",
+        "checkout forms"
+      ],
+      "notes": "Blocked until monetization boundary and trust gates pass."
+    },
+    {
+      "permission_id": "PERMISSION-0010",
+      "name": "third_party_embed",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_future_gate": "external_dependency_registry",
+      "prohibited_until_approved": [
+        "iframes",
+        "third-party widgets",
+        "social embeds"
+      ],
+      "notes": "Blocked unless listed and approved in external-dependency-registry."
+    }
+  ],
+  "last_reviewed": "2026-06-17"
+}
