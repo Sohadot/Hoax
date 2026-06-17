@@ -123,6 +123,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Governed internal enforcement harness. Not a public tool or classifier."
+    },
+    {
+      "claim_id": "CLAIM-0012",
+      "claim_text": "Hoax.ai has adopted Interface Embodiment Governance v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "INTERFACE_EMBODIMENT_GOVERNANCE.md, DECISION_LOG.md (DEC-023)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Governed internal interface standard. Not a public tool or classifier."
     }
   ]
 }

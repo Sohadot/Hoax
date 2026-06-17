@@ -1,0 +1,97 @@
+{
+  "interface_grammar_id": "INTERFACE-GRAMMAR-001",
+  "name": "Hoax.ai Interface Grammar",
+  "version": "v1.0.0",
+  "status": "governed_internal_interface_standard",
+  "maturity": "not_public_tool",
+  "governing_principle": "The interface must embody evidence posture, not simulate detection authority. A Hoax.ai interface may show structure, posture, uncertainty, source conditions, and boundaries; it must not visually imply verdict, certainty, accusation, or automated detection.",
+  "allowed_visual_metaphors": [
+    "layered evidence surface",
+    "document strata",
+    "evidence chain",
+    "bounded frame",
+    "posture map",
+    "source path",
+    "uncertainty field",
+    "separated artifact/subject zones",
+    "governance rail",
+    "decision boundary",
+    "inspection ledger",
+    "muted institutional signal layer"
+  ],
+  "prohibited_visual_metaphors": [
+    "scanner beam",
+    "scanner",
+    "red threat dashboard",
+    "threat dashboard",
+    "fake/real switch",
+    "truth meter",
+    "lie detector",
+    "police evidence board",
+    "surveillance grid",
+    "crosshair targeting",
+    "biometric targeting",
+    "cyber-gaming detection UI",
+    "alarm-heavy fraud console",
+    "AI magic detector",
+    "upload-to-detect panel",
+    "upload-to-detect",
+    "subject risk profile",
+    "guilt meter",
+    "authenticity score gauge",
+    "score gauge"
+  ],
+  "allowed_interface_promises": [
+    "explain evidence posture",
+    "show evidence structure",
+    "display governance boundaries",
+    "describe artifact scope",
+    "separate artifact from subject",
+    "frame uncertainty",
+    "reference governed methodology",
+    "show planned-not-claimed layers"
+  ],
+  "prohibited_interface_promises": [
+    "detection",
+    "guarantee",
+    "truth verdict",
+    "fake/real result",
+    "upload to check",
+    "score",
+    "public classifier",
+    "deepfake detected",
+    "scan now",
+    "detect fake",
+    "authenticity certification",
+    "subject accusation"
+  ],
+  "accessibility_rules": [
+    "Use semantic HTML for all core meaning.",
+    "Core thesis must be readable as plain text without JavaScript.",
+    "Text must remain legible on mobile viewports.",
+    "No core meaning may be hidden in decorative visuals alone.",
+    "Use headings, lists, and landmarks for structure.",
+    "Maintain sufficient color contrast for body text."
+  ],
+  "performance_rules": [
+    "Static-first delivery without required client frameworks.",
+    "No external library required for core thesis reading.",
+    "Avoid heavy assets on thesis surface.",
+    "No WebGL or canvas required for core meaning.",
+    "Mobile-safe layout without horizontal overflow."
+  ],
+  "motion_rules": [
+    "Motion must explain evidence layers or uncertainty only.",
+    "No decorative scanning animations.",
+    "No alarm-heavy threat pulsing.",
+    "No gaming-style detection effects.",
+    "Interface must remain understandable with motion disabled."
+  ],
+  "dependency_rules": [
+    "No external JavaScript libraries on thesis surface without explicit future decision approval.",
+    "No external CSS frameworks without explicit future decision approval.",
+    "External libraries require explicit approval in a future decision before use.",
+    "No WebGL or canvas for core thesis communication."
+  ],
+  "last_reviewed": "2026-06-17"
+}

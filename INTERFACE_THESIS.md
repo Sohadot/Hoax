@@ -6,6 +6,10 @@ The interface must not decorate Hoax.ai.
 
 It must embody the thesis.
 
+**The interface must embody evidence posture, not simulate detection authority.**
+
+Interface embodiment is governed by `INTERFACE_EMBODIMENT_GOVERNANCE.md` (DEC-023). All components must be registered in `data/interface-component-registry.json` before use.
+
 Hoax.ai is about evidence posture, synthetic risk, source confidence, provenance gaps, contextual uncertainty, and deception patterns.
 
 The interface must help users understand that trust is not a single binary answer.

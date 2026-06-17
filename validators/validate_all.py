@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 VALIDATORS = [
     ROOT / "validators" / "validate_factory_foundation.py",
     ROOT / "validators" / "validate_adversarial_enforcement.py",
+    ROOT / "validators" / "validate_interface_governance.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

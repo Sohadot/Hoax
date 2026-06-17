@@ -15,6 +15,8 @@ MANIFEST_PATH = ROOT / "BUILD_MANIFEST.json"
 
 GOVERNANCE_FILES = [
     "ADVERSARIAL_ENFORCEMENT_HARNESS.md",
+    "INTERFACE_EMBODIMENT_GOVERNANCE.md",
+    "INTERFACE_THESIS.md",
     "INTERNAL_ENGINE_MODEL.md",
     "OUTPUT_BOUNDARY_SCHEMA.md",
     "EVIDENCE_POSTURE_CLASSIFICATION_PROTOCOL.md",
@@ -42,12 +44,16 @@ DATA_FILES = [
     "data/internal-engine-fixtures.json",
     "data/forbidden-language-policy.json",
     "data/adversarial-validation-cases.json",
+    "data/interface-grammar.json",
+    "data/interface-component-registry.json",
+    "data/interface-surface-map.json",
 ]
 
 VALIDATORS = [
     "validators/validate_all.py",
     "validators/validate_factory_foundation.py",
     "validators/validate_adversarial_enforcement.py",
+    "validators/validate_interface_governance.py",
     "validators/generate_build_manifest.py",
 ]
 

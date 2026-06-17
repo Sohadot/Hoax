@@ -569,3 +569,26 @@ Governance that only describes rules remains imitable. Governance becomes struct
 - Claims, routes, sources, taxonomy states, standard rules, protocol rules, output fields, and engine model dependencies must remain contract-aligned.
 - Build state must be recorded in a manifest.
 - Future sprints must not close unless adversarial enforcement passes.
+
+---
+
+## DEC-023 — Interface Embodiment Governance v1 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Interface Embodiment Governance v1 to ensure that all interface language, visual metaphors, components, and future interaction patterns embody evidence posture rather than imply detection authority, fake/real judgment, scoring, accusation, or active tool capability.
+
+### Rationale
+
+For Hoax.ai, interface risk is governance risk. A visually impressive interface can still weaken trust if it implies scanner authority, verdict output, certainty meters, or public classifier capability before those systems are governed and allowed. The interface must make boundaries visible.
+
+### Implications
+
+- No interface component may imply upload, scan, detection, fake/real classification, truth scoring, or subject accusation.
+- Future interface components must be registered before use.
+- Existing public surface sections must be mapped to interface governance.
+- Visual language must express evidence layers, uncertainty, posture, source chain, and boundaries.
+- Interface validation becomes part of validate_all.py.

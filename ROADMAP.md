@@ -368,19 +368,52 @@ External deployment remains deferred (Sprint 1C). Enforcement harness is interna
 
 ## Sprint 8 — Interface Embodiment Governance v1
 
-**Status:** READY — G7 passed  
-**Goal:** Govern interface embodiment alignment with evidence-structure thesis without creating a public classifier or tool.
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Govern how Hoax.ai's interface may visually express evidence posture without implying detection authority, scoring, upload, or active classifier capability.
 
 ### Deliverables
 
-- interface embodiment governance (future — not in current scope)
-- visual system alignment checks
+- INTERFACE_EMBODIMENT_GOVERNANCE.md
+- data/interface-grammar.json
+- data/interface-component-registry.json
+- data/interface-surface-map.json
+- validators/validate_interface_governance.py
+- SPRINT_8_INTERFACE_EMBODIMENT_GOVERNANCE_AUDIT.md
+- DEC-023 appended to DECISION_LOG.md
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Interface Governance Scope
+
+- 10 registered interface components (IFC-0001 through IFC-0010)
+- Root thesis surface mapped to ROUTE-0001
+- Prohibited visual metaphors and interface promises defined
+- No engine, classifier, score, upload workflow, public route, or tool created
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Interface governance is not_public_tool.
+
+---
+
+## Sprint 9 — Security and Privacy Boundary v1
+
+**Status:** READY — G8 passed  
+**Goal:** Define security and privacy boundaries before any future interaction or deployment expansion.
+
+### Deliverables
+
+- security and privacy boundary governance (future — not in current scope)
 - no public classifier page
 - no upload workflow
+- no deployment expansion
 
 ### Required Principle
 
-Interface governance must follow interface thesis and governance boundary. Public classifier remains blocked.
+Security and privacy boundaries must exist before future interaction. Public classifier remains blocked.
 
 ---
 

@@ -1,0 +1,34 @@
+{
+  "surface_map_id": "INTERFACE-SURFACE-MAP-001",
+  "name": "Hoax.ai Root Thesis Surface Map",
+  "version": "v1.0.0",
+  "status": "active",
+  "route_id": "ROUTE-0001",
+  "path": "/",
+  "mapped_components": [
+    "IFC-0001",
+    "IFC-0002",
+    "IFC-0003",
+    "IFC-0004",
+    "IFC-0005",
+    "IFC-0006",
+    "IFC-0007",
+    "IFC-0008",
+    "IFC-0009"
+  ],
+  "prohibited_patterns_checked": [
+    "scanner",
+    "upload",
+    "fake/real",
+    "truth score",
+    "lie score",
+    "red threat dashboard",
+    "detection guarantee",
+    "public classifier",
+    "subject accusation",
+    "score meter"
+  ],
+  "public_surface_status": "thesis_surface_only",
+  "external_deployment_status": "external_deployment_deferred",
+  "last_reviewed": "2026-06-17"
+}

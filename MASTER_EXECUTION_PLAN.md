@@ -44,11 +44,11 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G5 | Output boundary schema | Sprint 5 validator PASS |
 | G6 | Internal engine model | Sprint 6 validator PASS |
 | G7 | Adversarial enforcement harness | Sprint 7 validator PASS |
-| G8 | Interface embodiment | Visual system aligned with interface thesis |
+| G8 | Interface embodiment governance | Sprint 8 validator PASS |
 | G9 | GitHub public completion | All links working, no false claims, mobile-safe |
 | G10 | DNS and Cloudflare | Public foundation complete and validated |
 
-**Gate G7 passed.** Sprint 8 (Interface Embodiment Governance) may proceed. Public classifier and tool remain blocked. External deployment remains deferred until G1C passes.
+**Gate G8 passed.** Sprint 9 (Security and Privacy Boundary) may proceed. Public classifier and tool remain blocked. External deployment remains deferred until G1C passes.
 
 ## Sprint Closure Rules
 
@@ -145,7 +145,8 @@ Classifier, API, and workflow tools require protocol and standard completion fir
 | Sprint 5 | COMPLETE | G5 passed |
 | Sprint 6 | COMPLETE | G6 passed |
 | Sprint 7 | COMPLETE | G7 passed |
-| Sprint 8+ | READY | G7 passed — proceed per phase order; G1C still pending; public tool blocked |
+| Sprint 8 | COMPLETE | G8 passed |
+| Sprint 9+ | READY | G8 passed — proceed per phase order; G1C still pending; public tool blocked |
 
 ## Governing Sentence
 
