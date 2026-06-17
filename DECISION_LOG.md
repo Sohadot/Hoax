@@ -243,3 +243,45 @@ Already canonical: README.md, CATEGORY_THESIS.md, SPRINT_0A_AUDIT.md.
 All future governance, policy, and strategic reference documents must use UPPERCASE_WITH_UNDERSCORES.md.
 
 All markdown cross-references updated to canonical names.
+
+---
+
+## DEC-011 — Sprint 1: First Public Thesis Surface
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+The first public thesis surface has been created for Hoax.ai.
+
+### Rationale
+
+Sprint 1 creates a minimal, static, governed public presence that communicates the Hoax.ai thesis before any tool, classifier, reference expansion, or domain connection.
+
+The surface is thesis-first, not product-first. It communicates evidence posture, synthetic fragility, and the governance boundary without claiming detection capability, issuing truth verdicts, or creating premature tool expectations.
+
+### Files Created
+
+- index.html
+- styles.css
+- robots.txt
+- sitemap.xml
+
+### Governing Constraints Applied
+
+- One H1 only.
+- No JavaScript dependencies.
+- No external libraries or fonts.
+- No absolute detection claims.
+- No fake/real binary language.
+- No false authority claims.
+- No forms, uploads, or classifier tool.
+- Static, accessible, mobile-safe, and SEO-safe.
+- Canonical set to target domain (https://hoax.ai/).
+
+### Implications
+
+The first public surface is live on GitHub Pages before domain connection.
+
+Sprint 2 may proceed: Evidence Posture Taxonomy.
