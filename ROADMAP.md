@@ -12,6 +12,7 @@ It should become evidence-risk reference infrastructure for the synthetic media 
 
 ## Sprint 0 — Foundation Governance
 
+**Status:** COMPLETE — 2026-06-17  
 **Goal:** Establish Hoax.ai as a governed asset before public interface, tools, or SEO expansion.
 
 ### Deliverables
@@ -37,8 +38,31 @@ It should become evidence-risk reference infrastructure for the synthetic media 
 
 ---
 
+## Sprint 0A — Governance Foundation Audit
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Verify consistency, alignment, and governance boundary enforcement across all Sprint 0 files.
+
+### Deliverables
+
+- SPRINT_0A_AUDIT.md
+
+---
+
+## Sprint 0B — Naming Convention Normalization
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Normalize all governance filenames to UPPERCASE_WITH_UNDERSCORES.md.
+
+### Deliverables
+
+- SPRINT_0B_NAMING_AUDIT.md
+
+---
+
 ## Sprint 1 — Public Thesis Surface
 
+**Status:** COMPLETE — 2026-06-17  
 **Goal:** Create the first visible GitHub public surface.
 
 ### Deliverables
@@ -47,17 +71,14 @@ It should become evidence-risk reference infrastructure for the synthetic media 
 - styles.css
 - robots.txt
 - sitemap.xml
-- basic metadata
-- accessible static structure
-- one homepage only
 
-### Homepage Must Communicate
+### Homepage Communicated
 
 - Hoax.ai is not a truth machine.
 - Hoax.ai classifies evidence posture.
 - The AI era creates synthetic fragility.
 - Trust begins with evidence structure.
-- A tool and standard are being developed under governance.
+- A taxonomy, standard, reference layer, and bounded classifier are under development.
 
 ---
 
