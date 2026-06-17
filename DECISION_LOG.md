@@ -193,17 +193,53 @@ All ten audit criteria passed:
 2. No claims of absolute detection, proof, certification, or truth judgment.
 3. Fake/real binary treated as restricted or prohibited language throughout.
 4. Governance boundary against accusing individuals and institutions is clear and consistent.
-5. Source discipline is fully defined in Source_Policy.md and confirmed by DEC-008.
+5. Source discipline is fully defined in SOURCE_POLICY.md and confirmed by DEC-008.
 6. Buyer logic correctly prioritises Trust & Safety, Brand Protection, Digital Risk, Platform Integrity, and Security/Fraud Intelligence.
 7. Monetization paths preserve trust and prohibit attention-harvesting models.
 8. Interface thesis is aligned with evidence layers and rejects false-authority design patterns.
 9. GitHub-first execution is preserved with Cloudflare deferred.
 10. Roadmap sprint sequence does not jump prematurely to tools, scale, or SEO expansion.
 
-One minor documentation correction was made: the Sprint 0 deliverables list in Roadmap.md used UPPERCASE filenames that did not match actual Mixed_Case repository filenames. This was corrected in the audit commit.
+One minor documentation correction was made: the Sprint 0 deliverables list in ROADMAP.md used UPPERCASE filenames that did not match actual Mixed_Case repository filenames. This was corrected in the audit commit.
 
 ### Implications
 
 The Sprint 0 governance layer is confirmed complete and consistent.
 
 Development may proceed to Sprint 1: Public Thesis Surface.
+
+---
+
+## DEC-010 — Governance Filename Convention Normalized to UPPERCASE
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+All governance, policy, thesis, roadmap, audit, and decision documents use UPPERCASE_WITH_UNDERSCORES.md naming convention.
+
+README.md remains README.md by convention.
+
+### Rationale
+
+Consistent uppercase naming aligns with open-source convention for high-signal reference documents (LICENSE, CHANGELOG, CONTRIBUTING, CODE_OF_CONDUCT) and makes the governance layer immediately identifiable in the repository root.
+
+### Files Normalized
+
+- Governance_Boundary.md → GOVERNANCE_BOUNDARY.md
+- Claim_Policy.md → CLAIM_POLICY.md
+- Source_Policy.md → SOURCE_POLICY.md
+- Interface_Thesis.md → INTERFACE_THESIS.md
+- Buyer_Logic.md → BUYER_LOGIC.md
+- Monetization_Boundary.md → MONETIZATION_BOUNDARY.md
+- Decision_Log.md → DECISION_LOG.md
+- Roadmap.md → ROADMAP.md
+
+Already canonical: README.md, CATEGORY_THESIS.md, SPRINT_0A_AUDIT.md.
+
+### Implications
+
+All future governance, policy, and strategic reference documents must use UPPERCASE_WITH_UNDERSCORES.md.
+
+All markdown cross-references updated to canonical names.
