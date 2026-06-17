@@ -68,6 +68,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Static thesis surface only. No classifier, upload, or tool deployed."
+    },
+    {
+      "claim_id": "CLAIM-0007",
+      "claim_text": "Hoax.ai has adopted Evidence Posture Standard v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "EVIDENCE_POSTURE_STANDARD.md, data/evidence-posture-standard.json, DECISION_LOG.md (DEC-018)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Internal governed standard. Not a public product, classifier, or service output."
     }
   ]
 }

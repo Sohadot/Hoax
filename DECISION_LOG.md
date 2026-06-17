@@ -443,3 +443,29 @@ A category intelligence asset must define its posture states before it can creat
 - The taxonomy remains internal/governed until public route governance permits publication.
 - EVIDENCE_POSTURE_TAXONOMY.md and data/evidence-posture-taxonomy.json are canonical taxonomy sources.
 - Nine dimensions (DIM-0001 through DIM-0009) and eight states (STATE-0001 through STATE-0008) are the initial bounded vocabulary.
+
+---
+
+## DEC-018 — Evidence Posture Standard v1 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Evidence Posture Standard v1 to define sufficiency, incompleteness, limitation, instability, high-risk posture, and not-assessable posture for evidence artifacts and evidence chains.
+
+### Rationale
+
+A taxonomy names evidence posture states. A standard defines what makes those states responsibly assignable. Without a standard, future protocols, tools, reference pages, and outputs may become arbitrary, vague, binary, or accusatory.
+
+### Implications
+
+- Future protocols must follow this standard.
+- Future tools must not output posture states without satisfying the standard's required conditions.
+- Future reference pages must not invent sufficiency criteria outside this standard.
+- The standard remains bounded to evidence artifacts and evidence chains.
+- The standard does not establish truth, falsity, guilt, deception, fraud, or subject involvement.
+- EVIDENCE_POSTURE_STANDARD.md and data/evidence-posture-standard.json are canonical standard sources.
+- Nine standard dimensions (STD-DIM-0001 through STD-DIM-0009) map to taxonomy dimensions.
+- Eight sufficiency rules (STD-RULE-0001 through STD-RULE-0008) map to taxonomy states.

@@ -1,0 +1,330 @@
+{
+  "standard_id": "STANDARD-EVIDENCE-POSTURE-001",
+  "name": "Hoax.ai Evidence Posture Standard",
+  "version": "v1.0.0",
+  "status": "governed_internal_standard",
+  "governing_principle": "The standard defines sufficiency, not truth. A sufficient evidence posture is not a truth verdict. An insufficient evidence posture is not an accusation.",
+  "taxonomy_dependency": "TAXONOMY-EVIDENCE-POSTURE-001",
+  "applies_to": [
+    "evidence artifacts",
+    "evidence chains",
+    "claim records",
+    "source records",
+    "provenance signals",
+    "context signals",
+    "coherence signals",
+    "evidence posture outputs later governed by protocol"
+  ],
+  "does_not_apply_to": [
+    "people",
+    "institutions",
+    "brands",
+    "organizations",
+    "events as subjects of judgment"
+  ],
+  "dimensions": [
+    {
+      "dimension_id": "STD-DIM-0001",
+      "taxonomy_dimension_id": "DIM-0001",
+      "name": "Artifact Identification",
+      "sufficient_condition": "The artifact is clearly identified with bounded scope and examinable boundaries.",
+      "limited_condition": "The artifact is identifiable but scope, format, or boundaries remain partially unclear.",
+      "weak_condition": "Identification depends on inference or incomplete metadata.",
+      "not_assessable_condition": "Available information does not permit responsible artifact identification.",
+      "prohibited_interpretation": "Identifying an artifact does not identify, accuse, or judge any connected subject.",
+      "status": "active"
+    },
+    {
+      "dimension_id": "STD-DIM-0002",
+      "taxonomy_dimension_id": "DIM-0002",
+      "name": "Provenance Visibility",
+      "sufficient_condition": "Origin, custody, creation context, or publication path is visible within available scope.",
+      "limited_condition": "Some provenance signals exist but custody, path, or origin remains incomplete.",
+      "weak_condition": "Provenance signals are sparse, indirect, or heavily dependent on secondary reporting.",
+      "not_assessable_condition": "Provenance cannot be examined from available information.",
+      "prohibited_interpretation": "Limited provenance does not establish manipulation, bad faith, or subject deception.",
+      "status": "active"
+    },
+    {
+      "dimension_id": "STD-DIM-0003",
+      "taxonomy_dimension_id": "DIM-0003",
+      "name": "Source Confidence",
+      "sufficient_condition": "Source record is known, bounded, and appropriate to the artifact or claim.",
+      "limited_condition": "Source is partially known or weakly bounded relative to the artifact.",
+      "weak_condition": "Source attribution is uncertain, indirect, or inconsistently documented.",
+      "not_assessable_condition": "Source confidence cannot be responsibly assessed from available information.",
+      "prohibited_interpretation": "Low source confidence does not accuse a person or institution of dishonesty or fraud.",
+      "status": "active"
+    },
+    {
+      "dimension_id": "STD-DIM-0004",
+      "taxonomy_dimension_id": "DIM-0004",
+      "name": "Contextual Stability",
+      "sufficient_condition": "Surrounding context is stable and sufficiently bounded for examination.",
+      "limited_condition": "Context is present but incomplete or only partially stable.",
+      "weak_condition": "Context is disputed, thin, or dependent on missing situational information.",
+      "not_assessable_condition": "Context cannot be responsibly mapped from available information.",
+      "prohibited_interpretation": "Unstable context does not determine whether a depicted or referenced event occurred.",
+      "status": "active"
+    },
+    {
+      "dimension_id": "STD-DIM-0005",
+      "taxonomy_dimension_id": "DIM-0005",
+      "name": "Forensic Coherence",
+      "sufficient_condition": "Internal signals appear coherent with no major unresolved inconsistencies.",
+      "limited_condition": "Minor inconsistencies exist but do not prevent bounded posture language.",
+      "weak_condition": "Coherence signals are mixed or require further examination.",
+      "not_assessable_condition": "Coherence cannot be responsibly examined from available information.",
+      "prohibited_interpretation": "Questioned coherence does not imply synthetic generation, falsity, or fraud.",
+      "status": "active"
+    },
+    {
+      "dimension_id": "STD-DIM-0006",
+      "taxonomy_dimension_id": "DIM-0006",
+      "name": "Evidence Chain Continuity",
+      "sufficient_condition": "Artifact connects to a stable chain of supporting records with examinable linkage.",
+      "limited_condition": "Chain exists but has gaps, weak custody, or partial linkage.",
+      "weak_condition": "Chain continuity depends on inference or incomplete records.",
+      "not_assessable_condition": "Chain continuity cannot be responsibly assessed.",
+      "prohibited_interpretation": "Broken continuity does not prove subject involvement or institutional misconduct.",
+      "status": "active"
+    },
+    {
+      "dimension_id": "STD-DIM-0007",
+      "taxonomy_dimension_id": "DIM-0007",
+      "name": "Corroboration Posture",
+      "sufficient_condition": "Supporting evidence exists and is consistent within available scope.",
+      "limited_condition": "Partial corroboration exists with unresolved gaps or mild conflict.",
+      "weak_condition": "Corroboration is absent, thin, or conflicting.",
+      "not_assessable_condition": "Corroboration posture cannot be responsibly assessed.",
+      "prohibited_interpretation": "Absent corroboration does not issue a verdict on the underlying claim or subject.",
+      "status": "active"
+    },
+    {
+      "dimension_id": "STD-DIM-0008",
+      "taxonomy_dimension_id": "DIM-0008",
+      "name": "Subject Boundary Clarity",
+      "sufficient_condition": "Output confines posture to artifact or evidence chain without subject transfer.",
+      "limited_condition": "Output mostly artifact-focused but requires careful subject-boundary review.",
+      "weak_condition": "Language risks implying subject judgment without explicit boundary correction.",
+      "not_assessable_condition": "Subject boundary cannot be evaluated because output scope is undefined.",
+      "prohibited_interpretation": "Artifact risk must not be read as subject accusation, guilt, or involvement.",
+      "status": "active"
+    },
+    {
+      "dimension_id": "STD-DIM-0009",
+      "taxonomy_dimension_id": "DIM-0009",
+      "name": "Output Boundary",
+      "sufficient_condition": "Statement remains within evidence posture framing with explicit limitations.",
+      "limited_condition": "Output is mostly bounded but lacks full limitation clarity.",
+      "weak_condition": "Output risks verdict, score, or accusation language without correction.",
+      "not_assessable_condition": "Output boundary cannot be evaluated from available draft or scope.",
+      "prohibited_interpretation": "Output boundary violation converts posture into verdict or subject judgment.",
+      "status": "active"
+    }
+  ],
+  "posture_sufficiency_rules": [
+    {
+      "rule_id": "STD-RULE-0001",
+      "taxonomy_state_id": "STATE-0001",
+      "state_label": "documented_posture",
+      "required_conditions": [
+        "artifact is clearly identified",
+        "source context is visible or bounded",
+        "provenance is sufficiently visible within the available scope",
+        "context is stable enough for bounded reliance",
+        "no major unresolved coherence issue is present",
+        "output remains within evidence posture"
+      ],
+      "boundary_statement": "Does not mean verified as fact, authentic, complete, legally verified, or final.",
+      "minimum_output_language": [
+        "The artifact has a documented posture within the available scope.",
+        "Posture applies to the artifact, not the connected subject."
+      ],
+      "prohibited_interpretations": [
+        "truth verdict",
+        "authenticity certification",
+        "legal verification",
+        "subject accusation"
+      ],
+      "status": "active"
+    },
+    {
+      "rule_id": "STD-RULE-0002",
+      "taxonomy_state_id": "STATE-0002",
+      "state_label": "partially_supported_posture",
+      "required_conditions": [
+        "at least one supporting signal exists",
+        "at least one major posture dimension remains incomplete, limited, or unresolved",
+        "output clearly identifies the limitation"
+      ],
+      "boundary_statement": "Does not imply falsity, deception, or unreliability as a whole.",
+      "minimum_output_language": [
+        "The evidence chain is partially supported within the available context.",
+        "One or more posture dimensions remain unresolved."
+      ],
+      "prohibited_interpretations": [
+        "falsity verdict",
+        "deception accusation",
+        "whole-artifact unreliability verdict"
+      ],
+      "status": "active"
+    },
+    {
+      "rule_id": "STD-RULE-0003",
+      "taxonomy_state_id": "STATE-0003",
+      "state_label": "provenance_limited_posture",
+      "required_conditions": [
+        "origin, custody, publication path, or source-chain visibility is insufficient",
+        "the limitation affects reliance on the artifact",
+        "output names the provenance limitation without inferring manipulation"
+      ],
+      "boundary_statement": "Does not establish manipulation, bad faith, fraud, or deception.",
+      "minimum_output_language": [
+        "The artifact has a provenance-limited posture.",
+        "Provenance visibility is insufficient for stronger posture language."
+      ],
+      "prohibited_interpretations": [
+        "manipulation proven",
+        "bad faith established",
+        "fraud accusation"
+      ],
+      "status": "active"
+    },
+    {
+      "rule_id": "STD-RULE-0004",
+      "taxonomy_state_id": "STATE-0004",
+      "state_label": "contextually_unstable_posture",
+      "required_conditions": [
+        "surrounding context is missing, ambiguous, disputed, unstable, or not sufficiently bounded",
+        "interpretation would be risky without further context",
+        "output avoids determining whether the depicted or referenced event occurred"
+      ],
+      "boundary_statement": "Does not determine the occurrence verdict of the event.",
+      "minimum_output_language": [
+        "The artifact has a contextually unstable posture.",
+        "Further context is required before stronger posture language."
+      ],
+      "prohibited_interpretations": [
+        "event occurrence verdict",
+        "subject involvement",
+        "claim falsity"
+      ],
+      "status": "active"
+    },
+    {
+      "rule_id": "STD-RULE-0005",
+      "taxonomy_state_id": "STATE-0005",
+      "state_label": "coherence_questioned_posture",
+      "required_conditions": [
+        "one or more coherence signals require further examination",
+        "the issue is described as a coherence question, not as proof of synthetic origin",
+        "output avoids verdict language"
+      ],
+      "boundary_statement": "Does not imply synthetic generation, falsity, or fraud.",
+      "minimum_output_language": [
+        "The artifact has a coherence-questioned posture.",
+        "Coherence signals require further examination."
+      ],
+      "prohibited_interpretations": [
+        "synthetic origin proof",
+        "falsity determination",
+        "fraud accusation"
+      ],
+      "status": "active"
+    },
+    {
+      "rule_id": "STD-RULE-0006",
+      "taxonomy_state_id": "STATE-0006",
+      "state_label": "high_risk_evidence_posture",
+      "required_conditions": [
+        "multiple posture dimensions contain unresolved risk signals",
+        "reliance on the artifact would be inappropriate without further review",
+        "output states the risk applies to the artifact or evidence chain only"
+      ],
+      "boundary_statement": "Does not accuse any person, institution, brand, organization, or event. Does not prove deception, guilt, fraud, misconduct, or involvement.",
+      "minimum_output_language": [
+        "The artifact has a high-risk evidence posture requiring further review.",
+        "Risk applies to the artifact or evidence chain only, not the connected subject."
+      ],
+      "prohibited_interpretations": [
+        "subject accusation",
+        "guilt determination",
+        "fraud proof",
+        "deception proof",
+        "subject involvement established"
+      ],
+      "status": "active"
+    },
+    {
+      "rule_id": "STD-RULE-0007",
+      "taxonomy_state_id": "STATE-0007",
+      "state_label": "not_assessable_posture",
+      "required_conditions": [
+        "available information is insufficient for responsible posture classification",
+        "missing data prevents a bounded statement",
+        "output clearly states that no responsible classification can be made"
+      ],
+      "boundary_statement": "Not assessable is not suspicious by itself.",
+      "minimum_output_language": [
+        "This record is not assessable from the available information.",
+        "No responsible posture classification can be made from current scope."
+      ],
+      "prohibited_interpretations": [
+        "suspicion by default",
+        "presumption of deception",
+        "negative subject inference"
+      ],
+      "status": "active"
+    },
+    {
+      "rule_id": "STD-RULE-0008",
+      "taxonomy_state_id": "STATE-0008",
+      "state_label": "planned_not_claimed_posture",
+      "required_conditions": [
+        "a capability, route, protocol, tool, output, report, or system layer is discussed as planned",
+        "it is not described as currently active",
+        "public language avoids implying operational availability"
+      ],
+      "boundary_statement": "Planned is not live. Mention is not capability.",
+      "minimum_output_language": [
+        "This capability is planned and not currently active.",
+        "Planned is not live. Mention is not capability."
+      ],
+      "prohibited_interpretations": [
+        "active tool claim",
+        "live classifier output",
+        "operational service availability"
+      ],
+      "status": "active"
+    }
+  ],
+  "minimum_output_boundary": [
+    "artifact focus",
+    "posture state",
+    "limitation statement",
+    "subject-separation boundary",
+    "no truth verdict",
+    "no fake/real binary",
+    "no accusation"
+  ],
+  "prohibited_uses": [
+    "scoring people",
+    "scoring institutions",
+    "declaring truth",
+    "declaring falsity",
+    "declaring fake/real",
+    "certifying authenticity",
+    "proving fraud",
+    "implying legal findings",
+    "using high-risk posture as accusation",
+    "using not-assessable as suspicion",
+    "using planned capabilities as existing services"
+  ],
+  "maturity": {
+    "version": "v1.0.0",
+    "status": "governed_internal_standard",
+    "notes": "Not yet a public product, classifier, or service output."
+  },
+  "last_reviewed": "2026-06-17"
+}

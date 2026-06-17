@@ -131,6 +131,8 @@ ID_PATTERNS = {
     "SOURCE": re.compile(r"^SOURCE-\d{4}$"),
     "DIM": re.compile(r"^DIM-\d{4}$"),
     "STATE": re.compile(r"^STATE-\d{4}$"),
+    "STD-DIM": re.compile(r"^STD-DIM-\d{4}$"),
+    "STD-RULE": re.compile(r"^STD-RULE-\d{4}$"),
 }
 
 DIMENSION_REQUIRED = {
@@ -186,6 +188,59 @@ TAXONOMY_TOP_REQUIRED = {
 }
 
 WORD_BOUNDARY_TERMS = {"fake", "real", "true", "false"}
+
+STD_DIMENSION_REQUIRED = {
+    "dimension_id",
+    "taxonomy_dimension_id",
+    "name",
+    "sufficient_condition",
+    "limited_condition",
+    "weak_condition",
+    "not_assessable_condition",
+    "prohibited_interpretation",
+    "status",
+}
+
+STD_RULE_REQUIRED = {
+    "rule_id",
+    "taxonomy_state_id",
+    "state_label",
+    "required_conditions",
+    "boundary_statement",
+    "minimum_output_language",
+    "prohibited_interpretations",
+    "status",
+}
+
+STANDARD_TOP_REQUIRED = {
+    "standard_id",
+    "name",
+    "version",
+    "status",
+    "governing_principle",
+    "taxonomy_dependency",
+    "applies_to",
+    "does_not_apply_to",
+    "dimensions",
+    "posture_sufficiency_rules",
+    "minimum_output_boundary",
+    "prohibited_uses",
+    "maturity",
+    "last_reviewed",
+}
+
+STANDARD_RULE_PROHIBITED = [
+    "truth verdict",
+    "fake/real detector",
+    "detects all",
+    "guaranteed detection",
+    "certifies truth",
+    "proves guilt",
+    "fraud by association",
+    "deceptive person",
+    "lie score",
+    "truth score",
+]
 
 
 def error(msg: str) -> None:
@@ -531,6 +586,164 @@ def validate_evidence_posture_taxonomy() -> bool:
     return ok
 
 
+def contains_prohibited_standard_phrase(text: str, phrase: str) -> bool:
+    lower = text.lower()
+    idx = 0
+    while True:
+        pos = lower.find(phrase, idx)
+        if pos == -1:
+            return False
+        prefix = lower[max(0, pos - 25) : pos]
+        if any(
+            marker in prefix
+            for marker in ["no ", "not ", "without ", "never ", "avoid ", "does not "]
+        ):
+            idx = pos + len(phrase)
+            continue
+        return True
+    return False
+
+
+def validate_evidence_posture_standard() -> bool:
+    ok = True
+    taxonomy = load_json(ROOT / "data" / "evidence-posture-taxonomy.json")
+    taxonomy_dim_ids = {d["dimension_id"] for d in taxonomy.get("dimensions", [])}
+    taxonomy_state_ids = {s["state_id"] for s in taxonomy.get("states", [])}
+    taxonomy_state_labels = {s["label"] for s in taxonomy.get("states", [])}
+
+    data = load_json(ROOT / "data" / "evidence-posture-standard.json")
+    missing_top = STANDARD_TOP_REQUIRED - set(data.keys())
+    if missing_top:
+        error(f"evidence-posture-standard: missing top-level fields {sorted(missing_top)}")
+        ok = False
+
+    if not data.get("standard_id"):
+        error("evidence-posture-standard: standard_id missing")
+        ok = False
+    if not data.get("version"):
+        error("evidence-posture-standard: version missing")
+        ok = False
+    if not data.get("taxonomy_dependency"):
+        error("evidence-posture-standard: taxonomy_dependency missing")
+        ok = False
+    if data.get("taxonomy_dependency") != taxonomy.get("taxonomy_id"):
+        error("evidence-posture-standard: taxonomy_dependency does not match taxonomy_id")
+        ok = False
+
+    dimensions = data.get("dimensions", [])
+    rules = data.get("posture_sufficiency_rules", [])
+    if not dimensions:
+        error("evidence-posture-standard: dimensions missing or empty")
+        ok = False
+    if not rules:
+        error("evidence-posture-standard: posture_sufficiency_rules missing or empty")
+        ok = False
+
+    ok &= validate_unique_ids(dimensions, "dimension_id", "STD-DIM", "evidence-posture-standard")
+    ok &= validate_unique_ids(rules, "rule_id", "STD-RULE", "evidence-posture-standard")
+    ok &= validate_required_fields(dimensions, STD_DIMENSION_REQUIRED, "evidence-posture-standard dimension")
+    ok &= validate_required_fields(rules, STD_RULE_REQUIRED, "evidence-posture-standard rule")
+
+    for dim in dimensions:
+        tax_id = dim.get("taxonomy_dimension_id")
+        if tax_id not in taxonomy_dim_ids:
+            error(
+                f"evidence-posture-standard '{dim['dimension_id']}': invalid taxonomy_dimension_id '{tax_id}'"
+            )
+            ok = False
+
+    for rule in rules:
+        rid = rule["rule_id"]
+        state_id = rule.get("taxonomy_state_id")
+        label = rule.get("state_label", "")
+
+        if state_id not in taxonomy_state_ids:
+            error(f"evidence-posture-standard '{rid}': invalid taxonomy_state_id '{state_id}'")
+            ok = False
+        if label not in taxonomy_state_labels:
+            error(f"evidence-posture-standard '{rid}': state_label '{label}' not in taxonomy")
+            ok = False
+
+        boundary = rule.get("boundary_statement", "")
+        if not boundary.strip():
+            error(f"evidence-posture-standard '{rid}': boundary_statement missing")
+            ok = False
+
+        scan_text = " ".join(
+            [
+                " ".join(rule.get("required_conditions", [])),
+                boundary,
+                " ".join(rule.get("minimum_output_language", [])),
+            ]
+        )
+        for phrase in STANDARD_RULE_PROHIBITED:
+            if contains_prohibited_standard_phrase(scan_text, phrase):
+                error(
+                    f"evidence-posture-standard '{rid}': prohibited phrase '{phrase}' in rule output fields"
+                )
+                ok = False
+
+    high_risk = next((r for r in rules if r.get("state_label") == "high_risk_evidence_posture"), None)
+    if high_risk is None:
+        error("evidence-posture-standard: high_risk_evidence_posture rule missing")
+        ok = False
+    else:
+        combined = " ".join(
+            [
+                high_risk.get("boundary_statement", ""),
+                " ".join(high_risk.get("minimum_output_language", [])),
+                " ".join(high_risk.get("prohibited_interpretations", [])),
+            ]
+        ).lower()
+        for marker in [
+            "subject accusation",
+            "connected subject",
+            "artifact or evidence chain only",
+            "deception",
+            "guilt",
+            "fraud",
+            "involvement",
+        ]:
+            if marker not in combined:
+                error(
+                    f"evidence-posture-standard: high_risk rule missing subject-separation marker '{marker}'"
+                )
+                ok = False
+
+    not_assessable = next((r for r in rules if r.get("state_label") == "not_assessable_posture"), None)
+    if not_assessable is None:
+        error("evidence-posture-standard: not_assessable_posture rule missing")
+        ok = False
+    else:
+        boundary = not_assessable.get("boundary_statement", "").lower()
+        if "not suspicious" not in boundary and "not assessable is not" not in boundary:
+            error(
+                "evidence-posture-standard: not_assessable_posture must state not assessable is not suspicion"
+            )
+            ok = False
+
+    planned = next((r for r in rules if r.get("state_label") == "planned_not_claimed_posture"), None)
+    if planned is None:
+        error("evidence-posture-standard: planned_not_claimed_posture rule missing")
+        ok = False
+    else:
+        combined = (
+            planned.get("boundary_statement", "") + " " + " ".join(planned.get("minimum_output_language", []))
+        ).lower()
+        if "planned is not live" not in combined and "not currently active" not in combined:
+            error("evidence-posture-standard: planned_not_claimed_posture must state planned is not live")
+            ok = False
+
+    registry = load_json(ROOT / "data" / "source-registry.json")
+    locations = {s.get("location") for s in registry.get("sources", [])}
+    for required in ["EVIDENCE_POSTURE_STANDARD.md", "data/evidence-posture-standard.json"]:
+        if required not in locations:
+            error(f"source-registry: missing standard source '{required}'")
+            ok = False
+
+    return ok
+
+
 def validate_source_registry() -> bool:
     ok = True
     data = load_json(ROOT / "data" / "source-registry.json")
@@ -637,6 +850,7 @@ def validate_json_files() -> bool:
         "data/ontology-foundation.json",
         "data/source-registry.json",
         "data/evidence-posture-taxonomy.json",
+        "data/evidence-posture-standard.json",
     ]:
         path = ROOT / rel
         try:
@@ -656,6 +870,7 @@ def main() -> int:
         ("Ontology foundation", validate_ontology_foundation),
         ("Source registry", validate_source_registry),
         ("Evidence posture taxonomy", validate_evidence_posture_taxonomy),
+        ("Evidence posture standard", validate_evidence_posture_standard),
         ("Public surface", validate_public_surface),
     ]
 

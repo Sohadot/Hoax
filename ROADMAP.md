@@ -212,26 +212,36 @@ External deployment remains deferred (Sprint 1C). Taxonomy is internal/governed 
 
 ## Sprint 3 — Evidence Posture Standard v1
 
-**Status:** READY — G2 passed  
-**Goal:** Define the first evidence posture standard mapping taxonomy states to bounded output requirements.
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Define the first evidence posture standard mapping taxonomy states to bounded sufficiency rules.
 
 ### Deliverables
 
 - EVIDENCE_POSTURE_STANDARD.md
-- standard output boundary language
-- taxonomy-to-standard mapping
-- confidence language rules
-- no-verdict disclaimer templates
+- data/evidence-posture-standard.json
+- SPRINT_3_EVIDENCE_POSTURE_STANDARD_AUDIT.md
+- DEC-018 appended to DECISION_LOG.md
+- Validator extended for standard checks
 
-### Required Principle
+### Validation
 
-Standards must use taxonomy states only. No new posture labels outside the taxonomy.
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Standard Scope
+
+- 9 standard dimensions (STD-DIM-0001 through STD-DIM-0009) mapped to taxonomy
+- 8 sufficiency rules (STD-RULE-0001 through STD-RULE-0008) mapped to taxonomy states
+- No protocol, classifier, score, public route, or tool created
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Standard is internal/governed until public route governance permits publication.
 
 ---
 
-## Sprint 4 — Evidence Posture Classification Protocol
+## Sprint 4 — Evidence Posture Classification Protocol v1
 
-**Status:** BLOCKED — requires Sprint 3 (Standard)  
+**Status:** READY — G3 passed  
 **Goal:** Define the first protocol for bounded evidence-risk classification.
 
 ### Deliverables
