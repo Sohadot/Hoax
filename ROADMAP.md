@@ -302,44 +302,52 @@ External deployment remains deferred (Sprint 1C). Schema is internal/governed wi
 
 ## Sprint 6 — Internal Engine Model v0
 
-**Status:** READY — G5 passed  
-**Goal:** Define the first internal engine model that operationalizes protocol and output schema without creating a public tool or upload workflow.
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Define the permitted internal logic architecture for a future evidence-posture engine without creating a public tool or upload workflow.
 
 ### Deliverables
 
-- internal engine model document
-- machine-readable engine model JSON
-- mapping to protocol and output boundary schema
-- no public classifier page
-- no upload workflow
+- INTERNAL_ENGINE_MODEL.md
+- data/internal-engine-model.json
+- data/internal-engine-fixtures.json
+- SPRINT_6_INTERNAL_ENGINE_MODEL_AUDIT.md
+- DEC-021 appended to DECISION_LOG.md
+- Validator extended for engine model and fixtures
 
-### Required Principle
+### Validation
 
-Engine model must follow protocol and output boundary schema. No public tool in this sprint.
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Engine Model Scope
+
+- 9 allowed input fields (ENG-IN-0001 through ENG-IN-0009)
+- 10 processing layers (ENG-LAYER-0001 through ENG-LAYER-0010)
+- Maps to taxonomy, standard, protocol, and output boundary schema
+- Output status limited to draft_internal and governed_internal
+- No engine, classifier, score, upload workflow, public route, or tool created
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Engine model is internal/governed with maturity not_public_tool.
 
 ---
 
-## Sprint 7 — Evidence Posture Classifier v0
+## Sprint 7 — Internal Engine Validation Harness v0
 
-**Status:** BLOCKED — requires Sprint 6 (Internal Engine Model) and later gates  
-**Goal:** Build a lightweight rule-based tool only after engine model exists.
+**Status:** READY — G6 passed  
+**Goal:** Create an internal validation harness that tests engine model alignment with protocol and output schema without creating a public classifier or tool.
 
 ### Deliverables
 
-- static classifier page (future — not in current scope)
-- no backend
-- no sensitive data storage
-- no AI detection claims
-- no file upload in first version
-- output based on user-selected evidence signals
+- internal validation harness (future — not in current scope)
+- fixture-driven schema alignment checks
+- no public classifier page
+- no upload workflow
+- no scoring system
 
-### Output Examples
+### Required Principle
 
-- Low Source Confidence
-- Provenance Gap Present
-- Contextual Verification Required
-- Synthetic Risk Signals Present
-- No Verdict Issued
+Validation harness must follow internal engine model, protocol, and output boundary schema. Public classifier remains blocked.
 
 ---
 

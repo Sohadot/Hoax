@@ -136,6 +136,9 @@ ID_PATTERNS = {
     "PROTO-STAGE": re.compile(r"^PROTO-STAGE-\d{4}$"),
     "PROTO-RULE": re.compile(r"^PROTO-RULE-\d{4}$"),
     "OUT-FIELD": re.compile(r"^OUT-FIELD-\d{4}$"),
+    "ENG-IN": re.compile(r"^ENG-IN-\d{4}$"),
+    "ENG-LAYER": re.compile(r"^ENG-LAYER-\d{4}$"),
+    "FIXTURE": re.compile(r"^FIXTURE-\d{4}$"),
 }
 
 DIMENSION_REQUIRED = {
@@ -383,6 +386,69 @@ SCHEMA_PROHIBITED_FIELDS = {
     "legal_conclusion",
     "guilt_finding",
 }
+
+ENGINE_PROHIBITED_INPUT_FIELDS = {
+    "person_score",
+    "institution_score",
+    "truth_score",
+    "fake_real_result",
+    "upload_file",
+    "accusation_target",
+    "guilt_question",
+    "deception_question",
+}
+
+ENGINE_PROHIBITED_OUTPUT_CATEGORIES = [
+    ("scoring", ["truth_score", "lie_score", "guilt_score", "authenticity_score"]),
+    ("fake/real", ["this is fake", "this is real", "fake_real"]),
+    ("truth verdict", ["truth verdict", "pass/fail truth"]),
+    ("accusation", ["accusation", "subject accusation"]),
+    ("subject classification", ["subject classification", "subject judgment"]),
+    ("upload workflow", ["upload workflow", "upload_file"]),
+    ("public classifier", ["public classifier", "active classifier"]),
+]
+
+FIXTURE_REQUIRED = {
+    "fixture_id",
+    "fixture_name",
+    "fictional",
+    "artifact_type",
+    "input_summary",
+    "expected_allowed_posture_states",
+    "required_boundary_statement",
+    "prohibited_interpretations",
+    "expected_output_status",
+    "notes",
+}
+
+FIXTURE_PROHIBITED_LANGUAGE = [
+    "this is fake",
+    "this is real",
+    "truth score",
+    "lie score",
+    "upload file",
+    "upload workflow",
+    "public classifier",
+    "active classifier",
+    "live tool",
+    "deepfake detected",
+]
+
+FIXTURE_REAL_ENTITY_MARKERS = [
+    "donald trump",
+    "joe biden",
+    "elon musk",
+    "google",
+    "microsoft",
+    "facebook",
+    "meta platforms",
+    "united nations",
+    "white house",
+    "congress",
+    "ukraine war",
+    "israel",
+    "hamas",
+]
 
 
 def error(msg: str) -> None:
@@ -1199,6 +1265,181 @@ def validate_output_boundary_schema() -> bool:
     return ok
 
 
+def validate_internal_engine_model() -> bool:
+    ok = True
+    schema = load_json(ROOT / "data" / "output-boundary-schema.json")
+    schema_field_names = {f["field_name"] for f in schema.get("required_output_fields", [])}
+
+    data = load_json(ROOT / "data" / "internal-engine-model.json")
+
+    if not data.get("engine_model_id"):
+        error("internal-engine-model: engine_model_id missing")
+        ok = False
+    if not data.get("version"):
+        error("internal-engine-model: version missing")
+        ok = False
+    if data.get("status") != "governed_internal_model":
+        error("internal-engine-model: status must be governed_internal_model")
+        ok = False
+    if data.get("maturity") != "not_public_tool":
+        error("internal-engine-model: maturity must be not_public_tool")
+        ok = False
+    if not data.get("dependencies"):
+        error("internal-engine-model: dependencies missing")
+        ok = False
+    if not data.get("allowed_input_fields"):
+        error("internal-engine-model: allowed_input_fields missing")
+        ok = False
+    if not data.get("processing_layers"):
+        error("internal-engine-model: processing_layers missing")
+        ok = False
+    if not data.get("required_output_shape"):
+        error("internal-engine-model: required_output_shape missing")
+        ok = False
+
+    output_limits = data.get("output_status_limits", [])
+    if set(output_limits) != {"draft_internal", "governed_internal"}:
+        error("internal-engine-model: output_status_limits must be draft_internal and governed_internal only")
+        ok = False
+    if "public_allowed_after_gate" in output_limits:
+        error("internal-engine-model: public_allowed_after_gate not allowed in output_status_limits")
+        ok = False
+
+    deps = data.get("dependencies", {})
+    for dep_key in ["taxonomy", "standard", "protocol", "output_schema"]:
+        if not deps.get(dep_key):
+            error(f"internal-engine-model: dependencies missing '{dep_key}'")
+            ok = False
+
+    inputs = data.get("allowed_input_fields", [])
+    ok &= validate_unique_ids(inputs, "input_field_id", "ENG-IN", "internal-engine-model input")
+    for field in inputs:
+        fname = field.get("field_name", "")
+        if fname in ENGINE_PROHIBITED_INPUT_FIELDS:
+            error(f"internal-engine-model: prohibited input field '{fname}'")
+            ok = False
+
+    layers = data.get("processing_layers", [])
+    ok &= validate_unique_ids(layers, "layer_id", "ENG-LAYER", "internal-engine-model layer")
+    if len(layers) != 10:
+        error(f"internal-engine-model: expected 10 processing layers, found {len(layers)}")
+        ok = False
+
+    layer_names = {layer.get("name", "") for layer in layers}
+    for required_layer in ["Output Boundary Composition", "Governance Safety Check"]:
+        if required_layer not in layer_names:
+            error(f"internal-engine-model: missing processing layer '{required_layer}'")
+            ok = False
+
+    required_shape = set(data.get("required_output_shape", []))
+    for field_name in SCHEMA_REQUIRED_FIELD_NAMES:
+        if field_name not in required_shape:
+            error(f"internal-engine-model: required_output_shape missing '{field_name}'")
+            ok = False
+    for field_name in required_shape:
+        if field_name not in schema_field_names:
+            error(f"internal-engine-model: required_output_shape field '{field_name}' not in output schema")
+            ok = False
+
+    conservative = data.get("conservative_resolution_rule", "").lower()
+    if not conservative:
+        error("internal-engine-model: conservative_resolution_rule missing")
+        ok = False
+    elif "bounded uncertainty" not in conservative or "speculative" not in conservative:
+        error("internal-engine-model: conservative_resolution_rule must prefer bounded uncertainty over speculation")
+        ok = False
+
+    if not data.get("non_scoring_rule"):
+        error("internal-engine-model: non_scoring_rule missing")
+        ok = False
+
+    prohibited_outputs = " ".join(data.get("prohibited_engine_outputs", [])).lower()
+    for label, markers in ENGINE_PROHIBITED_OUTPUT_CATEGORIES:
+        if not any(marker in prohibited_outputs for marker in markers):
+            error(f"internal-engine-model: prohibited_engine_outputs missing {label} coverage")
+            ok = False
+
+    registry = load_json(ROOT / "data" / "source-registry.json")
+    locations = {s.get("location") for s in registry.get("sources", [])}
+    for required in [
+        "INTERNAL_ENGINE_MODEL.md",
+        "data/internal-engine-model.json",
+        "data/internal-engine-fixtures.json",
+    ]:
+        if required not in locations:
+            error(f"source-registry: missing internal engine source '{required}'")
+            ok = False
+
+    return ok
+
+
+def validate_internal_engine_fixtures() -> bool:
+    ok = True
+    taxonomy = load_json(ROOT / "data" / "evidence-posture-taxonomy.json")
+    taxonomy_state_labels = {s["label"] for s in taxonomy.get("states", [])}
+
+    data = load_json(ROOT / "data" / "internal-engine-fixtures.json")
+
+    if not data.get("fixture_set_id"):
+        error("internal-engine-fixtures: fixture_set_id missing")
+        ok = False
+    if not data.get("status"):
+        error("internal-engine-fixtures: status missing")
+        ok = False
+    if data.get("maturity") != "internal_validation_only":
+        error("internal-engine-fixtures: maturity must be internal_validation_only")
+        ok = False
+
+    fixtures = data.get("fixtures", [])
+    if not fixtures:
+        error("internal-engine-fixtures: fixtures missing or empty")
+        ok = False
+    if len(fixtures) < 3 or len(fixtures) > 5:
+        error(f"internal-engine-fixtures: expected 3 to 5 fixtures, found {len(fixtures)}")
+        ok = False
+
+    ok &= validate_unique_ids(fixtures, "fixture_id", "FIXTURE", "internal-engine-fixtures")
+
+    for fixture in fixtures:
+        fid = fixture.get("fixture_id", "unknown")
+        missing = FIXTURE_REQUIRED - set(fixture.keys())
+        if missing:
+            error(f"internal-engine-fixtures '{fid}': missing fields {sorted(missing)}")
+            ok = False
+
+        if fixture.get("fictional") is not True:
+            error(f"internal-engine-fixtures '{fid}': fictional must be true")
+            ok = False
+
+        status = fixture.get("expected_output_status", "")
+        if status not in {"draft_internal", "governed_internal"}:
+            error(f"internal-engine-fixtures '{fid}': invalid expected_output_status '{status}'")
+            ok = False
+
+        for state in fixture.get("expected_allowed_posture_states", []):
+            if state not in taxonomy_state_labels:
+                error(f"internal-engine-fixtures '{fid}': invalid posture state '{state}'")
+                ok = False
+
+        scan_text = json.dumps(
+            {
+                k: v
+                for k, v in fixture.items()
+                if k not in {"prohibited_interpretations", "expected_allowed_posture_states"}
+            }
+        ).lower()
+        for phrase in FIXTURE_PROHIBITED_LANGUAGE:
+            if contains_prohibited_schema_language(scan_text, phrase):
+                error(f"internal-engine-fixtures '{fid}': prohibited language '{phrase}'")
+                ok = False
+        for marker in FIXTURE_REAL_ENTITY_MARKERS:
+            if marker in scan_text:
+                error(f"internal-engine-fixtures '{fid}': real entity marker '{marker}'")
+                ok = False
+
+    return ok
+
+
 def validate_source_registry() -> bool:
     ok = True
     data = load_json(ROOT / "data" / "source-registry.json")
@@ -1308,6 +1549,8 @@ def validate_json_files() -> bool:
         "data/evidence-posture-standard.json",
         "data/evidence-posture-protocol.json",
         "data/output-boundary-schema.json",
+        "data/internal-engine-model.json",
+        "data/internal-engine-fixtures.json",
     ]:
         path = ROOT / rel
         try:
@@ -1330,6 +1573,8 @@ def main() -> int:
         ("Evidence posture standard", validate_evidence_posture_standard),
         ("Evidence posture protocol", validate_evidence_posture_protocol),
         ("Output boundary schema", validate_output_boundary_schema),
+        ("Internal engine model", validate_internal_engine_model),
+        ("Internal engine fixtures", validate_internal_engine_fixtures),
         ("Public surface", validate_public_surface),
     ]
 

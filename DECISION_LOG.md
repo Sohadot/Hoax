@@ -521,3 +521,28 @@ The taxonomy defines posture states. The standard defines sufficiency. The proto
 - OUTPUT_BOUNDARY_SCHEMA.md and data/output-boundary-schema.json are canonical output schema sources.
 - Twenty required output fields (OUT-FIELD-0001 through OUT-FIELD-0020) define the governed output contract.
 - Schema maturity is not_public_tool.
+
+---
+
+## DEC-021 — Internal Engine Model v0 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Internal Engine Model v0 as a non-public, non-scoring, non-upload, non-classifier logic model for future evidence-posture processing.
+
+### Rationale
+
+The taxonomy names posture states. The standard defines sufficiency. The protocol defines the classification sequence. The output boundary schema defines what future outputs may say. The internal engine model defines how a future engine may connect those layers without bypassing governance or producing unbounded claims.
+
+### Implications
+
+- No future engine may bypass taxonomy, standard, protocol, or output schema.
+- No engine output may exist outside the output boundary schema.
+- No public classifier is created by this model.
+- No upload workflow is created by this model.
+- No numeric score is created by this model.
+- No subject classification is allowed.
+- Future implementation must validate against this model before public exposure.

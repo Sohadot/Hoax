@@ -1,0 +1,337 @@
+{
+  "engine_model_id": "ENGINE-MODEL-INTERNAL-001",
+  "name": "Hoax.ai Internal Engine Model",
+  "version": "v0.1.0",
+  "status": "governed_internal_model",
+  "maturity": "not_public_tool",
+  "governing_principle": "The engine model defines permitted internal logic; it does not create a public classifier. The model may route evidence posture logic only through adopted taxonomy, standard, protocol, and output boundary schema.",
+  "dependencies": {
+    "taxonomy": "TAXONOMY-EVIDENCE-POSTURE-001",
+    "standard": "STANDARD-EVIDENCE-POSTURE-001",
+    "protocol": "PROTOCOL-EVIDENCE-POSTURE-001",
+    "output_schema": "SCHEMA-OUTPUT-BOUNDARY-001",
+    "documents": [
+      "EVIDENCE_POSTURE_TAXONOMY.md",
+      "data/evidence-posture-taxonomy.json",
+      "EVIDENCE_POSTURE_STANDARD.md",
+      "data/evidence-posture-standard.json",
+      "EVIDENCE_POSTURE_CLASSIFICATION_PROTOCOL.md",
+      "data/evidence-posture-protocol.json",
+      "OUTPUT_BOUNDARY_SCHEMA.md",
+      "data/output-boundary-schema.json",
+      "GOVERNANCE_BOUNDARY.md",
+      "CLAIM_POLICY.md"
+    ]
+  },
+  "allowed_input_fields": [
+    {
+      "input_field_id": "ENG-IN-0001",
+      "field_name": "artifact_description",
+      "required": true,
+      "field_type": "string",
+      "definition": "Bounded description of the artifact or evidence chain under review.",
+      "prohibited_use": "Subject accusation input, truth verdict request, fake/real request.",
+      "maps_to_protocol_stage": "PROTO-STAGE-0001",
+      "maps_to_dimensions": ["DIM-0001"],
+      "status": "active"
+    },
+    {
+      "input_field_id": "ENG-IN-0002",
+      "field_name": "artifact_type",
+      "required": true,
+      "field_type": "string",
+      "definition": "Type of artifact: image, video, audio, document, screenshot, source record, claim record, media object, or evidence chain.",
+      "prohibited_use": "Person type, institution type, subject classification.",
+      "maps_to_protocol_stage": "PROTO-STAGE-0001",
+      "maps_to_dimensions": ["DIM-0001"],
+      "status": "active"
+    },
+    {
+      "input_field_id": "ENG-IN-0003",
+      "field_name": "source_record_refs",
+      "required": false,
+      "field_type": "array",
+      "definition": "Optional references to source records associated with the artifact.",
+      "prohibited_use": "Subject accusation via source, unsupported external claims.",
+      "maps_to_protocol_stage": "PROTO-STAGE-0003",
+      "maps_to_dimensions": ["DIM-0003"],
+      "status": "active"
+    },
+    {
+      "input_field_id": "ENG-IN-0004",
+      "field_name": "claim_record_refs",
+      "required": false,
+      "field_type": "array",
+      "definition": "Optional references to claim records associated with the artifact.",
+      "prohibited_use": "Truth verdict on claim, subject accusation.",
+      "maps_to_protocol_stage": "PROTO-STAGE-0003",
+      "maps_to_dimensions": ["DIM-0003", "DIM-0004"],
+      "status": "active"
+    },
+    {
+      "input_field_id": "ENG-IN-0005",
+      "field_name": "provenance_notes",
+      "required": false,
+      "field_type": "string",
+      "definition": "Notes on origin, custody, publication path, or source-chain visibility.",
+      "prohibited_use": "Manipulation proof, bad faith inference, subject deception claim.",
+      "maps_to_protocol_stage": "PROTO-STAGE-0004",
+      "maps_to_dimensions": ["DIM-0002"],
+      "status": "active"
+    },
+    {
+      "input_field_id": "ENG-IN-0006",
+      "field_name": "context_notes",
+      "required": false,
+      "field_type": "string",
+      "definition": "Notes on surrounding temporal, geographic, institutional, or situational context.",
+      "prohibited_use": "Event occurrence verdict, subject involvement claim.",
+      "maps_to_protocol_stage": "PROTO-STAGE-0005",
+      "maps_to_dimensions": ["DIM-0004"],
+      "status": "active"
+    },
+    {
+      "input_field_id": "ENG-IN-0007",
+      "field_name": "coherence_notes",
+      "required": false,
+      "field_type": "string",
+      "definition": "Notes on internal structural, media, temporal, or format coherence signals.",
+      "prohibited_use": "Synthetic origin proof, falsity determination, fraud accusation.",
+      "maps_to_protocol_stage": "PROTO-STAGE-0006",
+      "maps_to_dimensions": ["DIM-0005"],
+      "status": "active"
+    },
+    {
+      "input_field_id": "ENG-IN-0008",
+      "field_name": "corroboration_notes",
+      "required": false,
+      "field_type": "string",
+      "definition": "Notes on supporting, absent, partial, or conflicting corroboration signals.",
+      "prohibited_use": "Claim verdict, subject accusation.",
+      "maps_to_protocol_stage": "PROTO-STAGE-0008",
+      "maps_to_dimensions": ["DIM-0007"],
+      "status": "active"
+    },
+    {
+      "input_field_id": "ENG-IN-0009",
+      "field_name": "known_limitations",
+      "required": false,
+      "field_type": "string",
+      "definition": "Known gaps, constraints, or unresolved factors in available information.",
+      "prohibited_use": "Suspicion by default, presumption of deception.",
+      "maps_to_protocol_stage": "PROTO-STAGE-0009",
+      "maps_to_dimensions": ["DIM-0001", "DIM-0009"],
+      "status": "active"
+    }
+  ],
+  "prohibited_input_requests": [
+    "person_score",
+    "institution_score",
+    "truth_score",
+    "fake_real_result",
+    "upload_file",
+    "accusation_target",
+    "guilt_question",
+    "deception_question",
+    "is_person_lying",
+    "is_institution_guilty",
+    "truth_verdict_request"
+  ],
+  "processing_layers": [
+    {
+      "layer_id": "ENG-LAYER-0001",
+      "name": "Input Boundary Check",
+      "purpose": "Verify input concerns an artifact or evidence chain, not a subject.",
+      "required_checks": [
+        "Input describes artifact or evidence chain",
+        "No subject accusation fields present",
+        "No truth scoring request present",
+        "No upload-handling logic present"
+      ],
+      "dependency": "PROTO-STAGE-0001",
+      "prohibited_interpretations": ["subject classification input", "verdict request input"],
+      "output_to_next_layer": "bounded_input_record",
+      "status": "active"
+    },
+    {
+      "layer_id": "ENG-LAYER-0002",
+      "name": "Artifact Scope Normalization",
+      "purpose": "Bound artifact scope and separate from connected subjects.",
+      "required_checks": [
+        "Artifact scope is discrete and bounded",
+        "Subject references treated as orientation only",
+        "No subject transfer in scope language"
+      ],
+      "dependency": "PROTO-STAGE-0001",
+      "prohibited_interpretations": ["subject scope", "guilt scope"],
+      "output_to_next_layer": "normalized_artifact_scope",
+      "status": "active"
+    },
+    {
+      "layer_id": "ENG-LAYER-0003",
+      "name": "Protocol Stage Mapping",
+      "purpose": "Map input data to twelve protocol stages.",
+      "required_checks": [
+        "All applicable protocol stages identified",
+        "Subject separation check included",
+        "Stop conditions evaluated"
+      ],
+      "dependency": "PROTOCOL-EVIDENCE-POSTURE-001",
+      "prohibited_interpretations": ["protocol bypass", "invented stages"],
+      "output_to_next_layer": "protocol_stage_map",
+      "status": "active"
+    },
+    {
+      "layer_id": "ENG-LAYER-0004",
+      "name": "Dimension Finding Assembly",
+      "purpose": "Map observations to nine taxonomy/standard dimensions.",
+      "required_checks": [
+        "Findings mapped to DIM-0001 through DIM-0009",
+        "No subject judgment dimensions",
+        "Dimension findings artifact-bound only"
+      ],
+      "dependency": "TAXONOMY-EVIDENCE-POSTURE-001",
+      "prohibited_interpretations": ["subject dimension findings", "verdict dimensions"],
+      "output_to_next_layer": "dimension_findings",
+      "status": "active"
+    },
+    {
+      "layer_id": "ENG-LAYER-0005",
+      "name": "Standard Sufficiency Mapping",
+      "purpose": "Map dimension findings to standard sufficiency rules.",
+      "required_checks": [
+        "Each dimension assessed against STD-DIM sufficiency conditions",
+        "Sufficiency rules not loosened",
+        "Boundary statements preserved"
+      ],
+      "dependency": "STANDARD-EVIDENCE-POSTURE-001",
+      "prohibited_interpretations": ["sufficiency bypass", "verdict sufficiency"],
+      "output_to_next_layer": "sufficiency_map",
+      "status": "active"
+    },
+    {
+      "layer_id": "ENG-LAYER-0006",
+      "name": "Posture State Candidate Selection",
+      "purpose": "Identify possible posture states from taxonomy and protocol rules.",
+      "required_checks": [
+        "Only taxonomy states considered",
+        "Protocol selection rules applied",
+        "No invented states"
+      ],
+      "dependency": "PROTOCOL-EVIDENCE-POSTURE-001",
+      "prohibited_interpretations": ["invented posture state", "verdict state"],
+      "output_to_next_layer": "candidate_states",
+      "status": "active"
+    },
+    {
+      "layer_id": "ENG-LAYER-0007",
+      "name": "Conservative State Resolution",
+      "purpose": "Select most bounded responsible state; prefer not_assessable over speculation.",
+      "required_checks": [
+        "Most bounded state selected when multiple candidates exist",
+        "not_assessable_posture preferred when information insufficient",
+        "Conservative resolution rule applied"
+      ],
+      "dependency": "STD-RULE-0007",
+      "prohibited_interpretations": ["speculative classification", "verdict resolution"],
+      "output_to_next_layer": "resolved_posture_state",
+      "status": "active"
+    },
+    {
+      "layer_id": "ENG-LAYER-0008",
+      "name": "Output Boundary Composition",
+      "purpose": "Compose only fields allowed by Output Boundary Schema v1.",
+      "required_checks": [
+        "All required output fields populated per SCHEMA-OUTPUT-BOUNDARY-001",
+        "subject_boundary_statement included",
+        "prohibited_interpretations included",
+        "confidence_boundary qualitative only"
+      ],
+      "dependency": "SCHEMA-OUTPUT-BOUNDARY-001",
+      "prohibited_interpretations": ["schema bypass", "invented output fields", "numeric scores"],
+      "output_to_next_layer": "composed_output_draft",
+      "status": "active"
+    },
+    {
+      "layer_id": "ENG-LAYER-0009",
+      "name": "Governance Safety Check",
+      "purpose": "Reject outputs containing verdict, fake/real, accusation, scoring, or subject judgment.",
+      "required_checks": [
+        "No truth verdict language",
+        "No fake/real binary",
+        "No accusation language",
+        "No scoring fields",
+        "No subject judgment",
+        "Artifact-subject separation preserved"
+      ],
+      "dependency": "GOVERNANCE_BOUNDARY.md",
+      "prohibited_interpretations": ["governance bypass", "unsafe output release"],
+      "output_to_next_layer": "governance_checked_output",
+      "status": "active"
+    },
+    {
+      "layer_id": "ENG-LAYER-0010",
+      "name": "Internal Output Status Assignment",
+      "purpose": "Assign draft_internal or governed_internal status only.",
+      "required_checks": [
+        "output_status is draft_internal or governed_internal",
+        "No public_allowed_after_gate in this model version",
+        "No public tool implication"
+      ],
+      "dependency": "SCHEMA-OUTPUT-BOUNDARY-001",
+      "prohibited_interpretations": ["public tool status", "live service status"],
+      "output_to_next_layer": "final_internal_output",
+      "status": "active"
+    }
+  ],
+  "conservative_resolution_rule": "When the available information is incomplete, the engine model must prefer bounded uncertainty over speculative classification.",
+  "non_scoring_rule": "The internal engine model does not use numeric scoring, percentages, grades, risk meters, probability claims, or authenticity scores. Confidence boundary must be qualitative text only.",
+  "required_output_shape": [
+    "output_id",
+    "schema_version",
+    "protocol_version",
+    "taxonomy_version",
+    "standard_version",
+    "artifact_scope",
+    "artifact_type",
+    "posture_state",
+    "posture_reason_summary",
+    "dimension_findings",
+    "limiting_factors",
+    "subject_boundary_statement",
+    "prohibited_interpretations",
+    "confidence_boundary",
+    "recommended_next_checks",
+    "output_status",
+    "generated_by",
+    "last_reviewed"
+  ],
+  "output_status_limits": [
+    "draft_internal",
+    "governed_internal"
+  ],
+  "prohibited_engine_outputs": [
+    "truth_score",
+    "lie_score",
+    "guilt_score",
+    "fraud_score",
+    "authenticity_score",
+    "deception_score",
+    "subject_risk_score",
+    "probability of fake",
+    "risk meter",
+    "traffic-light verdict",
+    "pass/fail truth result",
+    "This is fake.",
+    "This is real.",
+    "truth verdict",
+    "subject accusation",
+    "subject classification",
+    "upload workflow",
+    "public classifier",
+    "deepfake detected",
+    "guaranteed detection"
+  ],
+  "fixture_policy": "Internal fixtures must use fictional, neutral, non-identifiable examples. No real people, institutions, brands, political events, or accusations.",
+  "last_reviewed": "2026-06-17"
+}

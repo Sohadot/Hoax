@@ -1,0 +1,105 @@
+{
+  "fixture_set_id": "FIXTURE-SET-INTERNAL-001",
+  "name": "Hoax.ai Internal Engine Fixtures",
+  "status": "active",
+  "maturity": "internal_validation_only",
+  "fixture_policy": "Fictional, neutral, non-identifiable examples only. No real people, institutions, brands, political events, or accusations. Fixtures test schema alignment and boundary language only.",
+  "fixtures": [
+    {
+      "fixture_id": "FIXTURE-0001",
+      "fixture_name": "Fictional Screenshot Missing Source Chain",
+      "fictional": true,
+      "artifact_type": "screenshot",
+      "input_summary": "A fictional screenshot artifact with visible content but no complete source chain or publication path in available notes.",
+      "expected_allowed_posture_states": [
+        "provenance_limited_posture",
+        "partially_supported_posture",
+        "not_assessable_posture"
+      ],
+      "required_boundary_statement": "Posture applies to the fictional screenshot artifact only, not to any depicted or referenced subject.",
+      "prohibited_interpretations": [
+        "truth verdict",
+        "subject accusation",
+        "manipulation proven"
+      ],
+      "expected_output_status": "draft_internal",
+      "notes": "Tests provenance-limited pathway with incomplete source chain. Fictional example only."
+    },
+    {
+      "fixture_id": "FIXTURE-0002",
+      "fixture_name": "Fictional Audio Clip Incomplete Context",
+      "fictional": true,
+      "artifact_type": "audio",
+      "input_summary": "A fictional audio recording artifact with coherence notes present but context notes incomplete and disputed in available scope.",
+      "expected_allowed_posture_states": [
+        "contextually_unstable_posture",
+        "coherence_questioned_posture",
+        "partially_supported_posture"
+      ],
+      "required_boundary_statement": "Posture applies to the fictional audio artifact only, not to any voice or subject referenced in the recording.",
+      "prohibited_interpretations": [
+        "event occurrence verdict",
+        "subject involvement",
+        "synthetic origin proof"
+      ],
+      "expected_output_status": "draft_internal",
+      "notes": "Tests contextual instability with partial coherence signals. Fictional example only."
+    },
+    {
+      "fixture_id": "FIXTURE-0003",
+      "fixture_name": "Fictional Document Partial Source Support",
+      "fictional": true,
+      "artifact_type": "document",
+      "input_summary": "A fictional document artifact with one supporting source record reference but unresolved provenance and corroboration gaps.",
+      "expected_allowed_posture_states": [
+        "partially_supported_posture",
+        "provenance_limited_posture"
+      ],
+      "required_boundary_statement": "Posture applies to the fictional document artifact only, not to any institution or person mentioned in the document.",
+      "prohibited_interpretations": [
+        "institutional bad faith",
+        "fraud proof",
+        "authenticity certification"
+      ],
+      "expected_output_status": "governed_internal",
+      "notes": "Tests partially supported posture with provenance limitations. Fictional example only."
+    },
+    {
+      "fixture_id": "FIXTURE-0004",
+      "fixture_name": "Fictional Media Object Insufficient Information",
+      "fictional": true,
+      "artifact_type": "media_object",
+      "input_summary": "A fictional media object with minimal artifact description and no source, context, or coherence notes sufficient for stronger posture language.",
+      "expected_allowed_posture_states": [
+        "not_assessable_posture"
+      ],
+      "required_boundary_statement": "Not assessable is not suspicious by itself. Posture applies to the artifact only.",
+      "prohibited_interpretations": [
+        "suspicion by default",
+        "presumption of deception",
+        "subject accusation"
+      ],
+      "expected_output_status": "draft_internal",
+      "notes": "Tests conservative resolution to not_assessable_posture. Fictional example only."
+    },
+    {
+      "fixture_id": "FIXTURE-0005",
+      "fixture_name": "Fictional Planned Capability Description",
+      "fictional": true,
+      "artifact_type": "evidence_chain",
+      "input_summary": "A fictional description of a planned evidence-posture capability layer that is not currently active or operational.",
+      "expected_allowed_posture_states": [
+        "planned_not_claimed_posture"
+      ],
+      "required_boundary_statement": "Planned is not live. Mention is not capability. No public tool is implied.",
+      "prohibited_interpretations": [
+        "active classifier",
+        "live tool",
+        "operational service"
+      ],
+      "expected_output_status": "governed_internal",
+      "notes": "Tests planned_not_claimed_posture for future capability framing. Fictional example only."
+    }
+  ],
+  "last_reviewed": "2026-06-17"
+}
