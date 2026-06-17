@@ -119,9 +119,35 @@ Ontology, standard, protocol, classifier, and reference pages **cannot proceed**
 
 ---
 
+## Sprint 1C — Public Deployment and Surface Validation
+
+**Status:** BLOCKED — 2026-06-17  
+**Goal:** Validate the GitHub Pages public surface and repository readiness before ontology, standard, protocol, classifier, or reference expansion.
+
+### Deliverables
+
+- SPRINT_1C_PUBLIC_DEPLOYMENT_AUDIT.md
+- Public surface file validation (index.html, styles.css, robots.txt, sitemap.xml)
+- Repository integrity validation
+- DEC-016 (deferred until GitHub Pages deployment confirmed)
+
+### Blocker
+
+GitHub Pages is not enabled (`has_pages: false`). Public surface returns HTTP 404 at `https://sohadot.github.io/Hoax/`.
+
+### Remediation
+
+Enable GitHub Pages: branch `main`, folder `/` (root). Re-validate load, then close sprint and append DEC-016.
+
+### Gate
+
+Ontology, standard, protocol, classifier, and reference pages **cannot proceed** until Sprint 1C passes validation.
+
+---
+
 ## Sprint 2 — Evidence Posture Taxonomy
 
-**Status:** READY — G1B passed  
+**Status:** BLOCKED — requires Sprint 1C gate (G1C)  
 **Goal:** Define the first taxonomy for evidence-risk classification.
 
 ### Initial Classes

@@ -36,6 +36,7 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G1 | Public thesis surface | Sprint 1 audit passed |
 | G1A | Artifact–subject separation | Sprint 1A audit passed |
 | G1B | Sovereign integrity foundation | Sprint 1B audit passed |
+| G1C | Public deployment surface validated | Sprint 1C audit passed — **pending** |
 | G2 | Evidence posture taxonomy | Taxonomy file validated, governance aligned |
 | G3 | Classification protocol | Protocol documented, output boundaries defined |
 | G4 | Classifier v0 | Tool deployed with no-verdict disclaimer, no upload |
@@ -45,7 +46,7 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G8 | GitHub public completion | All links working, no false claims, mobile-safe |
 | G9 | DNS and Cloudflare | Public foundation complete and validated |
 
-**Gate G1B is active.** Ontology, standard, protocol, classifier, and reference pages cannot proceed until Sprint 1B passes.
+**Gate G1C is active.** Ontology, standard, protocol, classifier, and reference pages cannot proceed until Sprint 1C passes.
 
 ## Sprint Closure Rules
 
@@ -121,7 +122,8 @@ Classifier, API, and workflow tools require protocol and standard completion fir
 | Sprint 1 | COMPLETE | G1 passed |
 | Sprint 1A | COMPLETE | G1A passed |
 | Sprint 1B | COMPLETE | G1B passed |
-| Sprint 2+ | UNBLOCKED | G1B passed — proceed per phase order |
+| Sprint 1C | BLOCKED | G1C pending — GitHub Pages not enabled |
+| Sprint 2+ | BLOCKED | Requires G1C |
 
 ## Governing Sentence
 
