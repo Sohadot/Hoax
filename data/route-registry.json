@@ -15,6 +15,10 @@
       "internal_linking_required": false,
       "public_surface": true,
       "deployment_status": "external_deployment_deferred",
+      "sitemap_policy": "eligible_when_sitemap_included_true",
+      "canonical_policy": "registry_aligned",
+      "link_policy": "registered_targets_only",
+      "route_visibility": "public_thesis_surface",
       "notes": "First public thesis surface exists in repository. External domain deployment is deferred until governance gates pass."
     }
   ]

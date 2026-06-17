@@ -18,6 +18,7 @@ GOVERNANCE_FILES = [
     "INTERFACE_EMBODIMENT_GOVERNANCE.md",
     "INTERFACE_THESIS.md",
     "SECURITY_PRIVACY_BOUNDARY.md",
+    "LINK_ROUTE_INTEGRITY_POLICY.md",
     "INTERNAL_ENGINE_MODEL.md",
     "OUTPUT_BOUNDARY_SCHEMA.md",
     "EVIDENCE_POSTURE_CLASSIFICATION_PROTOCOL.md",
@@ -51,6 +52,8 @@ DATA_FILES = [
     "data/security-privacy-boundary.json",
     "data/interaction-permission-registry.json",
     "data/external-dependency-registry.json",
+    "data/link-route-integrity-policy.json",
+    "data/internal-link-graph.json",
 ]
 
 VALIDATORS = [
@@ -59,6 +62,7 @@ VALIDATORS = [
     "validators/validate_adversarial_enforcement.py",
     "validators/validate_interface_governance.py",
     "validators/validate_security_privacy_boundary.py",
+    "validators/validate_link_route_integrity.py",
     "validators/generate_build_manifest.py",
 ]
 

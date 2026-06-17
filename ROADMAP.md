@@ -434,19 +434,50 @@ External deployment remains deferred (Sprint 1C). Security boundary is zero_data
 
 ## Sprint 10 — Link and Route Integrity Hardening v1
 
-**Status:** READY — G9 passed  
-**Goal:** Harden link and route integrity across the repository public surface without adding routes or deployment expansion.
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Enforce route, sitemap, canonical, and internal link discipline before reference expansion or SEO work.
 
 ### Deliverables
 
-- link and route integrity hardening (future — not in current scope)
+- LINK_ROUTE_INTEGRITY_POLICY.md
+- data/link-route-integrity-policy.json
+- data/internal-link-graph.json
+- validators/validate_link_route_integrity.py
+- SPRINT_10_LINK_ROUTE_INTEGRITY_AUDIT.md
+- DEC-025 appended to DECISION_LOG.md
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Route/Link Scope
+
+- Single public route ROUTE-0001 (/) with sitemap and canonical alignment
+- Internal link graph mapped to index.html
+- No new routes, SEO expansion, or deployment created
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Route integrity is pre_expansion_hardening.
+
+---
+
+## Sprint 11 — Claim and Source Traceability Hardening v1
+
+**Status:** READY — G10 passed  
+**Goal:** Harden claim and source traceability across registries before reference expansion.
+
+### Deliverables
+
+- claim and source traceability hardening (future — not in current scope)
 - no public classifier page
 - no upload workflow
 - no deployment expansion
 
 ### Required Principle
 
-Route integrity must be validated before reference expansion. Public classifier remains blocked.
+Claims and sources must remain traceable before reference expansion. Public classifier remains blocked.
 
 ---
 

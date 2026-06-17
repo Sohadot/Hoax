@@ -1,0 +1,66 @@
+{
+  "policy_id": "LINK-ROUTE-INTEGRITY-POLICY-001",
+  "name": "Hoax.ai Link and Route Integrity Policy",
+  "version": "v1.0.0",
+  "status": "governed_internal_route_link_policy",
+  "maturity": "pre_expansion_hardening",
+  "governing_principle": "A reference asset cannot scale until its routes and links are governed. No route without registry. No link without target. No sitemap without live eligibility.",
+  "route_rules": [
+    "Every public route must exist in data/route-registry.json",
+    "Every route must have a unique route_id",
+    "Every route must have path, route_type, status, index_policy, canonical_url, sitemap eligibility, and deployment_status",
+    "Future routes must not appear in sitemap.xml",
+    "Blocked routes must not appear in public navigation",
+    "Planned routes must not appear as live routes"
+  ],
+  "sitemap_rules": [
+    "sitemap.xml may include only registered routes",
+    "sitemap.xml may include only sitemap-eligible routes",
+    "sitemap.xml may not include planned, blocked, future, draft, or internal_only routes",
+    "sitemap.xml must not contain placeholder URLs",
+    "sitemap.xml must not imply external deployment completion when deferred",
+    "Current sitemap may contain only homepage route until further governance"
+  ],
+  "canonical_rules": [
+    "Each public route must have one canonical URL",
+    "Canonical must align with route-registry.json",
+    "Canonical must not point to future or unapproved route",
+    "Canonical must not imply deployment completion beyond deployment_status",
+    "Canonical policy remains consistent until external deployment gate passes"
+  ],
+  "internal_link_rules": [
+    "No internal link may point to missing route",
+    "No internal link may point to planned route unless internal documentation",
+    "No public navigation may contain future routes",
+    "No orphan public route after multi-route expansion",
+    "Indexable routes require internal linking policy",
+    "Governance markdown links should resolve to existing local files where practical"
+  ],
+  "anchor_rules": [
+    "Public HTML fragment links must target existing element IDs",
+    "Empty hash links prohibited unless explicitly justified",
+    "Placeholder anchors prohibited",
+    "Navigation anchors resolve on same page or registered route"
+  ],
+  "deployment_status_rules": [
+    "external_deployment_deferred remains valid",
+    "Deployment-deferred status is not a validation failure",
+    "deployment_ready may not be set until deployment readiness gate passes",
+    "No DNS instruction through this policy"
+  ],
+  "prohibited_route_states_in_sitemap": [
+    "planned",
+    "blocked",
+    "future",
+    "draft",
+    "internal_only"
+  ],
+  "prohibited_public_link_targets": [
+    "missing route",
+    "placeholder",
+    "future route",
+    "blocked route",
+    "unregistered route"
+  ],
+  "last_reviewed": "2026-06-17"
+}

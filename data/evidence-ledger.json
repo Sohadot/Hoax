@@ -145,6 +145,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Zero-data static foundation. No forms, uploads, analytics, or external scripts."
+    },
+    {
+      "claim_id": "CLAIM-0014",
+      "claim_text": "Hoax.ai has adopted Link and Route Integrity Hardening v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "LINK_ROUTE_INTEGRITY_POLICY.md, DECISION_LOG.md (DEC-025)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Pre-expansion route/link hardening. No new routes or SEO expansion."
     }
   ]
 }

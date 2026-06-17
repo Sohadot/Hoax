@@ -616,3 +616,27 @@ Hoax.ai is a trust-focused asset. Any collection of user data, file upload, trac
 - No cookies, local storage, tracking pixels, or external scripts may be added without explicit approval.
 - No public engine, classifier, or API may launch before security/privacy gates pass.
 - validate_all.py must fail if forbidden interaction patterns appear.
+
+---
+
+## DEC-025 — Link and Route Integrity Hardening v1 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Link and Route Integrity Hardening v1 to ensure that routes, sitemap entries, canonical URLs, internal links, public surface references, and future navigation cannot expand without registry alignment and validation.
+
+### Rationale
+
+A reference-grade asset cannot scale through uncontrolled links, orphan pages, placeholder routes, or sitemap inflation. Route and link integrity must become enforceable before ontology pages, reference pages, SEO expansion, deployment, or public tools.
+
+### Implications
+
+- No new route may be added without route-registry alignment.
+- No sitemap URL may exist without a registered eligible route.
+- No public internal link may point to a non-existent or blocked route.
+- No placeholder route may appear in navigation or sitemap.
+- No route may become indexable without canonical, sitemap, and internal link policy.
+- Future reference expansion must pass route/link validation before release.
