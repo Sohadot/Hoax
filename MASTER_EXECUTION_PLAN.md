@@ -38,7 +38,7 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G1B | Sovereign integrity foundation | Sprint 1B audit passed |
 | G1C | Public deployment surface validated | Sprint 1C audit passed — **pending** |
 | G1D | Category factory enforcement layer | Sprint 1D validator PASS |
-| G2 | Evidence posture taxonomy | Taxonomy file validated, governance aligned |
+| G2 | Evidence posture taxonomy | Sprint 2 validator PASS |
 | G3 | Classification protocol | Protocol documented, output boundaries defined |
 | G4 | Classifier v0 | Tool deployed with no-verdict disclaimer, no upload |
 | G5 | Reference layer v1 | Pages reference-grade, source-disciplined, no thin pages |
@@ -47,7 +47,7 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G8 | GitHub public completion | All links working, no false claims, mobile-safe |
 | G9 | DNS and Cloudflare | Public foundation complete and validated |
 
-**Gate G1D passed.** Ontology work may proceed per phase order. External deployment remains deferred until G1C passes.
+**Gate G2 passed.** Sprint 3 (Evidence Posture Standard) may proceed. External deployment remains deferred until G1C passes.
 
 ## Sprint Closure Rules
 
@@ -138,7 +138,8 @@ Classifier, API, and workflow tools require protocol and standard completion fir
 | Sprint 1B | COMPLETE | G1B passed |
 | Sprint 1C | BLOCKED | G1C pending — external deployment deferred |
 | Sprint 1D | COMPLETE | G1D passed |
-| Sprint 2+ | READY | G1D passed — proceed per phase order; G1C still pending |
+| Sprint 2 | COMPLETE | G2 passed |
+| Sprint 3+ | READY | G2 passed — proceed per phase order; G1C still pending |
 
 ## Governing Sentence
 

@@ -1,0 +1,305 @@
+{
+  "taxonomy_id": "TAXONOMY-EVIDENCE-POSTURE-001",
+  "name": "Hoax.ai Evidence Posture Taxonomy",
+  "version": "1.0",
+  "status": "active_internal",
+  "governing_principle": "Evidence posture describes the condition of an evidence artifact or evidence chain. It does not determine truth, falsity, guilt, deception, or subject status.",
+  "applies_to": [
+    "evidence artifacts",
+    "evidence chains",
+    "source records",
+    "claim records",
+    "provenance signals",
+    "contextual signals",
+    "coherence signals"
+  ],
+  "does_not_apply_to": [
+    "people",
+    "institutions",
+    "brands",
+    "organizations",
+    "events as subjects of judgment"
+  ],
+  "dimensions": [
+    {
+      "dimension_id": "DIM-0001",
+      "name": "Artifact Identification",
+      "definition": "Whether the item being examined is clearly defined as an evidence artifact with bounded scope.",
+      "applies_to": ["evidence artifacts", "evidence chains"],
+      "prohibited_interpretation": "Identifying an artifact does not identify, accuse, or judge any connected subject.",
+      "related_terms": ["TERM-0002", "TERM-0013"],
+      "status": "active"
+    },
+    {
+      "dimension_id": "DIM-0002",
+      "name": "Provenance Visibility",
+      "definition": "Whether origin, custody, creation context, or publication path of an artifact is visible and examinable.",
+      "applies_to": ["evidence artifacts", "provenance signals", "source records"],
+      "prohibited_interpretation": "Limited provenance does not establish manipulation, bad faith, or subject deception.",
+      "related_terms": ["TERM-0005", "TERM-0016"],
+      "status": "active"
+    },
+    {
+      "dimension_id": "DIM-0003",
+      "name": "Source Confidence",
+      "definition": "Whether the source record is known, bounded, and appropriate to the artifact or claim under examination.",
+      "applies_to": ["source records", "evidence artifacts", "claim records"],
+      "prohibited_interpretation": "Low source confidence does not accuse a person or institution of dishonesty or fraud.",
+      "related_terms": ["TERM-0006"],
+      "status": "active"
+    },
+    {
+      "dimension_id": "DIM-0004",
+      "name": "Contextual Stability",
+      "definition": "Whether surrounding context is stable, missing, disputed, or unclear relative to the artifact.",
+      "applies_to": ["contextual signals", "claim records", "evidence artifacts"],
+      "prohibited_interpretation": "Unstable context does not determine whether a depicted or referenced event occurred.",
+      "related_terms": ["TERM-0007", "TERM-0017"],
+      "status": "active"
+    },
+    {
+      "dimension_id": "DIM-0005",
+      "name": "Forensic Coherence",
+      "definition": "Whether internal structural, linguistic, media, temporal, and format-based signals appear coherent or contain unresolved inconsistencies.",
+      "applies_to": ["coherence signals", "evidence artifacts"],
+      "prohibited_interpretation": "Questioned coherence does not imply synthetic generation, falsity, or fraud.",
+      "related_terms": ["TERM-0008"],
+      "status": "active"
+    },
+    {
+      "dimension_id": "DIM-0006",
+      "name": "Evidence Chain Continuity",
+      "definition": "Whether the artifact can be connected to a stable chain of supporting records with examinable custody and linkage.",
+      "applies_to": ["evidence chains", "evidence artifacts", "source records"],
+      "prohibited_interpretation": "Broken chain continuity does not prove subject involvement or institutional misconduct.",
+      "related_terms": ["TERM-0009"],
+      "status": "active"
+    },
+    {
+      "dimension_id": "DIM-0007",
+      "name": "Corroboration Posture",
+      "definition": "Whether supporting evidence exists, is absent, partial, or conflicting within the available examination scope.",
+      "applies_to": ["evidence chains", "evidence artifacts", "claim records"],
+      "prohibited_interpretation": "Absent or conflicting corroboration does not issue a verdict on the underlying claim or subject.",
+      "related_terms": ["TERM-0001", "TERM-0009"],
+      "status": "active"
+    },
+    {
+      "dimension_id": "DIM-0008",
+      "name": "Subject Boundary Clarity",
+      "definition": "Whether classification language confines posture to artifacts and evidence chains without transferring risk to connected subjects.",
+      "applies_to": ["evidence artifacts", "evidence chains", "output statements"],
+      "prohibited_interpretation": "Artifact risk must not be read as subject accusation, guilt, or involvement.",
+      "related_terms": ["TERM-0003", "TERM-0010"],
+      "status": "active"
+    },
+    {
+      "dimension_id": "DIM-0009",
+      "name": "Output Boundary",
+      "definition": "Whether the resulting statement remains within evidence posture framing and avoids verdict, score, or accusation language.",
+      "applies_to": ["output statements", "evidence artifacts", "evidence chains"],
+      "prohibited_interpretation": "Output boundary violation converts evidence posture into truth verdict or subject judgment.",
+      "related_terms": ["TERM-0010", "TERM-0013"],
+      "status": "active"
+    }
+  ],
+  "states": [
+    {
+      "state_id": "STATE-0001",
+      "label": "documented_posture",
+      "definition": "The artifact or evidence chain has visible support, bounded source context, and no major unresolved posture gaps within the available scope.",
+      "required_conditions": [
+        "artifact clearly identified",
+        "provenance or source context visible within scope",
+        "no major unresolved posture dimension gaps"
+      ],
+      "boundary_statement": "Does not mean verified as fact, authentic, complete, or legally verified.",
+      "prohibited_interpretations": [
+        "truth verdict",
+        "authenticity certification",
+        "legal verification",
+        "subject accusation"
+      ],
+      "allowed_output_language": [
+        "The artifact has a documented posture within the available scope.",
+        "The evidence chain is documented within available source and provenance context."
+      ],
+      "status": "active"
+    },
+    {
+      "state_id": "STATE-0002",
+      "label": "partially_supported_posture",
+      "definition": "The artifact has some supporting signals, but one or more posture dimensions remain incomplete, weak, or unresolved.",
+      "required_conditions": [
+        "at least one supporting posture signal present",
+        "one or more dimensions incomplete or unresolved"
+      ],
+      "boundary_statement": "Does not imply falsity or deception.",
+      "prohibited_interpretations": [
+        "falsity verdict",
+        "deception accusation",
+        "subject guilt",
+        "institutional bad faith"
+      ],
+      "allowed_output_language": [
+        "The evidence chain is partially supported within the available context.",
+        "The artifact has a partially supported posture with unresolved dimensions."
+      ],
+      "status": "active"
+    },
+    {
+      "state_id": "STATE-0003",
+      "label": "provenance_limited_posture",
+      "definition": "The artifact lacks sufficient origin, custody, publication path, or source-chain visibility.",
+      "required_conditions": [
+        "provenance visibility dimension is limited or absent",
+        "origin, custody, or publication path insufficient for stronger posture"
+      ],
+      "boundary_statement": "Does not establish manipulation or bad faith.",
+      "prohibited_interpretations": [
+        "manipulation proven",
+        "bad faith established",
+        "subject deception",
+        "institutional fraud"
+      ],
+      "allowed_output_language": [
+        "The artifact has a provenance-limited posture.",
+        "Provenance visibility is insufficient for stronger posture language."
+      ],
+      "status": "active"
+    },
+    {
+      "state_id": "STATE-0004",
+      "label": "contextually_unstable_posture",
+      "definition": "The artifact may be difficult to interpret because surrounding context is missing, ambiguous, disputed, or unstable.",
+      "required_conditions": [
+        "contextual stability dimension is missing, disputed, or unstable"
+      ],
+      "boundary_statement": "Does not determine whether the depicted or referenced event occurred.",
+      "prohibited_interpretations": [
+        "event occurrence verdict",
+        "subject involvement",
+        "institutional misconduct",
+        "claim falsity"
+      ],
+      "allowed_output_language": [
+        "The artifact has a contextually unstable posture.",
+        "Surrounding context is missing, disputed, or unstable for this artifact."
+      ],
+      "status": "active"
+    },
+    {
+      "state_id": "STATE-0005",
+      "label": "coherence_questioned_posture",
+      "definition": "The artifact contains internal or relational signals that require further examination before stronger posture language is used.",
+      "required_conditions": [
+        "forensic coherence dimension contains unresolved inconsistencies"
+      ],
+      "boundary_statement": "Does not imply synthetic generation, falsity, or fraud.",
+      "prohibited_interpretations": [
+        "synthetic media verdict",
+        "falsity determination",
+        "fraud accusation",
+        "deepfake detection claim"
+      ],
+      "allowed_output_language": [
+        "The artifact has a coherence-questioned posture.",
+        "Internal signals require further examination before stronger posture language."
+      ],
+      "status": "active"
+    },
+    {
+      "state_id": "STATE-0006",
+      "label": "high_risk_evidence_posture",
+      "definition": "Multiple posture dimensions contain unresolved risk signals, making the artifact unsuitable for strong reliance without further review.",
+      "required_conditions": [
+        "multiple dimensions contain unresolved risk signals",
+        "artifact unsuitable for strong reliance without further review"
+      ],
+      "boundary_statement": "Does not accuse any connected subject and does not prove deception, guilt, fraud, or subject involvement.",
+      "prohibited_interpretations": [
+        "subject accusation",
+        "guilt determination",
+        "fraud proof",
+        "deception proof",
+        "subject involvement established"
+      ],
+      "allowed_output_language": [
+        "The artifact has a high-risk evidence posture requiring further review.",
+        "Multiple posture dimensions contain unresolved risk signals on this artifact."
+      ],
+      "status": "active"
+    },
+    {
+      "state_id": "STATE-0007",
+      "label": "not_assessable_posture",
+      "definition": "Available information is insufficient to classify the evidence posture responsibly.",
+      "required_conditions": [
+        "available information insufficient for responsible posture classification"
+      ],
+      "boundary_statement": "Not assessable is not suspicious by itself.",
+      "prohibited_interpretations": [
+        "suspicion by default",
+        "presumption of deception",
+        "presumption of guilt",
+        "negative inference about subject"
+      ],
+      "allowed_output_language": [
+        "This record is not assessable from the available information.",
+        "The artifact has a not-assessable posture within the current scope."
+      ],
+      "status": "active"
+    },
+    {
+      "state_id": "STATE-0008",
+      "label": "planned_not_claimed_posture",
+      "definition": "A capability, output, route, protocol, or tool layer is described as planned but not currently active.",
+      "required_conditions": [
+        "referenced capability is planned or under development",
+        "capability is not currently operational"
+      ],
+      "boundary_statement": "Must never be presented as an existing capability.",
+      "prohibited_interpretations": [
+        "active tool claim",
+        "live classifier output",
+        "existing protocol deployment",
+        "operational scoring"
+      ],
+      "allowed_output_language": [
+        "This capability is planned and not currently active.",
+        "The referenced layer has a planned-not-claimed posture."
+      ],
+      "status": "active"
+    }
+  ],
+  "prohibited_state_names": [
+    "fake",
+    "real",
+    "true",
+    "false",
+    "hoax confirmed",
+    "deepfake detected",
+    "authentic certified",
+    "verified truth",
+    "fraud signal",
+    "guilty subject",
+    "deceptive person",
+    "lie score",
+    "truth score"
+  ],
+  "prohibited_output_patterns": [
+    "The person is lying.",
+    "This proves fraud.",
+    "This is fake.",
+    "This confirms the event did not happen.",
+    "The institution is deceptive.",
+    "The subject is involved."
+  ],
+  "allowed_output_patterns": [
+    "The artifact has a provenance-limited posture.",
+    "The evidence chain is partially supported within the available context.",
+    "This record is not assessable from the available information.",
+    "The posture applies to the artifact, not the connected subject."
+  ],
+  "last_reviewed": "2026-06-17"
+}

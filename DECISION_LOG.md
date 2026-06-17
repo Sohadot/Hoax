@@ -418,3 +418,28 @@ A sovereign reference asset must be difficult to imitate through structure, not 
 - No sprint may close without validator pass or documented blocked status.
 - data/route-registry.json, data/category-language.json, data/ontology-foundation.json, and data/source-registry.json are canonical enforcement registries.
 - validators/validate_all.py is the quality gate entry point.
+
+---
+
+## DEC-017 — Evidence Posture Taxonomy v1 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts a bounded Evidence Posture Taxonomy to describe the condition of evidence artifacts and evidence chains without producing truth verdicts, fake/real judgments, subject accusations, or active classifier outputs.
+
+### Rationale
+
+A category intelligence asset must define its posture states before it can create standards, protocols, tools, or reference pages. Without a controlled taxonomy, future outputs risk becoming vague, binary, or accusatory.
+
+### Implications
+
+- Future standards must use the taxonomy.
+- Future protocols must map to taxonomy states.
+- Future tools must not output states outside the taxonomy.
+- Future reference pages must not invent posture labels outside the taxonomy.
+- The taxonomy remains internal/governed until public route governance permits publication.
+- EVIDENCE_POSTURE_TAXONOMY.md and data/evidence-posture-taxonomy.json are canonical taxonomy sources.
+- Nine dimensions (DIM-0001 through DIM-0009) and eight states (STATE-0001 through STATE-0008) are the initial bounded vocabulary.

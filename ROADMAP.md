@@ -181,35 +181,57 @@ External deployment remains deferred until deployment readiness gate (Sprint 1C)
 
 ---
 
-## Sprint 2 — Evidence Posture Taxonomy
+## Sprint 2 — Evidence Posture Taxonomy v1
 
-**Status:** READY — G1D passed; external deployment still deferred (G1C pending)  
-**Goal:** Define the first taxonomy for evidence-risk classification.
-
-### Initial Classes
-
-- Synthetic Media
-- Deepfake Risk
-- Voice Cloning Risk
-- Impersonation
-- Forged Authority
-- Manipulated Context
-- Provenance Gap
-- Source Uncertainty
-- Coordinated Rumor
-- Scam Narrative
-- Evidence Collapse
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Define the first governed Evidence Posture Taxonomy for evidence artifacts and evidence chains.
 
 ### Deliverables
 
+- EVIDENCE_POSTURE_TAXONOMY.md
 - data/evidence-posture-taxonomy.json
-- taxonomy documentation
-- validator for taxonomy structure
+- SPRINT_2_EVIDENCE_POSTURE_TAXONOMY_AUDIT.md
+- DEC-017 appended to DECISION_LOG.md
+- Validator extended for taxonomy checks
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Taxonomy Scope
+
+- 9 posture dimensions (DIM-0001 through DIM-0009)
+- 8 posture states (STATE-0001 through STATE-0008)
+- No classifier, score, public route, or tool created
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Taxonomy is internal/governed until public route governance permits publication.
 
 ---
 
-## Sprint 3 — Evidence Posture Classification Protocol
+## Sprint 3 — Evidence Posture Standard v1
 
+**Status:** READY — G2 passed  
+**Goal:** Define the first evidence posture standard mapping taxonomy states to bounded output requirements.
+
+### Deliverables
+
+- EVIDENCE_POSTURE_STANDARD.md
+- standard output boundary language
+- taxonomy-to-standard mapping
+- confidence language rules
+- no-verdict disclaimer templates
+
+### Required Principle
+
+Standards must use taxonomy states only. No new posture labels outside the taxonomy.
+
+---
+
+## Sprint 4 — Evidence Posture Classification Protocol
+
+**Status:** BLOCKED — requires Sprint 3 (Standard)  
 **Goal:** Define the first protocol for bounded evidence-risk classification.
 
 ### Deliverables
@@ -229,8 +251,9 @@ They must not declare final truth.
 
 ---
 
-## Sprint 4 — Evidence Posture Classifier v0
+## Sprint 5 — Evidence Posture Classifier v0
 
+**Status:** BLOCKED — requires Sprint 4 (Protocol)  
 **Goal:** Build a lightweight rule-based tool.
 
 ### Deliverables
@@ -252,8 +275,9 @@ They must not declare final truth.
 
 ---
 
-## Sprint 5 — Reference Layer v1
+## Sprint 6 — Reference Layer v1
 
+**Status:** BLOCKED — requires reference governance gates  
 **Goal:** Add a small number of strong reference pages.
 
 ### Candidate Pages

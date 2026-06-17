@@ -134,6 +134,61 @@
       "related_terms": ["TERM-0001", "TERM-0002", "TERM-0010"],
       "prohibited_misreadings": ["AI detector", "truth machine", "hoax prover"],
       "notes": "Approved core positioning per CLAIM_POLICY.md."
+    },
+    {
+      "term_id": "TERM-0013",
+      "term": "Evidence Posture State",
+      "canonical_status": "canonical",
+      "definition": "A bounded taxonomy label describing the condition of an evidence artifact or evidence chain. Not a truth verdict, score, or subject judgment.",
+      "layer": "taxonomy",
+      "public_use_allowed": false,
+      "related_terms": ["TERM-0001", "TERM-0010"],
+      "prohibited_misreadings": ["truth verdict", "fake/real label", "subject accusation output"],
+      "notes": "Internal taxonomy term per DEC-017. Not active tool output."
+    },
+    {
+      "term_id": "TERM-0014",
+      "term": "Not Assessable",
+      "canonical_status": "canonical",
+      "definition": "A posture state indicating available information is insufficient for responsible evidence posture classification. Not assessable is not suspicious by itself.",
+      "layer": "taxonomy",
+      "public_use_allowed": false,
+      "related_terms": ["TERM-0013", "TERM-0001"],
+      "prohibited_misreadings": ["suspicion by default", "presumption of deception", "negative subject inference"],
+      "notes": "Maps to not_assessable_posture state. Internal until public route governance permits."
+    },
+    {
+      "term_id": "TERM-0015",
+      "term": "High-Risk Evidence Posture",
+      "canonical_status": "canonical",
+      "definition": "A posture state where multiple dimensions contain unresolved risk signals, requiring further review before strong reliance. Does not prove deception, guilt, fraud, or subject involvement.",
+      "layer": "taxonomy",
+      "public_use_allowed": false,
+      "related_terms": ["TERM-0013", "TERM-0003"],
+      "prohibited_misreadings": ["guilt proof", "fraud proof", "subject accusation", "deception proof"],
+      "notes": "Maps to high_risk_evidence_posture state. Artifact-bound only."
+    },
+    {
+      "term_id": "TERM-0016",
+      "term": "Provenance-Limited Posture",
+      "canonical_status": "canonical",
+      "definition": "A posture state where origin, custody, publication path, or source-chain visibility is insufficient. Does not establish manipulation or bad faith.",
+      "layer": "taxonomy",
+      "public_use_allowed": false,
+      "related_terms": ["TERM-0005", "TERM-0013"],
+      "prohibited_misreadings": ["manipulation proven", "bad faith established", "subject deception"],
+      "notes": "Maps to provenance_limited_posture state."
+    },
+    {
+      "term_id": "TERM-0017",
+      "term": "Contextually Unstable Posture",
+      "canonical_status": "canonical",
+      "definition": "A posture state where surrounding context is missing, ambiguous, disputed, or unstable. Does not determine whether a depicted or referenced event occurred.",
+      "layer": "taxonomy",
+      "public_use_allowed": false,
+      "related_terms": ["TERM-0007", "TERM-0013"],
+      "prohibited_misreadings": ["event occurrence verdict", "subject involvement", "claim falsity"],
+      "notes": "Maps to contextually_unstable_posture state."
     }
   ]
 }

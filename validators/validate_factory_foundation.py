@@ -129,7 +129,63 @@ ID_PATTERNS = {
     "TERM": re.compile(r"^TERM-\d{4}$"),
     "CLASS": re.compile(r"^CLASS-\d{4}$"),
     "SOURCE": re.compile(r"^SOURCE-\d{4}$"),
+    "DIM": re.compile(r"^DIM-\d{4}$"),
+    "STATE": re.compile(r"^STATE-\d{4}$"),
 }
+
+DIMENSION_REQUIRED = {
+    "dimension_id",
+    "name",
+    "definition",
+    "applies_to",
+    "prohibited_interpretation",
+    "related_terms",
+    "status",
+}
+
+STATE_REQUIRED = {
+    "state_id",
+    "label",
+    "definition",
+    "required_conditions",
+    "boundary_statement",
+    "prohibited_interpretations",
+    "allowed_output_language",
+    "status",
+}
+
+TAXONOMY_STATE_PROHIBITED = [
+    "fake",
+    "real",
+    "true",
+    "false",
+    "detects all",
+    "guaranteed",
+    "certifies truth",
+    "proves guilt",
+    "fraud by association",
+    "deceptive person",
+    "lie score",
+    "truth score",
+]
+
+TAXONOMY_TOP_REQUIRED = {
+    "taxonomy_id",
+    "name",
+    "version",
+    "status",
+    "governing_principle",
+    "applies_to",
+    "does_not_apply_to",
+    "dimensions",
+    "states",
+    "prohibited_state_names",
+    "prohibited_output_patterns",
+    "allowed_output_patterns",
+    "last_reviewed",
+}
+
+WORD_BOUNDARY_TERMS = {"fake", "real", "true", "false"}
 
 
 def error(msg: str) -> None:
@@ -367,6 +423,114 @@ def validate_ontology_foundation() -> bool:
     return ok
 
 
+def contains_prohibited_taxonomy_term(text: str, term: str) -> bool:
+    lower = text.lower()
+    if term in WORD_BOUNDARY_TERMS:
+        return bool(re.search(rf"\b{re.escape(term)}\b", lower))
+    return term in lower
+
+
+def validate_evidence_posture_taxonomy() -> bool:
+    ok = True
+    path = ROOT / "data" / "evidence-posture-taxonomy.json"
+    data = load_json(path)
+
+    missing_top = TAXONOMY_TOP_REQUIRED - set(data.keys())
+    if missing_top:
+        error(f"evidence-posture-taxonomy: missing top-level fields {sorted(missing_top)}")
+        ok = False
+
+    if not data.get("taxonomy_id"):
+        error("evidence-posture-taxonomy: taxonomy_id missing")
+        ok = False
+    if not data.get("version"):
+        error("evidence-posture-taxonomy: version missing")
+        ok = False
+
+    dimensions = data.get("dimensions", [])
+    states = data.get("states", [])
+    if not dimensions:
+        error("evidence-posture-taxonomy: dimensions missing or empty")
+        ok = False
+    if not states:
+        error("evidence-posture-taxonomy: states missing or empty")
+        ok = False
+
+    ok &= validate_unique_ids(dimensions, "dimension_id", "DIM", "evidence-posture-taxonomy")
+    ok &= validate_unique_ids(states, "state_id", "STATE", "evidence-posture-taxonomy")
+    ok &= validate_required_fields(dimensions, DIMENSION_REQUIRED, "evidence-posture-taxonomy dimension")
+    ok &= validate_required_fields(states, STATE_REQUIRED, "evidence-posture-taxonomy state")
+
+    prohibited_names = {n.lower() for n in data.get("prohibited_state_names", [])}
+    labels = {s.get("label", "").lower() for s in states}
+
+    for state in states:
+        sid = state["state_id"]
+        label = state.get("label", "")
+        definition = state.get("definition", "")
+        boundary = state.get("boundary_statement", "")
+
+        if not boundary.strip():
+            error(f"evidence-posture-taxonomy '{sid}': boundary_statement missing")
+            ok = False
+
+        if label.lower() in prohibited_names:
+            error(f"evidence-posture-taxonomy '{sid}': label matches prohibited state name")
+            ok = False
+
+        for field_name, field_text in [("label", label), ("definition", definition)]:
+            for term in TAXONOMY_STATE_PROHIBITED:
+                if contains_prohibited_taxonomy_term(field_text, term):
+                    error(
+                        f"evidence-posture-taxonomy '{sid}': prohibited term '{term}' in {field_name}"
+                    )
+                    ok = False
+
+    high_risk = next((s for s in states if s.get("label") == "high_risk_evidence_posture"), None)
+    if high_risk is None:
+        error("evidence-posture-taxonomy: high_risk_evidence_posture state missing")
+        ok = False
+    else:
+        combined = " ".join(
+            [
+                high_risk.get("boundary_statement", ""),
+                " ".join(high_risk.get("prohibited_interpretations", [])),
+            ]
+        ).lower()
+        for marker in ["deception", "guilt", "fraud", "subject involvement", "subject accusation"]:
+            if marker not in combined:
+                error(
+                    f"evidence-posture-taxonomy: high_risk_evidence_posture missing boundary marker '{marker}'"
+                )
+                ok = False
+
+    not_assessable = next((s for s in states if s.get("label") == "not_assessable_posture"), None)
+    if not_assessable is None:
+        error("evidence-posture-taxonomy: not_assessable_posture state missing")
+        ok = False
+    else:
+        boundary = not_assessable.get("boundary_statement", "").lower()
+        if "not suspicious" not in boundary and "not assessable is not" not in boundary:
+            error(
+                "evidence-posture-taxonomy: not_assessable_posture must state not assessable is not suspicion"
+            )
+            ok = False
+
+    planned = next((s for s in states if s.get("label") == "planned_not_claimed_posture"), None)
+    if planned is None:
+        error("evidence-posture-taxonomy: planned_not_claimed_posture state missing")
+        ok = False
+
+    registry = load_json(ROOT / "data" / "source-registry.json")
+    locations = {s.get("location") for s in registry.get("sources", [])}
+    for required in ["EVIDENCE_POSTURE_TAXONOMY.md", "data/evidence-posture-taxonomy.json"]:
+        if required not in locations:
+            error(f"source-registry: missing taxonomy source '{required}'")
+            ok = False
+
+    return ok
+
+
 def validate_source_registry() -> bool:
     ok = True
     data = load_json(ROOT / "data" / "source-registry.json")
@@ -472,6 +636,7 @@ def validate_json_files() -> bool:
         "data/category-language.json",
         "data/ontology-foundation.json",
         "data/source-registry.json",
+        "data/evidence-posture-taxonomy.json",
     ]:
         path = ROOT / rel
         try:
@@ -490,6 +655,7 @@ def main() -> int:
         ("Category language", validate_category_language),
         ("Ontology foundation", validate_ontology_foundation),
         ("Source registry", validate_source_registry),
+        ("Evidence posture taxonomy", validate_evidence_posture_taxonomy),
         ("Public surface", validate_public_surface),
     ]
 

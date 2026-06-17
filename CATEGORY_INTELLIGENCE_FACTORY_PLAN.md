@@ -50,6 +50,8 @@ The factory is not considered operational until its category language, ontology,
 
 Machine-readable registries and validators/validate_all.py enforce expansion discipline. Strategic language alone is insufficient.
 
+The Evidence Posture Taxonomy (DEC-017) defines bounded posture dimensions and states. Future standards, protocols, and tools must map to taxonomy vocabulary only.
+
 ## Why the Asset Becomes Difficult to Imitate
 
 A domain name alone is imitable.

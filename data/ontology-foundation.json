@@ -123,6 +123,28 @@
       "related_terms": ["TERM-0001", "TERM-0011", "TERM-0010"],
       "status": "planned_not_deployed",
       "notes": "Future bounded classification layer per Sprint 2–4 roadmap. Not an active tool. No live scoring."
+    },
+    {
+      "class_id": "CLASS-0012",
+      "class_name": "EvidencePostureState",
+      "category": "taxonomy_foundation",
+      "definition": "A bounded taxonomy state label describing the condition of an evidence artifact or evidence chain within the Evidence Posture Taxonomy.",
+      "allowed_use": "Taxonomy definition, standard mapping, protocol output vocabulary scope.",
+      "prohibited_use": "Active classifier output claim, truth verdict, fake/real binary, subject classification, live scoring.",
+      "related_terms": ["TERM-0013", "TERM-0014", "TERM-0015"],
+      "status": "taxonomy_foundation_defined",
+      "notes": "Taxonomy foundation per DEC-017. Not an active classifier output."
+    },
+    {
+      "class_id": "CLASS-0013",
+      "class_name": "EvidencePostureDimension",
+      "category": "taxonomy_foundation",
+      "definition": "A taxonomy dimension used to examine one aspect of evidence posture on an artifact or evidence chain.",
+      "allowed_use": "Taxonomy structure, standard dimension mapping, protocol examination scope.",
+      "prohibited_use": "Subject judgment dimension, truth verdict dimension, detection authority claim.",
+      "related_terms": ["TERM-0001", "TERM-0013"],
+      "status": "taxonomy_foundation_defined",
+      "notes": "Nine dimensions defined in evidence-posture-taxonomy.json. Not live scoring."
     }
   ]
 }
