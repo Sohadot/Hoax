@@ -106,6 +106,7 @@
       "canonical_policy": "registry_aligned",
       "link_policy": "registered_targets_only",
       "route_visibility": "public_category_language",
+      "language_validation_status": "public_category_language_validated",
       "notes": "Public category language layer — governed vocabulary and relation system."
     }
   ]

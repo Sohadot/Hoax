@@ -354,6 +354,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "One public language route created. Engine, classifier, tool, upload, scoring, and broader publication remain blocked."
+    },
+    {
+      "claim_id": "CLAIM-0033",
+      "claim_text": "Hoax.ai has adopted Public Category Language Validation and Surface Audit v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_CATEGORY_LANGUAGE_VALIDATION_AND_SURFACE_AUDIT.md, DECISION_LOG.md (DEC-045)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Public category language layer validated. Engine, classifier, tool, upload, scoring, and broader publication remain blocked."
     }
   ]
 }

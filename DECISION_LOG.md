@@ -1104,3 +1104,28 @@ Hoax.ai cannot become a category-defining asset by publishing isolated pages alo
 - No individual new term routes may be created.
 - No engine/classifier/tool/upload/scoring/API/form/analytics capability is authorized.
 - Future engine work remains blocked until the public category language layer is validated.
+
+---
+
+## DEC-045 — Public Category Language Validation and Surface Audit v1 Adopted
+
+**Date:** 2026-06-17
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Category Language Validation and Surface Audit v1 to validate the /language/ public category language layer across term integrity, relation integrity, route/sitemap alignment, internal links, metadata boundaries, visible language safety, forbidden capability checks, and non-authorization discipline, without authorizing engine, classifier, tool, upload, scoring, broader publication, DNS, Cloudflare, custom domain launch, or monetization.
+
+### Rationale
+
+The category language layer is the bridge between public reference pages and future workbench/engine governance. It must be validated before the asset moves toward any engine-governance phase. Hoax.ai must make its category language legible without implying that a public classifier, detector, upload workflow, scoring interface, or evidence engine already exists.
+
+### Implications
+
+- The /language/ route may be audited.
+- Minor corrections may be made only to preserve validation, accessibility, metadata safety, link integrity, relation clarity, or governance boundary discipline.
+- No new pages may be created.
+- No new routes may be created.
+- No sitemap expansion is authorized.
+- No engine/classifier/tool/upload/scoring/API/forms/analytics/monetization is authorized.
+- Future work may move to Evidence Posture Workbench Governance v1 only after this validation passes.

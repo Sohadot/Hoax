@@ -65,12 +65,13 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G24 | First Controlled Public Reference Pilot | Sprint 24 validator PASS |
 | G25 | Public Reference Validation and Live Surface Audit | Sprint 25 validator PASS |
 | G26 | Public Category Language Layer | Sprint 26 validator PASS |
+| G27 | Public Category Language Validation and Surface Audit | Sprint 27 validator PASS |
 
-**Gate G26 passed.** Sprint 27 (Public Category Language Validation and Surface Audit) may proceed when authorized. Public classifier and engine remain blocked. Publisher remains blocked from broader publication and engine governance until language layer validation passes. External deployment remains separately governed.
+**Gate G27 passed.** Sprint 28 (Evidence Posture Workbench Governance) may proceed when authorized. Public classifier and engine remain blocked. Publisher remains blocked from broader publication until workbench governance is adopted. External deployment remains separately governed.
 
 ### Foundation Gates vs Deployment Gates
 
-Foundation gates (G0–G26) govern category infrastructure, reference governance, controlled public reference pilot, live surface validation, category language layer, and expansion readiness. They must pass before reference layer scale.
+Foundation gates (G0–G27) govern category infrastructure, reference governance, controlled public reference pilot, live surface validation, category language layer, language validation, and expansion readiness. They must pass before reference layer scale.
 
 Deployment gates are **separate** and **not current foundation steps**. They open only after reference expansion governance is in place. None are passed.
 
@@ -198,7 +199,8 @@ Classifier, API, and workflow tools require protocol and standard completion fir
 | Sprint 24 | COMPLETE | G24 passed |
 | Sprint 25 | COMPLETE | G25 passed |
 | Sprint 26 | COMPLETE | G26 passed |
-| Sprint 27+ | READY | G26 passed — Public Category Language Validation pending; engine/classifier blocked; deployment gates separately governed |
+| Sprint 27 | COMPLETE | G27 passed |
+| Sprint 28+ | READY | G27 passed — Evidence Posture Workbench Governance pending; engine/classifier blocked; deployment gates separately governed |
 
 ## Governing Sentence
 

@@ -17,6 +17,7 @@ from public_surface_checks import (
     PUBLIC_ROUTE_IDS,
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
+    PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE,
     validate_no_extra_public_html,
     validate_public_surface,
 )
@@ -395,8 +396,14 @@ def validate_internal_link_graph() -> bool:
 def validate_publisher_governance() -> bool:
     ok = True
     pub = load_json(ROOT / "data" / "publisher-governance-policy.json")
-    if pub.get("current_publisher_status") != PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE:
-        error(f"publisher status must be {PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE}")
+    if pub.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
+        PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE,
+    ):
+        error(
+            f"publisher status must be {PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE} "
+            f"or {PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE}"
+        )
         ok = False
 
     gates = load_json(ROOT / "data" / "publisher-quality-gates.json").get("gates", [])

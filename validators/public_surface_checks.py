@@ -41,6 +41,8 @@ PUBLISHER_STATUS_POST_LIVE_AUDIT = "blocked_until_public_category_language_layer
 
 PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE = "blocked_until_public_category_language_validation"
 
+PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE = "blocked_until_evidence_posture_workbench_governance"
+
 PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_reference_candidate_pack",
     "blocked_until_internal_draft_blueprint",
@@ -53,6 +55,7 @@ PUBLISHER_STATUSES_ALLOWED = (
     PUBLISHER_STATUS_POST_PILOT,
     PUBLISHER_STATUS_POST_LIVE_AUDIT,
     PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
+    PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE,
 )
 
 

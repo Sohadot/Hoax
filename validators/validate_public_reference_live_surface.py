@@ -16,6 +16,7 @@ from public_surface_checks import (
     PILOT_PATHS,
     PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
     PUBLISHER_STATUS_POST_LIVE_AUDIT,
+    PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE,
     validate_no_extra_public_html,
     validate_pilot_era_public_surface,
     validate_pilot_routes_present,
@@ -283,10 +284,12 @@ def validate_publisher_governance() -> bool:
     if pub.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_LIVE_AUDIT,
         PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
+        PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE,
     ):
         error(
-            f"publisher status must be {PUBLISHER_STATUS_POST_LIVE_AUDIT} "
-            f"or {PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE}"
+            f"publisher status must be {PUBLISHER_STATUS_POST_LIVE_AUDIT}, "
+            f"{PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE}, or "
+            f"{PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE}"
         )
         ok = False
 

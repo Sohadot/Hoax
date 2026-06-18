@@ -1,0 +1,102 @@
+{
+  "policy_id": "PUB-CAT-LANG-VALIDATION-POLICY-001",
+  "name": "Hoax.ai Public Category Language Validation Policy",
+  "version": "v1.0.0",
+  "status": "governed_public_category_language_validation_policy",
+  "maturity": "language_validation_only_no_engine_no_classifier_no_tool",
+  "governing_principle": "A public language layer must make the category legible without making the tool appear present.",
+  "engine_boundary_principle": "The language surface may prepare future engine governance, but it must not imply engine capability.",
+  "allowed_validation_actions": [
+    "validation",
+    "audit_record_creation",
+    "minor_corrections_for_safety_or_integrity_only"
+  ],
+  "prohibited_validation_actions": [
+    "new_pages",
+    "individual_term_pages",
+    "new_reference_pages",
+    "new_routes",
+    "sitemap_expansion",
+    "public_engine",
+    "public_classifier",
+    "public_tool",
+    "upload",
+    "scoring",
+    "fake_real_output",
+    "forms",
+    "analytics",
+    "api",
+    "monetization",
+    "dns",
+    "cloudflare",
+    "custom_domain_launch",
+    "external_factual_claims",
+    "real_world_examples",
+    "subject_accusation",
+    "broader_publication"
+  ],
+  "validation_scope": [
+    "/language/",
+    "homepage_link_integrity",
+    "/reference/evidence-posture/",
+    "/reference/artifact-subject-separation/",
+    "sitemap.xml",
+    "route_registry",
+    "internal_link_graph",
+    "term_registry",
+    "relation_map",
+    "metadata_json_ld_boundary",
+    "visible_language_boundary",
+    "forbidden_capability_implications"
+  ],
+  "correction_policy": "Corrections may not add routes, sitemap URLs, tool language, classifier language, upload language, scoring, public CTAs, public claims, or new term pages.",
+  "term_validation_policy": "All eight term records must preserve status boundaries, non-authorization statements, and Hoax-specific definition scope.",
+  "relation_validation_policy": "All seven relations must reference registered terms and must not authorize routes or engine behavior.",
+  "language_ownership_policy": {
+    "status": "hoax_specific_language_ownership_required",
+    "principle": "The language layer must make Hoax.ai’s way of thinking recognizable, not merely list common trust-related terms.",
+    "required_term_properties": [
+      "hoax_specific_definition",
+      "system_function",
+      "boundary_role",
+      "relation_role",
+      "misuse_prevention_role",
+      "future_output_implication_without_current_engine_capability",
+      "non_authorization_statement"
+    ],
+    "prohibited_language_patterns": [
+      "generic_glossary_only",
+      "detector_language",
+      "fact_checking_verdict_language",
+      "fake_real_binary_language",
+      "upload_workflow_language",
+      "scoring_language",
+      "subject_accusation_language",
+      "engine_capability_claim"
+    ],
+    "allowed_language_maturity": "hoax_governed_language_validated",
+    "forbidden_language_maturity_claims": [
+      "hoax_owned_language_final",
+      "category_language_complete",
+      "engine_language_ready_final",
+      "impossible_to_imitate"
+    ]
+  },
+  "non_authorization_rules": [
+    "validation_does_not_authorize_engine",
+    "validation_does_not_authorize_classifier",
+    "validation_does_not_authorize_tool",
+    "validation_does_not_authorize_upload",
+    "validation_does_not_authorize_scoring",
+    "validation_does_not_authorize_forms",
+    "validation_does_not_authorize_analytics",
+    "validation_does_not_authorize_api",
+    "validation_does_not_authorize_monetization",
+    "validation_does_not_authorize_dns",
+    "validation_does_not_authorize_cloudflare",
+    "validation_does_not_authorize_custom_domain_launch",
+    "validation_does_not_authorize_individual_term_pages",
+    "validation_does_not_authorize_broader_publication"
+  ],
+  "last_reviewed": "2026-06-17"
+}

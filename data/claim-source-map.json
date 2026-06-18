@@ -356,6 +356,17 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public category language layer adoption per DEC-044."
+    },
+    {
+      "claim_id": "CLAIM-0033",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["PUBLIC_CATEGORY_LANGUAGE_VALIDATION_AND_SURFACE_AUDIT.md", "DECISION_LOG.md", "data/public-category-language-validation-results-v1.json"],
+      "source_refs": ["SOURCE-0155", "SOURCE-0156", "SOURCE-0157", "SOURCE-0158", "SOURCE-0159"],
+      "support_scope": "public category language validation adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public category language validation adoption per DEC-045."
     }
   ],
   "last_reviewed": "2026-06-17"

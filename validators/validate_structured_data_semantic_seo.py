@@ -667,6 +667,7 @@ def validate_cross_file_integration() -> bool:
         "blocked_until_public_reference_validation_and_live_surface_audit",
         "blocked_until_public_category_language_layer",
         "blocked_until_public_category_language_validation",
+        "blocked_until_evidence_posture_workbench_governance",
     ):
         error("publisher-governance-policy: publisher must remain blocked from drafts and publication")
         ok = False

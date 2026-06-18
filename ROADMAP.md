@@ -1164,6 +1164,50 @@ Public classifier remains blocked. Public engine remains blocked. External deplo
 
 ---
 
+## Sprint 27 — Public Category Language Validation and Surface Audit v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Validate the public category language layer as a governed language surface — not a tool, classifier, detector, upload workflow, scoring interface, or engine preview.
+
+### Deliverables
+
+- PUBLIC_CATEGORY_LANGUAGE_VALIDATION_AND_SURFACE_AUDIT.md
+- data/public-category-language-validation-policy.json
+- data/public-category-language-surface-audit-v1.json
+- data/public-category-language-validation-results-v1.json
+- validators/validate_public_category_language_validation.py
+- SPRINT_27_PUBLIC_CATEGORY_LANGUAGE_VALIDATION_SURFACE_AUDIT.md
+- DEC-045 appended to DECISION_LOG.md
+- Publisher status → blocked_until_evidence_posture_workbench_governance
+- PUB-GATE-0027 added; reference expansion gate updated
+- validators/validate_all.py updated
+- Hoax-Specific Language Ownership Integrity dimension (DIM-0025)
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Audit Scope
+
+- 4 surface records (homepage + 2 reference pages + /language/)
+- 25 validation dimensions — all pass
+- 4 sitemap URLs unchanged
+- hoax_governed_language_validated ownership outcome
+- 33 evidence ledger claims (CLAIM-0033 added)
+- No new pages, routes, sitemap expansion, classifier, engine, tool, upload, scoring, forms, analytics, API, monetization, DNS, Cloudflare, custom domain launch, or .nojekyll
+
+### Gate
+
+**Gate G27 passed.** Engine governance blocked until Evidence Posture Workbench Governance v1.
+
+### Next Phase
+
+**Sprint 28 — Evidence Posture Workbench Governance v1**
+
+Public classifier remains blocked. Public engine remains blocked. No workbench interface or prototype may be created until governance is explicitly adopted. Sprint 28 may use the validated Hoax-governed language layer as governance input, not as proof that the public engine is ready.
+
+---
+
 ## Sprint 25 — Public Reference Validation and Live Surface Audit v1
 
 **Status:** COMPLETE — 2026-06-17  
