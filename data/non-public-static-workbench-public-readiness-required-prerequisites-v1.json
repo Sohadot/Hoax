@@ -1,0 +1,46 @@
+{
+  "prerequisites_id": "NP-SW-PUBLIC-READINESS-PREREQ-001",
+  "name": "Non-Public Static Workbench Public-Readiness Required Prerequisites v1",
+  "version": "v1.0.0",
+  "status": "public_readiness_required_prerequisites_defined",
+  "maturity": "boundary_governance_only_no_public_release_no_engine_no_classifier_no_public_route",
+  "required_prerequisites": [
+    "baseline_lock_validation_complete",
+    "public_readiness_boundary_governance_complete",
+    "public_readiness_boundary_validation_required",
+    "public_copy_boundary_governance_required",
+    "public_route_eligibility_governance_required",
+    "public_isolation_to_exposure_transition_governance_required",
+    "public_disclaimer_non_operation_language_governance_required",
+    "public_accessibility_validation_required",
+    "public_seo_canonical_indexability_decision_required",
+    "public_security_privacy_review_required",
+    "artifact_subject_separation_public_wording_audit_required",
+    "no_engine_classifier_upload_scoring_implication_audit_required",
+    "no_detector_pattern_regression_audit_required",
+    "deployment_gate_review_required",
+    "custom_domain_dns_gate_review_required_if_applicable"
+  ],
+  "missing_prerequisites": [
+    "public_readiness_boundary_validation_required",
+    "public_copy_boundary_governance_required",
+    "public_route_eligibility_governance_required",
+    "public_isolation_to_exposure_transition_governance_required",
+    "public_disclaimer_non_operation_language_governance_required",
+    "public_accessibility_validation_required",
+    "public_seo_canonical_indexability_decision_required",
+    "public_security_privacy_review_required",
+    "artifact_subject_separation_public_wording_audit_required",
+    "no_engine_classifier_upload_scoring_implication_audit_required",
+    "no_detector_pattern_regression_audit_required",
+    "deployment_gate_review_required",
+    "custom_domain_dns_gate_review_required_if_applicable"
+  ],
+  "prerequisite_boundary": [
+    "prerequisites do not authorize public release",
+    "prerequisites do not authorize public route",
+    "prerequisites do not authorize engine/classifier/upload/scoring",
+    "prerequisites define the future chain only"
+  ],
+  "last_reviewed": "2026-06-18"
+}

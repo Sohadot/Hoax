@@ -461,6 +461,7 @@ def validate_publisher_and_gates() -> bool:
         "blocked_until_non_public_static_workbench_visual_system_baseline_lock",
         "blocked_until_non_public_static_workbench_visual_system_baseline_lock_validation",
         "blocked_until_non_public_static_workbench_public_readiness_boundary_governance",
+        "blocked_until_non_public_static_workbench_public_readiness_boundary_validation",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "

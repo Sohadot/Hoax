@@ -1810,6 +1810,43 @@ Public classifier remains blocked. Public engine remains blocked. The prototype 
 
 ---
 
+## Sprint 42 - Non-Public Static Workbench Public-Readiness Boundary Governance v1
+
+**Status:** COMPLETE - 2026-06-18
+**Goal:** Define public-readiness as a governance boundary only, without creating a public workbench, public route, sitemap entry, public navigation, or operational capability.
+
+### Deliverables
+
+- NON_PUBLIC_STATIC_WORKBENCH_PUBLIC_READINESS_BOUNDARY_GOVERNANCE_V1.md
+- data/non-public-static-workbench-public-readiness-boundary-policy.json
+- data/non-public-static-workbench-public-readiness-non-authorization-rules-v1.json
+- data/non-public-static-workbench-public-readiness-required-prerequisites-v1.json
+- data/non-public-static-workbench-public-readiness-risk-boundary-v1.json
+- data/non-public-static-workbench-public-readiness-route-blockers-v1.json
+- data/non-public-static-workbench-public-readiness-boundary-audit-v1.json
+- validators/validate_non_public_static_workbench_public_readiness_boundary_governance.py
+- SPRINT_42_NON_PUBLIC_STATIC_WORKBENCH_PUBLIC_READINESS_BOUNDARY_GOVERNANCE_AUDIT.md
+- DEC-060 appended to DECISION_LOG.md
+- Publisher status -> blocked_until_non_public_static_workbench_public_readiness_boundary_validation
+- PUB-GATE-0042 added; reference expansion gate updated
+- validators/validate_all.py updated
+
+### Validation
+
+`py -3 validators/validate_all.py` - PASS required for sprint closure.
+
+### Gate
+
+**Gate G42 passed.** Public-readiness boundary validation blocked until Sprint 43.
+
+### Next Phase
+
+**Sprint 43 - Non-Public Static Workbench Public-Readiness Boundary Validation v1**
+
+Public classifier remains blocked. Public engine remains blocked. The prototype remains non-public, static, non-operational, not a public route, and not a workbench launch.
+
+---
+
 ## Sprint 25 — Public Reference Validation and Live Surface Audit v1
 
 **Status:** COMPLETE — 2026-06-17  

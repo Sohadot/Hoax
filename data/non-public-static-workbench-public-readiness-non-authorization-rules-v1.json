@@ -1,0 +1,52 @@
+{
+  "non_authorization_id": "NP-SW-PUBLIC-READINESS-NON-AUTH-001",
+  "name": "Non-Public Static Workbench Public-Readiness Non-Authorization Rules v1",
+  "version": "v1.0.0",
+  "status": "public_readiness_boundary_non_authorization_rules_defined",
+  "maturity": "boundary_governance_only_no_public_release_no_engine_no_classifier_no_public_route",
+  "blocked_authorizations": [
+    "public_release",
+    "public_route",
+    "sitemap_entry",
+    "public_navigation",
+    "public_workbench",
+    "public_engine",
+    "public_classifier",
+    "public_detector",
+    "upload",
+    "scoring",
+    "fake_real_output",
+    "generated_output",
+    "forms",
+    "inputs",
+    "API",
+    "analytics",
+    "monetization",
+    "DNS",
+    "Cloudflare",
+    "custom_domain_launch",
+    "deployment",
+    "prototype_modification",
+    "prototype_expansion",
+    "production_readiness"
+  ],
+  "allowed_future_discussion_only": [
+    "public_readiness_validation",
+    "public_copy_boundary_governance",
+    "public_route_eligibility_governance",
+    "public_indexing_policy_governance",
+    "public_disclaimer_governance",
+    "public_accessibility_review",
+    "public_security_privacy_review",
+    "public_deployment_gate_review"
+  ],
+  "enforcement_notes": [
+    "public-readiness boundary governance is not public-readiness validation",
+    "public-readiness validation is not public route approval",
+    "public route approval is not engine approval",
+    "public route approval is not upload/scoring approval",
+    "public route approval is not deployment approval",
+    "custom domain launch remains separately governed"
+  ],
+  "last_reviewed": "2026-06-18"
+}

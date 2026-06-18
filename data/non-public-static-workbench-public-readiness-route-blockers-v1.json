@@ -1,0 +1,40 @@
+{
+  "route_blockers_id": "NP-SW-PUBLIC-READINESS-ROUTE-BLOCKERS-001",
+  "name": "Non-Public Static Workbench Public-Readiness Route Blockers v1",
+  "version": "v1.0.0",
+  "status": "public_readiness_route_blockers_defined",
+  "maturity": "boundary_governance_only_no_public_release_no_engine_no_classifier_no_public_route",
+  "current_route_status": [
+    "no_public_workbench_route",
+    "prototype_not_registered_as_public_route",
+    "prototype_not_in_sitemap",
+    "prototype_not_publicly_linked"
+  ],
+  "route_blockers": [
+    "public_readiness_boundary_validation_missing",
+    "public_route_eligibility_policy_missing",
+    "public_copy_boundary_missing",
+    "public_disclaimer_system_missing",
+    "public_indexing_policy_missing",
+    "public_navigation_policy_missing",
+    "public_risk_notice_missing",
+    "public_route_validator_missing",
+    "public_accessibility_audit_missing",
+    "public_seo_canonical_decision_missing",
+    "public_deployment_gate_missing"
+  ],
+  "required_future_route_gates": [
+    "public_readiness_boundary_validation",
+    "public_route_eligibility_governance",
+    "public_copy_boundary_governance",
+    "public_disclaimer_governance",
+    "public_indexability_decision",
+    "public_accessibility_audit",
+    "public_security_privacy_review",
+    "route_registry_governance",
+    "sitemap_eligibility_governance",
+    "validate_all_pass"
+  ],
+  "non_authorization_statement": "Route blockers define what is missing. They do not authorize a route, sitemap entry, public navigation, public workbench, engine, classifier, upload, scoring, API, analytics, deployment, DNS, Cloudflare, or custom domain launch.",
+  "last_reviewed": "2026-06-18"
+}

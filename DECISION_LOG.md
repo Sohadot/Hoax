@@ -1534,3 +1534,30 @@ A baseline lock is only useful if its integrity is validated. Sprint 41 ensures 
 - No public navigation may link to the prototype.
 - No JavaScript, forms, inputs, upload controls, scoring, fake/real output, generated output, API, analytics, engine behavior, classifier behavior, deployment change, DNS, Cloudflare, or public tool behavior may be introduced.
 - Future work may proceed to the next governance phase only after this validation passes.
+
+
+---
+
+## DEC-060 - Non-Public Static Workbench Public-Readiness Boundary Governance v1 Adopted
+
+**Date:** 2026-06-18
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Non-Public Static Workbench Public-Readiness Boundary Governance v1 to define the governance boundary for any future discussion of public readiness related to the internal static Evidence Posture Workbench prototype. This boundary defines prerequisites, non-authorization rules, route blockers, public-risk boundaries, and required future gates without creating or authorizing a public workbench, public route, sitemap entry, public navigation, engine, classifier, upload workflow, scoring system, API, analytics, deployment change, DNS/Cloudflare change, custom domain launch, or public tool behavior.
+
+### Rationale
+
+The visual baseline is now locked and validated, but a locked internal baseline is not public-readiness and public-readiness is not public release. Before any public route, public workbench, or public-facing prototype can even be discussed, Hoax.ai must define what public-readiness would require and what it explicitly does not authorize. This prevents accidental launch logic, premature routing, public misinterpretation, detector implication, upload/scoring creep, and operational overclaim.
+
+### Implications
+
+- Public-readiness can be discussed only as a governed boundary.
+- Public-readiness boundary governance does not authorize public release.
+- Public-readiness boundary governance does not authorize public routes.
+- Public-readiness boundary governance does not authorize sitemap expansion.
+- Public-readiness boundary governance does not authorize public navigation.
+- Public-readiness boundary governance does not authorize engine, classifier, upload, scoring, API, analytics, or public tool behavior.
+- Future public-readiness validation must pass before any public route governance is even considered.
+- The internal prototype remains internal, static, non-public, non-operational, unrouted, unindexed, and unlinked.

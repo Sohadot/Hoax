@@ -1,0 +1,42 @@
+{
+  "risk_boundary_id": "NP-SW-PUBLIC-READINESS-RISK-BOUNDARY-001",
+  "name": "Non-Public Static Workbench Public-Readiness Risk Boundary v1",
+  "version": "v1.0.0",
+  "status": "public_readiness_risk_boundary_defined",
+  "maturity": "boundary_governance_only_no_public_release_no_engine_no_classifier_no_public_route",
+  "public_risk_items": [
+    "prototype_mistaken_for_detector",
+    "not_assessable_mistaken_for_fake",
+    "output_envelope_mistaken_for_conclusion",
+    "artifact_posture_mistaken_for_subject_guilt",
+    "visual_prototype_mistaken_for_product",
+    "public_route_mistaken_for_launch",
+    "public_navigation_mistaken_for_tool_availability",
+    "search_snippet_misrepresentation",
+    "screenshot_context_loss",
+    "upload_scoring_expectation",
+    "public_use_for_real_world_accusations"
+  ],
+  "required_future_mitigations": [
+    "public disclaimer governance",
+    "public copy boundary",
+    "public route eligibility review",
+    "no operation notice",
+    "artifact-subject separation notice",
+    "not-assessable explanation",
+    "no fake-real language audit",
+    "no upload/scoring implication audit",
+    "public SEO snippet governance",
+    "screenshot/context language consideration"
+  ],
+  "blocked_interpretations": [
+    "Hoax.ai is a detector",
+    "Hoax.ai verifies truth",
+    "Hoax.ai classifies people or institutions",
+    "Not Assessable means fake",
+    "output envelope is a verdict",
+    "public prototype is an engine",
+    "visual workbench is a product launch"
+  ],
+  "last_reviewed": "2026-06-18"
+}

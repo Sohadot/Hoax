@@ -484,6 +484,7 @@ def validate_publisher_governance() -> bool:
         "publisher_blocked_until_non_public_static_workbench_visual_system_baseline_lock",
         "publisher_blocked_until_non_public_static_workbench_visual_system_baseline_lock_validation",
         "publisher_blocked_until_non_public_static_workbench_public_readiness_boundary_governance",
+        "publisher_blocked_until_non_public_static_workbench_public_readiness_boundary_validation",
     ]
     if not any(b in blocked for b in workbench_blocked):
         error("reference-expansion-gate: publisher blocked until workbench progression")

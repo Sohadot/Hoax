@@ -977,6 +977,30 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Baseline lock validation adoption per DEC-059."
+    },
+    {
+      "claim_id": "CLAIM-0048",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "NON_PUBLIC_STATIC_WORKBENCH_PUBLIC_READINESS_BOUNDARY_GOVERNANCE_V1.md",
+        "DECISION_LOG.md",
+        "data/non-public-static-workbench-public-readiness-boundary-policy.json"
+      ],
+      "source_refs": [
+        "SOURCE-0266",
+        "SOURCE-0267",
+        "SOURCE-0268",
+        "SOURCE-0269",
+        "SOURCE-0270",
+        "SOURCE-0271",
+        "SOURCE-0272",
+        "SOURCE-0273"
+      ],
+      "support_scope": "non-public static workbench public-readiness boundary governance adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public-readiness boundary governance adoption per DEC-060."
     }
   ],
   "last_reviewed": "2026-06-18"
