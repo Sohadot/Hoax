@@ -1341,6 +1341,53 @@ Public classifier remains blocked. Public engine remains blocked. No workbench p
 
 ---
 
+## Sprint 31 — Evidence Posture Workbench Interface Blueprint Governance v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Define non-operational interface blueprint governance with Hoax-specific conceptual identity without building interface, prototype, engine, classifier, tool, upload, scoring, form, API, or route.
+
+### Deliverables
+
+- EVIDENCE_POSTURE_WORKBENCH_INTERFACE_BLUEPRINT_GOVERNANCE.md
+- data/evidence-posture-workbench-interface-blueprint-policy.json
+- data/evidence-posture-workbench-interface-zone-registry.json
+- data/evidence-posture-workbench-interface-component-registry.json
+- data/evidence-posture-workbench-interface-state-contracts.json
+- data/evidence-posture-workbench-interface-copy-boundaries.json
+- data/evidence-posture-workbench-interface-accessibility-performance-rules.json
+- data/evidence-posture-workbench-interface-blueprint-v1.json
+- validators/validate_evidence_posture_workbench_interface_blueprint.py
+- SPRINT_31_EVIDENCE_POSTURE_WORKBENCH_INTERFACE_BLUEPRINT_GOVERNANCE_AUDIT.md
+- DEC-049 appended to DECISION_LOG.md
+- Publisher status → blocked_until_workbench_interface_blueprint_validation
+- PUB-GATE-0031 added; reference expansion gate updated
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Blueprint Scope
+
+- 8 interface zones, 10 component families, 10 interface state contracts
+- Hoax-specific conceptual interface identity (evidence chamber metaphor)
+- Generic detector UI patterns explicitly blocked
+- 37 evidence ledger claims (CLAIM-0037 added)
+- 4 sitemap URLs unchanged
+- No workbench interface, prototype, engine, classifier, tool, upload, scoring, forms, analytics, API, monetization, DNS, Cloudflare, custom domain launch, or .nojekyll
+
+### Gate
+
+**Gate G31 passed.** Interface blueprint validation blocked until Sprint 32.
+
+### Next Phase
+
+**Sprint 32 — Evidence Posture Workbench Interface Blueprint Validation v1**
+
+Public classifier remains blocked. Public engine remains blocked. No workbench prototype or interface may be created until interface blueprint validation passes.
+
+---
+
 ## Sprint 25 — Public Reference Validation and Live Surface Audit v1
 
 **Status:** COMPLETE — 2026-06-17  

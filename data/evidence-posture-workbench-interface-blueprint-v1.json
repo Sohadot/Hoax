@@ -1,0 +1,42 @@
+{
+  "blueprint_id": "EP-WB-IB-BLUEPRINT-V1-001",
+  "name": "Hoax.ai Evidence Posture Workbench Interface Blueprint v1",
+  "version": "v1.0.0",
+  "status": "evidence_posture_workbench_interface_blueprint_governance_created",
+  "maturity": "blueprint_governance_only_no_interface_no_prototype_no_engine_no_classifier_no_tool",
+  "specification_ref": "data/evidence-posture-workbench-specification-v1.json",
+  "zone_registry_ref": "data/evidence-posture-workbench-interface-zone-registry.json",
+  "component_registry_ref": "data/evidence-posture-workbench-interface-component-registry.json",
+  "interface_state_contract_ref": "data/evidence-posture-workbench-interface-state-contracts.json",
+  "copy_boundaries_ref": "data/evidence-posture-workbench-interface-copy-boundaries.json",
+  "accessibility_performance_rules_ref": "data/evidence-posture-workbench-interface-accessibility-performance-rules.json",
+  "current_public_surface": [
+    "homepage root",
+    "/reference/evidence-posture/",
+    "/reference/artifact-subject-separation/",
+    "/language/"
+  ],
+  "prohibited_capabilities": [
+    "public_engine",
+    "public_classifier",
+    "public_tool",
+    "workbench_interface",
+    "prototype",
+    "upload",
+    "scoring",
+    "fake_real_output",
+    "API",
+    "forms",
+    "analytics",
+    "monetization",
+    "DNS",
+    "Cloudflare",
+    "custom_domain_launch",
+    "new_public_routes",
+    "sitemap_expansion",
+    "deployment_change"
+  ],
+  "allowed_next_phase": "Sprint 32 — Evidence Posture Workbench Interface Blueprint Validation v1",
+  "non_authorization_statement": "This interface blueprint record does not authorize interface implementation, prototype, engine, classifier, upload, scoring, API, routes, sitemap, deployment, DNS, Cloudflare, custom domain launch, or public tool behavior.",
+  "last_reviewed": "2026-06-17"
+}

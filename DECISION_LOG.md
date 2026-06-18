@@ -1223,3 +1223,36 @@ After workbench governance and dry-run validation, Hoax.ai can specify the workb
 - No public tool is created.
 - No routes or sitemap URLs are added.
 - Future work may create Workbench Interface Blueprint Governance only after this specification layer passes.
+
+---
+
+## DEC-049 — Evidence Posture Workbench Interface Blueprint Governance v1 Adopted
+
+**Date:** 2026-06-17
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Evidence Posture Workbench Interface Blueprint Governance v1 to define the future workbench interface blueprint as a non-operational governance artifact before any interface, prototype, engine, classifier, upload workflow, scoring system, form, API, route, sitemap entry, or public tool is created.
+
+### Rationale
+
+The Evidence Posture Workbench must not begin as an interface because an interface can imply capability before governance permits it. The interface blueprint defines future interaction zones, component roles, state behavior, copy boundaries, accessibility requirements, and performance constraints while preserving refusal, uncertainty, artifact-subject separation, no-verdict posture, no scoring, and no upload behavior.
+
+### Implications
+
+- Interface zones may be defined.
+- Interface component roles may be defined.
+- Interface state contracts may be defined.
+- Interface copy boundaries may be defined.
+- Accessibility and performance rules may be defined.
+- Hoax-specific conceptual interface identity is required.
+- No interface is created.
+- No prototype is created.
+- No engine is implemented.
+- No classifier is implemented.
+- No upload workflow is created.
+- No scoring system is created.
+- No public tool is created.
+- No routes or sitemap URLs are added.
+- Future work may create an interface blueprint validation sprint only after this governance passes.

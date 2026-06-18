@@ -17,6 +17,7 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN,
     PUBLISHER_STATUS_POST_WORKBENCH_SPECIFICATION,
     PUBLISHER_STATUS_POST_WORKBENCH_INTERFACE_BLUEPRINT,
+    PUBLISHER_STATUS_POST_WORKBENCH_INTERFACE_BLUEPRINT_VALIDATION,
     validate_no_extra_public_html,
     validate_public_surface,
 )
@@ -376,6 +377,7 @@ def validate_publisher_governance() -> bool:
         PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN,
         PUBLISHER_STATUS_POST_WORKBENCH_SPECIFICATION,
         PUBLISHER_STATUS_POST_WORKBENCH_INTERFACE_BLUEPRINT,
+        PUBLISHER_STATUS_POST_WORKBENCH_INTERFACE_BLUEPRINT_VALIDATION,
     }
     if status not in allowed:
         error(f"publisher status must be one of {sorted(allowed)}")

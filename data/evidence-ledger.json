@@ -398,6 +398,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Specification layer defined. No interface, prototype, engine, classifier, tool, upload, scoring, or public route created."
+    },
+    {
+      "claim_id": "CLAIM-0037",
+      "claim_text": "Hoax.ai has adopted Evidence Posture Workbench Interface Blueprint Governance v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "EVIDENCE_POSTURE_WORKBENCH_INTERFACE_BLUEPRINT_GOVERNANCE.md, DECISION_LOG.md (DEC-049)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Interface blueprint governance defined. No interface, prototype, engine, classifier, tool, upload, scoring, or public route created."
     }
   ]
 }

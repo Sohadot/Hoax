@@ -75,7 +75,7 @@ REQUIRED_STATES = [
     "retired",
 ]
 
-REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 31)]
+REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 32)]
 
 REQUIRED_WORKFLOW_IDS = [f"PUB-WORKFLOW-{i:04d}" for i in range(1, 16)]
 
@@ -162,6 +162,7 @@ def validate_publisher_policy() -> bool:
         "publisher_blocked_until_evidence_posture_workbench_dry_run_harness",
         "publisher_blocked_until_workbench_specification_layer",
         "publisher_blocked_until_workbench_interface_blueprint_governance",
+        "publisher_blocked_until_workbench_interface_blueprint_validation",
     ):
         error("publisher-governance-policy.json: invalid maturity")
         ok = False
@@ -292,6 +293,7 @@ def validate_state_machine() -> bool:
         "blocked_until_evidence_posture_workbench_dry_run_harness",
         "blocked_until_workbench_specification_layer",
         "blocked_until_workbench_interface_blueprint_governance",
+        "blocked_until_workbench_interface_blueprint_validation",
     ):
         error(f"publisher-state-machine.json: invalid current_system_state {current}")
         ok = False

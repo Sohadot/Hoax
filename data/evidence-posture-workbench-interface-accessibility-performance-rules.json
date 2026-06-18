@@ -1,0 +1,40 @@
+{
+  "ruleset_id": "EP-WB-IB-A11Y-PERF-001",
+  "name": "Hoax.ai Evidence Posture Workbench Interface Accessibility and Performance Rules",
+  "version": "v1.0.0",
+  "status": "governed_workbench_interface_accessibility_performance_rules",
+  "maturity": "blueprint_governance_only_no_interface_no_prototype_no_engine_no_classifier_no_tool",
+  "accessibility_rules": [
+    "keyboard navigability requirement",
+    "semantic HTML requirement",
+    "one primary H1 requirement for future page",
+    "readable contrast requirement",
+    "visible focus requirement",
+    "clear refusal state wording requirement",
+    "text fallback for visual relation/state maps",
+    "no meaning conveyed by color alone",
+    "reduced motion safety"
+  ],
+  "performance_rules": [
+    "dependency-light implementation",
+    "no external libraries by default",
+    "no external scripts by default",
+    "no WebGL by default",
+    "no canvas by default",
+    "no analytics by default",
+    "no network calls by default",
+    "no storage by default",
+    "mobile stability requirement"
+  ],
+  "dependency_rules": [
+    "prefer HTML/CSS-first when implementation is eventually authorized",
+    "avoid external libraries unless separately justified",
+    "avoid WebGL/canvas unless separately governed"
+  ],
+  "motion_rules": [
+    "avoid motion-dependent meaning",
+    "reduced motion safety required"
+  ],
+  "non_authorization_statement": "Accessibility and performance rules define future constraints only. They do not authorize interface implementation, prototype, engine, or deployment.",
+  "last_reviewed": "2026-06-17"
+}

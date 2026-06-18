@@ -1,0 +1,41 @@
+{
+  "ruleset_id": "EP-WB-IB-COPY-BOUNDARIES-001",
+  "name": "Hoax.ai Evidence Posture Workbench Interface Copy Boundaries",
+  "version": "v1.0.0",
+  "status": "governed_workbench_interface_copy_boundaries",
+  "maturity": "blueprint_governance_only_no_interface_no_prototype_no_engine_no_classifier_no_tool",
+  "allowed_copy_patterns": [
+    "artifact-focused language",
+    "evidence posture language",
+    "uncertainty-preserving language",
+    "not-assessable language",
+    "output-boundary language",
+    "source-context language",
+    "provenance-gap language",
+    "verification-question language"
+  ],
+  "prohibited_copy_patterns": [
+    "detect language",
+    "fake/real language",
+    "upload now language",
+    "submit evidence language",
+    "score language",
+    "verified/certified language",
+    "truth machine language",
+    "accusation language",
+    "product/SaaS/service claims",
+    "API language",
+    "public engine claims",
+    "try it now language"
+  ],
+  "required_boundary_phrases": [
+    "This interface blueprint does not create a public workbench.",
+    "The future workbench must not issue truth verdicts.",
+    "The future workbench must not classify fake or real.",
+    "The future workbench must not score evidence.",
+    "The future workbench must not judge subjects.",
+    "The future workbench must preserve artifact-subject separation."
+  ],
+  "non_authorization_statement": "Copy boundaries define future language limits only. They do not authorize interface implementation, engine behavior, or public release.",
+  "last_reviewed": "2026-06-17"
+}
