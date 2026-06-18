@@ -1426,3 +1426,28 @@ The Sprint 36 refinement strengthened the prototype's evidence chamber identity 
 - No public route or sitemap entry may be created.
 - No engine, classifier, upload, scoring, API, analytics, or public tool may be created.
 - Future work may proceed to visual system hardening only after this validation passes.
+
+---
+
+## DEC-056 â€” Non-Public Static Workbench Visual System Hardening v1 Adopted
+
+**Date:** 2026-06-18
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Non-Public Static Workbench Visual System Hardening v1 to strengthen the internal static prototype's governed evidence field, evidence chamber frame, boundary rails, provenance shadows, missing-context absence fields, not-assessable restraint, refusal gate, output envelope containment, verification path, responsive rhythm, and visual anti-detector discipline while modifying only the existing internal prototype HTML and CSS files and creating governance records.
+
+### Rationale
+
+The refined prototype baseline has passed validation. The next step is to harden the visual language so the prototype has a stronger Hoax-specific interface identity and is harder to confuse with generic detector dashboards, upload tools, scoring panels, forensic games, or SaaS analytics surfaces. This hardening improves conceptual legibility without expanding operational capability.
+
+### Implications
+
+- Existing static HTML may be refined only for visual-system clarity and semantic support.
+- Existing static CSS may be hardened with internal design tokens, visual primitives, responsive discipline, and conceptual pattern classes.
+- No new prototype file may be created.
+- No public route or sitemap URL may be created.
+- No public navigation may link to the prototype.
+- No JavaScript, forms, inputs, upload controls, scoring, fake/real output, generated output, API, analytics, or engine behavior may be introduced.
+- Future work must validate the hardened visual system before any further hardening, expansion, or interface phase.

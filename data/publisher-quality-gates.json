@@ -3,7 +3,7 @@
   "name": "Hoax.ai Publisher Quality Gates",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "publisher_blocked_until_non_public_static_workbench_visual_system_hardening",
+  "maturity": "publisher_blocked_until_non_public_static_workbench_visual_system_hardening_validation",
   "gates": [
     {
       "gate_id": "PUB-GATE-0001",
@@ -456,6 +456,21 @@
       "failure_condition": "non_public_static_workbench_prototype_refinement_validation_not_met",
       "bypassable": false,
       "notes": "Non-public static prototype refinement validation defined Sprint 37 (DEC-055). Validates Sprint 36 refinement as internal static baseline. Does not authorize prototype expansion, public routes, sitemap entries, navigation links, engine, classifier, tool, upload, scoring, API, forms, analytics, deployment, DNS, Cloudflare, custom domain launch, or monetization."
+    },
+    {
+      "gate_id": "PUB-GATE-0038",
+      "name": "Non-Public Static Workbench Visual System Hardening Gate",
+      "status": "non_public_static_workbench_visual_system_hardened_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_non_public_static_workbench_visual_system_hardening_validation": true,
+      "required_before_any_interface_prototype_expansion": true,
+      "required_before_engine_governance": true,
+      "validation_source": "NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_HARDENING_V1.md",
+      "failure_condition": "non_public_static_workbench_visual_system_hardening_not_met",
+      "bypassable": false,
+      "notes": "Visual system hardening defined Sprint 38 (DEC-056). Does not authorize public engine, public classifier, public tool, public route, sitemap, navigation, upload, scoring, API, forms, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or prototype expansion beyond the allowed files."
     }
   ],
   "last_reviewed": "2026-06-17"

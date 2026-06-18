@@ -1,0 +1,39 @@
+{
+  "antipattern_audit_id": "NP-VIS-ANTIPATTERN-AUDIT-001",
+  "name": "Non-Public Static Workbench Visual System Anti-Pattern Audit v1",
+  "version": "v1.0.0",
+  "status": "non_public_static_workbench_visual_system_antipattern_audit_complete",
+  "maturity": "static_internal_visual_hardening_only_no_engine_no_classifier_no_tool_no_public_route",
+  "blocked_antipatterns": [
+    "detector_dashboard",
+    "scanner_ui",
+    "upload_dashboard",
+    "red_green_fake_real_interface",
+    "truth_meter",
+    "risk_gauge",
+    "probability_meter",
+    "forensic_game_interface",
+    "policing_dashboard",
+    "saas_analytics_dashboard",
+    "product_landing_page_cta",
+    "try_it_now_interface",
+    "black_cyber_dashboard_default"
+  ],
+  "audit_results": {
+    "detector_dashboard": "blocked",
+    "scanner_ui": "blocked",
+    "upload_dashboard": "blocked",
+    "red_green_fake_real_interface": "blocked",
+    "truth_meter": "blocked",
+    "risk_gauge": "blocked",
+    "probability_meter": "blocked",
+    "forensic_game_interface": "blocked",
+    "policing_dashboard": "blocked",
+    "saas_analytics_dashboard": "blocked",
+    "product_landing_page_cta": "blocked",
+    "try_it_now_interface": "blocked",
+    "black_cyber_dashboard_default": "blocked"
+  },
+  "overall_outcome": "visual_antipatterns_blocked",
+  "last_reviewed": "2026-06-18"
+}

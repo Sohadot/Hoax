@@ -1,0 +1,45 @@
+{
+  "token_contract_id": "NP-VIS-TOKEN-CONTRACT-001",
+  "name": "Non-Public Static Workbench Visual System Token Contract v1",
+  "version": "v1.0.0",
+  "status": "non_public_static_workbench_visual_system_token_contract_active",
+  "maturity": "static_internal_visual_hardening_only_no_engine_no_classifier_no_tool_no_public_route",
+  "token_families": [
+    "background_field",
+    "chamber_surface",
+    "chamber_edge",
+    "graphite_text",
+    "muted_text",
+    "boundary_accent",
+    "provenance_line",
+    "provenance_shadow",
+    "absence_field",
+    "not_assessable_surface",
+    "refusal_surface",
+    "output_envelope_surface",
+    "verification_path_line",
+    "subtle_rule",
+    "focus_ring",
+    "mobile_spacing"
+  ],
+  "required_token_principles": [
+    "tokens are local to prototype.css",
+    "tokens are conceptual not decorative",
+    "tokens support governed evidence field",
+    "tokens support evidence chamber identity",
+    "tokens do not imply scoring, verdict, upload, classifier, or detector behavior",
+    "tokens do not depend on external assets"
+  ],
+  "forbidden_token_patterns": [
+    "black cyber dashboard default",
+    "neon detector palette",
+    "red green verdict system",
+    "score severity palette",
+    "upload dashboard CTA palette",
+    "SaaS analytics gradient system",
+    "external font dependency",
+    "external URL dependency"
+  ],
+  "non_authorization_statement": "The token contract does not authorize behavior, routes, sitemap entries, public links, upload, scoring, classifier, detector, engine, API, analytics, deployment, DNS, Cloudflare, custom domain launch, or public tool behavior.",
+  "last_reviewed": "2026-06-18"
+}

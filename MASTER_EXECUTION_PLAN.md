@@ -170,6 +170,10 @@ Every tool must have defined output language, confidence framing, no-verdict dis
 
 Classifier, API, and workflow tools require protocol and standard completion first.
 
+## G38: Non-Public Static Workbench Visual System Hardening
+
+Gate G38 is passed after Non-Public Static Workbench Visual System Hardening exists; hardening policy exists; token contract exists; pattern registry exists; anti-pattern audit exists; boundary audit exists; validator exists; validate_all.py PASS; only index.html and prototype.css are modified in the prototype directory; and no new prototype files, public route, sitemap expansion, public navigation, JavaScript, forms, inputs, upload, scoring, fake/real output, engine, classifier, tool, API, analytics, DNS, Cloudflare, custom domain launch, monetization, deployment changes, or Python cache files are created, staged, or committed.
+
 ## Current Execution State
 
 | Sprint | Status | Gate |

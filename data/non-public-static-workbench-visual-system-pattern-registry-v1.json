@@ -1,0 +1,160 @@
+{
+  "pattern_registry_id": "NP-VIS-PATTERN-REGISTRY-001",
+  "name": "Non-Public Static Workbench Visual System Pattern Registry v1",
+  "version": "v1.0.0",
+  "status": "non_public_static_workbench_visual_system_pattern_registry_active",
+  "maturity": "static_internal_visual_hardening_only_no_engine_no_classifier_no_tool_no_public_route",
+  "visual_patterns": [
+    {
+      "pattern_id": "NP-VIS-PATTERN-0001",
+      "pattern_name": "Evidence Field",
+      "conceptual_function": "Makes the surrounding page feel like an evidence condition field rather than decoration.",
+      "required_visual_behavior": "Layered local background field with restrained rules and calm contrast.",
+      "forbidden_visual_behavior": "Decorative spectacle, cyber glow, generic dashboard backing, or operational status field.",
+      "related_html_classes": [
+        "evidence-field",
+        "governed-evidence-field"
+      ],
+      "related_css_concepts": [
+        "background_field",
+        "subtle_rule"
+      ],
+      "operational_boundary": "static visual context only",
+      "non_authorization_statement": "This visual pattern does not authorize engine, classifier, upload, scoring, fake/real output, API, routes, sitemap, deployment, DNS, Cloudflare, or public tool behavior."
+    },
+    {
+      "pattern_id": "NP-VIS-PATTERN-0002",
+      "pattern_name": "Evidence Chamber",
+      "conceptual_function": "Frames the workspace as contained, governed, and institutionally calm.",
+      "required_visual_behavior": "Stable chamber surface, quiet edge, and readable hierarchy.",
+      "forbidden_visual_behavior": "Metric panel, product hero, command console, or operational workbench launch.",
+      "related_html_classes": [
+        "evidence-chamber",
+        "chamber-frame",
+        "evidence-chamber-frame"
+      ],
+      "related_css_concepts": [
+        "chamber_surface",
+        "chamber_edge"
+      ],
+      "operational_boundary": "static chamber identity only",
+      "non_authorization_statement": "This visual pattern does not authorize engine, classifier, upload, scoring, fake/real output, API, routes, sitemap, deployment, DNS, Cloudflare, or public tool behavior."
+    },
+    {
+      "pattern_id": "NP-VIS-PATTERN-0003",
+      "pattern_name": "Boundary Rail",
+      "conceptual_function": "Makes artifact-subject separation visible as a boundary condition.",
+      "required_visual_behavior": "Restrained rail treatment that separates concepts before interpretation.",
+      "forbidden_visual_behavior": "Generic divider, verdict stripe, severity color, or route/action affordance.",
+      "related_html_classes": [
+        "boundary-rail"
+      ],
+      "related_css_concepts": [
+        "boundary_accent",
+        "subtle_rule"
+      ],
+      "operational_boundary": "static boundary cue only",
+      "non_authorization_statement": "This visual pattern does not authorize engine, classifier, upload, scoring, fake/real output, API, routes, sitemap, deployment, DNS, Cloudflare, or public tool behavior."
+    },
+    {
+      "pattern_id": "NP-VIS-PATTERN-0004",
+      "pattern_name": "Provenance Shadow",
+      "conceptual_function": "Shows missing origin, source, or custody as confidence-limiting absence.",
+      "required_visual_behavior": "Soft recessed shadow and provenance line without accusation.",
+      "forbidden_visual_behavior": "Proof-of-deception styling, forensic target, or confidence meter.",
+      "related_html_classes": [
+        "provenance-shadow"
+      ],
+      "related_css_concepts": [
+        "provenance_line",
+        "provenance_shadow"
+      ],
+      "operational_boundary": "static absence cue only",
+      "non_authorization_statement": "This visual pattern does not authorize engine, classifier, upload, scoring, fake/real output, API, routes, sitemap, deployment, DNS, Cloudflare, or public tool behavior."
+    },
+    {
+      "pattern_id": "NP-VIS-PATTERN-0005",
+      "pattern_name": "Missing Context Absence",
+      "conceptual_function": "Presents missing information as a structural condition.",
+      "required_visual_behavior": "Absence field surface with quiet texture and readable copy.",
+      "forbidden_visual_behavior": "Error state, hidden failure, alarm state, or accusation marker.",
+      "related_html_classes": [
+        "missing-context-absence",
+        "absence-field"
+      ],
+      "related_css_concepts": [
+        "absence_field",
+        "muted_text"
+      ],
+      "operational_boundary": "static missing-context cue only",
+      "non_authorization_statement": "This visual pattern does not authorize engine, classifier, upload, scoring, fake/real output, API, routes, sitemap, deployment, DNS, Cloudflare, or public tool behavior."
+    },
+    {
+      "pattern_id": "NP-VIS-PATTERN-0006",
+      "pattern_name": "Not-Assessable Restraint",
+      "conceptual_function": "Protects Not Assessable as disciplined restraint.",
+      "required_visual_behavior": "Calm protected surface with restrained edge and non-error posture.",
+      "forbidden_visual_behavior": "Failure badge, warning alert, score substitute, or blocked frustration.",
+      "related_html_classes": [
+        "not-assessable-restraint"
+      ],
+      "related_css_concepts": [
+        "not_assessable_surface",
+        "chamber_edge"
+      ],
+      "operational_boundary": "static restraint cue only",
+      "non_authorization_statement": "This visual pattern does not authorize engine, classifier, upload, scoring, fake/real output, API, routes, sitemap, deployment, DNS, Cloudflare, or public tool behavior."
+    },
+    {
+      "pattern_id": "NP-VIS-PATTERN-0007",
+      "pattern_name": "Refusal Gate",
+      "conceptual_function": "Presents refusal as governance.",
+      "required_visual_behavior": "Clear boundary hierarchy without action affordance.",
+      "forbidden_visual_behavior": "Blocked-task UI, product CTA, or punitive warning.",
+      "related_html_classes": [
+        "refusal-gate",
+        "boundary-rail"
+      ],
+      "related_css_concepts": [
+        "refusal_surface",
+        "boundary_accent"
+      ],
+      "operational_boundary": "static governance cue only",
+      "non_authorization_statement": "This visual pattern does not authorize engine, classifier, upload, scoring, fake/real output, API, routes, sitemap, deployment, DNS, Cloudflare, or public tool behavior."
+    },
+    {
+      "pattern_id": "NP-VIS-PATTERN-0008",
+      "pattern_name": "Output Envelope",
+      "conceptual_function": "Contains output as bounded and non-verdict.",
+      "required_visual_behavior": "Dashed envelope and containment surface that limits publication gravity.",
+      "forbidden_visual_behavior": "Final result panel, fake/real card, score panel, or generated output region.",
+      "related_html_classes": [
+        "output-envelope",
+        "output-envelope-containment"
+      ],
+      "related_css_concepts": [
+        "output_envelope_surface",
+        "subtle_rule"
+      ],
+      "operational_boundary": "static output-boundary cue only",
+      "non_authorization_statement": "This visual pattern does not authorize engine, classifier, upload, scoring, fake/real output, API, routes, sitemap, deployment, DNS, Cloudflare, or public tool behavior."
+    },
+    {
+      "pattern_id": "NP-VIS-PATTERN-0009",
+      "pattern_name": "Verification Path",
+      "conceptual_function": "Shows questions as inquiry paths rather than proof.",
+      "required_visual_behavior": "Linear inquiry markers and calm question spacing.",
+      "forbidden_visual_behavior": "Certification path, proof checklist, progress meter, or verification guarantee.",
+      "related_html_classes": [
+        "verification-path"
+      ],
+      "related_css_concepts": [
+        "verification_path_line",
+        "muted_text"
+      ],
+      "operational_boundary": "static inquiry cue only",
+      "non_authorization_statement": "This visual pattern does not authorize engine, classifier, upload, scoring, fake/real output, API, routes, sitemap, deployment, DNS, Cloudflare, or public tool behavior."
+    }
+  ],
+  "last_reviewed": "2026-06-18"
+}
