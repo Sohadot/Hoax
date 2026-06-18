@@ -489,6 +489,7 @@ def validate_cross_file() -> bool:
         "blocked_until_public_route_readiness_gate",
         "blocked_until_first_controlled_public_reference_pilot",
         "blocked_until_public_reference_validation_and_live_surface_audit",
+        "blocked_until_public_category_language_layer",
     ):
         error(
             "publisher-governance-policy: current_publisher_status must be "

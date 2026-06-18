@@ -3,8 +3,8 @@
   "name": "Hoax.ai Publisher State Machine",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "publisher_blocked_until_public_reference_validation_and_live_surface_audit",
-  "current_system_state": "blocked_until_public_reference_validation_and_live_surface_audit",
+  "maturity": "publisher_blocked_until_public_category_language_layer",
+  "current_system_state": "blocked_until_public_category_language_layer",
   "states": [
     "blocked",
     "dry_run_pass",
@@ -41,7 +41,8 @@
     {"from": "first_internal_draft_pack_registered", "to": "internal_draft_review_completed", "requires": "internal_draft_review_refinement_passed"},
     {"from": "internal_draft_review_completed", "to": "public_route_readiness_checked", "requires": "public_route_readiness_gate_passed"},
     {"from": "public_route_readiness_checked", "to": "controlled_public_reference_pilot_created", "requires": "first_controlled_public_reference_pilot_passed"},
-    {"from": "controlled_public_reference_pilot_created", "to": "proposed_internal", "requires": "public_reference_validation_and_live_surface_audit"},
+    {"from": "controlled_public_reference_pilot_created", "to": "public_reference_live_surface_validated", "requires": "public_reference_live_surface_audit_passed"},
+    {"from": "public_reference_live_surface_validated", "to": "proposed_internal", "requires": "public_category_language_layer_authorized"},
     {"from": "blocked", "to": "proposed_internal", "requires": "content_quality_standard_passed"},
     {"from": "proposed_internal", "to": "candidate_registered", "requires": "candidate_registry_entry"},
     {"from": "candidate_registered", "to": "blueprint_checked", "requires": "reference_blueprint_gate"},
@@ -101,6 +102,7 @@
     "internal_draft_review_refinement_passed",
     "public_route_readiness_gate_passed",
     "first_controlled_public_reference_pilot_passed",
+    "public_reference_live_surface_audit_passed",
     "publisher_control_plane_compliance"
   ],
   "last_reviewed": "2026-06-17"

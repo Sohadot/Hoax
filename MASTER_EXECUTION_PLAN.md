@@ -63,12 +63,13 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G22 | Internal Draft Review and Refinement | Sprint 22 validator PASS |
 | G23 | Public Route Readiness Gate | Sprint 23 validator PASS |
 | G24 | First Controlled Public Reference Pilot | Sprint 24 validator PASS |
+| G25 | Public Reference Validation and Live Surface Audit | Sprint 25 validator PASS |
 
-**Gate G24 passed.** Sprint 25 (Public Reference Validation and Live Surface Audit) may proceed when authorized. Public classifier and engine remain blocked. Publisher remains blocked from broader publication until validation and explicit future approval. External deployment remains separately governed.
+**Gate G25 passed.** Sprint 26 (Public Category Language Layer) may proceed when authorized. Public classifier and engine remain blocked. Publisher remains blocked from broader publication until category language expansion and explicit future approval. External deployment remains separately governed.
 
 ### Foundation Gates vs Deployment Gates
 
-Foundation gates (G0–G24) govern category infrastructure, reference governance, controlled public reference pilot, and expansion readiness. They must pass before reference layer scale.
+Foundation gates (G0–G25) govern category infrastructure, reference governance, controlled public reference pilot, live surface validation, and expansion readiness. They must pass before reference layer scale.
 
 Deployment gates are **separate** and **not current foundation steps**. They open only after reference expansion governance is in place. None are passed.
 
@@ -194,7 +195,8 @@ Classifier, API, and workflow tools require protocol and standard completion fir
 | Sprint 22 | COMPLETE | G22 passed |
 | Sprint 23 | COMPLETE | G23 passed |
 | Sprint 24 | COMPLETE | G24 passed |
-| Sprint 25+ | READY | G24 passed — Public Reference Validation and Live Surface Audit pending; broader publication blocked; deployment gates separately governed |
+| Sprint 25 | COMPLETE | G25 passed |
+| Sprint 26+ | READY | G25 passed — Public Category Language Layer pending; broader publication blocked; deployment gates separately governed |
 
 ## Governing Sentence
 

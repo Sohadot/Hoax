@@ -39,6 +39,7 @@
     "internal_draft_review_refinement_validation",
     "public_route_readiness_gate_validation",
     "first_controlled_public_reference_pilot_validation",
+    "public_reference_live_surface_audit_validation",
     "publisher_control_plane_validation",
     "validate_all_py_pass",
     "final_audit"
@@ -60,7 +61,7 @@
     "placeholder_page",
     "unmapped_public_claim",
     "publisher_control_plane_failure",
-    "publisher_blocked_until_public_reference_validation_and_live_surface_audit",
+    "publisher_blocked_until_public_category_language_layer",
     "first_internal_draft_pack_failure",
     "internal_draft_review_refinement_failure",
     "public_route_readiness_gate_failure",
@@ -91,7 +92,9 @@
     "no_public_release_without_internal_draft_review_refinement_validation",
     "no_public_release_without_public_route_readiness_gate_validation",
     "no_public_release_without_first_controlled_public_reference_pilot_validation",
-    "no_broader_public_release_by_pilot_alone"
+    "no_public_release_without_public_reference_live_surface_audit_validation",
+    "no_broader_public_release_by_pilot_alone",
+    "no_broader_public_release_by_audit_alone"
   ],
   "last_reviewed": "2026-06-17"
 }

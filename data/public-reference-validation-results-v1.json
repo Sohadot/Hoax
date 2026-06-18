@@ -1,0 +1,84 @@
+{
+  "validation_id": "PUB-REF-VALIDATION-RESULTS-V1-001",
+  "name": "Hoax.ai Public Reference Live Surface Validation Results",
+  "version": "v1.0.0",
+  "status": "governed_public_reference_validation_results",
+  "maturity": "live_surface_validation_only_no_engine_no_classifier_no_broader_publication",
+  "validation_dimensions": [
+    {"dimension_id": "DIM-0001", "name": "Public Page Existence", "result": "pass"},
+    {"dimension_id": "DIM-0002", "name": "Homepage Link Integrity", "result": "pass"},
+    {"dimension_id": "DIM-0003", "name": "Reference Page Cross-Link Integrity", "result": "pass"},
+    {"dimension_id": "DIM-0004", "name": "Sitemap Integrity", "result": "pass"},
+    {"dimension_id": "DIM-0005", "name": "Route Registry Alignment", "result": "pass"},
+    {"dimension_id": "DIM-0006", "name": "Internal Link Graph Alignment", "result": "pass"},
+    {"dimension_id": "DIM-0007", "name": "Metadata Boundary Safety", "result": "pass"},
+    {"dimension_id": "DIM-0008", "name": "Structured Data Boundary Safety", "result": "pass"},
+    {"dimension_id": "DIM-0009", "name": "Visible Claim Boundary", "result": "pass"},
+    {"dimension_id": "DIM-0010", "name": "Artifact–Subject Separation Preservation", "result": "pass"},
+    {"dimension_id": "DIM-0011", "name": "Evidence Posture Non-Verdict Boundary", "result": "pass"},
+    {"dimension_id": "DIM-0012", "name": "No Tool/Classifier/Detector Implication", "result": "pass"},
+    {"dimension_id": "DIM-0013", "name": "No Upload/Scoring/API/Form/Analytics Capability", "result": "pass"},
+    {"dimension_id": "DIM-0014", "name": "No External Factual Claims", "result": "pass"},
+    {"dimension_id": "DIM-0015", "name": "No Real-World Examples or Accusations", "result": "pass"},
+    {"dimension_id": "DIM-0016", "name": "Accessibility and Semantic Structure", "result": "pass"},
+    {"dimension_id": "DIM-0017", "name": "Mobile/Responsive Layout Safety", "result": "pass"},
+    {"dimension_id": "DIM-0018", "name": "Performance and Dependency Safety", "result": "pass"},
+    {"dimension_id": "DIM-0019", "name": "GitHub Pages Preview Visibility", "result": "pass_expected_local"},
+    {"dimension_id": "DIM-0020", "name": "Publication Boundary Status", "result": "pass"}
+  ],
+  "page_results": [
+    {
+      "page_id": "PAGE-RESULT-0001",
+      "path": "/",
+      "file_path": "index.html",
+      "surface_record_id": "LIVE-SURFACE-0001",
+      "result": "pass",
+      "notes": "Homepage links to both reference pages; no tool CTAs."
+    },
+    {
+      "page_id": "PAGE-RESULT-0002",
+      "path": "/reference/evidence-posture/",
+      "file_path": "reference/evidence-posture/index.html",
+      "surface_record_id": "LIVE-SURFACE-0002",
+      "result": "pass",
+      "notes": "Evidence Posture reference boundary preserved."
+    },
+    {
+      "page_id": "PAGE-RESULT-0003",
+      "path": "/reference/artifact-subject-separation/",
+      "file_path": "reference/artifact-subject-separation/index.html",
+      "surface_record_id": "LIVE-SURFACE-0003",
+      "result": "pass",
+      "notes": "Artifact–Subject Separation boundary preserved."
+    }
+  ],
+  "sitemap_result": {
+    "result": "pass",
+    "url_count": 3,
+    "notes": "Homepage and two controlled reference pages only."
+  },
+  "route_registry_result": {
+    "result": "pass",
+    "route_count": 3,
+    "notes": "ROUTE-0001, ROUTE-0002, ROUTE-0003 aligned with sitemap."
+  },
+  "internal_link_graph_result": {
+    "result": "pass",
+    "notes": "Homepage and cross-reference links verified."
+  },
+  "metadata_result": {
+    "result": "pass",
+    "notes": "Controlled metadata; no tool or product implications."
+  },
+  "structured_data_result": {
+    "result": "pass",
+    "notes": "WebPage JSON-LD only on reference pages; bounded."
+  },
+  "forbidden_capability_result": {
+    "result": "pass",
+    "notes": "No classifier, upload, scoring, API, forms, analytics, or monetization language."
+  },
+  "overall_result": "live_surface_validated_controlled_reference_pilot",
+  "broader_publication_readiness": "not_authorized",
+  "last_reviewed": "2026-06-17"
+}

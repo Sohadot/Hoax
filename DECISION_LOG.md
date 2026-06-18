@@ -1055,3 +1055,26 @@ Hoax.ai must become a public category language before it becomes a public engine
 - No broader reference expansion is authorized.
 - No DNS/Cloudflare/custom domain launch is authorized.
 - Future public engine work remains blocked until reference language and public route validation mature.
+
+---
+
+## DEC-043 — Public Reference Validation and Live Surface Audit v1 Adopted
+
+**Date:** 2026-06-17
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Validation and Live Surface Audit v1 to validate the first controlled public reference pilot across live visibility, route integrity, sitemap integrity, internal links, metadata, structured data boundaries, public language boundaries, and governance safety, without authorizing broader publication, engine, classifier, upload, scoring, DNS, Cloudflare, or custom domain launch.
+
+### Rationale
+
+A controlled public reference pilot must be validated after publication because public visibility changes the risk profile. The pages must remain reference surfaces, not tool surfaces. They must teach Hoax.ai's category language without implying detection, truth certification, fake/real verdicts, upload capability, scoring, software service capability, or subject accusation.
+
+### Implications
+
+- The two public reference pages may be audited.
+- Minor corrections may be made only if required to preserve validation, accessibility, link integrity, metadata safety, or governance boundaries.
+- No new public pages, routes, or sitemap expansion is authorized.
+- No engine, classifier, upload, scoring, API, forms, analytics, monetization, DNS, Cloudflare, or custom domain launch is authorized.
+- Future work may begin the Public Category Language Layer only after this validation passes.

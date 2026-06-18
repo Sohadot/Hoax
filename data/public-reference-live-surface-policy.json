@@ -1,0 +1,62 @@
+{
+  "policy_id": "PUB-REF-LIVE-SURFACE-POLICY-001",
+  "name": "Hoax.ai Public Reference Live Surface Policy",
+  "version": "v1.0.0",
+  "status": "governed_public_reference_live_surface_policy",
+  "maturity": "live_surface_validation_only_no_engine_no_classifier_no_broader_publication",
+  "governing_principle": "A public reference page must remain a reference surface, not become a tool surface.",
+  "visibility_principle": "Live visibility increases responsibility; it does not loosen governance.",
+  "allowed_audit_actions": [
+    "live_surface_validation",
+    "audit_record_creation",
+    "minor_corrections_for_safety_or_integrity_only"
+  ],
+  "prohibited_audit_actions": [
+    "new_pages",
+    "new_routes",
+    "sitemap_expansion",
+    "public_engine",
+    "public_classifier",
+    "public_tool",
+    "upload",
+    "scoring",
+    "forms",
+    "analytics",
+    "api",
+    "monetization",
+    "dns",
+    "cloudflare",
+    "custom_domain_launch",
+    "external_factual_claims",
+    "broader_publication"
+  ],
+  "audit_scope": [
+    "homepage_root",
+    "/reference/evidence-posture/",
+    "/reference/artifact-subject-separation/",
+    "sitemap.xml",
+    "route_registry",
+    "internal_link_graph",
+    "metadata",
+    "structured_data_boundaries",
+    "visible_claims",
+    "forbidden_public_tool_implications"
+  ],
+  "live_surface_policy": "GitHub Pages preview of controlled reference layer only. Canonical URLs follow hoax.ai registry policy. Live surface is not custom domain launch or production tool deployment.",
+  "correction_policy": "Corrections may not add routes, sitemap URLs, tool language, classifier language, upload language, scoring, public CTAs, or new public claims.",
+  "non_authorization_rules": [
+    "audit_does_not_authorize_engine",
+    "audit_does_not_authorize_classifier",
+    "audit_does_not_authorize_upload",
+    "audit_does_not_authorize_scoring",
+    "audit_does_not_authorize_forms",
+    "audit_does_not_authorize_analytics",
+    "audit_does_not_authorize_api",
+    "audit_does_not_authorize_monetization",
+    "audit_does_not_authorize_dns",
+    "audit_does_not_authorize_cloudflare",
+    "audit_does_not_authorize_custom_domain_launch",
+    "audit_does_not_authorize_broader_publication"
+  ],
+  "last_reviewed": "2026-06-17"
+}

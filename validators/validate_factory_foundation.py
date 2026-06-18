@@ -1617,6 +1617,9 @@ def validate_json_files() -> bool:
         "data/public-route-candidate-registry.json",
         "data/controlled-public-reference-pilot-policy.json",
         "data/controlled-public-reference-pilot-v1.json",
+        "data/public-reference-live-surface-policy.json",
+        "data/public-reference-live-surface-audit-v1.json",
+        "data/public-reference-validation-results-v1.json",
     ]:
         path = ROOT / rel
         try:

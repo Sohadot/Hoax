@@ -3,7 +3,7 @@
   "name": "Hoax.ai Publisher Quality Gates",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "publisher_blocked_until_public_reference_validation_and_live_surface_audit",
+  "maturity": "publisher_blocked_until_public_category_language_layer",
   "gates": [
     {
       "gate_id": "PUB-GATE-0001",
@@ -269,6 +269,18 @@
       "failure_condition": "controlled_public_reference_pilot_not_met",
       "bypassable": false,
       "notes": "Pilot defined Sprint 24 (DEC-042). Two controlled reference pages created. Does not authorize broader publication, engine, classifier, tool, upload, scoring, DNS, Cloudflare, custom domain launch, or monetization by itself."
+    },
+    {
+      "gate_id": "PUB-GATE-0025",
+      "name": "Public Reference Validation and Live Surface Audit Gate",
+      "status": "live_surface_audit_complete_pre_category_language_layer",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "validation_source": "PUBLIC_REFERENCE_VALIDATION_AND_LIVE_SURFACE_AUDIT.md",
+      "failure_condition": "public_reference_live_surface_audit_not_met",
+      "bypassable": false,
+      "notes": "Live surface audit defined Sprint 25 (DEC-043). Validates controlled reference pilot on GitHub Pages preview. Does not authorize broader publication, engine, classifier, tool, upload, scoring, DNS, Cloudflare, custom domain launch, or monetization by itself."
     }
   ],
   "last_reviewed": "2026-06-17"

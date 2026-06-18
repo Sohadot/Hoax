@@ -1112,9 +1112,49 @@ External deployment remains separately governed (Sprint 1C). Maturity is readine
 
 ### Next Phase
 
-**Sprint 25 — Public Reference Validation and Live Surface Audit v1**
+**Sprint 26 — Public Category Language Layer v1**
 
-Public classifier remains blocked. Public engine remains blocked. External deployment remains separately governed. Broader publication remains blocked until validation and future approval.
+Public classifier remains blocked. Public engine remains blocked. External deployment remains separately governed. Broader publication remains blocked until category language expansion and later approval.
+
+---
+
+## Sprint 25 — Public Reference Validation and Live Surface Audit v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Validate the first controlled public reference pilot as a live public surface across route, sitemap, link, metadata, structured data, and governance boundaries.
+
+### Deliverables
+
+- PUBLIC_REFERENCE_VALIDATION_AND_LIVE_SURFACE_AUDIT.md
+- data/public-reference-live-surface-policy.json
+- data/public-reference-live-surface-audit-v1.json
+- data/public-reference-validation-results-v1.json
+- validators/validate_public_reference_live_surface.py
+- SPRINT_25_PUBLIC_REFERENCE_VALIDATION_LIVE_SURFACE_AUDIT.md
+- DEC-043 appended to DECISION_LOG.md
+- Publisher status → blocked_until_public_category_language_layer
+- PUB-GATE-0025 added; reference expansion gate updated
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Audit Scope
+
+- 3 surface records (homepage + 2 reference pages)
+- 20 validation dimensions — all pass
+- 3 sitemap URLs unchanged
+- 31 evidence ledger claims (CLAIM-0031 added)
+- GitHub Pages preview: live_preview_expected (local validation; manual verification documented)
+
+### Gate
+
+**Gate G25 passed.** Broader publication blocked until Public Category Language Layer.
+
+### Next Phase
+
+**Sprint 26 — Public Category Language Layer v1**
 
 ---
 

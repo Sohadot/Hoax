@@ -30,6 +30,8 @@ PILOT_SITEMAP_URL_COUNT = 3
 
 PUBLISHER_STATUS_POST_PILOT = "blocked_until_public_reference_validation_and_live_surface_audit"
 
+PUBLISHER_STATUS_POST_LIVE_AUDIT = "blocked_until_public_category_language_layer"
+
 PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_reference_candidate_pack",
     "blocked_until_internal_draft_blueprint",
@@ -40,6 +42,7 @@ PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_public_route_readiness_gate",
     "blocked_until_first_controlled_public_reference_pilot",
     PUBLISHER_STATUS_POST_PILOT,
+    PUBLISHER_STATUS_POST_LIVE_AUDIT,
 )
 
 

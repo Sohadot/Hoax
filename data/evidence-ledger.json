@@ -332,6 +332,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Two controlled public reference pages created. Broader publication, engine, classifier, and tool remain blocked."
+    },
+    {
+      "claim_id": "CLAIM-0031",
+      "claim_text": "Hoax.ai has adopted Public Reference Validation and Live Surface Audit v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_VALIDATION_AND_LIVE_SURFACE_AUDIT.md, DECISION_LOG.md (DEC-043)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Controlled reference pilot live surface validated. Broader publication, engine, classifier, and tool remain blocked."
     }
   ]
 }

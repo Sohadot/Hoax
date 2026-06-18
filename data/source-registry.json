@@ -1422,6 +1422,56 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Controlled public reference pilot validator."
+    },
+    {
+      "source_id": "SOURCE-0143",
+      "source_title": "PUBLIC_REFERENCE_VALIDATION_AND_LIVE_SURFACE_AUDIT.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_VALIDATION_AND_LIVE_SURFACE_AUDIT.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public reference live surface audit doctrine."
+    },
+    {
+      "source_id": "SOURCE-0144",
+      "source_title": "data/public-reference-live-surface-policy.json",
+      "source_type": "internal_registry",
+      "location": "data/public-reference-live-surface-policy.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public reference live surface policy."
+    },
+    {
+      "source_id": "SOURCE-0145",
+      "source_title": "data/public-reference-live-surface-audit-v1.json",
+      "source_type": "internal_registry",
+      "location": "data/public-reference-live-surface-audit-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public reference live surface audit record."
+    },
+    {
+      "source_id": "SOURCE-0146",
+      "source_title": "data/public-reference-validation-results-v1.json",
+      "source_type": "internal_registry",
+      "location": "data/public-reference-validation-results-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public reference live surface validation results."
+    },
+    {
+      "source_id": "SOURCE-0147",
+      "source_title": "validators/validate_public_reference_live_surface.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_reference_live_surface.py",
+      "supports": ["operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public reference live surface validator."
     }
   ]
 }

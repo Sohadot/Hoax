@@ -36,6 +36,7 @@ GOVERNANCE_FILES = [
     "INTERNAL_DRAFT_REVIEW_AND_REFINEMENT.md",
     "PUBLIC_ROUTE_READINESS_GATE.md",
     "FIRST_CONTROLLED_PUBLIC_REFERENCE_PILOT.md",
+    "PUBLIC_REFERENCE_VALIDATION_AND_LIVE_SURFACE_AUDIT.md",
     "INTERNAL_ENGINE_MODEL.md",
     "OUTPUT_BOUNDARY_SCHEMA.md",
     "EVIDENCE_POSTURE_CLASSIFICATION_PROTOCOL.md",
@@ -127,6 +128,9 @@ DATA_FILES = [
     "data/public-route-candidate-registry.json",
     "data/controlled-public-reference-pilot-policy.json",
     "data/controlled-public-reference-pilot-v1.json",
+    "data/public-reference-live-surface-policy.json",
+    "data/public-reference-live-surface-audit-v1.json",
+    "data/public-reference-validation-results-v1.json",
 ]
 
 VALIDATORS = [
@@ -152,6 +156,7 @@ VALIDATORS = [
     "validators/validate_internal_draft_review.py",
     "validators/validate_public_route_readiness_gate.py",
     "validators/validate_controlled_public_reference_pilot.py",
+    "validators/validate_public_reference_live_surface.py",
     "validators/generate_build_manifest.py",
 ]
 

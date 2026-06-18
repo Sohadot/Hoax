@@ -334,6 +334,17 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "First controlled public reference pilot adoption per DEC-042."
+    },
+    {
+      "claim_id": "CLAIM-0031",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["PUBLIC_REFERENCE_VALIDATION_AND_LIVE_SURFACE_AUDIT.md", "DECISION_LOG.md", "data/public-reference-validation-results-v1.json"],
+      "source_refs": ["SOURCE-0143", "SOURCE-0144", "SOURCE-0145", "SOURCE-0146", "SOURCE-0147"],
+      "support_scope": "public reference live surface audit adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public reference live surface audit adoption per DEC-043."
     }
   ],
   "last_reviewed": "2026-06-17"

@@ -15,6 +15,7 @@ from public_surface_checks import (
     ALLOWED_PUBLIC_HTML,
     PILOT_PATHS,
     PILOT_ROUTE_IDS,
+    PUBLISHER_STATUS_POST_LIVE_AUDIT,
     PUBLISHER_STATUS_POST_PILOT,
     validate_no_extra_public_html,
     validate_pilot_public_surface,
@@ -326,8 +327,14 @@ def validate_registries() -> bool:
 def validate_publisher_governance() -> bool:
     ok = True
     pub = load_json(ROOT / "data" / "publisher-governance-policy.json")
-    if pub.get("current_publisher_status") != PUBLISHER_STATUS_POST_PILOT:
-        error(f"publisher status must be {PUBLISHER_STATUS_POST_PILOT}")
+    if pub.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_PILOT,
+        PUBLISHER_STATUS_POST_LIVE_AUDIT,
+    ):
+        error(
+            f"publisher status must be {PUBLISHER_STATUS_POST_PILOT} "
+            f"or {PUBLISHER_STATUS_POST_LIVE_AUDIT}, got {pub.get('current_publisher_status')}"
+        )
         ok = False
 
     gates = load_json(ROOT / "data" / "publisher-quality-gates.json").get("gates", [])

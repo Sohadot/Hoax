@@ -19,6 +19,7 @@
       "canonical_policy": "registry_aligned",
       "link_policy": "registered_targets_only",
       "route_visibility": "public_thesis_surface",
+      "live_surface_validation_status": "live_surface_validated_controlled_reference_pilot",
       "notes": "Primary public thesis surface."
     },
     {
@@ -49,6 +50,7 @@
       "canonical_policy": "registry_aligned",
       "link_policy": "registered_targets_only",
       "route_visibility": "public_reference_pilot",
+      "live_surface_validation_status": "live_surface_validated_controlled_reference_pilot",
       "notes": "First controlled public reference page — Evidence Posture."
     },
     {
@@ -79,6 +81,7 @@
       "canonical_policy": "registry_aligned",
       "link_policy": "registered_targets_only",
       "route_visibility": "public_reference_pilot",
+      "live_surface_validation_status": "live_surface_validated_controlled_reference_pilot",
       "notes": "First controlled public reference page — Artifact–Subject Separation."
     }
   ]
