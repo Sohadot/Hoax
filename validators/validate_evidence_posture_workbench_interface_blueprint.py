@@ -15,6 +15,7 @@ from public_surface_checks import (
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_WORKBENCH_INTERFACE_BLUEPRINT_VALIDATION,
     PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_GOVERNANCE,
+    PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_V1,
     validate_no_extra_public_html,
     validate_public_surface,
 )
@@ -508,10 +509,12 @@ def validate_publisher_governance() -> bool:
     if pub.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_WORKBENCH_INTERFACE_BLUEPRINT_VALIDATION,
         PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_GOVERNANCE,
+    PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_V1,
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_WORKBENCH_INTERFACE_BLUEPRINT_VALIDATION} "
-            f"or {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_GOVERNANCE}"
+            f"or {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_GOVERNANCE} "
+            f"or {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_V1}"
         )
         ok = False
 
@@ -550,6 +553,7 @@ def validate_publisher_governance() -> bool:
     workbench_blocked = [
         "publisher_blocked_until_workbench_interface_blueprint_validation",
         "publisher_blocked_until_non_public_static_workbench_prototype_governance",
+        "publisher_blocked_until_non_public_static_workbench_prototype_v1",
     ]
     if not any(b in blocked for b in workbench_blocked):
         error("reference-expansion-gate: publisher blocked until workbench progression")

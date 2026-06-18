@@ -673,6 +673,7 @@ def validate_cross_file_integration() -> bool:
         "blocked_until_workbench_interface_blueprint_governance",
         "blocked_until_workbench_interface_blueprint_validation",
         "blocked_until_non_public_static_workbench_prototype_governance",
+        "blocked_until_non_public_static_workbench_prototype_v1",
     ):
         error("publisher-governance-policy: publisher must remain blocked from drafts and publication")
         ok = False

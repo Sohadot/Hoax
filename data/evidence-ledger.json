@@ -420,6 +420,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Interface blueprint validation complete. Conceptual identity validated with maturity boundary. No interface, prototype, engine, classifier, tool, upload, scoring, or public route created."
+    },
+    {
+      "claim_id": "CLAIM-0039",
+      "claim_text": "Hoax.ai has adopted Non-Public Static Workbench Prototype Governance v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_GOVERNANCE.md, DECISION_LOG.md (DEC-051)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Prototype governance defined. Allowed future location defined but not created. No prototype files, interface, engine, classifier, tool, upload, scoring, or public route created."
     }
   ]
 }

@@ -1,0 +1,121 @@
+{
+  "gate_set_id": "NP-PROTO-GATE-SET-001",
+  "name": "Hoax.ai Non-Public Static Workbench Prototype Review Gates",
+  "version": "v1.0.0",
+  "status": "non_public_static_workbench_prototype_review_gates_defined",
+  "maturity": "prototype_governance_only_no_prototype_no_interface_no_engine_no_classifier_no_tool",
+  "review_gates": [
+    {
+      "gate_id": "NP-PROTO-GATE-0001",
+      "gate_name": "Prototype Location Gate",
+      "purpose": "Confirm future prototype uses only _internal_prototypes/evidence-posture-workbench/",
+      "required_before_future_prototype_creation": true,
+      "pass_condition": "allowed_future_prototype_location_confirmed",
+      "fail_condition": "prototype_location_outside_allowed_path",
+      "blocked_if_failed": "future_prototype_creation",
+      "non_authorization_statement": "Passing this gate does not authorize prototype creation in Sprint 33."
+    },
+    {
+      "gate_id": "NP-PROTO-GATE-0002",
+      "gate_name": "Non-Public Route Gate",
+      "purpose": "Confirm prototype is not registered as public route",
+      "required_before_future_prototype_creation": true,
+      "pass_condition": "no_public_route_registration",
+      "fail_condition": "public_route_registered",
+      "blocked_if_failed": "future_prototype_creation",
+      "non_authorization_statement": "Passing this gate does not authorize routes or sitemap expansion."
+    },
+    {
+      "gate_id": "NP-PROTO-GATE-0003",
+      "gate_name": "Static-Only Gate",
+      "purpose": "Confirm prototype remains static HTML/CSS only by default",
+      "required_before_future_prototype_creation": true,
+      "pass_condition": "static_only_confirmed",
+      "fail_condition": "javascript_or_dynamic_behavior_detected",
+      "blocked_if_failed": "future_prototype_creation",
+      "non_authorization_statement": "Passing this gate does not authorize engine or classifier behavior."
+    },
+    {
+      "gate_id": "NP-PROTO-GATE-0004",
+      "gate_name": "No Input/Upload Gate",
+      "purpose": "Confirm no forms, inputs, or upload controls",
+      "required_before_future_prototype_creation": true,
+      "pass_condition": "no_input_upload_controls",
+      "fail_condition": "input_or_upload_detected",
+      "blocked_if_failed": "future_prototype_creation",
+      "non_authorization_statement": "Passing this gate does not authorize upload or forms."
+    },
+    {
+      "gate_id": "NP-PROTO-GATE-0005",
+      "gate_name": "No Scoring/Verdict Gate",
+      "purpose": "Confirm no scoring, verdict, or fake/real display",
+      "required_before_future_prototype_creation": true,
+      "pass_condition": "no_scoring_verdict_display",
+      "fail_condition": "scoring_or_verdict_detected",
+      "blocked_if_failed": "future_prototype_creation",
+      "non_authorization_statement": "Passing this gate does not authorize scoring or fake/real output."
+    },
+    {
+      "gate_id": "NP-PROTO-GATE-0006",
+      "gate_name": "No Engine/Classifier Gate",
+      "purpose": "Confirm no engine or classifier behavior or wording",
+      "required_before_future_prototype_creation": true,
+      "pass_condition": "no_engine_classifier_behavior",
+      "fail_condition": "engine_or_classifier_implied",
+      "blocked_if_failed": "future_prototype_creation",
+      "non_authorization_statement": "Passing this gate does not authorize engine or classifier implementation."
+    },
+    {
+      "gate_id": "NP-PROTO-GATE-0007",
+      "gate_name": "Evidence Field Visual Identity Gate",
+      "purpose": "Confirm governed evidence field direction, not detector dashboard",
+      "required_before_future_prototype_creation": true,
+      "pass_condition": "evidence_field_visual_identity_confirmed",
+      "fail_condition": "detector_or_black_cyber_ui_detected",
+      "blocked_if_failed": "future_prototype_creation",
+      "non_authorization_statement": "Passing this gate does not authorize public workbench launch."
+    },
+    {
+      "gate_id": "NP-PROTO-GATE-0008",
+      "gate_name": "Accessibility/Performance Gate",
+      "purpose": "Confirm accessibility and dependency-light static constraints",
+      "required_before_future_prototype_creation": true,
+      "pass_condition": "accessibility_performance_rules_met",
+      "fail_condition": "accessibility_or_performance_violation",
+      "blocked_if_failed": "future_prototype_creation",
+      "non_authorization_statement": "Passing this gate does not authorize analytics or external scripts."
+    },
+    {
+      "gate_id": "NP-PROTO-GATE-0009",
+      "gate_name": "No Public Navigation Gate",
+      "purpose": "Confirm prototype not linked from public navigation",
+      "required_before_future_prototype_creation": true,
+      "pass_condition": "no_public_navigation_links",
+      "fail_condition": "public_navigation_link_detected",
+      "blocked_if_failed": "future_prototype_creation",
+      "non_authorization_statement": "Passing this gate does not authorize homepage or reference page links."
+    },
+    {
+      "gate_id": "NP-PROTO-GATE-0010",
+      "gate_name": "No Sitemap Expansion Gate",
+      "purpose": "Confirm prototype not included in sitemap.xml",
+      "required_before_future_prototype_creation": true,
+      "pass_condition": "no_sitemap_inclusion",
+      "fail_condition": "sitemap_entry_detected",
+      "blocked_if_failed": "future_prototype_creation",
+      "non_authorization_statement": "Passing this gate does not authorize sitemap expansion."
+    },
+    {
+      "gate_id": "NP-PROTO-GATE-0011",
+      "gate_name": "No Deployment/DNS/Cloudflare Gate",
+      "purpose": "Confirm no deployment, DNS, or Cloudflare changes for prototype",
+      "required_before_future_prototype_creation": true,
+      "pass_condition": "no_deployment_dns_cloudflare_change",
+      "fail_condition": "deployment_or_dns_change_detected",
+      "blocked_if_failed": "future_prototype_creation",
+      "non_authorization_statement": "Passing this gate does not authorize deployment, DNS, Cloudflare, or custom domain launch."
+    }
+  ],
+  "non_authorization_statement": "These review gates govern future prototype creation only. No gate authorizes engine, classifier, upload, scoring, routes, sitemap, deployment, DNS, or Cloudflare in Sprint 33.",
+  "last_reviewed": "2026-06-17"
+}

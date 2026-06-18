@@ -38,6 +38,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_evidence_posture_workbench_specification.py",
     ROOT / "validators" / "validate_evidence_posture_workbench_interface_blueprint.py",
     ROOT / "validators" / "validate_evidence_posture_workbench_interface_blueprint_validation.py",
+    ROOT / "validators" / "validate_non_public_static_workbench_prototype_governance.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

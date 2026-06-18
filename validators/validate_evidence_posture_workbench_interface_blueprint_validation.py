@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_GOVERNANCE,
+    PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_V1,
     validate_no_extra_public_html,
     validate_public_surface,
 )
@@ -469,8 +470,14 @@ def validate_public_safety() -> bool:
 def validate_publisher_governance() -> bool:
     ok = True
     pub = load_json(ROOT / "data" / "publisher-governance-policy.json")
-    if pub.get("current_publisher_status") != PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_GOVERNANCE:
-        error(f"publisher status must be {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_GOVERNANCE}")
+    if pub.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_GOVERNANCE,
+        PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_V1,
+    ):
+        error(
+            f"publisher status must be {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_GOVERNANCE} "
+            f"or {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_V1}"
+        )
         ok = False
 
     gates = load_json(ROOT / "data" / "publisher-quality-gates.json").get("gates", [])
@@ -511,8 +518,15 @@ def validate_publisher_governance() -> bool:
         error("reference-expansion-gate: must block public engine eligibility by blueprint validation alone")
         ok = False
     blocked = expansion.get("blocked_conditions", [])
-    if "publisher_blocked_until_non_public_static_workbench_prototype_governance" not in blocked:
-        error("reference-expansion-gate: publisher blocked until prototype governance")
+    if "publisher_blocked_until_non_public_static_workbench_prototype_v1" not in blocked:
+        error("reference-expansion-gate: publisher blocked until prototype v1")
+        ok = False
+    workbench_blocked = [
+        "publisher_blocked_until_non_public_static_workbench_prototype_governance",
+        "publisher_blocked_until_non_public_static_workbench_prototype_v1",
+    ]
+    if not any(b in blocked for b in workbench_blocked):
+        error("reference-expansion-gate: publisher blocked until workbench progression")
         ok = False
     return ok
 

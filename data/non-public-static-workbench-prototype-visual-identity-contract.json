@@ -1,0 +1,62 @@
+{
+  "visual_contract_id": "NP-PROTO-VIS-001",
+  "name": "Hoax.ai Non-Public Static Workbench Prototype Visual Identity Contract",
+  "version": "v1.0.0",
+  "status": "non_public_static_workbench_prototype_visual_identity_contract_defined",
+  "maturity": "prototype_governance_only_no_prototype_no_interface_no_engine_no_classifier_no_tool",
+  "validated_identity_inputs": [
+    "interface_blueprint_validated",
+    "conceptual_identity_validated_with_maturity_boundary",
+    "evidence_field_background_direction_validated"
+  ],
+  "required_visual_direction": [
+    "evidence_chamber_not_detector",
+    "governed_evidence_field_not_generic_black_dashboard",
+    "artifact_first",
+    "boundary_first",
+    "posture_before_verdict",
+    "provenance_shadow",
+    "missing_context_as_absence",
+    "not_assessable_as_protected_restraint",
+    "refusal_as_governance",
+    "output_envelope_containment",
+    "no_verdict_gravity"
+  ],
+  "allowed_visual_explorations": [
+    "evidence chamber frame",
+    "artifact-subject boundary rail",
+    "evidence field background",
+    "provenance shadow layer",
+    "missing information register",
+    "not-assessable lock",
+    "refusal gate",
+    "output envelope box",
+    "verification path",
+    "static state map"
+  ],
+  "forbidden_visual_patterns": [
+    "detector dashboard",
+    "scanner UI",
+    "central upload box",
+    "red/green fake-real result logic",
+    "truth meter",
+    "risk score",
+    "probability gauge",
+    "forensic game visuals",
+    "policing dashboard",
+    "SaaS analytics dashboard",
+    "product landing-page CTA layout",
+    "try-it-now pattern"
+  ],
+  "background_identity_rules": [
+    "background must be conceptual layer, not decoration",
+    "background must not default to black cyber UI",
+    "background may use pale document field, bone neutral, warm ash, muted graphite, faint blue-grey provenance lines, restrained amber/copper boundary accents",
+    "background may represent missing context as absence",
+    "background may represent provenance gap as shadow",
+    "background may represent artifact-subject boundary as rail",
+    "background may represent output boundary as containment"
+  ],
+  "non_authorization_statement": "This visual identity contract governs future prototype exploration only. It does not authorize prototype files, CSS implementation in Sprint 33, or operational interface behavior.",
+  "last_reviewed": "2026-06-17"
+}

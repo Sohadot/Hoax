@@ -1287,3 +1287,33 @@ The Sprint 31 blueprint defines a Hoax-specific interface identity, but that ide
 - No public tool may be created.
 - No routes or sitemap URLs may be added.
 - Future work may move to Non-Public Static Workbench Prototype Governance only after this validation passes.
+
+---
+
+## DEC-051 — Non-Public Static Workbench Prototype Governance v1 Adopted
+
+**Date:** 2026-06-17
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Non-Public Static Workbench Prototype Governance v1 to define the rules, boundaries, location policy, visual identity contract, safety constraints, and review gates for a future non-public static Evidence Posture Workbench prototype before any prototype files, interface implementation, engine, classifier, upload workflow, scoring system, form, API, route, sitemap entry, or public tool is created.
+
+### Rationale
+
+The interface blueprint is validated, but prototype creation still requires its own governance. A prototype can accidentally imply capability even when it is static. This governance prevents the future prototype from becoming a public route, upload surface, fake/real detector, scoring dashboard, SaaS UI, public engine preview, or operational classifier.
+
+### Implications
+
+- A future non-public static prototype location may be defined.
+- Static-only prototype constraints may be defined.
+- Visual identity constraints may be defined.
+- Safety and review gates may be defined.
+- No prototype is created in this sprint.
+- No interface is implemented.
+- No engine is implemented.
+- No classifier is implemented.
+- No upload workflow is created.
+- No scoring system is created.
+- No public route or sitemap URL is added.
+- Future work may create the non-public static prototype only after this governance passes.

@@ -552,6 +552,7 @@ def validate_publisher_and_gates() -> bool:
         "blocked_until_workbench_interface_blueprint_governance",
         "blocked_until_workbench_interface_blueprint_validation",
         "blocked_until_non_public_static_workbench_prototype_governance",
+        "blocked_until_non_public_static_workbench_prototype_v1",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "

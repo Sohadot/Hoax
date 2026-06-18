@@ -1,0 +1,44 @@
+{
+  "location_policy_id": "NP-PROTO-LOC-001",
+  "name": "Hoax.ai Non-Public Static Workbench Prototype Location Policy",
+  "version": "v1.0.0",
+  "status": "non_public_static_workbench_prototype_location_policy_defined",
+  "maturity": "prototype_governance_only_no_prototype_no_interface_no_engine_no_classifier_no_tool",
+  "allowed_future_prototype_location": "_internal_prototypes/evidence-posture-workbench/",
+  "location_rules": [
+    "location is future-allowed only",
+    "directory must not be created in Sprint 33",
+    "future prototype must not be linked from homepage",
+    "future prototype must not be linked from public reference pages",
+    "future prototype must not be added to sitemap.xml",
+    "future prototype must not be registered as active public route",
+    "future prototype must not require .nojekyll",
+    "future prototype must remain repository-visible but non-public as a web surface"
+  ],
+  "prohibited_locations": [
+    "/workbench/",
+    "/evidence-posture-workbench/",
+    "/tool/",
+    "/classifier/",
+    "/detector/",
+    "/upload/",
+    "/score/",
+    "/api/",
+    "/demo/",
+    "/prototype/ as public route"
+  ],
+  "publication_blockers": [
+    "sitemap inclusion",
+    "route registry activation",
+    "public navigation link",
+    "homepage CTA",
+    "upload control",
+    "scoring display",
+    "fake/real result",
+    "engine wording",
+    "classifier wording",
+    "detector wording"
+  ],
+  "non_authorization_statement": "This location policy defines a future-allowed path only. It does not authorize directory creation, prototype files, public routes, or sitemap entries in Sprint 33.",
+  "last_reviewed": "2026-06-17"
+}

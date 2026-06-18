@@ -1,0 +1,46 @@
+{
+  "scope_id": "NP-PROTO-SCOPE-001",
+  "name": "Hoax.ai Non-Public Static Workbench Prototype Scope",
+  "version": "v1.0.0",
+  "status": "non_public_static_workbench_prototype_scope_defined",
+  "maturity": "prototype_governance_only_no_prototype_no_interface_no_engine_no_classifier_no_tool",
+  "allowed_future_scope": [
+    "static visual exploration",
+    "evidence chamber layout exploration",
+    "evidence field background exploration",
+    "zone layout exploration",
+    "component placement exploration",
+    "state display exploration",
+    "refusal display exploration",
+    "output envelope containment exploration",
+    "verification path layout exploration"
+  ],
+  "prohibited_future_scope": [
+    "operational interface",
+    "public workbench",
+    "public route",
+    "public navigation",
+    "sitemap entry",
+    "form input",
+    "file upload",
+    "engine behavior",
+    "classifier behavior",
+    "scoring behavior",
+    "fake/real output",
+    "API behavior",
+    "analytics",
+    "storage",
+    "network calls",
+    "monetization",
+    "deployment change"
+  ],
+  "prototype_surface_status": "no_prototype_created",
+  "current_public_surface": [
+    "homepage root",
+    "/reference/evidence-posture/",
+    "/reference/artifact-subject-separation/",
+    "/language/"
+  ],
+  "non_authorization_statement": "This scope record defines future allowed exploration only. It does not authorize prototype creation, interface implementation, engine, classifier, upload, scoring, public routes, or sitemap expansion.",
+  "last_reviewed": "2026-06-17"
+}

@@ -3,7 +3,7 @@
   "name": "Hoax.ai Publisher Quality Gates",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "publisher_blocked_until_non_public_static_workbench_prototype_governance",
+  "maturity": "publisher_blocked_until_non_public_static_workbench_prototype_v1",
   "gates": [
     {
       "gate_id": "PUB-GATE-0001",
@@ -381,6 +381,21 @@
       "failure_condition": "evidence_posture_workbench_interface_blueprint_validation_not_met",
       "bypassable": false,
       "notes": "Interface blueprint validation defined Sprint 32 (DEC-050). Validates conceptual identity, zone integrity, component integrity, state contracts, copy boundaries, accessibility/performance discipline, and non-authorization boundaries. Does not authorize interface, prototype, engine, classifier, tool, upload, scoring, API, forms, analytics, routes, sitemap, deployment, DNS, Cloudflare, custom domain launch, or monetization by itself."
+    },
+    {
+      "gate_id": "PUB-GATE-0033",
+      "name": "Non-Public Static Workbench Prototype Governance Gate",
+      "status": "prototype_governance_complete_pre_prototype_v1",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_non_public_static_workbench_prototype": true,
+      "required_before_workbench_prototype": true,
+      "validation_source": "NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_GOVERNANCE.md",
+      "failure_condition": "non_public_static_workbench_prototype_governance_not_met",
+      "bypassable": false,
+      "notes": "Prototype governance defined Sprint 33 (DEC-051). Defines future non-public static prototype location, scope, visual identity, safety boundaries, and review gates. Does not authorize prototype files, interface, engine, classifier, tool, upload, scoring, API, forms, analytics, routes, sitemap, deployment, DNS, Cloudflare, custom domain launch, or monetization in Sprint 33."
     }
   ],
   "last_reviewed": "2026-06-17"
