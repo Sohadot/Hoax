@@ -579,6 +579,51 @@ Public classifier remains blocked. External deployment remains blocked. DNS, Clo
 
 ---
 
+## Sprint 13A — Automation Governance and CI Quality Gate v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Enforce automated validation, CI quality gates, agent execution rules, and repository workflow boundaries before reference content expansion.
+
+### Deliverables
+
+- AUTOMATION_GOVERNANCE.md
+- AGENT_EXECUTION_RULES.md
+- data/automation-governance-policy.json
+- data/ci-quality-gate-policy.json
+- validators/validate_automation_governance.py
+- .github/workflows/quality-gate.yml
+- .github/pull_request_template.md
+- .github/ISSUE_TEMPLATE/config.yml
+- .github/ISSUE_TEMPLATE/governance-task.yml
+- .github/BRANCH_PROTECTION_RECOMMENDATION.md
+- .cursor/rules/hoax-governance.mdc
+- SPRINT_13A_AUTOMATION_GOVERNANCE_AUDIT.md
+- DEC-030 appended to DECISION_LOG.md
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Automation Scope
+
+- Validation-only CI workflow (contents: read, no secrets, no deployment)
+- 18 evidence ledger claims (CLAIM-0018 added)
+- No public pages, routes, or sitemap expansion
+- DEPLOY-G1 through DEPLOY-G3 remain not passed
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Automation maturity is validation_only_no_deployment.
+
+### Next Phase
+
+**Sprint 14 — Content Quality and Reference Substance Standard v1**
+
+Public classifier remains blocked. External deployment remains blocked.
+
+---
+
 ## Long-Term Roadmap
 
 Future layers may include:

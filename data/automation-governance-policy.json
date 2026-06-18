@@ -1,0 +1,75 @@
+{
+  "policy_id": "AUTO-GOV-POLICY-001",
+  "name": "Hoax.ai Automation Governance Policy",
+  "version": "v1.0.0",
+  "status": "governed_internal_automation_quality_gate",
+  "maturity": "validation_only_no_deployment",
+  "governing_principle": "Rules that are not automated become optional under pressure. Automation may validate governance; it must not deploy, publish, collect data, or mutate external infrastructure.",
+  "approved_automation": [
+    "run_python_validators",
+    "run_validate_all_py",
+    "validate_registry_integrity",
+    "validate_public_file_integrity",
+    "validate_route_link_integrity",
+    "validate_claim_source_traceability",
+    "validate_technical_quality",
+    "validate_reference_blueprint_gates",
+    "validate_automation_governance",
+    "generate_build_manifest_for_validation",
+    "report_pass_fail"
+  ],
+  "prohibited_automation": [
+    "deployment_jobs",
+    "github_pages_deployment",
+    "cloudflare_api_calls",
+    "dns_updates",
+    "external_publishing",
+    "artifact_upload_external",
+    "secrets_usage",
+    "write_permissions",
+    "workflow_token_write_scope",
+    "pull_request_target_workflows",
+    "unapproved_curl_wget",
+    "unapproved_npm_pip_install",
+    "third_party_deployment_actions",
+    "analytics_insertion",
+    "form_upload_generation",
+    "route_generation_without_registry_approval",
+    "sitemap_expansion",
+    "public_tool_creation",
+    "upload_workflow_creation",
+    "scoring_creation"
+  ],
+  "ci_permission_rules": [
+    "permissions_contents_read_only",
+    "no_write_permissions",
+    "no_id_token_permission",
+    "no_pages_permission",
+    "no_deployments_permission",
+    "no_secrets"
+  ],
+  "workflow_trigger_rules": {
+    "allowed": ["push_main", "pull_request_main", "workflow_dispatch_validation_only"],
+    "prohibited": ["pull_request_target", "schedule_unless_approved", "deployment_triggers"]
+  },
+  "agent_execution_rules": [
+    "read_roadmap_and_master_execution_plan",
+    "respect_sprint_1c_blocked",
+    "respect_deploy_gates_not_passed",
+    "run_validate_all_before_closure",
+    "no_public_routes_without_gate_approval",
+    "no_deployment_dns_cloudflare",
+    "no_classifier_tool_upload_scoring_forms_analytics",
+    "update_decision_log_for_new_decisions",
+    "update_source_registry_for_governance_files",
+    "update_evidence_ledger_and_claim_map_for_governance_claims"
+  ],
+  "deployment_block": true,
+  "external_infrastructure_block": true,
+  "validation_requirements": [
+    "validate_all_py_is_canonical_command",
+    "validate_all_py_must_pass_before_sprint_closure",
+    "ci_may_run_validate_all_py_only"
+  ],
+  "last_reviewed": "2026-06-17"
+}

@@ -1,0 +1,35 @@
+name: Hoax.ai Quality Gate
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality-gate:
+    name: Validate governance
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Python version
+        run: python --version
+
+      - name: Compile validators
+        run: python -m py_compile validators/*.py
+
+      - name: Run validate_all.py
+        run: python validators/validate_all.py

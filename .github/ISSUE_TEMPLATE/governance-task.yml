@@ -1,0 +1,77 @@
+name: Governance Task
+description: Propose a governed repository change (validation, doctrine, registry — not deployment or public tool work)
+title: "[Governance] "
+labels: ["governance"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for governance, validation, and registry work only.
+        Do not use for deployment, DNS, Cloudflare, public classifier, upload, scoring, or SEO expansion.
+
+  - type: input
+    id: sprint_phase
+    attributes:
+      label: Sprint / phase
+      description: Which sprint or phase does this relate to?
+      placeholder: e.g. Sprint 14
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed change
+      description: What governance change is proposed?
+    validations:
+      required: true
+
+  - type: input
+    id: governance_layer
+    attributes:
+      label: Affected governance layer
+      placeholder: e.g. technical quality, claim traceability
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: prohibited_expansion
+    attributes:
+      label: Prohibited expansion check
+      options:
+        - label: This task does NOT add public routes, sitemap entries, deployment, DNS, Cloudflare, classifier, tool, upload, scoring, forms, or analytics
+          required: true
+
+  - type: input
+    id: required_validator
+    attributes:
+      label: Required validator
+      placeholder: e.g. validate_all.py
+    validations:
+      required: true
+
+  - type: textarea
+    id: source_claim_impact
+    attributes:
+      label: Source / claim impact
+      description: Will source registry, evidence ledger, or claim-source map change?
+
+  - type: textarea
+    id: route_sitemap_impact
+    attributes:
+      label: Route / sitemap impact
+      description: Any route or sitemap change? Must be none unless explicitly approved.
+
+  - type: textarea
+    id: deployment_impact
+    attributes:
+      label: Deployment impact
+      description: Must be none. External deployment remains deferred.
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: Including validate_all.py PASS and audit/decision log updates if applicable.
+    validations:
+      required: true

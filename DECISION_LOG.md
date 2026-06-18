@@ -736,3 +736,27 @@ Reference authority cannot be created by adding pages. A future page must justif
 - No page may be created only for SEO keywords.
 - Future reference expansion remains blocked until this gate is satisfied.
 - External deployment remains blocked.
+
+---
+
+## DEC-030 — Automation Governance and CI Quality Gate v1 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Automation Governance and CI Quality Gate v1 to ensure that repository validation, agent behavior, CI checks, pull request discipline, and future work sequencing are enforced before reference expansion proceeds.
+
+### Rationale
+
+A governed asset cannot rely on manual memory. If validators exist but are not automatically invoked, future work can bypass governance under speed, pressure, or agent drift. Automation must enforce boundaries without creating deployment, external exposure, secrets, data collection, or infrastructure mutation.
+
+### Implications
+
+- `validators/validate_all.py` must remain the canonical local validation command.
+- GitHub Actions may run validation only.
+- CI must not deploy, use secrets, write to the repository, enable Pages, or call Cloudflare/DNS/deployment infrastructure.
+- Future pull requests must include governance-boundary checklists.
+- Agents must follow `AGENT_EXECUTION_RULES.md` before modifying the repository.
+- Sprint 14 may proceed only after automation governance passes.

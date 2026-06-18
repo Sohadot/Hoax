@@ -1,0 +1,38 @@
+---
+description: Hoax.ai governed Category Intelligence Factory — validation, boundaries, and expansion rules
+alwaysApply: true
+---
+
+# Hoax.ai Governance Rules
+
+Hoax.ai is a governed **Category Intelligence Factory**, not a detector, truth machine, upload tool, or SEO site.
+
+## Validation
+
+- Run `python validators/validate_all.py` before closing any sprint or governance task.
+- Required result: **PASS**.
+
+## Blocked without explicit gate approval
+
+- Deployment, GitHub Pages enablement, DNS, Cloudflare
+- Public classifier, public tool, upload, scoring, forms, analytics, APIs, cookies/tracking
+- New public routes without route registry and expansion gate approval
+- Sitemap expansion, SEO expansion
+- External factual claims without source registry support
+
+## Reference expansion
+
+- No pages without reference page blueprint compliance and expansion gate approval
+- Sprint 1C remains **BLOCKED**; DEPLOY-G1 through DEPLOY-G3 are **not passed**
+- Candidate registry must be used before reference page creation
+
+## File obligations
+
+- New governance decisions → `DECISION_LOG.md`
+- New governance files → `data/source-registry.json`
+- Governance adoption claims → `data/evidence-ledger.json` and `data/claim-source-map.json`
+- Read `ROADMAP.md` and `MASTER_EXECUTION_PLAN.md` before substantive work
+
+## Agent boundary
+
+The agent may build governance and validation infrastructure. It may **not** create public exposure before approved gates pass.

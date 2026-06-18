@@ -191,6 +191,17 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Reference blueprint adoption per DEC-029."
+    },
+    {
+      "claim_id": "CLAIM-0018",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["AUTOMATION_GOVERNANCE.md", "DECISION_LOG.md", "data/automation-governance-policy.json"],
+      "source_refs": ["SOURCE-0058", "SOURCE-0060", "SOURCE-0062"],
+      "support_scope": "automation governance and CI quality gate adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Automation governance adoption per DEC-030."
     }
   ],
   "last_reviewed": "2026-06-17"

@@ -1,0 +1,54 @@
+{
+  "policy_id": "CI-QUALITY-GATE-001",
+  "name": "Hoax.ai CI Quality Gate Policy",
+  "version": "v1.0.0",
+  "status": "active",
+  "maturity": "validation_only_no_deployment",
+  "required_workflows": [
+    ".github/workflows/quality-gate.yml"
+  ],
+  "allowed_actions": [
+    "actions/checkout",
+    "actions/setup-python"
+  ],
+  "prohibited_actions": [
+    "external_deployment_actions",
+    "pull_request_target",
+    "pages_deploy",
+    "cloudflare_wrangler",
+    "third_party_publish_actions",
+    "artifact_upload_external",
+    "secrets_usage"
+  ],
+  "required_commands": [
+    "python validators/validate_all.py"
+  ],
+  "prohibited_commands": [
+    "deploy",
+    "pages deploy",
+    "wrangler",
+    "cloudflare",
+    "dns",
+    "vercel",
+    "netlify",
+    "firebase",
+    "aws",
+    "gcloud",
+    "az",
+    "scp",
+    "ssh",
+    "ftp",
+    "rsync",
+    "curl secrets",
+    "npm publish"
+  ],
+  "permissions_policy": {
+    "contents": "read",
+    "write_all": false,
+    "id_token": false,
+    "pages": false,
+    "deployments": false,
+    "secrets": false
+  },
+  "last_reviewed": "2026-06-17"
+}

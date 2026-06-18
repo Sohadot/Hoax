@@ -22,6 +22,8 @@ GOVERNANCE_FILES = [
     "CLAIM_SOURCE_TRACEABILITY_POLICY.md",
     "TECHNICAL_QUALITY_GATE.md",
     "REFERENCE_PAGE_BLUEPRINT.md",
+    "AUTOMATION_GOVERNANCE.md",
+    "AGENT_EXECUTION_RULES.md",
     "INTERNAL_ENGINE_MODEL.md",
     "OUTPUT_BOUNDARY_SCHEMA.md",
     "EVIDENCE_POSTURE_CLASSIFICATION_PROTOCOL.md",
@@ -67,6 +69,8 @@ DATA_FILES = [
     "data/reference-page-type-registry.json",
     "data/reference-expansion-gate.json",
     "data/reference-page-candidate-registry.json",
+    "data/automation-governance-policy.json",
+    "data/ci-quality-gate-policy.json",
 ]
 
 VALIDATORS = [
@@ -79,6 +83,7 @@ VALIDATORS = [
     "validators/validate_claim_source_traceability.py",
     "validators/validate_technical_quality_gate.py",
     "validators/validate_reference_page_blueprint.py",
+    "validators/validate_automation_governance.py",
     "validators/generate_build_manifest.py",
 ]
 
