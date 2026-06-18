@@ -15,6 +15,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_security_privacy_boundary.py",
     ROOT / "validators" / "validate_link_route_integrity.py",
     ROOT / "validators" / "validate_claim_source_traceability.py",
+    ROOT / "validators" / "validate_technical_quality_gate.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

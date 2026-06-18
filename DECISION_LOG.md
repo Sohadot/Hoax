@@ -665,3 +665,27 @@ A reference-grade asset must not rely on persuasive language alone. Every claim 
 - No source may imply broader support than its support scope allows.
 - No external factual claim may be introduced without source support.
 - Future public pages must map major claim-bearing statements before release.
+
+---
+
+## DEC-027 — Technical Quality Gate Hardening v1 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Technical Quality Gate Hardening v1 to enforce static public-surface quality across HTML structure, metadata, canonical behavior, robots, sitemap, accessibility, dependency discipline, performance posture, and static security before expansion or deployment.
+
+### Rationale
+
+A reference-grade asset cannot rely on strategic doctrine while tolerating weak technical foundations. Public files, metadata, accessibility, dependencies, and static security posture must be validated before reference pages, SEO expansion, public interaction, or external deployment.
+
+### Implications
+
+- No public page may ship without technical validation.
+- No public page may have multiple H1 elements.
+- No public route may omit required metadata.
+- No public asset may depend on unapproved external scripts, fonts, embeds, or libraries.
+- No public surface may contain unresolved placeholders, broken asset references, or technical claims beyond validation.
+- Future reference expansion must pass this gate before release.

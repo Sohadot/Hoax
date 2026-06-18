@@ -1,0 +1,79 @@
+{
+  "gate_id": "TECH-QUALITY-GATE-001",
+  "name": "Hoax.ai Technical Quality Gate",
+  "version": "v1.0.0",
+  "status": "governed_internal_technical_quality_gate",
+  "maturity": "pre_expansion_static_quality_gate",
+  "governing_principle": "Reference quality fails if technical quality is not enforceable. A sovereign reference asset must pass structure, metadata, accessibility, performance, static-security, and dependency checks before it scales.",
+  "html_requirements": [
+    "index.html exists with exactly one H1",
+    "html lang attribute present",
+    "charset and viewport meta present",
+    "title and meta description non-empty",
+    "single canonical link",
+    "no empty href or javascript href",
+    "fragment links target existing IDs",
+    "no TODO/FIXME placeholder production text",
+    "no active tool language outside negation context"
+  ],
+  "metadata_requirements": [
+    "title aligns with thesis surface",
+    "meta description does not imply active tool",
+    "canonical aligns with route registry",
+    "Open Graph tags must not imply active classifier or deployment completion",
+    "Twitter tags if present must not overclaim",
+    "JSON-LD if present must not use unapproved SoftwareApplication schema"
+  ],
+  "robots_sitemap_requirements": [
+    "robots.txt exists",
+    "sitemap.xml exists",
+    "sitemap URLs map to registered eligible routes",
+    "no planned blocked future draft or internal_only routes in sitemap",
+    "robots must not expose placeholder routes"
+  ],
+  "accessibility_requirements": [
+    "logical heading structure",
+    "one H1 only",
+    "links have readable text where present",
+    "images have alt or are decorative",
+    "viewport meta for mobile safety",
+    "semantic HTML landmarks where practical"
+  ],
+  "performance_dependency_requirements": [
+    "static_first",
+    "readable_without_javascript",
+    "no_external_javascript",
+    "no_external_stylesheets",
+    "no_remote_fonts",
+    "no_tracking_pixels",
+    "no_iframe_embeds",
+    "local_css_only_unless_approved"
+  ],
+  "static_security_requirements": [
+    "no_forms",
+    "no_inputs",
+    "no_upload_fields",
+    "no_inline_event_handlers",
+    "no_script_tags_unless_approved",
+    "no_external_script_src",
+    "no_iframe",
+    "no_fetch_or_xhr",
+    "no_localstorage_sessionstorage_cookies",
+    "no_payment_widgets",
+    "no_login_account_code",
+    "no_api_interaction"
+  ],
+  "public_asset_requirements": [
+    "linked local assets exist",
+    "no missing local CSS references",
+    "no references to non-existent public routes"
+  ],
+  "prohibited_security_claims": [
+    "perfectly secure",
+    "fully secure",
+    "no security gaps",
+    "unhackable",
+    "guaranteed safe"
+  ],
+  "last_reviewed": "2026-06-17"
+}

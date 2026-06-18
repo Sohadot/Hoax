@@ -498,19 +498,42 @@ External deployment remains deferred (Sprint 1C). Traceability is pre_reference_
 
 ## Sprint 12 — Technical Quality Gate Hardening v1
 
-**Status:** READY — G11 passed  
-**Goal:** Harden technical quality gates across validators and repository integrity before reference expansion.
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Enforce static public-surface technical quality across HTML, metadata, robots, sitemap, accessibility, dependencies, performance posture, and static security before reference expansion.
 
 ### Deliverables
 
-- technical quality gate hardening (future — not in current scope)
-- no public classifier page
-- no upload workflow
-- no deployment expansion
+- TECHNICAL_QUALITY_GATE.md
+- data/technical-quality-gate.json
+- data/public-file-registry.json
+- data/html-metadata-registry.json
+- validators/validate_technical_quality_gate.py
+- SPRINT_12_TECHNICAL_QUALITY_GATE_AUDIT.md
+- DEC-027 appended to DECISION_LOG.md
+- validators/validate_all.py updated
 
-### Required Principle
+### Validation
 
-Technical quality gates must pass before reference expansion. Public classifier remains blocked.
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Technical Quality Scope
+
+- 4 public files registered (index.html, styles.css, robots.txt, sitemap.xml)
+- HTML metadata registry for ROUTE-0001
+- 16 evidence ledger claims (CLAIM-0016 added)
+- No public pages added
+- No public routes added
+- No SEO expansion
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Technical quality is pre_expansion_static_quality_gate.
+
+### Next Phase
+
+**Sprint 13 — Reference Page Blueprint and Expansion Gate v1**
+
+Public classifier remains blocked. External deployment remains blocked.
 
 ---
 

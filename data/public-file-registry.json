@@ -1,0 +1,58 @@
+{
+  "registry_id": "PUBLIC-FILE-REGISTRY-001",
+  "name": "Hoax.ai Public File Registry",
+  "version": "v1.0.0",
+  "status": "active",
+  "maturity": "pre_expansion_static_quality_gate",
+  "public_files": [
+    {
+      "file_id": "PUB-FILE-0001",
+      "path": "index.html",
+      "file_type": "html",
+      "public_role": "thesis_surface",
+      "route_id_if_applicable": "ROUTE-0001",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring",
+      "notes": "Primary public thesis surface."
+    },
+    {
+      "file_id": "PUB-FILE-0002",
+      "path": "styles.css",
+      "file_type": "css",
+      "public_role": "stylesheet",
+      "route_id_if_applicable": null,
+      "required": true,
+      "validation_scope": "css_dependencies_security",
+      "allowed_dependencies": [],
+      "prohibited_content": "external import, remote fonts, scanner detector upload score class names",
+      "notes": "First-party local stylesheet only."
+    },
+    {
+      "file_id": "PUB-FILE-0003",
+      "path": "robots.txt",
+      "file_type": "robots",
+      "public_role": "crawler_control",
+      "route_id_if_applicable": null,
+      "required": true,
+      "validation_scope": "robots_sitemap_alignment",
+      "allowed_dependencies": [],
+      "prohibited_content": "placeholder routes, blocked route exposure",
+      "notes": "Public crawler control file."
+    },
+    {
+      "file_id": "PUB-FILE-0004",
+      "path": "sitemap.xml",
+      "file_type": "sitemap",
+      "public_role": "route_discovery",
+      "route_id_if_applicable": null,
+      "required": true,
+      "validation_scope": "sitemap_route_registry",
+      "allowed_dependencies": [],
+      "prohibited_content": "unregistered routes, future routes, placeholder URLs",
+      "notes": "Public sitemap for registered eligible routes only."
+    }
+  ],
+  "last_reviewed": "2026-06-17"
+}

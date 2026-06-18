@@ -20,6 +20,7 @@ GOVERNANCE_FILES = [
     "SECURITY_PRIVACY_BOUNDARY.md",
     "LINK_ROUTE_INTEGRITY_POLICY.md",
     "CLAIM_SOURCE_TRACEABILITY_POLICY.md",
+    "TECHNICAL_QUALITY_GATE.md",
     "INTERNAL_ENGINE_MODEL.md",
     "OUTPUT_BOUNDARY_SCHEMA.md",
     "EVIDENCE_POSTURE_CLASSIFICATION_PROTOCOL.md",
@@ -58,6 +59,9 @@ DATA_FILES = [
     "data/claim-source-traceability-policy.json",
     "data/claim-source-map.json",
     "data/public-claim-map.json",
+    "data/technical-quality-gate.json",
+    "data/public-file-registry.json",
+    "data/html-metadata-registry.json",
 ]
 
 VALIDATORS = [
@@ -68,6 +72,7 @@ VALIDATORS = [
     "validators/validate_security_privacy_boundary.py",
     "validators/validate_link_route_integrity.py",
     "validators/validate_claim_source_traceability.py",
+    "validators/validate_technical_quality_gate.py",
     "validators/generate_build_manifest.py",
 ]
 

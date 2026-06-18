@@ -167,6 +167,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Pre-reference-expansion traceability hardening. No external factual claims."
+    },
+    {
+      "claim_id": "CLAIM-0016",
+      "claim_text": "Hoax.ai has adopted Technical Quality Gate Hardening v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "TECHNICAL_QUALITY_GATE.md, DECISION_LOG.md (DEC-027)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Pre-expansion static technical quality gate. No public expansion."
     }
   ]
 }

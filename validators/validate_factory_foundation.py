@@ -1564,6 +1564,9 @@ def validate_json_files() -> bool:
         "data/claim-source-traceability-policy.json",
         "data/claim-source-map.json",
         "data/public-claim-map.json",
+        "data/technical-quality-gate.json",
+        "data/public-file-registry.json",
+        "data/html-metadata-registry.json",
     ]:
         path = ROOT / rel
         try:

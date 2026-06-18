@@ -48,10 +48,11 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G9 | Security and privacy boundary | Sprint 9 validator PASS |
 | G10 | Link and route integrity hardening | Sprint 10 validator PASS |
 | G11 | Claim and source traceability hardening | Sprint 11 validator PASS |
-| G12 | GitHub public completion | All links working, no false claims, mobile-safe |
-| G13 | DNS and Cloudflare | Public foundation complete and validated |
+| G12 | Technical quality gate hardening | Sprint 12 validator PASS |
+| G13 | GitHub public completion | All links working, no false claims, mobile-safe |
+| G14 | DNS and Cloudflare | Public foundation complete and validated |
 
-**Gate G11 passed.** Sprint 12 (Technical Quality Gate Hardening) may proceed. Public classifier and tool remain blocked. External deployment remains deferred until G1C passes.
+**Gate G12 passed.** Sprint 13 (Reference Page Blueprint and Expansion Gate) may proceed. Public classifier and tool remain blocked. External deployment remains deferred until G1C passes.
 
 ## Sprint Closure Rules
 
@@ -152,7 +153,8 @@ Classifier, API, and workflow tools require protocol and standard completion fir
 | Sprint 9 | COMPLETE | G9 passed |
 | Sprint 10 | COMPLETE | G10 passed |
 | Sprint 11 | COMPLETE | G11 passed |
-| Sprint 12+ | READY | G11 passed — proceed per phase order; G1C still pending; public tool blocked |
+| Sprint 12 | COMPLETE | G12 passed |
+| Sprint 13+ | READY | G12 passed — proceed per phase order; G1C still pending; public tool blocked |
 
 ## Governing Sentence
 

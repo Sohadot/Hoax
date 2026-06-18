@@ -169,6 +169,17 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Traceability hardening adoption per DEC-026."
+    },
+    {
+      "claim_id": "CLAIM-0016",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["TECHNICAL_QUALITY_GATE.md", "DECISION_LOG.md", "data/technical-quality-gate.json"],
+      "source_refs": ["SOURCE-0047", "SOURCE-0048", "SOURCE-0051"],
+      "support_scope": "technical quality gate adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Technical quality gate adoption per DEC-027."
     }
   ],
   "last_reviewed": "2026-06-17"

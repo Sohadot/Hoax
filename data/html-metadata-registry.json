@@ -1,0 +1,105 @@
+{
+  "registry_id": "HTML-METADATA-REGISTRY-001",
+  "name": "Hoax.ai HTML Metadata Registry",
+  "version": "v1.0.0",
+  "status": "active",
+  "route_id": "ROUTE-0001",
+  "source_file": "index.html",
+  "required_metadata": [
+    {
+      "metadata_id": "META-0001",
+      "name": "charset",
+      "required": true,
+      "expected_presence": "meta charset UTF-8",
+      "allowed_claim_scope": "technical encoding only",
+      "prohibited_claim_scope": "tool capability claims",
+      "notes": "UTF-8 charset meta tag."
+    },
+    {
+      "metadata_id": "META-0002",
+      "name": "viewport",
+      "required": true,
+      "expected_presence": "meta viewport width=device-width",
+      "allowed_claim_scope": "mobile layout configuration",
+      "prohibited_claim_scope": "tool capability claims",
+      "notes": "Responsive viewport meta."
+    },
+    {
+      "metadata_id": "META-0003",
+      "name": "title",
+      "required": true,
+      "expected_presence": "Evidence-Risk Intelligence for the Synthetic Media Age",
+      "allowed_claim_scope": "thesis surface positioning",
+      "prohibited_claim_scope": "active classifier, upload tool, scoring, deployment completion",
+      "notes": "Document title aligned with thesis surface."
+    },
+    {
+      "metadata_id": "META-0004",
+      "name": "meta_description",
+      "required": true,
+      "expected_presence": "governed evidence-risk intelligence system",
+      "allowed_claim_scope": "thesis and classification boundary language",
+      "prohibited_claim_scope": "active tool, truth verdict, fake/real detector",
+      "notes": "Meta description with no-truth-verdict framing."
+    },
+    {
+      "metadata_id": "META-0005",
+      "name": "canonical",
+      "required": true,
+      "expected_presence": "https://hoax.ai/",
+      "allowed_claim_scope": "route registry canonical URL",
+      "prohibited_claim_scope": "unregistered route, deployment completion claim",
+      "notes": "Must align with ROUTE-0001 canonical_url."
+    }
+  ],
+  "optional_metadata": [
+    {
+      "metadata_id": "META-0006",
+      "name": "og_title",
+      "required": false,
+      "expected_presence": "present",
+      "allowed_claim_scope": "thesis surface Open Graph title",
+      "prohibited_claim_scope": "active tool, classifier, upload, scoring",
+      "notes": "Open Graph title present on index.html."
+    },
+    {
+      "metadata_id": "META-0007",
+      "name": "og_description",
+      "required": false,
+      "expected_presence": "present",
+      "allowed_claim_scope": "thesis boundary Open Graph description",
+      "prohibited_claim_scope": "active tool, truth verdict, deployment completion",
+      "notes": "Open Graph description with not-a-truth-machine framing."
+    },
+    {
+      "metadata_id": "META-0008",
+      "name": "og_type",
+      "required": false,
+      "expected_presence": "website",
+      "allowed_claim_scope": "website type only",
+      "prohibited_claim_scope": "product, software application, service",
+      "notes": "og:type is website."
+    },
+    {
+      "metadata_id": "META-0009",
+      "name": "og_url",
+      "required": false,
+      "expected_presence": "https://hoax.ai/",
+      "allowed_claim_scope": "canonical URL alignment",
+      "prohibited_claim_scope": "unregistered route",
+      "notes": "Open Graph URL matches canonical."
+    }
+  ],
+  "prohibited_metadata_claims": [
+    "active classifier",
+    "upload your file",
+    "scan now",
+    "truth score",
+    "deepfake detected",
+    "now available",
+    "deployment complete",
+    "SoftwareApplication",
+    "live tool"
+  ],
+  "last_reviewed": "2026-06-17"
+}
