@@ -1,0 +1,76 @@
+{
+  "policy_id": "NP-PROTO-REFINE-POLICY-001",
+  "name": "Hoax.ai Non-Public Static Workbench Prototype Refinement Policy",
+  "version": "v1.0.0",
+  "status": "governed_non_public_static_workbench_prototype_refinement_policy",
+  "maturity": "static_internal_refinement_only_no_engine_no_classifier_no_tool_no_public_route",
+  "governing_principle": "Prototype refinement may deepen conceptual form. It must not increase operational capability.",
+  "identity_principle": "The refinement must make Hoax.ai's evidence chamber more legible without making it more tool-like.",
+  "allowed_refinement_actions": [
+    "static_html_refinement",
+    "static_css_refinement",
+    "semantic_clarity_improvement",
+    "visual_identity_refinement",
+    "accessibility_improvement",
+    "responsive_layout_improvement",
+    "validation_only"
+  ],
+  "prohibited_actions": [
+    "new_prototype_files",
+    "prototype_expansion",
+    "public_route_creation",
+    "sitemap_expansion",
+    "public_navigation_link",
+    "interface_behavior",
+    "javascript",
+    "forms",
+    "inputs",
+    "upload",
+    "scoring",
+    "fake_real_output",
+    "generated_output",
+    "engine",
+    "classifier",
+    "detector",
+    "api",
+    "analytics",
+    "storage",
+    "network_calls",
+    "monetization",
+    "dns",
+    "cloudflare",
+    "custom_domain_launch",
+    "deployment_changes",
+    "external_factual_claims",
+    "subject_accusation"
+  ],
+  "allowed_files": [
+    "_internal_prototypes/evidence-posture-workbench/index.html",
+    "_internal_prototypes/evidence-posture-workbench/prototype.css"
+  ],
+  "refinement_scope": [
+    "_internal_prototypes/evidence-posture-workbench/index.html",
+    "_internal_prototypes/evidence-posture-workbench/prototype.css"
+  ],
+  "non_authorization_rules": {
+    "blocked": [
+      "public_workbench",
+      "workbench_engine",
+      "workbench_classifier",
+      "upload",
+      "scoring",
+      "api",
+      "new_public_routes",
+      "sitemap_expansion",
+      "deployment_change",
+      "dns",
+      "cloudflare",
+      "custom_domain_launch",
+      "public_tool_behavior",
+      "prototype_expansion_beyond_allowed_files",
+      "production_readiness"
+    ],
+    "statement": "Prototype refinement does not authorize public workbench, engine, classifier, upload, scoring, API, routes, sitemap, deployment, DNS, Cloudflare, custom domain launch, public tool behavior, prototype expansion beyond allowed files, or production readiness."
+  },
+  "last_reviewed": "2026-06-17"
+}

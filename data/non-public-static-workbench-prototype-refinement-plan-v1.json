@@ -1,0 +1,48 @@
+{
+  "refinement_plan_id": "NP-PROTO-REFINE-PLAN-001",
+  "name": "Hoax.ai Non-Public Static Workbench Prototype Refinement Plan v1",
+  "version": "v1.0.0",
+  "status": "non_public_static_workbench_prototype_refinement_plan_v1",
+  "maturity": "static_internal_refinement_only_no_engine_no_classifier_no_tool_no_public_route",
+  "allowed_files": [
+    "_internal_prototypes/evidence-posture-workbench/index.html",
+    "_internal_prototypes/evidence-posture-workbench/prototype.css"
+  ],
+  "refinement_targets": [
+    "evidence_chamber_clarity",
+    "governed_evidence_field_depth",
+    "artifact_first_structure",
+    "boundary_first_layout",
+    "provenance_shadow_visibility",
+    "missing_context_as_absence",
+    "not_assessable_protected_restraint",
+    "refusal_as_governance",
+    "output_envelope_containment",
+    "verification_path_legibility",
+    "accessibility_semantics",
+    "responsive_stability",
+    "anti_detector_differentiation",
+    "anti_upload_dashboard_differentiation",
+    "anti_scoring_dashboard_differentiation"
+  ],
+  "forbidden_changes": [
+    "new_files",
+    "new_routes",
+    "sitemap_expansion",
+    "public_links",
+    "javascript",
+    "forms",
+    "inputs",
+    "upload",
+    "scoring",
+    "fake_real_output",
+    "generated_output",
+    "engine_behavior",
+    "classifier_behavior",
+    "api",
+    "analytics",
+    "deployment_change"
+  ],
+  "expected_outcome": "non_public_static_prototype_refined_with_boundaries_preserved",
+  "last_reviewed": "2026-06-17"
+}

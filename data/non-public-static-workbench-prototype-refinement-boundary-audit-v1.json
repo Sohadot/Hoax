@@ -1,0 +1,56 @@
+{
+  "audit_id": "NP-PROTO-REFINE-AUDIT-001",
+  "name": "Hoax.ai Non-Public Static Workbench Prototype Refinement Boundary Audit v1",
+  "version": "v1.0.0",
+  "status": "non_public_static_workbench_prototype_refinement_boundary_audit_complete",
+  "maturity": "static_internal_refinement_only_no_engine_no_classifier_no_tool_no_public_route",
+  "audited_files": [
+    "_internal_prototypes/evidence-posture-workbench/index.html",
+    "_internal_prototypes/evidence-posture-workbench/prototype.css"
+  ],
+  "boundary_results": {
+    "only_allowed_files_modified": "pass",
+    "no_additional_prototype_files": "pass",
+    "static_only_preserved": "pass",
+    "no_js_preserved": "pass",
+    "no_forms_inputs_preserved": "pass",
+    "no_upload_preserved": "pass",
+    "no_scoring_preserved": "pass",
+    "no_fake_real_preserved": "pass",
+    "no_generated_output_preserved": "pass",
+    "no_real_world_content_preserved": "pass",
+    "no_external_claims_preserved": "pass"
+  },
+  "visual_identity_results": {
+    "evidence_chamber_strengthened": "pass",
+    "governed_evidence_field_strengthened": "pass",
+    "artifact_first_structure_strengthened": "pass",
+    "boundary_first_layout_strengthened": "pass",
+    "provenance_shadow_strengthened": "pass",
+    "missing_context_as_absence_strengthened": "pass",
+    "not_assessable_restraint_strengthened": "pass",
+    "refusal_as_governance_strengthened": "pass",
+    "output_envelope_containment_strengthened": "pass",
+    "anti_detector_pattern_preserved": "pass"
+  },
+  "public_surface_results": {
+    "no_route_registry_entry": "pass",
+    "no_sitemap_entry": "pass",
+    "no_homepage_link": "pass",
+    "no_public_reference_links": "pass",
+    "no_language_page_link": "pass",
+    "no_public_navigation": "pass"
+  },
+  "capability_block_results": {
+    "no_engine": "pass",
+    "no_classifier": "pass",
+    "no_detector": "pass",
+    "no_api": "pass",
+    "no_analytics": "pass",
+    "no_storage": "pass",
+    "no_network_calls": "pass",
+    "no_deployment_change": "pass"
+  },
+  "overall_outcome": "non_public_static_prototype_refinement_boundary_validated",
+  "last_reviewed": "2026-06-17"
+}

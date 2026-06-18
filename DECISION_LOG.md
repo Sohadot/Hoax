@@ -1372,3 +1372,29 @@ The first static prototype exists, but existence is not enough. It must be valid
 - No public route or sitemap entry may be created.
 - No prototype expansion is authorized by this sprint.
 - Future work may refine the internal static prototype only after this validation passes.
+
+---
+
+## DEC-054 — Non-Public Static Workbench Prototype Refinement v1 Adopted
+
+**Date:** 2026-06-17
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Non-Public Static Workbench Prototype Refinement v1 to refine the existing internal static Evidence Posture Workbench prototype inside the already-approved internal location, modifying only index.html and prototype.css, without adding new prototype files, public routes, sitemap entries, JavaScript, inputs, forms, upload behavior, scoring, engine behavior, classifier behavior, API behavior, analytics, deployment changes, DNS, Cloudflare, or public navigation.
+
+### Rationale
+
+The first static prototype has passed validation, but refinement is needed to deepen the Hoax-specific conceptual interface identity. The refinement should make the evidence chamber, governed evidence field, artifact-subject boundary, provenance shadow, missing context, refusal gate, not-assessable restraint, output envelope containment, and verification path more legible without creating operational capability or drifting toward detector, upload, scoring, fake/real, or SaaS dashboard patterns.
+
+### Implications
+
+- The existing prototype may be refined.
+- The existing HTML may be improved for semantic clarity, conceptual structure, and static content.
+- The existing CSS may be improved for visual depth, responsive stability, accessibility, and evidence field identity.
+- No additional prototype files may be created.
+- No public route or sitemap URL may be created.
+- No public navigation may link to the prototype.
+- No JavaScript, forms, inputs, upload controls, scoring, fake/real output, generated output, API, analytics, or engine behavior may be introduced.
+- Future work must validate the refined prototype before any further refinement or interface expansion.

@@ -2212,6 +2212,66 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Prototype validation validator."
+    },
+    {
+      "source_id": "SOURCE-0222",
+      "source_title": "NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_REFINEMENT_V1.md",
+      "source_type": "internal_governance",
+      "location": "NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_REFINEMENT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Prototype refinement doctrine v1."
+    },
+    {
+      "source_id": "SOURCE-0223",
+      "source_title": "data/non-public-static-workbench-prototype-refinement-policy.json",
+      "source_type": "internal_governance",
+      "location": "data/non-public-static-workbench-prototype-refinement-policy.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Prototype refinement policy."
+    },
+    {
+      "source_id": "SOURCE-0224",
+      "source_title": "data/non-public-static-workbench-prototype-refinement-plan-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/non-public-static-workbench-prototype-refinement-plan-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Prototype refinement plan v1."
+    },
+    {
+      "source_id": "SOURCE-0225",
+      "source_title": "data/non-public-static-workbench-prototype-refinement-changelog-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/non-public-static-workbench-prototype-refinement-changelog-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Prototype refinement changelog v1."
+    },
+    {
+      "source_id": "SOURCE-0226",
+      "source_title": "data/non-public-static-workbench-prototype-refinement-boundary-audit-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/non-public-static-workbench-prototype-refinement-boundary-audit-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Prototype refinement boundary audit v1."
+    },
+    {
+      "source_id": "SOURCE-0227",
+      "source_title": "validators/validate_non_public_static_workbench_prototype_refinement.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_non_public_static_workbench_prototype_refinement.py",
+      "supports": ["operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Prototype refinement validator."
     }
   ]
 }

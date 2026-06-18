@@ -1577,6 +1577,51 @@ Public classifier remains blocked. Public engine remains blocked. The prototype 
 
 ---
 
+## Sprint 36 — Non-Public Static Workbench Prototype Refinement v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Refine the existing internal static Evidence Posture Workbench prototype by modifying only index.html and prototype.css, deepening evidence chamber identity without new files, public routes, JavaScript, forms, engine, classifier, upload, scoring, or public tool.
+
+### Deliverables
+
+- NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_REFINEMENT_V1.md
+- data/non-public-static-workbench-prototype-refinement-policy.json
+- data/non-public-static-workbench-prototype-refinement-plan-v1.json
+- data/non-public-static-workbench-prototype-refinement-changelog-v1.json
+- data/non-public-static-workbench-prototype-refinement-boundary-audit-v1.json
+- validators/validate_non_public_static_workbench_prototype_refinement.py
+- SPRINT_36_NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_REFINEMENT_AUDIT.md
+- Refined `_internal_prototypes/evidence-posture-workbench/index.html`
+- Refined `_internal_prototypes/evidence-posture-workbench/prototype.css`
+- DEC-054 appended to DECISION_LOG.md
+- Publisher status → blocked_until_non_public_static_workbench_prototype_refinement_validation
+- PUB-GATE-0036 added; reference expansion gate updated
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Refinement Scope
+
+- Only index.html and prototype.css modified
+- Evidence chamber, governed evidence field, boundary rails, provenance shadow strengthened
+- 42 evidence ledger claims (CLAIM-0042 added)
+- 4 sitemap URLs unchanged
+- No new prototype files, public routes, sitemap expansion, or public navigation links
+
+### Gate
+
+**Gate G36 passed.** Refinement validation blocked until Sprint 37.
+
+### Next Phase
+
+**Sprint 37 — Non-Public Static Workbench Prototype Refinement Validation v1**
+
+Public classifier remains blocked. Public engine remains blocked. The prototype remains non-public, static, non-operational, not a public route, and not a workbench launch.
+
+---
+
 ## Sprint 25 — Public Reference Validation and Live Surface Audit v1
 
 **Status:** COMPLETE — 2026-06-17  

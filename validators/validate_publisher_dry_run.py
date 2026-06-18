@@ -507,6 +507,7 @@ def validate_state_machine() -> bool:
         "blocked_until_non_public_static_workbench_prototype_v1",
         "blocked_until_non_public_static_workbench_prototype_validation",
         "blocked_until_non_public_static_workbench_prototype_refinement",
+        "blocked_until_non_public_static_workbench_prototype_refinement_validation",
     ):
         error(f"publisher-state-machine.json: invalid current_system_state {current}")
         ok = False
@@ -648,6 +649,7 @@ def validate_cross_file() -> bool:
         "blocked_until_non_public_static_workbench_prototype_v1",
         "blocked_until_non_public_static_workbench_prototype_validation",
         "blocked_until_non_public_static_workbench_prototype_refinement",
+        "blocked_until_non_public_static_workbench_prototype_refinement_validation",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must remain blocked from publication, got {status}"

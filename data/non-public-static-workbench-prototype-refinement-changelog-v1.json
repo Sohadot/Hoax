@@ -1,0 +1,39 @@
+{
+  "changelog_id": "NP-PROTO-REFINE-CHANGELOG-001",
+  "name": "Hoax.ai Non-Public Static Workbench Prototype Refinement Changelog v1",
+  "version": "v1.0.0",
+  "status": "non_public_static_workbench_prototype_refinement_changelog_v1",
+  "maturity": "static_internal_refinement_only_no_engine_no_classifier_no_tool_no_public_route",
+  "changed_files": [
+    "_internal_prototypes/evidence-posture-workbench/index.html",
+    "_internal_prototypes/evidence-posture-workbench/prototype.css"
+  ],
+  "refinement_entries": [
+    "html_semantic_refinement",
+    "evidence_chamber_language_refinement",
+    "artifact_boundary_clarity_refinement",
+    "static_zone_copy_refinement",
+    "css_evidence_field_refinement",
+    "css_boundary_rail_refinement",
+    "css_provenance_shadow_refinement",
+    "css_responsive_refinement"
+  ],
+  "unchanged_boundaries": [
+    "no_new_prototype_files",
+    "no_public_route",
+    "no_sitemap_entry",
+    "no_public_navigation",
+    "no_js",
+    "no_forms",
+    "no_inputs",
+    "no_upload",
+    "no_scoring",
+    "no_fake_real",
+    "no_engine",
+    "no_classifier",
+    "no_api",
+    "no_analytics",
+    "no_deployment_change"
+  ],
+  "last_reviewed": "2026-06-17"
+}

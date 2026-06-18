@@ -18,6 +18,7 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_V1,
     PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_VALIDATION,
     PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT,
+    PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT_VALIDATION,
     validate_no_extra_public_html,
     validate_public_surface,
 )
@@ -514,6 +515,7 @@ def validate_publisher_governance() -> bool:
         PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_V1,
         PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_VALIDATION,
         PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT,
+    PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT_VALIDATION,
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_WORKBENCH_INTERFACE_BLUEPRINT_VALIDATION}, "
@@ -561,6 +563,7 @@ def validate_publisher_governance() -> bool:
         "publisher_blocked_until_non_public_static_workbench_prototype_v1",
         "publisher_blocked_until_non_public_static_workbench_prototype_validation",
         "publisher_blocked_until_non_public_static_workbench_prototype_refinement",
+        "publisher_blocked_until_non_public_static_workbench_prototype_refinement_validation",
     ]
     if not any(b in blocked for b in workbench_blocked):
         error("reference-expansion-gate: publisher blocked until workbench progression")

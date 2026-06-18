@@ -453,6 +453,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Static internal prototype validated. Non-public, static, non-operational. No prototype expansion, public route, sitemap entry, engine, classifier, upload, scoring, or public tool authorized."
+    },
+    {
+      "claim_id": "CLAIM-0042",
+      "claim_text": "Hoax.ai has adopted Non-Public Static Workbench Prototype Refinement v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_REFINEMENT_V1.md, DECISION_LOG.md (DEC-054)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Static internal prototype refined. Only index.html and prototype.css modified. No new files, public route, engine, classifier, upload, scoring, or public tool created."
     }
   ]
 }

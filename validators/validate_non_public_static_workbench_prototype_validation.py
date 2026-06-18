@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT,
+    PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT_VALIDATION,
     validate_public_surface,
 )
 
@@ -501,8 +502,14 @@ def validate_public_safety() -> bool:
 def validate_publisher_governance() -> bool:
     ok = True
     pub = load_json(ROOT / "data" / "publisher-governance-policy.json")
-    if pub.get("current_publisher_status") != PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT:
-        error(f"publisher status must be {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT}")
+    if pub.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT,
+        PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT_VALIDATION,
+    ):
+        error(
+            f"publisher status must be {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT} "
+            f"or {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT_VALIDATION}"
+        )
         ok = False
 
     gates = load_json(ROOT / "data" / "publisher-quality-gates.json").get("gates", [])
@@ -542,6 +549,9 @@ def validate_publisher_governance() -> bool:
     blocked = expansion.get("blocked_conditions", [])
     if "publisher_blocked_until_non_public_static_workbench_prototype_refinement" not in blocked:
         error("reference-expansion-gate: publisher blocked until prototype refinement")
+        ok = False
+    if "publisher_blocked_until_non_public_static_workbench_prototype_refinement_validation" not in blocked:
+        error("reference-expansion-gate: publisher blocked until prototype refinement validation")
         ok = False
     return ok
 
