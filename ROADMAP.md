@@ -537,110 +537,21 @@ Public classifier remains blocked. External deployment remains blocked.
 
 ---
 
-## Sprint 8 — Reference Layer v1
+## Sprint 13 — Reference Page Blueprint and Expansion Gate v1
 
-**Status:** BLOCKED — requires reference governance gates  
-**Goal:** Add a small number of strong reference pages.
-
-### Candidate Pages
-
-- /evidence-posture/
-- /synthetic-fragility/
-- /source-confidence/
-- /provenance-gap/
-- /synthetic-media-risk/
-- /deception-patterns/
-- /methodology/
-- /standard/
-
-### Rule
-
-No thin pages.
-
-Every page must be reference-grade, internally linked, source-disciplined, and aligned with the governance boundary.
-
----
-
-## Sprint 6 — Source Registry
-
-**Goal:** Establish source discipline and claim traceability.
+**Status:** READY — G12 passed  
+**Goal:** Define the governed blueprint and expansion gate for reference pages before any reference layer publication, SEO growth, or route addition.
 
 ### Deliverables
 
-- SOURCE_REGISTRY.md or data/source-registry.json
-- source categories
-- claim mapping
-- review status
-- citation policy
+- Reference page blueprint and expansion gate (future — not in current scope)
+- no public reference pages yet
+- no route expansion yet
+- no SEO expansion yet
 
----
+### Required Principle
 
-## Sprint 7 — Interface Embodiment
-
-**Goal:** Develop the visual system that embodies evidence posture.
-
-### Interface Direction
-
-The interface should show evidence layers:
-
-- claim;
-- source;
-- provenance;
-- media;
-- context;
-- identity;
-- pattern;
-- posture.
-
-### Prohibited
-
-- fake scanning effects;
-- cyber-gaming visuals;
-- fake certainty meters;
-- sensational red alerts;
-- decorative animations without conceptual function.
-
----
-
-## Sprint 8 — GitHub Public Completion
-
-**Goal:** Make the GitHub version complete and visible before custom domain connection.
-
-### Requirements
-
-- homepage live;
-- governance files present;
-- sitemap present;
-- robots present;
-- internal links working;
-- no broken links;
-- no thin pages;
-- no false claims;
-- mobile-stable;
-- accessible;
-- performance-safe.
-
----
-
-## Sprint 9 — DNS and Cloudflare Layer
-
-**Goal:** Connect Hoax.ai after the GitHub public foundation is ready.
-
-### Infrastructure Rule
-
-GitHub is the first public build layer.
-
-Cloudflare nameservers are added later as DNS, performance, and security infrastructure.
-
-### DNS Direction
-
-The domain owner retains ownership.
-
-After the GitHub build is complete and visible, Cloudflare nameservers can be provided for domain-level DNS management.
-
-GitHub Pages connection may use the appropriate A and CNAME records through the active DNS provider.
-
-Do not request DNS changes before the public foundation is ready.
+Reference expansion must pass blueprint and expansion gate validation before publication. Public classifier remains blocked. External deployment remains blocked. DNS, Cloudflare, and custom domain work remain in later deployment gates (DEPLOY-G1 through DEPLOY-G3), not current foundation steps.
 
 ---
 

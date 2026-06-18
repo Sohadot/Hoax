@@ -689,3 +689,26 @@ A reference-grade asset cannot rely on strategic doctrine while tolerating weak 
 - No public asset may depend on unapproved external scripts, fonts, embeds, or libraries.
 - No public surface may contain unresolved placeholders, broken asset references, or technical claims beyond validation.
 - Future reference expansion must pass this gate before release.
+
+---
+
+## DEC-028 — Execution Sequence Reconciled Before Reference Expansion
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai reconciles the master execution sequence so that GitHub public completion, DNS, Cloudflare, and custom domain work are moved into later explicit deployment gates (DEPLOY-G1 through DEPLOY-G3) and are not current foundation gates immediately after G12.
+
+### Rationale
+
+ROADMAP.md correctly identified Sprint 13 — Reference Page Blueprint and Expansion Gate v1 as the next phase. MASTER_EXECUTION_PLAN.md incorrectly placed GitHub public completion and DNS/Cloudflare as G13 and G14, implying deployment readiness was the immediate next step. Reference expansion governance must precede deployment gates.
+
+### Implications
+
+- G13 is Reference Page Blueprint and Expansion Gate; G14 is Content Quality and Reference Substance Standard.
+- DEPLOY-G1 (GitHub Pages Readiness), DEPLOY-G2 (Custom Domain DNS Request), and DEPLOY-G3 (External Domain Validation) are separate, not passed, and not immediate post-G12 steps.
+- Sprint 1C and external deployment remain blocked.
+- Obsolete ROADMAP sections for old Sprint 6–9 duplicate numbering are removed.
+- No DNS, Cloudflare, or external deployment work is implied as near-term.

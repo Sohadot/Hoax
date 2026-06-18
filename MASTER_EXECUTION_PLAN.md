@@ -49,10 +49,24 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G10 | Link and route integrity hardening | Sprint 10 validator PASS |
 | G11 | Claim and source traceability hardening | Sprint 11 validator PASS |
 | G12 | Technical quality gate hardening | Sprint 12 validator PASS |
-| G13 | GitHub public completion | All links working, no false claims, mobile-safe |
-| G14 | DNS and Cloudflare | Public foundation complete and validated |
+| G13 | Reference Page Blueprint and Expansion Gate | Sprint 13 validator PASS — **pending** |
+| G14 | Content Quality and Reference Substance Standard | Sprint 14 validator PASS — **pending** |
 
-**Gate G12 passed.** Sprint 13 (Reference Page Blueprint and Expansion Gate) may proceed. Public classifier and tool remain blocked. External deployment remains deferred until G1C passes.
+**Gate G12 passed.** Sprint 13 (Reference Page Blueprint and Expansion Gate) may proceed. Public classifier and tool remain blocked. External deployment remains deferred until deployment gates pass.
+
+### Foundation Gates vs Deployment Gates
+
+Foundation gates (G0–G14) govern category infrastructure, reference governance, and expansion readiness. They must pass before reference layer scale.
+
+Deployment gates are **separate** and **not current foundation steps**. They open only after reference expansion governance is in place. None are passed.
+
+| Gate | Prerequisite | Validation | Status |
+|------|--------------|------------|--------|
+| DEPLOY-G1 | GitHub Pages Readiness | GitHub Pages enabled, public surface loads, repository integrity confirmed | **not passed** |
+| DEPLOY-G2 | Custom Domain DNS Request | Custom domain DNS requested only after DEPLOY-G1 and reference governance gates | **not passed** |
+| DEPLOY-G3 | External Domain Validation | hoax.ai resolves, canonical and sitemap validated on external domain | **not passed** |
+
+Sprint 1C (G1C) remains **BLOCKED**. External deployment is deferred. DNS, Cloudflare, and custom domain work are not immediate post-G12 steps.
 
 ## Sprint Closure Rules
 
@@ -154,7 +168,8 @@ Classifier, API, and workflow tools require protocol and standard completion fir
 | Sprint 10 | COMPLETE | G10 passed |
 | Sprint 11 | COMPLETE | G11 passed |
 | Sprint 12 | COMPLETE | G12 passed |
-| Sprint 13+ | READY | G12 passed — proceed per phase order; G1C still pending; public tool blocked |
+| Sprint 13 | READY | G13 pending — reference expansion gate |
+| Sprint 14+ | BLOCKED | Requires G13; deployment gates not passed |
 
 ## Governing Sentence
 
