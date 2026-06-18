@@ -3,10 +3,11 @@
   "name": "Hoax.ai Publisher State Machine",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "publisher_blocked_until_quality_standard",
-  "current_system_state": "blocked_until_publisher_dry_run_harness",
+  "maturity": "publisher_blocked_until_first_reference_candidate_pack",
+  "current_system_state": "blocked_until_first_reference_candidate_pack",
   "states": [
     "blocked",
+    "dry_run_pass",
     "proposed_internal",
     "candidate_registered",
     "blueprint_checked",
@@ -24,6 +25,8 @@
     "retired"
   ],
   "allowed_transitions": [
+    {"from": "blocked", "to": "dry_run_pass", "requires": "publisher_dry_run_harness_passed"},
+    {"from": "dry_run_pass", "to": "proposed_internal", "requires": "first_reference_candidate_pack_authorized"},
     {"from": "blocked", "to": "proposed_internal", "requires": "content_quality_standard_passed"},
     {"from": "proposed_internal", "to": "candidate_registered", "requires": "candidate_registry_entry"},
     {"from": "candidate_registered", "to": "blueprint_checked", "requires": "reference_blueprint_gate"},
@@ -43,6 +46,9 @@
   ],
   "terminal_states": ["retired"],
   "blocked_transitions": [
+    {"from": "dry_run_pass", "to": "release_eligible", "reason": "dry_run_pass_does_not_authorize_release"},
+    {"from": "dry_run_pass", "to": "public_release_blocked", "reason": "dry_run_pass_does_not_authorize_public_release"},
+    {"from": "dry_run_pass", "to": "public_live", "reason": "dry_run_pass_is_test_only"},
     {"from": "proposed_internal", "to": "release_eligible", "reason": "must_pass_all_intermediate_gates"},
     {"from": "proposed_internal", "to": "public_release_blocked", "reason": "no_direct_public_release"},
     {"from": "candidate_registered", "to": "release_eligible", "reason": "must_pass_all_gates"},
@@ -63,6 +69,7 @@
     "forbidden_language_passed",
     "validate_all_py_passed",
     "audit_record_exists",
+    "publisher_dry_run_harness_passed",
     "publisher_control_plane_compliance"
   ],
   "last_reviewed": "2026-06-17"

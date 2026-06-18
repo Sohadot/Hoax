@@ -50,6 +50,7 @@ QUEUE_TOP = {"registry_id", "name", "version", "status", "maturity", "queues", "
 
 REQUIRED_STATES = [
     "blocked",
+    "dry_run_pass",
     "proposed_internal",
     "candidate_registered",
     "blueprint_checked",
@@ -67,7 +68,7 @@ REQUIRED_STATES = [
     "retired",
 ]
 
-REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 16)]
+REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 17)]
 
 REQUIRED_WORKFLOW_IDS = [f"PUB-WORKFLOW-{i:04d}" for i in range(1, 16)]
 
@@ -134,11 +135,11 @@ def validate_publisher_policy() -> bool:
     if data.get("status") != "governed_internal_publisher_policy":
         error("publisher-governance-policy.json: invalid status")
         ok = False
-    if data.get("maturity") != "publisher_blocked_until_dry_run_harness":
+    if data.get("maturity") != "publisher_blocked_until_first_reference_candidate_pack":
         error("publisher-governance-policy.json: invalid maturity")
         ok = False
-    if data.get("current_publisher_status") != "blocked_until_publisher_dry_run_harness":
-        error("publisher-governance-policy.json: publisher must be blocked until dry-run harness")
+    if data.get("current_publisher_status") != "blocked_until_first_reference_candidate_pack":
+        error("publisher-governance-policy.json: publisher must be blocked until first reference candidate pack")
         ok = False
 
     allowed = " ".join(data.get("allowed_current_outputs", [])).lower()
@@ -247,8 +248,12 @@ def validate_state_machine() -> bool:
             ok = False
 
     current = data.get("current_system_state", "")
-    if current not in ("blocked", "blocked_until_publisher_dry_run_harness"):
+    if current not in ("blocked", "blocked_until_first_reference_candidate_pack"):
         error(f"publisher-state-machine.json: invalid current_system_state {current}")
+        ok = False
+
+    if "dry_run_pass" not in states:
+        error("publisher-state-machine.json: dry_run_pass state missing")
         ok = False
 
     if "public_release_blocked" not in states:

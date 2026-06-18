@@ -1,0 +1,638 @@
+#!/usr/bin/env python3
+"""Validate Hoax.ai publisher dry-run harness enforcement."""
+
+from __future__ import annotations
+
+import json
+import re
+import sys
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+
+POLICY_TOP = {
+    "policy_id",
+    "name",
+    "version",
+    "status",
+    "maturity",
+    "governing_principle",
+    "refusal_principle",
+    "allowed_dry_run_actions",
+    "prohibited_dry_run_actions",
+    "required_packet_fields",
+    "required_failure_classes",
+    "pass_meaning",
+    "non_authorization_rules",
+    "last_reviewed",
+}
+
+CASES_TOP = {"case_set_id", "name", "version", "status", "maturity", "cases", "last_reviewed"}
+
+RESULTS_TOP = {
+    "result_set_id",
+    "name",
+    "version",
+    "status",
+    "maturity",
+    "expected_results",
+    "last_reviewed",
+}
+
+REQUIRED_SOURCE_LOCATIONS = [
+    "PUBLISHER_DRY_RUN_HARNESS.md",
+    "data/publisher-dry-run-policy.json",
+    "data/publisher-dry-run-cases.json",
+    "data/publisher-dry-run-expected-results.json",
+    "validators/validate_publisher_dry_run.py",
+]
+
+REQUIRED_CASE_IDS = [f"DRY-RUN-CASE-{i:04d}" for i in range(1, 21)]
+
+REQUIRED_FAILURE_CLASSES = [
+    "route_creation",
+    "sitemap",
+    "draft_creation",
+    "missing_reference_thesis",
+    "missing_claim_scope",
+    "missing_source_scope",
+    "missing_governance_boundary",
+    "keyword_only",
+    "search_volume",
+    "tool_implication",
+    "upload",
+    "scoring",
+    "fake_real",
+    "subject_accusation",
+    "unsupported_external",
+    "publication",
+    "schema",
+]
+
+PROHIBITED_ACTIONS = [
+    "page_creation",
+    "draft_creation",
+    "route_creation",
+    "sitemap",
+    "publishing",
+    "deployment",
+    "dns",
+    "cloudflare",
+    "forms",
+    "analytics",
+    "upload",
+    "scoring",
+    "classifier",
+    "external_factual",
+]
+
+NON_AUTHORIZATION_TERMS = [
+    "publishing",
+    "drafts",
+    "routes",
+    "sitemap",
+    "seo_expansion",
+    "deployment",
+]
+
+REAL_ENTITY_TERMS = [
+    "donald trump",
+    "joe biden",
+    "google",
+    "microsoft",
+    "openai",
+    "facebook",
+    "meta platforms",
+    "ukraine war",
+    "election 2024",
+    "world health organization",
+    "united nations",
+    "elon musk",
+]
+
+OUTPUT_REQUEST_VALUES = {"create", "create_route", "add_sitemap_entry", "create_draft", "publish_now", "publish", "expand"}
+
+CASE_ID_PATTERN = re.compile(r"^DRY-RUN-CASE-\d{4}$")
+
+PUBLIC_FILES = {"index.html", "styles.css", "robots.txt", "sitemap.xml"}
+
+DRAFT_PATTERNS = ["draft/", "drafts/", "-draft.html", "_draft.html"]
+
+NEGATION_MARKERS = [
+    "no ",
+    "not ",
+    "without ",
+    "does not",
+    "do not",
+    "never ",
+    "blocked",
+    "prohibited",
+    "not a ",
+]
+
+
+def contains_unnegated(blob: str, pattern: str) -> bool:
+    if pattern not in blob:
+        return False
+    idx = 0
+    while True:
+        pos = blob.find(pattern, idx)
+        if pos == -1:
+            return False
+        prefix = blob[max(0, pos - 40) : pos]
+        if any(marker in prefix for marker in NEGATION_MARKERS):
+            idx = pos + len(pattern)
+            continue
+        return True
+    return False
+
+
+def error(msg: str) -> None:
+    print(f"ERROR: {msg}")
+
+
+def load_json(path: Path) -> dict:
+    with path.open(encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def case_text_blob(case: dict) -> str:
+    fields = [
+        "case_name",
+        "reference_thesis",
+        "purpose_statement",
+        "definition_scope_summary",
+        "governance_boundary_summary",
+        "claim_scope_summary",
+        "source_scope_summary",
+        "semantic_seo_role",
+        "prohibited_misreading_notes",
+        "notes",
+    ]
+    return " ".join(str(case.get(f, "")) for f in fields).lower()
+
+
+def is_missing(value: object) -> bool:
+    if value is None:
+        return True
+    if isinstance(value, str) and not value.strip():
+        return True
+    return False
+
+
+def is_output_request(value: object) -> bool:
+    if value is None:
+        return False
+    normalized = str(value).strip().lower()
+    if normalized in ("none", "none_requested", "no", "not_requested", ""):
+        return False
+    return normalized in OUTPUT_REQUEST_VALUES or any(
+        term in normalized for term in ("create", "publish", "add_", "expand")
+    )
+
+
+def evaluate_case(case: dict) -> tuple[str, str | None]:
+    """Return (pass|fail, failure_reason_or_none)."""
+    if is_output_request(case.get("requested_route_action")):
+        return "fail", "route_creation_request"
+    if is_output_request(case.get("requested_sitemap_action")):
+        return "fail", "sitemap_expansion_request"
+    if is_output_request(case.get("requested_draft_action")):
+        return "fail", "draft_creation_request"
+    if is_output_request(case.get("requested_publication_action")):
+        return "fail", "direct_publication_request"
+
+    if is_missing(case.get("reference_thesis")):
+        return "fail", "missing_reference_thesis"
+    if is_missing(case.get("claim_scope_summary")):
+        return "fail", "missing_claim_scope"
+    if is_missing(case.get("source_scope_summary")):
+        return "fail", "missing_source_scope"
+    if is_missing(case.get("governance_boundary_summary")):
+        return "fail", "missing_governance_boundary"
+
+    blob = case_text_blob(case)
+
+    if "keyword-only" in blob or "keyword only" in blob or "keyword stuffing" in blob:
+        return "fail", "keyword_only_seo"
+    if "search-volume-first" in blob or "search volume" in blob and "first" in blob:
+        return "fail", "search_volume_first"
+    if any(contains_unnegated(blob, term) for term in ["scan now", "try our tool", "live classifier", "public classifier"]):
+        return "fail", "tool_implication"
+    if any(contains_unnegated(blob, term) for term in ["upload your", "upload workflow", "upload a file", "upload your file"]):
+        return "fail", "upload_implication"
+    if any(term in blob for term in ["truth score", "fake score", "risk score", "scoring engine"]):
+        return "fail", "scoring_implication"
+    if any(term in blob for term in ["fake or real", "is it fake", "fake/real", "binary verdict"]):
+        return "fail", "fake_real_framing"
+    if any(term in blob for term in [" accuse ", "determine guilt", "fraud of the", "guilt and fraud"]):
+        return "fail", "subject_accusation"
+    if any(term in blob for term in ["without source mapping", "unverified external", "97 percent", "according to recent reports"]):
+        return "fail", "unsupported_external_factual_claim"
+    if any(term in blob for term in ["softwareapplication", "product service", "apireference", "commercial product"]):
+        return "fail", "prohibited_schema_tool_service_product_language"
+    if any(term in blob for term in ["world's first", "worlds first", "only system that", "impossible to copy"]):
+        return "fail", "unsupported_superiority"
+
+    return "pass", None
+
+
+def validate_policy() -> bool:
+    ok = True
+    path = ROOT / "data" / "publisher-dry-run-policy.json"
+    try:
+        data = load_json(path)
+    except (json.JSONDecodeError, OSError) as exc:
+        error(f"publisher-dry-run-policy.json parse failed: {exc}")
+        return False
+
+    missing = POLICY_TOP - set(data.keys())
+    if missing:
+        error(f"publisher-dry-run-policy.json missing fields: {sorted(missing)}")
+        ok = False
+
+    if data.get("status") != "governed_internal_publisher_dry_run_harness":
+        error("publisher-dry-run-policy.json: invalid status")
+        ok = False
+    if data.get("maturity") != "candidate_logic_test_only_no_publication":
+        error("publisher-dry-run-policy.json: invalid maturity")
+        ok = False
+
+    principle = data.get("governing_principle", "")
+    if "The dry-run may test publisher logic. It must not create publishable content." not in principle:
+        error("publisher-dry-run-policy.json: governing principle missing required sentence")
+        ok = False
+
+    refusal = data.get("refusal_principle", "")
+    if "A publisher is not trusted because it can generate. It is trusted because it can refuse." not in refusal:
+        error("publisher-dry-run-policy.json: refusal principle missing required sentence")
+        ok = False
+
+    prohibited = " ".join(data.get("prohibited_dry_run_actions", [])).lower()
+    for term in PROHIBITED_ACTIONS:
+        if term.replace("_", "") not in prohibited.replace("_", ""):
+            error(f"publisher-dry-run-policy.json: prohibited_dry_run_actions missing {term}")
+            ok = False
+
+    non_auth = " ".join(data.get("non_authorization_rules", [])).lower()
+    for term in NON_AUTHORIZATION_TERMS:
+        if term.replace("_", "") not in non_auth.replace("_", ""):
+            error(f"publisher-dry-run-policy.json: non_authorization_rules missing {term}")
+            ok = False
+
+    failure_classes = " ".join(data.get("required_failure_classes", [])).lower()
+    for term in REQUIRED_FAILURE_CLASSES:
+        if term.replace("_", "") not in failure_classes.replace("_", ""):
+            error(f"publisher-dry-run-policy.json: required_failure_classes missing {term}")
+            ok = False
+
+    return ok
+
+
+def validate_cases() -> bool:
+    ok = True
+    path = ROOT / "data" / "publisher-dry-run-cases.json"
+    try:
+        data = load_json(path)
+    except (json.JSONDecodeError, OSError) as exc:
+        error(f"publisher-dry-run-cases.json parse failed: {exc}")
+        return False
+
+    missing = CASES_TOP - set(data.keys())
+    if missing:
+        error(f"publisher-dry-run-cases.json missing fields: {sorted(missing)}")
+        ok = False
+
+    cases = data.get("cases", [])
+    if len(cases) < 16:
+        error(f"publisher-dry-run-cases.json: need at least 16 cases, found {len(cases)}")
+        ok = False
+
+    ids = [c.get("dry_run_case_id") for c in cases]
+    if len(ids) != len(set(ids)):
+        error("publisher-dry-run-cases.json: duplicate dry_run_case_id")
+        ok = False
+    for cid in ids:
+        if not CASE_ID_PATTERN.match(cid or ""):
+            error(f"publisher-dry-run-cases.json: invalid dry_run_case_id {cid}")
+            ok = False
+    if set(ids) != set(REQUIRED_CASE_IDS):
+        error(f"publisher-dry-run-cases.json: expected case IDs {REQUIRED_CASE_IDS}")
+        ok = False
+
+    pass_count = 0
+    fail_count = 0
+    for case in cases:
+        cid = case.get("dry_run_case_id", "?")
+        if case.get("fictional") is not True:
+            error(f"publisher-dry-run-cases.json: {cid} fictional must be true")
+            ok = False
+        if case.get("candidate_shape_only") is not True:
+            error(f"publisher-dry-run-cases.json: {cid} candidate_shape_only must be true")
+            ok = False
+
+        result = case.get("expected_result")
+        if result not in ("pass", "fail"):
+            error(f"publisher-dry-run-cases.json: {cid} invalid expected_result")
+            ok = False
+
+        blob = case_text_blob(case)
+        for term in REAL_ENTITY_TERMS:
+            if term in blob:
+                error(f"publisher-dry-run-cases.json: {cid} contains real entity term '{term}'")
+                ok = False
+
+        if result == "pass":
+            pass_count += 1
+            for action_field in [
+                "requested_route_action",
+                "requested_sitemap_action",
+                "requested_draft_action",
+                "requested_publication_action",
+            ]:
+                if is_output_request(case.get(action_field)):
+                    error(f"publisher-dry-run-cases.json: pass case {cid} must not request output via {action_field}")
+                    ok = False
+            if case.get("expected_failure_reason"):
+                error(f"publisher-dry-run-cases.json: pass case {cid} must not have expected_failure_reason")
+                ok = False
+        else:
+            fail_count += 1
+            if not case.get("expected_failure_reason"):
+                error(f"publisher-dry-run-cases.json: fail case {cid} missing expected_failure_reason")
+                ok = False
+
+        computed, computed_reason = evaluate_case(case)
+        if computed != result:
+            error(
+                f"publisher-dry-run-cases.json: {cid} logic mismatch "
+                f"(expected {result}, computed {computed})"
+            )
+            ok = False
+        elif result == "fail" and computed_reason != case.get("expected_failure_reason"):
+            error(
+                f"publisher-dry-run-cases.json: {cid} failure reason mismatch "
+                f"(expected {case.get('expected_failure_reason')}, computed {computed_reason})"
+            )
+            ok = False
+
+    if pass_count < 3:
+        error("publisher-dry-run-cases.json: need at least 3 pass cases")
+        ok = False
+    if fail_count < 13:
+        error("publisher-dry-run-cases.json: need sufficient fail cases")
+        ok = False
+
+    return ok
+
+
+def validate_expected_results() -> bool:
+    ok = True
+    path = ROOT / "data" / "publisher-dry-run-expected-results.json"
+    try:
+        data = load_json(path)
+    except (json.JSONDecodeError, OSError) as exc:
+        error(f"publisher-dry-run-expected-results.json parse failed: {exc}")
+        return False
+
+    missing = RESULTS_TOP - set(data.keys())
+    if missing:
+        error(f"publisher-dry-run-expected-results.json missing fields: {sorted(missing)}")
+        ok = False
+
+    results = data.get("expected_results", [])
+    result_ids = {r.get("dry_run_case_id") for r in results}
+    if result_ids != set(REQUIRED_CASE_IDS):
+        error("publisher-dry-run-expected-results.json: must have one result per dry-run case")
+        ok = False
+
+    cases_by_id = {
+        c["dry_run_case_id"]: c
+        for c in load_json(ROOT / "data" / "publisher-dry-run-cases.json").get("cases", [])
+    }
+
+    for entry in results:
+        cid = entry.get("dry_run_case_id", "?")
+        case = cases_by_id.get(cid)
+        if not case:
+            error(f"publisher-dry-run-expected-results.json: unknown case {cid}")
+            ok = False
+            continue
+
+        for auth_field in [
+            "publication_authorized",
+            "draft_authorized",
+            "route_authorized",
+            "sitemap_authorized",
+        ]:
+            if entry.get(auth_field) is not False:
+                error(f"publisher-dry-run-expected-results.json: {cid} {auth_field} must be false")
+                ok = False
+
+        if entry.get("expected_result") != case.get("expected_result"):
+            error(f"publisher-dry-run-expected-results.json: {cid} expected_result mismatch with case")
+            ok = False
+        if entry.get("expected_state") != case.get("expected_state"):
+            error(f"publisher-dry-run-expected-results.json: {cid} expected_state mismatch with case")
+            ok = False
+
+        if case.get("expected_result") == "fail":
+            if not entry.get("rejection_reason_if_fail"):
+                error(f"publisher-dry-run-expected-results.json: fail case {cid} missing rejection_reason_if_fail")
+                ok = False
+            elif entry.get("rejection_reason_if_fail") != case.get("expected_failure_reason"):
+                error(f"publisher-dry-run-expected-results.json: {cid} rejection reason mismatch")
+                ok = False
+        elif "future_governance_review" not in " ".join(entry.get("required_checks", [])).lower():
+            error(f"publisher-dry-run-expected-results.json: pass case {cid} must authorize only future governance review")
+            ok = False
+
+    return ok
+
+
+def validate_state_machine() -> bool:
+    ok = True
+    data = load_json(ROOT / "data" / "publisher-state-machine.json")
+
+    states = data.get("states", [])
+    if "public_release_blocked" not in states:
+        error("publisher-state-machine.json: public_release_blocked state missing")
+        ok = False
+    if "dry_run_pass" not in states:
+        error("publisher-state-machine.json: dry_run_pass state missing")
+        ok = False
+
+    current = data.get("current_system_state", "")
+    if current != "blocked_until_first_reference_candidate_pack":
+        error(f"publisher-state-machine.json: current_system_state must be blocked_until_first_reference_candidate_pack, got {current}")
+        ok = False
+
+    blocked = data.get("blocked_transitions", [])
+    dry_run_to_release = any(
+        b.get("from") == "dry_run_pass" and b.get("to") == "release_eligible" for b in blocked
+    )
+    dry_run_to_public = any(
+        b.get("from") == "dry_run_pass"
+        and b.get("to") in ("public_release_blocked", "public_live")
+        for b in blocked
+    )
+    if not dry_run_to_release:
+        error("publisher-state-machine.json: must block dry_run_pass to release_eligible")
+        ok = False
+    if not dry_run_to_public:
+        error("publisher-state-machine.json: must block dry_run_pass to public release")
+        ok = False
+
+    release_req = data.get("release_eligible_requires", [])
+    if len(release_req) < 8:
+        error("publisher-state-machine.json: release_eligible_requires too few gates")
+        ok = False
+
+    return ok
+
+
+def validate_publisher_gates() -> bool:
+    ok = True
+    gates = load_json(ROOT / "data" / "publisher-quality-gates.json").get("gates", [])
+    dry_run_gate = next((g for g in gates if g.get("gate_id") == "PUB-GATE-0016"), None)
+    if not dry_run_gate:
+        error("publisher-quality-gates: PUB-GATE-0016 missing")
+        ok = False
+    else:
+        if dry_run_gate.get("required_before_public_release") is not True:
+            error("publisher-quality-gates: PUB-GATE-0016 must be required before public release")
+            ok = False
+        if dry_run_gate.get("bypassable") is True:
+            error("publisher-quality-gates: PUB-GATE-0016 must not be bypassable")
+            ok = False
+        notes = dry_run_gate.get("notes", "").lower()
+        if "authorize" in notes and "does not authorize" not in notes:
+            error("publisher-quality-gates: PUB-GATE-0016 must not authorize publishing by itself")
+            ok = False
+
+    for gate in gates:
+        if gate.get("required_before_public_release") is not True:
+            error(f"publisher-quality-gates: {gate.get('gate_id')} must remain required before public release")
+            ok = False
+
+    return ok
+
+
+def validate_repository_safety() -> bool:
+    ok = True
+
+    candidates = load_json(ROOT / "data" / "reference-page-candidate-registry.json").get("candidates", [])
+    if candidates != []:
+        error("reference-page-candidate-registry: candidates must remain empty")
+        ok = False
+
+    queues = load_json(ROOT / "data" / "publisher-queue-registry.json").get("queues", [])
+    for q in queues:
+        if q.get("items"):
+            error(f"publisher-queue-registry: queue {q.get('queue_id')} must be empty")
+            ok = False
+
+    public_dir_files = {p.name for p in ROOT.iterdir() if p.is_file()}
+    extra_public = public_dir_files - PUBLIC_FILES
+    html_extra = [f for f in extra_public if f.endswith(".html")]
+    if html_extra:
+        error(f"repository safety: unexpected public HTML files {html_extra}")
+        ok = False
+
+    for pattern in DRAFT_PATTERNS:
+        matches = list(ROOT.glob(f"**/*{pattern}*"))
+        if matches:
+            error(f"repository safety: draft-like files found matching {pattern}")
+            ok = False
+
+    routes = load_json(ROOT / "data" / "route-registry.json").get("routes", [])
+    if [r.get("route_id") for r in routes] != ["ROUTE-0001"]:
+        error("route-registry: unexpected routes added")
+        ok = False
+
+    sitemap_path = ROOT / "sitemap.xml"
+    if sitemap_path.exists():
+        try:
+            tree = ET.parse(sitemap_path)
+            root = tree.getroot()
+            ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+            locs = [el.text.strip() for el in root.findall(".//sm:loc", ns) if el.text]
+            if not locs:
+                locs = [el.text.strip() for el in root.findall(".//{*}loc") if el.text]
+            eligible = {
+                r.get("canonical_url")
+                for r in routes
+                if r.get("sitemap_included") is True
+            }
+            if set(locs) != eligible:
+                error("sitemap.xml: expansion or mismatch detected")
+                ok = False
+        except ET.ParseError as exc:
+            error(f"sitemap.xml parse failed: {exc}")
+            ok = False
+
+    return ok
+
+
+def validate_cross_file() -> bool:
+    ok = True
+
+    pub_policy = load_json(ROOT / "data" / "publisher-governance-policy.json")
+    status = pub_policy.get("current_publisher_status", "")
+    if status != "blocked_until_first_reference_candidate_pack":
+        error(
+            f"publisher-governance-policy: current_publisher_status must be "
+            f"blocked_until_first_reference_candidate_pack, got {status}"
+        )
+        ok = False
+    if "draft" in " ".join(pub_policy.get("allowed_current_outputs", [])).lower():
+        error("publisher-governance-policy: drafts must not be allowed current outputs")
+        ok = False
+
+    expansion = load_json(ROOT / "data" / "reference-expansion-gate.json")
+    checks = " ".join(expansion.get("required_pre_release_checks", [])).lower()
+    if "publisher_dry_run" not in checks and "dry_run" not in checks:
+        error("reference-expansion-gate.json: must include publisher dry-run harness pre-release check")
+        ok = False
+
+    sources = load_json(ROOT / "data" / "source-registry.json").get("sources", [])
+    locations = {s.get("location") for s in sources}
+    for loc in REQUIRED_SOURCE_LOCATIONS:
+        if loc not in locations:
+            error(f"source-registry.json: missing source for {loc}")
+            ok = False
+
+    content = (ROOT / "validators" / "validate_all.py").read_text(encoding="utf-8")
+    if "validate_publisher_dry_run.py" not in content:
+        error("validate_all.py: must include validate_publisher_dry_run.py")
+        ok = False
+
+    return ok
+
+
+def main() -> int:
+    checks = [
+        ("dry-run policy", validate_policy),
+        ("dry-run cases", validate_cases),
+        ("expected results", validate_expected_results),
+        ("state machine", validate_state_machine),
+        ("publisher quality gates", validate_publisher_gates),
+        ("repository safety", validate_repository_safety),
+        ("cross-file integration", validate_cross_file),
+    ]
+
+    all_ok = True
+    for name, fn in checks:
+        if not fn():
+            all_ok = False
+
+    if all_ok:
+        print("PASS")
+        return 0
+
+    return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

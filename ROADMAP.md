@@ -754,9 +754,51 @@ External deployment remains deferred (Sprint 1C). Maturity is pre_reference_publ
 
 ### Next Phase
 
-**Sprint 16 — Publisher Dry-Run Harness v1**
+**Sprint 17 — First Reference Candidate Pack v1**
 
-Public classifier remains blocked. External deployment remains blocked. Publisher remains blocked until future dry-run harness.
+Public classifier remains blocked. External deployment remains blocked. Publisher remains blocked from drafts and publication until future explicit approval.
+
+---
+
+## Sprint 16 — Publisher Dry-Run Harness v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Test governed publisher logic with internal dry-run cases only; prove refusal behavior before any candidate pack or draft generation.
+
+### Deliverables
+
+- PUBLISHER_DRY_RUN_HARNESS.md
+- data/publisher-dry-run-policy.json
+- data/publisher-dry-run-cases.json
+- data/publisher-dry-run-expected-results.json
+- validators/validate_publisher_dry_run.py
+- SPRINT_16_PUBLISHER_DRY_RUN_HARNESS_AUDIT.md
+- DEC-034 appended to DECISION_LOG.md
+- data/reference-expansion-gate.json updated
+- data/publisher-quality-gates.json updated (PUB-GATE-0016)
+- data/publisher-governance-policy.json updated (blocked_until_first_reference_candidate_pack)
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Dry-Run Scope
+
+- 20 dry-run cases (DRY-RUN-CASE-0001–0020): 3 pass, 17 fail
+- 22 evidence ledger claims (CLAIM-0022 added)
+- Publisher PUB-GATE-0016 harness defined; publisher blocked until first reference candidate pack
+- No real candidates, drafts, public pages, routes, or sitemap expansion
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Maturity is candidate_logic_test_only_no_publication.
+
+### Next Phase
+
+**Sprint 17 — First Reference Candidate Pack v1**
+
+Public classifier remains blocked. External deployment remains blocked. Publisher remains blocked from drafts and publication until future explicit approval.
 
 ---
 

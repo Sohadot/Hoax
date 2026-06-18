@@ -829,3 +829,30 @@ SEO can strengthen a sovereign reference asset only when it clarifies the asset'
 - Current homepage schema, if any, must remain limited, bounded, and non-tool-implying.
 - Future reference pages must define semantic SEO role before release.
 - No route, sitemap, public page, publisher draft, or deployment is authorized by this sprint.
+
+---
+
+## DEC-034 — Publisher Dry-Run Harness v1 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Publisher Dry-Run Harness v1 to test future publisher logic against internal candidate-shaped packets without creating drafts, public pages, routes, sitemap entries, SEO expansion, or publishable content.
+
+### Rationale
+
+A governed publisher must prove that it can reject unsafe, thin, unsupported, SEO-driven, tool-implying, route-implying, and boundary-violating candidate packets before it is allowed to generate reference candidates or drafts. The dry-run harness validates refusal behavior before production behavior.
+
+### Implications
+
+- The dry-run harness tests candidate logic only.
+- No real candidates are added to the reference-page candidate registry.
+- No publisher queue receives real candidate items.
+- No draft files are created.
+- No public files are created.
+- No routes are created.
+- No sitemap entries are added.
+- No publishing is authorized.
+- Completion of Sprint 16 may allow a future First Reference Candidate Pack sprint, but not automatic publishing.

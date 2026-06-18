@@ -645,8 +645,8 @@ def validate_cross_file_integration() -> bool:
             ok = False
 
     pub_policy = load_json(ROOT / "data" / "publisher-governance-policy.json")
-    if pub_policy.get("current_publisher_status") != "blocked_until_publisher_dry_run_harness":
-        error("publisher-governance-policy: publisher must remain blocked until dry-run harness")
+    if pub_policy.get("current_publisher_status") != "blocked_until_first_reference_candidate_pack":
+        error("publisher-governance-policy: publisher must remain blocked until first reference candidate pack")
         ok = False
 
     candidates = load_json(ROOT / "data" / "reference-page-candidate-registry.json").get("candidates", [])

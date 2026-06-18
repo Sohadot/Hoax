@@ -27,6 +27,7 @@ GOVERNANCE_FILES = [
     "GOVERNED_PUBLISHER_CONTROL_PLANE.md",
     "CONTENT_QUALITY_REFERENCE_SUBSTANCE_STANDARD.md",
     "STRUCTURED_DATA_SEMANTIC_SEO_GOVERNANCE.md",
+    "PUBLISHER_DRY_RUN_HARNESS.md",
     "INTERNAL_ENGINE_MODEL.md",
     "OUTPUT_BOUNDARY_SCHEMA.md",
     "EVIDENCE_POSTURE_CLASSIFICATION_PROTOCOL.md",
@@ -88,6 +89,9 @@ DATA_FILES = [
     "data/schema-type-registry.json",
     "data/metadata-pattern-registry.json",
     "data/seo-prohibited-patterns.json",
+    "data/publisher-dry-run-policy.json",
+    "data/publisher-dry-run-cases.json",
+    "data/publisher-dry-run-expected-results.json",
 ]
 
 VALIDATORS = [
@@ -104,6 +108,7 @@ VALIDATORS = [
     "validators/validate_publisher_control_plane.py",
     "validators/validate_content_quality_standard.py",
     "validators/validate_structured_data_semantic_seo.py",
+    "validators/validate_publisher_dry_run.py",
     "validators/generate_build_manifest.py",
 ]
 

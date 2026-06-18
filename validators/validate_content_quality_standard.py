@@ -391,8 +391,8 @@ def validate_cross_file_integration() -> bool:
 
     pub_policy = load_json(ROOT / "data" / "publisher-governance-policy.json")
     status = pub_policy.get("current_publisher_status", "")
-    if status != "blocked_until_publisher_dry_run_harness":
-        error(f"publisher-governance-policy: publisher must be blocked_until_publisher_dry_run_harness, got {status}")
+    if status != "blocked_until_first_reference_candidate_pack":
+        error(f"publisher-governance-policy: publisher must be blocked_until_first_reference_candidate_pack, got {status}")
         ok = False
     if "draft" in " ".join(pub_policy.get("allowed_current_outputs", [])).lower():
         error("publisher-governance-policy: drafts must not be allowed current outputs")

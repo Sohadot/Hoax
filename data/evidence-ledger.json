@@ -233,6 +233,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Pre-publication semantic SEO governance. No routes, drafts, or deployment authorized."
+    },
+    {
+      "claim_id": "CLAIM-0022",
+      "claim_text": "Hoax.ai has adopted Publisher Dry-Run Harness v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLISHER_DRY_RUN_HARNESS.md, DECISION_LOG.md (DEC-034)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Dry-run harness only. No candidates, drafts, routes, or publication authorized."
     }
   ]
 }

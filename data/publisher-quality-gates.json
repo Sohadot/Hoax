@@ -3,7 +3,7 @@
   "name": "Hoax.ai Publisher Quality Gates",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "publisher_blocked_until_dry_run_harness",
+  "maturity": "publisher_blocked_until_first_reference_candidate_pack",
   "gates": [
     {
       "gate_id": "PUB-GATE-0001",
@@ -168,7 +168,18 @@
       "validation_source": "STRUCTURED_DATA_SEMANTIC_SEO_GOVERNANCE.md",
       "failure_condition": "structured_data_semantic_seo_not_met",
       "bypassable": false,
-      "notes": "Standard defined Sprint 15 (DEC-033). Does not authorize publishing. Publisher remains blocked until dry-run harness."
+      "notes": "Standard defined Sprint 15 (DEC-033). Does not authorize publishing. Publisher remains blocked until first reference candidate pack."
+    },
+    {
+      "gate_id": "PUB-GATE-0016",
+      "name": "Publisher Dry-Run Harness Gate",
+      "status": "harness_defined_pre_publication",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "validation_source": "PUBLISHER_DRY_RUN_HARNESS.md",
+      "failure_condition": "publisher_dry_run_harness_not_met",
+      "bypassable": false,
+      "notes": "Harness defined Sprint 16 (DEC-034). Does not authorize publishing, drafts, routes, or sitemap expansion by itself."
     }
   ],
   "last_reviewed": "2026-06-17"

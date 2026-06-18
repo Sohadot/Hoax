@@ -902,6 +902,56 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Structured data and semantic SEO validator."
+    },
+    {
+      "source_id": "SOURCE-0091",
+      "source_title": "PUBLISHER_DRY_RUN_HARNESS.md",
+      "source_type": "internal_governance",
+      "location": "PUBLISHER_DRY_RUN_HARNESS.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Human-readable publisher dry-run harness per DEC-034."
+    },
+    {
+      "source_id": "SOURCE-0092",
+      "source_title": "data/publisher-dry-run-policy.json",
+      "source_type": "internal_registry",
+      "location": "data/publisher-dry-run-policy.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Machine-readable publisher dry-run policy."
+    },
+    {
+      "source_id": "SOURCE-0093",
+      "source_title": "data/publisher-dry-run-cases.json",
+      "source_type": "internal_registry",
+      "location": "data/publisher-dry-run-cases.json",
+      "supports": ["operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Publisher dry-run test cases."
+    },
+    {
+      "source_id": "SOURCE-0094",
+      "source_title": "data/publisher-dry-run-expected-results.json",
+      "source_type": "internal_registry",
+      "location": "data/publisher-dry-run-expected-results.json",
+      "supports": ["operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Publisher dry-run expected results."
+    },
+    {
+      "source_id": "SOURCE-0095",
+      "source_title": "validators/validate_publisher_dry_run.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_publisher_dry_run.py",
+      "supports": ["operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Publisher dry-run harness validator."
     }
   ]
 }

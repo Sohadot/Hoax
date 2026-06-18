@@ -1587,6 +1587,9 @@ def validate_json_files() -> bool:
         "data/schema-type-registry.json",
         "data/metadata-pattern-registry.json",
         "data/seo-prohibited-patterns.json",
+        "data/publisher-dry-run-policy.json",
+        "data/publisher-dry-run-cases.json",
+        "data/publisher-dry-run-expected-results.json",
     ]:
         path = ROOT / rel
         try:

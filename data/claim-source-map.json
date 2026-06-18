@@ -235,6 +235,17 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Semantic SEO governance adoption per DEC-033."
+    },
+    {
+      "claim_id": "CLAIM-0022",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["PUBLISHER_DRY_RUN_HARNESS.md", "DECISION_LOG.md", "data/publisher-dry-run-policy.json"],
+      "source_refs": ["SOURCE-0091", "SOURCE-0092", "SOURCE-0095"],
+      "support_scope": "publisher dry-run harness adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Publisher dry-run harness adoption per DEC-034."
     }
   ],
   "last_reviewed": "2026-06-17"
