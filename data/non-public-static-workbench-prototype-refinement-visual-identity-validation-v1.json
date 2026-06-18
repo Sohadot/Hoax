@@ -1,0 +1,40 @@
+{
+  "visual_validation_id": "NP-PROTO-REFINE-VIS-VALIDATION-001",
+  "name": "Hoax.ai Non-Public Static Workbench Prototype Refinement Visual Identity Validation v1",
+  "version": "v1.0.0",
+  "status": "non_public_static_prototype_refinement_visual_identity_validated",
+  "maturity": "visual_validation_only_no_public_interface_no_engine",
+  "evidence_chamber_result": "pass",
+  "evidence_field_background_result": "pass",
+  "refinement_trait_results": {
+    "evidence_chamber_strengthened": "pass",
+    "governed_evidence_field_strengthened": "pass",
+    "artifact_first_structure_strengthened": "pass",
+    "boundary_first_layout_strengthened": "pass",
+    "provenance_shadow_strengthened": "pass",
+    "missing_context_as_absence_strengthened": "pass",
+    "not_assessable_restraint_strengthened": "pass",
+    "refusal_as_governance_strengthened": "pass",
+    "output_envelope_containment_strengthened": "pass",
+    "verification_path_legibility_strengthened": "pass",
+    "anti_detector_differentiation_preserved": "pass"
+  },
+  "forbidden_pattern_results": {
+    "detector_dashboard": "blocked",
+    "scanner_ui": "blocked",
+    "central_upload_box": "blocked",
+    "red_green_fake_real_result_logic": "blocked",
+    "truth_meter": "blocked",
+    "risk_score": "blocked",
+    "probability_gauge": "blocked",
+    "forensic_game_visuals": "blocked",
+    "policing_dashboard": "blocked",
+    "saas_analytics_dashboard": "blocked",
+    "product_landing_page_cta_layout": "blocked",
+    "try_it_now_pattern": "blocked",
+    "black_cyber_dashboard_default": "blocked"
+  },
+  "originality_boundary": "This validates strengthened Hoax-specific prototype direction but does not claim final UI uniqueness, public readiness, product readiness, prototype expansion readiness, or impossibility of imitation.",
+  "overall_result": "refinement_visual_identity_validated",
+  "last_reviewed": "2026-06-17"
+}

@@ -1622,6 +1622,53 @@ Public classifier remains blocked. Public engine remains blocked. The prototype 
 
 ---
 
+## Sprint 37 — Non-Public Static Workbench Prototype Refinement Validation v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Validate the Sprint 36 prototype refinement as the current internal static baseline across visual identity, public isolation, static safety, and non-authorization boundaries without creating new prototype files, public routes, JavaScript, forms, engine, classifier, upload, scoring, or public tool.
+
+### Deliverables
+
+- NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_REFINEMENT_VALIDATION_V1.md
+- data/non-public-static-workbench-prototype-refinement-validation-policy.json
+- data/non-public-static-workbench-prototype-refinement-validation-results-v1.json
+- data/non-public-static-workbench-prototype-refinement-visual-identity-validation-v1.json
+- data/non-public-static-workbench-prototype-refinement-public-isolation-audit-v1.json
+- data/non-public-static-workbench-prototype-refinement-static-safety-audit-v1.json
+- validators/validate_non_public_static_workbench_prototype_refinement_validation.py
+- SPRINT_37_NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_REFINEMENT_VALIDATION_AUDIT.md
+- DEC-055 appended to DECISION_LOG.md
+- Publisher status → blocked_until_non_public_static_workbench_visual_system_hardening
+- PUB-GATE-0037 added; reference expansion gate updated
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Validation Scope
+
+- 43 validation dimensions — all pass
+- Sprint 36 refinement accepted as internal static baseline
+- Refined prototype file scope validated (index.html + prototype.css only)
+- Public isolation validated (4 sitemap URLs unchanged)
+- Static safety validated (no JS, forms, upload, scoring)
+- Visual identity strengthening validated
+- 43 evidence ledger claims (CLAIM-0043 added)
+- No new prototype files, public routes, sitemap expansion, or public navigation links
+
+### Gate
+
+**Gate G37 passed.** Visual system hardening blocked until Sprint 38.
+
+### Next Phase
+
+**Sprint 38 — Non-Public Static Workbench Visual System Hardening v1**
+
+Public classifier remains blocked. Public engine remains blocked. The prototype remains non-public, static, non-operational, not a public route, and not a workbench launch.
+
+---
+
 ## Sprint 25 — Public Reference Validation and Live Surface Audit v1
 
 **Status:** COMPLETE — 2026-06-17  

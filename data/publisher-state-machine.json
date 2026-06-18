@@ -3,8 +3,8 @@
   "name": "Hoax.ai Publisher State Machine",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "publisher_blocked_until_non_public_static_workbench_prototype_refinement_validation",
-  "current_system_state": "blocked_until_non_public_static_workbench_prototype_refinement_validation",
+  "maturity": "publisher_blocked_until_non_public_static_workbench_visual_system_hardening",
+  "current_system_state": "blocked_until_non_public_static_workbench_visual_system_hardening",
   "states": [
     "blocked",
     "dry_run_pass",

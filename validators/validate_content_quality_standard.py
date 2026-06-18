@@ -425,6 +425,7 @@ def validate_cross_file_integration() -> bool:
         "blocked_until_non_public_static_workbench_prototype_validation",
         "blocked_until_non_public_static_workbench_prototype_refinement",
         "blocked_until_non_public_static_workbench_prototype_refinement_validation",
+        "blocked_until_non_public_static_workbench_visual_system_hardening",
     ):
         error(f"publisher-governance-policy: publisher must remain blocked from drafts and publication, got {status}")
         ok = False

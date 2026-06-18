@@ -1398,3 +1398,31 @@ The first static prototype has passed validation, but refinement is needed to de
 - No public navigation may link to the prototype.
 - No JavaScript, forms, inputs, upload controls, scoring, fake/real output, generated output, API, analytics, or engine behavior may be introduced.
 - Future work must validate the refined prototype before any further refinement or interface expansion.
+
+---
+
+## DEC-055 — Non-Public Static Workbench Prototype Refinement Validation v1 Adopted
+
+**Date:** 2026-06-17
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Non-Public Static Workbench Prototype Refinement Validation v1 to validate the Sprint 36 refinement of the internal static Evidence Posture Workbench prototype across visual identity, public isolation, static safety, boundary preservation, anti-detector differentiation, and non-authorization discipline, without creating new prototype files, public routes, sitemap entries, public links, JavaScript, inputs, forms, upload behavior, scoring, engine behavior, classifier behavior, API behavior, analytics, DNS, Cloudflare, deployment changes, or public tool behavior.
+
+### Rationale
+
+The Sprint 36 refinement strengthened the prototype's evidence chamber identity and governed evidence field. This strengthened visual identity must be validated before it becomes the new baseline. The validation must prove that conceptual depth increased while operational capability remained zero.
+
+### Implications
+
+- The refined prototype may be audited.
+- Visual identity refinement may be validated.
+- Public isolation may be validated.
+- Static safety may be validated.
+- Boundary preservation may be validated.
+- No new prototype files may be created.
+- No prototype expansion is authorized.
+- No public route or sitemap entry may be created.
+- No engine, classifier, upload, scoring, API, analytics, or public tool may be created.
+- Future work may proceed to visual system hardening only after this validation passes.

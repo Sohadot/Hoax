@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Hoax.ai Non-Public Static Workbench Prototype Validation v1."""
+"""Validate Hoax.ai Non-Public Static Workbench Prototype Refinement Validation v1."""
 
 from __future__ import annotations
 
@@ -13,8 +13,6 @@ ROOT = Path(__file__).resolve().parent.parent
 
 from public_surface_checks import (
     PUBLIC_SITEMAP_URL_COUNT,
-    PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT,
-    PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT_VALIDATION,
     PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_HARDENING,
     validate_public_surface,
 )
@@ -24,6 +22,8 @@ INDEX_PATH = PROTO_DIR / "index.html"
 CSS_PATH = PROTO_DIR / "prototype.css"
 PROTO_REL = "_internal_prototypes/evidence-posture-workbench"
 
+ALLOWED_FILES = {"index.html", "prototype.css"}
+
 POLICY_REQUIRED = {
     "policy_id", "name", "version", "status", "maturity", "governing_principle",
     "identity_principle", "allowed_validation_actions", "prohibited_actions",
@@ -32,14 +32,14 @@ POLICY_REQUIRED = {
 
 RESULTS_REQUIRED = {
     "validation_id", "name", "version", "status", "maturity", "validation_dimensions",
-    "prototype_file_results", "public_isolation_result", "static_safety_result",
-    "visual_identity_result", "accessibility_performance_result", "governance_alignment_result",
-    "overall_result", "last_reviewed",
+    "refinement_artifact_results", "prototype_file_results", "public_isolation_result",
+    "static_safety_result", "visual_identity_result", "accessibility_performance_result",
+    "governance_alignment_result", "overall_result", "last_reviewed",
 }
 
 VISUAL_REQUIRED = {
     "visual_validation_id", "name", "version", "status", "maturity",
-    "evidence_chamber_result", "evidence_field_background_result", "identity_trait_results",
+    "evidence_chamber_result", "evidence_field_background_result", "refinement_trait_results",
     "forbidden_pattern_results", "originality_boundary", "overall_result", "last_reviewed",
 }
 
@@ -53,17 +53,17 @@ ISOLATION_REQUIRED = {
 STATIC_AUDIT_REQUIRED = {
     "static_audit_id", "name", "version", "status", "maturity",
     "html_safety_results", "css_safety_results", "capability_block_results",
-    "content_safety_results", "overall_outcome", "last_reviewed",
+    "content_safety_results", "file_scope_results", "overall_outcome", "last_reviewed",
 }
 
 REQUIRED_SOURCE_LOCATIONS = [
-    "NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_VALIDATION_V1.md",
-    "data/non-public-static-workbench-prototype-validation-policy.json",
-    "data/non-public-static-workbench-prototype-validation-results-v1.json",
-    "data/non-public-static-workbench-prototype-visual-identity-validation-v1.json",
-    "data/non-public-static-workbench-prototype-public-isolation-audit-v1.json",
-    "data/non-public-static-workbench-prototype-static-safety-audit-v1.json",
-    "validators/validate_non_public_static_workbench_prototype_validation.py",
+    "NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_REFINEMENT_VALIDATION_V1.md",
+    "data/non-public-static-workbench-prototype-refinement-validation-policy.json",
+    "data/non-public-static-workbench-prototype-refinement-validation-results-v1.json",
+    "data/non-public-static-workbench-prototype-refinement-visual-identity-validation-v1.json",
+    "data/non-public-static-workbench-prototype-refinement-public-isolation-audit-v1.json",
+    "data/non-public-static-workbench-prototype-refinement-static-safety-audit-v1.json",
+    "validators/validate_non_public_static_workbench_prototype_refinement_validation.py",
 ]
 
 PROHIBITED_ACTIONS = [
@@ -74,11 +74,13 @@ PROHIBITED_ACTIONS = [
     "custom_domain_launch", "deployment_changes", "external_factual_claims", "subject_accusation",
 ]
 
-REQUIRED_IDENTITY_TRAITS = [
-    "evidence_chamber_not_detector", "governed_evidence_field_not_generic_black_dashboard",
-    "artifact_first", "boundary_first", "posture_before_verdict", "provenance_shadow",
-    "missing_context_as_absence", "not_assessable_as_protected_restraint", "refusal_as_governance",
-    "output_envelope_containment", "no_verdict_gravity",
+REFINEMENT_TRAITS = [
+    "evidence_chamber_strengthened", "governed_evidence_field_strengthened",
+    "artifact_first_structure_strengthened", "boundary_first_layout_strengthened",
+    "provenance_shadow_strengthened", "missing_context_as_absence_strengthened",
+    "not_assessable_restraint_strengthened", "refusal_as_governance_strengthened",
+    "output_envelope_containment_strengthened", "verification_path_legibility_strengthened",
+    "anti_detector_differentiation_preserved",
 ]
 
 FORBIDDEN_PATTERNS = [
@@ -89,15 +91,15 @@ FORBIDDEN_PATTERNS = [
 ]
 
 HTML_SAFETY_KEYS = [
-    "no_script_tags", "no_forms", "no_inputs", "no_textarea", "no_file_inputs",
-    "no_action_buttons", "no_upload_controls", "no_generated_output_regions",
-    "no_external_scripts", "no_external_libraries",
+    "no_script_tags", "no_forms", "no_inputs", "no_textarea", "no_file_inputs", "no_buttons",
+    "no_upload_controls", "no_generated_output_regions", "no_external_scripts", "no_external_libraries",
 ]
 
 CSS_SAFETY_KEYS = [
     "no_imports", "no_external_urls", "no_upload_dropzone_styling", "no_scoring_gauge_styling",
-    "no_red_green_verdict_styling", "evidence_field_classes_present", "chamber_boundary_classes_present",
-    "provenance_shadow_classes_present", "output_envelope_classes_present", "responsive_rules_present",
+    "no_red_green_verdict_styling", "no_detector_scanner_naming", "evidence_field_classes_present",
+    "chamber_boundary_classes_present", "provenance_shadow_classes_present",
+    "output_envelope_classes_present", "responsive_rules_present",
 ]
 
 CAPABILITY_BLOCK_KEYS = [
@@ -111,27 +113,22 @@ CONTENT_SAFETY_KEYS = [
     "no_generated_analysis", "no_verified_certified_claims",
 ]
 
+FILE_SCOPE_KEYS = [
+    "only_index_and_css_in_prototype_directory", "no_additional_prototype_files",
+    "no_new_prototype_directories", "only_allowed_files_modified",
+]
+
 REQUIRED_ZONES = [
-    "Workbench Boundary Header",
-    "Artifact Context Zone",
-    "Source and Provenance Context Zone",
-    "Missing Information Zone",
-    "State Routing Zone",
-    "Refusal and Boundary Zone",
-    "Output Envelope Preview Zone",
-    "Verification Questions Zone",
+    "Workbench Boundary Header", "Artifact Context Zone",
+    "Source and Provenance Context Zone", "Missing Information Zone",
+    "State Routing Zone", "Refusal and Boundary Zone",
+    "Output Envelope Preview Zone", "Verification Questions Zone",
 ]
 
 REQUIRED_CONCEPTS = [
-    "Evidence Chamber",
-    "Governed Evidence Field",
-    "Artifact–Subject Boundary",
-    "Provenance Shadow",
-    "Missing Context",
-    "Not Assessable",
-    "Refusal Gate",
-    "Output Envelope",
-    "Verification Path",
+    "Evidence Chamber", "Governed Evidence Field", "Artifact–Subject Boundary",
+    "Provenance Shadow", "Missing Context", "Not Assessable", "Refusal Gate",
+    "Output Envelope", "Verification Path",
 ]
 
 REQUIRED_STATEMENTS = [
@@ -140,36 +137,42 @@ REQUIRED_STATEMENTS = [
     "Evidence is structured before it is believed, escalated, published, or judged.",
 ]
 
+STRENGTHENED_HTML_MARKERS = [
+    "governed reasoning chamber",
+    "artifact-first structure",
+    "confidence-limiting absence",
+    "structural condition",
+    "protected restraint",
+    "refusal is governance",
+    "contained, limited, and non-verdict",
+    "inquiry paths",
+]
+
+STRENGTHENED_CSS_CLASSES = [
+    "evidence-chamber-frame", "governed-evidence-field", "provenance-shadow",
+    "missing-context-absence", "not-assessable-restraint", "refusal-gate", "output-envelope",
+]
+
 PROHIBITED_HTML_PATTERNS = [
-    (r"<script\b", "script tag"),
-    (r"<form\b", "form element"),
-    (r"<input\b", "input element"),
-    (r"<textarea\b", "textarea element"),
-    (r"type\s*=\s*['\"]file['\"]", "file input"),
+    (r"<script\b", "script tag"), (r"<form\b", "form element"), (r"<input\b", "input element"),
+    (r"<textarea\b", "textarea element"), (r"type\s*=\s*['\"]file['\"]", "file input"),
     (r"<button\b", "button element"),
 ]
 
 PROHIBITED_CONTENT = [
-    r"\btry it now\b",
-    r"\bsubmit evidence\b",
-    r"\bupload now\b",
-    r"\bfake\b.*\breal\b",
-    r"\breal score\b",
-    r"\b\d+\s*%\b",
-    r"\bverified\b",
-    r"\bcertified\b",
+    r"\btry it now\b", r"\bsubmit evidence\b", r"\bupload now\b",
+    r"\bfake\b.*\breal\b", r"\breal score\b", r"\b\d+\s*%\b", r"\bverified\b", r"\bcertified\b",
 ]
 
 NEGATION_CONTEXT = re.compile(r"\b(does not|do not|no|not|without)\b", re.I)
 NUMERIC_SCORE_PATTERN = re.compile(r"\b(seo_score|quality_score|quality grade|\d+\s*%)\b", re.I)
-
 READINESS_FORBIDDEN = re.compile(
     r"\b(prototype.?expansion.?ready|public.?workbench.?ready|engine.?ready|classifier.?ready|"
     r"tool.?ready|deployment.?ready|public.?release.?ready|production.?ready)\b",
     re.I,
 )
 
-DIMENSION_COUNT = 40
+DIMENSION_COUNT = 43
 
 
 def error(msg: str) -> None:
@@ -183,107 +186,95 @@ def load_json(path: Path) -> dict:
 
 def validate_policy() -> bool:
     ok = True
-    path = ROOT / "data" / "non-public-static-workbench-prototype-validation-policy.json"
+    path = ROOT / "data" / "non-public-static-workbench-prototype-refinement-validation-policy.json"
     policy = load_json(path)
     if not POLICY_REQUIRED.issubset(set(policy)):
-        error("validation policy: missing required top-level fields")
+        error("refinement validation policy: missing required top-level fields")
         ok = False
-    if policy.get("status") != "governed_non_public_static_workbench_prototype_validation_policy":
-        error("validation policy: invalid status")
+    if policy.get("status") != "governed_non_public_static_workbench_prototype_refinement_validation_policy":
+        error("refinement validation policy: invalid status")
         ok = False
-    if policy.get("maturity") != "validation_only_static_internal_prototype_no_engine_no_classifier_no_public_route":
-        error("validation policy: invalid maturity")
+    if policy.get("maturity") != "validation_only_refined_static_internal_prototype_no_engine_no_classifier_no_public_route":
+        error("refinement validation policy: invalid maturity")
         ok = False
     prohibited = " ".join(str(a) for a in policy.get("prohibited_actions", [])).lower()
     for action in PROHIBITED_ACTIONS:
         if action.replace("_", " ") not in prohibited and action not in prohibited:
-            error(f"validation policy: missing prohibited action {action}")
+            error(f"refinement validation policy: missing prohibited action {action}")
             ok = False
     correction = policy.get("correction_policy", "").lower()
     for term in ["files", "routes", "sitemap", "js", "forms", "upload", "scoring", "engine"]:
         if term not in correction:
-            error(f"validation policy: correction_policy must block {term}")
+            error(f"refinement validation policy: correction_policy must block {term}")
             ok = False
     blocked = " ".join(policy.get("non_authorization_rules", {}).get("blocked", [])).lower()
-    for term in [
-        "public_workbench", "workbench_engine", "workbench_classifier", "prototype_expansion",
-        "production_readiness",
-    ]:
+    for term in ["public_workbench", "prototype_expansion", "production_readiness"]:
         if term.replace("_", " ") not in blocked and term not in blocked:
-            error(f"validation policy: non_authorization missing {term}")
+            error(f"refinement validation policy: non_authorization missing {term}")
             ok = False
     if NUMERIC_SCORE_PATTERN.search(path.read_text(encoding="utf-8")):
-        error("validation policy: numeric score found")
+        error("refinement validation policy: numeric score found")
         ok = False
     return ok
 
 
 def validate_results() -> bool:
     ok = True
-    path = ROOT / "data" / "non-public-static-workbench-prototype-validation-results-v1.json"
+    path = ROOT / "data" / "non-public-static-workbench-prototype-refinement-validation-results-v1.json"
     data = load_json(path)
     if not RESULTS_REQUIRED.issubset(set(data)):
-        error("validation results: missing required top-level fields")
+        error("refinement validation results: missing required top-level fields")
         ok = False
-    dims = data.get("validation_dimensions", [])
-    if len(dims) != DIMENSION_COUNT:
-        error(f"validation results: expected {DIMENSION_COUNT} dimensions, got {len(dims)}")
+    if len(data.get("validation_dimensions", [])) != DIMENSION_COUNT:
+        error(f"refinement validation results: expected {DIMENSION_COUNT} dimensions")
         ok = False
-    if data.get("overall_result") != "non_public_static_prototype_validated":
-        error("validation results: overall_result must be non_public_static_prototype_validated")
+    if data.get("overall_result") != "non_public_static_prototype_refinement_validated":
+        error("refinement validation results: invalid overall_result")
         ok = False
     if READINESS_FORBIDDEN.search(path.read_text(encoding="utf-8")):
-        error("validation results: must not imply expansion or readiness")
-        ok = False
-    if NUMERIC_SCORE_PATTERN.search(path.read_text(encoding="utf-8")):
-        error("validation results: numeric score found")
+        error("refinement validation results: must not imply expansion or readiness")
         ok = False
     return ok
 
 
 def validate_visual_identity() -> bool:
     ok = True
-    path = ROOT / "data" / "non-public-static-workbench-prototype-visual-identity-validation-v1.json"
+    path = ROOT / "data" / "non-public-static-workbench-prototype-refinement-visual-identity-validation-v1.json"
     data = load_json(path)
     if not VISUAL_REQUIRED.issubset(set(data)):
-        error("visual identity validation: missing required top-level fields")
+        error("refinement visual identity validation: missing required top-level fields")
         ok = False
-    if data.get("status") != "non_public_static_prototype_visual_identity_validated":
-        error("visual identity validation: invalid status")
+    if data.get("status") != "non_public_static_prototype_refinement_visual_identity_validated":
+        error("refinement visual identity validation: invalid status")
         ok = False
-    if data.get("maturity") != "visual_validation_only_no_public_interface_no_engine":
-        error("visual identity validation: invalid maturity")
+    if data.get("overall_result") != "refinement_visual_identity_validated":
+        error("refinement visual identity validation: invalid overall_result")
         ok = False
-    if data.get("overall_result") != "visual_identity_validated":
-        error("visual identity validation: invalid overall_result")
-        ok = False
-    traits = data.get("identity_trait_results", {})
-    for trait in REQUIRED_IDENTITY_TRAITS:
+    traits = data.get("refinement_trait_results", {})
+    for trait in REFINEMENT_TRAITS:
         if trait not in traits:
-            error(f"visual identity validation: missing identity trait {trait}")
+            error(f"refinement visual identity validation: missing trait {trait}")
             ok = False
     forbidden = data.get("forbidden_pattern_results", {})
     for pattern in FORBIDDEN_PATTERNS:
         if pattern not in forbidden:
-            error(f"visual identity validation: missing forbidden pattern {pattern}")
+            error(f"refinement visual identity validation: missing forbidden pattern {pattern}")
             ok = False
     boundary = data.get("originality_boundary", "").lower()
     if "does not claim" not in boundary:
-        error("visual identity validation: originality_boundary must disclaim final uniqueness/readiness")
+        error("refinement visual identity validation: originality_boundary must disclaim readiness")
         ok = False
     return ok
 
 
 def validate_isolation_audit() -> bool:
     ok = True
-    data = load_json(ROOT / "data" / "non-public-static-workbench-prototype-public-isolation-audit-v1.json")
+    data = load_json(ROOT / "data" / "non-public-static-workbench-prototype-refinement-public-isolation-audit-v1.json")
     if not ISOLATION_REQUIRED.issubset(set(data)):
-        error("isolation audit: missing required top-level fields")
-        ok = False
-    if data.get("internal_prototype_location") != f"{PROTO_REL}/":
-        error("isolation audit: invalid internal_prototype_location")
+        error("refinement isolation audit: missing required top-level fields")
         ok = False
     expected = {
+        "internal_prototype_location": f"{PROTO_REL}/",
         "route_registry_result": "not_registered_as_public_route",
         "sitemap_result": "not_in_sitemap",
         "homepage_link_result": "not_linked_from_homepage",
@@ -291,39 +282,43 @@ def validate_isolation_audit() -> bool:
         "language_page_link_result": "not_linked_from_language_page",
         "public_navigation_result": "not_linked_from_public_navigation",
         "public_surface_result": "public_surface_unchanged_four_urls",
-        "overall_outcome": "public_isolation_validated",
+        "overall_outcome": "refinement_public_isolation_validated",
     }
     for key, val in expected.items():
         if data.get(key) != val:
-            error(f"isolation audit: {key} must be {val}")
+            error(f"refinement isolation audit: {key} must be {val}")
             ok = False
     return ok
 
 
 def validate_static_audit() -> bool:
     ok = True
-    data = load_json(ROOT / "data" / "non-public-static-workbench-prototype-static-safety-audit-v1.json")
+    data = load_json(ROOT / "data" / "non-public-static-workbench-prototype-refinement-static-safety-audit-v1.json")
     if not STATIC_AUDIT_REQUIRED.issubset(set(data)):
-        error("static safety audit: missing required top-level fields")
+        error("refinement static safety audit: missing required top-level fields")
         ok = False
-    if data.get("overall_outcome") != "static_safety_validated":
-        error("static safety audit: invalid overall_outcome")
+    if data.get("overall_outcome") != "refinement_static_safety_validated":
+        error("refinement static safety audit: invalid overall_outcome")
         ok = False
     for key in HTML_SAFETY_KEYS:
         if data.get("html_safety_results", {}).get(key) != "pass":
-            error(f"static safety audit: html {key} must pass")
+            error(f"refinement static safety audit: html {key} must pass")
             ok = False
     for key in CSS_SAFETY_KEYS:
         if data.get("css_safety_results", {}).get(key) != "pass":
-            error(f"static safety audit: css {key} must pass")
+            error(f"refinement static safety audit: css {key} must pass")
             ok = False
     for key in CAPABILITY_BLOCK_KEYS:
         if data.get("capability_block_results", {}).get(key) != "pass":
-            error(f"static safety audit: capability {key} must pass")
+            error(f"refinement static safety audit: capability {key} must pass")
             ok = False
     for key in CONTENT_SAFETY_KEYS:
         if data.get("content_safety_results", {}).get(key) != "pass":
-            error(f"static safety audit: content {key} must pass")
+            error(f"refinement static safety audit: content {key} must pass")
+            ok = False
+    for key in FILE_SCOPE_KEYS:
+        if data.get("file_scope_results", {}).get(key) != "pass":
+            error(f"refinement static safety audit: file scope {key} must pass")
             ok = False
     return ok
 
@@ -333,21 +328,10 @@ def validate_prototype_files() -> bool:
     if not PROTO_DIR.is_dir():
         error(f"prototype directory must exist: {PROTO_REL}/")
         return False
-    if not INDEX_PATH.is_file():
-        error("index.html must exist")
+    files = {p.name for p in PROTO_DIR.iterdir() if p.is_file()}
+    if files != ALLOWED_FILES:
+        error(f"prototype directory must contain only {sorted(ALLOWED_FILES)}")
         ok = False
-    if not CSS_PATH.is_file():
-        error("prototype.css must exist")
-        ok = False
-
-    extra = [
-        p for p in PROTO_DIR.iterdir()
-        if p.is_file() and p.name not in {"index.html", "prototype.css"}
-    ]
-    if extra:
-        error(f"unexpected files in prototype directory: {[p.name for p in extra]}")
-        ok = False
-
     if not INDEX_PATH.is_file():
         return ok
 
@@ -358,9 +342,8 @@ def validate_prototype_files() -> bool:
         error("index.html must link to prototype.css with relative link")
         ok = False
 
-    h1_count = len(re.findall(r"<h1\b", html, re.I))
-    if h1_count != 1:
-        error(f"index.html: expected exactly one H1, found {h1_count}")
+    if len(re.findall(r"<h1\b", html, re.I)) != 1:
+        error("index.html: expected exactly one H1")
         ok = False
     if "Evidence Posture Workbench — Static Prototype" not in html:
         error("index.html: missing required H1 text")
@@ -370,48 +353,43 @@ def validate_prototype_files() -> bool:
         if stmt not in html:
             error("index.html: missing required statement")
             ok = False
-
     for zone in REQUIRED_ZONES:
         if zone not in html:
             error(f"index.html: missing zone {zone}")
             ok = False
-
     for concept in REQUIRED_CONCEPTS:
         if concept not in html:
             error(f"index.html: missing concept {concept}")
+            ok = False
+    for marker in STRENGTHENED_HTML_MARKERS:
+        if marker not in html_lower:
+            error(f"index.html: missing strengthened language: {marker}")
             ok = False
 
     for pattern, label in PROHIBITED_HTML_PATTERNS:
         if re.search(pattern, html, re.I):
             error(f"index.html: prohibited {label}")
             ok = False
-
     for pattern in PROHIBITED_CONTENT:
         for match in re.finditer(pattern, html_lower):
             start = max(0, match.start() - 80)
-            context = html_lower[start:match.start()]
-            if not NEGATION_CONTEXT.search(context):
+            if not NEGATION_CONTEXT.search(html_lower[start:match.start()]):
                 error(f"index.html: prohibited content pattern {pattern}")
                 ok = False
                 break
-
     for m in re.finditer(r"\bscore(?:ing|s)?\b", html_lower):
         start = max(0, m.start() - 80)
-        context = html_lower[start:m.start()]
-        if not NEGATION_CONTEXT.search(context):
+        if not NEGATION_CONTEXT.search(html_lower[start:m.start()]):
             error("index.html: prohibited scoring language outside negation")
             ok = False
             break
-
-    for term in ["detector", "scanner", "api", "analytics", "storage", "network"]:
+    for term in ["detector", "scanner", "api", "analytics", "storage", "network", "classify", "detect", "scan"]:
         for m in re.finditer(rf"\b{term}\b", html_lower):
             start = max(0, m.start() - 80)
-            context = html_lower[start:m.start()]
-            if not NEGATION_CONTEXT.search(context):
+            if not NEGATION_CONTEXT.search(html_lower[start:m.start()]):
                 error(f"index.html: prohibited {term} language outside negation")
                 ok = False
                 break
-
     return ok
 
 
@@ -429,27 +407,28 @@ def validate_prototype_css() -> bool:
         error("prototype.css: external URL dependencies not allowed")
         ok = False
 
-    forbidden_classes = [
-        "detector-dashboard", "upload-dropzone", "score-gauge",
-        "fake-real", "verdict-green", "verdict-red", "saas-dashboard", "scanner",
-    ]
-    for cls in forbidden_classes:
-        if cls in css_lower:
-            error(f"prototype.css: forbidden styling pattern {cls}")
+    for cls in STRENGTHENED_CSS_CLASSES:
+        if cls not in css_lower:
+            error(f"prototype.css: missing strengthened class {cls}")
             ok = False
 
-    required_concepts = [
-        "evidence-field", "chamber", "boundary", "provenance", "output-envelope",
-    ]
-    for concept in required_concepts:
+    for concept in ["evidence-field", "chamber", "boundary", "provenance", "output-envelope"]:
         if concept.replace("-", "") not in css_lower.replace("-", ""):
             error(f"prototype.css: missing concept {concept}")
+            ok = False
+
+    forbidden = [
+        "detector-dashboard", "upload-dropzone", "score-gauge", "fake-real",
+        "verdict-green", "verdict-red", "saas-dashboard", "scanner",
+    ]
+    for cls in forbidden:
+        if cls in css_lower:
+            error(f"prototype.css: forbidden styling pattern {cls}")
             ok = False
 
     if "@media" not in css_lower:
         error("prototype.css: responsive/mobile rules required")
         ok = False
-
     return ok
 
 
@@ -459,10 +438,9 @@ def validate_public_safety() -> bool:
     if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
         ok = False
 
-    proto_rel = PROTO_REL.lower()
     for route in routes:
         path = route.get("path", "").lower()
-        if "internal_prototypes" in path or proto_rel in path:
+        if "internal_prototypes" in path or PROTO_REL.lower() in path:
             error("route-registry: prototype must not be registered as public route")
             ok = False
 
@@ -481,14 +459,12 @@ def validate_public_safety() -> bool:
         error(f"sitemap.xml parse failed: {exc}")
         ok = False
 
-    public_html_files = [
-        ROOT / "index.html",
-        ROOT / "language" / "index.html",
+    link_pattern = re.compile(r"internal_prototypes|evidence-posture-workbench", re.I)
+    for path in [
+        ROOT / "index.html", ROOT / "language" / "index.html",
         ROOT / "reference" / "evidence-posture" / "index.html",
         ROOT / "reference" / "artifact-subject-separation" / "index.html",
-    ]
-    link_pattern = re.compile(r"internal_prototypes|evidence-posture-workbench", re.I)
-    for path in public_html_files:
+    ]:
         if path.is_file() and link_pattern.search(path.read_text(encoding="utf-8")):
             error(f"{path.relative_to(ROOT)}: must not link to prototype")
             ok = False
@@ -496,64 +472,53 @@ def validate_public_safety() -> bool:
     if (ROOT / ".nojekyll").exists():
         error(".nojekyll must not exist")
         ok = False
-
     return ok
 
 
 def validate_publisher_governance() -> bool:
     ok = True
     pub = load_json(ROOT / "data" / "publisher-governance-policy.json")
-    if pub.get("current_publisher_status") not in (
-        PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT,
-        PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT_VALIDATION,
-    PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_HARDENING,
-    ):
-        error(
-            f"publisher status must be {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT} "
-            f"or {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_PROTOTYPE_REFINEMENT_VALIDATION}"
-        )
+    if pub.get("current_publisher_status") != PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_HARDENING:
+        error(f"publisher status must be {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_HARDENING}")
         ok = False
 
     gates = load_json(ROOT / "data" / "publisher-quality-gates.json").get("gates", [])
     gate = next(
-        (g for g in gates if g.get("name") == "Non-Public Static Workbench Prototype Validation Gate"),
+        (g for g in gates if g.get("name") == "Non-Public Static Workbench Prototype Refinement Validation Gate"),
         None,
     )
     if not gate:
-        error("Non-Public Static Workbench Prototype Validation Gate missing")
+        error("Non-Public Static Workbench Prototype Refinement Validation Gate missing")
         ok = False
     else:
         for field in [
-            "required_before_non_public_static_workbench_prototype_refinement",
+            "required_before_non_public_static_workbench_visual_system_hardening",
             "required_before_any_interface_prototype_expansion",
             "required_before_engine_governance",
         ]:
             if gate.get(field) is not True:
-                error(f"validation gate: {field} must be true")
+                error(f"refinement validation gate: {field} must be true")
                 ok = False
         if gate.get("bypassable") is True:
-            error("validation gate must not be bypassable")
+            error("refinement validation gate must not be bypassable")
             ok = False
         notes = gate.get("notes", "").lower()
         if "not authorize" not in notes and "does not authorize" not in notes:
-            error("validation gate notes must state non-authorization")
+            error("refinement validation gate notes must state non-authorization")
             ok = False
 
     expansion = load_json(ROOT / "data" / "reference-expansion-gate.json")
     checks = " ".join(expansion.get("required_pre_release_checks", [])).lower()
-    if "non_public_static_workbench_prototype_validation" not in checks:
-        error("reference-expansion-gate: prototype validation required")
+    if "non_public_static_workbench_prototype_refinement_validation" not in checks:
+        error("reference-expansion-gate: refinement validation required")
         ok = False
     rules = " ".join(expansion.get("release_eligibility_rules", [])).lower()
-    if "no_public_engine_eligibility_by_prototype_validation_alone" not in rules:
-        error("reference-expansion-gate: must block public engine eligibility by prototype validation alone")
+    if "no_public_engine_eligibility_by_refinement_validation_alone" not in rules:
+        error("reference-expansion-gate: must block public engine eligibility by refinement validation alone")
         ok = False
     blocked = expansion.get("blocked_conditions", [])
-    if "publisher_blocked_until_non_public_static_workbench_prototype_refinement" not in blocked:
-        error("reference-expansion-gate: publisher blocked until prototype refinement")
-        ok = False
-    if "publisher_blocked_until_non_public_static_workbench_prototype_refinement_validation" not in blocked:
-        error("reference-expansion-gate: publisher blocked until prototype refinement validation")
+    if "publisher_blocked_until_non_public_static_workbench_visual_system_hardening" not in blocked:
+        error("reference-expansion-gate: publisher blocked until visual system hardening")
         ok = False
     return ok
 
@@ -571,35 +536,32 @@ def validate_source_registry() -> bool:
 def validate_cross_file() -> bool:
     ok = True
     content = (ROOT / "validators" / "validate_all.py").read_text(encoding="utf-8")
-    if "validate_non_public_static_workbench_prototype_validation.py" not in content:
-        error("validate_all.py must include prototype validation validator")
+    if "validate_non_public_static_workbench_prototype_refinement_validation.py" not in content:
+        error("validate_all.py must include refinement validation validator")
         ok = False
-    doc = (ROOT / "NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_VALIDATION_V1.md").read_text(encoding="utf-8")
-    if "A prototype must be validated as non-operational before it can be refined." not in doc:
-        error("validation doc: missing governing principle")
+    doc = (ROOT / "NON_PUBLIC_STATIC_WORKBENCH_PROTOTYPE_REFINEMENT_VALIDATION_V1.md").read_text(encoding="utf-8")
+    if "A refinement must be validated before it becomes the new prototype baseline." not in doc:
+        error("refinement validation doc: missing governing principle")
         ok = False
-    if "A Hoax.ai prototype must prove its conceptual identity before it earns visual expansion." not in doc:
-        error("validation doc: missing identity principle")
-        ok = False
-    if "DEC-053" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
-        error("DECISION_LOG.md: DEC-053 missing")
+    if "DEC-055" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
+        error("DECISION_LOG.md: DEC-055 missing")
         ok = False
     return ok
 
 
 def main() -> int:
     parse_paths = [
-        "data/non-public-static-workbench-prototype-validation-policy.json",
-        "data/non-public-static-workbench-prototype-validation-results-v1.json",
-        "data/non-public-static-workbench-prototype-visual-identity-validation-v1.json",
-        "data/non-public-static-workbench-prototype-public-isolation-audit-v1.json",
-        "data/non-public-static-workbench-prototype-static-safety-audit-v1.json",
-        "data/non-public-static-workbench-prototype-v1-policy.json",
+        "data/non-public-static-workbench-prototype-refinement-validation-policy.json",
+        "data/non-public-static-workbench-prototype-refinement-validation-results-v1.json",
+        "data/non-public-static-workbench-prototype-refinement-visual-identity-validation-v1.json",
+        "data/non-public-static-workbench-prototype-refinement-public-isolation-audit-v1.json",
+        "data/non-public-static-workbench-prototype-refinement-static-safety-audit-v1.json",
+        "data/non-public-static-workbench-prototype-refinement-policy.json",
+        "data/non-public-static-workbench-prototype-refinement-plan-v1.json",
+        "data/non-public-static-workbench-prototype-refinement-changelog-v1.json",
+        "data/non-public-static-workbench-prototype-refinement-boundary-audit-v1.json",
         "data/non-public-static-workbench-prototype-v1-manifest.json",
         "data/non-public-static-workbench-prototype-v1-surface-map.json",
-        "data/non-public-static-workbench-prototype-v1-static-content-contract.json",
-        "data/non-public-static-workbench-prototype-v1-boundary-audit.json",
-        "data/non-public-static-workbench-prototype-governance-v1.json",
         "data/publisher-governance-policy.json",
         "data/publisher-quality-gates.json",
         "data/reference-expansion-gate.json",
@@ -612,18 +574,15 @@ def main() -> int:
             error(f"{rel} parse failed: {exc}")
             return 1
 
-    read_paths = [
-        "sitemap.xml",
-        "index.html",
+    for rel in [
+        "sitemap.xml", "index.html",
         "reference/evidence-posture/index.html",
         "reference/artifact-subject-separation/index.html",
         "language/index.html",
         "_internal_prototypes/evidence-posture-workbench/index.html",
         "_internal_prototypes/evidence-posture-workbench/prototype.css",
-    ]
-    for rel in read_paths:
-        path = ROOT / rel
-        if not path.is_file():
+    ]:
+        if not (ROOT / rel).is_file():
             error(f"{rel} must exist and be readable")
             return 1
 
@@ -634,23 +593,12 @@ def main() -> int:
         return 1
 
     checks = [
-        validate_policy,
-        validate_results,
-        validate_visual_identity,
-        validate_isolation_audit,
-        validate_static_audit,
-        validate_prototype_files,
-        validate_prototype_css,
-        validate_public_safety,
-        validate_publisher_governance,
-        validate_source_registry,
-        validate_cross_file,
+        validate_policy, validate_results, validate_visual_identity,
+        validate_isolation_audit, validate_static_audit, validate_prototype_files,
+        validate_prototype_css, validate_public_safety, validate_publisher_governance,
+        validate_source_registry, validate_cross_file,
     ]
-    ok = True
-    for fn in checks:
-        if not fn():
-            ok = False
-
+    ok = all(fn() for fn in checks)
     if ok:
         print("PASS")
         return 0
