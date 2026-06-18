@@ -652,8 +652,16 @@ def validate_registries() -> bool:
 def validate_publisher_and_gates() -> bool:
     ok = True
     pub = load_json(ROOT / "data" / "publisher-governance-policy.json")
-    if pub.get("current_publisher_status") != PUBLISHER_STATUS:
-        error(f"publisher-governance-policy: current_publisher_status must be {PUBLISHER_STATUS}")
+    status = pub.get("current_publisher_status", "")
+    if status not in (
+        "blocked_until_public_route_readiness_gate",
+        "blocked_until_first_controlled_public_reference_pilot",
+    ):
+        error(
+            f"publisher-governance-policy: current_publisher_status must be "
+            f"blocked_until_public_route_readiness_gate or "
+            f"blocked_until_first_controlled_public_reference_pilot, got {status}"
+        )
         ok = False
 
     gates = load_json(ROOT / "data" / "publisher-quality-gates.json").get("gates", [])

@@ -1302,6 +1302,66 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Internal draft review validator."
+    },
+    {
+      "source_id": "SOURCE-0131",
+      "source_title": "PUBLIC_ROUTE_READINESS_GATE.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_ROUTE_READINESS_GATE.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Human-readable public route readiness gate per DEC-041."
+    },
+    {
+      "source_id": "SOURCE-0132",
+      "source_title": "data/public-route-readiness-policy.json",
+      "source_type": "internal_registry",
+      "location": "data/public-route-readiness-policy.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Machine-readable public route readiness policy."
+    },
+    {
+      "source_id": "SOURCE-0133",
+      "source_title": "data/public-route-readiness-criteria.json",
+      "source_type": "internal_registry",
+      "location": "data/public-route-readiness-criteria.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public route readiness criteria set."
+    },
+    {
+      "source_id": "SOURCE-0134",
+      "source_title": "data/public-route-readiness-v1.json",
+      "source_type": "internal_registry",
+      "location": "data/public-route-readiness-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "First public route readiness results."
+    },
+    {
+      "source_id": "SOURCE-0135",
+      "source_title": "data/public-route-candidate-registry.json",
+      "source_type": "internal_registry",
+      "location": "data/public-route-candidate-registry.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Inactive public route candidate registry."
+    },
+    {
+      "source_id": "SOURCE-0136",
+      "source_title": "validators/validate_public_route_readiness_gate.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_route_readiness_gate.py",
+      "supports": ["operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public route readiness gate validator."
     }
   ]
 }

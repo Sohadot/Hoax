@@ -1005,3 +1005,25 @@ Internal drafts should not move toward public release merely because they exist.
 - No new internal drafts may be created in Sprint 22.
 - Internal drafts do not authorize public pages, routes, sitemap expansion, public metadata, public navigation, publication, or deployment.
 - Future work may create a Public Route Readiness Gate only after review/refinement passes.
+
+---
+
+## DEC-041 — Public Route Readiness Gate v1 Adopted
+
+**Date:** 2026-06-17
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Route Readiness Gate v1 to determine whether reviewed internal drafts are eligible for a future controlled public reference pilot, without creating public pages, routes, sitemap entries, public metadata, public navigation links, publication eligibility, or deployment authorization.
+
+### Rationale
+
+Reviewed internal drafts should not become public routes automatically. A separate route readiness gate is required to confirm boundary integrity, claim/source discipline, semantic SEO restraint, route-path safety, public-surface safety, structured data boundaries, and non-authorization language before any later sprint may convert internal drafts into public reference pages.
+
+### Implications
+
+- Public route readiness records may be created.
+- Future route candidate records may be created as inactive candidate paths only.
+- No route, page, sitemap entry, public metadata, navigation link, publication, or deployment is authorized.
+- Future work may create a controlled public reference pilot only after this gate passes and a later explicit sprint authorizes conversion.

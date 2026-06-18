@@ -531,10 +531,12 @@ def validate_publisher_and_gates() -> bool:
         "blocked_until_first_internal_draft_pack",
         "blocked_until_internal_draft_review_and_refinement",
         "blocked_until_public_route_readiness_gate",
+        "blocked_until_first_controlled_public_reference_pilot",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "
-            f"blocked_until_first_internal_draft_pack, blocked_until_internal_draft_review_and_refinement, or blocked_until_public_route_readiness_gate, got {status}"
+            f"blocked_until_first_internal_draft_pack, blocked_until_internal_draft_review_and_refinement, "
+            f"blocked_until_public_route_readiness_gate, or blocked_until_first_controlled_public_reference_pilot, got {status}"
         )
         ok = False
 

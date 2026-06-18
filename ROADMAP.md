@@ -1066,9 +1066,55 @@ External deployment remains deferred (Sprint 1C). Maturity is internal_review_on
 
 ### Next Phase
 
-**Sprint 23 — Public Route Readiness Gate v1**
+**Sprint 24 — First Controlled Public Reference Pilot v1**
 
-Public classifier remains blocked. External deployment remains blocked. Public page conversion remains blocked until a later explicit controlled public reference pilot.
+Public classifier remains blocked. External deployment remains separately governed. Public page conversion remains blocked until Sprint 24 explicitly creates controlled public reference pages.
+
+---
+
+## Sprint 23 — Public Route Readiness Gate v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Determine whether two reviewed internal drafts are structurally eligible for a future controlled public reference pilot without creating routes, pages, sitemap entries, or publication rights.
+
+### Deliverables
+
+- PUBLIC_ROUTE_READINESS_GATE.md
+- data/public-route-readiness-policy.json
+- data/public-route-readiness-criteria.json
+- data/public-route-readiness-v1.json
+- data/public-route-candidate-registry.json
+- validators/validate_public_route_readiness_gate.py
+- SPRINT_23_PUBLIC_ROUTE_READINESS_GATE_AUDIT.md
+- DEC-041 appended to DECISION_LOG.md
+- Registry updates for DRAFT-0001, DRAFT-0002, REF-CAND-0001, REF-CAND-0002
+- data/publisher-governance-policy.json updated (blocked_until_first_controlled_public_reference_pilot)
+- data/publisher-quality-gates.json updated (PUB-GATE-0023)
+- data/reference-expansion-gate.json updated
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Readiness Scope
+
+- 2 readiness records (ROUTE-READINESS-0001, ROUTE-READINESS-0002)
+- 2 inactive route candidates (PUBLIC-ROUTE-CAND-0001, PUBLIC-ROUTE-CAND-0002)
+- Proposed inactive paths: /reference/evidence-posture/, /reference/artifact-subject-separation/
+- Readiness outcomes: route_readiness_passed_with_conditions for both
+- 29 evidence ledger claims (CLAIM-0029 added)
+- No public pages, routes, sitemap expansion, public metadata, or navigation links
+
+### Gate
+
+External deployment remains separately governed (Sprint 1C). Maturity is readiness_gate_only_no_routes_no_sitemap_no_publication.
+
+### Next Phase
+
+**Sprint 24 — First Controlled Public Reference Pilot v1**
+
+Public classifier remains blocked. External deployment remains separately governed. Public page conversion remains blocked until Sprint 24 explicitly creates controlled public reference pages.
 
 ---
 

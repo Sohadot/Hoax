@@ -1,0 +1,49 @@
+{
+  "registry_id": "PUB-ROUTE-CAND-REGISTRY-001",
+  "name": "Hoax.ai Public Route Candidate Registry",
+  "version": "v1.0.0",
+  "status": "governed_public_route_candidate_registry",
+  "maturity": "readiness_gate_only_no_routes_no_sitemap_no_publication",
+  "readiness_gate_source": "data/public-route-readiness-v1.json",
+  "route_candidates": [
+    {
+      "route_candidate_id": "PUBLIC-ROUTE-CAND-0001",
+      "readiness_record_id": "ROUTE-READINESS-0001",
+      "draft_id": "DRAFT-0001",
+      "candidate_id": "REF-CAND-0001",
+      "blueprint_id": "DRAFT-BLUEPRINT-0001",
+      "proposed_route_path": "/reference/evidence-posture/",
+      "proposed_route_status": "inactive_candidate_path",
+      "route_status": "not_route_created",
+      "sitemap_status": "not_sitemap_eligible",
+      "publication_status": "publication_blocked",
+      "public_metadata_status": "not_created",
+      "public_navigation_status": "not_linked",
+      "deployment_status": "not_deployed",
+      "conversion_status": "eligible_for_controlled_public_reference_pilot_only_after_explicit_sprint",
+      "conversion_allowed_next_phase": "Sprint 24 — First Controlled Public Reference Pilot v1",
+      "non_authorization_statement": "This inactive route candidate does not authorize routes, sitemap, public metadata, public navigation, publication, or deployment.",
+      "notes": "Evidence Posture inactive public route candidate."
+    },
+    {
+      "route_candidate_id": "PUBLIC-ROUTE-CAND-0002",
+      "readiness_record_id": "ROUTE-READINESS-0002",
+      "draft_id": "DRAFT-0002",
+      "candidate_id": "REF-CAND-0002",
+      "blueprint_id": "DRAFT-BLUEPRINT-0002",
+      "proposed_route_path": "/reference/artifact-subject-separation/",
+      "proposed_route_status": "inactive_candidate_path",
+      "route_status": "not_route_created",
+      "sitemap_status": "not_sitemap_eligible",
+      "publication_status": "publication_blocked",
+      "public_metadata_status": "not_created",
+      "public_navigation_status": "not_linked",
+      "deployment_status": "not_deployed",
+      "conversion_status": "eligible_for_controlled_public_reference_pilot_only_after_explicit_sprint",
+      "conversion_allowed_next_phase": "Sprint 24 — First Controlled Public Reference Pilot v1",
+      "non_authorization_statement": "This inactive route candidate does not authorize routes, sitemap, public metadata, public navigation, publication, or deployment.",
+      "notes": "Artifact–Subject Separation inactive public route candidate."
+    }
+  ],
+  "last_reviewed": "2026-06-17"
+}

@@ -34,6 +34,7 @@ GOVERNANCE_FILES = [
     "FIRST_INTERNAL_DRAFT_BLUEPRINT_PACK.md",
     "FIRST_INTERNAL_DRAFT_PACK.md",
     "INTERNAL_DRAFT_REVIEW_AND_REFINEMENT.md",
+    "PUBLIC_ROUTE_READINESS_GATE.md",
     "INTERNAL_ENGINE_MODEL.md",
     "OUTPUT_BOUNDARY_SCHEMA.md",
     "EVIDENCE_POSTURE_CLASSIFICATION_PROTOCOL.md",
@@ -119,6 +120,10 @@ DATA_FILES = [
     "data/internal-draft-review-criteria.json",
     "data/internal-draft-review-v1.json",
     "data/internal-draft-refinement-log.json",
+    "data/public-route-readiness-policy.json",
+    "data/public-route-readiness-criteria.json",
+    "data/public-route-readiness-v1.json",
+    "data/public-route-candidate-registry.json",
 ]
 
 VALIDATORS = [
@@ -142,6 +147,7 @@ VALIDATORS = [
     "validators/validate_internal_draft_blueprint_pack.py",
     "validators/validate_internal_draft_pack.py",
     "validators/validate_internal_draft_review.py",
+    "validators/validate_public_route_readiness_gate.py",
     "validators/generate_build_manifest.py",
 ]
 

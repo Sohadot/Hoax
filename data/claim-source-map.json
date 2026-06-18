@@ -312,6 +312,17 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Internal draft review and refinement adoption per DEC-040."
+    },
+    {
+      "claim_id": "CLAIM-0029",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["PUBLIC_ROUTE_READINESS_GATE.md", "DECISION_LOG.md", "data/public-route-readiness-v1.json"],
+      "source_refs": ["SOURCE-0131", "SOURCE-0132", "SOURCE-0134", "SOURCE-0136"],
+      "support_scope": "public route readiness gate adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public route readiness gate adoption per DEC-041."
     }
   ],
   "last_reviewed": "2026-06-17"

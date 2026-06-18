@@ -1611,6 +1611,10 @@ def validate_json_files() -> bool:
         "data/internal-draft-review-criteria.json",
         "data/internal-draft-review-v1.json",
         "data/internal-draft-refinement-log.json",
+        "data/public-route-readiness-policy.json",
+        "data/public-route-readiness-criteria.json",
+        "data/public-route-readiness-v1.json",
+        "data/public-route-candidate-registry.json",
     ]:
         path = ROOT / rel
         try:

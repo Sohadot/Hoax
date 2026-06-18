@@ -61,12 +61,13 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G20 | First Internal Draft Blueprint Pack | Sprint 20 validator PASS |
 | G21 | First Internal Draft Pack | Sprint 21 validator PASS |
 | G22 | Internal Draft Review and Refinement | Sprint 22 validator PASS |
+| G23 | Public Route Readiness Gate | Sprint 23 validator PASS |
 
-**Gate G22 passed.** Sprint 23 (Public Route Readiness Gate) may proceed when authorized. Public classifier and tool remain blocked. Publisher remains blocked from publication, routes, sitemap, and public metadata until public route readiness gate and explicit future approval. External deployment remains deferred until deployment gates pass.
+**Gate G23 passed.** Sprint 24 (First Controlled Public Reference Pilot) may proceed when authorized. Public classifier and tool remain blocked. Publisher remains blocked from publication, routes, sitemap, and public metadata until controlled public reference pilot and explicit future approval. External deployment remains separately governed.
 
 ### Foundation Gates vs Deployment Gates
 
-Foundation gates (G0–G22) govern category infrastructure, reference governance, and expansion readiness. They must pass before reference layer scale.
+Foundation gates (G0–G23) govern category infrastructure, reference governance, and expansion readiness. They must pass before reference layer scale.
 
 Deployment gates are **separate** and **not current foundation steps**. They open only after reference expansion governance is in place. None are passed.
 
@@ -190,7 +191,8 @@ Classifier, API, and workflow tools require protocol and standard completion fir
 | Sprint 20 | COMPLETE | G20 passed |
 | Sprint 21 | COMPLETE | G21 passed |
 | Sprint 22 | COMPLETE | G22 passed |
-| Sprint 23+ | READY | G22 passed — Public Route Readiness Gate pending; publisher blocked from publication; deployment gates not passed |
+| Sprint 23 | COMPLETE | G23 passed |
+| Sprint 24+ | READY | G23 passed — First Controlled Public Reference Pilot pending; publisher blocked from publication; deployment gates separately governed |
 
 ## Governing Sentence
 
