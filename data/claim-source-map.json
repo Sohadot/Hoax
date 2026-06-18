@@ -378,6 +378,17 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Evidence Posture Workbench Governance adoption per DEC-046."
+    },
+    {
+      "claim_id": "CLAIM-0035",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["EVIDENCE_POSTURE_WORKBENCH_DRY_RUN_HARNESS.md", "DECISION_LOG.md", "data/evidence-posture-workbench-dry-run-policy.json"],
+      "source_refs": ["SOURCE-0168", "SOURCE-0169", "SOURCE-0170", "SOURCE-0171", "SOURCE-0172", "SOURCE-0173"],
+      "support_scope": "evidence posture workbench dry-run harness adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Evidence Posture Workbench Dry-Run Harness adoption per DEC-047."
     }
   ],
   "last_reviewed": "2026-06-17"

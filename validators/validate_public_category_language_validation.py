@@ -19,6 +19,7 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
     PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE,
     PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN,
+    PUBLISHER_STATUS_POST_WORKBENCH_SPECIFICATION,
     validate_no_extra_public_html,
     validate_public_surface,
 )
@@ -505,10 +506,12 @@ def validate_publisher_governance() -> bool:
     if pub.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE,
         PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN,
+        PUBLISHER_STATUS_POST_WORKBENCH_SPECIFICATION,
     ):
         error(
-            f"publisher status must be {PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE} "
-            f"or {PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN}"
+            f"publisher status must be {PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE}, "
+            f"{PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN}, or "
+            f"{PUBLISHER_STATUS_POST_WORKBENCH_SPECIFICATION}"
         )
         ok = False
 

@@ -15,6 +15,7 @@ from public_surface_checks import (
     PUBLIC_ROUTE_IDS,
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN,
+    PUBLISHER_STATUS_POST_WORKBENCH_SPECIFICATION,
     validate_no_extra_public_html,
     validate_public_surface,
 )
@@ -333,9 +334,10 @@ def validate_non_authorization_rules() -> bool:
             error(f"non-authorization: blocked capability missing {cap}")
             ok = False
     next_phase = data.get("allowed_next_phase", "")
-    if "Sprint 29" not in next_phase or "Dry-Run Harness" not in next_phase:
-        error("non-authorization: allowed_next_phase must be Sprint 29 Dry-Run Harness")
-        ok = False
+    if "Sprint 30" not in next_phase or "Specification Layer" not in next_phase:
+        if "Sprint 29" not in next_phase or "Dry-Run Harness" not in next_phase:
+            error("non-authorization: allowed_next_phase must reference Sprint 30 Specification Layer or prior Sprint 29 Dry-Run Harness")
+            ok = False
     return ok
 
 
@@ -368,8 +370,10 @@ def validate_public_safety() -> bool:
 def validate_publisher_governance() -> bool:
     ok = True
     pub = load_json(ROOT / "data" / "publisher-governance-policy.json")
-    if pub.get("current_publisher_status") != PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN:
-        error(f"publisher status must be {PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN}")
+    status = pub.get("current_publisher_status")
+    allowed = {PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN, PUBLISHER_STATUS_POST_WORKBENCH_SPECIFICATION}
+    if status not in allowed:
+        error(f"publisher status must be one of {sorted(allowed)}")
         ok = False
 
     gates = load_json(ROOT / "data" / "publisher-quality-gates.json").get("gates", [])

@@ -3,7 +3,7 @@
   "name": "Hoax.ai Publisher Quality Gates",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "publisher_blocked_until_evidence_posture_workbench_dry_run_harness",
+  "maturity": "publisher_blocked_until_workbench_specification_layer",
   "gates": [
     {
       "gate_id": "PUB-GATE-0001",
@@ -321,6 +321,21 @@
       "failure_condition": "evidence_posture_workbench_governance_not_met",
       "bypassable": false,
       "notes": "Workbench governance defined Sprint 28 (DEC-046). Defines input, output, state, and refusal models without authorizing interface, prototype, engine, classifier, tool, upload, scoring, API, forms, analytics, routes, sitemap, deployment, DNS, Cloudflare, custom domain launch, or monetization by itself."
+    },
+    {
+      "gate_id": "PUB-GATE-0029",
+      "name": "Evidence Posture Workbench Dry-Run Harness Gate",
+      "status": "workbench_dry_run_complete_pre_specification_layer",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_workbench_specification": true,
+      "required_before_workbench_prototype": true,
+      "validation_source": "EVIDENCE_POSTURE_WORKBENCH_DRY_RUN_HARNESS.md",
+      "failure_condition": "evidence_posture_workbench_dry_run_not_met",
+      "bypassable": false,
+      "notes": "Workbench dry-run harness defined Sprint 29 (DEC-047). Tests governance behavior with fictional cases without authorizing interface, prototype, engine, classifier, tool, upload, scoring, API, forms, analytics, routes, sitemap, deployment, DNS, Cloudflare, custom domain launch, or monetization by itself."
     }
   ],
   "last_reviewed": "2026-06-17"

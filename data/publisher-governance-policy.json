@@ -3,10 +3,10 @@
   "name": "Hoax.ai Publisher Governance Policy",
   "version": "v1.0.0",
   "status": "governed_internal_publisher_policy",
-  "maturity": "publisher_blocked_until_evidence_posture_workbench_dry_run_harness",
+  "maturity": "publisher_blocked_until_workbench_specification_layer",
   "governing_principle": "Automation may produce candidates. Governance decides what becomes public.",
   "quality_principle": "The publisher must not generate volume. It must generate governed reference value.",
-  "current_publisher_status": "blocked_until_evidence_posture_workbench_dry_run_harness",
+  "current_publisher_status": "blocked_until_workbench_specification_layer",
   "allowed_current_outputs": [
     "publisher_governance_policy",
     "publisher_workflow_registry",
@@ -69,7 +69,12 @@
     "evidence_posture_workbench_output_boundary",
     "evidence_posture_workbench_state_model",
     "evidence_posture_workbench_refusal_model",
-    "evidence_posture_workbench_non_authorization_rules"
+    "evidence_posture_workbench_non_authorization_rules",
+    "evidence_posture_workbench_dry_run_harness",
+    "evidence_posture_workbench_dry_run_policy",
+    "evidence_posture_workbench_dry_run_cases",
+    "evidence_posture_workbench_dry_run_expected_results",
+    "evidence_posture_workbench_dry_run_results"
   ],
   "prohibited_current_outputs": [
     "broader_public_pages",

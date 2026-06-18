@@ -40,7 +40,7 @@
     "scoring_available",
     "public_tool_available"
   ],
-  "allowed_next_phase": "Sprint 29 — Evidence Posture Workbench Dry-Run Harness v1",
+  "allowed_next_phase": "Sprint 30 — Evidence Posture Workbench Specification Layer v1",
   "non_authorization_statement": "Workbench governance does not authorize interface, prototype, engine, classifier, tool, upload, scoring, API, routes, sitemap expansion, deployment, DNS, Cloudflare, custom domain launch, or monetization.",
   "last_reviewed": "2026-06-17"
 }

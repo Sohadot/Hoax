@@ -1160,3 +1160,34 @@ Hoax.ai’s public language layer is now validated as Hoax-governed language, bu
 - No public tool may be created.
 - No routes or sitemap URLs may be added.
 - Future work may create a non-public workbench dry-run harness only after governance passes.
+
+---
+
+## DEC-047 — Evidence Posture Workbench Dry-Run Harness v1 Adopted
+
+**Date:** 2026-06-17
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Evidence Posture Workbench Dry-Run Harness v1 to test the workbench governance model through internal fictional dry-run cases before any workbench interface, prototype, public engine, classifier, upload workflow, scoring system, form, API, or public tool is created.
+
+### Rationale
+
+Workbench governance must prove it can refuse unsafe requests, preserve artifact-subject separation, route incomplete evidence into not-assessable states, prevent fake/real verdicts, prevent scoring, prevent subject accusation, and limit outputs to governed evidence-posture reasoning. A dry-run harness tests those governance behaviors without creating operational capability.
+
+### Implications
+
+- Internal dry-run cases may be created.
+- Expected governance outcomes may be created.
+- Dry-run validation results may be created.
+- The harness may test allowed output families, refusal families, state transitions, and non-authorization rules.
+- No workbench interface may be created.
+- No prototype may be created.
+- No engine may be implemented.
+- No classifier may be implemented.
+- No upload workflow may be created.
+- No scoring system may be created.
+- No public tool may be created.
+- No routes or sitemap URLs may be added.
+- Future work may create a non-public workbench specification only after dry-run validation passes.

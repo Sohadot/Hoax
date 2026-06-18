@@ -1253,6 +1253,49 @@ Public classifier remains blocked. Public engine remains blocked. No workbench p
 
 ---
 
+## Sprint 29 — Evidence Posture Workbench Dry-Run Harness v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Test workbench governance with internal fictional dry-run cases without building interface, engine, classifier, tool, upload, scoring, form, API, or prototype.
+
+### Deliverables
+
+- EVIDENCE_POSTURE_WORKBENCH_DRY_RUN_HARNESS.md
+- data/evidence-posture-workbench-dry-run-policy.json
+- data/evidence-posture-workbench-dry-run-cases.json
+- data/evidence-posture-workbench-dry-run-expected-results.json
+- data/evidence-posture-workbench-dry-run-results-v1.json
+- validators/validate_evidence_posture_workbench_dry_run.py
+- SPRINT_29_EVIDENCE_POSTURE_WORKBENCH_DRY_RUN_HARNESS_AUDIT.md
+- DEC-047 appended to DECISION_LOG.md
+- Publisher status → blocked_until_workbench_specification_layer
+- PUB-GATE-0029 added; reference expansion gate updated
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Dry-Run Scope
+
+- 12 fictional dry-run cases across allowed, not-assessable, refusal, and boundary families
+- Expected results and dry-run results v1 recorded
+- 35 evidence ledger claims (CLAIM-0035 added)
+- 4 sitemap URLs unchanged
+- No workbench interface, prototype, engine, classifier, tool, upload, scoring, forms, analytics, API, monetization, DNS, Cloudflare, custom domain launch, or .nojekyll
+
+### Gate
+
+**Gate G29 passed.** Workbench specification layer blocked until Sprint 30.
+
+### Next Phase
+
+**Sprint 30 — Evidence Posture Workbench Specification Layer v1**
+
+Public classifier remains blocked. Public engine remains blocked. No workbench prototype or interface may be created until specification governance passes.
+
+---
+
 ## Sprint 25 — Public Reference Validation and Live Surface Audit v1
 
 **Status:** COMPLETE — 2026-06-17  

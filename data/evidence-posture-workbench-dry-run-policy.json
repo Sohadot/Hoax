@@ -1,0 +1,85 @@
+{
+  "policy_id": "EP-WB-DRY-RUN-POLICY-001",
+  "name": "Hoax.ai Evidence Posture Workbench Dry-Run Policy",
+  "version": "v1.0.0",
+  "status": "governed_evidence_posture_workbench_dry_run_policy",
+  "maturity": "dry_run_only_no_workbench_no_engine_no_classifier_no_tool",
+  "governing_principle": "A dry-run harness tests governance behavior without becoming the behavior.",
+  "refusal_principle": "The workbench must learn to refuse before it learns to respond.",
+  "allowed_dry_run_actions": [
+    "fictional_case_creation",
+    "expected_governance_outcome_definition",
+    "dry_run_result_recording",
+    "state_refusal_output_boundary_testing",
+    "validation_only"
+  ],
+  "prohibited_actions": [
+    "interface_creation",
+    "prototype_creation",
+    "public_workbench",
+    "public_engine",
+    "public_classifier",
+    "public_tool",
+    "upload",
+    "scoring",
+    "fake_real_output",
+    "forms",
+    "analytics",
+    "api",
+    "monetization",
+    "new_routes",
+    "sitemap_expansion",
+    "dns",
+    "cloudflare",
+    "custom_domain_launch",
+    "external_factual_claims",
+    "subject_accusation",
+    "real_world_examples"
+  ],
+  "dry_run_scope": "Internal fictional governance behavior testing only. No operational workbench capability.",
+  "case_safety_policy": {
+    "all_cases_fictional": true,
+    "no_real_world_reference": true,
+    "no_real_people": true,
+    "no_real_companies": true,
+    "no_real_institutions": true,
+    "no_political_events": true,
+    "no_current_events": true,
+    "no_external_urls": true,
+    "no_upload_paths": true,
+    "no_media_files": true
+  },
+  "result_maturity_policy": {
+    "forbidden_result_terms": [
+      "engine_ready",
+      "public_engine_ready",
+      "classifier_ready",
+      "tool_ready",
+      "upload_ready",
+      "scoring_ready",
+      "production_ready",
+      "public_release_ready",
+      "impossible_to_imitate",
+      "final_language_complete"
+    ]
+  },
+  "non_authorization_rules": {
+    "blocked": [
+      "workbench_interface",
+      "workbench_prototype",
+      "workbench_engine",
+      "workbench_classifier",
+      "upload",
+      "scoring",
+      "api",
+      "new_public_routes",
+      "sitemap_expansion",
+      "deployment_change",
+      "dns",
+      "cloudflare",
+      "custom_domain_launch"
+    ],
+    "statement": "Dry-run harness does not authorize interface, prototype, engine, classifier, tool, upload, scoring, API, routes, sitemap, deployment, DNS, Cloudflare, custom domain launch, or monetization."
+  },
+  "last_reviewed": "2026-06-17"
+}
