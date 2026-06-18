@@ -472,6 +472,7 @@ def validate_state_machine() -> bool:
         "blocked_until_first_reference_candidate_pack",
         "blocked_until_internal_draft_blueprint",
         "blocked_until_first_internal_draft_blueprint_pack",
+        "blocked_until_first_internal_draft_pack",
     ):
         error(f"publisher-state-machine.json: invalid current_system_state {current}")
         ok = False
@@ -594,6 +595,7 @@ def validate_cross_file() -> bool:
         "blocked_until_first_reference_candidate_pack",
         "blocked_until_internal_draft_blueprint",
         "blocked_until_first_internal_draft_blueprint_pack",
+        "blocked_until_first_internal_draft_pack",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must remain blocked from publication, got {status}"

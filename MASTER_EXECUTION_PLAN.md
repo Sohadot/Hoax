@@ -58,12 +58,13 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G17 | First Reference Candidate Pack | Sprint 17 validator PASS |
 | G18 | Reference Candidate Evaluation and Prioritization | Sprint 18 validator PASS |
 | G19 | Internal Draft Blueprint Governance | Sprint 19 validator PASS |
+| G20 | First Internal Draft Blueprint Pack | Sprint 20 validator PASS |
 
-**Gate G19 passed.** Sprint 20 (First Internal Draft Blueprint Pack) may proceed when authorized. Public classifier and tool remain blocked. Publisher remains blocked from actual draft files and publication until future explicit approval. External deployment remains deferred until deployment gates pass.
+**Gate G20 passed.** Sprint 21 (First Internal Draft Pack) may proceed when authorized. Public classifier and tool remain blocked. Publisher remains blocked from actual draft files and publication until future explicit approval. External deployment remains deferred until deployment gates pass.
 
 ### Foundation Gates vs Deployment Gates
 
-Foundation gates (G0–G19) govern category infrastructure, reference governance, and expansion readiness. They must pass before reference layer scale.
+Foundation gates (G0–G20) govern category infrastructure, reference governance, and expansion readiness. They must pass before reference layer scale.
 
 Deployment gates are **separate** and **not current foundation steps**. They open only after reference expansion governance is in place. None are passed.
 
@@ -184,7 +185,8 @@ Classifier, API, and workflow tools require protocol and standard completion fir
 | Sprint 17 | COMPLETE | G17 passed |
 | Sprint 18 | COMPLETE | G18 passed |
 | Sprint 19 | COMPLETE | G19 passed |
-| Sprint 20+ | READY | G19 passed — First Internal Draft Blueprint Pack pending; publisher blocked from actual drafts and publication; deployment gates not passed |
+| Sprint 20 | COMPLETE | G20 passed |
+| Sprint 21+ | READY | G20 passed — First Internal Draft Pack pending; publisher blocked from actual drafts and publication; deployment gates not passed |
 
 ## Governing Sentence
 

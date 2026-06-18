@@ -424,10 +424,11 @@ def validate_publisher_and_gates() -> bool:
     if status not in (
         "blocked_until_internal_draft_blueprint",
         "blocked_until_first_internal_draft_blueprint_pack",
+        "blocked_until_first_internal_draft_pack",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "
-            f"blocked_until_internal_draft_blueprint or blocked_until_first_internal_draft_blueprint_pack, got {status}"
+            f"blocked_until_internal_draft_blueprint, blocked_until_first_internal_draft_blueprint_pack, or blocked_until_first_internal_draft_pack, got {status}"
         )
         ok = False
     prohibited = " ".join(pub.get("prohibited_current_outputs", [])).lower()

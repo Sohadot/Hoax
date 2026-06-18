@@ -397,6 +397,7 @@ def validate_cross_file_integration() -> bool:
         "blocked_until_first_reference_candidate_pack",
         "blocked_until_internal_draft_blueprint",
         "blocked_until_first_internal_draft_blueprint_pack",
+        "blocked_until_first_internal_draft_pack",
     ):
         error(f"publisher-governance-policy: publisher must remain blocked from drafts and publication, got {status}")
         ok = False

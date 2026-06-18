@@ -928,7 +928,51 @@ External deployment remains deferred (Sprint 1C). Maturity is blueprint_governan
 
 ### Next Phase
 
-**Sprint 20 — First Internal Draft Blueprint Pack v1**
+**Sprint 21 — First Internal Draft Pack v1**
+
+Public classifier remains blocked. External deployment remains blocked. Publisher remains blocked from publication until future explicit approval. Actual draft files remain blocked until Sprint 21 explicitly authorizes non-public internal drafts.
+
+---
+
+## Sprint 20 — First Internal Draft Blueprint Pack v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Create the first governed internal draft blueprint records for four selected evaluated candidates without creating draft prose, draft files, pages, routes, or sitemap entries.
+
+### Deliverables
+
+- FIRST_INTERNAL_DRAFT_BLUEPRINT_PACK.md
+- data/internal-draft-blueprint-pack-policy.json
+- data/internal-draft-blueprint-pack-v1.json
+- data/internal-draft-blueprint-registry.json
+- validators/validate_internal_draft_blueprint_pack.py
+- SPRINT_20_FIRST_INTERNAL_DRAFT_BLUEPRINT_PACK_AUDIT.md
+- DEC-038 appended to DECISION_LOG.md
+- data/reference-page-candidate-registry.json updated (blueprint references)
+- data/publisher-governance-policy.json updated (blocked_until_first_internal_draft_pack)
+- data/publisher-quality-gates.json updated (PUB-GATE-0020)
+- data/reference-expansion-gate.json updated
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Blueprint Pack Scope
+
+- 4 blueprint records (DRAFT-BLUEPRINT-0001–0004)
+- Selected: REF-CAND-0001, 0002, 0006, 0007
+- Excluded: REF-CAND-0008 (needs_boundary_refinement); 0003, 0004, 0005 deferred
+- 26 evidence ledger claims (CLAIM-0026 added)
+- No draft prose, draft files, public pages, routes, or sitemap expansion
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Maturity is blueprint_records_only_no_drafts_no_routes_no_publication.
+
+### Next Phase
+
+**Sprint 21 — First Internal Draft Pack v1**
 
 Public classifier remains blocked. External deployment remains blocked. Publisher remains blocked from actual draft files and publication until future explicit approval.
 

@@ -1122,6 +1122,56 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Internal draft blueprint governance validator."
+    },
+    {
+      "source_id": "SOURCE-0113",
+      "source_title": "FIRST_INTERNAL_DRAFT_BLUEPRINT_PACK.md",
+      "source_type": "internal_governance",
+      "location": "FIRST_INTERNAL_DRAFT_BLUEPRINT_PACK.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Human-readable first internal draft blueprint pack per DEC-038."
+    },
+    {
+      "source_id": "SOURCE-0114",
+      "source_title": "data/internal-draft-blueprint-pack-policy.json",
+      "source_type": "internal_registry",
+      "location": "data/internal-draft-blueprint-pack-policy.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Machine-readable blueprint pack policy."
+    },
+    {
+      "source_id": "SOURCE-0115",
+      "source_title": "data/internal-draft-blueprint-pack-v1.json",
+      "source_type": "internal_registry",
+      "location": "data/internal-draft-blueprint-pack-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "First internal draft blueprint pack records."
+    },
+    {
+      "source_id": "SOURCE-0116",
+      "source_title": "data/internal-draft-blueprint-registry.json",
+      "source_type": "internal_registry",
+      "location": "data/internal-draft-blueprint-registry.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Internal draft blueprint registry."
+    },
+    {
+      "source_id": "SOURCE-0117",
+      "source_title": "validators/validate_internal_draft_blueprint_pack.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_internal_draft_blueprint_pack.py",
+      "supports": ["operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Internal draft blueprint pack validator."
     }
   ]
 }

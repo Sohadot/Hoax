@@ -54,6 +54,7 @@ REQUIRED_STATES = [
     "candidate_pack_registered",
     "candidate_evaluation_complete",
     "internal_draft_blueprint_governance_defined",
+    "first_internal_draft_blueprint_pack_registered",
     "proposed_internal",
     "candidate_registered",
     "blueprint_checked",
@@ -71,7 +72,7 @@ REQUIRED_STATES = [
     "retired",
 ]
 
-REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 20)]
+REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 21)]
 
 REQUIRED_WORKFLOW_IDS = [f"PUB-WORKFLOW-{i:04d}" for i in range(1, 16)]
 
@@ -138,11 +139,11 @@ def validate_publisher_policy() -> bool:
     if data.get("status") != "governed_internal_publisher_policy":
         error("publisher-governance-policy.json: invalid status")
         ok = False
-    if data.get("maturity") != "publisher_blocked_until_first_internal_draft_blueprint_pack":
+    if data.get("maturity") != "publisher_blocked_until_first_internal_draft_pack":
         error("publisher-governance-policy.json: invalid maturity")
         ok = False
-    if data.get("current_publisher_status") != "blocked_until_first_internal_draft_blueprint_pack":
-        error("publisher-governance-policy.json: publisher must be blocked until first internal draft blueprint pack")
+    if data.get("current_publisher_status") != "blocked_until_first_internal_draft_pack":
+        error("publisher-governance-policy.json: publisher must be blocked until first internal draft pack")
         ok = False
 
     allowed = " ".join(data.get("allowed_current_outputs", [])).lower()
@@ -257,6 +258,7 @@ def validate_state_machine() -> bool:
         "blocked_until_internal_draft_blueprint_or_candidate_evaluation",
         "blocked_until_internal_draft_blueprint",
         "blocked_until_first_internal_draft_blueprint_pack",
+        "blocked_until_first_internal_draft_pack",
     ):
         error(f"publisher-state-machine.json: invalid current_system_state {current}")
         ok = False

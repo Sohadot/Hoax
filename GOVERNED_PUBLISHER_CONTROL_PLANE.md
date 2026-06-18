@@ -38,9 +38,9 @@ The publisher is a controlled pipeline that may later transform approved referen
 
 | Field | Value |
 |-------|-------|
-| current_status | blocked_until_first_internal_draft_blueprint_pack |
+| current_status | blocked_until_first_internal_draft_pack |
 
-**Reason:** Internal Draft Blueprint Governance (Sprint 19) defines draft structure and section contracts. Publisher remains blocked from actual draft files, public pages, routes, and publication until a future First Internal Draft Blueprint Pack and explicit approval.
+**Reason:** First Internal Draft Blueprint Pack (Sprint 20) registered four blueprint records. Publisher remains blocked from actual draft files, public pages, routes, and publication until a future First Internal Draft Pack and explicit approval.
 
 ## F. Publisher Workflow Stages
 

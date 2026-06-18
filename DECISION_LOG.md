@@ -933,3 +933,25 @@ A reference candidate should not move directly into prose. Before writing begins
 - No publisher draft output is authorized by this sprint alone.
 - Future work may create a First Internal Draft Blueprint Pack only after this governance passes.
 - Publisher remains blocked from actual drafts and publication.
+
+---
+
+## DEC-038 — First Internal Draft Blueprint Pack v1 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts First Internal Draft Blueprint Pack v1 to create the first governed internal draft blueprint records for selected evaluated reference candidates, without creating draft prose, draft files, public pages, routes, sitemap entries, public metadata, or publication rights.
+
+### Rationale
+
+Reference candidates should not move directly into writing. The first blueprint pack defines the structural contract that future drafts must satisfy: section contracts, claim boundaries, source scope, semantic SEO boundaries, internal link plans, prohibited implications, non-public status, and validation gates. This preserves reference quality before language generation begins.
+
+### Implications
+
+- Internal draft blueprint records may be created.
+- Blueprint records do not authorize draft prose, draft files, public pages, routes, sitemap expansion, public metadata, or publication.
+- Future work may create an Internal Draft Pack only after this blueprint pack passes and a later explicit sprint authorizes draft files.
+- Publisher remains blocked from actual drafts and publication.
