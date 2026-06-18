@@ -95,6 +95,10 @@ The evidence ledger is the operational instrument of the Self-Application Doctri
 
 Hoax.ai subjects its own claims to the evidence discipline it applies to the category by recording, categorizing, and posturing every foundational claim before expansion.
 
+Self-application requires not only claim registration but traceability between claim, source, support location, and public use.
+
+Ledger entries must be traceable through claim-source mapping before public expansion.
+
 ## Governing Rule
 
 **A site can claim trust. A governed asset must make trust inspectable.**

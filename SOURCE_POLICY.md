@@ -80,6 +80,8 @@ Sources must support the exact claim being made.
 
 Do not use a source to imply more than it says.
 
+A source supports only the claim scope explicitly assigned to it; source existence is not broad authority.
+
 ## Governance Rule
 
 **No reference authority without source discipline.**

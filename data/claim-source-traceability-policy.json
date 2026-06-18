@@ -1,0 +1,72 @@
+{
+  "policy_id": "CLAIM-SOURCE-TRACEABILITY-POLICY-001",
+  "name": "Hoax.ai Claim and Source Traceability Policy",
+  "version": "v1.0.0",
+  "status": "governed_internal_claim_source_traceability_policy",
+  "maturity": "pre_reference_expansion_hardening",
+  "governing_principle": "No claim without traceability. No source without support scope. A reference asset must make its claims inspectable before it asks to be trusted.",
+  "claim_categories": {
+    "conceptual_thesis": {
+      "traceability": "thesis or governance documents",
+      "must_not": "pretend to be external fact"
+    },
+    "operational_claim": {
+      "traceability": "repository evidence of operation",
+      "must_not": "claim undeployed capability as live"
+    },
+    "governance_claim": {
+      "traceability": "decision log, policy, standard, audit, registry",
+      "must_not": "imply truth certification"
+    },
+    "repository_supported_claim": {
+      "traceability": "existing repository file or data record",
+      "must_not": "claim external-world facts without external source"
+    },
+    "external_factual_claim": {
+      "traceability": "registered external source records",
+      "must_not": "exist without source support"
+    },
+    "future_capability_claim": {
+      "traceability": "planned_not_claimed posture",
+      "must_not": "imply active public service or tool"
+    }
+  },
+  "source_support_scope_rules": [
+    "Each source must declare what it supports",
+    "Internal governance sources support governance and operational claims only",
+    "Internal registry sources must not support broad external factual claims",
+    "External sources must be registered before supporting external factual claims",
+    "Source scope must be narrow enough to avoid overclaiming"
+  ],
+  "support_location_rules": [
+    "support_location must exist for supported claims",
+    "Repository file paths must resolve",
+    "Source IDs must exist in source-registry",
+    "Missing support must fail validation"
+  ],
+  "public_claim_mapping_rules": [
+    "Public claim-bearing statements map to evidence ledger IDs",
+    "Future public pages require public claim mapping before release",
+    "Public mapped claims must not imply active tool, upload, scoring, or deployment completion"
+  ],
+  "prohibited_claim_patterns": [
+    "first in the world",
+    "impossible to copy",
+    "guaranteed authority",
+    "detects all synthetic media",
+    "certifies truth",
+    "proves fraud",
+    "public classifier is live",
+    "future capability described as active",
+    "artifact risk converted into subject accusation",
+    "overbroad source support"
+  ],
+  "validation_requirements": [
+    "Every ledger claim mapped in claim-source-map",
+    "Every source_ref exists in source-registry",
+    "Every repository support_location resolves",
+    "Public claims map to active ledger entries",
+    "No external_factual_claim without registered external source"
+  ],
+  "last_reviewed": "2026-06-17"
+}

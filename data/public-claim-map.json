@@ -1,0 +1,72 @@
+{
+  "public_claim_map_id": "PUBLIC-CLAIM-MAP-001",
+  "name": "Hoax.ai Homepage Public Claim Map",
+  "version": "v1.0.0",
+  "status": "active",
+  "route_id": "ROUTE-0001",
+  "path": "/",
+  "source_file": "index.html",
+  "mapped_public_claims": [
+    {
+      "public_claim_id": "PUB-CLAIM-0001",
+      "claim_id": "CLAIM-0001",
+      "statement_snippet": "Hoax.ai is not a truth machine.",
+      "public_location": "index.html#main-heading",
+      "claim_role": "thesis_boundary",
+      "allowed_public_use": true,
+      "prohibited_interpretation": "truth verdict capability, fake/real detector, active classifier",
+      "notes": "Primary H1 governing sentence."
+    },
+    {
+      "public_claim_id": "PUB-CLAIM-0002",
+      "claim_id": "CLAIM-0002",
+      "statement_snippet": "Hoax.ai classifies evidence posture on evidence artifacts",
+      "public_location": "index.html#posture-heading",
+      "claim_role": "classification_boundary",
+      "allowed_public_use": true,
+      "prohibited_interpretation": "truth verdict, subject accusation, public classifier availability",
+      "notes": "Evidence posture section lead."
+    },
+    {
+      "public_claim_id": "PUB-CLAIM-0003",
+      "claim_id": "CLAIM-0003",
+      "statement_snippet": "Hoax.ai classifies the evidence artifact — the image, recording, document, screenshot, source record, or media object — never the person, institution, brand, organization, or event connected to it.",
+      "public_location": "index.html#governance-heading",
+      "claim_role": "artifact_subject_separation",
+      "allowed_public_use": true,
+      "prohibited_interpretation": "subject accusation, guilt inference, institution bad faith",
+      "notes": "Artifact-subject separation paragraph."
+    },
+    {
+      "public_claim_id": "PUB-CLAIM-0004",
+      "claim_id": "CLAIM-0004",
+      "statement_snippet": "Hoax.ai is being developed as a GitHub-first sovereign digital asset.",
+      "public_location": "index.html#github-heading",
+      "claim_role": "operational_posture",
+      "allowed_public_use": true,
+      "prohibited_interpretation": "external deployment completion, live domain service, DNS readiness",
+      "notes": "GitHub-first execution statement."
+    },
+    {
+      "public_claim_id": "PUB-CLAIM-0005",
+      "claim_id": "CLAIM-0001",
+      "statement_snippet": "It does not claim to detect all synthetic media.",
+      "public_location": "index.html#governance-heading",
+      "claim_role": "governance_refusal",
+      "allowed_public_use": true,
+      "prohibited_interpretation": "guaranteed detection, detects all synthetic media",
+      "notes": "Governance boundary list item."
+    },
+    {
+      "public_claim_id": "PUB-CLAIM-0006",
+      "claim_id": "CLAIM-0002",
+      "statement_snippet": "Classify the evidence artifact. Do not perform the verdict.",
+      "public_location": "index.html#governance-heading",
+      "claim_role": "governing_sentence",
+      "allowed_public_use": true,
+      "prohibited_interpretation": "truth verdict, fake/real result, scoring",
+      "notes": "Blockquote governing sentence."
+    }
+  ],
+  "last_reviewed": "2026-06-17"
+}

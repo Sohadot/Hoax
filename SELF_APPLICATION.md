@@ -82,6 +82,8 @@ Hoax.ai must not:
 - publish external factual claims without source support;
 - ask for trust through assertion while bypassing governance inspection.
 
+Self-application requires not only claim registration but traceability between claim, source, support location, and public use.
+
 ## Governing Sentence
 
 **Hoax.ai subjects its own claims to the evidence discipline it applies to the category.**

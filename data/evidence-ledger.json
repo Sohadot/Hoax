@@ -156,6 +156,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Pre-expansion route/link hardening. No new routes or SEO expansion."
+    },
+    {
+      "claim_id": "CLAIM-0015",
+      "claim_text": "Hoax.ai has adopted Claim and Source Traceability Hardening v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "CLAIM_SOURCE_TRACEABILITY_POLICY.md, DECISION_LOG.md (DEC-026)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Pre-reference-expansion traceability hardening. No external factual claims."
     }
   ]
 }

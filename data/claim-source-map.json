@@ -1,0 +1,175 @@
+{
+  "map_id": "CLAIM-SOURCE-MAP-001",
+  "name": "Hoax.ai Claim Source Map",
+  "version": "v1.0.0",
+  "status": "active",
+  "maturity": "pre_reference_expansion_hardening",
+  "claim_source_links": [
+    {
+      "claim_id": "CLAIM-0001",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["GOVERNANCE_BOUNDARY.md", "DECISION_LOG.md", "index.html"],
+      "source_refs": ["SOURCE-0001", "SOURCE-0002", "SOURCE-0003"],
+      "support_scope": "governance boundary and public thesis framing",
+      "traceability_status": "traceable",
+      "public_surface_refs": ["PUB-CLAIM-0001", "PUB-CLAIM-0005"],
+      "notes": "Core not-a-truth-machine boundary."
+    },
+    {
+      "claim_id": "CLAIM-0002",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["CLAIM_POLICY.md", "GOVERNANCE_BOUNDARY.md", "DECISION_LOG.md"],
+      "source_refs": ["SOURCE-0001", "SOURCE-0002", "SOURCE-0003"],
+      "support_scope": "bounded classification language",
+      "traceability_status": "traceable",
+      "public_surface_refs": ["PUB-CLAIM-0002", "PUB-CLAIM-0006"],
+      "notes": "Evidence posture classification, not truth verdicts."
+    },
+    {
+      "claim_id": "CLAIM-0003",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["GOVERNANCE_BOUNDARY.md", "DECISION_LOG.md", "index.html"],
+      "source_refs": ["SOURCE-0001", "SOURCE-0002", "SOURCE-0003"],
+      "support_scope": "artifact-subject separation doctrine",
+      "traceability_status": "traceable",
+      "public_surface_refs": ["PUB-CLAIM-0003"],
+      "notes": "Artifact-bound classification only."
+    },
+    {
+      "claim_id": "CLAIM-0004",
+      "claim_type": "operational_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["README.md", "ROADMAP.md", "DECISION_LOG.md", "index.html"],
+      "source_refs": ["SOURCE-0001", "SOURCE-0009"],
+      "support_scope": "GitHub-first execution posture",
+      "traceability_status": "traceable",
+      "public_surface_refs": ["PUB-CLAIM-0004"],
+      "notes": "External deployment deferred; GitHub repository is source of truth."
+    },
+    {
+      "claim_id": "CLAIM-0005",
+      "claim_type": "operational_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["DECISION_LOG.md", "EVIDENCE_LEDGER_POLICY.md", "data/evidence-ledger.json"],
+      "source_refs": ["SOURCE-0001", "SOURCE-0006", "SOURCE-0010"],
+      "support_scope": "governance files and decision log operation",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Repository governance operation claim."
+    },
+    {
+      "claim_id": "CLAIM-0006",
+      "claim_type": "operational_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["index.html", "styles.css", "robots.txt", "sitemap.xml"],
+      "source_refs": ["SOURCE-0010"],
+      "support_scope": "public thesis surface files",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Static thesis surface only."
+    },
+    {
+      "claim_id": "CLAIM-0007",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["EVIDENCE_POSTURE_STANDARD.md", "data/evidence-posture-standard.json", "DECISION_LOG.md"],
+      "source_refs": ["SOURCE-0013", "SOURCE-0014"],
+      "support_scope": "standard adoption governance",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Internal standard adoption."
+    },
+    {
+      "claim_id": "CLAIM-0008",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["EVIDENCE_POSTURE_CLASSIFICATION_PROTOCOL.md", "data/evidence-posture-protocol.json", "DECISION_LOG.md"],
+      "source_refs": ["SOURCE-0015", "SOURCE-0016"],
+      "support_scope": "protocol adoption governance",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Internal protocol adoption."
+    },
+    {
+      "claim_id": "CLAIM-0009",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["OUTPUT_BOUNDARY_SCHEMA.md", "data/output-boundary-schema.json", "DECISION_LOG.md"],
+      "source_refs": ["SOURCE-0017", "SOURCE-0018"],
+      "support_scope": "output schema adoption governance",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Internal output schema adoption."
+    },
+    {
+      "claim_id": "CLAIM-0010",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["INTERNAL_ENGINE_MODEL.md", "data/internal-engine-model.json", "DECISION_LOG.md"],
+      "source_refs": ["SOURCE-0019", "SOURCE-0020"],
+      "support_scope": "internal engine model adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Not an active engine."
+    },
+    {
+      "claim_id": "CLAIM-0011",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["ADVERSARIAL_ENFORCEMENT_HARNESS.md", "DECISION_LOG.md", "data/adversarial-validation-cases.json"],
+      "source_refs": ["SOURCE-0022", "SOURCE-0024", "SOURCE-0025"],
+      "support_scope": "adversarial enforcement adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Internal enforcement harness."
+    },
+    {
+      "claim_id": "CLAIM-0012",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["INTERFACE_EMBODIMENT_GOVERNANCE.md", "DECISION_LOG.md", "data/interface-component-registry.json"],
+      "source_refs": ["SOURCE-0028", "SOURCE-0030"],
+      "support_scope": "interface governance adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Interface standard adoption."
+    },
+    {
+      "claim_id": "CLAIM-0013",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["SECURITY_PRIVACY_BOUNDARY.md", "DECISION_LOG.md", "data/security-privacy-boundary.json"],
+      "source_refs": ["SOURCE-0033", "SOURCE-0034"],
+      "support_scope": "security privacy boundary adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Zero-data static foundation."
+    },
+    {
+      "claim_id": "CLAIM-0014",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["LINK_ROUTE_INTEGRITY_POLICY.md", "DECISION_LOG.md", "data/link-route-integrity-policy.json"],
+      "source_refs": ["SOURCE-0038", "SOURCE-0039"],
+      "support_scope": "route link integrity adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Pre-expansion route hardening."
+    },
+    {
+      "claim_id": "CLAIM-0015",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["CLAIM_SOURCE_TRACEABILITY_POLICY.md", "DECISION_LOG.md", "data/claim-source-map.json"],
+      "source_refs": ["SOURCE-0042", "SOURCE-0043", "SOURCE-0044"],
+      "support_scope": "claim source traceability adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Traceability hardening adoption per DEC-026."
+    }
+  ],
+  "last_reviewed": "2026-06-17"
+}

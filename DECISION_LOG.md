@@ -640,3 +640,28 @@ A reference-grade asset cannot scale through uncontrolled links, orphan pages, p
 - No placeholder route may appear in navigation or sitemap.
 - No route may become indexable without canonical, sitemap, and internal link policy.
 - Future reference expansion must pass route/link validation before release.
+
+---
+
+## DEC-026 — Claim and Source Traceability Hardening v1 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Claim and Source Traceability Hardening v1 to ensure that claims, source records, support locations, public-facing statements, and governance references remain traceable, bounded, and validation-covered.
+
+### Rationale
+
+A reference-grade asset must not rely on persuasive language alone. Every claim that contributes to trust, capability, governance, reference authority, or public interpretation must be traceable to a defined claim type, source scope, support location, or conceptual framing boundary.
+
+### Implications
+
+- No claim may exist in the evidence ledger without required fields.
+- No repository-supported claim may point to a missing file.
+- No source-supported claim may point to a missing or unregistered source.
+- No public-facing mapped claim may exist without a ledger entry.
+- No source may imply broader support than its support scope allows.
+- No external factual claim may be introduced without source support.
+- Future public pages must map major claim-bearing statements before release.

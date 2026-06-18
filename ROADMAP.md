@@ -465,19 +465,52 @@ External deployment remains deferred (Sprint 1C). Route integrity is pre_expansi
 
 ## Sprint 11 — Claim and Source Traceability Hardening v1
 
-**Status:** READY — G10 passed  
-**Goal:** Harden claim and source traceability across registries before reference expansion.
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Enforce strict traceability between claims, sources, support locations, public statements, and internal governance evidence.
 
 ### Deliverables
 
-- claim and source traceability hardening (future — not in current scope)
+- CLAIM_SOURCE_TRACEABILITY_POLICY.md
+- data/claim-source-traceability-policy.json
+- data/claim-source-map.json
+- data/public-claim-map.json
+- validators/validate_claim_source_traceability.py
+- SPRINT_11_CLAIM_SOURCE_TRACEABILITY_AUDIT.md
+- DEC-026 appended to DECISION_LOG.md
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Traceability Scope
+
+- 15 evidence ledger claims mapped (CLAIM-0001 through CLAIM-0015)
+- 6 homepage public claims mapped (PUB-CLAIM-0001 through PUB-CLAIM-0006)
+- No external factual claims introduced
+- No new routes or SEO expansion
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Traceability is pre_reference_expansion_hardening.
+
+---
+
+## Sprint 12 — Technical Quality Gate Hardening v1
+
+**Status:** READY — G11 passed  
+**Goal:** Harden technical quality gates across validators and repository integrity before reference expansion.
+
+### Deliverables
+
+- technical quality gate hardening (future — not in current scope)
 - no public classifier page
 - no upload workflow
 - no deployment expansion
 
 ### Required Principle
 
-Claims and sources must remain traceable before reference expansion. Public classifier remains blocked.
+Technical quality gates must pass before reference expansion. Public classifier remains blocked.
 
 ---
 

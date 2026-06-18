@@ -19,6 +19,7 @@ GOVERNANCE_FILES = [
     "INTERFACE_THESIS.md",
     "SECURITY_PRIVACY_BOUNDARY.md",
     "LINK_ROUTE_INTEGRITY_POLICY.md",
+    "CLAIM_SOURCE_TRACEABILITY_POLICY.md",
     "INTERNAL_ENGINE_MODEL.md",
     "OUTPUT_BOUNDARY_SCHEMA.md",
     "EVIDENCE_POSTURE_CLASSIFICATION_PROTOCOL.md",
@@ -54,6 +55,9 @@ DATA_FILES = [
     "data/external-dependency-registry.json",
     "data/link-route-integrity-policy.json",
     "data/internal-link-graph.json",
+    "data/claim-source-traceability-policy.json",
+    "data/claim-source-map.json",
+    "data/public-claim-map.json",
 ]
 
 VALIDATORS = [
@@ -63,6 +67,7 @@ VALIDATORS = [
     "validators/validate_interface_governance.py",
     "validators/validate_security_privacy_boundary.py",
     "validators/validate_link_route_integrity.py",
+    "validators/validate_claim_source_traceability.py",
     "validators/generate_build_manifest.py",
 ]
 
