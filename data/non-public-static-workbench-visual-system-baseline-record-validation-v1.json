@@ -1,0 +1,60 @@
+{
+  "baseline_record_validation_id": "NP-SW-VISUAL-BASELINE-RECORD-VALIDATION-001",
+  "name": "Non-Public Static Workbench Visual System Baseline Record Validation v1",
+  "version": "v1.0.0",
+  "status": "non_public_static_visual_system_baseline_record_validated",
+  "maturity": "baseline_record_validation_only_no_public_interface_no_engine",
+  "baseline_lock_record_result": "baseline_lock_record_validated",
+  "validation_reference_results": [
+    "non_public_static_visual_system_hardening_validated",
+    "token_system_validated",
+    "pattern_system_validated",
+    "visual_antipattern_blocking_validated",
+    "hardening_public_isolation_validated",
+    "hardening_static_safety_validated"
+  ],
+  "locked_identity_results": [
+    "evidence_chamber",
+    "governed_evidence_field",
+    "boundary_rail",
+    "provenance_shadow",
+    "missing_context_absence",
+    "not_assessable_restraint",
+    "refusal_gate",
+    "output_envelope",
+    "verification_path",
+    "anti_detector_identity"
+  ],
+  "public_surface_status_results": [
+    "four_public_urls_only",
+    "not_registered_as_public_route",
+    "not_in_sitemap",
+    "not_linked_from_public_navigation"
+  ],
+  "prohibited_capability_results": [
+    "no_prototype_modification_authorized",
+    "no_new_prototype_files",
+    "no_public_route",
+    "no_sitemap_entry",
+    "no_public_navigation",
+    "no_engine",
+    "no_classifier",
+    "no_detector",
+    "no_upload",
+    "no_scoring",
+    "no_fake_real_output",
+    "no_forms",
+    "no_inputs",
+    "no_api",
+    "no_analytics",
+    "no_storage",
+    "no_network_calls",
+    "no_monetization",
+    "no_dns",
+    "no_cloudflare",
+    "no_custom_domain_launch",
+    "no_deployment_change"
+  ],
+  "overall_result": "baseline_record_validated",
+  "last_reviewed": "2026-06-18"
+}

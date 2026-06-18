@@ -1761,6 +1761,55 @@ Public classifier remains blocked. Public engine remains blocked. The prototype 
 
 ---
 
+## Sprint 41 - Non-Public Static Workbench Visual System Baseline Lock Validation v1
+
+**Status:** COMPLETE - 2026-06-18
+**Goal:** Validate the Sprint 40 baseline lock of the internal static Evidence Posture Workbench visual system without modifying prototype files or authorizing public capability.
+
+### Deliverables
+
+- NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_BASELINE_LOCK_VALIDATION_V1.md
+- data/non-public-static-workbench-visual-system-baseline-lock-validation-policy.json
+- data/non-public-static-workbench-visual-system-baseline-lock-validation-results-v1.json
+- data/non-public-static-workbench-visual-system-baseline-record-validation-v1.json
+- data/non-public-static-workbench-visual-system-change-control-validation-v1.json
+- data/non-public-static-workbench-visual-system-baseline-public-isolation-audit-v1.json
+- data/non-public-static-workbench-visual-system-baseline-static-safety-audit-v1.json
+- validators/validate_non_public_static_workbench_visual_system_baseline_lock_validation.py
+- SPRINT_41_NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_BASELINE_LOCK_VALIDATION_AUDIT.md
+- DEC-059 appended to DECISION_LOG.md
+- Publisher status -> blocked_until_non_public_static_workbench_public_readiness_boundary_governance
+- PUB-GATE-0041 added; reference expansion gate updated
+- validators/validate_all.py updated
+
+### Validation
+
+`py -3 validators/validate_all.py` - PASS required for sprint closure.
+
+### Validation Scope
+
+- Sprint 40 baseline lock validated
+- Locked visual system accepted as governed internal baseline
+- Change control validated
+- Public isolation preserved
+- Static-only status preserved
+- Prototype files not modified
+- No new prototype files or public expansion occurred
+- No JS/forms/inputs/upload/scoring/fake-real/engine/classifier/tool/API/analytics/routes/sitemap/DNS/Cloudflare/custom domain/monetization introduced
+- No Python cache files staged or committed
+
+### Gate
+
+**Gate G41 passed.** Public-readiness boundary governance blocked until Sprint 42.
+
+### Next Phase
+
+**Sprint 42 - Non-Public Static Workbench Public-Readiness Boundary Governance v1**
+
+Public classifier remains blocked. Public engine remains blocked. The prototype remains non-public, static, non-operational, not a public route, and not a workbench launch.
+
+---
+
 ## Sprint 25 — Public Reference Validation and Live Surface Audit v1
 
 **Status:** COMPLETE — 2026-06-17  

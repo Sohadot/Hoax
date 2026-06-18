@@ -508,6 +508,17 @@
       "status": "active",
       "last_reviewed": "2026-06-18",
       "notes": "Baseline lock adopted for the internal static workbench visual system. No prototype modification, public route, engine, classifier, upload, scoring, or public tool authorized."
+    },
+    {
+      "claim_id": "CLAIM-0047",
+      "claim_text": "Hoax.ai has adopted Non-Public Static Workbench Visual System Baseline Lock Validation v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_BASELINE_LOCK_VALIDATION_V1.md, DECISION_LOG.md (DEC-059)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-18",
+      "notes": "Baseline lock validation confirms the locked internal static visual baseline remains change-controlled, publicly isolated, static-only, and non-operational. No public route, engine, classifier, upload, scoring, API, analytics, deployment, or public tool authorized."
     }
   ]
 }

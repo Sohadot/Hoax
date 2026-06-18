@@ -46,6 +46,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_non_public_static_workbench_visual_system_hardening.py",
     ROOT / "validators" / "validate_non_public_static_workbench_visual_system_hardening_validation.py",
     ROOT / "validators" / "validate_non_public_static_workbench_visual_system_baseline_lock.py",
+    ROOT / "validators" / "validate_non_public_static_workbench_visual_system_baseline_lock_validation.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

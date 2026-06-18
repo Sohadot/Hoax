@@ -1506,3 +1506,31 @@ Sprint 39 validated the hardened visual system as eligible for baseline lock. Th
 - Any future baseline change requires governed change control, explicit allowed files, validator coverage, boundary audit, public-isolation confirmation, and static-safety confirmation.
 - No public route, sitemap entry, public navigation, engine, classifier, upload, scoring, API, forms, analytics, DNS, Cloudflare, deployment change, custom domain launch, monetization, or public tool behavior is authorized.
 - Future work may validate the baseline lock before any further prototype or interface expansion.
+
+
+---
+
+## DEC-059 - Non-Public Static Workbench Visual System Baseline Lock Validation v1 Adopted
+
+**Date:** 2026-06-18
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Non-Public Static Workbench Visual System Baseline Lock Validation v1 to validate the Sprint 40 baseline lock of the internal static Evidence Posture Workbench visual system. The validation confirms that the locked baseline is correctly recorded, change-controlled, publicly isolated, static-only, non-operational, and non-authorizing, without modifying prototype files or introducing public routes, sitemap entries, navigation links, engine behavior, classifier behavior, upload, scoring, API, analytics, DNS, Cloudflare, deployment changes, or public tool behavior.
+
+### Rationale
+
+A baseline lock is only useful if its integrity is validated. Sprint 41 ensures that the locked visual system can govern future design safely by confirming locked files, locked elements, change-control requirements, public isolation, static safety, non-authorization rules, and Python cache exclusion. This prevents visual drift, informal redesign, detector-dashboard regression, and accidental public-surface leakage.
+
+### Implications
+
+- The Sprint 40 baseline lock may be validated.
+- The locked visual baseline may become the current governed internal visual baseline after validation.
+- Future changes must reference the baseline lock and change-control policy.
+- No prototype file may be modified.
+- No new prototype file may be created.
+- No public route or sitemap entry may be created.
+- No public navigation may link to the prototype.
+- No JavaScript, forms, inputs, upload controls, scoring, fake/real output, generated output, API, analytics, engine behavior, classifier behavior, deployment change, DNS, Cloudflare, or public tool behavior may be introduced.
+- Future work may proceed to the next governance phase only after this validation passes.

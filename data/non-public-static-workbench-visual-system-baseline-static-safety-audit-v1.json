@@ -1,0 +1,71 @@
+{
+  "static_safety_audit_id": "NP-SW-VISUAL-BASELINE-STATIC-SAFETY-AUDIT-001",
+  "name": "Non-Public Static Workbench Visual System Baseline Static Safety Audit v1",
+  "version": "v1.0.0",
+  "status": "baseline_static_safety_validated",
+  "maturity": "static_safety_validation_only_no_operational_behavior",
+  "prototype_file_results": [
+    "prototype_files_not_modified_in_sprint_41",
+    "only_index_and_css_in_prototype_directory",
+    "no_additional_prototype_files",
+    "no_new_prototype_directories"
+  ],
+  "html_safety_results": [
+    "no_script_tags",
+    "no_forms",
+    "no_inputs",
+    "no_textarea",
+    "no_file_inputs",
+    "no_buttons",
+    "no_upload_controls",
+    "no_generated_output_regions",
+    "no_external_scripts",
+    "no_external_libraries"
+  ],
+  "css_safety_results": [
+    "no_imports",
+    "no_external_urls",
+    "no_upload_dropzone_styling",
+    "no_scoring_gauge_styling",
+    "no_red_green_verdict_styling",
+    "no_detector_scanner_naming",
+    "visual_tokens_present",
+    "evidence_field_classes_present",
+    "chamber_boundary_classes_present",
+    "provenance_shadow_classes_present",
+    "output_envelope_classes_present",
+    "responsive_rules_present"
+  ],
+  "capability_block_results": [
+    "no_engine",
+    "no_classifier",
+    "no_detector",
+    "no_upload",
+    "no_scoring",
+    "no_fake_real",
+    "no_api",
+    "no_analytics",
+    "no_storage",
+    "no_network_calls",
+    "no_deployment_change"
+  ],
+  "content_safety_results": [
+    "no_real_people",
+    "no_real_companies",
+    "no_real_institutions",
+    "no_real_brands",
+    "no_current_events",
+    "no_political_events",
+    "no_accusations",
+    "no_external_factual_claims",
+    "no_generated_analysis",
+    "no_verified_certified_claims"
+  ],
+  "python_cache_results": [
+    "no_pycache_tracked",
+    "no_pyc_staged",
+    "no_python_cache_committed"
+  ],
+  "overall_outcome": "baseline_static_safety_validated",
+  "last_reviewed": "2026-06-18"
+}

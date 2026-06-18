@@ -3260,6 +3260,110 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Visual system baseline lock validator."
+    },
+    {
+      "source_id": "SOURCE-0258",
+      "source_title": "NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_BASELINE_LOCK_VALIDATION_V1.md",
+      "source_type": "internal_governance",
+      "location": "NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_BASELINE_LOCK_VALIDATION_V1.md",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Baseline lock validation doctrine v1."
+    },
+    {
+      "source_id": "SOURCE-0259",
+      "source_title": "data/non-public-static-workbench-visual-system-baseline-lock-validation-policy.json",
+      "source_type": "internal_governance",
+      "location": "data/non-public-static-workbench-visual-system-baseline-lock-validation-policy.json",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Baseline lock validation policy."
+    },
+    {
+      "source_id": "SOURCE-0260",
+      "source_title": "data/non-public-static-workbench-visual-system-baseline-lock-validation-results-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/non-public-static-workbench-visual-system-baseline-lock-validation-results-v1.json",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Baseline lock validation results v1."
+    },
+    {
+      "source_id": "SOURCE-0261",
+      "source_title": "data/non-public-static-workbench-visual-system-baseline-record-validation-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/non-public-static-workbench-visual-system-baseline-record-validation-v1.json",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Baseline record validation v1."
+    },
+    {
+      "source_id": "SOURCE-0262",
+      "source_title": "data/non-public-static-workbench-visual-system-change-control-validation-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/non-public-static-workbench-visual-system-change-control-validation-v1.json",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Change-control validation v1."
+    },
+    {
+      "source_id": "SOURCE-0263",
+      "source_title": "data/non-public-static-workbench-visual-system-baseline-public-isolation-audit-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/non-public-static-workbench-visual-system-baseline-public-isolation-audit-v1.json",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Baseline public isolation audit v1."
+    },
+    {
+      "source_id": "SOURCE-0264",
+      "source_title": "data/non-public-static-workbench-visual-system-baseline-static-safety-audit-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/non-public-static-workbench-visual-system-baseline-static-safety-audit-v1.json",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Baseline static safety audit v1."
+    },
+    {
+      "source_id": "SOURCE-0265",
+      "source_title": "validators/validate_non_public_static_workbench_visual_system_baseline_lock_validation.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_non_public_static_workbench_visual_system_baseline_lock_validation.py",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Baseline lock validation validator."
     }
   ]
 }

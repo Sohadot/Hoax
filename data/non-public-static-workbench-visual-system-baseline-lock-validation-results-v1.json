@@ -1,0 +1,252 @@
+{
+  "validation_id": "NP-SW-VISUAL-BASELINE-LOCK-VALIDATION-RESULTS-001",
+  "name": "Non-Public Static Workbench Visual System Baseline Lock Validation Results v1",
+  "version": "v1.0.0",
+  "status": "non_public_static_visual_system_baseline_lock_validated",
+  "maturity": "validation_only_locked_static_internal_visual_baseline_no_engine_no_classifier_no_public_route",
+  "validation_dimensions": [
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0001",
+      "name": "Baseline Lock Policy Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0002",
+      "name": "Baseline Lock Record Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0003",
+      "name": "Locked Elements Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0004",
+      "name": "Change-Control Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0005",
+      "name": "Baseline Boundary Audit Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0006",
+      "name": "Locked File Scope Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0007",
+      "name": "Prototype Files Not Modified",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0008",
+      "name": "No Additional Prototype Files",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0009",
+      "name": "Static HTML Boundary",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0010",
+      "name": "Static CSS Boundary",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0011",
+      "name": "Locked Evidence Field Identity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0012",
+      "name": "Locked Evidence Chamber Identity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0013",
+      "name": "Locked Boundary Rail Identity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0014",
+      "name": "Locked Provenance Shadow Identity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0015",
+      "name": "Locked Missing Context Absence Identity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0016",
+      "name": "Locked Not-Assessable Restraint Identity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0017",
+      "name": "Locked Refusal Gate Identity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0018",
+      "name": "Locked Output Envelope Identity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0019",
+      "name": "Locked Verification Path Identity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0020",
+      "name": "Locked Token Families",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0021",
+      "name": "Locked Pattern Registry",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0022",
+      "name": "Locked Anti-Pattern Blocks",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0023",
+      "name": "Change-Control Requirement Completeness",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0024",
+      "name": "No Informal Visual Change Authorization",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0025",
+      "name": "Public Route Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0026",
+      "name": "Sitemap Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0027",
+      "name": "Public Navigation Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0028",
+      "name": "Homepage Link Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0029",
+      "name": "Reference Page Link Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0030",
+      "name": "Language Page Link Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0031",
+      "name": "No JavaScript",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0032",
+      "name": "No Forms or Inputs",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0033",
+      "name": "No Upload Surface",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0034",
+      "name": "No Scoring Surface",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0035",
+      "name": "No Fake/Real Verdict Surface",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0036",
+      "name": "No API/Network/Storage Behavior",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0037",
+      "name": "No Analytics",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0038",
+      "name": "No Real-World Content",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0039",
+      "name": "No External Factual Claims",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0040",
+      "name": "Non-Authorization Rule Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0041",
+      "name": "Publisher Gate Alignment",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0042",
+      "name": "Reference Expansion Gate Alignment",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0043",
+      "name": "Python Cache Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0044",
+      "name": "Public Surface Four-URL Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "BASELINE-LOCK-VAL-0045",
+      "name": "Future Change Requires Governance",
+      "result": "pass"
+    }
+  ],
+  "baseline_lock_artifact_results": [
+    "baseline_lock_doctrine_validated",
+    "baseline_lock_policy_validated",
+    "baseline_lock_record_validated",
+    "locked_elements_record_validated",
+    "change_control_record_validated",
+    "baseline_boundary_audit_validated"
+  ],
+  "baseline_record_result": "baseline_record_validated",
+  "locked_elements_result": "locked_elements_validated",
+  "change_control_result": "change_control_validated",
+  "public_isolation_result": "baseline_public_isolation_validated",
+  "static_safety_result": "baseline_static_safety_validated",
+  "governance_alignment_result": "publisher_and_reference_gates_aligned_no_public_authorization",
+  "python_cache_result": "python_cache_excluded",
+  "overall_result": "non_public_static_visual_system_baseline_lock_validated",
+  "non_authorization_note": "Validation does not authorize prototype modification, prototype expansion readiness, public workbench readiness, engine readiness, classifier readiness, tool readiness, deployment readiness, or public release readiness.",
+  "last_reviewed": "2026-06-18"
+}

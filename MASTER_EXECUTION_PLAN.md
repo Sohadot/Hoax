@@ -79,12 +79,13 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G38 | Non-Public Static Workbench Visual System Hardening | Sprint 38 validator PASS |
 | G39 | Non-Public Static Workbench Visual System Hardening Validation | Sprint 39 validator PASS |
 | G40 | Non-Public Static Workbench Visual System Baseline Lock | Sprint 40 validator PASS |
+| G41 | Non-Public Static Workbench Visual System Baseline Lock Validation | Sprint 41 validator PASS |
 
-**Gate G40 passed.** Sprint 41 (Non-Public Static Workbench Visual System Baseline Lock Validation) may proceed when authorized. Public classifier and engine remain blocked. The locked prototype visual system is the current internal static baseline. External deployment remains separately governed.
+**Gate G41 passed.** Sprint 42 (Non-Public Static Workbench Public-Readiness Boundary Governance) may proceed when authorized. Public classifier and engine remain blocked. The locked and validated prototype visual system is the current governed internal static baseline. External deployment remains separately governed.
 
 ### Foundation Gates vs Deployment Gates
 
-Foundation gates (G0-G40) govern category infrastructure, reference governance, language layer, language validation, workbench governance, workbench dry-run validation, workbench specification, interface blueprint governance, interface blueprint validation, prototype governance, static prototype v1, prototype validation, prototype refinement, refinement validation, visual system hardening, hardening validation, baseline lock, and expansion readiness. They must pass before reference layer scale or operational layers.
+Foundation gates (G0-G41) govern category infrastructure, reference governance, language layer, language validation, workbench governance, workbench dry-run validation, workbench specification, interface blueprint governance, interface blueprint validation, prototype governance, static prototype v1, prototype validation, prototype refinement, refinement validation, visual system hardening, hardening validation, baseline lock, baseline lock validation, and expansion readiness. They must pass before reference layer scale or operational layers.
 
 Deployment gates are **separate** and **not current foundation steps**. They open only after reference expansion governance is in place. None are passed.
 
@@ -185,6 +186,10 @@ Gate G39 is passed after Non-Public Static Workbench Visual System Hardening Val
 
 Gate G40 is passed after Non-Public Static Workbench Visual System Baseline Lock exists; baseline lock policy exists; baseline lock record exists; locked elements registry exists; change-control record exists; baseline boundary audit exists; validator exists; validate_all.py PASS; Sprint 39 hardening validation is locked as the current internal static visual baseline; the prototype remains non-public, static, not routed, not sitemap-listed, not publicly linked, and non-operational; and no prototype files, new prototype files, public route, sitemap expansion, public navigation, JavaScript, forms, inputs, upload, scoring, fake/real output, engine, classifier, tool, API, analytics, DNS, Cloudflare, custom domain launch, monetization, Python cache files, or deployment changes are created.
 
+## G41: Non-Public Static Workbench Visual System Baseline Lock Validation
+
+Gate G41 is passed after Non-Public Static Workbench Visual System Baseline Lock Validation exists; validation policy exists; validation results exist; baseline record validation exists; change-control validation exists; baseline public isolation audit exists; baseline static safety audit exists; validator exists; validate_all.py PASS; Sprint 40 lock is accepted as governed internal baseline; prototype files are not modified; prototype remains non-public, static, not routed, not sitemap-listed, not publicly linked, and non-operational; and no prototype files modified, new prototype files, public route, sitemap expansion, public navigation, JavaScript, forms, inputs, upload, scoring, fake/real output, engine, classifier, tool, API, analytics, DNS, Cloudflare, custom domain launch, monetization, Python cache files, or deployment changes are created.
+
 ## Current Execution State
 
 | Sprint | Status | Gate |
@@ -238,7 +243,8 @@ Gate G40 is passed after Non-Public Static Workbench Visual System Baseline Lock
 | Sprint 38 | COMPLETE | G38 passed |
 | Sprint 39 | COMPLETE | G39 passed |
 | Sprint 40 | COMPLETE | G40 passed |
-| Sprint 41+ | READY | G40 passed - Non-Public Static Workbench Visual System Baseline Lock Validation pending; engine/classifier blocked; deployment gates separately governed |
+| Sprint 41 | COMPLETE | G41 passed |
+| Sprint 42+ | READY | G41 passed - Non-Public Static Workbench Public-Readiness Boundary Governance pending; engine/classifier blocked; deployment gates separately governed |
 
 ## Governing Sentence
 
