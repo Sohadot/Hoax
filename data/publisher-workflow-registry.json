@@ -1,0 +1,175 @@
+{
+  "registry_id": "PUB-WORKFLOW-REGISTRY-001",
+  "name": "Hoax.ai Publisher Workflow Registry",
+  "version": "v1.0.0",
+  "status": "active",
+  "maturity": "publisher_blocked_until_quality_standard",
+  "workflows": [
+    {
+      "workflow_id": "PUB-WORKFLOW-0001",
+      "name": "Topic Intake",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["governed_topic_scope"],
+      "required_outputs": ["intake_record"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "seo_volume_intake, keyword_only_intake",
+      "notes": "Future intake only. Not active in Sprint 13B."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0002",
+      "name": "Candidate Registration",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["topic_intake", "page_family"],
+      "required_outputs": ["candidate_registry_entry"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "route_creation, sitemap_entry",
+      "notes": "Registers candidates only after gates. Blocked now."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0003",
+      "name": "Blueprint Alignment",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["candidate_id", "reference_page_blueprint"],
+      "required_outputs": ["blueprint_check_record"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "public_page_creation",
+      "notes": "Aligns candidate to REFERENCE_PAGE_BLUEPRINT."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0004",
+      "name": "Claim Scope Definition",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["candidate_id", "allowed_claim_scope"],
+      "required_outputs": ["claim_scope_record"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "invented_claims, unmapped_claims",
+      "notes": "Defines bounded claim scope before content."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0005",
+      "name": "Source Scope Definition",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["candidate_id", "source_registry"],
+      "required_outputs": ["source_scope_record"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "invented_sources, fake_citations",
+      "notes": "Defines source support scope."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0006",
+      "name": "Outline From Blueprint",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["blueprint_check", "page_family"],
+      "required_outputs": ["internal_outline"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "draft_page_file, public_route",
+      "notes": "Outline only. No draft files in Sprint 13B."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0007",
+      "name": "Substance Gate Check",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["outline", "content_quality_standard"],
+      "required_outputs": ["substance_gate_result"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "thin_seo_content, keyword_stuffing",
+      "notes": "Requires Sprint 14 content quality standard."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0008",
+      "name": "Internal Draft Generation",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["substance_gate_pass", "outline"],
+      "required_outputs": ["internal_draft"],
+      "blocked_until": "content_quality_standard_passed_and_governance_approval",
+      "prohibited_behavior": "public_publish, direct_route_creation",
+      "notes": "Internal draft only after gates. Blocked in Sprint 13B."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0009",
+      "name": "Claim Mapping",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["draft", "evidence_ledger", "claim_source_map"],
+      "required_outputs": ["claim_mapping_record"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "unmapped_public_claims",
+      "notes": "Maps material claims to ledger and source map."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0010",
+      "name": "Route Candidate Review",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["candidate_id", "route_registry"],
+      "required_outputs": ["route_candidate_decision"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "active_route_without_approval, sitemap_expansion",
+      "notes": "Route candidate review only. No routes in Sprint 13B."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0011",
+      "name": "Technical Validation",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["draft", "technical_quality_gate"],
+      "required_outputs": ["technical_validation_result"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "external_scripts, forms, analytics",
+      "notes": "Technical quality validation before release candidate."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0012",
+      "name": "Governance Review",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["validation_results", "audit_requirements"],
+      "required_outputs": ["governance_review_decision"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "bypass_governance_approval",
+      "notes": "Human/governance review required."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0013",
+      "name": "Pull Request Preparation",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["governance_review_pass", "internal_draft"],
+      "required_outputs": ["pull_request"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "direct_merge_without_validation",
+      "notes": "PR for review only. Not active now."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0014",
+      "name": "Release Candidate Review",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["all_gates_pass", "candidate_registry"],
+      "required_outputs": ["release_candidate_status"],
+      "blocked_until": "content_quality_standard_passed",
+      "prohibited_behavior": "premature_release_eligibility",
+      "notes": "Release candidate review before public gate."
+    },
+    {
+      "workflow_id": "PUB-WORKFLOW-0015",
+      "name": "Public Release Gate",
+      "status": "blocked",
+      "allowed_currently": false,
+      "required_inputs": ["release_eligible_status", "all_publisher_gates_pass"],
+      "required_outputs": ["public_release_decision"],
+      "blocked_until": "content_quality_standard_passed_and_all_gates_and_user_approval",
+      "prohibited_behavior": "direct_public_publish, sitemap_without_eligibility, deployment",
+      "notes": "Public release permanently blocked until all gates and approval."
+    }
+  ],
+  "last_reviewed": "2026-06-17"
+}

@@ -24,6 +24,7 @@ GOVERNANCE_FILES = [
     "REFERENCE_PAGE_BLUEPRINT.md",
     "AUTOMATION_GOVERNANCE.md",
     "AGENT_EXECUTION_RULES.md",
+    "GOVERNED_PUBLISHER_CONTROL_PLANE.md",
     "INTERNAL_ENGINE_MODEL.md",
     "OUTPUT_BOUNDARY_SCHEMA.md",
     "EVIDENCE_POSTURE_CLASSIFICATION_PROTOCOL.md",
@@ -71,6 +72,11 @@ DATA_FILES = [
     "data/reference-page-candidate-registry.json",
     "data/automation-governance-policy.json",
     "data/ci-quality-gate-policy.json",
+    "data/publisher-governance-policy.json",
+    "data/publisher-workflow-registry.json",
+    "data/publisher-state-machine.json",
+    "data/publisher-quality-gates.json",
+    "data/publisher-queue-registry.json",
 ]
 
 VALIDATORS = [
@@ -84,6 +90,7 @@ VALIDATORS = [
     "validators/validate_technical_quality_gate.py",
     "validators/validate_reference_page_blueprint.py",
     "validators/validate_automation_governance.py",
+    "validators/validate_publisher_control_plane.py",
     "validators/generate_build_manifest.py",
 ]
 

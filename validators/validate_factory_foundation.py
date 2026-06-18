@@ -1573,6 +1573,11 @@ def validate_json_files() -> bool:
         "data/reference-page-candidate-registry.json",
         "data/automation-governance-policy.json",
         "data/ci-quality-gate-policy.json",
+        "data/publisher-governance-policy.json",
+        "data/publisher-workflow-registry.json",
+        "data/publisher-state-machine.json",
+        "data/publisher-quality-gates.json",
+        "data/publisher-queue-registry.json",
     ]:
         path = ROOT / rel
         try:

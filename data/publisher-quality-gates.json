@@ -1,0 +1,164 @@
+{
+  "gate_set_id": "PUB-QUALITY-GATES-001",
+  "name": "Hoax.ai Publisher Quality Gates",
+  "version": "v1.0.0",
+  "status": "active",
+  "maturity": "publisher_blocked_until_quality_standard",
+  "gates": [
+    {
+      "gate_id": "PUB-GATE-0001",
+      "name": "Candidate Registry Gate",
+      "status": "active",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "data/reference-page-candidate-registry.json",
+      "failure_condition": "missing_candidate_registry_entry",
+      "bypassable": false,
+      "notes": "Candidate must be registered before release path."
+    },
+    {
+      "gate_id": "PUB-GATE-0002",
+      "name": "Reference Blueprint Gate",
+      "status": "active",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "REFERENCE_PAGE_BLUEPRINT.md",
+      "failure_condition": "blueprint_noncompliance",
+      "bypassable": false,
+      "notes": "Must align with reference page blueprint."
+    },
+    {
+      "gate_id": "PUB-GATE-0003",
+      "name": "Content Quality Gate",
+      "status": "blocked_until_sprint_14",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "CONTENT_QUALITY_REFERENCE_SUBSTANCE_STANDARD.md",
+      "failure_condition": "content_quality_standard_not_passed",
+      "bypassable": false,
+      "notes": "Blocked until Sprint 14 content quality standard passes."
+    },
+    {
+      "gate_id": "PUB-GATE-0004",
+      "name": "Claim Source Traceability Gate",
+      "status": "active",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "data/claim-source-map.json",
+      "failure_condition": "unmapped_material_claims",
+      "bypassable": false,
+      "notes": "All material claims must be traceable."
+    },
+    {
+      "gate_id": "PUB-GATE-0005",
+      "name": "Source Scope Gate",
+      "status": "active",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "data/source-registry.json",
+      "failure_condition": "unsupported_external_claims_or_invented_sources",
+      "bypassable": false,
+      "notes": "Source scope must be defined and bounded."
+    },
+    {
+      "gate_id": "PUB-GATE-0006",
+      "name": "Route Link Integrity Gate",
+      "status": "active",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "data/route-registry.json",
+      "failure_condition": "unregistered_route_or_broken_links",
+      "bypassable": false,
+      "notes": "Route and internal links must pass integrity checks."
+    },
+    {
+      "gate_id": "PUB-GATE-0007",
+      "name": "Technical Quality Gate",
+      "status": "active",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "TECHNICAL_QUALITY_GATE.md",
+      "failure_condition": "technical_quality_validation_failure",
+      "bypassable": false,
+      "notes": "Static technical quality must pass."
+    },
+    {
+      "gate_id": "PUB-GATE-0008",
+      "name": "Interface Governance Gate",
+      "status": "active",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "INTERFACE_EMBODIMENT_GOVERNANCE.md",
+      "failure_condition": "interface_boundary_violation",
+      "bypassable": false,
+      "notes": "No scanner/detector/scoring visual logic."
+    },
+    {
+      "gate_id": "PUB-GATE-0009",
+      "name": "Security Privacy Gate",
+      "status": "active",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "SECURITY_PRIVACY_BOUNDARY.md",
+      "failure_condition": "security_privacy_boundary_violation",
+      "bypassable": false,
+      "notes": "Zero-data static security posture."
+    },
+    {
+      "gate_id": "PUB-GATE-0010",
+      "name": "Forbidden Language Gate",
+      "status": "active",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "data/forbidden-language-policy.json",
+      "failure_condition": "forbidden_language_detected",
+      "bypassable": false,
+      "notes": "Adversarial language policy must pass."
+    },
+    {
+      "gate_id": "PUB-GATE-0011",
+      "name": "Sitemap Eligibility Gate",
+      "status": "active",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "data/reference-expansion-gate.json",
+      "failure_condition": "sitemap_ineligible_or_mismatch",
+      "bypassable": false,
+      "notes": "Sitemap entry only when route eligible."
+    },
+    {
+      "gate_id": "PUB-GATE-0012",
+      "name": "Human Governance Approval Gate",
+      "status": "active",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "GOVERNED_PUBLISHER_CONTROL_PLANE.md",
+      "failure_condition": "missing_user_or_governance_approval",
+      "bypassable": false,
+      "notes": "Explicit approval required."
+    },
+    {
+      "gate_id": "PUB-GATE-0013",
+      "name": "Final validate_all.py Gate",
+      "status": "active",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "validation_source": "validators/validate_all.py",
+      "failure_condition": "validate_all_py_failure",
+      "bypassable": false,
+      "notes": "Canonical validation command must pass."
+    },
+    {
+      "gate_id": "PUB-GATE-0014",
+      "name": "Audit Record Gate",
+      "status": "active",
+      "required_currently": false,
+      "required_before_public_release": true,
+      "validation_source": "SPRINT audit files",
+      "failure_condition": "missing_audit_record",
+      "bypassable": false,
+      "notes": "Sprint or release audit required."
+    }
+  ],
+  "last_reviewed": "2026-06-17"
+}

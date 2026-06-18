@@ -132,6 +132,7 @@ Public release eligibility requires:
 - forbidden language validation;
 - interface governance validation;
 - security/privacy validation;
+- publisher control plane validation;
 - final audit.
 
 ## J. Sitemap Rule

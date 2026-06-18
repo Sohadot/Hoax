@@ -200,6 +200,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Validation-only automation gate. No deployment or CI write permissions."
+    },
+    {
+      "claim_id": "CLAIM-0019",
+      "claim_text": "Hoax.ai has adopted Governed Publisher Control Plane v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "GOVERNED_PUBLISHER_CONTROL_PLANE.md, DECISION_LOG.md (DEC-031)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Publisher blocked until content quality standard. No drafts or public pages."
     }
   ]
 }

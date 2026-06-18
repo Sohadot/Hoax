@@ -760,3 +760,25 @@ A governed asset cannot rely on manual memory. If validators exist but are not a
 - Future pull requests must include governance-boundary checklists.
 - Agents must follow `AGENT_EXECUTION_RULES.md` before modifying the repository.
 - Sprint 14 may proceed only after automation governance passes.
+
+---
+
+## DEC-031 — Governed Publisher Control Plane v1 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Governed Publisher Control Plane v1 to ensure that any future automated or semi-automated publishing workflow can only produce governed reference candidates through candidate states, claim/source requirements, route eligibility, quality gates, validation, and governance approval.
+
+### Rationale
+
+A sovereign reference asset cannot use publisher automation as a volume engine. The publisher must be a controlled system for producing governed reference value, not a mechanism for creating pages, routes, sitemap entries, SEO scale, or public content without gates.
+
+### Implications
+
+- Publisher automation remains blocked until Content Quality and Reference Substance Standard passes.
+- Publisher automation may not create public pages, draft pages, routes, or sitemap entries in this sprint.
+- Publisher automation may not invent claims or sources or publish directly.
+- Future publisher outputs must move through candidate registry, blueprint alignment, content quality, claim/source traceability, route/link integrity, technical quality, interface governance, security/privacy governance, forbidden language checks, final validation, audit, and user/governance approval.

@@ -28,6 +28,7 @@
     "forbidden_language_validation",
     "interface_governance_validation",
     "security_privacy_validation",
+    "publisher_control_plane_validation",
     "validate_all_py_pass",
     "final_audit"
   ],
@@ -46,14 +47,17 @@
     "technical_quality_failure",
     "thin_seo_content",
     "placeholder_page",
-    "unmapped_public_claim"
+    "unmapped_public_claim",
+    "publisher_control_plane_failure",
+    "publisher_blocked_until_quality_standard"
   ],
   "release_eligibility_rules": [
     "candidate_must_be_release_eligible_status",
     "route_must_be_registered_and_active",
     "all_pre_release_checks_must_pass",
     "validate_all_py_must_pass_before_public_release",
-    "no_public_release_without_final_audit"
+    "no_public_release_without_final_audit",
+    "no_public_release_without_publisher_governance_compliance"
   ],
   "last_reviewed": "2026-06-17"
 }

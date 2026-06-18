@@ -202,6 +202,17 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Automation governance adoption per DEC-030."
+    },
+    {
+      "claim_id": "CLAIM-0019",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["GOVERNED_PUBLISHER_CONTROL_PLANE.md", "DECISION_LOG.md", "data/publisher-governance-policy.json"],
+      "source_refs": ["SOURCE-0069", "SOURCE-0070", "SOURCE-0075"],
+      "support_scope": "governed publisher control plane adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Publisher control plane adoption per DEC-031."
     }
   ],
   "last_reviewed": "2026-06-17"

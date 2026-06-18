@@ -1,0 +1,34 @@
+{
+  "registry_id": "PUB-QUEUE-REGISTRY-001",
+  "name": "Hoax.ai Publisher Queue Registry",
+  "version": "v1.0.0",
+  "status": "active",
+  "maturity": "publisher_blocked_until_quality_standard",
+  "queues": [
+    {
+      "queue_id": "publisher_intake_queue",
+      "name": "Publisher Intake Queue",
+      "status": "empty",
+      "items": []
+    },
+    {
+      "queue_id": "publisher_candidate_queue",
+      "name": "Publisher Candidate Queue",
+      "status": "empty",
+      "items": []
+    },
+    {
+      "queue_id": "publisher_blocked_queue",
+      "name": "Publisher Blocked Queue",
+      "status": "empty",
+      "items": []
+    },
+    {
+      "queue_id": "publisher_release_candidate_queue",
+      "name": "Publisher Release Candidate Queue",
+      "status": "empty",
+      "items": []
+    }
+  ],
+  "last_reviewed": "2026-06-17"
+}

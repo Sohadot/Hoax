@@ -1,0 +1,36 @@
+---
+description: Hoax.ai publisher control — candidates only, no publishing in Sprint 13B
+alwaysApply: false
+globs:
+  - "**/publisher*"
+  - "**/reference-page*"
+  - "**/GOVERNED_PUBLISHER*"
+---
+
+# Hoax.ai Publisher Rules
+
+The publisher is **blocked** until Content Quality and Reference Substance Standard (Sprint 14) passes.
+
+## Absolute prohibitions
+
+- No drafts in Sprint 13B control-plane work
+- No public routes, sitemap expansion, or direct publishing
+- No invented sources or claims
+- No low-quality, keyword-only, or generic AI page generation
+- No public classifier, tool, upload, scoring, forms, or analytics
+
+## Publisher philosophy
+
+- The publisher is not a volume engine — it produces **release-eligible reference units**
+- SEO is semantic clarification after thesis, claim scope, and source scope are defined — not keyword inflation
+- Use pass/fail gates only — no numeric quality scores or grades
+
+## Required before any future publisher output
+
+- Candidate registry, blueprint alignment, content quality, claim/source traceability
+- Route/link integrity, technical quality, interface and security/privacy boundaries
+- Forbidden language check, `validate_all.py` PASS, audit record, governance approval
+
+## Agent boundary
+
+Automation may produce **candidates**. Governance decides what becomes public.

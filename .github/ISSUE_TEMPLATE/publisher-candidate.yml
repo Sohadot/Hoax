@@ -1,0 +1,89 @@
+name: Publisher Candidate Proposal
+description: Propose a future governed reference candidate (not publication, deployment, or route creation)
+title: "[Publisher Candidate] "
+labels: ["governance", "publisher"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to propose a **future** publisher candidate only.
+        The publisher is **blocked** until Content Quality Standard (Sprint 14) passes.
+        Do not use for direct publication, deployment, DNS, Cloudflare, or sitemap expansion.
+
+  - type: textarea
+    id: candidate_purpose
+    attributes:
+      label: Candidate purpose
+      description: Why would this reference unit exist inside Hoax.ai's category system?
+    validations:
+      required: true
+
+  - type: input
+    id: page_family
+    attributes:
+      label: Page family
+      placeholder: e.g. REF-TYPE-0002 Evidence Posture State Page
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference_thesis
+    attributes:
+      label: Reference thesis
+      description: One-sentence governed thesis for the future page
+    validations:
+      required: true
+
+  - type: textarea
+    id: source_scope
+    attributes:
+      label: Source scope
+      description: What sources may support this candidate? No invented citations.
+
+  - type: textarea
+    id: claim_scope
+    attributes:
+      label: Claim scope
+      description: What claims may appear? Must map to evidence ledger where applicable.
+
+  - type: textarea
+    id: route_impact
+    attributes:
+      label: Route impact
+      description: Must be none until route-registry and expansion gate approval.
+
+  - type: textarea
+    id: sitemap_impact
+    attributes:
+      label: Sitemap impact
+      description: Must be none until sitemap eligibility gate passes.
+
+  - type: checkboxes
+    id: content_quality_gate
+    attributes:
+      label: Content quality gate
+      options:
+        - label: I understand Content Quality Standard (Sprint 14) has not passed and no draft or public page may be created now
+          required: true
+
+  - type: checkboxes
+    id: prohibited_content_check
+    attributes:
+      label: Prohibited content check
+      options:
+        - label: This proposal does NOT request public classifier, tool, upload, scoring, forms, analytics, SEO filler, fake/real detector, or keyword-only pages
+          required: true
+
+  - type: textarea
+    id: release_blockers
+    attributes:
+      label: Release blockers
+      description: List gates that must pass before any future release
+
+  - type: checkboxes
+    id: approval_required
+    attributes:
+      label: Approval required
+      options:
+        - label: I understand explicit user/governance approval is required before any future public release
+          required: true

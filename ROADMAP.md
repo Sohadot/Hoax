@@ -624,7 +624,51 @@ Public classifier remains blocked. External deployment remains blocked.
 
 ---
 
-## Long-Term Roadmap
+## Sprint 13B — Governed Publisher Control Plane v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Define publisher control infrastructure so future automation may produce governed reference candidates only — without publishing, drafting, routing, or sitemap expansion.
+
+### Deliverables
+
+- GOVERNED_PUBLISHER_CONTROL_PLANE.md
+- data/publisher-governance-policy.json
+- data/publisher-workflow-registry.json
+- data/publisher-state-machine.json
+- data/publisher-quality-gates.json
+- data/publisher-queue-registry.json
+- validators/validate_publisher_control_plane.py
+- .github/ISSUE_TEMPLATE/publisher-candidate.yml
+- .cursor/rules/hoax-publisher.mdc
+- SPRINT_13B_GOVERNED_PUBLISHER_CONTROL_AUDIT.md
+- DEC-031 appended to DECISION_LOG.md
+- data/reference-expansion-gate.json updated
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Publisher Scope
+
+- 15 publisher workflows registered (PUB-WORKFLOW-0001–0015), all blocked
+- 14 publisher quality gates (PUB-GATE-0001–0014)
+- Empty publisher queues and empty candidate registry
+- 19 evidence ledger claims (CLAIM-0019 added)
+- Publisher blocked until content quality standard (Sprint 14)
+- No content drafts, public pages, routes, or sitemap expansion
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Publisher maturity is publisher_blocked_until_quality_standard.
+
+### Next Phase
+
+**Sprint 14 — Content Quality and Reference Substance Standard v1**
+
+Public classifier remains blocked. External deployment remains blocked.
+
+---
 
 Future layers may include:
 

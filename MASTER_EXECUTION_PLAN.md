@@ -51,9 +51,10 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G12 | Technical quality gate hardening | Sprint 12 validator PASS |
 | G13 | Reference Page Blueprint and Expansion Gate | Sprint 13 validator PASS |
 | G13A | Automation Governance and CI Quality Gate | Sprint 13A validator PASS |
+| G13B | Governed Publisher Control Plane | Sprint 13B validator PASS |
 | G14 | Content Quality and Reference Substance Standard | Sprint 14 validator PASS — **pending** |
 
-**Gate G13A passed.** Sprint 14 (Content Quality and Reference Substance Standard) may proceed. Public classifier and tool remain blocked. External deployment remains deferred until deployment gates pass.
+**Gate G13B passed.** Sprint 14 (Content Quality and Reference Substance Standard) may proceed. Public classifier and tool remain blocked. External deployment remains deferred until deployment gates pass.
 
 ### Foundation Gates vs Deployment Gates
 
@@ -171,7 +172,8 @@ Classifier, API, and workflow tools require protocol and standard completion fir
 | Sprint 12 | COMPLETE | G12 passed |
 | Sprint 13 | COMPLETE | G13 passed |
 | Sprint 13A | COMPLETE | G13A passed |
-| Sprint 14+ | READY | G13A passed — Content Quality Standard pending; G1C and deployment gates not passed; public tool blocked |
+| Sprint 13B | COMPLETE | G13B passed |
+| Sprint 14+ | READY | G13B passed — Content Quality Standard pending; G1C and deployment gates not passed; public tool blocked |
 
 ## Governing Sentence
 
