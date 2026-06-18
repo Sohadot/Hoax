@@ -3,7 +3,7 @@
   "name": "Hoax.ai Publisher Quality Gates",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "publisher_blocked_until_evidence_posture_workbench_governance",
+  "maturity": "publisher_blocked_until_evidence_posture_workbench_dry_run_harness",
   "gates": [
     {
       "gate_id": "PUB-GATE-0001",
@@ -307,6 +307,20 @@
       "failure_condition": "public_category_language_validation_not_met",
       "bypassable": false,
       "notes": "Category language validation defined Sprint 27 (DEC-045). Validates /language/ surface without authorizing engine, classifier, tool, upload, scoring, DNS, Cloudflare, custom domain launch, API, forms, analytics, or monetization by itself."
+    },
+    {
+      "gate_id": "PUB-GATE-0028",
+      "name": "Evidence Posture Workbench Governance Gate",
+      "status": "workbench_governance_complete_pre_dry_run_harness",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_workbench_dry_run": true,
+      "validation_source": "EVIDENCE_POSTURE_WORKBENCH_GOVERNANCE.md",
+      "failure_condition": "evidence_posture_workbench_governance_not_met",
+      "bypassable": false,
+      "notes": "Workbench governance defined Sprint 28 (DEC-046). Defines input, output, state, and refusal models without authorizing interface, prototype, engine, classifier, tool, upload, scoring, API, forms, analytics, routes, sitemap, deployment, DNS, Cloudflare, custom domain launch, or monetization by itself."
     }
   ],
   "last_reviewed": "2026-06-17"

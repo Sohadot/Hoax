@@ -1,0 +1,62 @@
+{
+  "policy_id": "EP-WB-GOV-POLICY-001",
+  "name": "Hoax.ai Evidence Posture Workbench Governance Policy",
+  "version": "v1.0.0",
+  "status": "governed_evidence_posture_workbench_policy",
+  "maturity": "governance_only_no_workbench_no_engine_no_classifier_no_tool",
+  "governing_principle": "A workbench governance layer defines how evidence may be handled before any interface handles evidence.",
+  "boundary_principle": "The future workbench must help structure evidence posture reasoning without becoming a verdict machine.",
+  "allowed_governance_actions": [
+    "governance_definition",
+    "input_model_definition",
+    "output_boundary_definition",
+    "state_model_definition",
+    "refusal_model_definition",
+    "validation_only"
+  ],
+  "prohibited_actions": [
+    "interface_creation",
+    "prototype_creation",
+    "public_workbench",
+    "public_engine",
+    "public_classifier",
+    "public_tool",
+    "upload",
+    "scoring",
+    "fake_real_output",
+    "forms",
+    "analytics",
+    "api",
+    "monetization",
+    "new_routes",
+    "sitemap_expansion",
+    "dns",
+    "cloudflare",
+    "custom_domain_launch",
+    "external_factual_claims",
+    "subject_accusation"
+  ],
+  "workbench_definition": "A future governed reasoning surface that may help structure the condition of an evidence artifact by organizing artifact description, source context, provenance signals, uncertainty, missing information, and output boundaries without producing truth verdicts, fake/real classifications, subject accusations, or confidence scores.",
+  "workbench_non_purpose": "The workbench is not a truth machine, fake/real detector, deepfake detector, fact-checking verdict system, accusation system, subject judgment system, upload tool, scoring engine, public classifier, verification service, replacement for source review, or final authority.",
+  "language_layer_dependency": {
+    "status": "governance_input_only",
+    "validation_result": "hoax_governed_language_validated",
+    "does_not_authorize_public_engine": true,
+    "notes": "Validated public category language is governance input only; not proof of engine readiness."
+  },
+  "non_authorization_rules": [
+    "no_workbench_interface_authorization",
+    "no_engine_authorization",
+    "no_classifier_authorization",
+    "no_upload_authorization",
+    "no_scoring_authorization",
+    "no_api_authorization",
+    "no_new_routes_authorization",
+    "no_sitemap_expansion_authorization",
+    "no_deployment_authorization",
+    "no_dns_authorization",
+    "no_cloudflare_authorization",
+    "no_custom_domain_launch_authorization"
+  ],
+  "last_reviewed": "2026-06-17"
+}

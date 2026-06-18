@@ -1,0 +1,121 @@
+{
+  "model_id": "EP-WB-INPUT-MODEL-001",
+  "name": "Hoax.ai Evidence Posture Workbench Input Model",
+  "version": "v1.0.0",
+  "status": "governed_workbench_input_model",
+  "maturity": "governance_only_no_workbench_no_engine_no_classifier_no_tool",
+  "input_categories": [
+    {
+      "input_id": "WB-INPUT-0001",
+      "name": "Artifact Description",
+      "purpose": "Describe the evidence artifact under examination without subject judgment.",
+      "allowed_use": "Future structured description of artifact condition and observable properties.",
+      "forbidden_use": "Subject accusation, identity judgment, fake/real verdict, scoring.",
+      "relation_to_language_layer": "LANG-TERM-0001 Evidence Posture",
+      "data_collection_status": "not_collecting_data",
+      "storage_status": "no_storage_created",
+      "interface_status": "no_interface_created",
+      "non_authorization_statement": "This input category does not authorize interface, upload, storage, scoring, or verdict output."
+    },
+    {
+      "input_id": "WB-INPUT-0002",
+      "name": "Artifact Type",
+      "purpose": "Classify artifact form (document, media, screenshot, etc.) without subject classification.",
+      "allowed_use": "Future artifact-type context for posture reasoning.",
+      "forbidden_use": "Subject type classification, fake/real labeling, scoring.",
+      "relation_to_language_layer": "LANG-TERM-0001 Evidence Posture",
+      "data_collection_status": "not_collecting_data",
+      "storage_status": "no_storage_created",
+      "interface_status": "no_interface_created",
+      "non_authorization_statement": "This input category does not authorize interface, upload, storage, scoring, or verdict output."
+    },
+    {
+      "input_id": "WB-INPUT-0003",
+      "name": "Source Context",
+      "purpose": "Record source chain and publication path context for artifact condition reasoning.",
+      "allowed_use": "Future source confidence and traceability support.",
+      "forbidden_use": "Subject accusation, institution bad-faith claims, fake/real verdict.",
+      "relation_to_language_layer": "LANG-TERM-0003 Source Confidence",
+      "data_collection_status": "not_collecting_data",
+      "storage_status": "no_storage_created",
+      "interface_status": "no_interface_created",
+      "non_authorization_statement": "This input category does not authorize interface, upload, storage, scoring, or verdict output."
+    },
+    {
+      "input_id": "WB-INPUT-0004",
+      "name": "Provenance Notes",
+      "purpose": "Record origin, custody, and chain-of-record observations.",
+      "allowed_use": "Future provenance gap and posture constraint reasoning.",
+      "forbidden_use": "Authenticity certification, fake/real verdict, subject accusation.",
+      "relation_to_language_layer": "LANG-TERM-0004 Provenance Gap",
+      "data_collection_status": "not_collecting_data",
+      "storage_status": "no_storage_created",
+      "interface_status": "no_interface_created",
+      "non_authorization_statement": "This input category does not authorize interface, upload, storage, scoring, or verdict output."
+    },
+    {
+      "input_id": "WB-INPUT-0005",
+      "name": "Claim Context",
+      "purpose": "Describe what the artifact is said to support without treating the claim as verified.",
+      "allowed_use": "Future claim-source traceability and support discipline.",
+      "forbidden_use": "Truth certification, subject accusation, fake/real verdict.",
+      "relation_to_language_layer": "LANG-TERM-0007 Claim and Source Traceability",
+      "data_collection_status": "not_collecting_data",
+      "storage_status": "no_storage_created",
+      "interface_status": "no_interface_created",
+      "non_authorization_statement": "This input category does not authorize interface, upload, storage, scoring, or verdict output."
+    },
+    {
+      "input_id": "WB-INPUT-0006",
+      "name": "Contextual Uncertainty",
+      "purpose": "Record uncertainty markers that constrain posture language.",
+      "allowed_use": "Future not assessable and output boundary reasoning.",
+      "forbidden_use": "Unsupported certainty, scoring, fake/real verdict.",
+      "relation_to_language_layer": "LANG-TERM-0005 Not Assessable",
+      "data_collection_status": "not_collecting_data",
+      "storage_status": "no_storage_created",
+      "interface_status": "no_interface_created",
+      "non_authorization_statement": "This input category does not authorize interface, upload, storage, scoring, or verdict output."
+    },
+    {
+      "input_id": "WB-INPUT-0007",
+      "name": "Missing Information",
+      "purpose": "Record what cannot yet be said about artifact condition.",
+      "allowed_use": "Future provenance gap and not assessable posture support.",
+      "forbidden_use": "Filling gaps with verdict language, subject accusation, scoring.",
+      "relation_to_language_layer": "LANG-TERM-0004 Provenance Gap",
+      "data_collection_status": "not_collecting_data",
+      "storage_status": "no_storage_created",
+      "interface_status": "no_interface_created",
+      "non_authorization_statement": "This input category does not authorize interface, upload, storage, scoring, or verdict output."
+    },
+    {
+      "input_id": "WB-INPUT-0008",
+      "name": "Intended Use Context",
+      "purpose": "Record how artifact condition reasoning may be used without authorizing action.",
+      "allowed_use": "Future output boundary and escalation reasoning.",
+      "forbidden_use": "Legal, medical, financial, law-enforcement conclusions; scoring; verdicts.",
+      "relation_to_language_layer": "LANG-TERM-0006 Output Boundary",
+      "data_collection_status": "not_collecting_data",
+      "storage_status": "no_storage_created",
+      "interface_status": "no_interface_created",
+      "non_authorization_statement": "This input category does not authorize interface, upload, storage, scoring, or verdict output."
+    }
+  ],
+  "forbidden_inputs": [
+    "subject_accusation_request",
+    "fake_real_verdict_request",
+    "identity_judgment_request",
+    "scoring_request",
+    "upload_request",
+    "legal_conclusion_request",
+    "medical_conclusion_request",
+    "financial_conclusion_request",
+    "law_enforcement_conclusion_request",
+    "evidence_free_certainty_request"
+  ],
+  "storage_policy": "no_storage_created_no_data_collection",
+  "privacy_policy": "no_user_data_collection_no_analytics",
+  "non_authorization_statement": "This input model defines governance categories only. It does not authorize interface, prototype, upload, storage, scoring, API, or public engine.",
+  "last_reviewed": "2026-06-17"
+}

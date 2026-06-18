@@ -1,0 +1,115 @@
+{
+  "boundary_id": "EP-WB-OUTPUT-BOUNDARY-001",
+  "name": "Hoax.ai Evidence Posture Workbench Output Boundary",
+  "version": "v1.0.0",
+  "status": "governed_workbench_output_boundary",
+  "maturity": "governance_only_no_workbench_no_engine_no_classifier_no_tool",
+  "allowed_output_families": [
+    {
+      "output_id": "WB-OUTPUT-0001",
+      "name": "Evidence Posture Summary",
+      "allowed_function": "Descriptive summary of artifact condition under governed posture language.",
+      "forbidden_function": "Truth verdict, fake/real classification, subject judgment, numeric score.",
+      "relation_to_language_layer": "LANG-TERM-0001 Evidence Posture",
+      "verdict_status": "no_verdict_allowed",
+      "scoring_status": "no_score_allowed",
+      "subject_judgment_status": "no_subject_judgment_allowed",
+      "non_authorization_statement": "This output family does not authorize verdict, scoring, or subject judgment."
+    },
+    {
+      "output_id": "WB-OUTPUT-0002",
+      "name": "Artifact Boundary Note",
+      "allowed_function": "Restate artifact-only examination boundary.",
+      "forbidden_function": "Subject accusation, guilt inference, institution bad-faith claims.",
+      "relation_to_language_layer": "LANG-TERM-0002 Artifact–Subject Separation",
+      "verdict_status": "no_verdict_allowed",
+      "scoring_status": "no_score_allowed",
+      "subject_judgment_status": "no_subject_judgment_allowed",
+      "non_authorization_statement": "This output family does not authorize verdict, scoring, or subject judgment."
+    },
+    {
+      "output_id": "WB-OUTPUT-0003",
+      "name": "Source Confidence Note",
+      "allowed_function": "Bounded description of source chain support for artifact condition.",
+      "forbidden_function": "Source certification, truth verdict, subject accusation.",
+      "relation_to_language_layer": "LANG-TERM-0003 Source Confidence",
+      "verdict_status": "no_verdict_allowed",
+      "scoring_status": "no_score_allowed",
+      "subject_judgment_status": "no_subject_judgment_allowed",
+      "non_authorization_statement": "This output family does not authorize verdict, scoring, or subject judgment."
+    },
+    {
+      "output_id": "WB-OUTPUT-0004",
+      "name": "Provenance Gap Note",
+      "allowed_function": "Describe missing or weak provenance without filling gaps with verdicts.",
+      "forbidden_function": "Authenticity certification, fake/real verdict, unsupported certainty.",
+      "relation_to_language_layer": "LANG-TERM-0004 Provenance Gap",
+      "verdict_status": "no_verdict_allowed",
+      "scoring_status": "no_score_allowed",
+      "subject_judgment_status": "no_subject_judgment_allowed",
+      "non_authorization_statement": "This output family does not authorize verdict, scoring, or subject judgment."
+    },
+    {
+      "output_id": "WB-OUTPUT-0005",
+      "name": "Missing Information Note",
+      "allowed_function": "List information gaps that constrain posture description.",
+      "forbidden_function": "Evidence-free certainty, scoring, subject accusation.",
+      "relation_to_language_layer": "LANG-TERM-0007 Claim and Source Traceability",
+      "verdict_status": "no_verdict_allowed",
+      "scoring_status": "no_score_allowed",
+      "subject_judgment_status": "no_subject_judgment_allowed",
+      "non_authorization_statement": "This output family does not authorize verdict, scoring, or subject judgment."
+    },
+    {
+      "output_id": "WB-OUTPUT-0006",
+      "name": "Not Assessable State",
+      "allowed_function": "Disciplined posture when signals cannot support further description.",
+      "forbidden_function": "False certainty, fake/real verdict, scoring.",
+      "relation_to_language_layer": "LANG-TERM-0005 Not Assessable",
+      "verdict_status": "no_verdict_allowed",
+      "scoring_status": "no_score_allowed",
+      "subject_judgment_status": "no_subject_judgment_allowed",
+      "non_authorization_statement": "This output family does not authorize verdict, scoring, or subject judgment."
+    },
+    {
+      "output_id": "WB-OUTPUT-0007",
+      "name": "Output Boundary Note",
+      "allowed_function": "State governed limits on what may be said about artifact condition.",
+      "forbidden_function": "Verdict language, certification, subject accusation, scoring.",
+      "relation_to_language_layer": "LANG-TERM-0006 Output Boundary",
+      "verdict_status": "no_verdict_allowed",
+      "scoring_status": "no_score_allowed",
+      "subject_judgment_status": "no_subject_judgment_allowed",
+      "non_authorization_statement": "This output family does not authorize verdict, scoring, or subject judgment."
+    },
+    {
+      "output_id": "WB-OUTPUT-0008",
+      "name": "Suggested Verification Questions",
+      "allowed_function": "Questions that support further examination without prescribing conclusions.",
+      "forbidden_function": "Accusatory questions, fake/real prompts, scoring prompts.",
+      "relation_to_language_layer": "LANG-TERM-0001 Evidence Posture",
+      "verdict_status": "no_verdict_allowed",
+      "scoring_status": "no_score_allowed",
+      "subject_judgment_status": "no_subject_judgment_allowed",
+      "non_authorization_statement": "This output family does not authorize verdict, scoring, or subject judgment."
+    }
+  ],
+  "forbidden_outputs": [
+    "truth_verdict",
+    "fake_real_verdict",
+    "deepfake_verdict",
+    "authenticity_certification",
+    "truth_certification",
+    "subject_accusation",
+    "guilt_innocence_claim",
+    "fraud_deception_claim_about_subject",
+    "numeric_score",
+    "legal_conclusion",
+    "medical_conclusion",
+    "financial_conclusion",
+    "law_enforcement_conclusion",
+    "definitive_claim"
+  ],
+  "non_authorization_statement": "This output boundary defines allowed future output families only. It does not authorize interface, engine, classifier, upload, scoring, or public output.",
+  "last_reviewed": "2026-06-17"
+}

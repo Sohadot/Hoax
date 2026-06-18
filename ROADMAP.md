@@ -1208,6 +1208,51 @@ Public classifier remains blocked. Public engine remains blocked. No workbench i
 
 ---
 
+## Sprint 28 — Evidence Posture Workbench Governance v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Define governance for a future Evidence Posture Workbench without building interface, engine, classifier, tool, upload, scoring, form, API, or prototype.
+
+### Deliverables
+
+- EVIDENCE_POSTURE_WORKBENCH_GOVERNANCE.md
+- data/evidence-posture-workbench-governance-policy.json
+- data/evidence-posture-workbench-input-model.json
+- data/evidence-posture-workbench-output-boundary.json
+- data/evidence-posture-workbench-state-model.json
+- data/evidence-posture-workbench-refusal-model.json
+- data/evidence-posture-workbench-non-authorization-rules.json
+- validators/validate_evidence_posture_workbench_governance.py
+- SPRINT_28_EVIDENCE_POSTURE_WORKBENCH_GOVERNANCE_AUDIT.md
+- DEC-046 appended to DECISION_LOG.md
+- Publisher status → blocked_until_evidence_posture_workbench_dry_run_harness
+- PUB-GATE-0028 added; reference expansion gate updated
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Governance Scope
+
+- 8 input categories, 8 output families, 10 states, 8 refusal families
+- Non-authorization rules blocking interface, engine, classifier, routes, sitemap expansion
+- 34 evidence ledger claims (CLAIM-0034 added)
+- 4 sitemap URLs unchanged
+- No workbench page, prototype, engine, classifier, tool, upload, scoring, forms, analytics, API, monetization, DNS, Cloudflare, custom domain launch, or .nojekyll
+
+### Gate
+
+**Gate G28 passed.** Workbench dry-run harness blocked until Sprint 29.
+
+### Next Phase
+
+**Sprint 29 — Evidence Posture Workbench Dry-Run Harness v1**
+
+Public classifier remains blocked. Public engine remains blocked. No workbench prototype or interface may be created until dry-run governance passes.
+
+---
+
 ## Sprint 25 — Public Reference Validation and Live Surface Audit v1
 
 **Status:** COMPLETE — 2026-06-17  

@@ -1129,3 +1129,34 @@ The category language layer is the bridge between public reference pages and fut
 - No sitemap expansion is authorized.
 - No engine/classifier/tool/upload/scoring/API/forms/analytics/monetization is authorized.
 - Future work may move to Evidence Posture Workbench Governance v1 only after this validation passes.
+
+---
+
+## DEC-046 — Evidence Posture Workbench Governance v1 Adopted
+
+**Date:** 2026-06-17
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Evidence Posture Workbench Governance v1 to define the governance model for a future evidence posture workbench before any public or non-public workbench interface, engine, classifier, upload workflow, scoring system, form, API, or prototype is created.
+
+### Rationale
+
+Hoax.ai’s public language layer is now validated as Hoax-governed language, but that does not authorize a public engine. A future workbench must be governed before it exists. This sprint defines input boundaries, output boundaries, refusal rules, state model, non-authorization rules, and artifact-subject separation requirements so that any future workbench cannot become a detector, verdict machine, accusation system, or generic AI classifier.
+
+### Implications
+
+- Workbench governance may be created.
+- Workbench input categories may be defined.
+- Workbench output boundaries may be defined.
+- Workbench refusal states may be defined.
+- Workbench state transitions may be defined.
+- No workbench interface may be created.
+- No engine may be implemented.
+- No classifier may be implemented.
+- No upload workflow may be created.
+- No scoring system may be created.
+- No public tool may be created.
+- No routes or sitemap URLs may be added.
+- Future work may create a non-public workbench dry-run harness only after governance passes.

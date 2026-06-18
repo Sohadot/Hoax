@@ -1,0 +1,119 @@
+{
+  "state_model_id": "EP-WB-STATE-MODEL-001",
+  "name": "Hoax.ai Evidence Posture Workbench State Model",
+  "version": "v1.0.0",
+  "status": "governed_workbench_state_model",
+  "maturity": "governance_only_no_workbench_no_engine_no_classifier_no_tool",
+  "states": [
+    {
+      "state_id": "WB-STATE-0001",
+      "state_name": "intake_not_started",
+      "purpose": "Initial state before any future workbench intake begins.",
+      "allowed_transitions": ["WB-STATE-0002", "WB-STATE-0009"],
+      "forbidden_transitions": ["WB-STATE-0008"],
+      "boundary_requirement": "artifact_subject_separation_required",
+      "output_permission": "no_output_allowed",
+      "non_authorization_statement": "This state does not authorize interface, engine, scoring, verdict, or public output."
+    },
+    {
+      "state_id": "WB-STATE-0002",
+      "state_name": "artifact_context_incomplete",
+      "purpose": "Artifact description or type context is insufficient for posture reasoning.",
+      "allowed_transitions": ["WB-STATE-0003", "WB-STATE-0009", "WB-STATE-0007"],
+      "forbidden_transitions": ["WB-STATE-0008"],
+      "boundary_requirement": "artifact_only_context_required",
+      "output_permission": "missing_information_note_only",
+      "non_authorization_statement": "This state does not authorize interface, engine, scoring, verdict, or public output."
+    },
+    {
+      "state_id": "WB-STATE-0003",
+      "state_name": "artifact_boundary_checked",
+      "purpose": "Artifact-subject separation boundary has been verified for future reasoning.",
+      "allowed_transitions": ["WB-STATE-0004", "WB-STATE-0009"],
+      "forbidden_transitions": ["WB-STATE-0008"],
+      "boundary_requirement": "artifact_subject_separation_verified",
+      "output_permission": "artifact_boundary_note_only",
+      "non_authorization_statement": "This state does not authorize interface, engine, scoring, verdict, or public output."
+    },
+    {
+      "state_id": "WB-STATE-0004",
+      "state_name": "source_context_recorded",
+      "purpose": "Source context has been recorded for posture reasoning.",
+      "allowed_transitions": ["WB-STATE-0005", "WB-STATE-0009", "WB-STATE-0007"],
+      "forbidden_transitions": ["WB-STATE-0008"],
+      "boundary_requirement": "source_confidence_bounded",
+      "output_permission": "source_confidence_note_only",
+      "non_authorization_statement": "This state does not authorize interface, engine, scoring, verdict, or public output."
+    },
+    {
+      "state_id": "WB-STATE-0005",
+      "state_name": "provenance_gap_checked",
+      "purpose": "Provenance gaps have been identified and constrain posture language.",
+      "allowed_transitions": ["WB-STATE-0006", "WB-STATE-0007", "WB-STATE-0009"],
+      "forbidden_transitions": ["WB-STATE-0008"],
+      "boundary_requirement": "provenance_gap_acknowledged",
+      "output_permission": "provenance_gap_note_only",
+      "non_authorization_statement": "This state does not authorize interface, engine, scoring, verdict, or public output."
+    },
+    {
+      "state_id": "WB-STATE-0006",
+      "state_name": "output_boundary_checked",
+      "purpose": "Output boundary limits have been verified before any summary.",
+      "allowed_transitions": ["WB-STATE-0007", "WB-STATE-0008", "WB-STATE-0009"],
+      "forbidden_transitions": [],
+      "boundary_requirement": "output_boundary_verified",
+      "output_permission": "output_boundary_note_only",
+      "non_authorization_statement": "This state does not authorize interface, engine, scoring, verdict, or public output."
+    },
+    {
+      "state_id": "WB-STATE-0007",
+      "state_name": "not_assessable_required",
+      "purpose": "Available signals cannot support further structural description.",
+      "allowed_transitions": ["WB-STATE-0009", "WB-STATE-0010"],
+      "forbidden_transitions": ["WB-STATE-0008"],
+      "boundary_requirement": "false_certainty_prevented",
+      "output_permission": "not_assessable_state_only",
+      "non_authorization_statement": "This state does not authorize interface, engine, scoring, verdict, or public output."
+    },
+    {
+      "state_id": "WB-STATE-0008",
+      "state_name": "posture_summary_allowed",
+      "purpose": "Governed posture summary may be produced under output boundary — not public publication.",
+      "allowed_transitions": ["WB-STATE-0009", "WB-STATE-0010"],
+      "forbidden_transitions": [],
+      "boundary_requirement": "all_boundaries_verified_no_public_output",
+      "output_permission": "posture_summary_internal_governed_only",
+      "non_authorization_statement": "This state allows governed internal posture summary only. It does not authorize public output, publication, engine, scoring, verdict, or subject judgment."
+    },
+    {
+      "state_id": "WB-STATE-0009",
+      "state_name": "refusal_required",
+      "purpose": "Request must be refused under refusal model.",
+      "allowed_transitions": ["WB-STATE-0002", "WB-STATE-0007", "WB-STATE-0010"],
+      "forbidden_transitions": ["WB-STATE-0008"],
+      "boundary_requirement": "refusal_model_applied",
+      "output_permission": "refusal_and_redirection_only",
+      "non_authorization_statement": "This state does not authorize interface, engine, scoring, verdict, or public output."
+    },
+    {
+      "state_id": "WB-STATE-0010",
+      "state_name": "escalation_to_human_review_required",
+      "purpose": "Case exceeds governed automated posture reasoning scope.",
+      "allowed_transitions": ["WB-STATE-0001"],
+      "forbidden_transitions": ["WB-STATE-0008"],
+      "boundary_requirement": "human_review_boundary",
+      "output_permission": "escalation_note_only",
+      "non_authorization_statement": "This state does not authorize interface, engine, scoring, verdict, or public output."
+    }
+  ],
+  "transition_rules": [
+    "artifact_subject_separation_must_be_preserved",
+    "no_fake_real_verdict_in_any_transition",
+    "no_scoring_in_any_transition",
+    "no_subject_judgment_in_any_transition",
+    "no_unsupported_certainty_in_any_transition",
+    "posture_summary_allowed_does_not_imply_publication"
+  ],
+  "non_authorization_statement": "This state model defines future workbench states only. It does not authorize interface, engine, classifier, upload, scoring, or public output.",
+  "last_reviewed": "2026-06-17"
+}

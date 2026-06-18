@@ -18,6 +18,7 @@ from public_surface_checks import (
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
     PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE,
+    PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN,
     validate_no_extra_public_html,
     validate_public_surface,
 )
@@ -399,10 +400,12 @@ def validate_publisher_governance() -> bool:
     if pub.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
         PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE,
+        PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN,
     ):
         error(
-            f"publisher status must be {PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE} "
-            f"or {PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE}"
+            f"publisher status must be {PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE}, "
+            f"{PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE}, or "
+            f"{PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN}"
         )
         ok = False
 

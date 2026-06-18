@@ -33,6 +33,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_public_reference_live_surface.py",
     ROOT / "validators" / "validate_public_category_language_layer.py",
     ROOT / "validators" / "validate_public_category_language_validation.py",
+    ROOT / "validators" / "validate_evidence_posture_workbench_governance.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

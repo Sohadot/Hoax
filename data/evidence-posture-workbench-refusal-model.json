@@ -1,0 +1,91 @@
+{
+  "refusal_model_id": "EP-WB-REFUSAL-MODEL-001",
+  "name": "Hoax.ai Evidence Posture Workbench Refusal Model",
+  "version": "v1.0.0",
+  "status": "governed_workbench_refusal_model",
+  "maturity": "governance_only_no_workbench_no_engine_no_classifier_no_tool",
+  "refusal_families": [
+    {
+      "refusal_id": "WB-REFUSAL-0001",
+      "name": "Refuse Subject Accusation",
+      "trigger_condition": "subject_accusation_request",
+      "refusal_reason": "Workbench examines artifacts, not subjects. Subject accusation is out of scope.",
+      "safe_redirection": "artifact_description",
+      "relation_to_language_layer": "LANG-TERM-0002 Artifact–Subject Separation",
+      "non_authorization_statement": "This refusal does not authorize interface, engine, scoring, or verdict output."
+    },
+    {
+      "refusal_id": "WB-REFUSAL-0002",
+      "name": "Refuse Fake/Real Verdict",
+      "trigger_condition": "fake_real_verdict_request",
+      "refusal_reason": "Workbench structures posture language; it does not issue fake/real verdicts.",
+      "safe_redirection": "output_boundary",
+      "relation_to_language_layer": "LANG-TERM-0006 Output Boundary",
+      "non_authorization_statement": "This refusal does not authorize interface, engine, scoring, or verdict output."
+    },
+    {
+      "refusal_id": "WB-REFUSAL-0003",
+      "name": "Refuse Unsupported Certainty",
+      "trigger_condition": "evidence_free_certainty_request",
+      "refusal_reason": "Available signals cannot support requested certainty level.",
+      "safe_redirection": "not_assessable",
+      "relation_to_language_layer": "LANG-TERM-0005 Not Assessable",
+      "non_authorization_statement": "This refusal does not authorize interface, engine, scoring, or verdict output."
+    },
+    {
+      "refusal_id": "WB-REFUSAL-0004",
+      "name": "Refuse Identity Judgment",
+      "trigger_condition": "identity_judgment_request",
+      "refusal_reason": "Identity judgment about persons is out of workbench scope.",
+      "safe_redirection": "artifact_description",
+      "relation_to_language_layer": "LANG-TERM-0002 Artifact–Subject Separation",
+      "non_authorization_statement": "This refusal does not authorize interface, engine, scoring, or verdict output."
+    },
+    {
+      "refusal_id": "WB-REFUSAL-0005",
+      "name": "Refuse High-Stakes Determination",
+      "trigger_condition": "legal_conclusion_request",
+      "refusal_reason": "Legal, medical, financial, and law-enforcement conclusions are out of scope.",
+      "safe_redirection": "output_boundary",
+      "relation_to_language_layer": "LANG-TERM-0006 Output Boundary",
+      "non_authorization_statement": "This refusal does not authorize interface, engine, scoring, or verdict output."
+    },
+    {
+      "refusal_id": "WB-REFUSAL-0006",
+      "name": "Refuse Score Request",
+      "trigger_condition": "scoring_request",
+      "refusal_reason": "Numeric scoring and confidence grades are prohibited.",
+      "safe_redirection": "output_boundary",
+      "relation_to_language_layer": "LANG-TERM-0006 Output Boundary",
+      "non_authorization_statement": "This refusal does not authorize interface, engine, scoring, or verdict output."
+    },
+    {
+      "refusal_id": "WB-REFUSAL-0007",
+      "name": "Refuse Out-of-Scope Tool Request",
+      "trigger_condition": "out_of_scope_tool_request",
+      "refusal_reason": "Workbench is not a detector, classifier, upload tool, or verification service.",
+      "safe_redirection": "artifact_description",
+      "relation_to_language_layer": "LANG-TERM-0001 Evidence Posture",
+      "non_authorization_statement": "This refusal does not authorize interface, engine, scoring, or verdict output."
+    },
+    {
+      "refusal_id": "WB-REFUSAL-0008",
+      "name": "Refuse Evidence-Free Claim",
+      "trigger_condition": "evidence_free_claim_request",
+      "refusal_reason": "Claims without governed source support cannot carry workbench authority.",
+      "safe_redirection": "source_context",
+      "relation_to_language_layer": "LANG-TERM-0007 Claim and Source Traceability",
+      "non_authorization_statement": "This refusal does not authorize interface, engine, scoring, or verdict output."
+    }
+  ],
+  "redirection_rules": [
+    "artifact_description",
+    "source_context",
+    "provenance_gap",
+    "missing_information",
+    "not_assessable",
+    "output_boundary"
+  ],
+  "non_authorization_statement": "This refusal model defines future refusal behavior only. It does not authorize interface, engine, classifier, upload, scoring, or public output.",
+  "last_reviewed": "2026-06-17"
+}

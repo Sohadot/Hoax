@@ -18,6 +18,8 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_LIVE_AUDIT,
     PUBLISHER_STATUS_POST_PILOT,
     PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE,
+    PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE,
+    PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN,
     validate_no_extra_public_html,
     validate_pilot_era_public_surface,
     validate_pilot_routes_present,
@@ -333,11 +335,13 @@ def validate_publisher_governance() -> bool:
         PUBLISHER_STATUS_POST_LIVE_AUDIT,
         PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
         PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE,
+        PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN,
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_PILOT}, "
             f"{PUBLISHER_STATUS_POST_LIVE_AUDIT}, {PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE}, "
-            f"or {PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE}, "
+            f"{PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE}, or "
+            f"{PUBLISHER_STATUS_POST_WORKBENCH_DRY_RUN}, "
             f"got {pub.get('current_publisher_status')}"
         )
         ok = False

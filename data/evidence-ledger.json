@@ -365,6 +365,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Public category language layer validated. Engine, classifier, tool, upload, scoring, and broader publication remain blocked."
+    },
+    {
+      "claim_id": "CLAIM-0034",
+      "claim_text": "Hoax.ai has adopted Evidence Posture Workbench Governance v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "EVIDENCE_POSTURE_WORKBENCH_GOVERNANCE.md, DECISION_LOG.md (DEC-046)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Workbench governance defined. No interface, engine, classifier, tool, upload, scoring, or public prototype created."
     }
   ]
 }

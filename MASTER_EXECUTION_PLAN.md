@@ -66,12 +66,13 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G25 | Public Reference Validation and Live Surface Audit | Sprint 25 validator PASS |
 | G26 | Public Category Language Layer | Sprint 26 validator PASS |
 | G27 | Public Category Language Validation and Surface Audit | Sprint 27 validator PASS |
+| G28 | Evidence Posture Workbench Governance | Sprint 28 validator PASS |
 
-**Gate G27 passed.** Sprint 28 (Evidence Posture Workbench Governance) may proceed when authorized. Public classifier and engine remain blocked. Publisher remains blocked from broader publication until workbench governance is adopted. External deployment remains separately governed.
+**Gate G28 passed.** Sprint 29 (Evidence Posture Workbench Dry-Run Harness) may proceed when authorized. Public classifier and engine remain blocked. No workbench interface or prototype may be created until dry-run governance passes. External deployment remains separately governed.
 
 ### Foundation Gates vs Deployment Gates
 
-Foundation gates (G0–G27) govern category infrastructure, reference governance, controlled public reference pilot, live surface validation, category language layer, language validation, and expansion readiness. They must pass before reference layer scale.
+Foundation gates (G0–G28) govern category infrastructure, reference governance, language layer, language validation, workbench governance, and expansion readiness. They must pass before reference layer scale or operational layers.
 
 Deployment gates are **separate** and **not current foundation steps**. They open only after reference expansion governance is in place. None are passed.
 
@@ -200,7 +201,8 @@ Classifier, API, and workflow tools require protocol and standard completion fir
 | Sprint 25 | COMPLETE | G25 passed |
 | Sprint 26 | COMPLETE | G26 passed |
 | Sprint 27 | COMPLETE | G27 passed |
-| Sprint 28+ | READY | G27 passed — Evidence Posture Workbench Governance pending; engine/classifier blocked; deployment gates separately governed |
+| Sprint 28 | COMPLETE | G28 passed |
+| Sprint 29+ | READY | G28 passed — Workbench Dry-Run Harness pending; engine/classifier blocked; deployment gates separately governed |
 
 ## Governing Sentence
 

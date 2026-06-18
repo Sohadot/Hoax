@@ -367,6 +367,17 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public category language validation adoption per DEC-045."
+    },
+    {
+      "claim_id": "CLAIM-0034",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["EVIDENCE_POSTURE_WORKBENCH_GOVERNANCE.md", "DECISION_LOG.md", "data/evidence-posture-workbench-governance-policy.json"],
+      "source_refs": ["SOURCE-0160", "SOURCE-0161", "SOURCE-0162", "SOURCE-0163", "SOURCE-0164", "SOURCE-0165", "SOURCE-0166", "SOURCE-0167"],
+      "support_scope": "evidence posture workbench governance adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Evidence Posture Workbench Governance adoption per DEC-046."
     }
   ],
   "last_reviewed": "2026-06-17"
