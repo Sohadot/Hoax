@@ -3,7 +3,7 @@
   "name": "Hoax.ai Internal Draft Blueprint Registry",
   "version": "v1.0.0",
   "status": "governed_internal_draft_blueprint_registry",
-  "maturity": "blueprint_records_only_no_drafts_no_routes_no_publication",
+  "maturity": "internal_drafts_only_no_routes_no_sitemap_no_publication",
   "blueprint_pack_id": "INT-DRAFT-BP-PACK-V1-001",
   "blueprint_pack_source": "data/internal-draft-blueprint-pack-v1.json",
   "blueprint_records": [
@@ -13,12 +13,15 @@
       "candidate_name": "Evidence Posture",
       "blueprint_pack_id": "INT-DRAFT-BP-PACK-V1-001",
       "blueprint_status": "blueprint_created_internal",
-      "draft_status": "not_draft_created",
+      "draft_status": "internal_draft_created",
       "route_status": "not_route_created",
       "sitemap_status": "not_sitemap_eligible",
       "publication_status": "publication_blocked",
       "blueprint_ref": "data/internal-draft-blueprint-pack-v1.json",
-      "review_status": "blueprint_internal_pending_future_draft"
+      "review_status": "blueprint_internal_pending_future_draft",
+      "internal_draft_status": "internal_draft_created",
+      "internal_draft_ref": "data/internal-draft-pack-v1.json",
+      "internal_draft_pack_id": "INT-DRAFT-PACK-V1-001"
     },
     {
       "blueprint_id": "DRAFT-BLUEPRINT-0002",
@@ -26,12 +29,15 @@
       "candidate_name": "Artifact–Subject Separation",
       "blueprint_pack_id": "INT-DRAFT-BP-PACK-V1-001",
       "blueprint_status": "blueprint_created_internal",
-      "draft_status": "not_draft_created",
+      "draft_status": "internal_draft_created",
       "route_status": "not_route_created",
       "sitemap_status": "not_sitemap_eligible",
       "publication_status": "publication_blocked",
       "blueprint_ref": "data/internal-draft-blueprint-pack-v1.json",
-      "review_status": "blueprint_internal_pending_future_draft"
+      "review_status": "blueprint_internal_pending_future_draft",
+      "internal_draft_status": "internal_draft_created",
+      "internal_draft_ref": "data/internal-draft-pack-v1.json",
+      "internal_draft_pack_id": "INT-DRAFT-PACK-V1-001"
     },
     {
       "blueprint_id": "DRAFT-BLUEPRINT-0003",

@@ -457,10 +457,11 @@ def validate_publisher_and_gates() -> bool:
         "blocked_until_internal_draft_blueprint",
         "blocked_until_first_internal_draft_blueprint_pack",
         "blocked_until_first_internal_draft_pack",
+        "blocked_until_internal_draft_review_and_refinement",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "
-            f"blocked_until_first_internal_draft_blueprint_pack or blocked_until_first_internal_draft_pack, got {status}"
+            f"blocked_until_first_internal_draft_blueprint_pack, blocked_until_first_internal_draft_pack, or blocked_until_internal_draft_review_and_refinement, got {status}"
         )
         ok = False
 

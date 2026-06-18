@@ -393,12 +393,16 @@ def validate_candidate_registry() -> bool:
         for field, expected in [
             ("route_status", "not_route_created"),
             ("sitemap_status", "not_sitemap_eligible"),
-            ("draft_status", "not_draft_created"),
             ("publication_status", "publication_blocked"),
         ]:
             if entry.get(field) != expected:
                 error(f"candidate registry: {cid} {field} must remain {expected}")
                 ok = False
+
+        draft_status = entry.get("draft_status", "")
+        if draft_status not in ("not_draft_created", "internal_draft_created"):
+            error(f"candidate registry: {cid} invalid draft_status {draft_status}")
+            ok = False
 
         if entry.get("evaluation_status") != ev.get("evaluation_status"):
             error(f"candidate registry: {cid} evaluation_status mismatch")
@@ -425,10 +429,11 @@ def validate_publisher_and_gates() -> bool:
         "blocked_until_internal_draft_blueprint",
         "blocked_until_first_internal_draft_blueprint_pack",
         "blocked_until_first_internal_draft_pack",
+        "blocked_until_internal_draft_review_and_refinement",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "
-            f"blocked_until_internal_draft_blueprint, blocked_until_first_internal_draft_blueprint_pack, or blocked_until_first_internal_draft_pack, got {status}"
+            f"blocked_until_internal_draft_blueprint, blocked_until_first_internal_draft_blueprint_pack, blocked_until_first_internal_draft_pack, or blocked_until_internal_draft_review_and_refinement, got {status}"
         )
         ok = False
     prohibited = " ".join(pub.get("prohibited_current_outputs", [])).lower()

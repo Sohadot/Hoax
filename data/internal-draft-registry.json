@@ -1,0 +1,46 @@
+{
+  "registry_id": "INT-DRAFT-REGISTRY-001",
+  "name": "Hoax.ai Internal Draft Registry",
+  "version": "v1.0.0",
+  "status": "governed_internal_draft_registry",
+  "maturity": "internal_drafts_only_no_routes_no_sitemap_no_publication",
+  "draft_pack_id": "INT-DRAFT-PACK-V1-001",
+  "draft_pack_source": "data/internal-draft-pack-v1.json",
+  "draft_records": [
+    {
+      "draft_id": "DRAFT-0001",
+      "candidate_id": "REF-CAND-0001",
+      "candidate_name": "Evidence Posture",
+      "blueprint_id": "DRAFT-BLUEPRINT-0001",
+      "draft_pack_id": "INT-DRAFT-PACK-V1-001",
+      "draft_file_path": "_internal_drafts/reference/evidence-posture.md",
+      "draft_status": "internal_draft_created",
+      "route_status": "not_route_created",
+      "sitemap_status": "not_sitemap_eligible",
+      "publication_status": "publication_blocked",
+      "public_metadata_status": "not_created",
+      "public_navigation_status": "not_linked",
+      "deployment_status": "not_deployed",
+      "draft_ref": "data/internal-draft-pack-v1.json",
+      "review_status": "internal_draft_pending_review"
+    },
+    {
+      "draft_id": "DRAFT-0002",
+      "candidate_id": "REF-CAND-0002",
+      "candidate_name": "Artifact–Subject Separation",
+      "blueprint_id": "DRAFT-BLUEPRINT-0002",
+      "draft_pack_id": "INT-DRAFT-PACK-V1-001",
+      "draft_file_path": "_internal_drafts/reference/artifact-subject-separation.md",
+      "draft_status": "internal_draft_created",
+      "route_status": "not_route_created",
+      "sitemap_status": "not_sitemap_eligible",
+      "publication_status": "publication_blocked",
+      "public_metadata_status": "not_created",
+      "public_navigation_status": "not_linked",
+      "deployment_status": "not_deployed",
+      "draft_ref": "data/internal-draft-pack-v1.json",
+      "review_status": "internal_draft_pending_review"
+    }
+  ],
+  "last_reviewed": "2026-06-17"
+}

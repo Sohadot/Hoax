@@ -339,7 +339,6 @@ def validate_blueprint_pack() -> bool:
 
         for field, expected in [
             ("blueprint_status", "blueprint_created_internal"),
-            ("draft_status", "not_draft_created"),
             ("route_status", "not_route_created"),
             ("sitemap_status", "not_sitemap_eligible"),
             ("publication_status", "publication_blocked"),
@@ -347,6 +346,15 @@ def validate_blueprint_pack() -> bool:
             if bp.get(field) != expected:
                 error(f"blueprint pack: {bid} {field} must be {expected}")
                 ok = False
+
+        expected_draft = (
+            "internal_draft_created"
+            if bid in ("DRAFT-BLUEPRINT-0001", "DRAFT-BLUEPRINT-0002")
+            else "not_draft_created"
+        )
+        if bp.get("draft_status") != expected_draft:
+            error(f"blueprint pack: {bid} draft_status must be {expected_draft}")
+            ok = False
 
         if bp.get("page_type_ref") not in page_type_ids:
             error(f"blueprint pack: {bid} invalid page_type_ref")
@@ -428,7 +436,6 @@ def validate_blueprint_registry() -> bool:
 
         for field, expected in [
             ("blueprint_status", "blueprint_created_internal"),
-            ("draft_status", "not_draft_created"),
             ("route_status", "not_route_created"),
             ("sitemap_status", "not_sitemap_eligible"),
             ("publication_status", "publication_blocked"),
@@ -436,9 +443,23 @@ def validate_blueprint_registry() -> bool:
             if entry.get(field) != expected:
                 error(f"blueprint registry: {bid} {field} must be {expected}")
                 ok = False
-            if bp.get(field) != entry.get(field):
-                error(f"blueprint registry: {bid} {field} mismatch with pack")
+
+        expected_draft = (
+            "internal_draft_created"
+            if bid in ("DRAFT-BLUEPRINT-0001", "DRAFT-BLUEPRINT-0002")
+            else "not_draft_created"
+        )
+        if entry.get("draft_status") != expected_draft:
+            error(f"blueprint registry: {bid} draft_status must be {expected_draft}")
+            ok = False
+
+        if bid in ("DRAFT-BLUEPRINT-0001", "DRAFT-BLUEPRINT-0002"):
+            if bp.get("draft_status") != entry.get("draft_status"):
+                error(f"blueprint registry: {bid} draft_status mismatch with pack")
                 ok = False
+        elif bp.get("draft_status") != entry.get("draft_status"):
+            error(f"blueprint registry: {bid} draft_status mismatch with pack")
+            ok = False
 
         if entry.get("candidate_id") != bp.get("candidate_id"):
             error(f"blueprint registry: {bid} candidate_id mismatch")
@@ -463,12 +484,16 @@ def validate_candidate_registry() -> bool:
         for field, expected in [
             ("route_status", "not_route_created"),
             ("sitemap_status", "not_sitemap_eligible"),
-            ("draft_status", "not_draft_created"),
             ("publication_status", "publication_blocked"),
         ]:
             if entry.get(field) != expected:
                 error(f"candidate registry: {cid} {field} must remain {expected}")
                 ok = False
+
+        draft_status = entry.get("draft_status", "")
+        if draft_status not in ("not_draft_created", "internal_draft_created"):
+            error(f"candidate registry: {cid} invalid draft_status {draft_status}")
+            ok = False
 
         if cid in pack_candidates:
             if entry.get("internal_draft_blueprint_status") != "blueprint_created_internal":
@@ -502,10 +527,13 @@ def validate_publisher_and_gates() -> bool:
 
     pub = load_json(ROOT / "data" / "publisher-governance-policy.json")
     status = pub.get("current_publisher_status", "")
-    if status != "blocked_until_first_internal_draft_pack":
+    if status not in (
+        "blocked_until_first_internal_draft_pack",
+        "blocked_until_internal_draft_review_and_refinement",
+    ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "
-            f"blocked_until_first_internal_draft_pack, got {status}"
+            f"blocked_until_first_internal_draft_pack or blocked_until_internal_draft_review_and_refinement, got {status}"
         )
         ok = False
 

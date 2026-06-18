@@ -118,6 +118,14 @@ CASE_ID_PATTERN = re.compile(r"^DRY-RUN-CASE-\d{4}$")
 PUBLIC_FILES = {"index.html", "styles.css", "robots.txt", "sitemap.xml"}
 
 DRAFT_PATTERNS = ["draft/", "drafts/", "-draft.html", "_draft.html"]
+ALLOWED_INTERNAL_DRAFT_ROOT = "_internal_drafts"
+
+
+def _is_governed_internal_draft(path: Path) -> bool:
+    try:
+        return path.relative_to(ROOT).parts[0] == ALLOWED_INTERNAL_DRAFT_ROOT
+    except (ValueError, IndexError):
+        return False
 
 NEGATION_MARKERS = [
     "no ",
@@ -473,6 +481,7 @@ def validate_state_machine() -> bool:
         "blocked_until_internal_draft_blueprint",
         "blocked_until_first_internal_draft_blueprint_pack",
         "blocked_until_first_internal_draft_pack",
+        "blocked_until_internal_draft_review_and_refinement",
     ):
         error(f"publisher-state-machine.json: invalid current_system_state {current}")
         ok = False
@@ -552,7 +561,10 @@ def validate_repository_safety() -> bool:
         ok = False
 
     for pattern in DRAFT_PATTERNS:
-        matches = list(ROOT.glob(f"**/*{pattern}*"))
+        matches = [
+            p for p in ROOT.glob(f"**/*{pattern}*")
+            if not _is_governed_internal_draft(p)
+        ]
         if matches:
             error(f"repository safety: draft-like files found matching {pattern}")
             ok = False
@@ -596,6 +608,7 @@ def validate_cross_file() -> bool:
         "blocked_until_internal_draft_blueprint",
         "blocked_until_first_internal_draft_blueprint_pack",
         "blocked_until_first_internal_draft_pack",
+        "blocked_until_internal_draft_review_and_refinement",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must remain blocked from publication, got {status}"

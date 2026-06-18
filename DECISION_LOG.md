@@ -955,3 +955,30 @@ Reference candidates should not move directly into writing. The first blueprint 
 - Blueprint records do not authorize draft prose, draft files, public pages, routes, sitemap expansion, public metadata, or publication.
 - Future work may create an Internal Draft Pack only after this blueprint pack passes and a later explicit sprint authorizes draft files.
 - Publisher remains blocked from actual drafts and publication.
+
+---
+
+## DEC-039 — First Internal Draft Pack v1 Adopted
+
+**Date:** 2026-06-17
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts First Internal Draft Pack v1 to create the first non-site-public internal draft files for selected blueprint records, while preserving blocked publication status, no public routes, no sitemap expansion, no public metadata, and no deployment authorization.
+
+### Rationale
+
+After candidates, evaluation, draft blueprint governance, and blueprint records, Hoax.ai may begin internal draft prose only in a strictly non-public, non-route, non-sitemap, validation-bound location. The first drafts must demonstrate reference quality, boundary discipline, claim/source discipline, semantic SEO restraint, and internal structure before any public release pathway is considered.
+
+### Implications
+
+- Internal draft prose may be created for approved blueprint records only.
+- Internal drafts remain non-site-public.
+- Internal drafts do not authorize public pages.
+- Internal drafts do not authorize routes.
+- Internal drafts do not authorize sitemap expansion.
+- Internal drafts do not authorize public metadata.
+- Internal drafts do not authorize publication.
+- Internal drafts do not authorize deployment.
+- Future work may review, refine, and validate drafts before any public route proposal.

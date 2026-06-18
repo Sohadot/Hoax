@@ -1172,6 +1172,76 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Internal draft blueprint pack validator."
+    },
+    {
+      "source_id": "SOURCE-0118",
+      "source_title": "FIRST_INTERNAL_DRAFT_PACK.md",
+      "source_type": "internal_governance",
+      "location": "FIRST_INTERNAL_DRAFT_PACK.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Human-readable first internal draft pack per DEC-039."
+    },
+    {
+      "source_id": "SOURCE-0119",
+      "source_title": "data/internal-draft-pack-policy.json",
+      "source_type": "internal_registry",
+      "location": "data/internal-draft-pack-policy.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Machine-readable internal draft pack policy."
+    },
+    {
+      "source_id": "SOURCE-0120",
+      "source_title": "data/internal-draft-pack-v1.json",
+      "source_type": "internal_registry",
+      "location": "data/internal-draft-pack-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "First internal draft pack records."
+    },
+    {
+      "source_id": "SOURCE-0121",
+      "source_title": "data/internal-draft-registry.json",
+      "source_type": "internal_registry",
+      "location": "data/internal-draft-registry.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Internal draft registry."
+    },
+    {
+      "source_id": "SOURCE-0122",
+      "source_title": "_internal_drafts/reference/evidence-posture.md",
+      "source_type": "internal_draft",
+      "location": "_internal_drafts/reference/evidence-posture.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Internal draft DRAFT-0001 Evidence Posture."
+    },
+    {
+      "source_id": "SOURCE-0123",
+      "source_title": "_internal_drafts/reference/artifact-subject-separation.md",
+      "source_type": "internal_draft",
+      "location": "_internal_drafts/reference/artifact-subject-separation.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Internal draft DRAFT-0002 Artifact–Subject Separation."
+    },
+    {
+      "source_id": "SOURCE-0124",
+      "source_title": "validators/validate_internal_draft_pack.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_internal_draft_pack.py",
+      "supports": ["operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Internal draft pack validator."
     }
   ]
 }

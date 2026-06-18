@@ -3,8 +3,10 @@
   "name": "Hoax.ai Reference Page Candidate Registry",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "blueprint_records_only_no_drafts_no_routes_no_publication",
+  "maturity": "internal_drafts_only_no_routes_no_sitemap_no_publication",
   "candidate_pack_id": "REF-CAND-PACK-V1-001",
+  "draft_pack_id": "INT-DRAFT-PACK-V1-001",
+  "draft_pack_source": "data/internal-draft-pack-v1.json",
   "candidate_pack_source": "data/reference-candidate-pack-v1.json",
   "evaluation_source": "data/reference-candidate-evaluation-v1.json",
   "blueprint_pack_id": "INT-DRAFT-BP-PACK-V1-001",
@@ -17,7 +19,7 @@
       "candidate_status": "candidate_registered",
       "route_status": "not_route_created",
       "sitemap_status": "not_sitemap_eligible",
-      "draft_status": "not_draft_created",
+      "draft_status": "internal_draft_created",
       "publication_status": "publication_blocked",
       "pack_reference": "data/reference-candidate-pack-v1.json",
       "evaluation_status": "evaluation_complete",
@@ -26,7 +28,10 @@
       "evaluation_ref": "data/reference-candidate-evaluation-v1.json",
       "internal_draft_blueprint_status": "blueprint_created_internal",
       "internal_draft_blueprint_ref": "data/internal-draft-blueprint-pack-v1.json",
-      "internal_draft_blueprint_pack_id": "INT-DRAFT-BP-PACK-V1-001"
+      "internal_draft_blueprint_pack_id": "INT-DRAFT-BP-PACK-V1-001",
+      "internal_draft_status": "internal_draft_created",
+      "internal_draft_ref": "data/internal-draft-pack-v1.json",
+      "internal_draft_pack_id": "INT-DRAFT-PACK-V1-001"
     },
     {
       "candidate_id": "REF-CAND-0002",
@@ -35,7 +40,7 @@
       "candidate_status": "candidate_registered",
       "route_status": "not_route_created",
       "sitemap_status": "not_sitemap_eligible",
-      "draft_status": "not_draft_created",
+      "draft_status": "internal_draft_created",
       "publication_status": "publication_blocked",
       "pack_reference": "data/reference-candidate-pack-v1.json",
       "evaluation_status": "evaluation_complete",
@@ -44,7 +49,10 @@
       "evaluation_ref": "data/reference-candidate-evaluation-v1.json",
       "internal_draft_blueprint_status": "blueprint_created_internal",
       "internal_draft_blueprint_ref": "data/internal-draft-blueprint-pack-v1.json",
-      "internal_draft_blueprint_pack_id": "INT-DRAFT-BP-PACK-V1-001"
+      "internal_draft_blueprint_pack_id": "INT-DRAFT-BP-PACK-V1-001",
+      "internal_draft_status": "internal_draft_created",
+      "internal_draft_ref": "data/internal-draft-pack-v1.json",
+      "internal_draft_pack_id": "INT-DRAFT-PACK-V1-001"
     },
     {
       "candidate_id": "REF-CAND-0003",

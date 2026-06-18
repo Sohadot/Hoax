@@ -972,9 +972,56 @@ External deployment remains deferred (Sprint 1C). Maturity is blueprint_records_
 
 ### Next Phase
 
-**Sprint 21 — First Internal Draft Pack v1**
+**Sprint 22 — Internal Draft Review and Refinement v1**
 
-Public classifier remains blocked. External deployment remains blocked. Publisher remains blocked from actual draft files and publication until future explicit approval.
+Public classifier remains blocked. External deployment remains blocked. Publisher remains blocked from publication until future explicit approval. Public page conversion remains blocked until a later explicit public release pathway.
+
+---
+
+## Sprint 21 — First Internal Draft Pack v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Create the first non-site-public internal draft files for two selected blueprint records without creating public pages, routes, sitemap entries, or publication rights.
+
+### Deliverables
+
+- FIRST_INTERNAL_DRAFT_PACK.md
+- data/internal-draft-pack-policy.json
+- data/internal-draft-pack-v1.json
+- data/internal-draft-registry.json
+- _internal_drafts/reference/evidence-posture.md
+- _internal_drafts/reference/artifact-subject-separation.md
+- validators/validate_internal_draft_pack.py
+- SPRINT_21_FIRST_INTERNAL_DRAFT_PACK_AUDIT.md
+- DEC-039 appended to DECISION_LOG.md
+- data/internal-draft-blueprint-registry.json updated (internal draft refs for 0001, 0002)
+- data/reference-page-candidate-registry.json updated (internal draft refs for REF-CAND-0001, 0002)
+- data/publisher-governance-policy.json updated (blocked_until_internal_draft_review_and_refinement)
+- data/publisher-quality-gates.json updated (PUB-GATE-0021)
+- data/reference-expansion-gate.json updated
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Draft Pack Scope
+
+- 2 internal draft files (DRAFT-0001, DRAFT-0002)
+- Selected: REF-CAND-0001, REF-CAND-0002 (DRAFT-BLUEPRINT-0001, DRAFT-BLUEPRINT-0002)
+- Excluded: REF-CAND-0006, 0007 (not in first draft pack); REF-CAND-0008 (needs_boundary_refinement)
+- 27 evidence ledger claims (CLAIM-0027 added)
+- No public pages, routes, sitemap expansion, or publication
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Maturity is internal_drafts_only_no_routes_no_sitemap_no_publication.
+
+### Next Phase
+
+**Sprint 22 — Internal Draft Review and Refinement v1**
+
+Public classifier remains blocked. External deployment remains blocked. Publisher remains blocked from publication until future explicit approval. Public page conversion remains blocked until a later explicit public release pathway.
 
 ---
 

@@ -7,7 +7,6 @@ ALLOWED_CANDIDATE_STATUS = {"candidate_registered", "proposed_internal"}
 REQUIRED_BLOCKED_FIELDS = {
     "route_status": "not_route_created",
     "sitemap_status": "not_sitemap_eligible",
-    "draft_status": "not_draft_created",
     "publication_status": "publication_blocked",
 }
 
@@ -20,6 +19,10 @@ def validate_candidates_blocked_only(candidates: list, error) -> bool:
         status = entry.get("candidate_status", "")
         if status not in ALLOWED_CANDIDATE_STATUS:
             error(f"candidate {cid}: invalid candidate_status {status}")
+            ok = False
+        draft_status = entry.get("draft_status", "")
+        if draft_status not in ("not_draft_created", "internal_draft_created"):
+            error(f"candidate {cid}: invalid draft_status {draft_status}")
             ok = False
         for field, expected in REQUIRED_BLOCKED_FIELDS.items():
             if entry.get(field) != expected:

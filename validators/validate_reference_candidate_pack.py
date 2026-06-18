@@ -482,10 +482,11 @@ def validate_cross_file() -> bool:
         "blocked_until_internal_draft_blueprint",
         "blocked_until_first_internal_draft_blueprint_pack",
         "blocked_until_first_internal_draft_pack",
+        "blocked_until_internal_draft_review_and_refinement",
     ):
         error(
             "publisher-governance-policy: current_publisher_status must be "
-            "blocked_until_internal_draft_blueprint, blocked_until_first_internal_draft_blueprint_pack, or blocked_until_first_internal_draft_pack"
+            "blocked_until_internal_draft_blueprint, blocked_until_first_internal_draft_blueprint_pack, blocked_until_first_internal_draft_pack, or blocked_until_internal_draft_review_and_refinement"
         )
         ok = False
 

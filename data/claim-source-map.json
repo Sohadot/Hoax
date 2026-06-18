@@ -290,6 +290,17 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "First internal draft blueprint pack adoption per DEC-038."
+    },
+    {
+      "claim_id": "CLAIM-0027",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["FIRST_INTERNAL_DRAFT_PACK.md", "DECISION_LOG.md", "data/internal-draft-pack-v1.json"],
+      "source_refs": ["SOURCE-0118", "SOURCE-0119", "SOURCE-0120", "SOURCE-0124"],
+      "support_scope": "first internal draft pack adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "First internal draft pack adoption per DEC-039."
     }
   ],
   "last_reviewed": "2026-06-17"
