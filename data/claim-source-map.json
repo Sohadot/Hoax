@@ -246,6 +246,17 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Publisher dry-run harness adoption per DEC-034."
+    },
+    {
+      "claim_id": "CLAIM-0023",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["FIRST_REFERENCE_CANDIDATE_PACK.md", "DECISION_LOG.md", "data/reference-candidate-pack-v1.json"],
+      "source_refs": ["SOURCE-0096", "SOURCE-0097", "SOURCE-0099"],
+      "support_scope": "first reference candidate pack adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "First reference candidate pack adoption per DEC-035."
     }
   ],
   "last_reviewed": "2026-06-17"

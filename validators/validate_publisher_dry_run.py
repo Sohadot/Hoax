@@ -462,10 +462,17 @@ def validate_state_machine() -> bool:
     if "dry_run_pass" not in states:
         error("publisher-state-machine.json: dry_run_pass state missing")
         ok = False
+    if "candidate_pack_registered" not in states:
+        error("publisher-state-machine.json: candidate_pack_registered state missing")
+        ok = False
 
     current = data.get("current_system_state", "")
-    if current != "blocked_until_first_reference_candidate_pack":
-        error(f"publisher-state-machine.json: current_system_state must be blocked_until_first_reference_candidate_pack, got {current}")
+    if current not in (
+        "blocked",
+        "blocked_until_first_reference_candidate_pack",
+        "blocked_until_internal_draft_blueprint_or_candidate_evaluation",
+    ):
+        error(f"publisher-state-machine.json: invalid current_system_state {current}")
         ok = False
 
     blocked = data.get("blocked_transitions", [])
@@ -523,9 +530,11 @@ def validate_repository_safety() -> bool:
     ok = True
 
     candidates = load_json(ROOT / "data" / "reference-page-candidate-registry.json").get("candidates", [])
-    if candidates != []:
-        error("reference-page-candidate-registry: candidates must remain empty")
-        ok = False
+    if candidates:
+        from candidate_registry_checks import validate_candidates_blocked_only
+
+        if not validate_candidates_blocked_only(candidates, error):
+            ok = False
 
     queues = load_json(ROOT / "data" / "publisher-queue-registry.json").get("queues", [])
     for q in queues:
@@ -580,10 +589,12 @@ def validate_cross_file() -> bool:
 
     pub_policy = load_json(ROOT / "data" / "publisher-governance-policy.json")
     status = pub_policy.get("current_publisher_status", "")
-    if status != "blocked_until_first_reference_candidate_pack":
+    if status not in (
+        "blocked_until_first_reference_candidate_pack",
+        "blocked_until_internal_draft_blueprint_or_candidate_evaluation",
+    ):
         error(
-            f"publisher-governance-policy: current_publisher_status must be "
-            f"blocked_until_first_reference_candidate_pack, got {status}"
+            f"publisher-governance-policy: current_publisher_status must remain blocked from publication, got {status}"
         )
         ok = False
     if "draft" in " ".join(pub_policy.get("allowed_current_outputs", [])).lower():

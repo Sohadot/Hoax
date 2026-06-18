@@ -3,7 +3,98 @@
   "name": "Hoax.ai Reference Page Candidate Registry",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "pre_expansion_empty",
-  "candidates": [],
+  "maturity": "candidates_only_no_drafts_no_routes_no_publication",
+  "candidate_pack_id": "REF-CAND-PACK-V1-001",
+  "candidate_pack_source": "data/reference-candidate-pack-v1.json",
+  "candidates": [
+    {
+      "candidate_id": "REF-CAND-0001",
+      "candidate_pack_id": "REF-CAND-PACK-V1-001",
+      "candidate_name": "Evidence Posture",
+      "candidate_status": "candidate_registered",
+      "route_status": "not_route_created",
+      "sitemap_status": "not_sitemap_eligible",
+      "draft_status": "not_draft_created",
+      "publication_status": "publication_blocked",
+      "pack_reference": "data/reference-candidate-pack-v1.json"
+    },
+    {
+      "candidate_id": "REF-CAND-0002",
+      "candidate_pack_id": "REF-CAND-PACK-V1-001",
+      "candidate_name": "Artifact–Subject Separation",
+      "candidate_status": "candidate_registered",
+      "route_status": "not_route_created",
+      "sitemap_status": "not_sitemap_eligible",
+      "draft_status": "not_draft_created",
+      "publication_status": "publication_blocked",
+      "pack_reference": "data/reference-candidate-pack-v1.json"
+    },
+    {
+      "candidate_id": "REF-CAND-0003",
+      "candidate_pack_id": "REF-CAND-PACK-V1-001",
+      "candidate_name": "Source Confidence",
+      "candidate_status": "candidate_registered",
+      "route_status": "not_route_created",
+      "sitemap_status": "not_sitemap_eligible",
+      "draft_status": "not_draft_created",
+      "publication_status": "publication_blocked",
+      "pack_reference": "data/reference-candidate-pack-v1.json"
+    },
+    {
+      "candidate_id": "REF-CAND-0004",
+      "candidate_pack_id": "REF-CAND-PACK-V1-001",
+      "candidate_name": "Provenance Gap",
+      "candidate_status": "candidate_registered",
+      "route_status": "not_route_created",
+      "sitemap_status": "not_sitemap_eligible",
+      "draft_status": "not_draft_created",
+      "publication_status": "publication_blocked",
+      "pack_reference": "data/reference-candidate-pack-v1.json"
+    },
+    {
+      "candidate_id": "REF-CAND-0005",
+      "candidate_pack_id": "REF-CAND-PACK-V1-001",
+      "candidate_name": "Not Assessable Posture",
+      "candidate_status": "candidate_registered",
+      "route_status": "not_route_created",
+      "sitemap_status": "not_sitemap_eligible",
+      "draft_status": "not_draft_created",
+      "publication_status": "publication_blocked",
+      "pack_reference": "data/reference-candidate-pack-v1.json"
+    },
+    {
+      "candidate_id": "REF-CAND-0006",
+      "candidate_pack_id": "REF-CAND-PACK-V1-001",
+      "candidate_name": "Output Boundary",
+      "candidate_status": "candidate_registered",
+      "route_status": "not_route_created",
+      "sitemap_status": "not_sitemap_eligible",
+      "draft_status": "not_draft_created",
+      "publication_status": "publication_blocked",
+      "pack_reference": "data/reference-candidate-pack-v1.json"
+    },
+    {
+      "candidate_id": "REF-CAND-0007",
+      "candidate_pack_id": "REF-CAND-PACK-V1-001",
+      "candidate_name": "Claim and Source Traceability",
+      "candidate_status": "candidate_registered",
+      "route_status": "not_route_created",
+      "sitemap_status": "not_sitemap_eligible",
+      "draft_status": "not_draft_created",
+      "publication_status": "publication_blocked",
+      "pack_reference": "data/reference-candidate-pack-v1.json"
+    },
+    {
+      "candidate_id": "REF-CAND-0008",
+      "candidate_pack_id": "REF-CAND-PACK-V1-001",
+      "candidate_name": "Synthetic Fragility",
+      "candidate_status": "candidate_registered",
+      "route_status": "not_route_created",
+      "sitemap_status": "not_sitemap_eligible",
+      "draft_status": "not_draft_created",
+      "publication_status": "publication_blocked",
+      "pack_reference": "data/reference-candidate-pack-v1.json"
+    }
+  ],
   "last_reviewed": "2026-06-17"
 }

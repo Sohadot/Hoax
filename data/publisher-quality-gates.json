@@ -3,7 +3,7 @@
   "name": "Hoax.ai Publisher Quality Gates",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "publisher_blocked_until_first_reference_candidate_pack",
+  "maturity": "publisher_blocked_until_internal_draft_blueprint_or_candidate_evaluation",
   "gates": [
     {
       "gate_id": "PUB-GATE-0001",
@@ -180,6 +180,17 @@
       "failure_condition": "publisher_dry_run_harness_not_met",
       "bypassable": false,
       "notes": "Harness defined Sprint 16 (DEC-034). Does not authorize publishing, drafts, routes, or sitemap expansion by itself."
+    },
+    {
+      "gate_id": "PUB-GATE-0017",
+      "name": "First Reference Candidate Pack Gate",
+      "status": "pack_defined_pre_publication",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "validation_source": "FIRST_REFERENCE_CANDIDATE_PACK.md",
+      "failure_condition": "reference_candidate_pack_not_met",
+      "bypassable": false,
+      "notes": "Pack defined Sprint 17 (DEC-035). Does not authorize publishing, drafts, routes, or sitemap expansion by itself."
     }
   ],
   "last_reviewed": "2026-06-17"

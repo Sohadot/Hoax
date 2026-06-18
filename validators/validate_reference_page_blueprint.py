@@ -290,8 +290,10 @@ def validate_candidate_registry() -> bool:
         error("reference-page-candidate-registry.json: candidates list missing")
         ok = False
     elif candidates != []:
-        error(f"reference-page-candidate-registry.json: candidates must be empty in Sprint 13, found {len(candidates)}")
-        ok = False
+        from candidate_registry_checks import validate_candidates_blocked_only
+
+        if not validate_candidates_blocked_only(candidates, error):
+            ok = False
 
     return ok
 

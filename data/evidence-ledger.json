@@ -244,6 +244,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Dry-run harness only. No candidates, drafts, routes, or publication authorized."
+    },
+    {
+      "claim_id": "CLAIM-0023",
+      "claim_text": "Hoax.ai has adopted First Reference Candidate Pack v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "FIRST_REFERENCE_CANDIDATE_PACK.md, DECISION_LOG.md (DEC-035)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-17",
+      "notes": "Eight internal candidates registered. No drafts, routes, pages, or publication authorized."
     }
   ]
 }

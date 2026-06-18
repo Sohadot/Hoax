@@ -796,7 +796,49 @@ External deployment remains deferred (Sprint 1C). Maturity is candidate_logic_te
 
 ### Next Phase
 
-**Sprint 17 — First Reference Candidate Pack v1**
+**Sprint 18 — Reference Candidate Evaluation and Prioritization v1**
+
+Public classifier remains blocked. External deployment remains blocked. Publisher remains blocked from drafts and publication until future explicit approval.
+
+---
+
+## Sprint 17 — First Reference Candidate Pack v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Register the first governed internal reference candidates as candidate records only, without drafts, pages, routes, or sitemap entries.
+
+### Deliverables
+
+- FIRST_REFERENCE_CANDIDATE_PACK.md
+- data/reference-candidate-pack-policy.json
+- data/reference-candidate-pack-v1.json
+- validators/validate_reference_candidate_pack.py
+- SPRINT_17_FIRST_REFERENCE_CANDIDATE_PACK_AUDIT.md
+- DEC-035 appended to DECISION_LOG.md
+- data/reference-page-candidate-registry.json updated (8 candidates)
+- data/reference-expansion-gate.json updated
+- data/publisher-quality-gates.json updated (PUB-GATE-0017)
+- data/publisher-governance-policy.json updated
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Candidate Pack Scope
+
+- 8 candidates (REF-CAND-0001–0008)
+- 23 evidence ledger claims (CLAIM-0023 added)
+- Publisher queues remain empty (candidate registry is authoritative store)
+- No draft pages, public pages, routes, or sitemap expansion
+
+### Gate
+
+External deployment remains deferred (Sprint 1C). Maturity is candidates_only_no_drafts_no_routes_no_publication.
+
+### Next Phase
+
+**Sprint 18 — Reference Candidate Evaluation and Prioritization v1**
 
 Public classifier remains blocked. External deployment remains blocked. Publisher remains blocked from drafts and publication until future explicit approval.
 

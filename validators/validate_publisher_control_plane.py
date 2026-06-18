@@ -51,6 +51,7 @@ QUEUE_TOP = {"registry_id", "name", "version", "status", "maturity", "queues", "
 REQUIRED_STATES = [
     "blocked",
     "dry_run_pass",
+    "candidate_pack_registered",
     "proposed_internal",
     "candidate_registered",
     "blueprint_checked",
@@ -68,7 +69,7 @@ REQUIRED_STATES = [
     "retired",
 ]
 
-REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 17)]
+REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 18)]
 
 REQUIRED_WORKFLOW_IDS = [f"PUB-WORKFLOW-{i:04d}" for i in range(1, 16)]
 
@@ -135,11 +136,11 @@ def validate_publisher_policy() -> bool:
     if data.get("status") != "governed_internal_publisher_policy":
         error("publisher-governance-policy.json: invalid status")
         ok = False
-    if data.get("maturity") != "publisher_blocked_until_first_reference_candidate_pack":
+    if data.get("maturity") != "publisher_blocked_until_internal_draft_blueprint_or_candidate_evaluation":
         error("publisher-governance-policy.json: invalid maturity")
         ok = False
-    if data.get("current_publisher_status") != "blocked_until_first_reference_candidate_pack":
-        error("publisher-governance-policy.json: publisher must be blocked until first reference candidate pack")
+    if data.get("current_publisher_status") != "blocked_until_internal_draft_blueprint_or_candidate_evaluation":
+        error("publisher-governance-policy.json: publisher must be blocked until internal draft blueprint or candidate evaluation")
         ok = False
 
     allowed = " ".join(data.get("allowed_current_outputs", [])).lower()
@@ -248,7 +249,11 @@ def validate_state_machine() -> bool:
             ok = False
 
     current = data.get("current_system_state", "")
-    if current not in ("blocked", "blocked_until_first_reference_candidate_pack"):
+    if current not in (
+        "blocked",
+        "blocked_until_first_reference_candidate_pack",
+        "blocked_until_internal_draft_blueprint_or_candidate_evaluation",
+    ):
         error(f"publisher-state-machine.json: invalid current_system_state {current}")
         ok = False
 
@@ -419,9 +424,11 @@ def validate_repository_safety() -> bool:
         ok = False
 
     candidates = load_json(ROOT / "data" / "reference-page-candidate-registry.json").get("candidates", [])
-    if candidates != []:
-        error("reference-page-candidate-registry: must remain empty")
-        ok = False
+    if candidates:
+        from candidate_registry_checks import validate_candidates_blocked_only
+
+        if not validate_candidates_blocked_only(candidates, error):
+            ok = False
 
     for html in ROOT.glob("**/*.html"):
         rel = html.relative_to(ROOT).as_posix()

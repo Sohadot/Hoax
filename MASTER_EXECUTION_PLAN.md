@@ -55,12 +55,13 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G14 | Content Quality and Reference Substance Standard | Sprint 14 validator PASS |
 | G15 | Structured Data and Semantic SEO Governance | Sprint 15 validator PASS |
 | G16 | Publisher Dry-Run Harness | Sprint 16 validator PASS |
+| G17 | First Reference Candidate Pack | Sprint 17 validator PASS |
 
-**Gate G16 passed.** Sprint 17 (First Reference Candidate Pack) may proceed when authorized. Public classifier and tool remain blocked. Publisher remains blocked from drafts and publication until future explicit approval. External deployment remains deferred until deployment gates pass.
+**Gate G17 passed.** Sprint 18 (Reference Candidate Evaluation and Prioritization) may proceed when authorized. Public classifier and tool remain blocked. Publisher remains blocked from drafts and publication until future explicit approval. External deployment remains deferred until deployment gates pass.
 
 ### Foundation Gates vs Deployment Gates
 
-Foundation gates (G0–G16) govern category infrastructure, reference governance, and expansion readiness. They must pass before reference layer scale.
+Foundation gates (G0–G17) govern category infrastructure, reference governance, and expansion readiness. They must pass before reference layer scale.
 
 Deployment gates are **separate** and **not current foundation steps**. They open only after reference expansion governance is in place. None are passed.
 
@@ -178,7 +179,8 @@ Classifier, API, and workflow tools require protocol and standard completion fir
 | Sprint 14 | COMPLETE | G14 passed |
 | Sprint 15 | COMPLETE | G15 passed |
 | Sprint 16 | COMPLETE | G16 passed |
-| Sprint 17+ | READY | G16 passed — First Reference Candidate Pack pending; publisher blocked from drafts and publication; deployment gates not passed |
+| Sprint 17 | COMPLETE | G17 passed |
+| Sprint 18+ | READY | G17 passed — Candidate evaluation pending; publisher blocked from drafts and publication; deployment gates not passed |
 
 ## Governing Sentence
 

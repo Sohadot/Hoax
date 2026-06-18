@@ -3,11 +3,12 @@
   "name": "Hoax.ai Publisher State Machine",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "publisher_blocked_until_first_reference_candidate_pack",
-  "current_system_state": "blocked_until_first_reference_candidate_pack",
+  "maturity": "publisher_blocked_until_internal_draft_blueprint_or_candidate_evaluation",
+  "current_system_state": "blocked_until_internal_draft_blueprint_or_candidate_evaluation",
   "states": [
     "blocked",
     "dry_run_pass",
+    "candidate_pack_registered",
     "proposed_internal",
     "candidate_registered",
     "blueprint_checked",
@@ -26,7 +27,8 @@
   ],
   "allowed_transitions": [
     {"from": "blocked", "to": "dry_run_pass", "requires": "publisher_dry_run_harness_passed"},
-    {"from": "dry_run_pass", "to": "proposed_internal", "requires": "first_reference_candidate_pack_authorized"},
+    {"from": "blocked", "to": "candidate_pack_registered", "requires": "first_reference_candidate_pack_registered"},
+    {"from": "candidate_pack_registered", "to": "proposed_internal", "requires": "candidate_evaluation_authorized"},
     {"from": "blocked", "to": "proposed_internal", "requires": "content_quality_standard_passed"},
     {"from": "proposed_internal", "to": "candidate_registered", "requires": "candidate_registry_entry"},
     {"from": "candidate_registered", "to": "blueprint_checked", "requires": "reference_blueprint_gate"},
@@ -49,6 +51,8 @@
     {"from": "dry_run_pass", "to": "release_eligible", "reason": "dry_run_pass_does_not_authorize_release"},
     {"from": "dry_run_pass", "to": "public_release_blocked", "reason": "dry_run_pass_does_not_authorize_public_release"},
     {"from": "dry_run_pass", "to": "public_live", "reason": "dry_run_pass_is_test_only"},
+    {"from": "candidate_pack_registered", "to": "release_eligible", "reason": "candidate_pack_does_not_authorize_release"},
+    {"from": "candidate_pack_registered", "to": "public_release_blocked", "reason": "candidate_pack_does_not_authorize_public_release"},
     {"from": "proposed_internal", "to": "release_eligible", "reason": "must_pass_all_intermediate_gates"},
     {"from": "proposed_internal", "to": "public_release_blocked", "reason": "no_direct_public_release"},
     {"from": "candidate_registered", "to": "release_eligible", "reason": "must_pass_all_gates"},
@@ -70,6 +74,7 @@
     "validate_all_py_passed",
     "audit_record_exists",
     "publisher_dry_run_harness_passed",
+    "first_reference_candidate_pack_passed",
     "publisher_control_plane_compliance"
   ],
   "last_reviewed": "2026-06-17"

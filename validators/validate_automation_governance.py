@@ -343,9 +343,11 @@ def validate_route_sitemap_safety() -> bool:
         ok = False
 
     candidates = load_json(ROOT / "data" / "reference-page-candidate-registry.json").get("candidates", [])
-    if candidates != []:
-        error("reference-page-candidate-registry: candidates must remain empty")
-        ok = False
+    if candidates:
+        from candidate_registry_checks import validate_candidates_blocked_only
+
+        if not validate_candidates_blocked_only(candidates, error):
+            ok = False
 
     for html in ROOT.glob("**/*.html"):
         rel = html.relative_to(ROOT).as_posix()

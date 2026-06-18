@@ -856,3 +856,24 @@ A governed publisher must prove that it can reject unsafe, thin, unsupported, SE
 - No sitemap entries are added.
 - No publishing is authorized.
 - Completion of Sprint 16 may allow a future First Reference Candidate Pack sprint, but not automatic publishing.
+
+---
+
+## DEC-035 — First Reference Candidate Pack v1 Adopted
+
+**Date:** 2026-06-17  
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts First Reference Candidate Pack v1 to register the first internal reference candidates under the reference blueprint, content quality standard, semantic SEO governance, publisher control plane, and expansion gates, without creating public pages, draft pages, routes, sitemap entries, or publication rights.
+
+### Rationale
+
+Reference expansion must begin with candidate discipline, not page production. The first candidate pack should prove that future reference units can be scoped, bounded, claim-aware, source-aware, semantically positioned, internally linked in principle, and blocked from public release until later gates pass.
+
+### Implications
+
+- Candidate records may be added.
+- Candidate records do not authorize pages, drafts, routes, sitemap expansion, SEO expansion, or publishing.
+- Future work may evaluate candidates, but no candidate becomes a page without later explicit approval.

@@ -952,6 +952,46 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Publisher dry-run harness validator."
+    },
+    {
+      "source_id": "SOURCE-0096",
+      "source_title": "FIRST_REFERENCE_CANDIDATE_PACK.md",
+      "source_type": "internal_governance",
+      "location": "FIRST_REFERENCE_CANDIDATE_PACK.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Human-readable first reference candidate pack per DEC-035."
+    },
+    {
+      "source_id": "SOURCE-0097",
+      "source_title": "data/reference-candidate-pack-policy.json",
+      "source_type": "internal_registry",
+      "location": "data/reference-candidate-pack-policy.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Machine-readable candidate pack policy."
+    },
+    {
+      "source_id": "SOURCE-0098",
+      "source_title": "data/reference-candidate-pack-v1.json",
+      "source_type": "internal_registry",
+      "location": "data/reference-candidate-pack-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "First reference candidate pack records."
+    },
+    {
+      "source_id": "SOURCE-0099",
+      "source_title": "validators/validate_reference_candidate_pack.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_reference_candidate_pack.py",
+      "supports": ["operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Reference candidate pack validator."
     }
   ]
 }

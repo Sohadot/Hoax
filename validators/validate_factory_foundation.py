@@ -1590,6 +1590,8 @@ def validate_json_files() -> bool:
         "data/publisher-dry-run-policy.json",
         "data/publisher-dry-run-cases.json",
         "data/publisher-dry-run-expected-results.json",
+        "data/reference-candidate-pack-policy.json",
+        "data/reference-candidate-pack-v1.json",
     ]:
         path = ROOT / rel
         try:

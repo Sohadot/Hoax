@@ -645,14 +645,19 @@ def validate_cross_file_integration() -> bool:
             ok = False
 
     pub_policy = load_json(ROOT / "data" / "publisher-governance-policy.json")
-    if pub_policy.get("current_publisher_status") != "blocked_until_first_reference_candidate_pack":
-        error("publisher-governance-policy: publisher must remain blocked until first reference candidate pack")
+    if pub_policy.get("current_publisher_status") not in (
+        "blocked_until_first_reference_candidate_pack",
+        "blocked_until_internal_draft_blueprint_or_candidate_evaluation",
+    ):
+        error("publisher-governance-policy: publisher must remain blocked from drafts and publication")
         ok = False
 
     candidates = load_json(ROOT / "data" / "reference-page-candidate-registry.json").get("candidates", [])
-    if candidates != []:
-        error("reference-page-candidate-registry: candidates must remain empty")
-        ok = False
+    if candidates:
+        from candidate_registry_checks import validate_candidates_blocked_only
+
+        if not validate_candidates_blocked_only(candidates, error):
+            ok = False
 
     routes = load_json(ROOT / "data" / "route-registry.json").get("routes", [])
     if [r.get("route_id") for r in routes] != ["ROUTE-0001"]:
