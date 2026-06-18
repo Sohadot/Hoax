@@ -7,15 +7,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-PILOT_ROUTE_IDS = ["ROUTE-0001", "ROUTE-0002", "ROUTE-0003"]
+PUBLIC_ROUTE_IDS = ["ROUTE-0001", "ROUTE-0002", "ROUTE-0003", "ROUTE-0004"]
+
+PILOT_ROUTE_IDS = PUBLIC_ROUTE_IDS  # backward compatibility
 
 PILOT_PATHS = {
     "/reference/evidence-posture/",
     "/reference/artifact-subject-separation/",
 }
 
+LANGUAGE_PATH = "/language/"
+
 ALLOWED_PUBLIC_HTML = {
     "index.html",
+    "language/index.html",
     "reference/evidence-posture/index.html",
     "reference/artifact-subject-separation/index.html",
 }
@@ -26,11 +31,15 @@ ALLOWED_PUBLIC_ROOT_FILES = ALLOWED_PUBLIC_HTML | {
     "sitemap.xml",
 }
 
-PILOT_SITEMAP_URL_COUNT = 3
+PUBLIC_SITEMAP_URL_COUNT = 4
+
+PILOT_SITEMAP_URL_COUNT = PUBLIC_SITEMAP_URL_COUNT  # backward compatibility
 
 PUBLISHER_STATUS_POST_PILOT = "blocked_until_public_reference_validation_and_live_surface_audit"
 
 PUBLISHER_STATUS_POST_LIVE_AUDIT = "blocked_until_public_category_language_layer"
+
+PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE = "blocked_until_public_category_language_validation"
 
 PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_reference_candidate_pack",
@@ -43,13 +52,27 @@ PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_controlled_public_reference_pilot",
     PUBLISHER_STATUS_POST_PILOT,
     PUBLISHER_STATUS_POST_LIVE_AUDIT,
+    PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
 )
 
 
-def validate_pilot_route_registry(routes: list, error) -> bool:
+def validate_public_route_registry(routes: list, error) -> bool:
     ids = sorted(r.get("route_id") for r in routes)
-    if ids != sorted(PILOT_ROUTE_IDS):
-        error(f"route-registry: expected {sorted(PILOT_ROUTE_IDS)}, got {ids}")
+    if ids != sorted(PUBLIC_ROUTE_IDS):
+        error(f"route-registry: expected {sorted(PUBLIC_ROUTE_IDS)}, got {ids}")
+        return False
+    return True
+
+
+validate_pilot_route_registry = validate_public_route_registry
+
+
+def validate_pilot_routes_present(routes: list, error) -> bool:
+    """Verify pilot-era routes still exist (allows additional routes such as /language/)."""
+    ids = {r.get("route_id") for r in routes}
+    required = {"ROUTE-0001", "ROUTE-0002", "ROUTE-0003"}
+    if not required.issubset(ids):
+        error(f"route-registry: missing required routes {sorted(required - ids)}")
         return False
     return True
 
@@ -84,16 +107,17 @@ def eligible_sitemap_urls(routes: list) -> set[str]:
     return urls
 
 
-def validate_pilot_sitemap(routes: list, error) -> bool:
+def validate_public_sitemap(routes: list, error, expected_count: int | None = None) -> bool:
     ok = True
+    count = expected_count if expected_count is not None else PUBLIC_SITEMAP_URL_COUNT
     try:
         locs = _sitemap_locs()
     except (ET.ParseError, OSError) as exc:
         error(f"sitemap.xml parse failed: {exc}")
         return False
 
-    if len(locs) != PILOT_SITEMAP_URL_COUNT:
-        error(f"sitemap.xml: expected {PILOT_SITEMAP_URL_COUNT} URLs, found {len(locs)}")
+    if len(locs) != count:
+        error(f"sitemap.xml: expected {count} URLs, found {len(locs)}")
         ok = False
 
     eligible = eligible_sitemap_urls(routes)
@@ -103,9 +127,39 @@ def validate_pilot_sitemap(routes: list, error) -> bool:
     return ok
 
 
-def validate_pilot_public_surface(routes: list, error) -> bool:
-    ok = validate_pilot_route_registry(routes, error)
-    if not validate_pilot_sitemap(routes, error):
+validate_pilot_sitemap = validate_public_sitemap
+
+
+def validate_public_surface(routes: list, error, sitemap_count: int | None = None) -> bool:
+    ok = validate_public_route_registry(routes, error)
+    if not validate_public_sitemap(routes, error, sitemap_count):
+        ok = False
+    if not validate_no_extra_public_html(error):
+        ok = False
+    if (ROOT / ".nojekyll").exists():
+        error(".nojekyll must not exist")
+        ok = False
+    return ok
+
+
+validate_pilot_public_surface = validate_public_surface
+
+
+def validate_pilot_era_public_surface(routes: list, error) -> bool:
+    """Pilot-era routes and sitemap URLs must remain intact; additional routes allowed."""
+    ok = validate_pilot_routes_present(routes, error)
+    pilot_ids = {"ROUTE-0001", "ROUTE-0002", "ROUTE-0003"}
+    pilot_routes = [r for r in routes if r.get("route_id") in pilot_ids]
+    try:
+        locs = _sitemap_locs()
+    except (ET.ParseError, OSError) as exc:
+        error(f"sitemap.xml parse failed: {exc}")
+        return False
+    normalized_locs = {u.rstrip("/") + "/" for u in locs}
+    normalized_eligible = {u.rstrip("/") + "/" for u in eligible_sitemap_urls(pilot_routes)}
+    if not normalized_eligible.issubset(normalized_locs):
+        missing = normalized_eligible - normalized_locs
+        error(f"sitemap.xml: missing pilot-era URLs {sorted(missing)}")
         ok = False
     if not validate_no_extra_public_html(error):
         ok = False
@@ -123,6 +177,13 @@ def is_pilot_route(route: dict) -> bool:
     )
 
 
+def is_language_route(route: dict) -> bool:
+    return (
+        route.get("status") == "controlled_public_category_language_route_created"
+        or route.get("path", "").lower() in {LANGUAGE_PATH.lower(), "/language"}
+    )
+
+
 def validate_candidate_paths_not_registered_except_pilot(routes: list, candidates: list, error) -> bool:
     ok = True
     for candidate in candidates:
@@ -132,7 +193,7 @@ def validate_candidate_paths_not_registered_except_pilot(routes: list, candidate
         for route in routes:
             if route.get("path", "").lower() != path:
                 continue
-            if is_pilot_route(route):
+            if is_pilot_route(route) or is_language_route(route):
                 continue
             error(f"route-registry: candidate path {path} must not be registered")
             ok = False

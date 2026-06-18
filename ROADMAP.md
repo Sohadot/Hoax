@@ -1118,6 +1118,52 @@ Public classifier remains blocked. Public engine remains blocked. External deplo
 
 ---
 
+## Sprint 26 — Public Category Language Layer v1
+
+**Status:** COMPLETE — 2026-06-17  
+**Goal:** Create Hoax.ai’s first public category language layer — governed vocabulary, term registry, relation map, and one public language route before any engine, classifier, or tool surface exists.
+
+### Deliverables
+
+- language/index.html
+- PUBLIC_CATEGORY_LANGUAGE_LAYER.md
+- data/public-category-language-policy.json
+- data/category-language-term-registry.json
+- data/category-language-relation-map.json
+- data/public-category-language-layer-v1.json
+- validators/validate_public_category_language_layer.py
+- SPRINT_26_PUBLIC_CATEGORY_LANGUAGE_LAYER_AUDIT.md
+- DEC-044 appended to DECISION_LOG.md
+- Route registry, sitemap (3→4 URLs), homepage, internal link graph updated for /language/
+- Publisher status → blocked_until_public_category_language_validation
+- PUB-GATE-0026 added; reference expansion gate updated
+- validators/validate_all.py updated
+
+### Validation
+
+`python validators/validate_all.py` — PASS required for sprint closure.
+
+### Language Layer Scope
+
+- 1 public language route (/language/)
+- 8 language term records (2 reference anchors, 5 language nodes, 1 boundary-refinement node)
+- 7 relation records
+- 4 sitemap URLs (homepage + 2 reference pages + language)
+- 32 evidence ledger claims (CLAIM-0032 added)
+- No individual term pages, new reference pages, classifier, engine, tool, upload, scoring, forms, analytics, API, monetization, DNS, Cloudflare, custom domain launch, or .nojekyll
+
+### Gate
+
+**Gate G26 passed.** Broader publication and engine governance blocked until Sprint 27 language layer validation.
+
+### Next Phase
+
+**Sprint 27 — Public Category Language Validation and Surface Audit v1**
+
+Public classifier remains blocked. Public engine remains blocked. External deployment remains separately governed. Engine governance remains blocked until language layer validation passes.
+
+---
+
 ## Sprint 25 — Public Reference Validation and Live Surface Audit v1
 
 **Status:** COMPLETE — 2026-06-17  

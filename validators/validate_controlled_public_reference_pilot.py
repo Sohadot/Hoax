@@ -14,12 +14,12 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (
     ALLOWED_PUBLIC_HTML,
     PILOT_PATHS,
-    PILOT_ROUTE_IDS,
+    PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
     PUBLISHER_STATUS_POST_LIVE_AUDIT,
     PUBLISHER_STATUS_POST_PILOT,
     validate_no_extra_public_html,
-    validate_pilot_public_surface,
-    validate_pilot_route_registry,
+    validate_pilot_era_public_surface,
+    validate_pilot_routes_present,
 )
 
 POLICY_TOP = {
@@ -233,7 +233,7 @@ def validate_all_public_pages() -> bool:
 def validate_route_registry() -> bool:
     ok = True
     routes = load_json(ROOT / "data" / "route-registry.json").get("routes", [])
-    if not validate_pilot_route_registry(routes, error):
+    if not validate_pilot_routes_present(routes, error):
         return False
 
     pilot_routes = [r for r in routes if r.get("route_id") in ("ROUTE-0002", "ROUTE-0003")]
@@ -330,10 +330,12 @@ def validate_publisher_governance() -> bool:
     if pub.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_PILOT,
         PUBLISHER_STATUS_POST_LIVE_AUDIT,
+        PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
     ):
         error(
-            f"publisher status must be {PUBLISHER_STATUS_POST_PILOT} "
-            f"or {PUBLISHER_STATUS_POST_LIVE_AUDIT}, got {pub.get('current_publisher_status')}"
+            f"publisher status must be {PUBLISHER_STATUS_POST_PILOT}, "
+            f"{PUBLISHER_STATUS_POST_LIVE_AUDIT}, or {PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE}, "
+            f"got {pub.get('current_publisher_status')}"
         )
         ok = False
 
@@ -429,7 +431,7 @@ def main() -> int:
         validate_pilot_record,
         validate_all_public_pages,
         validate_route_registry,
-        lambda: validate_pilot_public_surface(routes, error),
+        lambda: validate_pilot_era_public_surface(routes, error),
         validate_homepage,
         validate_registries,
         validate_publisher_governance,

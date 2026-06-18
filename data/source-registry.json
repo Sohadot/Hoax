@@ -1472,6 +1472,76 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Public reference live surface validator."
+    },
+    {
+      "source_id": "SOURCE-0148",
+      "source_title": "PUBLIC_CATEGORY_LANGUAGE_LAYER.md",
+      "source_type": "governance_file",
+      "location": "PUBLIC_CATEGORY_LANGUAGE_LAYER.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public category language layer doctrine."
+    },
+    {
+      "source_id": "SOURCE-0149",
+      "source_title": "data/public-category-language-policy.json",
+      "source_type": "internal_registry",
+      "location": "data/public-category-language-policy.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public category language policy."
+    },
+    {
+      "source_id": "SOURCE-0150",
+      "source_title": "data/category-language-term-registry.json",
+      "source_type": "internal_registry",
+      "location": "data/category-language-term-registry.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Category language term registry."
+    },
+    {
+      "source_id": "SOURCE-0151",
+      "source_title": "data/category-language-relation-map.json",
+      "source_type": "internal_registry",
+      "location": "data/category-language-relation-map.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Category language relation map."
+    },
+    {
+      "source_id": "SOURCE-0152",
+      "source_title": "data/public-category-language-layer-v1.json",
+      "source_type": "internal_registry",
+      "location": "data/public-category-language-layer-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public category language layer record."
+    },
+    {
+      "source_id": "SOURCE-0153",
+      "source_title": "language/index.html",
+      "source_type": "public_surface",
+      "location": "language/index.html",
+      "supports": ["operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public category language page."
+    },
+    {
+      "source_id": "SOURCE-0154",
+      "source_title": "validators/validate_public_category_language_layer.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_category_language_layer.py",
+      "supports": ["operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public category language layer validator."
     }
   ]
 }

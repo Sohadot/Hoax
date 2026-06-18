@@ -345,6 +345,17 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public reference live surface audit adoption per DEC-043."
+    },
+    {
+      "claim_id": "CLAIM-0032",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": ["PUBLIC_CATEGORY_LANGUAGE_LAYER.md", "DECISION_LOG.md", "data/public-category-language-layer-v1.json"],
+      "source_refs": ["SOURCE-0148", "SOURCE-0149", "SOURCE-0150", "SOURCE-0151", "SOURCE-0152", "SOURCE-0153", "SOURCE-0154"],
+      "support_scope": "public category language layer adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public category language layer adoption per DEC-044."
     }
   ],
   "last_reviewed": "2026-06-17"

@@ -1078,3 +1078,29 @@ A controlled public reference pilot must be validated after publication because 
 - No new public pages, routes, or sitemap expansion is authorized.
 - No engine, classifier, upload, scoring, API, forms, analytics, monetization, DNS, Cloudflare, or custom domain launch is authorized.
 - Future work may begin the Public Category Language Layer only after this validation passes.
+
+---
+
+## DEC-044 — Public Category Language Layer v1 Adopted
+
+**Date:** 2026-06-17
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Category Language Layer v1 to create a governed public language surface that explains the core terms, relations, and boundaries of evidence posture before any public engine, classifier, upload workflow, scoring system, or tool is created.
+
+### Rationale
+
+Hoax.ai cannot become a category-defining asset by publishing isolated pages alone. It needs a visible language layer that shows how its terms relate: Evidence Posture, Artifact–Subject Separation, Source Confidence, Provenance Gap, Not Assessable, Output Boundary, Claim and Source Traceability, and Synthetic Fragility. This language layer makes the category legible without implying detection, truth certification, fake/real verdicts, upload capability, scoring, or public classifier functionality.
+
+### Implications
+
+- Exactly one new public route may be created: /language/
+- Exactly one sitemap URL may be added for /language/
+- Homepage may link to /language/
+- Existing reference pages may link to /language/ only if link integrity remains controlled.
+- The language layer may include term cards, relationship descriptions, and a non-interactive concept map.
+- No individual new term routes may be created.
+- No engine/classifier/tool/upload/scoring/API/form/analytics capability is authorized.
+- Future engine work remains blocked until the public category language layer is validated.

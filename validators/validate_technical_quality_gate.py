@@ -260,6 +260,7 @@ def validate_public_file_registry_data() -> bool:
 
     required_paths = {
         "index.html",
+        "language/index.html",
         "reference/evidence-posture/index.html",
         "reference/artifact-subject-separation/index.html",
         "styles.css",
@@ -271,6 +272,7 @@ def validate_public_file_registry_data() -> bool:
         ok = False
 
     pilot_paths = {
+        "language/index.html": "ROUTE-0004",
         "reference/evidence-posture/index.html": "ROUTE-0002",
         "reference/artifact-subject-separation/index.html": "ROUTE-0003",
     }

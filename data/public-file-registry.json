@@ -1,9 +1,9 @@
 {
   "registry_id": "PUBLIC-FILE-REGISTRY-001",
   "name": "Hoax.ai Public File Registry",
-  "version": "v1.1.0",
+  "version": "v1.2.0",
   "status": "active",
-  "maturity": "controlled_public_reference_pilot",
+  "maturity": "controlled_public_category_language_layer",
   "public_files": [
     {
       "file_id": "PUB-FILE-0001",
@@ -28,6 +28,18 @@
       "allowed_dependencies": ["../../styles.css"],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Evidence Posture controlled public reference pilot page."
+    },
+    {
+      "file_id": "PUB-FILE-0007",
+      "path": "language/index.html",
+      "file_type": "html",
+      "public_role": "controlled_public_category_language_page",
+      "route_id_if_applicable": "ROUTE-0004",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
+      "notes": "Public category language layer page."
     },
     {
       "file_id": "PUB-FILE-0006",

@@ -1,0 +1,87 @@
+{
+  "relation_map_id": "CAT-LANG-REL-MAP-001",
+  "name": "Hoax.ai Category Language Relation Map",
+  "version": "v1.0.0",
+  "status": "active",
+  "maturity": "one_public_language_route_no_engine_no_classifier_no_tool",
+  "relations": [
+    {
+      "relation_id": "LANG-REL-0001",
+      "source_term_id": "LANG-TERM-0001",
+      "target_term_id": "LANG-TERM-0002",
+      "relation_type": "depends_on",
+      "relation_statement": "Evidence Posture depends on Artifact–Subject Separation.",
+      "public_display_allowed": true,
+      "route_implication": "no_route_authorization",
+      "engine_implication": "no_engine_authorization",
+      "non_authorization_statement": "This relation does not authorize routes, engine behavior, verdict, detection, scoring, upload, or subject accusation."
+    },
+    {
+      "relation_id": "LANG-REL-0002",
+      "source_term_id": "LANG-TERM-0001",
+      "target_term_id": "LANG-TERM-0003",
+      "relation_type": "informed_by",
+      "relation_statement": "Evidence Posture is informed by Source Confidence.",
+      "public_display_allowed": true,
+      "route_implication": "no_route_authorization",
+      "engine_implication": "no_engine_authorization",
+      "non_authorization_statement": "This relation does not authorize routes, engine behavior, verdict, detection, scoring, upload, or subject accusation."
+    },
+    {
+      "relation_id": "LANG-REL-0003",
+      "source_term_id": "LANG-TERM-0001",
+      "target_term_id": "LANG-TERM-0004",
+      "relation_type": "constrained_by",
+      "relation_statement": "Evidence Posture is constrained by Provenance Gap.",
+      "public_display_allowed": true,
+      "route_implication": "no_route_authorization",
+      "engine_implication": "no_engine_authorization",
+      "non_authorization_statement": "This relation does not authorize routes, engine behavior, verdict, detection, scoring, upload, or subject accusation."
+    },
+    {
+      "relation_id": "LANG-REL-0004",
+      "source_term_id": "LANG-TERM-0005",
+      "target_term_id": "LANG-TERM-0001",
+      "relation_type": "protects",
+      "relation_statement": "Not Assessable protects against false certainty.",
+      "public_display_allowed": true,
+      "route_implication": "no_route_authorization",
+      "engine_implication": "no_engine_authorization",
+      "non_authorization_statement": "This relation does not authorize routes, engine behavior, verdict, detection, scoring, upload, or subject accusation."
+    },
+    {
+      "relation_id": "LANG-REL-0005",
+      "source_term_id": "LANG-TERM-0006",
+      "target_term_id": "LANG-TERM-0001",
+      "relation_type": "limits",
+      "relation_statement": "Output Boundary limits what Hoax.ai may say.",
+      "public_display_allowed": true,
+      "route_implication": "no_route_authorization",
+      "engine_implication": "no_engine_authorization",
+      "non_authorization_statement": "This relation does not authorize routes, engine behavior, verdict, detection, scoring, upload, or subject accusation."
+    },
+    {
+      "relation_id": "LANG-REL-0006",
+      "source_term_id": "LANG-TERM-0007",
+      "target_term_id": "LANG-TERM-0001",
+      "relation_type": "governs",
+      "relation_statement": "Claim and Source Traceability governs support discipline.",
+      "public_display_allowed": true,
+      "route_implication": "no_route_authorization",
+      "engine_implication": "no_engine_authorization",
+      "non_authorization_statement": "This relation does not authorize routes, engine behavior, verdict, detection, scoring, upload, or subject accusation."
+    },
+    {
+      "relation_id": "LANG-REL-0007",
+      "source_term_id": "LANG-TERM-0008",
+      "target_term_id": "LANG-TERM-0001",
+      "relation_type": "names_condition",
+      "relation_statement": "Synthetic Fragility names the broader condition but remains boundary-limited.",
+      "public_display_allowed": true,
+      "route_implication": "no_route_authorization",
+      "engine_implication": "no_engine_authorization",
+      "non_authorization_statement": "This relation does not authorize routes, engine behavior, verdict, detection, scoring, upload, or subject accusation."
+    }
+  ],
+  "last_reviewed": "2026-06-17"
+}

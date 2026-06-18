@@ -1,0 +1,91 @@
+{
+  "policy_id": "PUB-CAT-LANG-POLICY-001",
+  "name": "Hoax.ai Public Category Language Policy",
+  "version": "v1.0.0",
+  "status": "governed_public_category_language_policy",
+  "maturity": "one_public_language_route_no_engine_no_classifier_no_tool",
+  "governing_principle": "A category language layer names the system of judgment before any tool performs work.",
+  "language_principle": "Hoax.ai must teach how to speak about evidence posture before it offers any public classifier.",
+  "allowed_language_layer_actions": [
+    "create_one_public_language_route",
+    "create_term_registry",
+    "create_relation_map",
+    "update_homepage_link",
+    "update_sitemap_with_one_url",
+    "update_internal_link_graph",
+    "validate"
+  ],
+  "prohibited_language_layer_actions": [
+    "engine",
+    "classifier",
+    "tool",
+    "upload",
+    "scoring",
+    "fake_real_output",
+    "forms",
+    "analytics",
+    "api",
+    "monetization",
+    "dns",
+    "cloudflare",
+    "custom_domain_launch",
+    "individual_term_routes",
+    "broader_route_expansion",
+    "external_factual_claims",
+    "subject_accusation"
+  ],
+  "language_scope": {
+    "public_route": "/language/",
+    "public_page_count": 1,
+    "term_registry_required": true,
+    "relation_map_required": true,
+    "individual_term_routes_prohibited": true
+  },
+  "term_status_policy": {
+    "public_reference_anchor": "Term has a controlled public reference page and anchor route.",
+    "language_node_no_public_route_yet": "Term is defined in language layer but has no individual public route.",
+    "boundary_refinement_required_before_public_route": "Term requires boundary refinement before any public route may be considered."
+  },
+  "relation_policy": {
+    "relations_must_reference_registered_terms": true,
+    "relations_must_not_authorize_routes": true,
+    "relations_must_not_authorize_engine_behavior": true,
+    "relations_must_not_imply_verdict_or_detection": true
+  },
+  "route_policy": {
+    "exactly_one_new_public_route": "/language/",
+    "route_status": "controlled_public_category_language_route_created",
+    "no_individual_term_routes": true,
+    "no_classifier_tool_upload_scoring_api_routes": true
+  },
+  "metadata_policy": {
+    "controlled_metadata_required": true,
+    "json_ld_conservative_webpage_only": true,
+    "prohibited_schema_types": [
+      "Product",
+      "SoftwareApplication",
+      "Service",
+      "FactCheck",
+      "ClaimReview",
+      "Tool",
+      "API"
+    ],
+    "must_not_imply_tool_detector_classifier_upload_scoring_api": true
+  },
+  "non_authorization_rules": [
+    "no_engine_authorization",
+    "no_classifier_authorization",
+    "no_upload_authorization",
+    "no_scoring_authorization",
+    "no_forms_authorization",
+    "no_analytics_authorization",
+    "no_api_authorization",
+    "no_monetization_authorization",
+    "no_dns_authorization",
+    "no_cloudflare_authorization",
+    "no_custom_domain_launch_authorization",
+    "no_individual_term_pages_authorization",
+    "no_broader_publication_authorization"
+  ],
+  "last_reviewed": "2026-06-17"
+}

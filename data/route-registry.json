@@ -83,6 +83,30 @@
       "route_visibility": "public_reference_pilot",
       "live_surface_validation_status": "live_surface_validated_controlled_reference_pilot",
       "notes": "First controlled public reference page — Artifact–Subject Separation."
+    },
+    {
+      "route_id": "ROUTE-0004",
+      "path": "/language/",
+      "title": "Hoax.ai Category Language",
+      "route_type": "public_category_language",
+      "page_type": "public_category_language",
+      "status": "controlled_public_category_language_route_created",
+      "index_policy": "indexable_controlled_category_language",
+      "canonical_url": "https://hoax.ai/language/",
+      "sitemap_included": true,
+      "internal_linking_required": true,
+      "public_surface": true,
+      "metadata_status": "controlled_public_metadata_created",
+      "navigation_status": "linked_from_homepage_language_section",
+      "publication_status": "controlled_public_category_language_layer",
+      "deployment_status": "repository_public_preview_only",
+      "governance_boundary": "category_language_only_no_engine_no_classifier_no_tool",
+      "prohibited_capabilities": ["classifier", "detector", "engine", "upload", "scoring", "fake_real_verdict", "subject_accusation", "API", "forms", "analytics", "monetization", "DNS", "Cloudflare", "custom_domain_launch"],
+      "sitemap_policy": "controlled_category_language_included",
+      "canonical_policy": "registry_aligned",
+      "link_policy": "registered_targets_only",
+      "route_visibility": "public_category_language",
+      "notes": "Public category language layer — governed vocabulary and relation system."
     }
   ]
 }

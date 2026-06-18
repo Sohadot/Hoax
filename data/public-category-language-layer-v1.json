@@ -1,0 +1,38 @@
+{
+  "layer_id": "PUB-CAT-LANG-LAYER-001",
+  "name": "Hoax.ai Public Category Language Layer v1",
+  "version": "v1.0.0",
+  "status": "public_category_language_layer_created",
+  "maturity": "one_public_language_route_no_engine_no_classifier_no_tool",
+  "public_route": "/language/",
+  "public_page_record": {
+    "source_file": "language/index.html",
+    "route_id": "ROUTE-0004",
+    "page_type": "public_category_language",
+    "h1": "Hoax.ai Category Language"
+  },
+  "term_registry_ref": "data/category-language-term-registry.json",
+  "relation_map_ref": "data/category-language-relation-map.json",
+  "linked_public_reference_pages": [
+    "/reference/evidence-posture/",
+    "/reference/artifact-subject-separation/"
+  ],
+  "prohibited_capabilities": [
+    "classifier",
+    "detector",
+    "engine",
+    "upload",
+    "scoring",
+    "fake_real_verdict",
+    "subject_accusation",
+    "API",
+    "forms",
+    "analytics",
+    "monetization",
+    "DNS",
+    "Cloudflare",
+    "custom_domain_launch"
+  ],
+  "non_authorization_statement": "This language layer does not authorize engine, classifier, tool, upload, scoring, API, forms, analytics, monetization, DNS, Cloudflare, custom domain launch, individual term pages, or broader publication.",
+  "last_reviewed": "2026-06-17"
+}

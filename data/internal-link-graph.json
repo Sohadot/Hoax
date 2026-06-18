@@ -1,9 +1,9 @@
 {
   "graph_id": "INTERNAL-LINK-GRAPH-001",
   "name": "Hoax.ai Internal Link Graph",
-  "version": "v1.1.0",
+  "version": "v1.2.0",
   "status": "active",
-  "maturity": "controlled_public_reference_pilot",
+  "maturity": "controlled_public_category_language_layer",
   "routes": [
     {
       "route_id": "ROUTE-0001",
@@ -11,10 +11,12 @@
       "source_file": "index.html",
       "internal_links_out": [
         "styles.css",
+        "/language/",
         "/reference/evidence-posture/",
         "/reference/artifact-subject-separation/"
       ],
       "internal_links_in": [
+        "/language/",
         "/reference/evidence-posture/",
         "/reference/artifact-subject-separation/"
       ],
@@ -29,11 +31,12 @@
         "next-heading"
       ],
       "public_navigation_links": [
+        "/language/",
         "/reference/evidence-posture/",
         "/reference/artifact-subject-separation/"
       ],
       "orphan_status": "not_orphan",
-      "notes": "Homepage links to two controlled reference pilot pages."
+      "notes": "Homepage links to category language layer and two controlled reference pilot pages."
     },
     {
       "route_id": "ROUTE-0002",
@@ -42,10 +45,12 @@
       "internal_links_out": [
         "../../styles.css",
         "/",
+        "/language/",
         "/reference/artifact-subject-separation/"
       ],
       "internal_links_in": [
         "/",
+        "/language/",
         "/reference/artifact-subject-separation/"
       ],
       "anchor_targets": [
@@ -61,6 +66,7 @@
       ],
       "public_navigation_links": [
         "/",
+        "/language/",
         "/reference/artifact-subject-separation/"
       ],
       "orphan_status": "not_orphan",
@@ -73,10 +79,12 @@
       "internal_links_out": [
         "../../styles.css",
         "/",
+        "/language/",
         "/reference/evidence-posture/"
       ],
       "internal_links_in": [
         "/",
+        "/language/",
         "/reference/evidence-posture/"
       ],
       "anchor_targets": [
@@ -92,16 +100,56 @@
       ],
       "public_navigation_links": [
         "/",
+        "/language/",
         "/reference/evidence-posture/"
       ],
       "orphan_status": "not_orphan",
       "notes": "Artifact–Subject Separation controlled public reference page."
+    },
+    {
+      "route_id": "ROUTE-0004",
+      "path": "/language/",
+      "source_file": "language/index.html",
+      "internal_links_out": [
+        "../styles.css",
+        "/",
+        "/reference/evidence-posture/",
+        "/reference/artifact-subject-separation/"
+      ],
+      "internal_links_in": [
+        "/",
+        "/reference/evidence-posture/",
+        "/reference/artifact-subject-separation/"
+      ],
+      "anchor_targets": [
+        "why-language",
+        "core-question",
+        "language-nodes",
+        "how-relate",
+        "what-prevents",
+        "no-classifier",
+        "reference-anchors",
+        "future-nodes",
+        "public-boundary"
+      ],
+      "public_navigation_links": [
+        "/",
+        "/reference/evidence-posture/",
+        "/reference/artifact-subject-separation/"
+      ],
+      "orphan_status": "not_orphan",
+      "notes": "Public category language layer page."
     }
   ],
   "file_links": [
     {
       "source_file": "index.html",
       "target": "styles.css",
+      "link_type": "stylesheet_asset"
+    },
+    {
+      "source_file": "language/index.html",
+      "target": "../styles.css",
       "link_type": "stylesheet_asset"
     },
     {
@@ -133,6 +181,12 @@
       "target": "https://hoax.ai/reference/artifact-subject-separation/",
       "link_type": "canonical_url",
       "route_id": "ROUTE-0003"
+    },
+    {
+      "source_file": "language/index.html",
+      "target": "https://hoax.ai/language/",
+      "link_type": "canonical_url",
+      "route_id": "ROUTE-0004"
     }
   ],
   "markdown_reference_links": [],

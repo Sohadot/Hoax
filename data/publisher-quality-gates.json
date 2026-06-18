@@ -3,7 +3,7 @@
   "name": "Hoax.ai Publisher Quality Gates",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "publisher_blocked_until_public_category_language_layer",
+  "maturity": "publisher_blocked_until_public_category_language_validation",
   "gates": [
     {
       "gate_id": "PUB-GATE-0001",
@@ -281,6 +281,19 @@
       "failure_condition": "public_reference_live_surface_audit_not_met",
       "bypassable": false,
       "notes": "Live surface audit defined Sprint 25 (DEC-043). Validates controlled reference pilot on GitHub Pages preview. Does not authorize broader publication, engine, classifier, tool, upload, scoring, DNS, Cloudflare, custom domain launch, or monetization by itself."
+    },
+    {
+      "gate_id": "PUB-GATE-0026",
+      "name": "Public Category Language Layer Gate",
+      "status": "category_language_layer_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "validation_source": "PUBLIC_CATEGORY_LANGUAGE_LAYER.md",
+      "failure_condition": "public_category_language_layer_not_met",
+      "bypassable": false,
+      "notes": "Category language layer defined Sprint 26 (DEC-044). One public language route created. Does not authorize engine, classifier, tool, upload, scoring, DNS, Cloudflare, custom domain launch, or monetization by itself."
     }
   ],
   "last_reviewed": "2026-06-17"

@@ -14,12 +14,11 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (
     ALLOWED_PUBLIC_HTML,
     PILOT_PATHS,
-    PILOT_ROUTE_IDS,
-    PILOT_SITEMAP_URL_COUNT,
+    PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
     PUBLISHER_STATUS_POST_LIVE_AUDIT,
     validate_no_extra_public_html,
-    validate_pilot_public_surface,
-    validate_pilot_route_registry,
+    validate_pilot_era_public_surface,
+    validate_pilot_routes_present,
 )
 
 POLICY_TOP = {
@@ -281,8 +280,14 @@ def validate_homepage() -> bool:
 def validate_publisher_governance() -> bool:
     ok = True
     pub = load_json(ROOT / "data" / "publisher-governance-policy.json")
-    if pub.get("current_publisher_status") != PUBLISHER_STATUS_POST_LIVE_AUDIT:
-        error(f"publisher status must be {PUBLISHER_STATUS_POST_LIVE_AUDIT}")
+    if pub.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_LIVE_AUDIT,
+        PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE,
+    ):
+        error(
+            f"publisher status must be {PUBLISHER_STATUS_POST_LIVE_AUDIT} "
+            f"or {PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE}"
+        )
         ok = False
 
     gates = load_json(ROOT / "data" / "publisher-quality-gates.json").get("gates", [])
@@ -396,7 +401,7 @@ def main() -> int:
         validate_reference_directories,
         validate_homepage,
         lambda: all(validate_public_page(p) for p in PILOT_PAGES),
-        lambda: validate_pilot_public_surface(routes, error),
+        lambda: validate_pilot_era_public_surface(routes, error),
         validate_internal_link_graph,
         validate_publisher_governance,
         validate_source_registry,
