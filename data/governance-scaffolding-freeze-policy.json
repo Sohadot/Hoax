@@ -33,7 +33,7 @@
     "threshold_note": "10 additional pages beyond existing 3 must exist before any new meta-governance layer may be proposed"
   },
   "immediate_next_phase": "public_reference_page_production",
-  "next_sprint": "Sprint 53 — Public Reference Production Batch 1",
+  "next_sprint": "Sprint 53 \u2014 Public Reference Production Batch 1",
   "first_production_batch": [
     "/reference/source-confidence/",
     "/reference/provenance-gap/",
@@ -78,5 +78,11 @@
     "internally_linked_from_relevant_existing_pages",
     "passes_validate_all_py"
   ],
-  "last_reviewed": "2026-06-19"
+  "last_reviewed": "2026-06-19",
+  "initial_release_batch": [
+    "/reference/source-confidence/",
+    "/reference/provenance-gap/",
+    "/reference/not-assessable/",
+    "/reference/output-boundary/"
+  ]
 }
