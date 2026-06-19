@@ -673,6 +673,17 @@
       "status": "active",
       "last_reviewed": "2026-06-19",
       "notes": "Batch 3 adds Attribution Boundary, Claim Drift, Evidence Limitation, and Interpretation Risk reference pages. Public surface expanded to sixteen URLs. Depth-enforced validation. No engine, classifier, upload, scoring, API, analytics, or public tool behavior authorized."
+    },
+    {
+      "claim_id": "CLAIM-0062",
+      "claim_text": "Hoax.ai has hardened Public Reference Batch 3 for Evidence Posture Standard v1 readiness.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "SPRINT_58_PUBLIC_REFERENCE_BATCH_3_DEPTH_STANDARD_READINESS_AUDIT.md, DECISION_LOG.md (DEC-076), reference/attribution-boundary/index.html, reference/claim-drift/index.html, reference/evidence-limitation/index.html, reference/interpretation-risk/index.html",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-19",
+      "notes": "Sprint 58 deepens Batch 3 in place with Standard-Readiness and allowed/prohibited output language. Sitemap remains sixteen URLs. No new routes or operational capability authorized."
     }
   ]
 }

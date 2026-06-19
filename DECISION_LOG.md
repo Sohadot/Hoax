@@ -2013,3 +2013,28 @@ After Batch 2 depth hardening and the Sprint 56A chronology integrity patch, Hoa
 - No public engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
 - Further reference production may proceed only after Sprint 57 validation passes.
 
+---
+
+## DEC-076 — Public Reference Batch 3 Depth and Standard Readiness Adopted
+
+**Date:** 2026-06-19
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Batch 3 Depth and Standard Readiness to strengthen Attribution Boundary, Claim Drift, Evidence Limitation, and Interpretation Risk as standard-ready reference concepts. This sprint deepens Batch 3 pages in place, adds standard-readiness framing, clarifies allowed and prohibited output language, and prepares the reference layer for Evidence Posture Standard v1 without creating new routes, engines, classifiers, upload workflows, scoring systems, APIs, analytics, DNS changes, monetization, or public tool behavior.
+
+### Rationale
+
+Sprint 57 expanded the public reference surface to sixteen URLs and introduced the constitutional concepts needed to prevent overclaim: Attribution Boundary, Claim Drift, Evidence Limitation, and Interpretation Risk. Sprint 58 hardens these pages so they do not remain standalone essays. They must become the immediate conceptual basis for a public Evidence Posture Standard v1. The standard should emerge from real reference material, not from abstract governance.
+
+### Implications
+
+- The four Batch 3 pages may be deepened in place.
+- Standard-readiness sections may be added.
+- Allowed and prohibited output language may be clarified.
+- Sitemap remains exactly 16 URLs.
+- No new public routes are authorized.
+- Evidence Posture Standard v1 becomes the recommended next phase after Sprint 58.
+- No public engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
+

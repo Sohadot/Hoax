@@ -1329,6 +1329,27 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Production Batch 3 per DEC-075. Public surface expanded to sixteen URLs with depth-enforced validation."
+    },
+    {
+      "claim_id": "CLAIM-0062",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "SPRINT_58_PUBLIC_REFERENCE_BATCH_3_DEPTH_STANDARD_READINESS_AUDIT.md",
+        "DECISION_LOG.md",
+        "reference/attribution-boundary/index.html",
+        "reference/claim-drift/index.html",
+        "reference/evidence-limitation/index.html",
+        "reference/interpretation-risk/index.html"
+      ],
+      "source_refs": [
+        "SOURCE-0387",
+        "SOURCE-0388"
+      ],
+      "support_scope": "public reference batch 3 depth and standard readiness",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Batch 3 depth and standard readiness per DEC-076. Batch 3 hardened in place for Evidence Posture Standard v1 readiness."
     }
   ],
   "last_reviewed": "2026-06-19"

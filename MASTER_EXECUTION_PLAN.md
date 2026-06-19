@@ -97,12 +97,13 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G56 | Public Reference Batch 2 Depth, SEO, and Inevitability Hardening | Sprint 56 validator PASS |
 | G56A | Decision Log Chronology Integrity Patch | Sprint 56A validator PASS |
 | G57 | Public Reference Production Batch 3 | Sprint 57 validator PASS |
+| G58 | Public Reference Batch 3 Depth and Standard Readiness | Sprint 58 validator PASS |
 
-**Gate G57 passed.** Four depth-enforced Batch 3 reference pages created. Public surface expanded to sixteen URLs. No public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
+**Gate G58 passed.** Batch 3 pages hardened for Evidence Posture Standard v1 readiness. Sitemap remains sixteen URLs. No public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
 
 ### Foundation Gates vs Deployment Gates
 
-Foundation gates (G0-G57) govern category infrastructure, reference governance, language layer, language validation, workbench governance, workbench dry-run validation, workbench specification, interface blueprint governance, interface blueprint validation, prototype governance, static prototype v1, prototype validation, prototype refinement, refinement validation, visual system hardening, hardening validation, baseline lock, baseline lock validation, public-readiness boundary governance, public-readiness boundary governance validation, public route eligibility governance, public route eligibility governance validation, public route candidate assessment governance, public route candidate assessment governance validation, public route candidate registry governance, public route candidate registry governance validation, public route candidate registration governance, public route candidate registration governance validation, governance scaffolding freeze and public production mandate, public reference production batch 1, public reference batch 1 depth SEO and inevitability hardening, public reference production batch 2, public reference batch 2 depth SEO and inevitability hardening, decision log chronology integrity, public reference production batch 3, and expansion readiness. They must pass before reference layer scale or operational layers.
+Foundation gates (G0-G58) govern category infrastructure, reference governance, language layer, language validation, workbench governance, workbench dry-run validation, workbench specification, interface blueprint governance, interface blueprint validation, prototype governance, static prototype v1, prototype validation, prototype refinement, refinement validation, visual system hardening, hardening validation, baseline lock, baseline lock validation, public-readiness boundary governance, public-readiness boundary governance validation, public route eligibility governance, public route eligibility governance validation, public route candidate assessment governance, public route candidate assessment governance validation, public route candidate registry governance, public route candidate registry governance validation, public route candidate registration governance, public route candidate registration governance validation, governance scaffolding freeze and public production mandate, public reference production batch 1, public reference batch 1 depth SEO and inevitability hardening, public reference production batch 2, public reference batch 2 depth SEO and inevitability hardening, decision log chronology integrity, public reference production batch 3, public reference batch 3 depth and standard readiness, and expansion readiness. They must pass before reference layer scale or operational layers.
 
 Deployment gates are **separate** and **not current foundation steps**. They open only after reference expansion governance is in place. None are passed.
 
@@ -278,6 +279,10 @@ Gate G56 is passed after the four Batch 2 pages are deepened with Category Thesi
 
 Gate G57 is passed after four depth-enforced Batch 3 reference pages are created (Attribution Boundary, Claim Drift, Evidence Limitation, Interpretation Risk); each page includes a named analytical model, Failure Modes, Boundary Logic, Institutional Relevance, and minimum 1,100+ visible words; `validators/validate_public_reference_production_batch_3.py` exists; SPRINT_57_PUBLIC_REFERENCE_PRODUCTION_BATCH_3_AUDIT.md exists; DEC-075 appended; validate_all.py PASS; public surface expanded to exactly 16 URLs; no engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized; prototype files are not modified; and no Python cache files are tracked or staged.
 
+## G58: Public Reference Batch 3 Depth and Standard Readiness
+
+Gate G58 is passed after the four Batch 3 pages are deepened in place with Standard-Readiness sections and Allowed and Prohibited Output Language sections; each page retains evidence posture framing without truth verdicts; sitemap remains exactly 16 URLs; no new routes are created; DEC-076 exists in DECISION_LOG.md; CLAIM-0062 exists; SPRINT_58_PUBLIC_REFERENCE_BATCH_3_DEPTH_STANDARD_READINESS_AUDIT.md exists; `validators/validate_public_reference_batch_3_depth_standard_readiness.py` exists; validate_all.py PASS; prototype files are not modified; no Python cache files are tracked or staged; no meta-governance loop resumes; DECISION_LOG chronology remains valid; and no engine, classifier, upload, scoring, API, analytics, forms, JavaScript, DNS, Cloudflare, custom domain launch, monetization, or public tool behavior is introduced.
+
 
 ## G56A: Decision Log Chronology Integrity Patch
 
@@ -354,7 +359,8 @@ Gate G56A is passed after DECISION_LOG.md DEC entries are in ascending numeric o
 | Sprint 56 | COMPLETE | G56 passed — Batch 2 depth, SEO, and inevitability hardened |
 | Sprint 56A | COMPLETE | G56A passed — Decision log chronology integrity patched |
 | Sprint 57 | COMPLETE | G57 passed — Batch 3 depth-enforced reference pages created |
-| Sprint 58+ | READY | G57 passed — Further reference production when governance allows; engine/classifier blocked |
+| Sprint 58 | COMPLETE | G58 passed — Batch 3 depth and standard readiness hardened |
+| Sprint 59+ | READY | G58 passed — Evidence Posture Standard v1 when governance allows; engine/classifier blocked |
 
 ## Governing Sentence
 

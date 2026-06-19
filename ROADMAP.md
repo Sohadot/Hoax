@@ -2258,6 +2258,38 @@ Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, cust
 
 ---
 
+## Sprint 58 — Public Reference Batch 3 Depth and Standard Readiness
+
+**Status:** COMPLETE — 2026-06-19
+**Goal:** Deepen, technically strengthen, and standardize Batch 3 pages in place so Attribution Boundary, Claim Drift, Evidence Limitation, and Interpretation Risk serve as the immediate conceptual basis for Evidence Posture Standard v1—without new routes or operational capability.
+
+### Deliverables
+
+- Hardened reference/attribution-boundary/index.html
+- Hardened reference/claim-drift/index.html
+- Hardened reference/evidence-limitation/index.html
+- Hardened reference/interpretation-risk/index.html
+- validators/validate_public_reference_batch_3_depth_standard_readiness.py
+- SPRINT_58_PUBLIC_REFERENCE_BATCH_3_DEPTH_STANDARD_READINESS_AUDIT.md
+- DEC-076 appended to DECISION_LOG.md
+- validators/validate_all.py updated
+
+### Validation
+
+`py -3 validators/validate_all.py` — PASS required for sprint closure.
+
+### Gate
+
+**Gate G58 passed.** Evidence Posture Standard v1 is the recommended next phase.
+
+### Next Phase
+
+**Sprint 59 — Hoax.ai Evidence Posture Standard v1**
+
+Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, custom domain launch, monetization, and public tool behavior remain blocked.
+
+---
+
 ## Sprint 57 — Public Reference Production Batch 3
 
 **Status:** COMPLETE — 2026-06-19
@@ -2284,13 +2316,11 @@ Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, cust
 
 ### Next Phase
 
-Continue public reference production or depth hardening under governance scaffolding freeze mandate.
-
-Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, custom domain launch, monetization, and public tool behavior remain blocked.
+**Sprint 58 — Public Reference Batch 3 Depth and Standard Readiness**
 
 ---
 
-## Sprint 56A — Decision Log Chronology Integrity Patch
+## Sprint 56 — Public Reference Batch 2 Depth, SEO, and Inevitability Hardening
 
 **Status:** COMPLETE — 2026-06-17
 **Goal:** Strengthen the four Batch 2 reference pages through conceptual depth, semantic SEO, internal linking, institutional relevance, and category inevitability—without new routes or operational capability.

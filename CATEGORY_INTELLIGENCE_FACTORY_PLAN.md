@@ -156,6 +156,8 @@ The Category Intelligence Factory now hardens Batch 2 public reference substance
 
 Batch 3 extends constitutional category language with Attribution Boundary, Claim Drift, Evidence Limitation, and Interpretation Risk—each produced as a deep reference document with named analytical models and depth-enforced validation, not shallow glossary copy.
 
+The Category Intelligence Factory now treats Batch 3 as the bridge from reference layer to standard. Attribution Boundary, Claim Drift, Evidence Limitation, and Interpretation Risk must not remain standalone terms; they must prepare Hoax.ai for Evidence Posture Standard v1 by defining the output boundaries, support limits, claim-movement risks, and interpretation controls required for serious evidence-posture authority.
+
 The Category Intelligence Factory treats chronology integrity as part of evidence integrity: decision records must not move backward in time unless a correction note explicitly explains and repairs the error.
 
 The category factory becomes reference-grade only when public-facing claims, evidence ledger entries, source records, and support locations are traceable as a governed system.
