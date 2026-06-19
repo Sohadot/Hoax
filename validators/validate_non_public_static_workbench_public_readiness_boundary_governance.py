@@ -16,6 +16,8 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
+    PUBLISHER_STATUS_GOVERNANCE_SCAFFOLDING_FREEZE,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_1,
     validate_public_surface,
 )
 PROTO_DIR=ROOT/'_internal_prototypes'/'evidence-posture-workbench'
@@ -82,7 +84,7 @@ def validate_files_public():
     if not validate_public_surface(routes,error,PUBLIC_SITEMAP_URL_COUNT): ok=False
     if 'evidence-posture-workbench' in json.dumps(routes).lower() or 'internal_prototypes' in json.dumps(routes).lower(): error('prototype registered as route'); ok=False
     locs=[e.text.strip().lower() for e in ET.parse(ROOT/'sitemap.xml').findall('.//{*}loc') if e.text]
-    if len(locs)!=4 or any('evidence-posture-workbench' in x or 'internal_prototypes' in x for x in locs): error('sitemap mismatch or prototype leak'); ok=False
+    if len(locs)!=PUBLIC_SITEMAP_URL_COUNT or any('evidence-posture-workbench' in x or 'internal_prototypes' in x for x in locs): error('sitemap mismatch or prototype leak'); ok=False
     pat=re.compile(r'internal_prototypes|evidence-posture-workbench',re.I)
     for rel in ['index.html','reference/evidence-posture/index.html','reference/artifact-subject-separation/index.html','language/index.html']:
         if pat.search((ROOT/rel).read_text(encoding='utf-8')): error(f'{rel} links to prototype'); ok=False
@@ -90,7 +92,7 @@ def validate_files_public():
     return ok
 def validate_governance():
     ok=True; pub=load('data/publisher-governance-policy.json')
-    if pub.get('current_publisher_status') not in (PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_PUBLIC_READINESS_BOUNDARY_VALIDATION, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE_VALIDATION, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRY_GOVERNANCE, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRY_GOVERNANCE_VALIDATION, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_VALIDATION, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE, "blocked_until_public_reference_production_batch_1"): error('publisher status invalid'); ok=False
+    if pub.get('current_publisher_status') not in (PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_PUBLIC_READINESS_BOUNDARY_VALIDATION, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE_VALIDATION, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRY_GOVERNANCE, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRY_GOVERNANCE_VALIDATION, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_VALIDATION, PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE, PUBLISHER_STATUS_GOVERNANCE_SCAFFOLDING_FREEZE, PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_1): error('publisher status invalid'); ok=False
     gate=next((g for g in load('data/publisher-quality-gates.json').get('gates',[]) if g.get('name')=='Non-Public Static Workbench Public-Readiness Boundary Governance Gate'),None)
     if not gate: error('public-readiness boundary governance gate missing'); ok=False
     else:

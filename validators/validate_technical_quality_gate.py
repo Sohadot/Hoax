@@ -226,6 +226,8 @@ def validate_gate_data() -> bool:
 
 
 def validate_public_file_registry_data() -> bool:
+    from public_surface_checks import ALLOWED_PUBLIC_ROOT_FILES
+
     ok = True
     path = ROOT / "data" / "public-file-registry.json"
     try:
@@ -258,25 +260,21 @@ def validate_public_file_registry_data() -> bool:
         error("public-file-registry: index.html must map to ROUTE-0001")
         ok = False
 
-    required_paths = {
-        "index.html",
-        "language/index.html",
-        "reference/evidence-posture/index.html",
-        "reference/artifact-subject-separation/index.html",
-        "styles.css",
-        "robots.txt",
-        "sitemap.xml",
-    }
+    required_paths = set(ALLOWED_PUBLIC_ROOT_FILES)
     if set(paths) != required_paths:
         error(f"public-file-registry: expected paths {sorted(required_paths)}")
         ok = False
 
-    pilot_paths = {
+    route_paths = {
         "language/index.html": "ROUTE-0004",
         "reference/evidence-posture/index.html": "ROUTE-0002",
         "reference/artifact-subject-separation/index.html": "ROUTE-0003",
+        "reference/source-confidence/index.html": "ROUTE-0005",
+        "reference/provenance-gap/index.html": "ROUTE-0006",
+        "reference/not-assessable/index.html": "ROUTE-0007",
+        "reference/output-boundary/index.html": "ROUTE-0008",
     }
-    for path, route_id in pilot_paths.items():
+    for path, route_id in route_paths.items():
         entry = next((f for f in files if f.get("path") == path), None)
         if not entry or entry.get("route_id_if_applicable") != route_id:
             error(f"public-file-registry: {path} must map to {route_id}")

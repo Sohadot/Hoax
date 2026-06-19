@@ -372,8 +372,8 @@ def validate_public_safety() -> bool:
             ok = False
     tree = ET.parse(ROOT / "sitemap.xml")
     locs = [el.text.strip().lower() for el in tree.findall(".//{*}loc") if el.text]
-    if len(locs) != 4:
-        error("sitemap.xml: expected exactly 4 URLs")
+    if len(locs) != PUBLIC_SITEMAP_URL_COUNT:
+        error("sitemap.xml: expected exactly PUBLIC_SITEMAP_URL_COUNT URLs")
         ok = False
     if any("internal_prototypes" in loc or "evidence-posture-workbench" in loc for loc in locs):
         error("sitemap.xml: prototype must not be included")
@@ -404,6 +404,7 @@ def validate_publisher_governance() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
     "blocked_until_public_reference_production_batch_1",
+        "blocked_until_public_reference_production_batch_1_validation",
     ):
         error(f"publisher status must be {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_HARDENING}")
         ok = False

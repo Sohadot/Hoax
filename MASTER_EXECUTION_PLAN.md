@@ -91,12 +91,13 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G50 | Public Route Candidate Registration Governance | Sprint 50 validator PASS |
 | G51 | Public Route Candidate Registration Governance Validation | Sprint 51 validator PASS |
 | G52 | Governance Scaffolding Freeze and Public Production Mandate | Sprint 52 validator PASS |
+| G53 | Public Reference Production Batch 1 | Sprint 53 validator PASS |
 
-**Gate G52 passed.** Governance scaffolding is frozen. The next authorized phase is public reference page production (Sprint 53). No candidate registration authorization governance is authorized. No public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized. The prototype remains non-public, static, unrouted, unindexed, unlinked, and non-operational.
+**Gate G53 passed.** Public reference production Batch 1 created four governed pages. Public surface expanded to 8 URLs. Batch 1 validation is the next authorized phase (Sprint 54). No public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized. The prototype remains non-public, static, unrouted, unindexed, unlinked, and non-operational.
 
 ### Foundation Gates vs Deployment Gates
 
-Foundation gates (G0-G52) govern category infrastructure, reference governance, language layer, language validation, workbench governance, workbench dry-run validation, workbench specification, interface blueprint governance, interface blueprint validation, prototype governance, static prototype v1, prototype validation, prototype refinement, refinement validation, visual system hardening, hardening validation, baseline lock, baseline lock validation, public-readiness boundary governance, public-readiness boundary governance validation, public route eligibility governance, public route eligibility governance validation, public route candidate assessment governance, public route candidate assessment governance validation, public route candidate registry governance, public route candidate registry governance validation, public route candidate registration governance, public route candidate registration governance validation, governance scaffolding freeze and public production mandate, and expansion readiness. They must pass before reference layer scale or operational layers.
+Foundation gates (G0-G53) govern category infrastructure, reference governance, language layer, language validation, workbench governance, workbench dry-run validation, workbench specification, interface blueprint governance, interface blueprint validation, prototype governance, static prototype v1, prototype validation, prototype refinement, refinement validation, visual system hardening, hardening validation, baseline lock, baseline lock validation, public-readiness boundary governance, public-readiness boundary governance validation, public route eligibility governance, public route eligibility governance validation, public route candidate assessment governance, public route candidate assessment governance validation, public route candidate registry governance, public route candidate registry governance validation, public route candidate registration governance, public route candidate registration governance validation, governance scaffolding freeze and public production mandate, public reference production batch 1, and expansion readiness. They must pass before reference layer scale or operational layers.
 
 Deployment gates are **separate** and **not current foundation steps**. They open only after reference expansion governance is in place. None are passed.
 
@@ -252,6 +253,10 @@ Gate G51 is passed after Public Route Candidate Registration Governance Validati
 
 Gate G52 is passed after GOVERNANCE_SCAFFOLDING_FREEZE_AND_PUBLIC_PRODUCTION_MANDATE.md exists; PUBLIC_REFERENCE_PRODUCTION_PLAN_V1.md exists; data/governance-scaffolding-freeze-policy.json exists and parses; data/public-reference-production-plan-v1.json exists and parses; DEC-070 exists in DECISION_LOG.md; production threshold is 10 additional public reference pages; public route candidate registration authorization governance is blocked; no further meta-governance layer is authorized; next phase is public reference production; production plan includes at least 10 page candidates; initial release batch includes /reference/source-confidence/, /reference/provenance-gap/, /reference/not-assessable/, /reference/output-boundary/; validator exists; validate_all.py PASS; no public route, sitemap expansion, public navigation, JavaScript, forms, inputs, upload, scoring, engine, classifier, tool, API, analytics, DNS, Cloudflare, custom domain launch, monetization, Python cache files, deployment changes, or public release authorization is created; prototype files are not modified; and prototype remains non-public, static, not routed, not sitemap-listed, not publicly linked, and non-operational.
 
+## G53: Public Reference Production Batch 1
+
+Gate G53 is passed after four Batch 1 public reference pages exist at /reference/source-confidence/, /reference/provenance-gap/, /reference/not-assessable/, and /reference/output-boundary/; each page includes required sections, canonical URLs, titles, meta descriptions, language and evidence-posture links, and batch cross-links; route registry includes ROUTE-0005 through ROUTE-0008 with production_batch public_reference_production_batch_1; sitemap contains exactly 8 URLs; homepage, language, evidence-posture, and artifact-subject-separation pages link to Batch 1 pages; DEC-071 exists in DECISION_LOG.md; CLAIM-0059 exists; PUB-GATE-0053 exists; publisher status is blocked_until_public_reference_production_batch_1_validation; SPRINT_53_PUBLIC_REFERENCE_PRODUCTION_BATCH_1_AUDIT.md exists; validator exists; validate_all.py PASS; prototype files are not modified; and no engine, classifier, upload, scoring, API, analytics, forms, JavaScript, .nojekyll, DNS, Cloudflare, custom domain launch, monetization, or public tool behavior is created.
+
 ## Current Execution State
 
 | Sprint | Status | Gate |
@@ -317,7 +322,8 @@ Gate G52 is passed after GOVERNANCE_SCAFFOLDING_FREEZE_AND_PUBLIC_PRODUCTION_MAN
 | Sprint 50 | COMPLETE | G50 passed |
 | Sprint 51 | COMPLETE | G51 passed |
 | Sprint 52 | COMPLETE | G52 passed — Governance scaffolding frozen; public reference production mandated |
-| Sprint 53+ | READY | G52 passed — Public reference page production is next; engine/classifier blocked; deployment gates separately governed |
+| Sprint 53 | COMPLETE | G53 passed — Public reference production Batch 1; 8 public URLs |
+| Sprint 54+ | READY | G53 passed — Batch 1 validation is next; engine/classifier blocked; deployment gates separately governed |
 
 ## Governing Sentence
 

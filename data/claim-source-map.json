@@ -1254,6 +1254,31 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Governance scaffolding freeze adoption per DEC-070. No public surface refs."
+    },
+    {
+      "claim_id": "CLAIM-0059",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "SPRINT_53_PUBLIC_REFERENCE_PRODUCTION_BATCH_1_AUDIT.md",
+        "DECISION_LOG.md",
+        "reference/source-confidence/index.html",
+        "reference/provenance-gap/index.html",
+        "reference/not-assessable/index.html",
+        "reference/output-boundary/index.html"
+      ],
+      "source_refs": [
+        "SOURCE-0365",
+        "SOURCE-0366",
+        "SOURCE-0367",
+        "SOURCE-0368",
+        "SOURCE-0369",
+        "SOURCE-0370"
+      ],
+      "support_scope": "public reference production batch 1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Production Batch 1 per DEC-071. Public surface traceability via support_locations."
     }
   ],
   "last_reviewed": "2026-06-19"

@@ -9,6 +9,8 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+from public_surface_checks import BATCH1_CANDIDATE_IDS, REGISTERED_CANDIDATE_ROUTE_STATUSES
+
 ROOT = Path(__file__).resolve().parent.parent
 
 POLICY_TOP = {
@@ -307,20 +309,35 @@ def validate_candidate_pack() -> bool:
                 error(f"reference-candidate-pack-v1.json: {cid} missing field {field}")
                 ok = False
 
+        if cid in BATCH1_CANDIDATE_IDS:
+            if candidate.get("route_status") != "public_reference_production_batch_1_route_created":
+                error(f"reference-candidate-pack-v1.json: {cid} route_status must be public_reference_production_batch_1_route_created")
+                ok = False
+            if candidate.get("sitemap_status") != "sitemap_eligible":
+                error(f"reference-candidate-pack-v1.json: {cid} sitemap_status must be sitemap_eligible")
+                ok = False
+            if candidate.get("draft_status") != "production_page_created":
+                error(f"reference-candidate-pack-v1.json: {cid} draft_status must be production_page_created")
+                ok = False
+            if candidate.get("publication_status") != "public_reference_production_batch_1":
+                error(f"reference-candidate-pack-v1.json: {cid} publication_status must be public_reference_production_batch_1")
+                ok = False
+        else:
+            if candidate.get("route_status") != "not_route_created":
+                error(f"reference-candidate-pack-v1.json: {cid} route_status must be not_route_created")
+                ok = False
+            if candidate.get("sitemap_status") != "not_sitemap_eligible":
+                error(f"reference-candidate-pack-v1.json: {cid} sitemap_status must be not_sitemap_eligible")
+                ok = False
+            if candidate.get("draft_status") != "not_draft_created":
+                error(f"reference-candidate-pack-v1.json: {cid} draft_status must be not_draft_created")
+                ok = False
+            if candidate.get("publication_status") != "publication_blocked":
+                error(f"reference-candidate-pack-v1.json: {cid} publication_status must be publication_blocked")
+                ok = False
+
         if candidate.get("candidate_status") not in ("candidate_registered", "proposed_internal"):
             error(f"reference-candidate-pack-v1.json: {cid} invalid candidate_status")
-            ok = False
-        if candidate.get("route_status") != "not_route_created":
-            error(f"reference-candidate-pack-v1.json: {cid} route_status must be not_route_created")
-            ok = False
-        if candidate.get("sitemap_status") != "not_sitemap_eligible":
-            error(f"reference-candidate-pack-v1.json: {cid} sitemap_status must be not_sitemap_eligible")
-            ok = False
-        if candidate.get("draft_status") != "not_draft_created":
-            error(f"reference-candidate-pack-v1.json: {cid} draft_status must be not_draft_created")
-            ok = False
-        if candidate.get("publication_status") != "publication_blocked":
-            error(f"reference-candidate-pack-v1.json: {cid} publication_status must be publication_blocked")
             ok = False
 
         if candidate.get("page_type_ref") not in page_types:
@@ -362,7 +379,8 @@ def validate_candidate_pack() -> bool:
 
         proposed = candidate.get("proposed_path", "")
         route_match = next((r for r in routes if r.get("path") == proposed), None)
-        if route_match and route_match.get("status") != "controlled_public_reference_route_created":
+
+        if route_match and route_match.get("status") not in REGISTERED_CANDIDATE_ROUTE_STATUSES:
             error(f"reference-candidate-pack-v1.json: {cid} proposed_path must not be in route registry")
             ok = False
 
@@ -400,6 +418,14 @@ def validate_candidate_registry() -> bool:
 
     for entry in reg_candidates:
         cid = entry.get("candidate_id", "?")
+        if cid in BATCH1_CANDIDATE_IDS:
+            if entry.get("publication_status") != "public_reference_production_batch_1":
+                error(f"candidate registry: {cid} must be public_reference_production_batch_1")
+                ok = False
+            if entry.get("route_status") != "public_reference_production_batch_1_route_created":
+                error(f"candidate registry: {cid} must be public_reference_production_batch_1_route_created")
+                ok = False
+            continue
         if entry.get("publication_status") != "publication_blocked":
             error(f"candidate registry: {cid} must be publication_blocked")
             ok = False
@@ -428,18 +454,20 @@ def validate_route_sitemap_safety() -> bool:
     pack = load_json(ROOT / "data" / "reference-candidate-pack-v1.json")
     routes = load_json(ROOT / "data" / "route-registry.json").get("routes", [])
 
-    from public_surface_checks import validate_pilot_route_registry
+    from public_surface_checks import ALLOWED_PUBLIC_ROOT_FILES, BATCH1_CANDIDATE_IDS, validate_pilot_route_registry
+
     if not validate_pilot_route_registry(routes, error):
         ok = False
 
     registered_paths = {r.get("path") for r in routes}
     for candidate in pack.get("candidates", []):
         proposed = candidate.get("proposed_path", "")
+        cid = candidate.get("candidate_id", "")
         route_match = next((r for r in routes if r.get("path") == proposed), None)
-        if route_match and route_match.get("status") != "controlled_public_reference_route_created":
-            error(f"route safety: candidate {candidate.get('candidate_id')} proposed_path in route registry")
+        if route_match and route_match.get("status") not in REGISTERED_CANDIDATE_ROUTE_STATUSES:
+            error(f"route safety: candidate {cid} proposed_path in route registry")
             ok = False
-        if candidate.get("candidate_id") in ("REF-CAND-0001", "REF-CAND-0002"):
+        if cid in ("REF-CAND-0001", "REF-CAND-0002", *BATCH1_CANDIDATE_IDS):
             continue
         candidate_dir = ROOT / proposed.strip("/") if proposed else None
         if candidate_dir and candidate_dir.exists():
@@ -526,6 +554,7 @@ def validate_cross_file() -> bool:
         "blocked_until_public_route_candidate_registration_governance_validation",
         "blocked_until_public_route_candidate_registration_authorization_governance",
         "blocked_until_public_reference_production_batch_1",
+        "blocked_until_public_reference_production_batch_1_validation",
     ):
         error(
             "publisher-governance-policy: current_publisher_status must be "

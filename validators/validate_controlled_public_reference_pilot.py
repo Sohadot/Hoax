@@ -336,6 +336,10 @@ def validate_registries() -> bool:
 
     for entry in load_json(ROOT / "data" / "reference-page-candidate-registry.json").get("candidates", []):
         if entry.get("candidate_id") not in ("REF-CAND-0001", "REF-CAND-0002"):
+            from candidate_registry_checks import is_batch1_production_candidate
+
+            if is_batch1_production_candidate(entry):
+                continue
             if entry.get("public_reference_pilot_status") == "converted_to_controlled_public_reference_pilot":
                 error(f"candidate {entry.get('candidate_id')}: must not be converted")
                 ok = False
@@ -373,6 +377,7 @@ def validate_publisher_governance() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
     "blocked_until_public_reference_production_batch_1",
+        "blocked_until_public_reference_production_batch_1_validation",
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_PILOT}, "

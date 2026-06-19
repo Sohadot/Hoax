@@ -870,7 +870,7 @@ def validate_files_public() -> bool:
         error("route-registry: prototype must not be registered")
         ok = False
     locs = [e.text.strip().lower() for e in ET.parse(ROOT / "sitemap.xml").findall(".//{*}loc") if e.text]
-    if len(locs) != 4 or any("evidence-posture-workbench" in x or "internal_prototypes" in x for x in locs):
+    if len(locs) != PUBLIC_SITEMAP_URL_COUNT or any("evidence-posture-workbench" in x or "internal_prototypes" in x for x in locs):
         error("sitemap mismatch or prototype leak")
         ok = False
     pat = re.compile(
@@ -899,6 +899,7 @@ def validate_governance() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_VALIDATION,
         "blocked_until_public_reference_production_batch_1",
+        "blocked_until_public_reference_production_batch_1_validation",
     ):
         error("publisher status must be blocked until public route candidate registration authorization governance")
         ok = False

@@ -217,7 +217,7 @@ def validate_prototype_and_public_safety() -> bool:
             error("route-registry: prototype must not be registered")
             ok = False
     locs = [el.text.strip().lower() for el in ET.parse(ROOT / "sitemap.xml").findall(".//{*}loc") if el.text]
-    if len(locs) != 4:
+    if len(locs) != PUBLIC_SITEMAP_URL_COUNT:
         error("sitemap.xml must remain exactly 4 URLs")
         ok = False
     if any("internal_prototypes" in loc or "evidence-posture-workbench" in loc for loc in locs):
@@ -249,6 +249,7 @@ def validate_governance_and_registry() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
     "blocked_until_public_reference_production_batch_1",
+        "blocked_until_public_reference_production_batch_1_validation",
     ):
         error(f"publisher status must be {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_BASELINE_LOCK_VALIDATION}")
         ok = False
