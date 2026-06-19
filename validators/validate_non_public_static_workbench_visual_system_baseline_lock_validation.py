@@ -337,6 +337,7 @@ def validate_governance_and_registry() -> bool:
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
     "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
+        "blocked_until_public_reference_production_batch_2_validation",
     ):
         error("publisher status must be blocked until public-readiness boundary governance")
         ok = False

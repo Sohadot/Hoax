@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from public_surface_checks import BATCH1_CANDIDATE_IDS
+from public_surface_checks import BATCH1_CANDIDATE_IDS, BATCH2_CANDIDATE_IDS
 
 ALLOWED_CANDIDATE_STATUS = {"candidate_registered", "proposed_internal"}
 
@@ -18,9 +18,19 @@ BATCH1_REQUIRED_FIELDS = {
     "publication_status": "public_reference_production_batch_1",
 }
 
+BATCH2_REQUIRED_FIELDS = {
+    "route_status": "public_reference_production_batch_2_route_created",
+    "sitemap_status": "sitemap_eligible",
+    "publication_status": "public_reference_production_batch_2",
+}
+
 
 def is_batch1_production_candidate(entry: dict) -> bool:
     return entry.get("candidate_id") in BATCH1_CANDIDATE_IDS
+
+
+def is_batch2_production_candidate(entry: dict) -> bool:
+    return entry.get("candidate_id") in BATCH2_CANDIDATE_IDS
 
 
 def validate_batch1_production_candidate(entry: dict, error, label: str = "candidate") -> bool:
@@ -40,6 +50,23 @@ def validate_batch1_production_candidate(entry: dict, error, label: str = "candi
     return ok
 
 
+def validate_batch2_production_candidate(entry: dict, error, label: str = "candidate") -> bool:
+    ok = True
+    cid = entry.get("candidate_id", "?")
+    prefix = f"{label} {cid}"
+    if entry.get("candidate_status") not in ALLOWED_CANDIDATE_STATUS:
+        error(f"{prefix}: invalid candidate_status {entry.get('candidate_status')}")
+        ok = False
+    if entry.get("draft_status") != "production_page_created":
+        error(f"{prefix}: draft_status must be production_page_created")
+        ok = False
+    for field, expected in BATCH2_REQUIRED_FIELDS.items():
+        if entry.get(field) != expected:
+            error(f"{prefix}: {field} must be {expected}")
+            ok = False
+    return ok
+
+
 def validate_candidates_blocked_only(candidates: list, error) -> bool:
     """Return True if every registry candidate is internal-only and blocked from public output."""
     ok = True
@@ -49,6 +76,10 @@ def validate_candidates_blocked_only(candidates: list, error) -> bool:
         cid = entry.get("candidate_id", "?")
         if is_batch1_production_candidate(entry):
             if not validate_batch1_production_candidate(entry, error):
+                ok = False
+            continue
+        if is_batch2_production_candidate(entry):
+            if not validate_batch2_production_candidate(entry, error):
                 ok = False
             continue
         status = entry.get("candidate_status", "")

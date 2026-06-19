@@ -169,8 +169,8 @@ def validate_term_registry() -> bool:
         error(f"term registry missing fields: {sorted(TERM_REGISTRY_TOP - set(data.keys()))}")
         ok = False
     terms = data.get("terms", [])
-    if len(terms) != 8:
-        error(f"term registry: expected 8 terms, found {len(terms)}")
+    if len(terms) != 10:
+        error(f"term registry: expected 10 terms, found {len(terms)}")
         ok = False
     ids: set[str] = set()
     for term in terms:
@@ -190,12 +190,18 @@ def validate_term_registry() -> bool:
             if term.get("public_page_allowed") is not True:
                 error(f"{tid}: public_page_allowed must be true")
                 ok = False
-        elif tid == "LANG-TERM-0008":
-            if status != "boundary_refinement_required_before_public_route":
-                error(f"{tid}: invalid public_status")
+        elif tid in (
+            "LANG-TERM-0003", "LANG-TERM-0004", "LANG-TERM-0005", "LANG-TERM-0006",
+            "LANG-TERM-0007", "LANG-TERM-0008", "LANG-TERM-0009", "LANG-TERM-0010",
+        ):
+            if status != "public_reference_anchor":
+                error(f"{tid}: must be public_reference_anchor")
                 ok = False
-            if term.get("public_page_allowed") is not False:
-                error(f"{tid}: public_page_allowed must be false")
+            if term.get("public_page_allowed") is not True:
+                error(f"{tid}: public_page_allowed must be true")
+                ok = False
+            if not term.get("route_path"):
+                error(f"{tid}: production anchor must have route_path")
                 ok = False
         else:
             if status != "language_node_no_public_route_yet":
@@ -225,8 +231,8 @@ def validate_relation_map() -> bool:
         error(f"relation map missing fields: {sorted(RELATION_MAP_TOP - set(data.keys()))}")
         ok = False
     relations = data.get("relations", [])
-    if len(relations) != 7:
-        error(f"relation map: expected 7 relations, found {len(relations)}")
+    if len(relations) != 9:
+        error(f"relation map: expected 9 relations, found {len(relations)}")
         ok = False
     term_ids = {t.get("term_id") for t in load_json(ROOT / "data" / "category-language-term-registry.json").get("terms", [])}
     rel_ids: set[str] = set()
@@ -439,6 +445,7 @@ def validate_publisher_governance() -> bool:
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
     "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
+        "blocked_until_public_reference_production_batch_2_validation",
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE}, "

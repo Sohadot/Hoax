@@ -431,11 +431,13 @@ def validate_registries() -> bool:
                 error(f"draft registry: {did} {field} must remain {expected}")
                 ok = False
 
-    from candidate_registry_checks import is_batch1_production_candidate
+    from candidate_registry_checks import is_batch1_production_candidate, is_batch2_production_candidate
 
     for entry in load_json(ROOT / "data" / "reference-page-candidate-registry.json").get("candidates", []):
         cid = entry.get("candidate_id", "?")
         if is_batch1_production_candidate(entry):
+            continue
+        if is_batch2_production_candidate(entry):
             continue
         if cid in REQUIRED_CANDIDATE_IDS:
             if entry.get("public_route_readiness_status") != "public_route_readiness_checked":

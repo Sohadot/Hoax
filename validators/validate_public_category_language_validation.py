@@ -282,8 +282,8 @@ def validate_language_page() -> bool:
             ok = False
 
     cards = len(re.findall(r'class=["\']language-term-card["\']', html, re.I))
-    if cards != 8:
-        error(f"{LANGUAGE_PAGE}: expected 8 term cards, found {cards}")
+    if cards != 10:
+        error(f"{LANGUAGE_PAGE}: expected 10 term cards, found {cards}")
         ok = False
 
     if "<svg" not in lower:
@@ -299,8 +299,8 @@ def validate_language_page() -> bool:
             ok = False
 
     wc = visible_word_count(html)
-    if wc < 900 or wc > 1500:
-        error(f"{LANGUAGE_PAGE}: word count {wc} outside 900-1500")
+    if wc < 900 or wc > 2000:
+        error(f"{LANGUAGE_PAGE}: word count {wc} outside 900-2000")
         ok = False
 
     if "public boundary" not in lower:
@@ -341,8 +341,8 @@ def validate_term_registry() -> bool:
         related_ids.add(rel.get("source_term_id", ""))
         related_ids.add(rel.get("target_term_id", ""))
 
-    if len(terms) != 8:
-        error(f"term registry: expected 8 terms, found {len(terms)}")
+    if len(terms) != 10:
+        error(f"term registry: expected 10 terms, found {len(terms)}")
         ok = False
 
     for term in terms:
@@ -355,12 +355,15 @@ def validate_term_registry() -> bool:
             if status != "public_reference_anchor" or term.get("public_page_allowed") is not True:
                 error(f"{tid}: anchor term boundary invalid")
                 ok = False
-        elif tid == "LANG-TERM-0008":
-            if status != "boundary_refinement_required_before_public_route":
-                error(f"{tid}: Synthetic Fragility boundary invalid")
+        elif tid in (
+            "LANG-TERM-0003", "LANG-TERM-0004", "LANG-TERM-0005", "LANG-TERM-0006",
+            "LANG-TERM-0007", "LANG-TERM-0008", "LANG-TERM-0009", "LANG-TERM-0010",
+        ):
+            if status != "public_reference_anchor" or term.get("public_page_allowed") is not True:
+                error(f"{tid}: production anchor term boundary invalid")
                 ok = False
-            if term.get("public_page_allowed") is not False:
-                error(f"{tid}: public_page_allowed must be false")
+            if not term.get("route_path"):
+                error(f"{tid}: production anchor must have route_path")
                 ok = False
         else:
             if status != "language_node_no_public_route_yet" or term.get("public_page_allowed") is not False:
@@ -394,8 +397,8 @@ def validate_relation_map() -> bool:
     data = load_json(ROOT / "data" / "category-language-relation-map.json")
     relations = data.get("relations", [])
     term_ids = {t.get("term_id") for t in load_json(ROOT / "data" / "category-language-term-registry.json").get("terms", [])}
-    if len(relations) != 7:
-        error(f"relation map: expected 7 relations, found {len(relations)}")
+    if len(relations) != 9:
+        error(f"relation map: expected 9 relations, found {len(relations)}")
         ok = False
     rel_ids: set[str] = set()
     for rel in relations:
@@ -543,6 +546,7 @@ def validate_publisher_governance() -> bool:
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
     "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
+        "blocked_until_public_reference_production_batch_2_validation",
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE}, "

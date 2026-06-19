@@ -9,7 +9,7 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from public_surface_checks import BATCH1_CANDIDATE_IDS, REGISTERED_CANDIDATE_ROUTE_STATUSES
+from public_surface_checks import BATCH1_CANDIDATE_IDS, BATCH2_CANDIDATE_IDS, REGISTERED_CANDIDATE_ROUTE_STATUSES
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -322,6 +322,19 @@ def validate_candidate_pack() -> bool:
             if candidate.get("publication_status") != "public_reference_production_batch_1":
                 error(f"reference-candidate-pack-v1.json: {cid} publication_status must be public_reference_production_batch_1")
                 ok = False
+        elif cid in BATCH2_CANDIDATE_IDS:
+            if candidate.get("route_status") != "public_reference_production_batch_2_route_created":
+                error(f"reference-candidate-pack-v1.json: {cid} route_status must be public_reference_production_batch_2_route_created")
+                ok = False
+            if candidate.get("sitemap_status") != "sitemap_eligible":
+                error(f"reference-candidate-pack-v1.json: {cid} sitemap_status must be sitemap_eligible")
+                ok = False
+            if candidate.get("draft_status") != "production_page_created":
+                error(f"reference-candidate-pack-v1.json: {cid} draft_status must be production_page_created")
+                ok = False
+            if candidate.get("publication_status") != "public_reference_production_batch_2":
+                error(f"reference-candidate-pack-v1.json: {cid} publication_status must be public_reference_production_batch_2")
+                ok = False
         else:
             if candidate.get("route_status") != "not_route_created":
                 error(f"reference-candidate-pack-v1.json: {cid} route_status must be not_route_created")
@@ -426,6 +439,14 @@ def validate_candidate_registry() -> bool:
                 error(f"candidate registry: {cid} must be public_reference_production_batch_1_route_created")
                 ok = False
             continue
+        if cid in BATCH2_CANDIDATE_IDS:
+            if entry.get("publication_status") != "public_reference_production_batch_2":
+                error(f"candidate registry: {cid} must be public_reference_production_batch_2")
+                ok = False
+            if entry.get("route_status") != "public_reference_production_batch_2_route_created":
+                error(f"candidate registry: {cid} must be public_reference_production_batch_2_route_created")
+                ok = False
+            continue
         if entry.get("publication_status") != "publication_blocked":
             error(f"candidate registry: {cid} must be publication_blocked")
             ok = False
@@ -454,7 +475,7 @@ def validate_route_sitemap_safety() -> bool:
     pack = load_json(ROOT / "data" / "reference-candidate-pack-v1.json")
     routes = load_json(ROOT / "data" / "route-registry.json").get("routes", [])
 
-    from public_surface_checks import ALLOWED_PUBLIC_ROOT_FILES, BATCH1_CANDIDATE_IDS, validate_pilot_route_registry
+    from public_surface_checks import ALLOWED_PUBLIC_ROOT_FILES, BATCH1_CANDIDATE_IDS, BATCH2_CANDIDATE_IDS, validate_pilot_route_registry
 
     if not validate_pilot_route_registry(routes, error):
         ok = False
@@ -467,7 +488,7 @@ def validate_route_sitemap_safety() -> bool:
         if route_match and route_match.get("status") not in REGISTERED_CANDIDATE_ROUTE_STATUSES:
             error(f"route safety: candidate {cid} proposed_path in route registry")
             ok = False
-        if cid in ("REF-CAND-0001", "REF-CAND-0002", *BATCH1_CANDIDATE_IDS):
+        if cid in ("REF-CAND-0001", "REF-CAND-0002", *BATCH1_CANDIDATE_IDS, *BATCH2_CANDIDATE_IDS):
             continue
         candidate_dir = ROOT / proposed.strip("/") if proposed else None
         if candidate_dir and candidate_dir.exists():
@@ -555,6 +576,7 @@ def validate_cross_file() -> bool:
         "blocked_until_public_route_candidate_registration_authorization_governance",
         "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
+        "blocked_until_public_reference_production_batch_2_validation",
     ):
         error(
             "publisher-governance-policy: current_publisher_status must be "

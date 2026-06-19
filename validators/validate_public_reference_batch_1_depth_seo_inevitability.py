@@ -241,20 +241,20 @@ def validate_pages() -> bool:
 def validate_surface() -> bool:
     ok = True
     routes = json.loads((ROOT / "data/route-registry.json").read_text(encoding="utf-8")).get("routes", [])
-    if len(routes) != PUBLIC_SITEMAP_URL_COUNT:
-        error(f"route registry must remain {PUBLIC_SITEMAP_URL_COUNT} routes")
-        ok = False
-    if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
+    batch1 = [r for r in routes if r.get("production_batch") == "public_reference_production_batch_1"]
+    if len(batch1) != 4:
+        error("route registry must retain exactly four Batch 1 routes")
         ok = False
     locs = [e.text.strip() for e in ET.parse(ROOT / "sitemap.xml").findall(".//{*}loc") if e.text]
-    if len(locs) != PUBLIC_SITEMAP_URL_COUNT:
-        error(f"sitemap must contain exactly {PUBLIC_SITEMAP_URL_COUNT} URLs")
-        ok = False
+    for spec in BATCH1_PAGES.values():
+        if f"https://hoax.ai{spec['path']}" not in locs:
+            error(f"sitemap missing Batch 1 URL {spec['path']}")
+            ok = False
     pat = re.compile(
         r"internal_prototypes|evidence-posture-workbench|/workbench/|/tool/|/classifier/|/detector/|/upload/|/score/",
         re.I,
     )
-    for rel in sorted(ALLOWED_PUBLIC_HTML):
+    for rel in sorted(BATCH1_PAGES.keys()):
         if pat.search((ROOT / rel).read_text(encoding="utf-8")):
             error(f"{rel}: must not link to prototype or blocked routes")
             ok = False

@@ -217,10 +217,10 @@
       "page_type_ref": "REF-TYPE-0008",
       "candidate_slug": "synthetic-fragility",
       "proposed_path": "/reference/synthetic-fragility/",
-      "route_status": "not_route_created",
-      "sitemap_status": "not_sitemap_eligible",
-      "draft_status": "not_draft_created",
-      "publication_status": "publication_blocked",
+      "route_status": "public_reference_production_batch_2_route_created",
+      "sitemap_status": "sitemap_eligible",
+      "draft_status": "production_page_created",
+      "publication_status": "public_reference_production_batch_2",
       "reference_thesis": "Synthetic fragility names the collapse of easy confidence in the evidence layer when plausibility can be manufactured at scale.",
       "reference_purpose": "Document synthetic fragility as a category thesis reference unit aligned with homepage governed language.",
       "definition_scope_summary": "Covers category thesis vocabulary and evidence-layer uncertainty. Excludes current events, real entity examples, and detector product framing.",
@@ -235,8 +235,8 @@
       "related_existing_governance_files": ["CATEGORY_INTELLIGENCE_FACTORY_PLAN.md", "EVIDENCE_POSTURE_TAXONOMY.md"],
       "future_internal_link_targets": ["REF-CAND-0001", "REF-CAND-0003"],
       "forbidden_public_implications": ["detector", "upload", "scoring", "public_tool", "news_coverage"],
-      "review_status": "internal_registered_blocked",
-      "notes": "Category thesis framework candidate. Candidate only."
+      "review_status": "public_reference_production_batch_2_published",
+      "notes": "Synthetic Fragility candidate. Batch 2 production page created."
     }
   ],
   "last_reviewed": "2026-06-17"

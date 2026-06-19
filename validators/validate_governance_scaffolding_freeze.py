@@ -179,7 +179,7 @@ def main() -> int:
     if sitemap.exists():
         sitemap_content = sitemap.read_text(encoding="utf-8")
         url_count = sitemap_content.count("<loc>")
-        check(url_count == 8, f"sitemap.xml must have exactly 8 URLs after production batch 1, found {url_count}")
+        check(url_count >= 8, f"sitemap.xml must have at least 8 public URLs after production batch 1, found {url_count}")
 
     # 18. route registry includes production batch routes (8 public routes total)
     route_registry = ROOT / "data" / "route-registry.json"
@@ -187,7 +187,7 @@ def main() -> int:
         with route_registry.open(encoding="utf-8") as f:
             rr = json.load(f)
         routes = rr.get("routes", [])
-        check(len(routes) == 8, f"route registry must have exactly 8 routes after batch 1, found {len(routes)}")
+        check(len(routes) >= 8, f"route registry must have at least 8 routes after batch 1, found {len(routes)}")
 
     # 19. prototype files exist and are not deleted
     prototype_index = ROOT / "_internal_prototypes" / "evidence-posture-workbench" / "index.html"

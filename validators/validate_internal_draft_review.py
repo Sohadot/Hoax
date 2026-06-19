@@ -638,11 +638,13 @@ def validate_registries() -> bool:
                 error(f"draft pack: {did} invalid refinement_status")
                 ok = False
 
-    from candidate_registry_checks import is_batch1_production_candidate
+    from candidate_registry_checks import is_batch1_production_candidate, is_batch2_production_candidate
 
     for entry in load_json(ROOT / "data" / "reference-page-candidate-registry.json").get("candidates", []):
         cid = entry.get("candidate_id", "?")
         if is_batch1_production_candidate(entry):
+            continue
+        if is_batch2_production_candidate(entry):
             continue
         if cid in REQUIRED_CANDIDATE_IDS:
             if entry.get("internal_draft_review_status") != "review_completed_internal":
@@ -710,6 +712,7 @@ def validate_publisher_and_gates() -> bool:
         "blocked_until_public_route_candidate_registration_authorization_governance",
         "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
+        "blocked_until_public_reference_production_batch_2_validation",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "

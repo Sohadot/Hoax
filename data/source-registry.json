@@ -4731,6 +4731,66 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 54 Batch 1 depth, SEO, and inevitability hardening audit."
+    },
+    {
+      "source_id": "SOURCE-0373",
+      "source_title": "reference/synthetic-fragility/index.html",
+      "source_type": "public_reference_page",
+      "location": "reference/synthetic-fragility/index.html",
+      "supports": ["governance_claim", "category_language_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Synthetic Fragility public reference production batch 2 page."
+    },
+    {
+      "source_id": "SOURCE-0374",
+      "source_title": "reference/evidence-chain/index.html",
+      "source_type": "public_reference_page",
+      "location": "reference/evidence-chain/index.html",
+      "supports": ["governance_claim", "category_language_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Evidence Chain public reference production batch 2 page."
+    },
+    {
+      "source_id": "SOURCE-0375",
+      "source_title": "reference/context-collapse/index.html",
+      "source_type": "public_reference_page",
+      "location": "reference/context-collapse/index.html",
+      "supports": ["governance_claim", "category_language_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Context Collapse public reference production batch 2 page."
+    },
+    {
+      "source_id": "SOURCE-0376",
+      "source_title": "reference/claim-source-traceability/index.html",
+      "source_type": "public_reference_page",
+      "location": "reference/claim-source-traceability/index.html",
+      "supports": ["governance_claim", "category_language_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Claim–Source Traceability public reference production batch 2 page."
+    },
+    {
+      "source_id": "SOURCE-0377",
+      "source_title": "validators/validate_public_reference_production_batch_2.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_reference_production_batch_2.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public Reference Production Batch 2 validator."
+    },
+    {
+      "source_id": "SOURCE-0378",
+      "source_title": "SPRINT_55_PUBLIC_REFERENCE_PRODUCTION_BATCH_2_AUDIT.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_55_PUBLIC_REFERENCE_PRODUCTION_BATCH_2_AUDIT.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 55 public reference production batch 2 audit."
     }
   ]
 }

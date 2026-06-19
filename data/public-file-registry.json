@@ -102,6 +102,54 @@
       "notes": "Output Boundary public reference production batch 1 page."
     },
     {
+      "file_id": "PUB-FILE-0012",
+      "path": "reference/synthetic-fragility/index.html",
+      "file_type": "html",
+      "public_role": "controlled_public_reference_page",
+      "route_id_if_applicable": "ROUTE-0009",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
+      "notes": "Synthetic Fragility public reference production batch 2 page."
+    },
+    {
+      "file_id": "PUB-FILE-0013",
+      "path": "reference/evidence-chain/index.html",
+      "file_type": "html",
+      "public_role": "controlled_public_reference_page",
+      "route_id_if_applicable": "ROUTE-0010",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
+      "notes": "Evidence Chain public reference production batch 2 page."
+    },
+    {
+      "file_id": "PUB-FILE-0014",
+      "path": "reference/context-collapse/index.html",
+      "file_type": "html",
+      "public_role": "controlled_public_reference_page",
+      "route_id_if_applicable": "ROUTE-0011",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
+      "notes": "Context Collapse public reference production batch 2 page."
+    },
+    {
+      "file_id": "PUB-FILE-0015",
+      "path": "reference/claim-source-traceability/index.html",
+      "file_type": "html",
+      "public_role": "controlled_public_reference_page",
+      "route_id_if_applicable": "ROUTE-0012",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
+      "notes": "Claim–Source Traceability public reference production batch 2 page."
+    },
+    {
       "file_id": "PUB-FILE-0002",
       "path": "styles.css",
       "file_type": "css",
