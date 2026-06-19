@@ -16,6 +16,7 @@ from public_surface_checks import (
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_STANDARD_V1,
     PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_PROTOCOL_V1_DRAFT,
+    PUBLISHER_STATUS_POST_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD,
     validate_public_surface,
 )
 
@@ -267,8 +268,9 @@ def validate_governance() -> bool:
     if pub.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_STANDARD_V1,
         PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_PROTOCOL_V1_DRAFT,
+        PUBLISHER_STATUS_POST_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD,
     ):
-        error("publisher status must be blocked_until_evidence_posture_standard_v1_validation or protocol v1 draft validation")
+        error("publisher status must be blocked_until_evidence_posture_standard_v1_validation, protocol v1 draft validation, or interface thesis validation")
         ok = False
     locs = {s.get("location") for s in json.loads((ROOT / "data/source-registry.json").read_text(encoding="utf-8")).get("sources", [])}
     for loc in SOURCE_LOCS:

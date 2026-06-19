@@ -2138,3 +2138,27 @@ Evidence Posture Protocol v1 Draft must not remain an isolated procedural page. 
 - No public interface, engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
 - Future interface thesis work may be considered only after Sprint 62 validation passes.
 
+---
+
+## DEC-081 — Public Interface Thesis and Evidence Field Design Foundation Adopted
+
+**Date:** 2026-06-19
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Interface Thesis and Evidence Field Design Foundation to define the future interface direction for evidence-posture visualization. This sprint creates a public interface-thesis route at /interface/evidence-field/ that explains evidence-field framing, protocol visualization, boundary visibility, standard alignment, and non-operational interface principles. It does not create a public operational interface, engine, classifier, upload workflow, scoring system, API, analytics, forms, DNS/Cloudflare change, custom domain launch, monetization, or public tool behavior.
+
+### Rationale
+
+Hoax.ai has established a reference layer, Evidence Posture Standard v1, Evidence Posture Protocol v1 Draft, and protocol integration. A future interface must not be designed as a generic detector dashboard. It must be derived from the standard, protocol, and reference layer so that interface form embodies evidence posture rather than decorating the asset. Creating a public interface thesis now prevents future interface work from drifting into upload, scan, score, fake/real, or verdict patterns.
+
+### Implications
+
+- One public interface-thesis route may be created.
+- Sitemap expands from 18 to exactly 19 URLs.
+- Existing homepage, language, standard, protocol, and selected reference pages may link to the interface thesis.
+- Interface readiness may be made public as thesis, not tool behavior.
+- No public operational interface, engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
+- Future interface embodiment may be considered only after Sprint 63 validation passes.
+

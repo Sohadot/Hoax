@@ -263,6 +263,7 @@ def validate_governance() -> bool:
     if policy.get("current_publisher_status") not in (
         "blocked_until_evidence_posture_standard_v1_validation",
         "blocked_until_evidence_posture_protocol_v1_draft_validation",
+        "blocked_until_public_interface_thesis_evidence_field_validation",
     ):
         error("publisher status must be blocked_until_evidence_posture_standard_v1_validation or protocol v1 draft validation")
         ok = False

@@ -129,3 +129,13 @@ Explicit prohibitions: no engine; no classifier; no upload; no scoring; no API; 
 ## Next Phase
 
 **Sprint 63 — Public Interface Thesis and Evidence Field Design Foundation** may begin only after Sprint 62 validation passes and governance authorizes interface thesis work without creating operational capability.
+
+---
+
+## Sprint 63 Update — Interface Thesis Route Created
+
+Sprint 63 created the public interface-thesis route at `/interface/evidence-field/` as **Hoax.ai Evidence Field Interface Thesis** (DEC-081). The sitemap expanded from eighteen to nineteen URLs. This is an interface thesis page—not an operational interface, engine, classifier, upload surface, scoring workflow, API, analytics dashboard, or automated verdict system.
+
+The public thesis makes evidence-field framing and detector-dashboard rejection legible on the public surface. Future interface embodiment remains blocked until separate governance authorizes Sprint 64+ work.
+
+**Next phase after Sprint 63 validation:** Sprint 64 — Evidence Field Static Interface Embodiment v1.

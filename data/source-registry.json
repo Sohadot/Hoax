@@ -4981,6 +4981,36 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Hoax.ai Evidence Posture Protocol v1 Draft public protocol page."
+    },
+    {
+      "source_id": "SOURCE-0398",
+      "source_title": "validators/validate_public_interface_thesis_evidence_field.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_interface_thesis_evidence_field.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 63 Public Interface Thesis Evidence Field validator."
+    },
+    {
+      "source_id": "SOURCE-0399",
+      "source_title": "SPRINT_63_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD_AUDIT.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_63_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD_AUDIT.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 63 Public Interface Thesis Evidence Field audit."
+    },
+    {
+      "source_id": "SOURCE-0400",
+      "source_title": "interface/evidence-field/index.html",
+      "source_type": "public_surface",
+      "location": "interface/evidence-field/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Hoax.ai Evidence Field Interface Thesis public interface-thesis page."
     }
   ]
 }

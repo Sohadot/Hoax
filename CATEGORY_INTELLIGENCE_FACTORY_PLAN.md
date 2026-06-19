@@ -166,6 +166,8 @@ The Category Intelligence Factory has entered the protocol-layer phase through H
 
 The Category Intelligence Factory now connects the protocol layer back into the standard and reference layers. Evidence Posture Protocol v1 Draft is not an isolated page; it becomes the procedural bridge between reference concepts, standard rules, and future interface embodiment. Interface readiness must remain bounded: the next interface must visualize evidence posture and protocol sequence without creating detector, classifier, upload, scoring, API, analytics, or automated verdict behavior.
 
+The Category Intelligence Factory has entered the interface-thesis phase through the Hoax.ai Evidence Field Interface Thesis. The interface direction is now governed by the asset's own standard, protocol, and reference layer. Hoax.ai rejects detector-dashboard conventions and adopts evidence-field framing: boundary-aware, protocol-aware, standard-aligned visualization that makes evidence posture legible without creating upload, scan, score, classifier, API, analytics, or automated verdict behavior.
+
 The Category Intelligence Factory treats chronology integrity as part of evidence integrity: decision records must not move backward in time unless a correction note explicitly explains and repairs the error.
 
 The category factory becomes reference-grade only when public-facing claims, evidence ledger entries, source records, and support locations are traceable as a governed system.

@@ -706,6 +706,17 @@
       "status": "active",
       "last_reviewed": "2026-06-19",
       "notes": "Sprint 61 creates first public protocol-layer document at /protocol/evidence-posture/. Sitemap expands to eighteen URLs. No engine, classifier, upload, scoring, API, analytics, or public tool behavior authorized."
+    },
+    {
+      "claim_id": "CLAIM-0065",
+      "claim_text": "Hoax.ai has adopted a public Evidence Field Interface Thesis as the design foundation for future evidence-posture visualization.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "SPRINT_63_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD_AUDIT.md, DECISION_LOG.md (DEC-081), interface/evidence-field/index.html",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-19",
+      "notes": "Sprint 63 creates public interface-thesis route at /interface/evidence-field/. Sitemap expands to nineteen URLs. No operational interface, engine, classifier, upload, scoring, API, analytics, forms, JavaScript, or public tool behavior authorized."
     }
   ]
 }

@@ -1388,6 +1388,25 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Evidence Posture Protocol v1 Draft per DEC-079. First public protocol-layer document."
+    },
+    {
+      "claim_id": "CLAIM-0065",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "SPRINT_63_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD_AUDIT.md",
+        "DECISION_LOG.md",
+        "interface/evidence-field/index.html"
+      ],
+      "source_refs": [
+        "SOURCE-0398",
+        "SOURCE-0399",
+        "SOURCE-0400"
+      ],
+      "support_scope": "public interface thesis evidence field",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Evidence Field Interface Thesis per DEC-081. First public interface-thesis route."
     }
   ],
   "last_reviewed": "2026-06-19"

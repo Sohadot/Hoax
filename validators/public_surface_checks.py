@@ -12,7 +12,7 @@ PUBLIC_ROUTE_IDS = [
     "ROUTE-0005", "ROUTE-0006", "ROUTE-0007", "ROUTE-0008",
     "ROUTE-0009", "ROUTE-0010", "ROUTE-0011", "ROUTE-0012",
     "ROUTE-0013", "ROUTE-0014", "ROUTE-0015", "ROUTE-0016",
-    "ROUTE-0017", "ROUTE-0018",
+    "ROUTE-0017", "ROUTE-0018", "ROUTE-0019",
 ]
 
 PILOT_ROUTE_IDS = PUBLIC_ROUTE_IDS  # backward compatibility
@@ -43,6 +43,7 @@ ALLOWED_PUBLIC_HTML = {
     "reference/interpretation-risk/index.html",
     "standard/evidence-posture/index.html",
     "protocol/evidence-posture/index.html",
+    "interface/evidence-field/index.html",
 }
 
 ALLOWED_INTERNAL_PROTOTYPE_HTML = {
@@ -57,7 +58,7 @@ ALLOWED_PUBLIC_ROOT_FILES = ALLOWED_PUBLIC_HTML | {
     "sitemap.xml",
 }
 
-PUBLIC_SITEMAP_URL_COUNT = 18
+PUBLIC_SITEMAP_URL_COUNT = 19
 
 PILOT_SITEMAP_URL_COUNT = PUBLIC_SITEMAP_URL_COUNT  # backward compatibility
 
@@ -127,6 +128,8 @@ PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_STANDARD_V1 = "blocked_until_evidence_pos
 
 PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_PROTOCOL_V1_DRAFT = "blocked_until_evidence_posture_protocol_v1_draft_validation"
 
+PUBLISHER_STATUS_POST_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD = "blocked_until_public_interface_thesis_evidence_field_validation"
+
 PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_reference_candidate_pack",
     "blocked_until_internal_draft_blueprint",
@@ -169,6 +172,7 @@ PUBLISHER_STATUSES_ALLOWED = (
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_3,
     PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_STANDARD_V1,
     PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_PROTOCOL_V1_DRAFT,
+    PUBLISHER_STATUS_POST_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD,
 )
 
 
@@ -308,6 +312,14 @@ def is_standard_route(route: dict) -> bool:
     )
 
 
+def is_interface_thesis_route(route: dict) -> bool:
+    return (
+        route.get("interface_thesis_layer") == "evidence_field_design_foundation"
+        or route.get("status") == "public_interface_thesis_evidence_field_created"
+        or route.get("path", "").lower() == "/interface/evidence-field/"
+    )
+
+
 def is_protocol_route(route: dict) -> bool:
     return (
         route.get("protocol_layer") == "evidence_posture_protocol_v1_draft"
@@ -335,6 +347,7 @@ REGISTERED_CANDIDATE_ROUTE_STATUSES = {
     "public_reference_production_batch_3_created",
     "public_evidence_posture_standard_v1_created",
     "public_evidence_posture_protocol_v1_draft_created",
+    "public_interface_thesis_evidence_field_created",
 }
 
 BATCH1_CANDIDATE_IDS = {
@@ -358,7 +371,7 @@ def validate_candidate_paths_not_registered_except_pilot(routes: list, candidate
         for route in routes:
             if route.get("path", "").lower() != path:
                 continue
-            if is_pilot_route(route) or is_language_route(route) or is_production_batch_route(route) or is_standard_route(route) or is_protocol_route(route):
+            if is_pilot_route(route) or is_language_route(route) or is_production_batch_route(route) or is_standard_route(route) or is_protocol_route(route) or is_interface_thesis_route(route):
                 continue
             error(f"route-registry: candidate path {path} must not be registered")
             ok = False

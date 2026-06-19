@@ -93,22 +93,41 @@ def error(msg: str) -> None:
 def validate_surface() -> bool:
     ok = True
     routes = json.loads((ROOT / "data/route-registry.json").read_text(encoding="utf-8")).get("routes", [])
-    if len(routes) != PUBLIC_SITEMAP_URL_COUNT:
-        error(f"route registry must contain exactly {PUBLIC_SITEMAP_URL_COUNT} routes")
-        ok = False
+    decision_log = (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8")
     protocol_routes = [r for r in routes if r.get("path") == PROTOCOL_LINK]
-    if len(protocol_routes) != 1:
-        error("must retain exactly one protocol route")
-        ok = False
-    interface_routes = [r for r in routes if "/interface/" in r.get("path", "")]
-    if interface_routes:
-        error("no public interface route may be created")
-        ok = False
-    if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
-        ok = False
+    interface_routes = [r for r in routes if r.get("path") == "/interface/evidence-field/"]
+    if "DEC-081" in decision_log:
+        if len(routes) != PUBLIC_SITEMAP_URL_COUNT:
+            error(f"route registry must contain exactly {PUBLIC_SITEMAP_URL_COUNT} routes after Sprint 63")
+            ok = False
+        if len(protocol_routes) != 1:
+            error("must retain exactly one protocol route")
+            ok = False
+        if len(interface_routes) != 1:
+            error("Sprint 63 must retain exactly one interface thesis route at /interface/evidence-field/")
+            ok = False
+        extra = [r for r in routes if "/interface/" in r.get("path", "") and r.get("path") != "/interface/evidence-field/"]
+        if extra:
+            error("no additional interface routes beyond /interface/evidence-field/")
+            ok = False
+        if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
+            ok = False
+    else:
+        if len(routes) != 18:
+            error("route registry must contain 18 routes at Sprint 62 completion")
+            ok = False
+        if len(protocol_routes) != 1:
+            error("must retain exactly one protocol route")
+            ok = False
+        if interface_routes:
+            error("no public interface route may be created at Sprint 62")
+            ok = False
+        if not validate_public_surface(routes, error, 18):
+            ok = False
     locs = [e.text.strip() for e in ET.parse(ROOT / "sitemap.xml").findall(".//{*}loc") if e.text]
-    if len(locs) != PUBLIC_SITEMAP_URL_COUNT:
-        error(f"sitemap must contain exactly {PUBLIC_SITEMAP_URL_COUNT} URLs")
+    expected = PUBLIC_SITEMAP_URL_COUNT if "DEC-081" in decision_log else 18
+    if len(locs) != expected:
+        error(f"sitemap must contain exactly {expected} URLs")
         ok = False
     return ok
 

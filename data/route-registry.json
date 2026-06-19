@@ -459,6 +459,32 @@
       "link_policy": "registered_targets_only",
       "route_visibility": "public_protocol_layer",
       "notes": "Sprint 61 — Hoax.ai Evidence Posture Protocol v1 Draft. First public protocol-layer document derived from Evidence Posture Standard v1. No engine, classifier, upload, scoring, API, analytics, forms, or tool behavior."
+    },
+    {
+      "route_id": "ROUTE-0019",
+      "path": "/interface/evidence-field/",
+      "title": "Hoax.ai Evidence Field Interface Thesis",
+      "route_type": "public_interface_thesis",
+      "page_type": "public_interface_thesis",
+      "status": "public_interface_thesis_evidence_field_created",
+      "interface_thesis_layer": "evidence_field_design_foundation",
+      "derived_from": "evidence_posture_standard_v1_and_protocol_v1_draft",
+      "index_policy": "indexable_public_interface_thesis",
+      "canonical_url": "https://hoax.ai/interface/evidence-field/",
+      "sitemap_included": true,
+      "internal_linking_required": true,
+      "public_surface": true,
+      "metadata_status": "public_interface_thesis_metadata_created",
+      "navigation_status": "linked_from_homepage_standard_protocol_and_reference_layer",
+      "publication_status": "public_interface_thesis_evidence_field",
+      "deployment_status": "repository_public_preview_only",
+      "governance_boundary": "interface_thesis_only_no_engine_no_classifier_no_javascript",
+      "prohibited_capabilities": ["engine", "classifier", "detector", "upload", "scoring", "fake_real_verdict", "subject_accusation", "API", "analytics", "forms", "javascript", "monetization", "public_tool_behavior"],
+      "sitemap_policy": "public_interface_thesis_evidence_field_included",
+      "canonical_policy": "registry_aligned",
+      "link_policy": "registered_targets_only",
+      "route_visibility": "public_interface_thesis_layer",
+      "notes": "Sprint 63 — Hoax.ai Evidence Field Interface Thesis. Public interface-thesis layer. No engine, classifier, upload, scoring, API, analytics, forms, JavaScript, or tool behavior."
     }
   ]
 }

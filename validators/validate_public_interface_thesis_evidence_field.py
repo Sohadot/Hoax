@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Sprint 61 — Hoax.ai Evidence Posture Protocol v1 Draft."""
+"""Validate Sprint 63 — Public Interface Thesis and Evidence Field Design Foundation."""
 
 from __future__ import annotations
 
@@ -14,42 +14,34 @@ ROOT = Path(__file__).resolve().parent.parent
 
 from public_surface_checks import (
     PUBLIC_SITEMAP_URL_COUNT,
-    PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_PROTOCOL_V1_DRAFT,
     PUBLISHER_STATUS_POST_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD,
     validate_public_surface,
 )
 
-PROTOCOL_PATH = "protocol/evidence-posture/index.html"
-PROTOCOL_URL = "https://hoax.ai/protocol/evidence-posture/"
-PROTOCOL_ROUTE = "/protocol/evidence-posture/"
+INTERFACE_PATH = "interface/evidence-field/index.html"
+INTERFACE_URL = "https://hoax.ai/interface/evidence-field/"
+INTERFACE_ROUTE = "/interface/evidence-field/"
 STANDARD_LINK = "/standard/evidence-posture/"
+PROTOCOL_LINK = "/protocol/evidence-posture/"
 
 REQUIRED_SECTIONS = [
-    "Protocol Statement",
-    "Scope",
-    "Protocol Inputs",
-    "Protocol Sequence",
-    "Step Definitions",
-    "Evidence Posture Assignment",
-    "Output Language Formation",
-    "Protocol Matrix",
-    "Failure Modes",
-    "Relationship to Evidence Posture Standard v1",
+    "Interface Thesis Statement",
+    "Why Interface Matters",
+    "Evidence Field, Not Detector Dashboard",
+    "Interface Layers",
+    "Protocol Visualization",
+    "Standard Alignment",
+    "Boundary Visualization",
+    "Future Interface Components",
+    "Visual Language Principles",
+    "Accessibility and Trust",
+    "Technical Foundation",
+    "Relationship to Protocol",
+    "Relationship to Standard",
     "Relationship to Reference Layer",
-    "Institutional Usefulness",
-    "Protocol Versioning",
+    "Non-Operational Status",
     "Hoax.ai Boundary",
     "Related Pages",
-]
-
-PROTOCOL_STEPS = [f"EP-P{i:02d}" for i in range(1, 18)]
-
-POSTURE_STATES = [
-    "Supported",
-    "Qualified",
-    "Limited",
-    "Not Assessable",
-    "Out of Scope",
 ]
 
 REFERENCE_LINKS = [
@@ -69,27 +61,28 @@ REFERENCE_LINKS = [
     "/reference/interpretation-risk/",
 ]
 
-BOUNDARY_PHRASES = [
-    "artifact-subject separation",
-    "output boundary",
-    "evidence limitation",
-    "interpretation risk",
-    "claim-source traceability",
-    "attribution boundary",
-]
-
 NOT_TOOL_PHRASES = [
-    "public reference protocol draft",
-    "not a detector",
+    "not a detector dashboard",
     "not a scanner",
     "not a classifier",
-    "not an engine",
-    "not an upload tool",
+    "not an upload interface",
     "not a scoring system",
     "not an api",
-    "not a legal judgment",
-    "not a moderation system",
-    "not an accusation system",
+    "automated verdict interface",
+]
+
+FRAMING_PHRASES = [
+    "evidence field",
+    "protocol visualization",
+    "detector dashboard",
+    "result-card",
+]
+
+REJECT_FRAMING = [
+    "upload-centered",
+    "traffic-light",
+    "confidence-score meter",
+    "fake/real",
 ]
 
 FORBIDDEN_PATTERNS = [
@@ -97,7 +90,7 @@ FORBIDDEN_PATTERNS = [
     r"<input\b",
     r"<textarea\b",
     r"<button\b",
-    r"<script[^>]+src=",
+    r"<script",
     r"scoring interface",
     r"classifier interface",
     r"detector interface",
@@ -110,11 +103,11 @@ LOCKED_FILES = [
 ]
 
 SOURCE_LOCS = [
-    "SPRINT_61_EVIDENCE_POSTURE_PROTOCOL_V1_DRAFT_AUDIT.md",
-    "validators/validate_evidence_posture_protocol_v1_draft.py",
+    "SPRINT_63_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD_AUDIT.md",
+    "validators/validate_public_interface_thesis_evidence_field.py",
 ]
 
-MIN_WORDS = 2500
+MIN_WORDS = 2000
 
 
 def error(msg: str) -> None:
@@ -122,83 +115,79 @@ def error(msg: str) -> None:
 
 
 def strip_tags(html: str) -> str:
-    text = re.sub(r"<script[^>]*>.*?</script>", " ", html, flags=re.I | re.S)
-    return re.sub(r"<[^>]+>", " ", text)
+    return re.sub(r"<[^>]+>", " ", html)
 
 
 def visible_word_count(html: str) -> int:
     return len(re.findall(r"\b[\w'-]+\b", strip_tags(html)))
 
 
-def validate_protocol_page() -> bool:
+def validate_interface_page() -> bool:
     ok = True
-    path = ROOT / PROTOCOL_PATH
+    path = ROOT / INTERFACE_PATH
     if not path.is_file():
-        error(f"missing {PROTOCOL_PATH}")
+        error(f"missing {INTERFACE_PATH}")
         return False
     text = path.read_text(encoding="utf-8")
     lower = text.lower()
     if text.count("<h1") != 1:
-        error("protocol page must have exactly one H1")
+        error("interface thesis page must have exactly one H1")
         ok = False
-    if PROTOCOL_URL not in text:
-        error("protocol page missing canonical URL")
+    if INTERFACE_URL not in text:
+        error("interface thesis page missing canonical URL")
         ok = False
     if "<title>" not in text or 'name="description"' not in text:
-        error("protocol page missing title or meta description")
+        error("interface thesis page missing title or meta description")
         ok = False
     for section in REQUIRED_SECTIONS:
         if section not in text:
-            error(f"protocol page missing section: {section}")
-            ok = False
-    for step in PROTOCOL_STEPS:
-        if step not in text:
-            error(f"protocol page missing {step}")
-            ok = False
-    for state in POSTURE_STATES:
-        if state not in text:
-            error(f"protocol page missing posture state: {state}")
+            error(f"interface thesis page missing section: {section}")
             ok = False
     if STANDARD_LINK not in text:
-        error("protocol page must link to standard")
+        error("interface thesis page must link to standard")
+        ok = False
+    if PROTOCOL_LINK not in text:
+        error("interface thesis page must link to protocol")
         ok = False
     for link in REFERENCE_LINKS:
         if link not in text:
-            error(f"protocol page missing link to {link}")
-            ok = False
-    for phrase in BOUNDARY_PHRASES:
-        if phrase not in lower:
-            error(f"protocol page missing boundary phrase: {phrase}")
+            error(f"interface thesis page missing link to {link}")
             ok = False
     for phrase in NOT_TOOL_PHRASES:
         if phrase not in lower:
-            error(f"protocol page missing positioning phrase: {phrase}")
+            error(f"interface thesis page missing positioning phrase: {phrase}")
             ok = False
-    if "posture assignment" not in lower and "posture state" not in lower:
-        error("protocol page missing posture assignment language")
+    if not any(p in lower for p in ("evidence field", "evidence-field")):
+        error("interface thesis page must use evidence-field framing")
         ok = False
-    if "prohibited inference" not in lower:
-        error("protocol page missing prohibited inference language")
+    if "protocol visualization" not in lower and "protocol path" not in lower:
+        error("interface thesis page must use protocol-visualization framing")
         ok = False
-    if "numeric scoring" not in lower and "without numeric scoring" not in lower:
-        error("protocol page must clarify no numeric scoring")
-        ok = False
+    for phrase in REJECT_FRAMING:
+        if phrase not in lower:
+            error(f"interface thesis page must reject or address: {phrase}")
+            ok = False
     wc = visible_word_count(text)
     if wc < MIN_WORDS:
-        error(f"protocol page insufficient depth ({wc} words, need {MIN_WORDS})")
+        error(f"interface thesis page insufficient depth ({wc} words, need {MIN_WORDS})")
         ok = False
     for pat in FORBIDDEN_PATTERNS:
         if re.search(pat, text, re.I):
-            error(f"protocol page forbidden pattern: {pat}")
+            error(f"interface thesis page forbidden pattern: {pat}")
             ok = False
     return ok
 
 
 def validate_linking() -> bool:
     ok = True
-    for rel in ("index.html", "language/index.html", "standard/evidence-posture/index.html"):
-        if PROTOCOL_ROUTE not in (ROOT / rel).read_text(encoding="utf-8"):
-            error(f"{rel} must link to protocol")
+    for rel in (
+        "index.html",
+        "language/index.html",
+        "standard/evidence-posture/index.html",
+        "protocol/evidence-posture/index.html",
+    ):
+        if INTERFACE_ROUTE not in (ROOT / rel).read_text(encoding="utf-8"):
+            error(f"{rel} must link to interface thesis")
             ok = False
     return ok
 
@@ -209,16 +198,16 @@ def validate_surface() -> bool:
     if len(routes) != PUBLIC_SITEMAP_URL_COUNT:
         error(f"route registry must contain exactly {PUBLIC_SITEMAP_URL_COUNT} routes")
         ok = False
-    protocol_routes = [r for r in routes if r.get("path") == PROTOCOL_ROUTE]
-    if len(protocol_routes) != 1:
-        error("route registry must include exactly one protocol route")
+    interface_routes = [r for r in routes if r.get("path") == INTERFACE_ROUTE]
+    if len(interface_routes) != 1:
+        error("route registry must include exactly one interface thesis route")
         ok = False
-    elif protocol_routes[0].get("route_id") != "ROUTE-0018":
-        error("protocol route must be ROUTE-0018")
+    elif interface_routes[0].get("route_id") != "ROUTE-0019":
+        error("interface thesis route must be ROUTE-0019")
         ok = False
-    extra = [r for r in routes if r.get("path", "").startswith("/protocol/") and r.get("path") != PROTOCOL_ROUTE]
+    extra = [r for r in routes if r.get("path", "").startswith("/interface/") and r.get("path") != INTERFACE_ROUTE]
     if extra:
-        error("no additional protocol routes beyond /protocol/evidence-posture/")
+        error("no additional interface routes beyond /interface/evidence-field/")
         ok = False
     if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
         ok = False
@@ -226,12 +215,12 @@ def validate_surface() -> bool:
     if len(locs) != PUBLIC_SITEMAP_URL_COUNT:
         error(f"sitemap must contain exactly {PUBLIC_SITEMAP_URL_COUNT} URLs")
         ok = False
-    if PROTOCOL_URL not in locs:
-        error("sitemap missing protocol URL")
+    if INTERFACE_URL not in locs:
+        error("sitemap missing interface thesis URL")
         ok = False
     pat = re.compile(r"internal_prototypes|evidence-posture-workbench", re.I)
-    if pat.search((ROOT / PROTOCOL_PATH).read_text(encoding="utf-8")):
-        error("protocol page prototype leak")
+    if pat.search((ROOT / INTERFACE_PATH).read_text(encoding="utf-8")):
+        error("interface thesis page prototype leak")
         ok = False
     if not all((ROOT / x).is_file() for x in LOCKED_FILES):
         error("prototype files missing")
@@ -249,31 +238,28 @@ def validate_surface() -> bool:
 
 def validate_governance() -> bool:
     ok = True
-    if "DEC-079" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
-        error("DEC-079 missing from DECISION_LOG.md")
+    if "DEC-081" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
+        error("DEC-081 missing from DECISION_LOG.md")
         ok = False
-    if not (ROOT / "SPRINT_61_EVIDENCE_POSTURE_PROTOCOL_V1_DRAFT_AUDIT.md").is_file():
-        error("Sprint 61 audit missing")
+    if not (ROOT / "SPRINT_63_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD_AUDIT.md").is_file():
+        error("Sprint 63 audit missing")
         ok = False
-    if "validate_evidence_posture_protocol_v1_draft.py" not in (
+    if "validate_public_interface_thesis_evidence_field.py" not in (
         ROOT / "validators/validate_all.py"
     ).read_text(encoding="utf-8"):
-        error("validate_all.py must include Sprint 61 validator")
+        error("validate_all.py must include Sprint 63 validator")
         ok = False
     policy = json.loads((ROOT / "data/publisher-governance-policy.json").read_text(encoding="utf-8"))
-    if policy.get("current_publisher_status") not in (
-        PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_PROTOCOL_V1_DRAFT,
-        PUBLISHER_STATUS_POST_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD,
-    ):
-        error("publisher status must be blocked_until_evidence_posture_protocol_v1_draft_validation or interface thesis validation")
+    if policy.get("current_publisher_status") != PUBLISHER_STATUS_POST_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD:
+        error("publisher status must be blocked_until_public_interface_thesis_evidence_field_validation")
         ok = False
     locs = {s.get("location") for s in json.loads((ROOT / "data/source-registry.json").read_text(encoding="utf-8")).get("sources", [])}
     for loc in SOURCE_LOCS:
         if loc not in locs:
             error(f"source registry missing {loc}")
             ok = False
-    if not any(c.get("claim_id") == "CLAIM-0064" for c in json.loads((ROOT / "data/evidence-ledger.json").read_text(encoding="utf-8")).get("claims", [])):
-        error("CLAIM-0064 missing")
+    if not any(c.get("claim_id") == "CLAIM-0065" for c in json.loads((ROOT / "data/evidence-ledger.json").read_text(encoding="utf-8")).get("claims", [])):
+        error("CLAIM-0065 missing")
         ok = False
     return ok
 
@@ -295,7 +281,7 @@ def main() -> int:
     ok = all(
         fn()
         for fn in [
-            validate_protocol_page,
+            validate_interface_page,
             validate_linking,
             validate_surface,
             validate_governance,

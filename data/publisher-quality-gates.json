@@ -806,6 +806,23 @@
       "failure_condition": "evidence_posture_protocol_v1_draft_not_met",
       "bypassable": false,
       "notes": "Evidence Posture Protocol v1 Draft completed Sprint 61 (DEC-079). First public protocol-layer document at /protocol/evidence-posture/. Public surface expanded to eighteen URLs. Does not authorize public engine, public classifier, public tool, upload, scoring, API, forms, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release."
+    },
+    {
+      "gate_id": "PUB-GATE-0058",
+      "name": "Public Interface Thesis Evidence Field Gate",
+      "status": "public_interface_thesis_evidence_field_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_public_interface_thesis_evidence_field_validation": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_governance": true,
+      "validation_source": "SPRINT_63_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD_AUDIT.md",
+      "failure_condition": "public_interface_thesis_evidence_field_not_met",
+      "bypassable": false,
+      "notes": "Public Interface Thesis Evidence Field completed Sprint 63 (DEC-081). Public interface-thesis route at /interface/evidence-field/. Public surface expanded to nineteen URLs. Does not authorize operational interface, public engine, public classifier, public tool, upload, scoring, API, forms, analytics, JavaScript, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release."
     }
   ],
   "last_reviewed": "2026-06-19"

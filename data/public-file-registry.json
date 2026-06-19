@@ -256,6 +256,18 @@
       "allowed_dependencies": ["../../styles.css"],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, engine",
       "notes": "Hoax.ai Evidence Posture Protocol v1 Draft public protocol-layer page."
+    },
+    {
+      "file_id": "PUB-FILE-0019",
+      "path": "interface/evidence-field/index.html",
+      "file_type": "html",
+      "public_role": "public_interface_thesis_page",
+      "route_id_if_applicable": "ROUTE-0019",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, javascript, external deps, active tool claims, upload, scoring, classifier, detector, engine",
+      "notes": "Hoax.ai Evidence Field Interface Thesis public interface-thesis page."
     }
   ],
   "last_reviewed": "2026-06-19"
