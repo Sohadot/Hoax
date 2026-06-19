@@ -16,6 +16,7 @@ from public_surface_checks import (
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_2,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_3,
     validate_public_surface,
 )
 
@@ -336,8 +337,11 @@ def validate_public_safety() -> bool:
 def validate_governance() -> bool:
     ok = True
     pub = load("data/publisher-governance-policy.json")
-    if pub.get("current_publisher_status") != PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_2:
-        error("publisher status must be blocked_until_public_reference_production_batch_2_validation")
+    if pub.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_2,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_3,
+    ):
+        error("publisher status must be blocked_until_public_reference_production_batch_2_validation or batch_3_validation")
         ok = False
     gate = next(
         (g for g in load("data/publisher-quality-gates.json").get("gates", []) if g.get("gate_id") == "PUB-GATE-0054"),

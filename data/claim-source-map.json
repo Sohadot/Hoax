@@ -1304,7 +1304,32 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Production Batch 2 per DEC-073. Public surface expanded to twelve URLs."
+    },
+    {
+      "claim_id": "CLAIM-0061",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "SPRINT_57_PUBLIC_REFERENCE_PRODUCTION_BATCH_3_AUDIT.md",
+        "DECISION_LOG.md",
+        "reference/attribution-boundary/index.html",
+        "reference/claim-drift/index.html",
+        "reference/evidence-limitation/index.html",
+        "reference/interpretation-risk/index.html"
+      ],
+      "source_refs": [
+        "SOURCE-0381",
+        "SOURCE-0382",
+        "SOURCE-0383",
+        "SOURCE-0384",
+        "SOURCE-0385",
+        "SOURCE-0386"
+      ],
+      "support_scope": "public reference production batch 3",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Production Batch 3 per DEC-075. Public surface expanded to sixteen URLs with depth-enforced validation."
     }
   ],
-  "last_reviewed": "2026-06-17"
+  "last_reviewed": "2026-06-19"
 }

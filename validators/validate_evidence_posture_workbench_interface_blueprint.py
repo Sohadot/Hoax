@@ -539,6 +539,7 @@ def validate_publisher_governance() -> bool:
     "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
         "blocked_until_public_reference_production_batch_2_validation",
+        "blocked_until_public_reference_production_batch_3_validation",
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_WORKBENCH_INTERFACE_BLUEPRINT_VALIDATION}, "

@@ -4811,6 +4811,66 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 56 Batch 2 depth, SEO, and inevitability hardening audit."
+    },
+    {
+      "source_id": "SOURCE-0381",
+      "source_title": "reference/attribution-boundary/index.html",
+      "source_type": "public_reference_page",
+      "location": "reference/attribution-boundary/index.html",
+      "supports": ["governance_claim", "category_language_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Attribution Boundary public reference production batch 3 page."
+    },
+    {
+      "source_id": "SOURCE-0382",
+      "source_title": "reference/claim-drift/index.html",
+      "source_type": "public_reference_page",
+      "location": "reference/claim-drift/index.html",
+      "supports": ["governance_claim", "category_language_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Claim Drift public reference production batch 3 page."
+    },
+    {
+      "source_id": "SOURCE-0383",
+      "source_title": "reference/evidence-limitation/index.html",
+      "source_type": "public_reference_page",
+      "location": "reference/evidence-limitation/index.html",
+      "supports": ["governance_claim", "category_language_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Evidence Limitation public reference production batch 3 page."
+    },
+    {
+      "source_id": "SOURCE-0384",
+      "source_title": "reference/interpretation-risk/index.html",
+      "source_type": "public_reference_page",
+      "location": "reference/interpretation-risk/index.html",
+      "supports": ["governance_claim", "category_language_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Interpretation Risk public reference production batch 3 page."
+    },
+    {
+      "source_id": "SOURCE-0385",
+      "source_title": "validators/validate_public_reference_production_batch_3.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_reference_production_batch_3.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Public Reference Production Batch 3 depth-enforced validator."
+    },
+    {
+      "source_id": "SOURCE-0386",
+      "source_title": "SPRINT_57_PUBLIC_REFERENCE_PRODUCTION_BATCH_3_AUDIT.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_57_PUBLIC_REFERENCE_PRODUCTION_BATCH_3_AUDIT.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 57 public reference production batch 3 audit."
     }
   ]
 }

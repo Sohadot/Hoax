@@ -3,7 +3,7 @@
   "name": "Hoax.ai Category Language Term Registry",
   "version": "v1.0.0",
   "status": "active",
-  "maturity": "public_reference_language_layer_batch_2_no_engine_no_classifier_no_tool",
+  "maturity": "public_reference_language_layer_batch_3_no_engine_no_classifier_no_tool",
   "terms": [
     {
       "term_id": "LANG-TERM-0001",
@@ -144,7 +144,63 @@
       "public_page_allowed": true,
       "engine_use_status": "engine_use_blocked_until_future_governance",
       "non_authorization_statement": "This term does not authorize classifier, tool, upload, scoring, or fake/real verdict implications."
+    },
+    {
+      "term_id": "LANG-TERM-0011",
+      "term": "Attribution Boundary",
+      "public_status": "public_reference_anchor",
+      "route_status": "public_reference_production_batch_3_route_created",
+      "route_path": "/reference/attribution-boundary/",
+      "definition_scope": "The limit that prevents artifact-level observation from becoming subject-level accusation.",
+      "boundary_note": "Does not assign guilt, certify authorship, or prove deception.",
+      "related_candidate_id": null,
+      "related_public_route": "/reference/attribution-boundary/",
+      "public_page_allowed": true,
+      "engine_use_status": "engine_use_blocked_until_future_governance",
+      "non_authorization_statement": "This term does not authorize classifier, tool, upload, scoring, or fake/real verdict implications."
+    },
+    {
+      "term_id": "LANG-TERM-0012",
+      "term": "Claim Drift",
+      "public_status": "public_reference_anchor",
+      "route_status": "public_reference_production_batch_3_route_created",
+      "route_path": "/reference/claim-drift/",
+      "definition_scope": "Structural change in what a claim asserts as it moves through circulation layers.",
+      "boundary_note": "Not deception by default; does not prove intent.",
+      "related_candidate_id": null,
+      "related_public_route": "/reference/claim-drift/",
+      "public_page_allowed": true,
+      "engine_use_status": "engine_use_blocked_until_future_governance",
+      "non_authorization_statement": "This term does not authorize classifier, tool, upload, scoring, or fake/real verdict implications."
+    },
+    {
+      "term_id": "LANG-TERM-0013",
+      "term": "Evidence Limitation",
+      "public_status": "public_reference_anchor",
+      "route_status": "public_reference_production_batch_3_route_created",
+      "route_path": "/reference/evidence-limitation/",
+      "definition_scope": "The bounded support envelope of an artifact: what it can, partially can, and cannot support.",
+      "boundary_note": "Limitation is credibility infrastructure, not weakness.",
+      "related_candidate_id": null,
+      "related_public_route": "/reference/evidence-limitation/",
+      "public_page_allowed": true,
+      "engine_use_status": "engine_use_blocked_until_future_governance",
+      "non_authorization_statement": "This term does not authorize classifier, tool, upload, scoring, or fake/real verdict implications."
+    },
+    {
+      "term_id": "LANG-TERM-0014",
+      "term": "Interpretation Risk",
+      "public_status": "public_reference_anchor",
+      "route_status": "public_reference_production_batch_3_route_created",
+      "route_path": "/reference/interpretation-risk/",
+      "definition_scope": "Danger that readers, analysts, models, or institutions extract more meaning than evidence condition supports.",
+      "boundary_note": "Does not mean the artifact is false.",
+      "related_candidate_id": null,
+      "related_public_route": "/reference/interpretation-risk/",
+      "public_page_allowed": true,
+      "engine_use_status": "engine_use_blocked_until_future_governance",
+      "non_authorization_statement": "This term does not authorize classifier, tool, upload, scoring, or fake/real verdict implications."
     }
   ],
-  "last_reviewed": "2026-06-17"
+  "last_reviewed": "2026-06-19"
 }

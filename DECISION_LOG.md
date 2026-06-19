@@ -1989,3 +1989,27 @@ Sprint 55 restored Batch 2 production by creating real public reference pages. S
 - No new public routes, meta-governance layers, or operational capability is authorized.
 - Further reference production may proceed only after Sprint 56 validation passes.
 
+---
+
+## DEC-075 — Public Reference Production Batch 3 Adopted
+
+**Date:** 2026-06-19
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Production Batch 3 to create four depth-enforced governed public reference pages: Attribution Boundary, Claim Drift, Evidence Limitation, and Interpretation Risk. This sprint expands the public reference surface from twelve URLs to sixteen URLs through substantive reference content—not shallow glossary pages. Each page includes a named analytical model, failure modes, boundary logic, institutional relevance, and minimum depth validation. It does not create an engine, classifier, upload workflow, scoring system, API, analytics, public tool behavior, DNS/Cloudflare change, custom domain launch, or monetization.
+
+### Rationale
+
+After Batch 2 depth hardening and the Sprint 56A chronology integrity patch, Hoax.ai must continue building constitutional category language. Batch 3 adds concepts that protect evidence posture from overclaim: Attribution Boundary prevents artifact observation from becoming subject accusation; Claim Drift explains claim transformation without deception defaults; Evidence Limitation defines support envelopes as credibility infrastructure; Interpretation Risk names overreading danger without falsity verdicts. Depth is enforced at production time through validate_public_reference_production_batch_3.py.
+
+### Implications
+
+- Four real public reference pages created with depth-enforced validation.
+- Four route registry entries added.
+- Four sitemap URLs added.
+- Public reference surface becomes exactly 16 URLs.
+- No public engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
+- Further reference production may proceed only after Sprint 57 validation passes.
+

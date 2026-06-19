@@ -662,6 +662,17 @@
       "status": "active",
       "last_reviewed": "2026-06-17",
       "notes": "Batch 2 adds Synthetic Fragility, Evidence Chain, Context Collapse, and Claim–Source Traceability reference pages. Public surface expanded to twelve URLs. No engine, classifier, upload, scoring, API, analytics, or public tool behavior authorized."
+    },
+    {
+      "claim_id": "CLAIM-0061",
+      "claim_text": "Hoax.ai has produced Public Reference Production Batch 3 with four depth-enforced governed public reference pages.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "SPRINT_57_PUBLIC_REFERENCE_PRODUCTION_BATCH_3_AUDIT.md, DECISION_LOG.md (DEC-075), reference/attribution-boundary/index.html, reference/claim-drift/index.html, reference/evidence-limitation/index.html, reference/interpretation-risk/index.html",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-19",
+      "notes": "Batch 3 adds Attribution Boundary, Claim Drift, Evidence Limitation, and Interpretation Risk reference pages. Public surface expanded to sixteen URLs. Depth-enforced validation. No engine, classifier, upload, scoring, API, analytics, or public tool behavior authorized."
     }
   ]
 }

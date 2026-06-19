@@ -282,8 +282,8 @@ def validate_language_page() -> bool:
             ok = False
 
     cards = len(re.findall(r'class=["\']language-term-card["\']', html, re.I))
-    if cards != 10:
-        error(f"{LANGUAGE_PAGE}: expected 10 term cards, found {cards}")
+    if cards != 14:
+        error(f"{LANGUAGE_PAGE}: expected 14 term cards, found {cards}")
         ok = False
 
     if "<svg" not in lower:
@@ -341,8 +341,8 @@ def validate_term_registry() -> bool:
         related_ids.add(rel.get("source_term_id", ""))
         related_ids.add(rel.get("target_term_id", ""))
 
-    if len(terms) != 10:
-        error(f"term registry: expected 10 terms, found {len(terms)}")
+    if len(terms) != 14:
+        error(f"term registry: expected 14 terms, found {len(terms)}")
         ok = False
 
     for term in terms:
@@ -358,6 +358,7 @@ def validate_term_registry() -> bool:
         elif tid in (
             "LANG-TERM-0003", "LANG-TERM-0004", "LANG-TERM-0005", "LANG-TERM-0006",
             "LANG-TERM-0007", "LANG-TERM-0008", "LANG-TERM-0009", "LANG-TERM-0010",
+            "LANG-TERM-0011", "LANG-TERM-0012", "LANG-TERM-0013", "LANG-TERM-0014",
         ):
             if status != "public_reference_anchor" or term.get("public_page_allowed") is not True:
                 error(f"{tid}: production anchor term boundary invalid")
@@ -397,8 +398,8 @@ def validate_relation_map() -> bool:
     data = load_json(ROOT / "data" / "category-language-relation-map.json")
     relations = data.get("relations", [])
     term_ids = {t.get("term_id") for t in load_json(ROOT / "data" / "category-language-term-registry.json").get("terms", [])}
-    if len(relations) != 9:
-        error(f"relation map: expected 9 relations, found {len(relations)}")
+    if len(relations) != 13:
+        error(f"relation map: expected 13 relations, found {len(relations)}")
         ok = False
     rel_ids: set[str] = set()
     for rel in relations:
@@ -547,6 +548,7 @@ def validate_publisher_governance() -> bool:
     "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
         "blocked_until_public_reference_production_batch_2_validation",
+        "blocked_until_public_reference_production_batch_3_validation",
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE}, "

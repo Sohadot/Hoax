@@ -11,6 +11,7 @@ PUBLIC_ROUTE_IDS = [
     "ROUTE-0001", "ROUTE-0002", "ROUTE-0003", "ROUTE-0004",
     "ROUTE-0005", "ROUTE-0006", "ROUTE-0007", "ROUTE-0008",
     "ROUTE-0009", "ROUTE-0010", "ROUTE-0011", "ROUTE-0012",
+    "ROUTE-0013", "ROUTE-0014", "ROUTE-0015", "ROUTE-0016",
 ]
 
 PILOT_ROUTE_IDS = PUBLIC_ROUTE_IDS  # backward compatibility
@@ -35,6 +36,10 @@ ALLOWED_PUBLIC_HTML = {
     "reference/evidence-chain/index.html",
     "reference/context-collapse/index.html",
     "reference/claim-source-traceability/index.html",
+    "reference/attribution-boundary/index.html",
+    "reference/claim-drift/index.html",
+    "reference/evidence-limitation/index.html",
+    "reference/interpretation-risk/index.html",
 }
 
 ALLOWED_INTERNAL_PROTOTYPE_HTML = {
@@ -49,7 +54,7 @@ ALLOWED_PUBLIC_ROOT_FILES = ALLOWED_PUBLIC_HTML | {
     "sitemap.xml",
 }
 
-PUBLIC_SITEMAP_URL_COUNT = 12
+PUBLIC_SITEMAP_URL_COUNT = 16
 
 PILOT_SITEMAP_URL_COUNT = PUBLIC_SITEMAP_URL_COUNT  # backward compatibility
 
@@ -113,6 +118,8 @@ PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_1 = "blocked_until_publi
 
 PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_2 = "blocked_until_public_reference_production_batch_2_validation"
 
+PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_3 = "blocked_until_public_reference_production_batch_3_validation"
+
 PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_reference_candidate_pack",
     "blocked_until_internal_draft_blueprint",
@@ -152,6 +159,7 @@ PUBLISHER_STATUSES_ALLOWED = (
     PUBLISHER_STATUS_GOVERNANCE_SCAFFOLDING_FREEZE,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_1,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_2,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_3,
 )
 
 
@@ -287,9 +295,11 @@ def is_production_batch_route(route: dict) -> bool:
     return route.get("production_batch") in (
         "public_reference_production_batch_1",
         "public_reference_production_batch_2",
+        "public_reference_production_batch_3",
     ) or route.get("status") in (
         "public_reference_production_batch_1_created",
         "public_reference_production_batch_2_created",
+        "public_reference_production_batch_3_created",
     )
 
 
@@ -297,6 +307,7 @@ REGISTERED_CANDIDATE_ROUTE_STATUSES = {
     "controlled_public_reference_route_created",
     "public_reference_production_batch_1_created",
     "public_reference_production_batch_2_created",
+    "public_reference_production_batch_3_created",
 }
 
 BATCH1_CANDIDATE_IDS = {

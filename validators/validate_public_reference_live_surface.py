@@ -327,6 +327,7 @@ def validate_publisher_governance() -> bool:
     "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
         "blocked_until_public_reference_production_batch_2_validation",
+        "blocked_until_public_reference_production_batch_3_validation",
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_LIVE_AUDIT}, "
@@ -400,6 +401,10 @@ def validate_reference_directories() -> bool:
         "evidence-chain",
         "context-collapse",
         "claim-source-traceability",
+        "attribution-boundary",
+        "claim-drift",
+        "evidence-limitation",
+        "interpretation-risk",
     }
     found = {d.name for d in ref_root.iterdir() if d.is_dir()}
     if found != allowed_dirs:

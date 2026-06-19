@@ -154,6 +154,8 @@ The Category Intelligence Factory continues production through real public refer
 
 The Category Intelligence Factory now hardens Batch 2 public reference substance. Synthetic Fragility, Evidence Chain, Context Collapse, and Claim–Source Traceability must function as reusable concepts that make Hoax.ai more authoritative, more legible, and harder to replace—especially for platforms, researchers, analysts, journalists, legal and compliance teams, and trust-infrastructure builders.
 
+Batch 3 extends constitutional category language with Attribution Boundary, Claim Drift, Evidence Limitation, and Interpretation Risk—each produced as a deep reference document with named analytical models and depth-enforced validation, not shallow glossary copy.
+
 The Category Intelligence Factory treats chronology integrity as part of evidence integrity: decision records must not move backward in time unless a correction note explicitly explains and repairs the error.
 
 The category factory becomes reference-grade only when public-facing claims, evidence ledger entries, source records, and support locations are traceable as a governed system.

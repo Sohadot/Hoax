@@ -67,6 +67,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://hoax.ai/reference/attribution-boundary/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/reference/claim-drift/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/reference/evidence-limitation/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/reference/interpretation-risk/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://hoax.ai/language/</loc>
     <lastmod>2026-06-19</lastmod>
     <changefreq>monthly</changefreq>

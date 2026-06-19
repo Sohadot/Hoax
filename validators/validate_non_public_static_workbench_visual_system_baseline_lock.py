@@ -251,6 +251,7 @@ def validate_governance_and_registry() -> bool:
     "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
         "blocked_until_public_reference_production_batch_2_validation",
+        "blocked_until_public_reference_production_batch_3_validation",
     ):
         error(f"publisher status must be {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_BASELINE_LOCK_VALIDATION}")
         ok = False

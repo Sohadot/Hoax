@@ -103,7 +103,51 @@
       "route_implication": "no_route_authorization",
       "engine_implication": "no_engine_authorization",
       "non_authorization_statement": "This relation does not authorize routes, engine behavior, verdict, detection, scoring, upload, or subject accusation."
+    },
+    {
+      "relation_id": "LANG-REL-0010",
+      "source_term_id": "LANG-TERM-0011",
+      "target_term_id": "LANG-TERM-0002",
+      "relation_type": "operationalizes",
+      "relation_statement": "Attribution Boundary operationalizes Artifact–Subject Separation in review workflows.",
+      "public_display_allowed": true,
+      "route_implication": "no_route_authorization",
+      "engine_implication": "no_engine_authorization",
+      "non_authorization_statement": "This relation does not authorize routes, engine behavior, verdict, detection, scoring, upload, or subject accusation."
+    },
+    {
+      "relation_id": "LANG-REL-0011",
+      "source_term_id": "LANG-TERM-0012",
+      "target_term_id": "LANG-TERM-0007",
+      "relation_type": "disrupts",
+      "relation_statement": "Claim Drift disrupts Claim–Source Traceability when circulated claims exceed source support.",
+      "public_display_allowed": true,
+      "route_implication": "no_route_authorization",
+      "engine_implication": "no_engine_authorization",
+      "non_authorization_statement": "This relation does not authorize routes, engine behavior, verdict, detection, scoring, upload, or subject accusation."
+    },
+    {
+      "relation_id": "LANG-REL-0012",
+      "source_term_id": "LANG-TERM-0013",
+      "target_term_id": "LANG-TERM-0005",
+      "relation_type": "connects_to",
+      "relation_statement": "Evidence Limitation connects to Not Assessable when envelope review must stop.",
+      "public_display_allowed": true,
+      "route_implication": "no_route_authorization",
+      "engine_implication": "no_engine_authorization",
+      "non_authorization_statement": "This relation does not authorize routes, engine behavior, verdict, detection, scoring, upload, or subject accusation."
+    },
+    {
+      "relation_id": "LANG-REL-0013",
+      "source_term_id": "LANG-TERM-0014",
+      "target_term_id": "LANG-TERM-0013",
+      "relation_type": "rises_when",
+      "relation_statement": "Interpretation Risk rises when Evidence Limitation is ignored.",
+      "public_display_allowed": true,
+      "route_implication": "no_route_authorization",
+      "engine_implication": "no_engine_authorization",
+      "non_authorization_statement": "This relation does not authorize routes, engine behavior, verdict, detection, scoring, upload, or subject accusation."
     }
   ],
-  "last_reviewed": "2026-06-17"
+  "last_reviewed": "2026-06-19"
 }

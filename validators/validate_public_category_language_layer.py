@@ -169,8 +169,8 @@ def validate_term_registry() -> bool:
         error(f"term registry missing fields: {sorted(TERM_REGISTRY_TOP - set(data.keys()))}")
         ok = False
     terms = data.get("terms", [])
-    if len(terms) != 10:
-        error(f"term registry: expected 10 terms, found {len(terms)}")
+    if len(terms) != 14:
+        error(f"term registry: expected 14 terms, found {len(terms)}")
         ok = False
     ids: set[str] = set()
     for term in terms:
@@ -193,6 +193,7 @@ def validate_term_registry() -> bool:
         elif tid in (
             "LANG-TERM-0003", "LANG-TERM-0004", "LANG-TERM-0005", "LANG-TERM-0006",
             "LANG-TERM-0007", "LANG-TERM-0008", "LANG-TERM-0009", "LANG-TERM-0010",
+            "LANG-TERM-0011", "LANG-TERM-0012", "LANG-TERM-0013", "LANG-TERM-0014",
         ):
             if status != "public_reference_anchor":
                 error(f"{tid}: must be public_reference_anchor")
@@ -231,8 +232,8 @@ def validate_relation_map() -> bool:
         error(f"relation map missing fields: {sorted(RELATION_MAP_TOP - set(data.keys()))}")
         ok = False
     relations = data.get("relations", [])
-    if len(relations) != 9:
-        error(f"relation map: expected 9 relations, found {len(relations)}")
+    if len(relations) != 13:
+        error(f"relation map: expected 13 relations, found {len(relations)}")
         ok = False
     term_ids = {t.get("term_id") for t in load_json(ROOT / "data" / "category-language-term-registry.json").get("terms", [])}
     rel_ids: set[str] = set()
@@ -446,6 +447,7 @@ def validate_publisher_governance() -> bool:
     "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
         "blocked_until_public_reference_production_batch_2_validation",
+        "blocked_until_public_reference_production_batch_3_validation",
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_CATEGORY_LANGUAGE}, "
