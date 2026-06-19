@@ -4921,6 +4921,36 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Hoax.ai Evidence Posture Standard v1 public authority-layer page."
+    },
+    {
+      "source_id": "SOURCE-0392",
+      "source_title": "validators/validate_standard_integration_protocol_readiness.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_standard_integration_protocol_readiness.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 60 standard integration and protocol readiness validator."
+    },
+    {
+      "source_id": "SOURCE-0393",
+      "source_title": "SPRINT_60_STANDARD_INTEGRATION_PROTOCOL_READINESS_AUDIT.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_60_STANDARD_INTEGRATION_PROTOCOL_READINESS_AUDIT.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 60 standard integration and protocol readiness audit."
+    },
+    {
+      "source_id": "SOURCE-0394",
+      "source_title": "STANDARD_TO_PROTOCOL_READINESS.md",
+      "source_type": "internal_governance",
+      "location": "STANDARD_TO_PROTOCOL_READINESS.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Non-route protocol readiness document for Evidence Posture Standard v1."
     }
   ]
 }

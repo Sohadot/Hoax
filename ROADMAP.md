@@ -2258,6 +2258,37 @@ Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, cust
 
 ---
 
+## Sprint 60 — Standard Integration, Cross-Linking, and Protocol Readiness
+
+**Status:** COMPLETE — 2026-06-19
+**Goal:** Integrate Evidence Posture Standard v1 across the reference layer, strengthen the standard page, and create bounded protocol-readiness documentation without creating a public protocol route or operational capability.
+
+### Deliverables
+
+- Standard Relationship sections on all major reference pages
+- Cross-links to `/standard/evidence-posture/` across reference layer, language, and homepage
+- Strengthened standard/evidence-posture/index.html
+- STANDARD_TO_PROTOCOL_READINESS.md
+- validators/validate_standard_integration_protocol_readiness.py
+- SPRINT_60_STANDARD_INTEGRATION_PROTOCOL_READINESS_AUDIT.md
+- DEC-078 appended to DECISION_LOG.md
+
+### Validation
+
+`py -3 validators/validate_all.py` — PASS required for sprint closure.
+
+### Gate
+
+**Gate G60 passed.** Evidence Posture Protocol v1 Draft is the recommended next phase.
+
+### Next Phase
+
+**Sprint 61 — Evidence Posture Protocol v1 Draft**
+
+Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, custom domain launch, monetization, and public tool behavior remain blocked.
+
+---
+
 ## Sprint 59 — Hoax.ai Evidence Posture Standard v1
 
 **Status:** COMPLETE — 2026-06-19
@@ -2283,7 +2314,7 @@ Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, cust
 
 ### Next Phase
 
-**Sprint 60 — Standard Integration, Cross-Linking, and Protocol Readiness**
+**Sprint 61 — Evidence Posture Protocol v1 Draft**
 
 Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, custom domain launch, monetization, and public tool behavior remain blocked.
 

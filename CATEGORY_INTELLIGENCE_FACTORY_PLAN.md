@@ -160,6 +160,8 @@ The Category Intelligence Factory now treats Batch 3 as the bridge from referenc
 
 The Category Intelligence Factory has entered the authority-layer phase through Hoax.ai Evidence Posture Standard v1. The standard converts the public reference layer into a governed system of allowed language, prohibited language, posture states, evidence support conditions, and output boundaries. This strengthens Hoax.ai as a standard-bearing evidence-posture asset rather than a collection of pages or a generic AI-detection website.
 
+The Category Intelligence Factory now integrates the authority layer into the reference layer. Evidence Posture Standard v1 is not an isolated standard page; it becomes the organizing authority that reference pages point toward and that a future protocol may obey. Protocol readiness must remain bounded: it prepares the next layer without creating a public engine, classifier, upload workflow, scoring system, API, analytics, or automated verdict behavior.
+
 The Category Intelligence Factory treats chronology integrity as part of evidence integrity: decision records must not move backward in time unless a correction note explicitly explains and repairs the error.
 
 The category factory becomes reference-grade only when public-facing claims, evidence ledger entries, source records, and support locations are traceable as a governed system.

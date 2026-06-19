@@ -296,7 +296,7 @@ def validate_governance() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_3,
         PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_STANDARD_V1,
     ):
-        error("publisher status must reflect batch 1 or batch 2 production validation state")
+        error("publisher status must reflect batch 1, batch 2, batch 3, or evidence_posture_standard_v1_validation state")
         ok = False
     gate = next(
         (g for g in load("data/publisher-quality-gates.json").get("gates", []) if g.get("gate_id") == "PUB-GATE-0053"),

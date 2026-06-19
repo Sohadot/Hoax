@@ -2063,3 +2063,28 @@ After three production batches and three hardening phases, Hoax.ai has enough pu
 - Future protocol work may build from this standard.
 - No public engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
 
+---
+
+## DEC-078 — Standard Integration and Protocol Readiness Adopted
+
+**Date:** 2026-06-19
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Standard Integration and Protocol Readiness to integrate Evidence Posture Standard v1 across the public reference layer and prepare a bounded path toward future protocol work. This sprint adds standard relationships and cross-links across reference pages, strengthens the standard page, and creates a non-route protocol-readiness document. It does not create a public protocol route, engine, classifier, upload workflow, scoring system, API, analytics, forms, DNS/Cloudflare change, custom domain launch, monetization, or public tool behavior.
+
+### Rationale
+
+Evidence Posture Standard v1 must not remain an isolated authority page. For Hoax.ai to become a standard-bearing evidence-posture asset, the reference layer must point into the standard and the standard must govern how the reference layer is read. Protocol readiness is appropriate only because a real public standard now exists. The next layer must be prepared from existing standard substance, not from abstract governance.
+
+### Implications
+
+- Existing reference pages may be updated to link to the standard.
+- The standard page may be strengthened.
+- A non-route protocol-readiness document may be created.
+- Sitemap remains exactly 17 URLs.
+- No new public route is authorized.
+- No public protocol, engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
+- Future protocol work may be considered only after Sprint 60 validation passes.
+

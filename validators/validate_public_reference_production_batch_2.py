@@ -343,7 +343,7 @@ def validate_governance() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_3,
         PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_STANDARD_V1,
     ):
-        error("publisher status must be blocked_until_public_reference_production_batch_2_validation or later validation state")
+        error("publisher status must be blocked_until_public_reference_production_batch_2_validation, batch_3_validation, or evidence_posture_standard_v1_validation")
         ok = False
     gate = next(
         (g for g in load("data/publisher-quality-gates.json").get("gates", []) if g.get("gate_id") == "PUB-GATE-0054"),
