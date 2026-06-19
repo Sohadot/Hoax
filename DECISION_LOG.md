@@ -1681,3 +1681,37 @@ After validating public route eligibility governance, Hoax.ai needs a controlled
 - No engine, classifier, upload, scoring, API, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release is authorized.
 - Future work may validate this assessment governance before any candidate assessment occurs.
 
+---
+
+## DEC-065 - Public Route Candidate Assessment Governance Validation v1 Adopted
+
+**Date:** 2026-06-18
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Route Candidate Assessment Governance Validation v1 to validate the Sprint 46 public route candidate assessment governance layer. This validation confirms that candidate assessment governance defines only how future route candidates may be assessed and does not assess a specific candidate, instantiate a candidate record, select a route, create a candidate page, create a public route, add a sitemap entry, add public navigation, expose the internal prototype, launch a workbench, enable engine behavior, enable classifier behavior, enable upload, enable scoring, enable API behavior, enable analytics, change deployment, change DNS/Cloudflare, launch the custom domain, monetize, or authorize public release.
+
+### Rationale
+
+Candidate assessment governance can be mistaken for candidate assessment. Hoax.ai must validate that the Sprint 46 governance layer remains a controlled prerequisite layer, not an assessment action or publishing action. The validation must confirm the framework, record template, state model, prohibited candidate defaults, non-authorization rules, public isolation, static safety, and publisher gates without creating or selecting any candidate.
+
+### Implications
+
+- Sprint 46 candidate assessment governance may be audited.
+- The assessment framework may be validated.
+- The record template may be validated.
+- The assessment state model may be validated.
+- Prohibited candidate defaults may be validated.
+- Non-authorization rules may be validated.
+- Public isolation may be validated.
+- Static safety may be validated.
+- No candidate may be assessed in Sprint 47.
+- No candidate record may be instantiated.
+- No public route may be created.
+- No sitemap entry may be added.
+- No public navigation may be added.
+- No prototype file may be modified.
+- No engine, classifier, upload, scoring, API, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release is authorized.
+- Future work may proceed to public route candidate registry governance only after this validation passes.
+

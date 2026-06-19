@@ -1998,6 +1998,46 @@ Public classifier remains blocked. Public engine remains blocked. Public route r
 
 ---
 
+## Sprint 47 - Public Route Candidate Assessment Governance Validation v1
+
+**Status:** COMPLETE - 2026-06-18
+**Goal:** Validate Sprint 46 public route candidate assessment governance without assessing a specific candidate, instantiating a record, creating a route, sitemap entry, public navigation link, or operational capability.
+
+### Deliverables
+
+- PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE_VALIDATION_V1.md
+- data/public-route-candidate-assessment-governance-validation-policy.json
+- data/public-route-candidate-assessment-governance-validation-results-v1.json
+- data/public-route-candidate-assessment-framework-validation-v1.json
+- data/public-route-candidate-assessment-record-template-validation-v1.json
+- data/public-route-candidate-assessment-state-model-validation-v1.json
+- data/public-route-candidate-assessment-prohibited-candidates-validation-v1.json
+- data/public-route-candidate-assessment-non-authorization-validation-v1.json
+- data/public-route-candidate-assessment-public-isolation-audit-v1.json
+- data/public-route-candidate-assessment-static-safety-audit-v1.json
+- validators/validate_public_route_candidate_assessment_governance_validation.py
+- SPRINT_47_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE_VALIDATION_AUDIT.md
+- DEC-065 appended to DECISION_LOG.md
+- Publisher status -> blocked_until_public_route_candidate_registry_governance
+- PUB-GATE-0047 added; reference expansion gate updated
+- validators/validate_all.py updated
+
+### Validation
+
+`py -3 validators/validate_all.py` - PASS required for sprint closure.
+
+### Gate
+
+**Gate G47 passed.** Public route candidate registry governance blocked until Sprint 48.
+
+### Next Phase
+
+**Sprint 48 - Public Route Candidate Registry Governance v1**
+
+Public classifier remains blocked. Public engine remains blocked. Public route remains blocked until candidate registry governance exists, a candidate is registered, candidate assessment is governed and validated, route eligibility is validated, and a later route-specific creation sprint is separately authorized. The prototype remains non-public, static, non-operational, not a public route, and not a workbench launch.
+
+---
+
 ## Sprint 25 — Public Reference Validation and Live Surface Audit v1
 
 **Status:** COMPLETE — 2026-06-17  

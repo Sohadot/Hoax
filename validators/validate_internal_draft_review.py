@@ -222,6 +222,7 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRY_GOVERNANCE,
 )
 
 PUBLIC_FILES = ALLOWED_PUBLIC_ROOT_FILES
@@ -694,6 +695,7 @@ def validate_publisher_and_gates() -> bool:
         "blocked_until_public_route_eligibility_governance_validation",
         "blocked_until_public_route_candidate_assessment_governance",
         "blocked_until_public_route_candidate_assessment_governance_validation",
+        "blocked_until_public_route_candidate_registry_governance",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "

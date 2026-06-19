@@ -1,0 +1,341 @@
+{
+  "validation_id": "PUB-ROUTE-CANDIDATE-ASSESSMENT-GOV-VALIDATION-RESULTS-001",
+  "name": "Public Route Candidate Assessment Governance Validation Results v1",
+  "version": "v1.0.0",
+  "status": "public_route_candidate_assessment_governance_validated",
+  "maturity": "validation_only_candidate_assessment_governance_no_candidate_assessed_no_route_no_sitemap_no_public_release_no_engine_no_classifier",
+  "validation_dimensions": [
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0001",
+      "name": "Candidate Assessment Governance Policy Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0002",
+      "name": "Candidate Assessment Definition Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0003",
+      "name": "Candidate Assessment Is Not Route Creation",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0004",
+      "name": "Candidate Assessment Is Not Candidate Approval",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0005",
+      "name": "Assessment Framework Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0006",
+      "name": "Assessment Dimension Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0007",
+      "name": "Candidate Class Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0008",
+      "name": "Assessment Outcome Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0009",
+      "name": "Blocked Candidate Default Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0010",
+      "name": "Record Template Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0011",
+      "name": "Required Record Field Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0012",
+      "name": "Forbidden Record Field Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0013",
+      "name": "Boundary Field Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0014",
+      "name": "Non-Authorization Field Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0015",
+      "name": "State Model Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0016",
+      "name": "Assessment State Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0017",
+      "name": "Transition Rule Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0018",
+      "name": "Forbidden Transition Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0019",
+      "name": "Prohibited Candidate Defaults Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0020",
+      "name": "Unblock Requirement Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0021",
+      "name": "Non-Authorization Rules Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0022",
+      "name": "Candidate Assessment Boundary Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0023",
+      "name": "Route Creation Boundary Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0024",
+      "name": "Public Release Boundary Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0025",
+      "name": "Internal Prototype Boundary Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0026",
+      "name": "Public Route Eligibility Dependency",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0027",
+      "name": "Public-Readiness Boundary Dependency",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0028",
+      "name": "Visual Baseline Lock Dependency",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0029",
+      "name": "No Specific Candidate Assessed",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0030",
+      "name": "No Candidate Record Instantiated",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0031",
+      "name": "No Candidate Route Selected",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0032",
+      "name": "No Candidate Page Created",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0033",
+      "name": "Public Route Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0034",
+      "name": "Route Registry Non-Expansion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0035",
+      "name": "Sitemap Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0036",
+      "name": "Public Navigation Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0037",
+      "name": "Homepage Link Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0038",
+      "name": "Reference Page Link Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0039",
+      "name": "Language Page Link Exclusion",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0040",
+      "name": "Internal Prototype Non-Exposure",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0041",
+      "name": "Prototype Files Not Modified",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0042",
+      "name": "No Additional Prototype Files",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0043",
+      "name": "No JavaScript",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0044",
+      "name": "No Forms or Inputs",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0045",
+      "name": "No Upload Surface",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0046",
+      "name": "No Scoring Surface",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0047",
+      "name": "No Fake/Real Verdict Surface",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0048",
+      "name": "No API/Network/Storage Behavior",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0049",
+      "name": "No Analytics",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0050",
+      "name": "No DNS/Cloudflare/Deployment Change",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0051",
+      "name": "No Public Workbench Authorization",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0052",
+      "name": "No Public Engine Authorization",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0053",
+      "name": "No Public Classifier Authorization",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0054",
+      "name": "No Public Tool Authorization",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0055",
+      "name": "No Monetization Authorization",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0056",
+      "name": "No Public Release Authorization",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0057",
+      "name": "Public Surface Four-URL Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0058",
+      "name": "Static Safety Integrity",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0059",
+      "name": "Publisher Gate Alignment",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0060",
+      "name": "Reference Expansion Gate Alignment",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0061",
+      "name": "Evidence Ledger / Claim Map Alignment",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0062",
+      "name": "Source Registry Alignment",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0063",
+      "name": "Build Manifest Regeneration",
+      "result": "pass"
+    },
+    {
+      "dimension_id": "ROUTE-CAND-ASSESS-VAL-0064",
+      "name": "Python Cache Exclusion",
+      "result": "pass"
+    }
+  ],
+  "assessment_governance_result": "public_route_candidate_assessment_governance_validated",
+  "framework_result": "assessment_framework_validated",
+  "record_template_result": "assessment_record_template_validated",
+  "state_model_result": "assessment_state_model_validated",
+  "prohibited_candidates_result": "prohibited_candidate_defaults_validated",
+  "non_authorization_result": "candidate_assessment_non_authorization_validated",
+  "public_isolation_result": "candidate_assessment_public_isolation_validated",
+  "static_safety_result": "candidate_assessment_static_safety_validated",
+  "governance_alignment_result": "publisher_and_reference_gates_aligned",
+  "python_cache_result": "python_cache_excluded",
+  "overall_result": "public_route_candidate_assessment_governance_validated",
+  "last_reviewed": "2026-06-18"
+}

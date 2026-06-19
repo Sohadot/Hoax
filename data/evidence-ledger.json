@@ -574,6 +574,17 @@
       "status": "active",
       "last_reviewed": "2026-06-18",
       "notes": "Public route candidate assessment governance defines assessment framework, record template, state model, prohibited candidates, and non-authorization rules. It does not assess any specific candidate, create a route, sitemap entry, public navigation, engine, classifier, upload, scoring, API, analytics, deployment, or public release."
+    },
+    {
+      "claim_id": "CLAIM-0053",
+      "claim_text": "Hoax.ai has adopted Public Route Candidate Assessment Governance Validation v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE_VALIDATION_V1.md, DECISION_LOG.md (DEC-065)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-18",
+      "notes": "Public route candidate assessment governance validation confirms framework, record template, state model, prohibited candidates, non-authorization, public isolation, and static safety. It does not assess any specific candidate, instantiate a record, create a route, sitemap entry, public navigation, engine, classifier, upload, scoring, API, analytics, deployment, or public release."
     }
   ]
 }

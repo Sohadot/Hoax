@@ -1,0 +1,34 @@
+{
+  "prohibited_candidates_validation_id": "PUB-ROUTE-CANDIDATE-ASSESSMENT-PROHIBITED-VAL-001",
+  "name": "Public Route Candidate Assessment Prohibited Candidates Validation v1",
+  "version": "v1.0.0",
+  "status": "public_route_candidate_prohibited_defaults_validated",
+  "maturity": "prohibited_candidate_validation_only_no_unblock",
+  "blocked_by_default_results": {
+    "public_workbench_route_candidate": "pass",
+    "diagnostic_route_candidate": "pass",
+    "tool_route_candidate": "pass",
+    "engine_route_candidate": "pass",
+    "classifier_route_candidate": "pass",
+    "upload_route_candidate": "pass",
+    "scoring_route_candidate": "pass",
+    "API_route_candidate": "pass",
+    "analytics_route_candidate": "pass",
+    "monetization_route_candidate": "pass",
+    "deployment_route_candidate": "pass",
+    "DNS_custom_domain_route_candidate": "pass"
+  },
+  "unblock_requirement_results": {
+    "separate_governance_required": "pass",
+    "separate_validation_required": "pass",
+    "separate_public_readiness_review_required": "pass",
+    "separate_route_readiness_review_required": "pass",
+    "separate_privacy_security_review_required": "pass",
+    "sitemap_navigation_governance_required_where_applicable": "pass",
+    "deployment_DNS_governance_required_where_applicable": "pass",
+    "no_unblock_by_candidate_assessment_governance_alone": "pass"
+  },
+  "non_authorization_result": "prohibited_candidate_validation_does_not_unblock_candidates",
+  "overall_result": "prohibited_candidate_defaults_validated",
+  "last_reviewed": "2026-06-18"
+}
