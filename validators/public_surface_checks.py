@@ -7,7 +7,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-PUBLIC_ROUTE_IDS = ["ROUTE-0001", "ROUTE-0002", "ROUTE-0003", "ROUTE-0004", "ROUTE-0005", "ROUTE-0006", "ROUTE-0007", "ROUTE-0008"]
+PUBLIC_ROUTE_IDS = [
+    "ROUTE-0001", "ROUTE-0002", "ROUTE-0003", "ROUTE-0004",
+    "ROUTE-0005", "ROUTE-0006", "ROUTE-0007", "ROUTE-0008",
+    "ROUTE-0009", "ROUTE-0010", "ROUTE-0011", "ROUTE-0012",
+]
 
 PILOT_ROUTE_IDS = PUBLIC_ROUTE_IDS  # backward compatibility
 
@@ -27,6 +31,10 @@ ALLOWED_PUBLIC_HTML = {
     "reference/provenance-gap/index.html",
     "reference/not-assessable/index.html",
     "reference/output-boundary/index.html",
+    "reference/synthetic-fragility/index.html",
+    "reference/evidence-chain/index.html",
+    "reference/context-collapse/index.html",
+    "reference/claim-source-traceability/index.html",
 }
 
 ALLOWED_INTERNAL_PROTOTYPE_HTML = {
@@ -41,7 +49,7 @@ ALLOWED_PUBLIC_ROOT_FILES = ALLOWED_PUBLIC_HTML | {
     "sitemap.xml",
 }
 
-PUBLIC_SITEMAP_URL_COUNT = 8
+PUBLIC_SITEMAP_URL_COUNT = 12
 
 PILOT_SITEMAP_URL_COUNT = PUBLIC_SITEMAP_URL_COUNT  # backward compatibility
 
@@ -103,6 +111,8 @@ PUBLISHER_STATUS_GOVERNANCE_SCAFFOLDING_FREEZE = "blocked_until_public_reference
 
 PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_1 = "blocked_until_public_reference_production_batch_1_validation"
 
+PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_2 = "blocked_until_public_reference_production_batch_2_validation"
+
 PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_reference_candidate_pack",
     "blocked_until_internal_draft_blueprint",
@@ -141,6 +151,7 @@ PUBLISHER_STATUSES_ALLOWED = (
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
     PUBLISHER_STATUS_GOVERNANCE_SCAFFOLDING_FREEZE,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_1,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_2,
 )
 
 
@@ -273,15 +284,19 @@ def is_language_route(route: dict) -> bool:
 
 
 def is_production_batch_route(route: dict) -> bool:
-    return (
-        route.get("production_batch") == "public_reference_production_batch_1"
-        or route.get("status") == "public_reference_production_batch_1_created"
+    return route.get("production_batch") in (
+        "public_reference_production_batch_1",
+        "public_reference_production_batch_2",
+    ) or route.get("status") in (
+        "public_reference_production_batch_1_created",
+        "public_reference_production_batch_2_created",
     )
 
 
 REGISTERED_CANDIDATE_ROUTE_STATUSES = {
     "controlled_public_reference_route_created",
     "public_reference_production_batch_1_created",
+    "public_reference_production_batch_2_created",
 }
 
 BATCH1_CANDIDATE_IDS = {
@@ -289,6 +304,10 @@ BATCH1_CANDIDATE_IDS = {
     "REF-CAND-0004",
     "REF-CAND-0005",
     "REF-CAND-0006",
+}
+
+BATCH2_CANDIDATE_IDS = {
+    "REF-CAND-0008",
 }
 
 

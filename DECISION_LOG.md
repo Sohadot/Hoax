@@ -1935,3 +1935,28 @@ Sprint 53 restored production by creating real public reference pages. Sprint 54
 - No new public routes, meta-governance layers, or operational capability is authorized.
 - Batch 2 production may proceed only after Sprint 54 validation passes.
 
+---
+
+## DEC-073 — Public Reference Production Batch 2 Adopted
+
+**Date:** 2026-06-17
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Production Batch 2 to create four additional governed public reference pages: Synthetic Fragility, Evidence Chain, Context Collapse, and Claim–Source Traceability. This sprint expands the public reference surface from eight URLs to twelve URLs through actual reference content, route registry alignment, sitemap inclusion, internal linking, metadata, accessibility, and validation. It does not create an engine, classifier, upload workflow, scoring system, API, analytics, public tool behavior, DNS/Cloudflare change, custom domain launch, or monetization.
+
+### Rationale
+
+After Batch 1 and its depth hardening, Hoax.ai must continue building visible category substance. Batch 2 adds concepts that deepen the evidence-posture system: Synthetic Fragility explains why synthetic or AI-mediated artifacts are context-sensitive and easily misread; Evidence Chain explains the continuity of evidence context; Context Collapse explains how evidence loses meaning when surrounding context is stripped away; Claim–Source Traceability explains the required relationship between claims and the sources that support them. Together, these pages strengthen Hoax.ai as a sovereign reference layer rather than a detector website.
+
+### Implications
+
+- Four real public reference pages may be created.
+- Four route registry entries may be added.
+- Four sitemap URLs may be added.
+- Existing public pages may link to the new pages.
+- Public reference surface becomes exactly 12 URLs.
+- No public engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
+- Public reference production remains the active direction until at least 10 additional public reference pages exist and pass validation.
+

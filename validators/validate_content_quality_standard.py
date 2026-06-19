@@ -451,6 +451,7 @@ def validate_cross_file_integration() -> bool:
         "blocked_until_public_route_candidate_registration_authorization_governance",
         "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
+        "blocked_until_public_reference_production_batch_2_validation",
     ):
         error(f"publisher-governance-policy: publisher must remain blocked from drafts and publication, got {status}")
         ok = False

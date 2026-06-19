@@ -415,6 +415,7 @@ def validate_publisher_governance() -> bool:
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
         "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
+        "blocked_until_public_reference_production_batch_2_validation",
     }
     if status not in allowed:
         error(f"publisher status must be one of {sorted(allowed)}")

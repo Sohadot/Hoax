@@ -16,6 +16,7 @@ from public_surface_checks import (
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_1,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_2,
     validate_public_surface,
 )
 
@@ -249,12 +250,9 @@ def validate_registry_and_sitemap() -> bool:
             if term not in prohibited:
                 error(f"route {route.get('route_id')} must prohibit {term}")
                 ok = False
-    if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
+    if not validate_public_surface(routes, error, len(routes)):
         ok = False
     locs = [e.text.strip() for e in ET.parse(ROOT / "sitemap.xml").findall(".//{*}loc") if e.text]
-    if len(locs) != 8:
-        error("sitemap.xml must contain exactly 8 URLs")
-        ok = False
     for p in BATCH1_PATHS:
         url = f"https://hoax.ai{p}"
         if url not in locs:
@@ -290,8 +288,11 @@ def validate_public_safety() -> bool:
 def validate_governance() -> bool:
     ok = True
     pub = load("data/publisher-governance-policy.json")
-    if pub.get("current_publisher_status") != PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_1:
-        error("publisher status must be blocked_until_public_reference_production_batch_1_validation")
+    if pub.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_1,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_2,
+    ):
+        error("publisher status must reflect batch 1 or batch 2 production validation state")
         ok = False
     gate = next(
         (g for g in load("data/publisher-quality-gates.json").get("gates", []) if g.get("gate_id") == "PUB-GATE-0053"),

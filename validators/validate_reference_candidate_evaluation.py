@@ -402,12 +402,21 @@ def validate_candidate_registry() -> bool:
         for e in load_json(ROOT / "data" / "reference-candidate-evaluation-v1.json").get("evaluations", [])
     }
 
-    from candidate_registry_checks import is_batch1_production_candidate, validate_batch1_production_candidate
+    from candidate_registry_checks import (
+        is_batch1_production_candidate,
+        is_batch2_production_candidate,
+        validate_batch1_production_candidate,
+        validate_batch2_production_candidate,
+    )
 
     for entry in registry.get("candidates", []):
         cid = entry.get("candidate_id", "?")
         if is_batch1_production_candidate(entry):
             if not validate_batch1_production_candidate(entry, error, "candidate registry"):
+                ok = False
+            continue
+        if is_batch2_production_candidate(entry):
+            if not validate_batch2_production_candidate(entry, error, "candidate registry"):
                 ok = False
             continue
         ev = evaluations.get(cid)
@@ -488,6 +497,7 @@ def validate_publisher_and_gates() -> bool:
         "blocked_until_public_route_candidate_registration_authorization_governance",
         "blocked_until_public_reference_production_batch_1",
         "blocked_until_public_reference_production_batch_1_validation",
+        "blocked_until_public_reference_production_batch_2_validation",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "

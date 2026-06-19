@@ -1279,7 +1279,32 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Production Batch 1 per DEC-071. Public surface traceability via support_locations."
+    },
+    {
+      "claim_id": "CLAIM-0060",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "SPRINT_55_PUBLIC_REFERENCE_PRODUCTION_BATCH_2_AUDIT.md",
+        "DECISION_LOG.md",
+        "reference/synthetic-fragility/index.html",
+        "reference/evidence-chain/index.html",
+        "reference/context-collapse/index.html",
+        "reference/claim-source-traceability/index.html"
+      ],
+      "source_refs": [
+        "SOURCE-0373",
+        "SOURCE-0374",
+        "SOURCE-0375",
+        "SOURCE-0376",
+        "SOURCE-0377",
+        "SOURCE-0378"
+      ],
+      "support_scope": "public reference production batch 2",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Production Batch 2 per DEC-073. Public surface expanded to twelve URLs."
     }
   ],
-  "last_reviewed": "2026-06-19"
+  "last_reviewed": "2026-06-17"
 }
