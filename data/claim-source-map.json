@@ -1025,6 +1025,30 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public-readiness boundary governance validation adoption per DEC-061."
+    },
+    {
+      "claim_id": "CLAIM-0050",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_V1.md",
+        "DECISION_LOG.md",
+        "data/public-route-eligibility-governance-policy.json"
+      ],
+      "source_refs": [
+        "SOURCE-0282",
+        "SOURCE-0283",
+        "SOURCE-0284",
+        "SOURCE-0285",
+        "SOURCE-0286",
+        "SOURCE-0287",
+        "SOURCE-0288",
+        "SOURCE-0289"
+      ],
+      "support_scope": "public route eligibility governance adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public route eligibility governance adoption per DEC-062."
     }
   ],
   "last_reviewed": "2026-06-18"

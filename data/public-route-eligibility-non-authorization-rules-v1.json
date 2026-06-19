@@ -1,0 +1,33 @@
+{
+  "non_authorization_id": "PUB-ROUTE-ELIGIBILITY-NON-AUTH-001",
+  "name": "Public Route Eligibility Non-Authorization Rules v1",
+  "version": "v1.0.0",
+  "status": "public_route_eligibility_non_authorization_defined",
+  "maturity": "non_authorization_only_no_route_no_sitemap_no_public_release",
+  "blocked_authorizations": [
+    "no_public_route_authorized",
+    "no_sitemap_expansion_authorized",
+    "no_public_navigation_authorized",
+    "no_public_workbench_authorized",
+    "no_engine_authorized",
+    "no_classifier_authorized",
+    "no_detector_authorized",
+    "no_upload_authorized",
+    "no_scoring_authorized",
+    "no_fake_real_output_authorized",
+    "no_API_authorized",
+    "no_analytics_authorized",
+    "no_DNS_authorized",
+    "no_Cloudflare_authorized",
+    "no_custom_domain_launch_authorized",
+    "no_deployment_authorized",
+    "no_monetization_authorized",
+    "no_public_tool_authorized",
+    "no_public_release_authorized"
+  ],
+  "route_creation_boundary": "route_creation_requires_future_route_creation_sprint",
+  "public_release_boundary": "public_release_remains_blocked",
+  "internal_prototype_boundary": "internal_prototype_remains_non_public_static_unlinked_unrouted_unindexed",
+  "overall_result": "public_route_eligibility_non_authorization_defined",
+  "last_reviewed": "2026-06-18"
+}

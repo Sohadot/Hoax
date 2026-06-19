@@ -173,6 +173,7 @@ from public_surface_checks import (
     validate_pilot_route_registry,
     validate_pilot_sitemap,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE,
+    PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION,
 )
 
 PUBLIC_FILES = ALLOWED_PUBLIC_ROOT_FILES
@@ -509,6 +510,7 @@ def validate_cross_file() -> bool:
         "blocked_until_non_public_static_workbench_public_readiness_boundary_governance",
         "blocked_until_non_public_static_workbench_public_readiness_boundary_validation",
         "blocked_until_public_route_eligibility_governance",
+        "blocked_until_public_route_eligibility_governance_validation",
     ):
         error(
             "publisher-governance-policy: current_publisher_status must be "

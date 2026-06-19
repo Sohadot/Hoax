@@ -1563,6 +1563,34 @@ Public-readiness language can easily be misread as launch permission. Hoax.ai mu
 - No engine, classifier, upload, scoring, API, analytics, DNS, Cloudflare, deployment, or public tool behavior may be introduced.
 - Future work may proceed only after this validation passes.
 
+---
+
+## DEC-062 - Public Route Eligibility Governance v1 Adopted
+
+**Date:** 2026-06-18
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Route Eligibility Governance v1 to define the conditions required before any future public route can be considered eligible. This governance layer does not create a public route, sitemap entry, navigation link, workbench launch, engine behavior, classifier behavior, upload workflow, scoring interface, API, analytics layer, deployment change, DNS/Cloudflare change, custom domain launch, monetization layer, or public release.
+
+### Rationale
+
+After public-readiness boundary governance validation, the next risk is confusing route eligibility with route creation. Hoax.ai must define route eligibility as a governed prerequisite layer, not a publishing action. A public route may only be considered after purpose, boundary, sitemap status, navigation status, claim posture, safety posture, source posture, and non-operational constraints are explicitly governed.
+
+### Implications
+
+- Public route eligibility criteria may be defined.
+- Future public route prerequisite gates may be defined.
+- Candidate route states may be defined.
+- Non-authorization rules may be defined.
+- No public route may be created in this sprint.
+- No sitemap entry may be added.
+- No public navigation may be added.
+- No prototype file may be modified.
+- No workbench launch, engine, classifier, upload, scoring, API, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release is authorized.
+- Future work may validate public route eligibility governance before any route-specific eligibility assessment.
+
 
 ---
 
@@ -1589,3 +1617,32 @@ The visual baseline is now locked and validated, but a locked internal baseline 
 - Public-readiness boundary governance does not authorize engine, classifier, upload, scoring, API, analytics, or public tool behavior.
 - Future public-readiness validation must pass before any public route governance is even considered.
 - The internal prototype remains internal, static, non-public, non-operational, unrouted, unindexed, and unlinked.
+
+---
+
+## DEC-062 - Public Route Eligibility Governance v1 Adopted
+
+**Date:** 2026-06-18
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Route Eligibility Governance v1 to define the conditions required before any future public route can be considered eligible. This governance layer does not create a public route, sitemap entry, navigation link, workbench launch, engine behavior, classifier behavior, upload workflow, scoring interface, API, analytics layer, deployment change, DNS/Cloudflare change, custom domain launch, monetization layer, or public release.
+
+### Rationale
+
+After public-readiness boundary governance validation, the next risk is confusing route eligibility with route creation. Hoax.ai must define route eligibility as a governed prerequisite layer, not a publishing action. A public route may only be considered after purpose, boundary, sitemap status, navigation status, claim posture, safety posture, source posture, and non-operational constraints are explicitly governed.
+
+### Implications
+
+- Public route eligibility criteria may be defined.
+- Future public route prerequisite gates may be defined.
+- Candidate route states may be defined.
+- Non-authorization rules may be defined.
+- No public route may be created in this sprint.
+- No sitemap entry may be added.
+- No public navigation may be added.
+- No prototype file may be modified.
+- No workbench launch, engine, classifier, upload, scoring, API, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release is authorized.
+- Future work may validate public route eligibility governance before any route-specific eligibility assessment.
+

@@ -1884,6 +1884,43 @@ Public classifier remains blocked. Public engine remains blocked. Public route r
 
 ---
 
+## Sprint 44 - Public Route Eligibility Governance v1
+
+**Status:** COMPLETE - 2026-06-18
+**Goal:** Define public route eligibility governance without creating a public route, sitemap entry, public navigation link, or operational capability.
+
+### Deliverables
+
+- PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_V1.md
+- data/public-route-eligibility-governance-policy.json
+- data/public-route-eligibility-criteria-v1.json
+- data/public-route-eligibility-prerequisite-map-v1.json
+- data/public-route-eligibility-non-authorization-rules-v1.json
+- data/public-route-eligibility-candidate-state-model-v1.json
+- data/public-route-eligibility-boundary-audit-v1.json
+- validators/validate_public_route_eligibility_governance.py
+- SPRINT_44_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_AUDIT.md
+- DEC-062 appended to DECISION_LOG.md
+- Publisher status -> blocked_until_public_route_eligibility_governance_validation
+- PUB-GATE-0044 added; reference expansion gate updated
+- validators/validate_all.py updated
+
+### Validation
+
+`py -3 validators/validate_all.py` - PASS required for sprint closure.
+
+### Gate
+
+**Gate G44 passed.** Public route eligibility governance validation blocked until Sprint 45.
+
+### Next Phase
+
+**Sprint 45 - Public Route Eligibility Governance Validation v1**
+
+Public classifier remains blocked. Public engine remains blocked. Public route remains blocked until eligibility governance is validated and a later route-specific creation sprint is separately authorized. The prototype remains non-public, static, non-operational, not a public route, and not a workbench launch.
+
+---
+
 ## Sprint 25 — Public Reference Validation and Live Surface Audit v1
 
 **Status:** COMPLETE — 2026-06-17  

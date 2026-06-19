@@ -82,12 +82,13 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G41 | Non-Public Static Workbench Visual System Baseline Lock Validation | Sprint 41 validator PASS |
 | G42 | Non-Public Static Workbench Public-Readiness Boundary Governance | Sprint 42 validator PASS |
 | G43 | Non-Public Static Workbench Public-Readiness Boundary Governance Validation | Sprint 43 validator PASS |
+| G44 | Public Route Eligibility Governance | Sprint 44 validator PASS |
 
-**Gate G43 passed.** Sprint 44 (Public Route Eligibility Governance) may proceed when authorized. Public classifier and engine remain blocked. Public route remains blocked until eligibility governance exists and passes. The prototype remains non-public, static, unrouted, unindexed, unlinked, and non-operational. External deployment remains separately governed.
+**Gate G44 passed.** Sprint 45 (Public Route Eligibility Governance Validation) may proceed when authorized. Public classifier and engine remain blocked. Public route remains blocked until eligibility governance is validated. The prototype remains non-public, static, unrouted, unindexed, unlinked, and non-operational. External deployment remains separately governed.
 
 ### Foundation Gates vs Deployment Gates
 
-Foundation gates (G0-G43) govern category infrastructure, reference governance, language layer, language validation, workbench governance, workbench dry-run validation, workbench specification, interface blueprint governance, interface blueprint validation, prototype governance, static prototype v1, prototype validation, prototype refinement, refinement validation, visual system hardening, hardening validation, baseline lock, baseline lock validation, public-readiness boundary governance, public-readiness boundary governance validation, and expansion readiness. They must pass before reference layer scale or operational layers.
+Foundation gates (G0-G44) govern category infrastructure, reference governance, language layer, language validation, workbench governance, workbench dry-run validation, workbench specification, interface blueprint governance, interface blueprint validation, prototype governance, static prototype v1, prototype validation, prototype refinement, refinement validation, visual system hardening, hardening validation, baseline lock, baseline lock validation, public-readiness boundary governance, public-readiness boundary governance validation, public route eligibility governance, and expansion readiness. They must pass before reference layer scale or operational layers.
 
 Deployment gates are **separate** and **not current foundation steps**. They open only after reference expansion governance is in place. None are passed.
 
@@ -200,6 +201,10 @@ Gate G42 is passed after Public-Readiness Boundary Governance exists; boundary p
 
 Gate G43 is passed after Public-Readiness Boundary Governance Validation exists; validation policy exists; validation results exist; prerequisite validation exists; non-authorization validation exists; public isolation audit exists; static safety audit exists; validator exists; validate_all.py PASS; Sprint 42 boundary governance is validated; prototype files are not modified; prototype remains non-public, static, not routed, not sitemap-listed, not publicly linked, and non-operational; and no prototype files modified, new prototype files, public route, sitemap expansion, public navigation, JavaScript, forms, inputs, upload, scoring, fake/real output, engine, classifier, tool, API, analytics, DNS, Cloudflare, custom domain launch, monetization, Python cache files, or deployment changes are created.
 
+## G44: Public Route Eligibility Governance
+
+Gate G44 is passed after Public Route Eligibility Governance exists; eligibility policy exists; eligibility criteria exist; prerequisite map exists; non-authorization rules exist; candidate state model exists; boundary audit exists; validator exists; validate_all.py PASS; no public route, sitemap expansion, public navigation, JavaScript, forms, inputs, upload, scoring, fake/real output, engine, classifier, tool, API, analytics, DNS, Cloudflare, custom domain launch, monetization, Python cache files, deployment changes, or public release authorization is created; prototype files are not modified; and prototype remains non-public, static, not routed, not sitemap-listed, not publicly linked, and non-operational.
+
 ## Current Execution State
 
 | Sprint | Status | Gate |
@@ -256,7 +261,8 @@ Gate G43 is passed after Public-Readiness Boundary Governance Validation exists;
 | Sprint 41 | COMPLETE | G41 passed |
 | Sprint 42 | COMPLETE | G42 passed |
 | Sprint 43 | COMPLETE | G43 passed |
-| Sprint 44+ | READY | G43 passed - Public Route Eligibility Governance pending; engine/classifier blocked; public route blocked; deployment gates separately governed |
+| Sprint 44 | COMPLETE | G44 passed |
+| Sprint 45+ | READY | G44 passed - Public Route Eligibility Governance Validation pending; engine/classifier blocked; public route blocked; deployment gates separately governed |
 
 ## Governing Sentence
 

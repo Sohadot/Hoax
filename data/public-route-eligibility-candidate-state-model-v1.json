@@ -1,0 +1,40 @@
+{
+  "state_model_id": "PUB-ROUTE-ELIGIBILITY-STATE-MODEL-001",
+  "name": "Public Route Eligibility Candidate State Model v1",
+  "version": "v1.0.0",
+  "status": "public_route_eligibility_state_model_defined",
+  "maturity": "state_model_only_no_route_no_sitemap_no_public_release",
+  "route_eligibility_states": [
+    "not_considered",
+    "governance_required",
+    "boundary_defined",
+    "eligibility_candidate",
+    "eligibility_under_review",
+    "eligibility_validated",
+    "eligible_for_route_creation_sprint",
+    "blocked_for_public_surface_risk",
+    "blocked_for_operational_implication",
+    "blocked_for_source_gap",
+    "blocked_for_sitemap_or_navigation_gap",
+    "blocked_for_engine_classifier_upload_scoring_implication"
+  ],
+  "transition_rules": [
+    "no automatic transition to route creation",
+    "eligibility_validated may transition only to eligible_for_route_creation_sprint",
+    "eligible_for_route_creation_sprint still requires separate future route creation governance",
+    "blocked states require correction and validation before reconsideration"
+  ],
+  "forbidden_transitions": [
+    "eligibility_validated_to_public_route_created",
+    "eligibility_validated_to_sitemap_entry_created",
+    "eligibility_validated_to_public_navigation_added",
+    "eligibility_validated_to_engine_enabled",
+    "eligibility_validated_to_classifier_enabled",
+    "eligibility_validated_to_upload_enabled",
+    "eligibility_validated_to_scoring_enabled",
+    "eligibility_validated_to_deployment",
+    "eligibility_validated_to_public_release"
+  ],
+  "non_authorization_statement": "No route eligibility state may create a route, sitemap entry, navigation link, engine, classifier, upload surface, scoring interface, API, analytics layer, deployment change, or public release.",
+  "last_reviewed": "2026-06-18"
+}
