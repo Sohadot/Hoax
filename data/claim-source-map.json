@@ -1049,6 +1049,32 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public route eligibility governance adoption per DEC-062."
+    },
+    {
+      "claim_id": "CLAIM-0051",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION_V1.md",
+        "DECISION_LOG.md",
+        "data/public-route-eligibility-governance-validation-policy.json"
+      ],
+      "source_refs": [
+        "SOURCE-0290",
+        "SOURCE-0291",
+        "SOURCE-0292",
+        "SOURCE-0293",
+        "SOURCE-0294",
+        "SOURCE-0295",
+        "SOURCE-0296",
+        "SOURCE-0297",
+        "SOURCE-0298",
+        "SOURCE-0299"
+      ],
+      "support_scope": "public route eligibility governance validation adoption",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public route eligibility governance validation adoption per DEC-063."
     }
   ],
   "last_reviewed": "2026-06-18"

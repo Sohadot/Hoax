@@ -25,6 +25,7 @@ from public_surface_checks import (
     validate_public_surface,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE,
 )
 
 POLICY_TOP = {
@@ -437,6 +438,7 @@ def validate_publisher_governance() -> bool:
     PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_HARDENING,
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE,
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE,
     }
     if pub.get("current_publisher_status") not in allowed:
         error(f"publisher status must be one of {sorted(allowed)}")
@@ -491,6 +493,7 @@ def validate_publisher_governance() -> bool:
         "publisher_blocked_until_non_public_static_workbench_public_readiness_boundary_validation",
         "publisher_blocked_until_public_route_eligibility_governance",
         "publisher_blocked_until_public_route_eligibility_governance_validation",
+        "publisher_blocked_until_public_route_candidate_assessment_governance",
     ]
     if not any(b in blocked for b in workbench_blocked):
         error("reference-expansion-gate: publisher blocked until workbench progression")

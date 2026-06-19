@@ -1,0 +1,40 @@
+{
+  "state_model_validation_id": "PUB-ROUTE-ELIGIBILITY-STATE-MODEL-VAL-001",
+  "name": "Public Route Eligibility State Model Validation v1",
+  "version": "v1.0.0",
+  "status": "public_route_eligibility_state_model_validated",
+  "maturity": "state_model_validation_only_no_route_creation",
+  "state_results": {
+    "not_considered": "pass",
+    "governance_required": "pass",
+    "boundary_defined": "pass",
+    "eligibility_candidate": "pass",
+    "eligibility_under_review": "pass",
+    "eligibility_validated": "pass",
+    "eligible_for_route_creation_sprint": "pass",
+    "blocked_for_public_surface_risk": "pass",
+    "blocked_for_operational_implication": "pass",
+    "blocked_for_source_gap": "pass",
+    "blocked_for_sitemap_or_navigation_gap": "pass",
+    "blocked_for_engine_classifier_upload_scoring_implication": "pass"
+  },
+  "transition_rule_results": {
+    "no_automatic_transition_to_route_creation": "pass",
+    "eligibility_validated_only_to_eligible_for_route_creation_sprint": "pass",
+    "eligible_for_route_creation_sprint_requires_separate_future_route_creation_governance": "pass",
+    "blocked_states_require_correction_and_validation_before_reconsideration": "pass"
+  },
+  "forbidden_transition_results": {
+    "eligibility_validated_to_public_route_created_blocked": "pass",
+    "eligibility_validated_to_sitemap_entry_created_blocked": "pass",
+    "eligibility_validated_to_public_navigation_added_blocked": "pass",
+    "eligibility_validated_to_engine_enabled_blocked": "pass",
+    "eligibility_validated_to_classifier_enabled_blocked": "pass",
+    "eligibility_validated_to_upload_enabled_blocked": "pass",
+    "eligibility_validated_to_scoring_enabled_blocked": "pass",
+    "eligibility_validated_to_deployment_blocked": "pass",
+    "eligibility_validated_to_public_release_blocked": "pass"
+  },
+  "overall_result": "eligibility_state_model_validated",
+  "last_reviewed": "2026-06-18"
+}

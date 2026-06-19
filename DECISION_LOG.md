@@ -1616,33 +1616,37 @@ The visual baseline is now locked and validated, but a locked internal baseline 
 - Public-readiness boundary governance does not authorize public navigation.
 - Public-readiness boundary governance does not authorize engine, classifier, upload, scoring, API, analytics, or public tool behavior.
 - Future public-readiness validation must pass before any public route governance is even considered.
-- The internal prototype remains internal, static, non-public, non-operational, unrouted, unindexed, and unlinked.
+- No workbench launch, engine, classifier, upload, scoring, API, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release is authorized.
+- Future work may validate public route eligibility governance before any route-specific eligibility assessment.
 
 ---
 
-## DEC-062 - Public Route Eligibility Governance v1 Adopted
+## DEC-063 - Public Route Eligibility Governance Validation v1 Adopted
 
 **Date:** 2026-06-18
 **Status:** Active
 
 ### Decision
 
-Hoax.ai adopts Public Route Eligibility Governance v1 to define the conditions required before any future public route can be considered eligible. This governance layer does not create a public route, sitemap entry, navigation link, workbench launch, engine behavior, classifier behavior, upload workflow, scoring interface, API, analytics layer, deployment change, DNS/Cloudflare change, custom domain launch, monetization layer, or public release.
+Hoax.ai adopts Public Route Eligibility Governance Validation v1 to validate the Sprint 44 public route eligibility governance layer. This validation confirms that eligibility governance defines only the conditions for future route consideration and does not authorize route creation, sitemap expansion, public navigation, public workbench launch, engine behavior, classifier behavior, upload workflow, scoring interface, API behavior, analytics, deployment, DNS/Cloudflare change, custom domain launch, monetization, or public release.
 
 ### Rationale
 
-After public-readiness boundary governance validation, the next risk is confusing route eligibility with route creation. Hoax.ai must define route eligibility as a governed prerequisite layer, not a publishing action. A public route may only be considered after purpose, boundary, sitemap status, navigation status, claim posture, safety posture, source posture, and non-operational constraints are explicitly governed.
+Public route eligibility can be mistaken for route approval. Hoax.ai must validate that eligibility governance remains a prerequisite discipline, not a publishing action. The validation must prove that criteria, prerequisites, non-authorization rules, candidate states, sitemap boundaries, navigation boundaries, public workbench boundaries, and internal prototype boundaries are coherent while preserving the existing four-URL public surface and zero operational capability.
 
 ### Implications
 
-- Public route eligibility criteria may be defined.
-- Future public route prerequisite gates may be defined.
-- Candidate route states may be defined.
-- Non-authorization rules may be defined.
-- No public route may be created in this sprint.
+- Sprint 44 public route eligibility governance may be audited.
+- Eligibility criteria may be validated.
+- Prerequisite maps may be validated.
+- Non-authorization rules may be validated.
+- Candidate route states may be validated.
+- Public isolation may be validated.
+- Static safety may be validated.
+- No public route may be created.
 - No sitemap entry may be added.
 - No public navigation may be added.
-- No prototype file may be modified.
+- No internal prototype exposure may occur.
 - No workbench launch, engine, classifier, upload, scoring, API, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release is authorized.
-- Future work may validate public route eligibility governance before any route-specific eligibility assessment.
+- Future work may proceed to route candidate assessment governance only after this validation passes.
 

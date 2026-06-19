@@ -17,6 +17,7 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION,
     validate_public_surface,
+    PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE,
 )
 
 PROTO_DIR = ROOT / "_internal_prototypes" / "evidence-posture-workbench"
@@ -667,6 +668,7 @@ def validate_governance_and_registry() -> bool:
     if pub.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE,
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE,
     ):
         error("publisher status must be blocked until public route eligibility governance")
         ok = False

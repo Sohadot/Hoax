@@ -552,6 +552,17 @@
       "status": "active",
       "last_reviewed": "2026-06-18",
       "notes": "Public route eligibility governance defines criteria, prerequisites, state model, and non-authorization rules. It does not authorize public route creation, sitemap expansion, public navigation, engine, classifier, upload, scoring, API, analytics, deployment, or public release."
+    },
+    {
+      "claim_id": "CLAIM-0051",
+      "claim_text": "Hoax.ai has adopted Public Route Eligibility Governance Validation v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION_V1.md, DECISION_LOG.md (DEC-063)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-18",
+      "notes": "Public route eligibility governance validation confirms criteria, prerequisites, non-authorization, state model, public isolation, and static safety. It does not authorize public route creation, sitemap expansion, public navigation, engine, classifier, upload, scoring, API, analytics, deployment, or public release."
     }
   ]
 }

@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE,
     validate_public_surface,
 )
 
@@ -484,7 +485,10 @@ def validate_files_public() -> bool:
 def validate_governance() -> bool:
     ok = True
     pub = load("data/publisher-governance-policy.json")
-    if pub.get("current_publisher_status") != PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION:
+    if pub.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_PUBLIC_ROUTE_ELIGIBILITY_GOVERNANCE_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE,
+    ):
         error("publisher status must be blocked until public route eligibility governance validation")
         ok = False
     gate = next(
