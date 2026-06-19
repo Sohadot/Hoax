@@ -898,6 +898,7 @@ def validate_governance() -> bool:
     if pub.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_VALIDATION,
+        "blocked_until_public_reference_production_batch_1",
     ):
         error("publisher status must be blocked until public route candidate registration authorization governance")
         ok = False

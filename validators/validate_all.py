@@ -57,12 +57,16 @@ VALIDATORS = [
     ROOT / "validators" / "validate_public_route_candidate_registry_governance_validation.py",
     ROOT / "validators" / "validate_public_route_candidate_registration_governance.py",
     ROOT / "validators" / "validate_public_route_candidate_registration_governance_validation.py",
+    ROOT / "validators" / "validate_governance_scaffolding_freeze.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 
 
 def run_step(label: str, command: list[str]) -> int:
-    result = subprocess.run(command, cwd=ROOT, check=False)
+    import os
+    env = os.environ.copy()
+    env["PYTHONDONTWRITEBYTECODE"] = "1"
+    result = subprocess.run(command, cwd=ROOT, check=False, env=env)
     if result.returncode != 0:
         print(f"ERROR: {label} failed with exit code {result.returncode}")
     return result.returncode

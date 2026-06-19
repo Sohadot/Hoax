@@ -1859,3 +1859,30 @@ Candidate registration governance can be mistaken for candidate registration. Ho
 - No engine, classifier, upload, scoring, API, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release is authorized.
 - Future work may proceed to Public Route Candidate Registration Authorization Governance v1 only after this validation passes.
 
+---
+
+## DEC-070 — Governance Scaffolding Freeze and Public Reference Production Mandate
+
+**Date:** 2026-06-19
+**Status:** Active
+
+### Decision
+
+Hoax.ai freezes further meta-governance scaffolding and moves into public reference production. No additional governance layer whose primary function is to govern, validate, authorize, or prepare another governance layer may be added until Hoax.ai has produced at least 10 additional real public reference pages with governed purpose, route registry alignment, sitemap inclusion, internal linking, claim/source discipline where needed, metadata, accessibility, and validation.
+
+### Rationale
+
+Governance exists to protect production, not to replace it. Recent work — Sprints 44 through 51 — has created repeated layers of candidate, registry, registration, authorization, and validation governance without reducing the distance to new public reference value. This creates structural drag and weakens the asset's strategic posture. Hoax.ai must now prove its thesis through visible public reference substance.
+
+### Implications
+
+- The previous governance chain (DEC-062 through DEC-069) remains preserved but is frozen from further meta-expansion.
+- Public Route Candidate Registration Authorization Governance is blocked.
+- Further candidate/registry/registration abstraction layers are blocked.
+- Further governance validation of governance validation is blocked.
+- The immediate next phase is public reference page production.
+- At least 10 additional public reference pages must be created before any new abstract governance layer may be proposed.
+- Publisher status changes from blocked_until_public_route_candidate_registration_authorization_governance to blocked_until_public_reference_production_batch_1.
+- Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, custom domain launch, monetization, and public tool behavior remain blocked.
+- Public reference content is now the authorized production direction.
+- The first recommended production batch is: /reference/source-confidence/, /reference/provenance-gap/, /reference/not-assessable/, /reference/output-boundary/.

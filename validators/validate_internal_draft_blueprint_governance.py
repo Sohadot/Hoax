@@ -508,6 +508,7 @@ def validate_publisher_and_gates() -> bool:
         "blocked_until_public_route_candidate_registration_governance",
         "blocked_until_public_route_candidate_registration_governance_validation",
         "blocked_until_public_route_candidate_registration_authorization_governance",
+        "blocked_until_public_reference_production_batch_1",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "
