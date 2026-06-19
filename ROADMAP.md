@@ -2112,7 +2112,45 @@ Public classifier remains blocked. Public engine remains blocked. Public route r
 
 **Sprint 50 - Public Route Candidate Registration Governance v1**
 
-Public classifier remains blocked. Public engine remains blocked. Public route remains blocked until candidate registration governance exists, a candidate registration sprint is separately authorized, a candidate is registered, candidate assessment is governed and validated, route eligibility is validated, and a later route-specific creation sprint is separately authorized. The prototype remains non-public, static, non-operational, not a public route, and not a workbench launch.
+Public classifier remains blocked. Public engine remains blocked. Public route remains blocked until candidate registration governance is validated, a candidate registration sprint is separately authorized, a candidate is registered, candidate assessment is governed and validated, route eligibility is validated, and a later route-specific creation sprint is separately authorized. The prototype remains non-public, static, non-operational, not a public route, and not a workbench launch.
+
+---
+
+## Sprint 50 - Public Route Candidate Registration Governance v1
+
+**Status:** COMPLETE - 2026-06-18
+**Goal:** Define public route candidate registration governance without registering any candidate, creating a candidate entry, candidate ID, candidate record, candidate assessment, route, sitemap entry, public navigation link, or operational capability.
+
+### Deliverables
+
+- PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_V1.md
+- data/public-route-candidate-registration-governance-policy.json
+- data/public-route-candidate-registration-process-v1.json
+- data/public-route-candidate-registration-eligibility-gate-v1.json
+- data/public-route-candidate-registration-record-template-v1.json
+- data/public-route-candidate-registration-state-model-v1.json
+- data/public-route-candidate-registration-non-authorization-rules-v1.json
+- data/public-route-candidate-registration-boundary-audit-v1.json
+- validators/validate_public_route_candidate_registration_governance.py
+- SPRINT_50_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_AUDIT.md
+- DEC-068 appended to DECISION_LOG.md
+- Publisher status -> blocked_until_public_route_candidate_registration_governance_validation
+- PUB-GATE-0050 added; reference expansion gate updated
+- validators/validate_all.py updated
+
+### Validation
+
+`py -3 validators/validate_all.py` - PASS required for sprint closure.
+
+### Gate
+
+**Gate G50 passed.** Public route candidate registration governance validation blocked until Sprint 51.
+
+### Next Phase
+
+**Sprint 51 - Public Route Candidate Registration Governance Validation v1**
+
+Public classifier remains blocked. Public engine remains blocked. Public route remains blocked until candidate registration governance is validated, a candidate registration sprint is separately authorized, a candidate is registered, candidate assessment is governed and validated, route eligibility is validated, and a later route-specific creation sprint is separately authorized. The prototype remains non-public, static, non-operational, not a public route, and not a workbench launch.
 
 ---
 

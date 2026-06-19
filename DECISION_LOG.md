@@ -1785,3 +1785,39 @@ Candidate registry governance can be mistaken for candidate registration. Hoax.a
 - No engine, classifier, upload, scoring, API, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release is authorized.
 - Future work may proceed to Public Route Candidate Registration Governance v1 only after this validation passes.
 
+---
+
+## DEC-068 - Public Route Candidate Registration Governance v1 Adopted
+
+**Date:** 2026-06-18
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Route Candidate Registration Governance v1 to define how a future public route candidate may be registered into a governed candidate registry after registry governance validation. This governance layer does not register any actual candidate, create a candidate entry, create a candidate ID, instantiate a candidate record, assess a candidate, select a route, approve a candidate, create a candidate page, create a public route, add a sitemap entry, add public navigation, expose the internal prototype, launch a workbench, enable engine behavior, enable classifier behavior, enable upload, enable scoring, enable API behavior, enable analytics, change deployment, change DNS/Cloudflare, launch the custom domain, monetize, or authorize public release.
+
+### Rationale
+
+After validating registry governance, Hoax.ai needs a controlled registration governance layer before any candidate can be entered. Candidate registration must be separated from candidate assessment, route eligibility, route creation, sitemap inclusion, public navigation, deployment, and public release. Registration governance must define prerequisites, required fields, missing-field blocks, record discipline, state transitions, public-surface isolation, prototype protection, and non-authorization rules before any actual candidate entry exists.
+
+### Implications
+
+- Candidate registration governance may be defined.
+- Candidate registration process may be defined.
+- Candidate registration eligibility gate may be defined.
+- Candidate registration record template may be defined.
+- Candidate registration states may be defined.
+- Candidate registration non-authorization rules may be defined.
+- No actual candidate may be registered in Sprint 50.
+- No candidate entry may be created.
+- No candidate ID may be created.
+- No candidate record may be instantiated.
+- No candidate may be assessed.
+- No candidate page may be created.
+- No public route may be created.
+- No sitemap entry may be added.
+- No public navigation may be added.
+- No prototype file may be modified.
+- No engine, classifier, upload, scoring, API, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release is authorized.
+- Future work may validate candidate registration governance before any actual candidate registration sprint occurs.
+

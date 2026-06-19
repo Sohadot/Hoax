@@ -1,0 +1,41 @@
+{
+  "gate_id": "PUB-ROUTE-CANDIDATE-REGISTRATION-ELIGIBILITY-GATE-001",
+  "name": "Public Route Candidate Registration Eligibility Gate v1",
+  "version": "v1.0.0",
+  "status": "public_route_candidate_registration_eligibility_gate_defined",
+  "maturity": "registration_governance_only_no_candidate_registered",
+  "required_before_candidate_registration": [
+    "registry_governance_validation_passed",
+    "registration_governance_validation_required",
+    "candidate_identity_fields_required",
+    "candidate_boundary_fields_required",
+    "candidate_risk_fields_required",
+    "candidate_status_fields_required",
+    "non_authorization_statement_required",
+    "public_surface_review_required",
+    "prototype_exposure_review_required",
+    "dedicated_registration_validator_required",
+    "source_registry_update_required",
+    "evidence_ledger_update_only_if_claim_added"
+  ],
+  "blocked_without_gate": [
+    "candidate_entry_creation",
+    "candidate_ID_creation",
+    "candidate_record_instantiation",
+    "candidate_assessment",
+    "candidate_approval",
+    "public_route_creation",
+    "sitemap_expansion",
+    "public_navigation",
+    "public_release"
+  ],
+  "gate_non_authorization_rules": [
+    "gate_does_not_register_candidate",
+    "gate_does_not_assess_candidate",
+    "gate_does_not_create_route",
+    "gate_does_not_add_sitemap",
+    "gate_does_not_add_navigation",
+    "gate_does_not_authorize_public_release"
+  ],
+  "last_reviewed": "2026-06-18"
+}

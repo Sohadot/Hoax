@@ -607,6 +607,17 @@
       "status": "active",
       "last_reviewed": "2026-06-18",
       "notes": "Public route candidate registry governance validation confirms schema, entry template, state model, entry requirements, non-authorization, public isolation, and static safety. It does not register any candidate, create a populated registry, assess a candidate, create a route, sitemap entry, public navigation, engine, classifier, upload, scoring, API, analytics, deployment, or public release."
+    },
+    {
+      "claim_id": "CLAIM-0056",
+      "claim_text": "Hoax.ai has adopted Public Route Candidate Registration Governance v1.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_V1.md, DECISION_LOG.md (DEC-068)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-18",
+      "notes": "Public route candidate registration governance defines registration process, eligibility gate, record template, state model, and non-authorization rules. It does not register any candidate, create a candidate entry, assess a candidate, create a route, sitemap entry, public navigation, engine, classifier, upload, scoring, API, analytics, deployment, or public release."
     }
   ]
 }
