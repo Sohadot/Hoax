@@ -1,0 +1,49 @@
+{
+  "entry_requirements_validation_id": "PUB-ROUTE-CANDIDATE-REGISTRY-ENTRY-REQUIREMENTS-VAL-001",
+  "name": "Public Route Candidate Registry Entry Requirements Validation v1",
+  "version": "v1.0.0",
+  "status": "public_route_candidate_registry_entry_requirements_validated",
+  "maturity": "requirements_validation_only_no_candidate_registered",
+  "identity_field_results": {
+    "candidate_id": "pass",
+    "candidate_name": "pass",
+    "proposed_route_path": "pass",
+    "proposed_route_title": "pass",
+    "candidate_class": "pass",
+    "route_type": "pass"
+  },
+  "boundary_field_results": {
+    "public_purpose": "pass",
+    "explicit_non_purpose": "pass",
+    "claim_boundary": "pass",
+    "source_boundary": "pass",
+    "structured_data_boundary": "pass",
+    "artifact_subject_separation_posture": "pass",
+    "evidence_posture_boundary": "pass",
+    "anti_detector_language_posture": "pass"
+  },
+  "risk_field_results": {
+    "public_surface_risk": "pass",
+    "operational_implication_risk": "pass",
+    "internal_prototype_exposure_risk": "pass",
+    "privacy_security_posture": "pass",
+    "accessibility_baseline": "pass",
+    "deployment_DNS_boundary": "pass",
+    "monetization_boundary": "pass",
+    "public_release_boundary": "pass"
+  },
+  "status_field_results": {
+    "sitemap_intention": "pass",
+    "navigation_intention": "pass",
+    "internal_linking_intention": "pass",
+    "assessment_required": "pass",
+    "current_candidate_state": "pass",
+    "required_next_gate": "pass",
+    "non_authorization_statement": "pass",
+    "date_recorded": "pass"
+  },
+  "blocked_missing_field_policy_result": "missing_any_required_field_blocks_candidate_registration",
+  "non_authorization_result": "requirements_do_not_register_candidates",
+  "overall_result": "registry_entry_requirements_validated",
+  "last_reviewed": "2026-06-18"
+}

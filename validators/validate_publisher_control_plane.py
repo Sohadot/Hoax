@@ -75,7 +75,7 @@ REQUIRED_STATES = [
     "retired",
 ]
 
-REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 49)]
+REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 50)]
 
 REQUIRED_WORKFLOW_IDS = [f"PUB-WORKFLOW-{i:04d}" for i in range(1, 16)]
 
@@ -125,6 +125,7 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_ASSESSMENT_GOVERNANCE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRY_GOVERNANCE,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRY_GOVERNANCE_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE,
 )
 
 PUBLIC_FILES = ALLOWED_PUBLIC_ROOT_FILES
@@ -186,6 +187,7 @@ def validate_publisher_policy() -> bool:
         "publisher_blocked_until_public_route_candidate_assessment_governance_validation",
         "publisher_blocked_until_public_route_candidate_registry_governance",
         "publisher_blocked_until_public_route_candidate_registry_governance_validation",
+        "publisher_blocked_until_public_route_candidate_registration_governance",
     ):
         error("publisher-governance-policy.json: invalid maturity")
         ok = False
@@ -334,6 +336,7 @@ def validate_state_machine() -> bool:
         "blocked_until_public_route_candidate_assessment_governance_validation",
         "blocked_until_public_route_candidate_registry_governance",
         "blocked_until_public_route_candidate_registry_governance_validation",
+        "blocked_until_public_route_candidate_registration_governance",
     ):
         error(f"publisher-state-machine.json: invalid current_system_state {current}")
         ok = False

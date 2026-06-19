@@ -1749,3 +1749,39 @@ After validating candidate assessment governance, Hoax.ai needs a controlled reg
 - No engine, classifier, upload, scoring, API, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release is authorized.
 - Future work may validate this registry governance before any candidate registry entry exists.
 
+---
+
+## DEC-067 - Public Route Candidate Registry Governance Validation v1 Adopted
+
+**Date:** 2026-06-18
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Route Candidate Registry Governance Validation v1 to validate the Sprint 48 public route candidate registry governance layer. This validation confirms that registry governance defines only how future public route candidates may be recorded and does not create a populated registry, candidate entry, candidate ID, candidate record, candidate page, candidate assessment, public route, sitemap entry, navigation link, public workbench, engine behavior, classifier behavior, upload workflow, scoring interface, API behavior, analytics, deployment, DNS/Cloudflare change, custom domain launch, monetization, or public release.
+
+### Rationale
+
+Candidate registry governance can be mistaken for candidate registration. Hoax.ai must validate that the Sprint 48 registry layer remains a zero-state governance framework, not a populated registry or publishing action. The validation must confirm schema integrity, entry template integrity, state model integrity, entry requirement integrity, non-authorization rules, public isolation, static safety, prototype protection, and publisher gate alignment without registering or assessing any candidate.
+
+### Implications
+
+- Sprint 48 registry governance may be audited.
+- Registry schema may be validated.
+- Registry entry template may be validated.
+- Registry state model may be validated.
+- Entry requirements may be validated.
+- Non-authorization rules may be validated.
+- Public isolation may be validated.
+- Static safety may be validated.
+- No candidate may be registered in Sprint 49.
+- No candidate entry may be created.
+- No candidate record may be instantiated.
+- No candidate may be assessed.
+- No public route may be created.
+- No sitemap entry may be added.
+- No public navigation may be added.
+- No prototype file may be modified.
+- No engine, classifier, upload, scoring, API, analytics, deployment, DNS, Cloudflare, custom domain launch, monetization, or public release is authorized.
+- Future work may proceed to Public Route Candidate Registration Governance v1 only after this validation passes.
+
