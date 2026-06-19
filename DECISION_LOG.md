@@ -1886,3 +1886,29 @@ Governance exists to protect production, not to replace it. Recent work — Spri
 - Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, custom domain launch, monetization, and public tool behavior remain blocked.
 - Public reference content is now the authorized production direction.
 - The first recommended production batch is: /reference/source-confidence/, /reference/provenance-gap/, /reference/not-assessable/, /reference/output-boundary/.
+
+---
+
+## DEC-071 — Public Reference Production Batch 1 Adopted
+
+**Date:** 2026-06-19
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Production Batch 1 to create four real governed public reference pages: Source Confidence, Provenance Gap, Not Assessable, and Output Boundary. This sprint expands the public reference surface from four URLs to eight URLs through actual reference content, route registry alignment, sitemap inclusion, internal linking, metadata, accessibility, and validation. It does not create an engine, classifier, upload workflow, scoring system, API, analytics, public tool behavior, DNS/Cloudflare change, custom domain launch, or monetization.
+
+### Rationale
+
+After freezing governance scaffolding in DEC-070, Hoax.ai must prove its thesis through visible public reference substance. These four pages extend the existing public concepts into a coherent reference layer. Source Confidence explains how source posture affects evidence interpretation. Provenance Gap explains missing chain-of-custody context. Not Assessable protects the system from false certainty. Output Boundary defines what Hoax.ai outputs may and may not say. Together they strengthen the category without creating operational capability.
+
+### Implications
+
+- Four real public reference pages may be created.
+- Four route registry entries may be added.
+- Four sitemap URLs may be added.
+- Existing public pages may link to the new pages.
+- Public reference surface becomes exactly 8 URLs.
+- No public engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
+- Public reference production remains the active direction until at least 10 additional public reference pages exist and pass validation.
+

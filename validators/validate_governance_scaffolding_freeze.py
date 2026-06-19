@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -123,7 +124,7 @@ def main() -> int:
     # 12. validate_all.py includes this validator
     validate_all_path = ROOT / "validators" / "validate_all.py"
     if validate_all_path.exists():
-        content = validate_all_path.read_text()
+        content = validate_all_path.read_text(encoding="utf-8")
         check(
             "validate_governance_scaffolding_freeze" in content,
             "validators/validate_all.py must reference validate_governance_scaffolding_freeze"
@@ -134,7 +135,7 @@ def main() -> int:
     # 13. DECISION_LOG.md includes DEC-070
     decision_log = ROOT / "DECISION_LOG.md"
     if decision_log.exists():
-        content = decision_log.read_text()
+        content = decision_log.read_text(encoding="utf-8")
         check("DEC-070" in content, "DECISION_LOG.md must include DEC-070")
     else:
         check(False, "DECISION_LOG.md must exist")
@@ -142,7 +143,7 @@ def main() -> int:
     # 14. ROADMAP.md marks next phase as Public Reference Production Batch 1
     roadmap = ROOT / "ROADMAP.md"
     if roadmap.exists():
-        content = roadmap.read_text()
+        content = roadmap.read_text(encoding="utf-8")
         check(
             "Public Reference Production Batch 1" in content or "Sprint 53" in content,
             "ROADMAP.md must mark next phase as Public Reference Production Batch 1 (Sprint 53)"
@@ -154,7 +155,7 @@ def main() -> int:
     # 15. MASTER_EXECUTION_PLAN.md records the freeze and production mandate
     master_plan = ROOT / "MASTER_EXECUTION_PLAN.md"
     if master_plan.exists():
-        content = master_plan.read_text()
+        content = master_plan.read_text(encoding="utf-8")
         check(
             "G52" in content or "Governance Scaffolding Freeze" in content,
             "MASTER_EXECUTION_PLAN.md must record the governance scaffolding freeze (G52)"
@@ -165,7 +166,7 @@ def main() -> int:
     # 16. CATEGORY_INTELLIGENCE_FACTORY_PLAN.md states governance protects production
     cifp = ROOT / "CATEGORY_INTELLIGENCE_FACTORY_PLAN.md"
     if cifp.exists():
-        content = cifp.read_text()
+        content = cifp.read_text(encoding="utf-8")
         check(
             "protect production" in content.lower() or "governance must protect production" in content.lower(),
             "CATEGORY_INTELLIGENCE_FACTORY_PLAN.md must state that governance protects production rather than replacing it"
@@ -173,21 +174,20 @@ def main() -> int:
     else:
         check(False, "CATEGORY_INTELLIGENCE_FACTORY_PLAN.md must exist")
 
-    # 17. sitemap remains unchanged in Sprint 52 (at most 4 URLs)
+    # 17. sitemap expanded for production batch 1 (exactly 8 URLs after Sprint 53)
     sitemap = ROOT / "sitemap.xml"
     if sitemap.exists():
-        sitemap_content = sitemap.read_text()
+        sitemap_content = sitemap.read_text(encoding="utf-8")
         url_count = sitemap_content.count("<loc>")
-        check(url_count <= 4, f"sitemap.xml must have at most 4 URLs in Sprint 52, found {url_count}")
+        check(url_count == 8, f"sitemap.xml must have exactly 8 URLs after production batch 1, found {url_count}")
 
-    # 18. route registry remains unchanged (at most 4 active routes)
+    # 18. route registry includes production batch routes (8 public routes total)
     route_registry = ROOT / "data" / "route-registry.json"
     if route_registry.exists():
-        with route_registry.open() as f:
+        with route_registry.open(encoding="utf-8") as f:
             rr = json.load(f)
         routes = rr.get("routes", [])
-        active_routes = [r for r in routes if r.get("status") == "active"]
-        check(len(active_routes) <= 4, f"route registry must have at most 4 active routes in Sprint 52, found {len(active_routes)}")
+        check(len(routes) == 8, f"route registry must have exactly 8 routes after batch 1, found {len(routes)}")
 
     # 19. prototype files exist and are not deleted
     prototype_index = ROOT / "_internal_prototypes" / "evidence-posture-workbench" / "index.html"
@@ -195,11 +195,20 @@ def main() -> int:
     check(prototype_index.exists(), "_internal_prototypes/evidence-posture-workbench/index.html must exist (must not be deleted)")
     check(prototype_css.exists(), "_internal_prototypes/evidence-posture-workbench/prototype.css must exist (must not be deleted)")
 
-    # 20. no Python cache files exist in the repository
-    pycache_dirs = list(ROOT.rglob("__pycache__"))
-    pyc_files = list(ROOT.rglob("*.pyc"))
-    check(len(pycache_dirs) == 0, f"No __pycache__ directories should exist in repository: found {len(pycache_dirs)}")
-    check(len(pyc_files) == 0, f"No .pyc files should exist in repository: found {len(pyc_files)}")
+    # 20. no Python cache files tracked or staged in the repository
+    cache_names = subprocess.run(
+        ["git", "ls-files"], cwd=ROOT, text=True, capture_output=True
+    ).stdout.splitlines() + subprocess.run(
+        ["git", "diff", "--cached", "--name-only"], cwd=ROOT, text=True, capture_output=True
+    ).stdout.splitlines()
+    cache_hits = [
+        rel
+        for rel in cache_names
+        if "__pycache__/" in rel.replace("\\", "/").lower()
+        or rel.lower().endswith((".pyc", ".pyo", ".pyd"))
+        or ".pytest_cache/" in rel.replace("\\", "/").lower()
+    ]
+    check(len(cache_hits) == 0, f"No Python cache files should be tracked or staged: found {cache_hits}")
 
     # 21. this validator itself exists
     this_validator = ROOT / "validators" / "validate_governance_scaffolding_freeze.py"

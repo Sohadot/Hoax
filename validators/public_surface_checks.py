@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-PUBLIC_ROUTE_IDS = ["ROUTE-0001", "ROUTE-0002", "ROUTE-0003", "ROUTE-0004"]
+PUBLIC_ROUTE_IDS = ["ROUTE-0001", "ROUTE-0002", "ROUTE-0003", "ROUTE-0004", "ROUTE-0005", "ROUTE-0006", "ROUTE-0007", "ROUTE-0008"]
 
 PILOT_ROUTE_IDS = PUBLIC_ROUTE_IDS  # backward compatibility
 
@@ -23,6 +23,10 @@ ALLOWED_PUBLIC_HTML = {
     "language/index.html",
     "reference/evidence-posture/index.html",
     "reference/artifact-subject-separation/index.html",
+    "reference/source-confidence/index.html",
+    "reference/provenance-gap/index.html",
+    "reference/not-assessable/index.html",
+    "reference/output-boundary/index.html",
 }
 
 ALLOWED_INTERNAL_PROTOTYPE_HTML = {
@@ -37,7 +41,7 @@ ALLOWED_PUBLIC_ROOT_FILES = ALLOWED_PUBLIC_HTML | {
     "sitemap.xml",
 }
 
-PUBLIC_SITEMAP_URL_COUNT = 4
+PUBLIC_SITEMAP_URL_COUNT = 8
 
 PILOT_SITEMAP_URL_COUNT = PUBLIC_SITEMAP_URL_COUNT  # backward compatibility
 
@@ -97,6 +101,8 @@ PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNAN
 
 PUBLISHER_STATUS_GOVERNANCE_SCAFFOLDING_FREEZE = "blocked_until_public_reference_production_batch_1"
 
+PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_1 = "blocked_until_public_reference_production_batch_1_validation"
+
 PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_reference_candidate_pack",
     "blocked_until_internal_draft_blueprint",
@@ -134,6 +140,7 @@ PUBLISHER_STATUSES_ALLOWED = (
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
     PUBLISHER_STATUS_GOVERNANCE_SCAFFOLDING_FREEZE,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_1,
 )
 
 
@@ -265,6 +272,26 @@ def is_language_route(route: dict) -> bool:
     )
 
 
+def is_production_batch_route(route: dict) -> bool:
+    return (
+        route.get("production_batch") == "public_reference_production_batch_1"
+        or route.get("status") == "public_reference_production_batch_1_created"
+    )
+
+
+REGISTERED_CANDIDATE_ROUTE_STATUSES = {
+    "controlled_public_reference_route_created",
+    "public_reference_production_batch_1_created",
+}
+
+BATCH1_CANDIDATE_IDS = {
+    "REF-CAND-0003",
+    "REF-CAND-0004",
+    "REF-CAND-0005",
+    "REF-CAND-0006",
+}
+
+
 def validate_candidate_paths_not_registered_except_pilot(routes: list, candidates: list, error) -> bool:
     ok = True
     for candidate in candidates:
@@ -274,7 +301,7 @@ def validate_candidate_paths_not_registered_except_pilot(routes: list, candidate
         for route in routes:
             if route.get("path", "").lower() != path:
                 continue
-            if is_pilot_route(route) or is_language_route(route):
+            if is_pilot_route(route) or is_language_route(route) or is_production_batch_route(route):
                 continue
             error(f"route-registry: candidate path {path} must not be registered")
             ok = False

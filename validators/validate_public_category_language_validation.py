@@ -505,8 +505,8 @@ def validate_route_registry() -> bool:
     if not lang or lang.get("status") != "controlled_public_category_language_route_created":
         error("route-registry: /language/ invalid")
         ok = False
-    if len(routes) != 4:
-        error(f"route-registry: expected 4 routes, found {len(routes)}")
+    if len(routes) != PUBLIC_SITEMAP_URL_COUNT:
+        error(f"route-registry: expected {PUBLIC_SITEMAP_URL_COUNT} routes, found {len(routes)}")
         ok = False
     for route in routes:
         path = route.get("path", "").lower()
@@ -542,6 +542,7 @@ def validate_publisher_governance() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
     "blocked_until_public_reference_production_batch_1",
+        "blocked_until_public_reference_production_batch_1_validation",
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_WORKBENCH_GOVERNANCE}, "

@@ -1,9 +1,9 @@
 {
   "registry_id": "PUBLIC-FILE-REGISTRY-001",
   "name": "Hoax.ai Public File Registry",
-  "version": "v1.2.0",
+  "version": "v1.3.0",
   "status": "active",
-  "maturity": "controlled_public_category_language_layer",
+  "maturity": "public_reference_production_batch_1",
   "public_files": [
     {
       "file_id": "PUB-FILE-0001",
@@ -54,6 +54,54 @@
       "notes": "Artifact–Subject Separation controlled public reference pilot page."
     },
     {
+      "file_id": "PUB-FILE-0008",
+      "path": "reference/source-confidence/index.html",
+      "file_type": "html",
+      "public_role": "controlled_public_reference_page",
+      "route_id_if_applicable": "ROUTE-0005",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
+      "notes": "Source Confidence public reference production batch 1 page."
+    },
+    {
+      "file_id": "PUB-FILE-0009",
+      "path": "reference/provenance-gap/index.html",
+      "file_type": "html",
+      "public_role": "controlled_public_reference_page",
+      "route_id_if_applicable": "ROUTE-0006",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
+      "notes": "Provenance Gap public reference production batch 1 page."
+    },
+    {
+      "file_id": "PUB-FILE-0010",
+      "path": "reference/not-assessable/index.html",
+      "file_type": "html",
+      "public_role": "controlled_public_reference_page",
+      "route_id_if_applicable": "ROUTE-0007",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
+      "notes": "Not Assessable public reference production batch 1 page."
+    },
+    {
+      "file_id": "PUB-FILE-0011",
+      "path": "reference/output-boundary/index.html",
+      "file_type": "html",
+      "public_role": "controlled_public_reference_page",
+      "route_id_if_applicable": "ROUTE-0008",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
+      "notes": "Output Boundary public reference production batch 1 page."
+    },
+    {
       "file_id": "PUB-FILE-0002",
       "path": "styles.css",
       "file_type": "css",
@@ -90,5 +138,5 @@
       "notes": "Public sitemap for registered eligible routes only."
     }
   ],
-  "last_reviewed": "2026-06-17"
+  "last_reviewed": "2026-06-19"
 }

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from public_surface_checks import BATCH1_CANDIDATE_IDS
+
 ALLOWED_CANDIDATE_STATUS = {"candidate_registered", "proposed_internal"}
 
 REQUIRED_BLOCKED_FIELDS = {
@@ -9,6 +11,33 @@ REQUIRED_BLOCKED_FIELDS = {
     "sitemap_status": "not_sitemap_eligible",
     "publication_status": "publication_blocked",
 }
+
+BATCH1_REQUIRED_FIELDS = {
+    "route_status": "public_reference_production_batch_1_route_created",
+    "sitemap_status": "sitemap_eligible",
+    "publication_status": "public_reference_production_batch_1",
+}
+
+
+def is_batch1_production_candidate(entry: dict) -> bool:
+    return entry.get("candidate_id") in BATCH1_CANDIDATE_IDS
+
+
+def validate_batch1_production_candidate(entry: dict, error, label: str = "candidate") -> bool:
+    ok = True
+    cid = entry.get("candidate_id", "?")
+    prefix = f"{label} {cid}"
+    if entry.get("candidate_status") not in ALLOWED_CANDIDATE_STATUS:
+        error(f"{prefix}: invalid candidate_status {entry.get('candidate_status')}")
+        ok = False
+    if entry.get("draft_status") != "production_page_created":
+        error(f"{prefix}: draft_status must be production_page_created")
+        ok = False
+    for field, expected in BATCH1_REQUIRED_FIELDS.items():
+        if entry.get(field) != expected:
+            error(f"{prefix}: {field} must be {expected}")
+            ok = False
+    return ok
 
 
 def validate_candidates_blocked_only(candidates: list, error) -> bool:
@@ -18,6 +47,10 @@ def validate_candidates_blocked_only(candidates: list, error) -> bool:
         if entry.get("public_reference_pilot_status") == "converted_to_controlled_public_reference_pilot":
             continue
         cid = entry.get("candidate_id", "?")
+        if is_batch1_production_candidate(entry):
+            if not validate_batch1_production_candidate(entry, error):
+                ok = False
+            continue
         status = entry.get("candidate_status", "")
         if status not in ALLOWED_CANDIDATE_STATUS:
             error(f"candidate {cid}: invalid candidate_status {status}")

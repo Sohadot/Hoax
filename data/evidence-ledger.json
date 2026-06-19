@@ -640,6 +640,17 @@
       "status": "active",
       "last_reviewed": "2026-06-19",
       "notes": "Governance scaffolding freeze adopted. Meta-governance frozen until 10 additional public reference pages are produced. Next phase is public reference production. No public route, engine, classifier, upload, scoring, API, analytics, deployment, or public tool authorized by this decision."
+    },
+    {
+      "claim_id": "CLAIM-0059",
+      "claim_text": "Hoax.ai has produced Public Reference Production Batch 1 with four governed public reference pages.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "SPRINT_53_PUBLIC_REFERENCE_PRODUCTION_BATCH_1_AUDIT.md, DECISION_LOG.md (DEC-071), reference/source-confidence/index.html, reference/provenance-gap/index.html, reference/not-assessable/index.html, reference/output-boundary/index.html",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-19",
+      "notes": "Batch 1 adds Source Confidence, Provenance Gap, Not Assessable, and Output Boundary reference pages. Public surface expanded to eight URLs. No engine, classifier, upload, scoring, API, analytics, or public tool behavior authorized."
     }
   ]
 }

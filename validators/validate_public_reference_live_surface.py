@@ -325,6 +325,7 @@ def validate_publisher_governance() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
     "blocked_until_public_reference_production_batch_1",
+        "blocked_until_public_reference_production_batch_1_validation",
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_LIVE_AUDIT}, "
@@ -387,7 +388,14 @@ def validate_reference_directories() -> bool:
     if not ref_root.is_dir():
         error("reference/: directory missing")
         return False
-    allowed_dirs = {"evidence-posture", "artifact-subject-separation"}
+    allowed_dirs = {
+        "evidence-posture",
+        "artifact-subject-separation",
+        "source-confidence",
+        "provenance-gap",
+        "not-assessable",
+        "output-boundary",
+    }
     found = {d.name for d in ref_root.iterdir() if d.is_dir()}
     if found != allowed_dirs:
         error(f"reference/: unexpected directories {found}")

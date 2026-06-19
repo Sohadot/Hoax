@@ -58,6 +58,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_public_route_candidate_registration_governance.py",
     ROOT / "validators" / "validate_public_route_candidate_registration_governance_validation.py",
     ROOT / "validators" / "validate_governance_scaffolding_freeze.py",
+    ROOT / "validators" / "validate_public_reference_production_batch_1.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

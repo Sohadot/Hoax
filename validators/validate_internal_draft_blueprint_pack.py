@@ -498,8 +498,14 @@ def validate_candidate_registry() -> bool:
     pack = load_json(ROOT / "data" / "internal-draft-blueprint-pack-v1.json")
     pack_candidates = {b.get("candidate_id") for b in pack.get("blueprints", [])}
 
+    from candidate_registry_checks import is_batch1_production_candidate, validate_batch1_production_candidate
+
     for entry in registry.get("candidates", []):
         cid = entry.get("candidate_id", "?")
+        if is_batch1_production_candidate(entry):
+            if not validate_batch1_production_candidate(entry, error, "candidate registry"):
+                ok = False
+            continue
 
         for field, expected in [
             ("route_status", "not_route_created"),
@@ -581,6 +587,7 @@ def validate_publisher_and_gates() -> bool:
         "blocked_until_public_route_candidate_registration_governance_validation",
         "blocked_until_public_route_candidate_registration_authorization_governance",
         "blocked_until_public_reference_production_batch_1",
+        "blocked_until_public_reference_production_batch_1_validation",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "

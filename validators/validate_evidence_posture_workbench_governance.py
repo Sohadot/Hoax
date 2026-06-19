@@ -361,8 +361,8 @@ def validate_non_authorization_rules() -> bool:
 def validate_public_safety() -> bool:
     ok = True
     routes = load_json(ROOT / "data" / "route-registry.json").get("routes", [])
-    if len(routes) != 4:
-        error(f"route-registry: expected 4 routes, found {len(routes)}")
+    if len(routes) != PUBLIC_SITEMAP_URL_COUNT:
+        error(f"route-registry: expected {PUBLIC_SITEMAP_URL_COUNT} routes, found {len(routes)}")
         ok = False
     if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
         ok = False
@@ -378,6 +378,10 @@ def validate_public_safety() -> bool:
                     "index.html", "language/index.html",
                     "reference/evidence-posture/index.html",
                     "reference/artifact-subject-separation/index.html",
+                    "reference/source-confidence/index.html",
+                    "reference/provenance-gap/index.html",
+                    "reference/not-assessable/index.html",
+                    "reference/output-boundary/index.html",
                     "_internal_prototypes/evidence-posture-workbench/index.html",
                 }:
                     error(f"unexpected workbench-related file: {p}")
@@ -410,6 +414,7 @@ def validate_publisher_governance() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_GOVERNANCE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_ROUTE_CANDIDATE_REGISTRATION_AUTHORIZATION_GOVERNANCE,
         "blocked_until_public_reference_production_batch_1",
+        "blocked_until_public_reference_production_batch_1_validation",
     }
     if status not in allowed:
         error(f"publisher status must be one of {sorted(allowed)}")
