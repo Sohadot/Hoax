@@ -32,7 +32,7 @@ Six targeted fixtures close six named gap categories without increasing fixture 
 
 - out-of-scope secondary category variant
 - EP-P17 full forbidden-output family activation
-- compound three-boundary stress scenarios
+- compound three-boundary stress scenarios: stress-tested (Sprint 77 compound boundary stress harness)
 
 ## Coverage Not Improved by This Sprint
 

@@ -63,6 +63,8 @@ Sprint 75 adds `fixture_coverage_analyzer.py`, `fixture_coverage_harness.py`, an
 
 Sprint 76 adds six targeted expansion fixtures (SYN-FIX-011 through SYN-FIX-016), `targeted_fixture_expansion_harness.py`, and Targeted Synthetic Fixture Expansion v1 governance documents.
 
+Sprint 77 adds `compound_boundary_stress_analyzer.py`, `compound_boundary_stress_harness.py`, and Internal Prototype Compound Boundary Stress Test v1 governance documents. Stress cases reference existing fixtures only; no new fixtures are added.
+
 ## Future Removal/Rollback Rule
 
 Any disqualifying drift requires rollback before commit. Public exposure fails the prototype boundary.

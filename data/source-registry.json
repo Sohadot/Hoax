@@ -5811,6 +5811,96 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 76 expansion validator."
+    },
+    {
+      "source_id": "SOURCE-0481",
+      "source_title": "INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_V1.md",
+      "source_type": "internal_governance",
+      "location": "INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 77 compound boundary stress test."
+    },
+    {
+      "source_id": "SOURCE-0482",
+      "source_title": "INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_MATRIX_V1.md",
+      "source_type": "internal_governance",
+      "location": "INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_MATRIX_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 77 stress matrix."
+    },
+    {
+      "source_id": "SOURCE-0483",
+      "source_title": "INTERNAL_PROTOTYPE_BOUNDARY_COLLAPSE_PREVENTION_MODEL_V1.md",
+      "source_type": "internal_governance",
+      "location": "INTERNAL_PROTOTYPE_BOUNDARY_COLLAPSE_PREVENTION_MODEL_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 77 collapse prevention model."
+    },
+    {
+      "source_id": "SOURCE-0484",
+      "source_title": "data/internal-prototype-compound-boundary-stress-test-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/internal-prototype-compound-boundary-stress-test-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 77 stress test JSON."
+    },
+    {
+      "source_id": "SOURCE-0485",
+      "source_title": "data/internal-prototype-compound-boundary-stress-test-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/internal-prototype-compound-boundary-stress-test-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 77 stress test schema."
+    },
+    {
+      "source_id": "SOURCE-0486",
+      "source_title": "internal/prototypes/controlled-engine-v0/compound_boundary_stress_analyzer.py",
+      "source_type": "internal_governance",
+      "location": "internal/prototypes/controlled-engine-v0/compound_boundary_stress_analyzer.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 77 stress analyzer."
+    },
+    {
+      "source_id": "SOURCE-0487",
+      "source_title": "internal/prototypes/controlled-engine-v0/compound_boundary_stress_harness.py",
+      "source_type": "internal_governance",
+      "location": "internal/prototypes/controlled-engine-v0/compound_boundary_stress_harness.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 77 stress harness."
+    },
+    {
+      "source_id": "SOURCE-0488",
+      "source_title": "SPRINT_77_INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_77_INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 77 audit."
+    },
+    {
+      "source_id": "SOURCE-0489",
+      "source_title": "validators/validate_internal_prototype_compound_boundary_stress_test_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_internal_prototype_compound_boundary_stress_test_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 77 stress test validator."
     }
   ]
 }

@@ -17,7 +17,7 @@ This document identifies coverage strengths, weaknesses, and named gaps in Contr
 ## Current Coverage Weaknesses
 
 - traceability_caveat family has no dedicated fixture
-- compound boundary interactions are untested
+- compound boundary interactions are stress-tested under Sprint 77 compound boundary stress harness
 - out-of-scope variety is limited to one fixture
 - not-assessable variety is limited to two similar fixtures
 - EP-P17 forbidden-output activation is partial
@@ -65,6 +65,10 @@ Each candidate must reference a named gap from coverage_gaps in the coverage mat
 - Company fraud investigation stub
 - Live URL ingestion test
 - User upload classification test
+
+## Sprint 77 Status
+
+Sprint 77 (Internal Prototype Compound Boundary Stress Test v1) stress-tests compound boundary classes using existing fixtures. No new fixtures are added. See `INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_V1.md`.
 
 ## Sprint 76 Readiness Conditions
 

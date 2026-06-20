@@ -84,6 +84,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_internal_prototype_traceability_interpretability_audit_v1.py",
     ROOT / "validators" / "validate_internal_prototype_fixture_coverage_matrix_v1.py",
     ROOT / "validators" / "validate_targeted_synthetic_fixture_expansion_v1.py",
+    ROOT / "validators" / "validate_internal_prototype_compound_boundary_stress_test_v1.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

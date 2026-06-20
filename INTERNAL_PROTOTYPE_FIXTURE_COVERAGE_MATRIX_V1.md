@@ -109,11 +109,11 @@ All required traceability fields are covered through prototype_core and traceabi
 
 ## 12. Gap Analysis
 
-- traceability_caveat family lacks dedicated fixture
-- compound boundary interactions are absent
+- traceability_caveat family: covered (SYN-FIX-011)
+- compound boundary interactions: stress-tested (Sprint 77 compound boundary stress harness)
 - out-of-scope and not-assessable variety is limited
 - EP-P17 and GL-DETECTOR-STYLE-BLOCK coverage is partial
-- output boundary stress beyond single fixture is partial
+- output boundary stress beyond single fixture: stress-tested under compound conditions (Sprint 77)
 
 ## 13. Future Coverage Rule
 

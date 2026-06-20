@@ -9,6 +9,7 @@ PROTOTYPE_ROOT = Path(__file__).resolve().parent
 if str(PROTOTYPE_ROOT) not in sys.path:
     sys.path.insert(0, str(PROTOTYPE_ROOT))
 
+from compound_boundary_stress_harness import main as run_stress_validation  # noqa: E402
 from fixture_coverage_harness import main as run_coverage_validation  # noqa: E402
 from guardrail_regression import run_guardrail_regression  # noqa: E402
 from targeted_fixture_expansion_harness import main as run_expansion_validation  # noqa: E402
@@ -24,6 +25,8 @@ def main() -> int:
     if run_coverage_validation() != 0:
         return 1
     if run_expansion_validation() != 0:
+        return 1
+    if run_stress_validation() != 0:
         return 1
     if not run_guardrail_regression():
         return 1

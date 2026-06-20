@@ -61,3 +61,7 @@ This sprint does not authorize public benchmark, public report, public engine, o
 ## 7. Future Fixture Rule
 
 Future fixtures must cite a named coverage gap and must pass fixture-admission policy before being added.
+
+## Sprint 77 Cross-Reference
+
+Compound boundary stress testing (Sprint 77, DEC-095) validates that multi-boundary pressure does not collapse into verdict, score, accusation, or report-shape output. Stress cases reference existing fixtures only.

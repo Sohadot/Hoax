@@ -355,6 +355,7 @@ def validate_governance_and_registry() -> bool:
         "blocked_until_internal_prototype_traceability_interpretability_audit_validation",
         "blocked_until_internal_prototype_fixture_coverage_matrix_validation",
         "blocked_until_targeted_synthetic_fixture_expansion_v1_validation",
+        "blocked_until_internal_prototype_compound_boundary_stress_test_validation",
     ):
         error("publisher status must be blocked until public-readiness boundary governance")
         ok = False

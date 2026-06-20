@@ -188,6 +188,8 @@ The Category Intelligence Factory now governs fixture coverage rather than fixtu
 
 The Category Intelligence Factory now expands synthetic fixtures only through named coverage gaps. Targeted Synthetic Fixture Expansion v1 adds controlled internal fixtures to close specific traceability, caveat, compound-boundary, not-assessable, and forbidden-transformation gaps identified by the Fixture Coverage Matrix. Fixture expansion remains synthetic, neutral, non-public, non-scoring, non-verdict, and non-operational.
 
+The Category Intelligence Factory now stress-tests compound boundary pressure rather than treating boundary checks as isolated controls. Internal Prototype Compound Boundary Stress Test v1 verifies that provenance gaps, context collapse, claim drift, evidence limitation, attribution boundary risk, output boundary risk, source weakness, and synthetic fragility cannot collapse into verdicts, scores, fake/real labels, accusations, report-shape outputs, or detector behavior under compound conditions.
+
 The Category Intelligence Factory treats chronology integrity as part of evidence integrity: decision records must not move backward in time unless a correction note explicitly explains and repairs the error.
 
 The category factory becomes reference-grade only when public-facing claims, evidence ledger entries, source records, and support locations are traceable as a governed system.

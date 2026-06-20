@@ -40,4 +40,8 @@ Run targeted fixture expansion validation (Sprint 76+):
 
 `py -3 internal/prototypes/controlled-engine-v0/targeted_fixture_expansion_harness.py`
 
+Run compound boundary stress validation (Sprint 77+):
+
+`py -3 internal/prototypes/controlled-engine-v0/compound_boundary_stress_harness.py`
+
 Do not deploy, link publicly, or treat this as a product feature.

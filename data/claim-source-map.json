@@ -1736,6 +1736,38 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Targeted Synthetic Fixture Expansion v1 per DEC-094."
+    },
+    {
+      "claim_id": "CLAIM-0079",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_V1.md",
+        "INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_MATRIX_V1.md",
+        "INTERNAL_PROTOTYPE_BOUNDARY_COLLAPSE_PREVENTION_MODEL_V1.md",
+        "data/internal-prototype-compound-boundary-stress-test-v1.json",
+        "data/internal-prototype-compound-boundary-stress-test-v1.schema.json",
+        "internal/prototypes/controlled-engine-v0/compound_boundary_stress_analyzer.py",
+        "internal/prototypes/controlled-engine-v0/compound_boundary_stress_harness.py",
+        "validators/validate_internal_prototype_compound_boundary_stress_test_v1.py",
+        "SPRINT_77_INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0481",
+        "SOURCE-0482",
+        "SOURCE-0483",
+        "SOURCE-0484",
+        "SOURCE-0485",
+        "SOURCE-0486",
+        "SOURCE-0487",
+        "SOURCE-0488",
+        "SOURCE-0489"
+      ],
+      "support_scope": "internal prototype compound boundary stress test v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Internal Prototype Compound Boundary Stress Test v1 per DEC-095."
     }
   ],
   "last_reviewed": "2026-06-20"

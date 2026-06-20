@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Sprint 76 — Targeted Synthetic Fixture Expansion v1."""
+"""Validate Sprint 77 — Internal Prototype Compound Boundary Stress Test v1."""
 
 from __future__ import annotations
 
@@ -15,20 +15,23 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (  # noqa: E402
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
-    PUBLISHER_STATUS_POST_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1_VALIDATION,
     PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_VALIDATION,
     validate_public_surface,
 )
 
-EXPANSION_DOC = "TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md"
-ADMISSION_LOG = "TARGETED_FIXTURE_EXPANSION_ADMISSION_LOG_V1.md"
-COVERAGE_DELTA = "TARGETED_FIXTURE_EXPANSION_COVERAGE_DELTA_V1.md"
-EXPANSION_JSON = "data/targeted-synthetic-fixture-expansion-v1.json"
-EXPANSION_SCHEMA = "data/targeted-synthetic-fixture-expansion-v1.schema.json"
-AUDIT = "SPRINT_76_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md"
+STRESS_TEST = "INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_V1.md"
+STRESS_MATRIX = "INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_MATRIX_V1.md"
+COLLAPSE_MODEL = "INTERNAL_PROTOTYPE_BOUNDARY_COLLAPSE_PREVENTION_MODEL_V1.md"
+STRESS_JSON = "data/internal-prototype-compound-boundary-stress-test-v1.json"
+STRESS_SCHEMA = "data/internal-prototype-compound-boundary-stress-test-v1.schema.json"
+AUDIT = "SPRINT_77_INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_V1.md"
 FIXTURES_JSON = "internal/prototypes/controlled-engine-v0/fixtures/synthetic-fixtures-v0.json"
 
 PROTOTYPE_DIR = ROOT / "internal" / "prototypes" / "controlled-engine-v0"
+STRESS_FILES = [
+    PROTOTYPE_DIR / "compound_boundary_stress_analyzer.py",
+    PROTOTYPE_DIR / "compound_boundary_stress_harness.py",
+]
 
 FORBIDDEN_NETWORK = ["requests", "urllib.request", "httpx", "aiohttp", "socket"]
 FORBIDDEN_INPUT = ["input(", "argparse", "click", "typer"]
@@ -53,26 +56,18 @@ FORBIDDEN_TERMS = [
     "buyer outreach",
     "marketing conversations",
 ]
-REQUIRED_EXPANSION_FIELDS = [
-    "coverage_gap_ref",
-    "expansion_reason",
-    "expected_required_caveats",
-    "expected_boundary_checks",
-    "expected_forbidden_transformations_blocked",
-    "expected_traceability_fields",
-]
-REQUIRED_GAP_TERMS = ["traceability_caveat", "compound boundary"]
 SOURCE_LOCS = [
-    EXPANSION_DOC,
-    ADMISSION_LOG,
-    COVERAGE_DELTA,
-    EXPANSION_JSON,
-    EXPANSION_SCHEMA,
-    FIXTURES_JSON,
-    "internal/prototypes/controlled-engine-v0/targeted_fixture_expansion_harness.py",
+    STRESS_TEST,
+    STRESS_MATRIX,
+    COLLAPSE_MODEL,
+    STRESS_JSON,
+    STRESS_SCHEMA,
+    "internal/prototypes/controlled-engine-v0/compound_boundary_stress_analyzer.py",
+    "internal/prototypes/controlled-engine-v0/compound_boundary_stress_harness.py",
     AUDIT,
-    "validators/validate_targeted_synthetic_fixture_expansion_v1.py",
+    "validators/validate_internal_prototype_compound_boundary_stress_test_v1.py",
 ]
+REQUIRED_FIXTURE_COUNT = 16
 
 
 def error(msg: str) -> None:
@@ -86,31 +81,31 @@ def load_json(rel: str) -> dict:
 
 def validate_artifacts() -> bool:
     ok = True
-    for rel in [EXPANSION_DOC, ADMISSION_LOG, COVERAGE_DELTA, EXPANSION_JSON, EXPANSION_SCHEMA, AUDIT]:
+    for rel in [STRESS_TEST, STRESS_MATRIX, COLLAPSE_MODEL, STRESS_JSON, STRESS_SCHEMA, AUDIT]:
         if not (ROOT / rel).is_file():
             error(f"missing {rel}")
             ok = False
-    harness = PROTOTYPE_DIR / "targeted_fixture_expansion_harness.py"
-    if not harness.is_file():
-        error("missing targeted_fixture_expansion_harness.py")
-        ok = False
+    for path in STRESS_FILES:
+        if not path.is_file():
+            error(f"missing {path.relative_to(ROOT)}")
+            ok = False
     return ok
 
 
-def validate_expansion_json() -> bool:
+def validate_stress_json() -> bool:
     ok = True
-    data = load_json(EXPANSION_JSON)
-    _ = load_json(EXPANSION_SCHEMA)
-    if data.get("expansion_id") != "targeted-synthetic-fixture-expansion-v1":
-        error("expansion_id mismatch")
+    data = load_json(STRESS_JSON)
+    _ = load_json(STRESS_SCHEMA)
+    if data.get("stress_test_id") != "internal-prototype-compound-boundary-stress-test-v1":
+        error("stress_test_id mismatch")
         ok = False
-    if data.get("decision_ref") != "DEC-094":
-        error("decision_ref must be DEC-094")
+    if data.get("decision_ref") != "DEC-095":
+        error("decision_ref must be DEC-095")
         ok = False
-    if data.get("sprint") != "Sprint 76":
-        error("sprint must be Sprint 76")
+    if data.get("sprint") != "Sprint 77":
+        error("sprint must be Sprint 77")
         ok = False
-    if data.get("status") != "internal_non_public_targeted_fixture_expansion":
+    if data.get("status") != "internal_non_public_compound_boundary_stress_test":
         error("status mismatch")
         ok = False
     for key in [
@@ -125,13 +120,11 @@ def validate_expansion_json() -> bool:
         if data.get(key) is not False:
             error(f"{key} must be false")
             ok = False
-    gaps_text = " ".join(data.get("named_coverage_gaps_addressed", [])).lower()
-    for term in REQUIRED_GAP_TERMS:
-        if term not in gaps_text:
-            error(f"named_coverage_gaps_addressed missing {term}")
-            ok = False
-    if not data.get("fixture_admission_records"):
-        error("fixture_admission_records missing")
+    if len(data.get("stress_cases", [])) < 8:
+        error("stress_cases must define at least 8 cases")
+        ok = False
+    if data.get("fixture_count") != REQUIRED_FIXTURE_COUNT:
+        error("fixture_count must remain 16")
         ok = False
     return ok
 
@@ -159,42 +152,20 @@ def validate_surface() -> bool:
     return ok
 
 
-def validate_fixtures() -> bool:
+def validate_fixtures_unchanged() -> bool:
     ok = True
     fixtures = load_json(FIXTURES_JSON).get("fixtures", [])
-    count = len(fixtures)
-    if count <= 10 or count > 16:
-        error(f"fixture count must be >10 and <=16, got {count}")
+    if len(fixtures) != REQUIRED_FIXTURE_COUNT:
+        error(f"fixture count must remain {REQUIRED_FIXTURE_COUNT}, got {len(fixtures)}")
         ok = False
     expansion = [f for f in fixtures if f.get("coverage_gap_ref")]
-    if len(expansion) != count - 10:
-        error("every new fixture must include coverage_gap_ref")
+    if len(expansion) != 6:
+        error("no new fixtures may be added beyond Sprint 76 expansion set")
         ok = False
-    flags = {
-        "synthetic": True,
-        "real_person": False,
-        "current_event": False,
-        "political": False,
-        "legal": False,
-        "medical": False,
-        "financial_advice": False,
-        "company_accusatory": False,
-        "private_data": False,
-        "external_fact_check_target": False,
-    }
-    for fixture in expansion:
-        for field in REQUIRED_EXPANSION_FIELDS:
-            if not fixture.get(field):
-                error(f"{fixture.get('fixture_id')} missing {field}")
-                ok = False
-        for flag, expected in flags.items():
-            if fixture.get(flag) is not expected:
-                error(f"{fixture.get('fixture_id')} failed policy flag {flag}")
-                ok = False
     return ok
 
 
-def validate_prototype_code() -> bool:
+def validate_stress_code() -> bool:
     ok = True
     for path in list(PROTOTYPE_DIR.rglob("*.py")):
         text = path.read_text(encoding="utf-8")
@@ -235,6 +206,11 @@ def _run_harness(rel: str, expected: str) -> bool:
 def validate_harnesses() -> bool:
     ok = True
     if not _run_harness(
+        "compound_boundary_stress_harness.py",
+        "controlled internal compound boundary stress validation passed",
+    ):
+        ok = False
+    if not _run_harness(
         "targeted_fixture_expansion_harness.py",
         "controlled internal targeted fixture expansion validation passed",
     ):
@@ -263,13 +239,17 @@ def validate_harnesses() -> bool:
 
 def validate_governance() -> bool:
     ok = True
-    if "DEC-094" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
-        error("DEC-094 missing from DECISION_LOG.md")
+    if "DEC-095" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
+        error("DEC-095 missing from DECISION_LOG.md")
         ok = False
-    if "validate_targeted_synthetic_fixture_expansion_v1.py" not in (
+    if "validate_internal_prototype_compound_boundary_stress_test_v1.py" not in (
         ROOT / "validators/validate_all.py"
     ).read_text(encoding="utf-8"):
-        error("validate_all.py must include Sprint 76 validator")
+        error("validate_all.py must include Sprint 77 validator")
+        ok = False
+    policy = load_json("data/publisher-governance-policy.json")
+    if policy.get("current_publisher_status") != PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_VALIDATION:
+        error("publisher status must be blocked_until_internal_prototype_compound_boundary_stress_test_validation")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}
     for loc in SOURCE_LOCS:
@@ -277,17 +257,17 @@ def validate_governance() -> bool:
             error(f"source registry missing {loc}")
             ok = False
     claims = load_json("data/evidence-ledger.json").get("claims", [])
-    if not any(c.get("claim_id") == "CLAIM-0078" for c in claims):
-        error("CLAIM-0078 missing")
+    if not any(c.get("claim_id") == "CLAIM-0079" for c in claims):
+        error("CLAIM-0079 missing")
         ok = False
     gates = load_json("data/publisher-quality-gates.json").get("gates", [])
-    if not any(g.get("gate_id") == "PUB-GATE-0071" for g in gates):
-        error("PUB-GATE-0071 missing")
+    if not any(g.get("gate_id") == "PUB-GATE-0072" for g in gates):
+        error("PUB-GATE-0072 missing")
         ok = False
-    if "Sprint 76 | COMPLETE | G76 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
-        error("master execution plan missing Sprint 76 completion row")
+    if "Sprint 77 | COMPLETE | G77 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
+        error("master execution plan missing Sprint 77 completion row")
         ok = False
-    for rel in [EXPANSION_DOC, ADMISSION_LOG, COVERAGE_DELTA, AUDIT]:
+    for rel in [STRESS_TEST, STRESS_MATRIX, COLLAPSE_MODEL, AUDIT]:
         lower = (ROOT / rel).read_text(encoding="utf-8").lower()
         for term in FORBIDDEN_TERMS:
             if term in lower:
@@ -317,10 +297,10 @@ def main() -> int:
         fn()
         for fn in [
             validate_artifacts,
-            validate_expansion_json,
+            validate_stress_json,
             validate_surface,
-            validate_fixtures,
-            validate_prototype_code,
+            validate_fixtures_unchanged,
+            validate_stress_code,
             validate_harnesses,
             validate_governance,
             validate_cache,

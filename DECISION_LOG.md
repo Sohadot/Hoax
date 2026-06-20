@@ -2492,3 +2492,31 @@ Sprint 75 established fixture coverage governance and identified named gaps. Spr
 - No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, JavaScript, form, report exporter, external connector, or public tool behavior is authorized.
 - Any future fixture expansion requires separate explicit sprint authorization and must reference named coverage gaps.
 
+---
+
+## DEC-095 — Internal Prototype Compound Boundary Stress Test v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Internal Prototype Compound Boundary Stress Test v1 as an internal, non-public stress-testing layer for Controlled Internal Prototype v0. The sprint defines compound boundary classes, stress cases, collapse prevention rules, forbidden transformation pressure, required stress result fields, and failure conditions. It may add internal compound boundary stress analyzer and harness files that test existing synthetic fixtures under compound boundary pressure. This sprint does not add new fixtures, public benchmarks, public reports, public routes, sitemap entries, public engine behavior, classifier behavior, upload workflows, scoring systems, APIs, analytics, forms, JavaScript, DNS/Cloudflare changes, custom-domain launch, monetization, external communication, public output generator, or public tool behavior.
+
+### Rationale
+
+Sprint 76 closed named coverage gaps through targeted synthetic fixtures. Sprint 77 now tests whether compound boundary pressure can cause boundary collapse, such as provenance gap becoming manipulation, claim drift becoming deception, evidence limitation becoming falsehood, attribution boundary becoming subject guilt, or output boundary becoming a public result card. This protects Hoax.ai from detector drift, verdict leakage, accusation transfer, and report-shape drift under multi-boundary conditions.
+
+### Implications
+
+- Internal compound boundary stress test may be created.
+- Compound stress matrix may be created.
+- Boundary collapse prevention model may be created.
+- Internal compound boundary stress analyzer and harness may be added.
+- Existing fixtures may be referenced by stress cases.
+- No new fixtures may be added in this sprint.
+- No public route may be created.
+- Sitemap remains exactly 19 URLs.
+- No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, JavaScript, form, report exporter, external connector, or public tool behavior is authorized.
+- Any future stress expansion requires separate explicit sprint authorization.
+

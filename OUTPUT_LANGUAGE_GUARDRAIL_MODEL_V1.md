@@ -269,6 +269,8 @@ Internal Prototype Traceability and Interpretability Audit v1 (Sprint 74, DEC-09
 
 Internal Prototype Fixture Coverage Matrix v1 (Sprint 75, DEC-093) maps forbidden-transformation coverage across synthetic fixtures and regression vectors. Coverage is governance-only and does not authorize public benchmarks or reports.
 
+Internal Prototype Compound Boundary Stress Test v1 (Sprint 77, DEC-095) validates compound boundary pressure against existing fixtures. Stress testing is internal-only and does not authorize public benchmarks, reports, scoring, or output generation.
+
 No prototype, public route, sitemap entry, input system, output generator, classifier, scorer, API, JavaScript surface, or public tool behavior is authorized by this document.
 
 ---
@@ -279,5 +281,6 @@ No prototype, public route, sitemap entry, input system, output generator, class
 *Updated Sprint 72 — Controlled Internal Prototype v0 implementation status (DEC-090)*
 *Updated Sprint 74 — Internal traceability and interpretability audit status (DEC-092)*
 *Updated Sprint 75 — Internal fixture coverage matrix status (DEC-093)*
+*Updated Sprint 77 — Internal compound boundary stress test status (DEC-095)*
 *Decision: DEC-087*
 *Date: 2026-06-20*

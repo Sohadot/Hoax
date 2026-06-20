@@ -2258,6 +2258,40 @@ Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, cust
 
 ---
 
+## Sprint 77 — Internal Prototype Compound Boundary Stress Test v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Stress-test compound boundary interactions inside the controlled internal prototype without adding fixtures, public benchmarks, reports, or operational product behavior.
+
+### Deliverables
+
+- INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_V1.md
+- INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_MATRIX_V1.md
+- INTERNAL_PROTOTYPE_BOUNDARY_COLLAPSE_PREVENTION_MODEL_V1.md
+- data/internal-prototype-compound-boundary-stress-test-v1.json
+- data/internal-prototype-compound-boundary-stress-test-v1.schema.json
+- internal/prototypes/controlled-engine-v0/compound_boundary_stress_analyzer.py
+- internal/prototypes/controlled-engine-v0/compound_boundary_stress_harness.py
+- validators/validate_internal_prototype_compound_boundary_stress_test_v1.py
+- SPRINT_77_INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_V1.md
+- DEC-095 appended to DECISION_LOG.md
+- PUB-GATE-0072 added
+- Publisher status -> blocked_until_internal_prototype_compound_boundary_stress_test_validation
+
+### Validation
+
+All harnesses and `validate_all.py` — PASS required.
+
+### Gate
+
+**Gate G77 passed.** Internal Prototype Guardrail Red-Team Pack v1 is the recommended next phase.
+
+### Next Phase
+
+**Sprint 78 — Internal Prototype Guardrail Red-Team Pack v1**
+
+---
+
 ## Sprint 76 — Targeted Synthetic Fixture Expansion v1
 
 **Status:** COMPLETE — 2026-06-20

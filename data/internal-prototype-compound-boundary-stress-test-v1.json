@@ -1,0 +1,146 @@
+{
+  "stress_test_id": "internal-prototype-compound-boundary-stress-test-v1",
+  "name": "Internal Prototype Compound Boundary Stress Test v1",
+  "version": "1.0.0",
+  "status": "internal_non_public_compound_boundary_stress_test",
+  "decision_ref": "DEC-095",
+  "sprint": "Sprint 77",
+  "public_route_authorized": false,
+  "public_benchmark_authorized": false,
+  "public_report_authorized": false,
+  "output_generator_authorized": false,
+  "scoring_authorized": false,
+  "api_authorized": false,
+  "javascript_authorized": false,
+  "source_authority": [
+    "controlled_internal_prototype_v0_implementation",
+    "controlled_internal_prototype_v0_hardening",
+    "internal_prototype_traceability_interpretability_audit_v1",
+    "internal_prototype_fixture_coverage_matrix_v1",
+    "targeted_synthetic_fixture_expansion_v1",
+    "evidence_posture_engine_model_v0",
+    "output_language_guardrail_model_v1"
+  ],
+  "compound_boundary_classes": [
+    "provenance_gap + context_collapse",
+    "claim_drift + evidence_limitation",
+    "attribution_boundary + output_boundary",
+    "source_confidence_weakness + traceability_weakness + chain_weakness",
+    "not_assessable_multi_reason + interpretation_risk",
+    "synthetic_fragility + output_boundary",
+    "limitation + forbidden_transformation pressure",
+    "compound_caveat_activation_pressure"
+  ],
+  "stress_cases": [
+    {
+      "stress_case_id": "STRESS-001-PROVENANCE-CONTEXT-COMPOUND",
+      "compound_boundary_class": "provenance_gap + context_collapse",
+      "source_fixture_ids": ["SYN-FIX-012-PROVENANCE-CONTEXT-COMPOUND"]
+    },
+    {
+      "stress_case_id": "STRESS-002-DRIFT-LIMITATION-COMPOUND",
+      "compound_boundary_class": "claim_drift + evidence_limitation",
+      "source_fixture_ids": ["SYN-FIX-013-DRIFT-LIMITATION-COMPOUND"]
+    },
+    {
+      "stress_case_id": "STRESS-003-ATTRIBUTION-OUTPUT-BOUNDARY-COMPOUND",
+      "compound_boundary_class": "attribution_boundary + output_boundary",
+      "source_fixture_ids": ["SYN-FIX-014-ATTRIBUTION-OUTPUT-BOUNDARY"]
+    },
+    {
+      "stress_case_id": "STRESS-004-SOURCE-TRACEABILITY-CHAIN-COMPOUND",
+      "compound_boundary_class": "source_confidence_weakness + traceability_weakness + chain_weakness",
+      "source_fixture_ids": ["SYN-FIX-015-SOURCE-TRACEABILITY-CHAIN"]
+    },
+    {
+      "stress_case_id": "STRESS-005-NOT-ASSESSABLE-MULTI-REASON-COMPOUND",
+      "compound_boundary_class": "not_assessable_multi_reason + interpretation_risk",
+      "source_fixture_ids": ["SYN-FIX-016-NOT-ASSESSABLE-MULTI"]
+    },
+    {
+      "stress_case_id": "STRESS-006-SYNTHETIC-FRAGILITY-OUTPUT-BOUNDARY-COMPOUND",
+      "compound_boundary_class": "synthetic_fragility + output_boundary",
+      "source_fixture_ids": ["SYN-FIX-003-LIMITED"]
+    },
+    {
+      "stress_case_id": "STRESS-007-LIMITATION-FORBIDDEN-TRANSFORMATION-COMPOUND",
+      "compound_boundary_class": "limitation + forbidden_transformation pressure",
+      "source_fixture_ids": ["SYN-FIX-010-LIMITATION-NOT-FALSEHOOD"]
+    },
+    {
+      "stress_case_id": "STRESS-008-COMPOUND-CAVEAT-ACTIVATION-PRESSURE",
+      "compound_boundary_class": "compound_caveat_activation_pressure",
+      "source_fixture_ids": ["SYN-FIX-011-TRACEABILITY-CAVEAT"]
+    }
+  ],
+  "collapse_prevention_rules": [
+    "no_verdict_confirmation_required",
+    "no_score_confirmation_required",
+    "non_public_confirmation_required",
+    "required_boundary_checks_must_remain_active",
+    "forbidden_transformations_must_remain_blocked",
+    "guardrail_failure_flags_must_be_empty"
+  ],
+  "forbidden_transformations": [
+    "gap_to_manipulation",
+    "context_collapse_to_motive",
+    "drift_to_deception",
+    "limitation_to_falsehood",
+    "artifact_to_subject_guilt",
+    "synthetic_to_fake",
+    "source_weakness_to_fraud",
+    "risk_to_verdict",
+    "confidence_to_certification"
+  ],
+  "required_stress_result_fields": [
+    "stress_case_id",
+    "source_fixture_ids",
+    "compound_boundary_class",
+    "active_boundary_checks",
+    "required_caveat_families",
+    "forbidden_transformations_blocked",
+    "guardrail_blocks",
+    "traceability_refs",
+    "collapse_prevention_status",
+    "non_verdict_confirmation",
+    "non_score_confirmation",
+    "non_public_confirmation",
+    "stress_validation_status"
+  ],
+  "failure_conditions": [
+    "provenance_gap_becomes_manipulation",
+    "context_collapse_becomes_motive",
+    "claim_drift_becomes_deception",
+    "evidence_limitation_becomes_falsehood",
+    "attribution_boundary_becomes_subject_guilt",
+    "output_boundary_becomes_result_card",
+    "synthetic_fragility_becomes_fake",
+    "source_weakness_becomes_fraud",
+    "multiple_caveats_collapse_into_verdict",
+    "not_assessable_becomes_negative_conclusion"
+  ],
+  "fixture_count": 16,
+  "operational_boundaries": {
+    "no_public_route": true,
+    "no_public_benchmark": true,
+    "no_public_report": true,
+    "no_public_explanation": true,
+    "no_report_generation": true,
+    "no_public_engine": true,
+    "no_output_generator": true,
+    "no_classifier": true,
+    "no_detector": true,
+    "no_scanner": true,
+    "no_upload": true,
+    "no_scoring": true,
+    "no_api": true,
+    "no_analytics": true,
+    "no_forms": true,
+    "no_javascript": true,
+    "no_external_outreach": true,
+    "no_dns": true,
+    "no_monetization": true,
+    "no_public_tool_behavior": true
+  },
+  "last_reviewed": "2026-06-20"
+}
