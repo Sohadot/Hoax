@@ -31,7 +31,7 @@ REQUIRED_TRACE_FIELDS = {
 
 def main() -> int:
     results = run_prototype()
-    if len(results) < 10:
+    if len(results) < 16:
         return 1
     seen_postures: set[str] = set()
     for result in results:

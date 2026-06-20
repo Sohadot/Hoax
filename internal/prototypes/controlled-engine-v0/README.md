@@ -36,4 +36,8 @@ Run internal fixture coverage validation (Sprint 75+):
 
 `py -3 internal/prototypes/controlled-engine-v0/fixture_coverage_harness.py`
 
+Run targeted fixture expansion validation (Sprint 76+):
+
+`py -3 internal/prototypes/controlled-engine-v0/targeted_fixture_expansion_harness.py`
+
 Do not deploy, link publicly, or treat this as a product feature.

@@ -35,7 +35,7 @@
   "current_fixture_inventory": {
     "fixture_set_id": "synthetic-fixtures-v0",
     "version": "0.2.0",
-    "total_fixtures": 10,
+    "total_fixtures": 16,
     "base_posture_fixtures": 5,
     "edge_case_boundary_fixtures": 5,
     "local_only": true,
@@ -174,7 +174,7 @@
     "source_caveat": { "coverage_status": "Covered" },
     "provenance_caveat": { "coverage_status": "Covered" },
     "context_caveat": { "coverage_status": "Covered" },
-    "traceability_caveat": { "coverage_status": "Gap", "future_candidate": "FC-TRACEABILITY-CAVEAT-STUB" },
+    "traceability_caveat": { "coverage_status": "Covered", "fixture_ids": ["SYN-FIX-011-TRACEABILITY-CAVEAT", "SYN-FIX-015-SOURCE-TRACEABILITY-CHAIN", "SYN-FIX-016-NOT-ASSESSABLE-MULTI"] },
     "drift_caveat": { "coverage_status": "Covered" },
     "limitation_caveat": { "coverage_status": "Covered" },
     "interpretation_risk_caveat": { "coverage_status": "Covered" },
@@ -238,13 +238,11 @@
     "fixture_coverage_harness": { "coverage_status": "Covered" }
   },
   "coverage_gaps": [
-    "traceability_caveat family has no dedicated fixture activation",
-    "compound boundary interaction fixtures are absent",
     "out-of-scope posture has only one fixture variant",
-    "not-assessable posture has limited variety beyond limitation-not-falsehood",
     "EP-P17 guardrail activation is partial across all forbidden output families",
-    "GL-DETECTOR-STYLE-BLOCK lacks dedicated fixture negative vector",
-    "output_boundary stress beyond single out-of-scope fixture is partial"
+    "GL-RESULT-CARD-BLOCK regression coverage remains partial",
+    "compound three-boundary stress scenarios",
+    "output_boundary stress beyond targeted expansion fixtures is partial"
   ],
   "future_fixture_admission_criteria": {
     "requires_named_coverage_gap_reference": true,

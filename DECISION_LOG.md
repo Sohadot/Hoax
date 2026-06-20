@@ -2465,3 +2465,30 @@ Sprint 72 implemented Controlled Internal Prototype v0, Sprint 73 hardened fixtu
 - No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, JavaScript, form, report exporter, external connector, or public tool behavior is authorized.
 - Any future fixture expansion requires separate explicit sprint authorization and must reference named coverage gaps.
 
+---
+
+## DEC-094 — Targeted Synthetic Fixture Expansion v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Targeted Synthetic Fixture Expansion v1 as an internal, non-public, gap-driven expansion of Controlled Internal Prototype v0 fixtures. The sprint may add synthetic fixtures only when each fixture references a named coverage gap from Internal Prototype Fixture Coverage Matrix v1 and includes expansion reason, expected posture state, expected caveats, expected boundary checks, expected forbidden transformations blocked, and expected traceability fields. This sprint does not create public benchmarks, public reports, public routes, sitemap entries, public engine behavior, classifier behavior, upload workflows, scoring systems, APIs, analytics, forms, JavaScript, DNS/Cloudflare changes, custom-domain launch, monetization, external communication, public output generator, or public tool behavior.
+
+### Rationale
+
+Sprint 75 established fixture coverage governance and identified named gaps. Sprint 76 closes selected gaps through targeted synthetic fixtures rather than increasing fixture count arbitrarily. This protects Hoax.ai from volume-driven testing while improving boundary interaction, caveat triggering, traceability, and guardrail regression coverage.
+
+### Implications
+
+- Targeted synthetic fixtures may be added.
+- Targeted fixture admission log may be created.
+- Coverage delta may be created.
+- Targeted fixture expansion JSON/schema may be created.
+- Targeted fixture expansion harness may be added.
+- No public route may be created.
+- Sitemap remains exactly 19 URLs.
+- No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, JavaScript, form, report exporter, external connector, or public tool behavior is authorized.
+- Any future fixture expansion requires separate explicit sprint authorization and must reference named coverage gaps.
+

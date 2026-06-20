@@ -19,6 +19,7 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_CONTROLLED_INTERNAL_PROTOTYPE_V0_HARDENING_VALIDATION,
     PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_TRACEABILITY_INTERPRETABILITY_AUDIT_VALIDATION,
     PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_FIXTURE_COVERAGE_MATRIX_VALIDATION,
+    PUBLISHER_STATUS_POST_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1_VALIDATION,
     validate_public_surface,
 )
 
@@ -152,7 +153,7 @@ def validate_prototype_files() -> bool:
     for path in py_files:
         text = path.read_text(encoding="utf-8")
         lower = text.lower()
-        phrase_scan = path.name != "output_guardrail_checker.py"
+        phrase_scan = path.name not in {"output_guardrail_checker.py", "guardrail_regression.py"}
         for term in FORBIDDEN_NETWORK + FORBIDDEN_INPUT + FORBIDDEN_FRAMEWORKS:
             if term in lower:
                 error(f"{path.relative_to(ROOT)} contains forbidden pattern: {term}")

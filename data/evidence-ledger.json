@@ -849,6 +849,17 @@
       "status": "active",
       "last_reviewed": "2026-06-20",
       "notes": "Sprint 75 fixture coverage matrix. Sitemap remains nineteen URLs. No public benchmark or report authorized."
+    },
+    {
+      "claim_id": "CLAIM-0078",
+      "claim_text": "Hoax.ai has adopted Targeted Synthetic Fixture Expansion v1 to close named fixture coverage gaps with synthetic, non-public, gap-justified fixtures.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md, TARGETED_FIXTURE_EXPANSION_ADMISSION_LOG_V1.md, TARGETED_FIXTURE_EXPANSION_COVERAGE_DELTA_V1.md, data/targeted-synthetic-fixture-expansion-v1.json, data/targeted-synthetic-fixture-expansion-v1.schema.json, internal/prototypes/controlled-engine-v0/fixtures/synthetic-fixtures-v0.json, internal/prototypes/controlled-engine-v0/targeted_fixture_expansion_harness.py, validators/validate_targeted_synthetic_fixture_expansion_v1.py, SPRINT_76_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md, DECISION_LOG.md (DEC-094)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-20",
+      "notes": "Sprint 76 targeted fixture expansion. Sitemap remains nineteen URLs. No public benchmark authorized."
     }
   ]
 }

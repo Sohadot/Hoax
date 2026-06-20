@@ -1032,6 +1032,24 @@
       "failure_condition": "internal_prototype_fixture_coverage_matrix_v1_not_met",
       "bypassable": false,
       "notes": "Internal Prototype Fixture Coverage Matrix v1 completed Sprint 75 (DEC-093). Fixture taxonomy, coverage gap analysis, future admission criteria, coverage analyzer, and harness documented. Sitemap remains nineteen URLs. No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, forms, JavaScript, external connector, monetization, or public tool behavior authorized."
+    },
+    {
+      "gate_id": "PUB-GATE-0071",
+      "name": "Targeted Synthetic Fixture Expansion v1 Gate",
+      "status": "targeted_synthetic_fixture_expansion_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_76_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md",
+      "failure_condition": "targeted_synthetic_fixture_expansion_v1_not_met",
+      "bypassable": false,
+      "notes": "Targeted Synthetic Fixture Expansion v1 completed Sprint 76 (DEC-094). Six gap-justified fixtures added. Sitemap remains nineteen URLs. No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, forms, JavaScript, external connector, monetization, or public tool behavior authorized."
     }
   ],
   "last_reviewed": "2026-06-20"

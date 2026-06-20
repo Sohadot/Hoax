@@ -4,9 +4,10 @@ Sprint 73 hardens the internal prototype without public exposure or operational 
 
 ## Fixture Coverage
 
-- **10 synthetic fixtures** in `fixtures/synthetic-fixtures-v0.json`
+- **16 synthetic fixtures** in `fixtures/synthetic-fixtures-v0.json` (10 base + edge + 6 targeted expansion)
 - **5 base posture fixtures**: Supported, Qualified, Limited, Not Assessable, Out of Scope
 - **5 edge-case fixtures**: attribution boundary, provenance gap, context collapse, claim drift, limitation-not-falsehood
+- **6 targeted expansion fixtures** (Sprint 76): traceability caveat, provenance/context compound, drift/limitation compound, attribution/output boundary, source/traceability/chain, not-assessable multi-reason
 
 All fixtures remain synthetic, neutral, case-neutral, and free of real-person, current-event, political, legal, medical, financial-advice, company-accusatory, and private-data content.
 
@@ -16,6 +17,7 @@ All fixtures remain synthetic, neutral, case-neutral, and free of real-person, c
 - `guardrail_regression.py` — guardrail failure detection on synthetic negative vectors
 - `traceability_harness.py` — traceability and interpretability audit validation
 - `fixture_coverage_harness.py` — governed fixture coverage validation
+- `targeted_fixture_expansion_harness.py` — targeted gap-closure fixture validation (Sprint 76+)
 - `regression_harness.py` — combined hardening validation entry point
 
 ## Coverage Governance (Sprint 75)

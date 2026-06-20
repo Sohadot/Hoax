@@ -720,6 +720,7 @@ def validate_cross_file_integration() -> bool:
         "blocked_until_controlled_internal_prototype_v0_hardening_validation",
         "blocked_until_internal_prototype_traceability_interpretability_audit_validation",
         "blocked_until_internal_prototype_fixture_coverage_matrix_validation",
+        "blocked_until_targeted_synthetic_fixture_expansion_v1_validation",
     ):
         error("publisher-governance-policy: publisher must remain blocked from drafts and publication")
         ok = False

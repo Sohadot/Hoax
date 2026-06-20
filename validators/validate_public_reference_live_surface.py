@@ -343,6 +343,7 @@ def validate_publisher_governance() -> bool:
         "blocked_until_controlled_internal_prototype_v0_hardening_validation",
         "blocked_until_internal_prototype_traceability_interpretability_audit_validation",
         "blocked_until_internal_prototype_fixture_coverage_matrix_validation",
+        "blocked_until_targeted_synthetic_fixture_expansion_v1_validation",
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_LIVE_AUDIT}, "

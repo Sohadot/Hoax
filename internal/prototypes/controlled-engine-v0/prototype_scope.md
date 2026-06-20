@@ -61,6 +61,8 @@ Sprint 74 adds `traceability_mapper.py`, `interpretability_auditor.py`, `traceab
 
 Sprint 75 adds `fixture_coverage_analyzer.py`, `fixture_coverage_harness.py`, and Internal Prototype Fixture Coverage Matrix v1 governance documents.
 
+Sprint 76 adds six targeted expansion fixtures (SYN-FIX-011 through SYN-FIX-016), `targeted_fixture_expansion_harness.py`, and Targeted Synthetic Fixture Expansion v1 governance documents.
+
 ## Future Removal/Rollback Rule
 
 Any disqualifying drift requires rollback before commit. Public exposure fails the prototype boundary.

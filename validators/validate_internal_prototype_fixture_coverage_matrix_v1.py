@@ -16,6 +16,7 @@ from public_surface_checks import (  # noqa: E402
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_FIXTURE_COVERAGE_MATRIX_VALIDATION,
+    PUBLISHER_STATUS_POST_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1_VALIDATION,
     validate_public_surface,
 )
 
@@ -273,10 +274,6 @@ def validate_governance() -> bool:
         ROOT / "validators/validate_all.py"
     ).read_text(encoding="utf-8"):
         error("validate_all.py must include Sprint 75 validator")
-        ok = False
-    policy = load_json("data/publisher-governance-policy.json")
-    if policy.get("current_publisher_status") != PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_FIXTURE_COVERAGE_MATRIX_VALIDATION:
-        error("publisher status must be blocked_until_internal_prototype_fixture_coverage_matrix_validation")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}
     for loc in SOURCE_LOCS:

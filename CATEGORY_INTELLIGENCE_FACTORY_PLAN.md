@@ -186,6 +186,8 @@ The Category Intelligence Factory now adds internal traceability and interpretab
 
 The Category Intelligence Factory now governs fixture coverage rather than fixture volume. Internal Prototype Fixture Coverage Matrix v1 maps synthetic fixtures across posture states, evidence dimensions, protocol steps, standard principles, boundary checks, caveat families, guardrail rules, forbidden transformations, traceability fields, fixture-policy controls, and regression vectors. Future fixture expansion must close named gaps and cannot be justified by count alone.
 
+The Category Intelligence Factory now expands synthetic fixtures only through named coverage gaps. Targeted Synthetic Fixture Expansion v1 adds controlled internal fixtures to close specific traceability, caveat, compound-boundary, not-assessable, and forbidden-transformation gaps identified by the Fixture Coverage Matrix. Fixture expansion remains synthetic, neutral, non-public, non-scoring, non-verdict, and non-operational.
+
 The Category Intelligence Factory treats chronology integrity as part of evidence integrity: decision records must not move backward in time unless a correction note explicitly explains and repairs the error.
 
 The category factory becomes reference-grade only when public-facing claims, evidence ledger entries, source records, and support locations are traceable as a governed system.

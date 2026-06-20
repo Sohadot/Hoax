@@ -24,9 +24,14 @@ NEGATIVE_VECTORS: list[dict[str, Any]] = [
         "not_assessable_reason": None,
         "out_of_scope_reason": "subject_transfer_stub",
     },
+    {
+        "posture_state_candidate": "result card output stub",
+        "not_assessable_reason": None,
+        "out_of_scope_reason": None,
+    },
 ]
 
-BLOCKED_INDEXES = {1, 2, 3}
+BLOCKED_INDEXES = {1, 2, 3, 4}
 
 
 def run_guardrail_regression() -> bool:

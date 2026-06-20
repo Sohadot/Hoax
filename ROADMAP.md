@@ -2258,6 +2258,39 @@ Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, cust
 
 ---
 
+## Sprint 76 — Targeted Synthetic Fixture Expansion v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Add six gap-justified synthetic fixtures closing named Sprint 75 coverage gaps without public benchmarks, reports, or operational product behavior.
+
+### Deliverables
+
+- TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md
+- TARGETED_FIXTURE_EXPANSION_ADMISSION_LOG_V1.md
+- TARGETED_FIXTURE_EXPANSION_COVERAGE_DELTA_V1.md
+- data/targeted-synthetic-fixture-expansion-v1.json
+- data/targeted-synthetic-fixture-expansion-v1.schema.json
+- 6 targeted fixtures (SYN-FIX-011 through SYN-FIX-016)
+- internal/prototypes/controlled-engine-v0/targeted_fixture_expansion_harness.py
+- validators/validate_targeted_synthetic_fixture_expansion_v1.py
+- DEC-094 appended to DECISION_LOG.md
+- PUB-GATE-0071 added
+- Publisher status -> blocked_until_targeted_synthetic_fixture_expansion_v1_validation
+
+### Validation
+
+All harnesses and `validate_all.py` — PASS required.
+
+### Gate
+
+**Gate G76 passed.** Internal Prototype Compound Boundary Stress Test v1 is the recommended next phase.
+
+### Next Phase
+
+**Sprint 77 — Internal Prototype Compound Boundary Stress Test v1**
+
+---
+
 ## Sprint 75 — Internal Prototype Fixture Coverage Matrix v1
 
 **Status:** COMPLETE — 2026-06-20

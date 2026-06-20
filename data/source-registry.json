@@ -5731,6 +5731,86 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 75 fixture coverage validator."
+    },
+    {
+      "source_id": "SOURCE-0473",
+      "source_title": "TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md",
+      "source_type": "internal_governance",
+      "location": "TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 76 targeted fixture expansion."
+    },
+    {
+      "source_id": "SOURCE-0474",
+      "source_title": "TARGETED_FIXTURE_EXPANSION_ADMISSION_LOG_V1.md",
+      "source_type": "internal_governance",
+      "location": "TARGETED_FIXTURE_EXPANSION_ADMISSION_LOG_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 76 fixture admission log."
+    },
+    {
+      "source_id": "SOURCE-0475",
+      "source_title": "TARGETED_FIXTURE_EXPANSION_COVERAGE_DELTA_V1.md",
+      "source_type": "internal_governance",
+      "location": "TARGETED_FIXTURE_EXPANSION_COVERAGE_DELTA_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 76 coverage delta."
+    },
+    {
+      "source_id": "SOURCE-0476",
+      "source_title": "data/targeted-synthetic-fixture-expansion-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/targeted-synthetic-fixture-expansion-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 76 expansion JSON."
+    },
+    {
+      "source_id": "SOURCE-0477",
+      "source_title": "data/targeted-synthetic-fixture-expansion-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/targeted-synthetic-fixture-expansion-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 76 expansion schema."
+    },
+    {
+      "source_id": "SOURCE-0478",
+      "source_title": "internal/prototypes/controlled-engine-v0/targeted_fixture_expansion_harness.py",
+      "source_type": "internal_governance",
+      "location": "internal/prototypes/controlled-engine-v0/targeted_fixture_expansion_harness.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 76 expansion harness."
+    },
+    {
+      "source_id": "SOURCE-0479",
+      "source_title": "SPRINT_76_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_76_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 76 audit."
+    },
+    {
+      "source_id": "SOURCE-0480",
+      "source_title": "validators/validate_targeted_synthetic_fixture_expansion_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_targeted_synthetic_fixture_expansion_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 76 expansion validator."
     }
   ]
 }

@@ -1,0 +1,132 @@
+{
+  "expansion_id": "targeted-synthetic-fixture-expansion-v1",
+  "name": "Targeted Synthetic Fixture Expansion v1",
+  "version": "1.0.0",
+  "status": "internal_non_public_targeted_fixture_expansion",
+  "decision_ref": "DEC-094",
+  "sprint": "Sprint 76",
+  "public_route_authorized": false,
+  "public_benchmark_authorized": false,
+  "public_report_authorized": false,
+  "output_generator_authorized": false,
+  "scoring_authorized": false,
+  "api_authorized": false,
+  "javascript_authorized": false,
+  "source_authority": [
+    "internal_prototype_fixture_coverage_matrix_v1",
+    "internal_prototype_future_fixture_admission_criteria",
+    "internal_prototype_fixture_policy",
+    "controlled_internal_prototype_v0_hardening",
+    "internal_prototype_traceability_interpretability_audit_v1",
+    "evidence_posture_engine_model_v0",
+    "output_language_guardrail_model_v1"
+  ],
+  "current_fixture_count_before": 10,
+  "max_fixture_count_after": 16,
+  "current_fixture_count_after": 16,
+  "added_fixture_classes": [
+    "traceability_caveat_gap_closer",
+    "provenance_context_compound_boundary",
+    "claim_drift_limitation_compound_boundary",
+    "attribution_output_boundary_compound",
+    "source_traceability_chain_weakness",
+    "not_assessable_multi_reason"
+  ],
+  "named_coverage_gaps_addressed": [
+    "traceability_caveat coverage gap",
+    "compound boundary interaction gap",
+    "source/traceability/chain caveat gap",
+    "attribution/output boundary interaction gap",
+    "not-assessable multi-reason gap",
+    "forbidden transformation regression gap"
+  ],
+  "fixture_admission_records": [
+    {
+      "fixture_id": "SYN-FIX-011-TRACEABILITY-CAVEAT",
+      "fixture_class": "traceability_caveat_gap_closer",
+      "coverage_gap_ref": "traceability_caveat family has no dedicated fixture activation",
+      "admission_decision": "admitted"
+    },
+    {
+      "fixture_id": "SYN-FIX-012-PROVENANCE-CONTEXT-COMPOUND",
+      "fixture_class": "provenance_context_compound_boundary",
+      "coverage_gap_ref": "compound boundary interactions are absent",
+      "admission_decision": "admitted"
+    },
+    {
+      "fixture_id": "SYN-FIX-013-DRIFT-LIMITATION-COMPOUND",
+      "fixture_class": "claim_drift_limitation_compound_boundary",
+      "coverage_gap_ref": "compound boundary interactions are absent",
+      "admission_decision": "admitted"
+    },
+    {
+      "fixture_id": "SYN-FIX-014-ATTRIBUTION-OUTPUT-BOUNDARY",
+      "fixture_class": "attribution_output_boundary_compound",
+      "coverage_gap_ref": "output_boundary stress beyond single out-of-scope fixture is partial",
+      "admission_decision": "admitted"
+    },
+    {
+      "fixture_id": "SYN-FIX-015-SOURCE-TRACEABILITY-CHAIN",
+      "fixture_class": "source_traceability_chain_weakness",
+      "coverage_gap_ref": "source/traceability/chain caveat gap",
+      "admission_decision": "admitted"
+    },
+    {
+      "fixture_id": "SYN-FIX-016-NOT-ASSESSABLE-MULTI",
+      "fixture_class": "not_assessable_multi_reason",
+      "coverage_gap_ref": "not-assessable posture has limited variety beyond limitation-not-falsehood",
+      "admission_decision": "admitted"
+    }
+  ],
+  "coverage_delta": {
+    "traceability_caveat": "Gap to Covered",
+    "compound_boundary_interactions": "Gap to Covered",
+    "source_traceability_chain": "Partially Covered to Covered",
+    "attribution_output_boundary": "Partially Covered to Covered",
+    "not_assessable_variety": "Partially Covered to Covered",
+    "forbidden_transformation_regression": "Partially Covered to Covered"
+  },
+  "remaining_gaps": [
+    "out-of-scope secondary category variant",
+    "EP-P17 full forbidden-output family activation",
+    "compound three-boundary stress scenarios"
+  ],
+  "forbidden_fixture_classes": [
+    "real-person accusation",
+    "current event",
+    "political claim",
+    "legal dispute",
+    "medical claim",
+    "financial advice",
+    "company fraud accusation",
+    "private screenshot",
+    "uploaded user file",
+    "celebrity claim",
+    "live URL",
+    "external fact-check target",
+    "copyrighted article reproduction"
+  ],
+  "operational_boundaries": {
+    "no_public_route": true,
+    "no_public_benchmark": true,
+    "no_public_report": true,
+    "no_public_explanation": true,
+    "no_report_generation": true,
+    "no_public_engine": true,
+    "no_output_generator": true,
+    "no_classifier": true,
+    "no_detector": true,
+    "no_scanner": true,
+    "no_upload": true,
+    "no_scoring": true,
+    "no_api": true,
+    "no_analytics": true,
+    "no_forms": true,
+    "no_javascript": true,
+    "no_external_outreach": true,
+    "no_dns": true,
+    "no_monetization": true,
+    "no_public_tool_behavior": true
+  },
+  "last_reviewed": "2026-06-20"
+}

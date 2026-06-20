@@ -331,6 +331,10 @@ Gate G58 is passed after the four Batch 3 pages are deepened in place with Stand
 
 Gate G59 is passed after `/standard/evidence-posture/` exists with all required standard sections, EPS-001 through EPS-014, five posture states, allowed and prohibited output language, standard matrix, and boundary rules; sitemap contains exactly 17 URLs; exactly one new standard route is created; DEC-077 exists in DECISION_LOG.md; CLAIM-0063 exists; SPRINT_59_EVIDENCE_POSTURE_STANDARD_V1_AUDIT.md exists; `validators/validate_evidence_posture_standard_v1_public.py` exists; validate_all.py PASS; DECISION_LOG chronology validator passes; prototype files are not modified; no Python cache files are tracked or staged; no meta-governance loop resumes; and no engine, classifier, upload, scoring, API, analytics, forms, JavaScript, DNS, Cloudflare, custom domain launch, monetization, or public tool behavior is introduced.
 
+## G76: Targeted Synthetic Fixture Expansion v1
+
+Gate G76 is passed after `TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md`, `TARGETED_FIXTURE_EXPANSION_ADMISSION_LOG_V1.md`, and `TARGETED_FIXTURE_EXPANSION_COVERAGE_DELTA_V1.md` exist; `data/targeted-synthetic-fixture-expansion-v1.json` and `data/targeted-synthetic-fixture-expansion-v1.schema.json` exist; `internal/prototypes/controlled-engine-v0/targeted_fixture_expansion_harness.py` exists; targeted fixture expansion harness passes; fixture count is greater than 10 and not greater than 16; every new fixture references a named gap; decision_ref is DEC-094; sitemap remains exactly 19 URLs; route registry remains 19 entries; no new public route is created; no public benchmark/report/generator is introduced; no public output generator, engine, tool, API, upload, or scoring behavior is introduced; no external API/network behavior exists; `validators/validate_targeted_synthetic_fixture_expansion_v1.py` passes; fixture coverage harness, traceability harness, and regression harness pass; validate_all.py PASS; DECISION_LOG chronology validator passes; no meta-governance loop resumes; and no unrelated untracked files remain.
+
 ## G75: Internal Prototype Fixture Coverage Matrix v1
 
 Gate G75 is passed after `INTERNAL_PROTOTYPE_FIXTURE_COVERAGE_MATRIX_V1.md`, `INTERNAL_PROTOTYPE_FIXTURE_TAXONOMY_V1.md`, `INTERNAL_PROTOTYPE_COVERAGE_GAP_ANALYSIS_V1.md`, and `INTERNAL_PROTOTYPE_FUTURE_FIXTURE_ADMISSION_CRITERIA.md` exist; `data/internal-prototype-fixture-coverage-matrix-v1.json` and `data/internal-prototype-fixture-coverage-matrix-v1.schema.json` exist; `internal/prototypes/controlled-engine-v0/fixture_coverage_analyzer.py` and `fixture_coverage_harness.py` exist; fixture coverage harness passes; decision_ref is DEC-093; sitemap remains exactly 19 URLs; route registry remains 19 entries; no new public route is created; no public benchmark/report/generator is introduced; no public output generator, engine, tool, API, upload, or scoring behavior is introduced; no external API/network behavior exists; `validators/validate_internal_prototype_fixture_coverage_matrix_v1.py` passes; validate_all.py PASS; DECISION_LOG chronology validator passes; no meta-governance loop resumes; and no unrelated untracked files remain.
@@ -476,6 +480,7 @@ Gate G56A is passed after DECISION_LOG.md DEC entries are in ascending numeric o
 | Sprint 60 | COMPLETE | G60 passed — Standard integrated across reference layer |
 | Sprint 61 | COMPLETE | G61 passed — Evidence Posture Protocol v1 Draft created |
 | Sprint 62 | COMPLETE | G62 passed — Protocol integrated across reference and standard layers |
+| Sprint 76 | COMPLETE | G76 passed — Targeted Synthetic Fixture Expansion v1 |
 | Sprint 75 | COMPLETE | G75 passed — Internal Prototype Fixture Coverage Matrix v1 |
 | Sprint 74 | COMPLETE | G74 passed — Internal Prototype Traceability and Interpretability Audit v1 |
 | Sprint 73 | COMPLETE | G73 passed — Controlled Internal Prototype v0 Hardening and Fixture Coverage |
@@ -489,7 +494,7 @@ Gate G56A is passed after DECISION_LOG.md DEC entries are in ascending numeric o
 | Sprint 65 | COMPLETE | G65 passed — Evidence Field visual system and accessibility hardened |
 | Sprint 64 | COMPLETE | G64 passed — Evidence Field Static Interface Embodiment v1 |
 | Sprint 63 | COMPLETE | G63 passed — Evidence Field Interface Thesis created |
-| Sprint 74+ | READY | G75 passed — Targeted Synthetic Fixture Expansion v1 when governed; public benchmark blocked |
+| Sprint 76+ | READY | G76 passed — Internal Prototype Compound Boundary Stress Test v1 when governed; public benchmark blocked |
 
 ## Governing Sentence
 

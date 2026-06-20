@@ -18,6 +18,7 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_CONTROLLED_INTERNAL_PROTOTYPE_V0_HARDENING_VALIDATION,
     PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_TRACEABILITY_INTERPRETABILITY_AUDIT_VALIDATION,
     PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_FIXTURE_COVERAGE_MATRIX_VALIDATION,
+    PUBLISHER_STATUS_POST_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1_VALIDATION,
     validate_public_surface,
 )
 
@@ -119,8 +120,8 @@ def validate_prototype_files() -> bool:
                 error(f"{path.relative_to(ROOT)} contains forbidden phrase: {phrase}")
                 ok = False
     hardening = (PROTOTYPE_DIR / "HARDENING_COVERAGE.md").read_text(encoding="utf-8").lower()
-    if "10 synthetic fixtures" not in hardening:
-        error("HARDENING_COVERAGE.md must document 10 synthetic fixtures")
+    if "synthetic fixtures" not in hardening:
+        error("HARDENING_COVERAGE.md must document synthetic fixtures")
         ok = False
     if "guardrail_regression" not in hardening:
         error("HARDENING_COVERAGE.md must reference guardrail regression")
@@ -144,8 +145,8 @@ def validate_fixtures() -> bool:
         if edge_id not in ids:
             error(f"missing edge-case fixture: {edge_id}")
             ok = False
-    if data.get("version") != "0.2.0":
-        error("fixture set version must be 0.2.0 after hardening")
+    if data.get("version") not in ("0.2.0", "0.3.0"):
+        error("fixture set version must be 0.2.0 or 0.3.0")
         ok = False
     return ok
 

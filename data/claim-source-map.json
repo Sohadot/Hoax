@@ -1705,6 +1705,37 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Internal Prototype Fixture Coverage Matrix v1 per DEC-093."
+    },
+    {
+      "claim_id": "CLAIM-0078",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md",
+        "TARGETED_FIXTURE_EXPANSION_ADMISSION_LOG_V1.md",
+        "TARGETED_FIXTURE_EXPANSION_COVERAGE_DELTA_V1.md",
+        "data/targeted-synthetic-fixture-expansion-v1.json",
+        "data/targeted-synthetic-fixture-expansion-v1.schema.json",
+        "internal/prototypes/controlled-engine-v0/fixtures/synthetic-fixtures-v0.json",
+        "internal/prototypes/controlled-engine-v0/targeted_fixture_expansion_harness.py",
+        "validators/validate_targeted_synthetic_fixture_expansion_v1.py",
+        "SPRINT_76_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0473",
+        "SOURCE-0474",
+        "SOURCE-0475",
+        "SOURCE-0476",
+        "SOURCE-0477",
+        "SOURCE-0478",
+        "SOURCE-0479",
+        "SOURCE-0480"
+      ],
+      "support_scope": "targeted synthetic fixture expansion v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Targeted Synthetic Fixture Expansion v1 per DEC-094."
     }
   ],
   "last_reviewed": "2026-06-20"
