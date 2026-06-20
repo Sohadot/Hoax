@@ -98,3 +98,5 @@ Internal red-team result fields:
 ## 7. Non-Product Boundary
 
 This sprint creates internal guardrail pressure validation only. It does not authorize public red-team reports, public model cards, public benchmark tables, detector claims, product UI, API, upload flow, scoring output, or public explanations.
+
+Sprint 79 adds Internal Prototype Output Admissibility Contract v1 (DEC-097) to govern admissibility before output form under separate sprint authorization.

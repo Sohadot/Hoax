@@ -273,6 +273,8 @@ Internal Prototype Compound Boundary Stress Test v1 (Sprint 77, DEC-095) validat
 
 Internal Prototype Guardrail Red-Team Pack v1 (Sprint 78, DEC-096) pressure-tests forbidden language collapse under adversarial linguistic vectors. Red-team results remain internal structured validation objects only.
 
+Internal Prototype Output Admissibility Contract v1 (Sprint 79, DEC-097) determines admissibility before output form. Forbidden-word avoidance alone is insufficient for admissibility.
+
 No prototype, public route, sitemap entry, input system, output generator, classifier, scorer, API, JavaScript surface, or public tool behavior is authorized by this document.
 
 ---
@@ -285,5 +287,6 @@ No prototype, public route, sitemap entry, input system, output generator, class
 *Updated Sprint 75 — Internal fixture coverage matrix status (DEC-093)*
 *Updated Sprint 77 — Internal compound boundary stress test status (DEC-095)*
 *Updated Sprint 78 — Internal guardrail red-team pack status (DEC-096)*
+*Updated Sprint 79 — Internal output admissibility contract status (DEC-097)*
 *Decision: DEC-087*
 *Date: 2026-06-20*

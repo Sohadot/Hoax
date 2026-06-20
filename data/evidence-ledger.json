@@ -882,6 +882,17 @@
       "status": "active",
       "last_reviewed": "2026-06-20",
       "notes": "Sprint 78 guardrail red-team pack. Fixture count remains sixteen. No public benchmark authorized."
+    },
+    {
+      "claim_id": "CLAIM-0081",
+      "claim_text": "Hoax.ai has adopted Internal Prototype Output Admissibility Contract v1 to verify whether internal structured results are admissible before any output form is considered valid for internal validation continuity.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md, INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_MATRIX_V1.md, INTERNAL_PROTOTYPE_OUTPUT_INADMISSIBILITY_FAILURE_MODES_V1.md, INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_REPAIR_POLICY_V1.md, data/internal-prototype-output-admissibility-contract-v1.json, data/internal-prototype-output-admissibility-contract-v1.schema.json, internal/prototypes/controlled-engine-v0/output_admissibility_contract.py, internal/prototypes/controlled-engine-v0/output_admissibility_harness.py, validators/validate_internal_prototype_output_admissibility_contract_v1.py, SPRINT_79_INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md, DECISION_LOG.md (DEC-097)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-20",
+      "notes": "Sprint 79 output admissibility contract. Fixture count remains sixteen. No public benchmark authorized."
     }
   ]
 }

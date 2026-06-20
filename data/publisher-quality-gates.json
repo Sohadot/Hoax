@@ -1086,6 +1086,24 @@
       "failure_condition": "internal_prototype_guardrail_red_team_pack_v1_not_met",
       "bypassable": false,
       "notes": "Internal Prototype Guardrail Red-Team Pack v1 completed Sprint 78 (DEC-096). Sixteen red-team vectors, forbidden language collapse model, guardrail red-team harness documented. Fixture count remains sixteen. Sitemap remains nineteen URLs. No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, forms, JavaScript, external connector, monetization, or public tool behavior authorized."
+    },
+    {
+      "gate_id": "PUB-GATE-0074",
+      "name": "Internal Prototype Output Admissibility Contract v1 Gate",
+      "status": "internal_prototype_output_admissibility_contract_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_79_INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md",
+      "failure_condition": "internal_prototype_output_admissibility_contract_v1_not_met",
+      "bypassable": false,
+      "notes": "Internal Prototype Output Admissibility Contract v1 completed Sprint 79 (DEC-097). Output admissibility contract, matrix, failure modes, repair policy, and harness documented. Fixture count remains sixteen. Sitemap remains nineteen URLs. No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, forms, JavaScript, external connector, monetization, or public tool behavior authorized."
     }
   ],
   "last_reviewed": "2026-06-20"

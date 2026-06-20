@@ -48,4 +48,8 @@ Run guardrail red-team validation (Sprint 78+):
 
 `py -3 internal/prototypes/controlled-engine-v0/guardrail_red_team_harness.py`
 
+Run output admissibility validation (Sprint 79+):
+
+`py -3 internal/prototypes/controlled-engine-v0/output_admissibility_harness.py`
+
 Do not deploy, link publicly, or treat this as a product feature.

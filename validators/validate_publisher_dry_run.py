@@ -554,6 +554,7 @@ def validate_state_machine() -> bool:
         "blocked_until_targeted_synthetic_fixture_expansion_v1_validation",
         "blocked_until_internal_prototype_compound_boundary_stress_test_validation",
         "blocked_until_internal_prototype_guardrail_red_team_pack_validation",
+        "blocked_until_internal_prototype_output_admissibility_contract_validation",
     ):
         error(f"publisher-state-machine.json: invalid current_system_state {current}")
         ok = False
@@ -733,6 +734,7 @@ def validate_cross_file() -> bool:
         "blocked_until_targeted_synthetic_fixture_expansion_v1_validation",
         "blocked_until_internal_prototype_compound_boundary_stress_test_validation",
         "blocked_until_internal_prototype_guardrail_red_team_pack_validation",
+        "blocked_until_internal_prototype_output_admissibility_contract_validation",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must remain blocked from publication, got {status}"

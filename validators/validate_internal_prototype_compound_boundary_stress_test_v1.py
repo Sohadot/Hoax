@@ -169,7 +169,7 @@ def validate_stress_code() -> bool:
     for path in list(PROTOTYPE_DIR.rglob("*.py")):
         text = path.read_text(encoding="utf-8")
         lower = text.lower()
-        phrase_scan = path.name not in {"output_guardrail_checker.py", "guardrail_regression.py", "guardrail_red_team_pack.py"}
+        phrase_scan = path.name not in {"output_guardrail_checker.py", "guardrail_regression.py", "guardrail_red_team_pack.py", "output_admissibility_contract.py", "output_admissibility_harness.py"}
         for term in FORBIDDEN_NETWORK + FORBIDDEN_INPUT + FORBIDDEN_FRAMEWORKS:
             if term in lower:
                 error(f"{path.relative_to(ROOT)} contains forbidden pattern: {term}")

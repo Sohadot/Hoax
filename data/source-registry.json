@@ -6001,6 +6001,106 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 78 audit record."
+    },
+    {
+      "source_id": "SOURCE-0500",
+      "source_title": "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md",
+      "source_type": "internal_governance",
+      "location": "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 79 output admissibility contract."
+    },
+    {
+      "source_id": "SOURCE-0501",
+      "source_title": "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_MATRIX_V1.md",
+      "source_type": "internal_governance",
+      "location": "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_MATRIX_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 79 output admissibility matrix."
+    },
+    {
+      "source_id": "SOURCE-0502",
+      "source_title": "INTERNAL_PROTOTYPE_OUTPUT_INADMISSIBILITY_FAILURE_MODES_V1.md",
+      "source_type": "internal_governance",
+      "location": "INTERNAL_PROTOTYPE_OUTPUT_INADMISSIBILITY_FAILURE_MODES_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 79 inadmissibility failure modes."
+    },
+    {
+      "source_id": "SOURCE-0503",
+      "source_title": "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_REPAIR_POLICY_V1.md",
+      "source_type": "internal_governance",
+      "location": "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_REPAIR_POLICY_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 79 admissibility repair policy."
+    },
+    {
+      "source_id": "SOURCE-0504",
+      "source_title": "data/internal-prototype-output-admissibility-contract-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/internal-prototype-output-admissibility-contract-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 79 admissibility contract JSON."
+    },
+    {
+      "source_id": "SOURCE-0505",
+      "source_title": "data/internal-prototype-output-admissibility-contract-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/internal-prototype-output-admissibility-contract-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 79 admissibility contract schema."
+    },
+    {
+      "source_id": "SOURCE-0506",
+      "source_title": "internal/prototypes/controlled-engine-v0/output_admissibility_contract.py",
+      "source_type": "internal_governance",
+      "location": "internal/prototypes/controlled-engine-v0/output_admissibility_contract.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 79 output admissibility contract module."
+    },
+    {
+      "source_id": "SOURCE-0507",
+      "source_title": "internal/prototypes/controlled-engine-v0/output_admissibility_harness.py",
+      "source_type": "internal_governance",
+      "location": "internal/prototypes/controlled-engine-v0/output_admissibility_harness.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 79 output admissibility harness."
+    },
+    {
+      "source_id": "SOURCE-0508",
+      "source_title": "validators/validate_internal_prototype_output_admissibility_contract_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_internal_prototype_output_admissibility_contract_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 79 admissibility contract validator."
+    },
+    {
+      "source_id": "SOURCE-0509",
+      "source_title": "SPRINT_79_INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_79_INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 79 audit record."
     }
   ]
 }

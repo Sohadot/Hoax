@@ -22,6 +22,8 @@ All fixtures remain synthetic, neutral, case-neutral, and free of real-person, c
 - `compound_boundary_stress_harness.py` — compound boundary stress validation (Sprint 77+)
 - `guardrail_red_team_pack.py` — guardrail red-team vector definitions (Sprint 78+)
 - `guardrail_red_team_harness.py` — guardrail red-team validation (Sprint 78+)
+- `output_admissibility_contract.py` — output admissibility evaluation (Sprint 79+)
+- `output_admissibility_harness.py` — output admissibility validation (Sprint 79+)
 - `regression_harness.py` — combined hardening validation entry point
 
 ## Coverage Governance (Sprint 75)
@@ -35,6 +37,10 @@ Eight internal stress cases test compound boundary classes against existing 16 s
 ## Guardrail Red-Team Coverage (Sprint 78)
 
 Sixteen internal red-team vectors pressure-test output-language guardrails against adversarial linguistic collapse (verdict, score, fake/real, accusation, certification, result-card, public-report shape). See `INTERNAL_PROTOTYPE_GUARDRAIL_RED_TEAM_PACK_V1.md` and `data/internal-prototype-guardrail-red-team-pack-v1.json`.
+
+## Output Admissibility Coverage (Sprint 79)
+
+Internal structured results are evaluated against the Output Admissibility Contract before being considered admissible for internal validation continuity. See `INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md` and `data/internal-prototype-output-admissibility-contract-v1.json`.
 
 ## Boundaries Preserved
 

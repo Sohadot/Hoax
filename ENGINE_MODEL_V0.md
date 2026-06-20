@@ -240,6 +240,8 @@ Internal Prototype Compound Boundary Stress Test v1 (Sprint 77, DEC-095) stress-
 
 Internal Prototype Guardrail Red-Team Pack v1 (Sprint 78, DEC-096) pressure-tests output-language guardrails using synthetic adversarial vectors. Red-team validation is internal-only and does not authorize public benchmarks, reports, scoring, or output generation.
 
+Internal Prototype Output Admissibility Contract v1 (Sprint 79, DEC-097) governs when internal structured results are admissible for internal validation continuity.
+
 No prototype, public route, sitemap entry, input system, output generator, classifier, scorer, API, JavaScript surface, or public tool behavior is authorized by this document.
 
 ---
@@ -253,5 +255,6 @@ No prototype, public route, sitemap entry, input system, output generator, class
 *Updated Sprint 75 — Internal fixture coverage matrix status (DEC-093)*
 *Updated Sprint 77 — Internal compound boundary stress test status (DEC-095)*
 *Updated Sprint 78 — Internal guardrail red-team pack status (DEC-096)*
+*Updated Sprint 79 — Internal output admissibility contract status (DEC-097)*
 *Decision: DEC-086*
 *Date: 2026-06-20*

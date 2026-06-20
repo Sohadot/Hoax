@@ -2292,6 +2292,45 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+**Sprint 79 — Internal Prototype Output Admissibility Contract v1**
+
+---
+
+## Sprint 79 — Internal Prototype Output Admissibility Contract v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Define internal output admissibility contract for structured results without public capability, new fixtures, or operational product behavior.
+
+### Deliverables
+
+- INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md
+- INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_MATRIX_V1.md
+- INTERNAL_PROTOTYPE_OUTPUT_INADMISSIBILITY_FAILURE_MODES_V1.md
+- INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_REPAIR_POLICY_V1.md
+- data/internal-prototype-output-admissibility-contract-v1.json
+- data/internal-prototype-output-admissibility-contract-v1.schema.json
+- internal/prototypes/controlled-engine-v0/output_admissibility_contract.py
+- internal/prototypes/controlled-engine-v0/output_admissibility_harness.py
+- validators/validate_internal_prototype_output_admissibility_contract_v1.py
+- SPRINT_79_INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md
+- DEC-097 appended to DECISION_LOG.md
+- PUB-GATE-0074 added
+- Publisher status -> blocked_until_internal_prototype_output_admissibility_contract_validation
+
+### Validation
+
+All harnesses and `validate_all.py` — PASS required.
+
+### Gate
+
+**Gate G79 passed.** Internal Prototype Admissibility Regression Suite v1 is the recommended next phase.
+
+### Next Phase
+
+**Sprint 80 — Internal Prototype Admissibility Regression Suite v1**
+
+---
+
 ## Sprint 78 — Internal Prototype Guardrail Red-Team Pack v1
 
 **Status:** COMPLETE — 2026-06-20

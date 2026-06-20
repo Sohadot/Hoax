@@ -1802,6 +1802,40 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Internal Prototype Guardrail Red-Team Pack v1 per DEC-096."
+    },
+    {
+      "claim_id": "CLAIM-0081",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md",
+        "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_MATRIX_V1.md",
+        "INTERNAL_PROTOTYPE_OUTPUT_INADMISSIBILITY_FAILURE_MODES_V1.md",
+        "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_REPAIR_POLICY_V1.md",
+        "data/internal-prototype-output-admissibility-contract-v1.json",
+        "data/internal-prototype-output-admissibility-contract-v1.schema.json",
+        "internal/prototypes/controlled-engine-v0/output_admissibility_contract.py",
+        "internal/prototypes/controlled-engine-v0/output_admissibility_harness.py",
+        "validators/validate_internal_prototype_output_admissibility_contract_v1.py",
+        "SPRINT_79_INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0500",
+        "SOURCE-0501",
+        "SOURCE-0502",
+        "SOURCE-0503",
+        "SOURCE-0504",
+        "SOURCE-0505",
+        "SOURCE-0506",
+        "SOURCE-0507",
+        "SOURCE-0508",
+        "SOURCE-0509"
+      ],
+      "support_scope": "internal prototype output admissibility contract v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Internal Prototype Output Admissibility Contract v1 per DEC-097."
     }
   ],
   "last_reviewed": "2026-06-20"

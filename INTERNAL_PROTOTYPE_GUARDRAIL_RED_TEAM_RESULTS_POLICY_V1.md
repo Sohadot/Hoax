@@ -49,3 +49,5 @@ Harness output is limited to:
 ## Disallowed Result Language
 
 Disallowed harness or result language includes: is fake, is real, verified true, verified false, confidence score, detection result, fraudulent, guilty, deceptive, pass rate, benchmark score, model performance, and public report output.
+
+Sprint 79 Output Admissibility Contract (DEC-097) extends result handling to admissibility status evaluation before any output form is considered valid.

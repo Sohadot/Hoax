@@ -67,6 +67,8 @@ Sprint 77 adds `compound_boundary_stress_analyzer.py`, `compound_boundary_stress
 
 Sprint 78 adds `guardrail_red_team_pack.py`, `guardrail_red_team_harness.py`, and Internal Prototype Guardrail Red-Team Pack v1 governance documents. Red-team vectors are synthetic linguistic pressure cases only; no new fixtures are added.
 
+Sprint 79 adds `output_admissibility_contract.py`, `output_admissibility_harness.py`, and Internal Prototype Output Admissibility Contract v1 governance documents. Admissibility evaluates internal structured results only; no new fixtures are added.
+
 ## Future Removal/Rollback Rule
 
 Any disqualifying drift requires rollback before commit. Public exposure fails the prototype boundary.

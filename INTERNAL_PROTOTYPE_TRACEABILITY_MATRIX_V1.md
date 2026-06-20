@@ -108,3 +108,5 @@ Traceability may support future internal debugging and governance audits only. I
 ## 11. Fixture Coverage Matrix Linkage
 
 Internal Prototype Fixture Coverage Matrix v1 (Sprint 75, DEC-093) maps traceability field coverage across synthetic fixtures and identifies gaps for future authorized fixture expansion.
+
+Internal Prototype Output Admissibility Contract v1 (Sprint 79, DEC-097) requires traceability refs as a condition of internal output admissibility.

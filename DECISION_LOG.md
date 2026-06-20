@@ -2548,3 +2548,31 @@ Sprint 77 verified compound boundary stress behavior. Sprint 78 now tests whethe
 - No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, JavaScript, form, report exporter, external connector, or public tool behavior is authorized.
 - Any future guardrail red-team expansion requires separate explicit sprint authorization.
 
+---
+
+## DEC-097 — Internal Prototype Output Admissibility Contract v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Internal Prototype Output Admissibility Contract v1 as an internal, non-public admissibility layer for Controlled Internal Prototype v0. The sprint defines admissibility requirements, admissibility status vocabulary, inadmissibility conditions, repair policy, required internal result fields, forbidden output shapes, and non-public boundary rules. It may add internal output admissibility contract and harness files that determine whether internal structured results are admissible for internal validation continuity. This sprint does not add new fixtures, public benchmarks, public reports, public routes, sitemap entries, public engine behavior, classifier behavior, upload workflows, scoring systems, APIs, analytics, forms, JavaScript, DNS/Cloudflare changes, custom-domain launch, monetization, external communication, public output generator, or public tool behavior.
+
+### Rationale
+
+Sprint 78 verified that guardrails resist linguistic red-team pressure. Sprint 79 now defines when an internal result is admissible at all. Avoiding forbidden words is not sufficient; admissibility requires posture basis, caveats, boundary checks, traceability, guardrail blocks, forbidden-transformation blocks, non-verdict confirmation, non-score confirmation, and non-public confirmation.
+
+### Implications
+
+- Internal Output Admissibility Contract v1 may be created.
+- Output admissibility matrix may be created.
+- Output inadmissibility failure modes may be created.
+- Output admissibility repair policy may be created.
+- Internal output admissibility contract module and harness may be added.
+- No new fixtures may be added in this sprint.
+- No public route may be created.
+- Sitemap remains exactly 19 URLs.
+- No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, JavaScript, form, report exporter, external connector, or public tool behavior is authorized.
+- Any future output admission expansion requires separate explicit sprint authorization.
+

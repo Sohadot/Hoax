@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Sprint 76 — Targeted Synthetic Fixture Expansion v1."""
+"""Validate Sprint 79 — Internal Prototype Output Admissibility Contract v1."""
 
 from __future__ import annotations
 
@@ -15,22 +15,24 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (  # noqa: E402
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
-    PUBLISHER_STATUS_POST_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1_VALIDATION,
-    PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_VALIDATION,
-    PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_GUARDRAIL_RED_TEAM_PACK_VALIDATION,
     PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_VALIDATION,
     validate_public_surface,
 )
 
-EXPANSION_DOC = "TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md"
-ADMISSION_LOG = "TARGETED_FIXTURE_EXPANSION_ADMISSION_LOG_V1.md"
-COVERAGE_DELTA = "TARGETED_FIXTURE_EXPANSION_COVERAGE_DELTA_V1.md"
-EXPANSION_JSON = "data/targeted-synthetic-fixture-expansion-v1.json"
-EXPANSION_SCHEMA = "data/targeted-synthetic-fixture-expansion-v1.schema.json"
-AUDIT = "SPRINT_76_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1.md"
+CONTRACT = "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md"
+MATRIX = "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_MATRIX_V1.md"
+FAILURE_MODES = "INTERNAL_PROTOTYPE_OUTPUT_INADMISSIBILITY_FAILURE_MODES_V1.md"
+REPAIR_POLICY = "INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_REPAIR_POLICY_V1.md"
+CONTRACT_JSON = "data/internal-prototype-output-admissibility-contract-v1.json"
+CONTRACT_SCHEMA = "data/internal-prototype-output-admissibility-contract-v1.schema.json"
+AUDIT = "SPRINT_79_INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_V1.md"
 FIXTURES_JSON = "internal/prototypes/controlled-engine-v0/fixtures/synthetic-fixtures-v0.json"
 
 PROTOTYPE_DIR = ROOT / "internal" / "prototypes" / "controlled-engine-v0"
+CONTRACT_FILES = [
+    PROTOTYPE_DIR / "output_admissibility_contract.py",
+    PROTOTYPE_DIR / "output_admissibility_harness.py",
+]
 
 FORBIDDEN_NETWORK = ["requests", "urllib.request", "httpx", "aiohttp", "socket"]
 FORBIDDEN_INPUT = ["input(", "argparse", "click", "typer"]
@@ -47,6 +49,30 @@ FORBIDDEN_PHRASES = [
     "guilty",
     "deceptive",
 ]
+FORBIDDEN_PHRASE_PATTERNS = [
+    re.compile(r"\bmanipulated\b", re.I),
+    re.compile(r"\bproven\b", re.I),
+    re.compile(r"\bcertified\b", re.I),
+    re.compile(r"\bconfirmed\b", re.I),
+]
+PHRASE_SCAN_EXEMPT = {
+    "output_guardrail_checker.py",
+    "guardrail_regression.py",
+    "guardrail_red_team_pack.py",
+    "output_admissibility_contract.py",
+    "output_admissibility_harness.py",
+}
+REQUIRED_VOCABULARY = ["admissible_internal", "repair_required", "not_assessable_for_output"]
+REQUIRED_INADMISSIBILITY = [
+    "missing caveats",
+    "boundary collapse",
+    "guardrail failure",
+    "traceability gap",
+    "report-shape",
+    "score leakage",
+    "verdict leakage",
+    "accusation-transfer",
+]
 FORBIDDEN_TERMS = [
     "rick",
     "linkedin",
@@ -55,26 +81,19 @@ FORBIDDEN_TERMS = [
     "buyer outreach",
     "marketing conversations",
 ]
-REQUIRED_EXPANSION_FIELDS = [
-    "coverage_gap_ref",
-    "expansion_reason",
-    "expected_required_caveats",
-    "expected_boundary_checks",
-    "expected_forbidden_transformations_blocked",
-    "expected_traceability_fields",
-]
-REQUIRED_GAP_TERMS = ["traceability_caveat", "compound boundary"]
 SOURCE_LOCS = [
-    EXPANSION_DOC,
-    ADMISSION_LOG,
-    COVERAGE_DELTA,
-    EXPANSION_JSON,
-    EXPANSION_SCHEMA,
-    FIXTURES_JSON,
-    "internal/prototypes/controlled-engine-v0/targeted_fixture_expansion_harness.py",
+    CONTRACT,
+    MATRIX,
+    FAILURE_MODES,
+    REPAIR_POLICY,
+    CONTRACT_JSON,
+    CONTRACT_SCHEMA,
+    "internal/prototypes/controlled-engine-v0/output_admissibility_contract.py",
+    "internal/prototypes/controlled-engine-v0/output_admissibility_harness.py",
     AUDIT,
-    "validators/validate_targeted_synthetic_fixture_expansion_v1.py",
+    "validators/validate_internal_prototype_output_admissibility_contract_v1.py",
 ]
+REQUIRED_FIXTURE_COUNT = 16
 
 
 def error(msg: str) -> None:
@@ -88,31 +107,31 @@ def load_json(rel: str) -> dict:
 
 def validate_artifacts() -> bool:
     ok = True
-    for rel in [EXPANSION_DOC, ADMISSION_LOG, COVERAGE_DELTA, EXPANSION_JSON, EXPANSION_SCHEMA, AUDIT]:
+    for rel in [CONTRACT, MATRIX, FAILURE_MODES, REPAIR_POLICY, CONTRACT_JSON, CONTRACT_SCHEMA, AUDIT]:
         if not (ROOT / rel).is_file():
             error(f"missing {rel}")
             ok = False
-    harness = PROTOTYPE_DIR / "targeted_fixture_expansion_harness.py"
-    if not harness.is_file():
-        error("missing targeted_fixture_expansion_harness.py")
-        ok = False
+    for path in CONTRACT_FILES:
+        if not path.is_file():
+            error(f"missing {path.relative_to(ROOT)}")
+            ok = False
     return ok
 
 
-def validate_expansion_json() -> bool:
+def validate_contract_json() -> bool:
     ok = True
-    data = load_json(EXPANSION_JSON)
-    _ = load_json(EXPANSION_SCHEMA)
-    if data.get("expansion_id") != "targeted-synthetic-fixture-expansion-v1":
-        error("expansion_id mismatch")
+    data = load_json(CONTRACT_JSON)
+    _ = load_json(CONTRACT_SCHEMA)
+    if data.get("contract_id") != "internal-prototype-output-admissibility-contract-v1":
+        error("contract_id mismatch")
         ok = False
-    if data.get("decision_ref") != "DEC-094":
-        error("decision_ref must be DEC-094")
+    if data.get("decision_ref") != "DEC-097":
+        error("decision_ref must be DEC-097")
         ok = False
-    if data.get("sprint") != "Sprint 76":
-        error("sprint must be Sprint 76")
+    if data.get("sprint") != "Sprint 79":
+        error("sprint must be Sprint 79")
         ok = False
-    if data.get("status") != "internal_non_public_targeted_fixture_expansion":
+    if data.get("status") != "internal_non_public_output_admissibility_contract":
         error("status mismatch")
         ok = False
     for key in [
@@ -127,13 +146,18 @@ def validate_expansion_json() -> bool:
         if data.get(key) is not False:
             error(f"{key} must be false")
             ok = False
-    gaps_text = " ".join(data.get("named_coverage_gaps_addressed", [])).lower()
-    for term in REQUIRED_GAP_TERMS:
-        if term not in gaps_text:
-            error(f"named_coverage_gaps_addressed missing {term}")
+    vocab = data.get("admissibility_status_vocabulary", [])
+    for item in REQUIRED_VOCABULARY:
+        if item not in vocab:
+            error(f"admissibility_status_vocabulary missing {item}")
             ok = False
-    if not data.get("fixture_admission_records"):
-        error("fixture_admission_records missing")
+    conditions = " ".join(data.get("inadmissibility_conditions", [])).lower()
+    for item in REQUIRED_INADMISSIBILITY:
+        if item not in conditions:
+            error(f"inadmissibility_conditions missing {item}")
+            ok = False
+    if data.get("fixture_count") != REQUIRED_FIXTURE_COUNT:
+        error("fixture_count must remain 16")
         ok = False
     return ok
 
@@ -161,47 +185,25 @@ def validate_surface() -> bool:
     return ok
 
 
-def validate_fixtures() -> bool:
+def validate_fixtures_unchanged() -> bool:
     ok = True
     fixtures = load_json(FIXTURES_JSON).get("fixtures", [])
-    count = len(fixtures)
-    if count <= 10 or count > 16:
-        error(f"fixture count must be >10 and <=16, got {count}")
+    if len(fixtures) != REQUIRED_FIXTURE_COUNT:
+        error(f"fixture count must remain {REQUIRED_FIXTURE_COUNT}, got {len(fixtures)}")
         ok = False
     expansion = [f for f in fixtures if f.get("coverage_gap_ref")]
-    if len(expansion) != count - 10:
-        error("every new fixture must include coverage_gap_ref")
+    if len(expansion) != 6:
+        error("no new fixtures may be added beyond Sprint 76 expansion set")
         ok = False
-    flags = {
-        "synthetic": True,
-        "real_person": False,
-        "current_event": False,
-        "political": False,
-        "legal": False,
-        "medical": False,
-        "financial_advice": False,
-        "company_accusatory": False,
-        "private_data": False,
-        "external_fact_check_target": False,
-    }
-    for fixture in expansion:
-        for field in REQUIRED_EXPANSION_FIELDS:
-            if not fixture.get(field):
-                error(f"{fixture.get('fixture_id')} missing {field}")
-                ok = False
-        for flag, expected in flags.items():
-            if fixture.get(flag) is not expected:
-                error(f"{fixture.get('fixture_id')} failed policy flag {flag}")
-                ok = False
     return ok
 
 
-def validate_prototype_code() -> bool:
+def validate_contract_code() -> bool:
     ok = True
     for path in list(PROTOTYPE_DIR.rglob("*.py")):
         text = path.read_text(encoding="utf-8")
         lower = text.lower()
-        phrase_scan = path.name not in {"output_guardrail_checker.py", "guardrail_regression.py", "guardrail_red_team_pack.py", "output_admissibility_contract.py", "output_admissibility_harness.py"}
+        phrase_scan = path.name not in PHRASE_SCAN_EXEMPT
         for term in FORBIDDEN_NETWORK + FORBIDDEN_INPUT + FORBIDDEN_FRAMEWORKS:
             if term in lower:
                 error(f"{path.relative_to(ROOT)} contains forbidden pattern: {term}")
@@ -213,6 +215,10 @@ def validate_prototype_code() -> bool:
         for phrase in FORBIDDEN_PHRASES:
             if phrase_scan and phrase in lower:
                 error(f"{path.relative_to(ROOT)} contains forbidden phrase: {phrase}")
+                ok = False
+        for pattern in FORBIDDEN_PHRASE_PATTERNS:
+            if phrase_scan and pattern.search(text):
+                error(f"{path.relative_to(ROOT)} contains forbidden phrase: {pattern.pattern}")
                 ok = False
     return ok
 
@@ -236,6 +242,21 @@ def _run_harness(rel: str, expected: str) -> bool:
 
 def validate_harnesses() -> bool:
     ok = True
+    if not _run_harness(
+        "output_admissibility_harness.py",
+        "controlled internal output admissibility validation passed",
+    ):
+        ok = False
+    if not _run_harness(
+        "guardrail_red_team_harness.py",
+        "controlled internal guardrail red-team validation passed",
+    ):
+        ok = False
+    if not _run_harness(
+        "compound_boundary_stress_harness.py",
+        "controlled internal compound boundary stress validation passed",
+    ):
+        ok = False
     if not _run_harness(
         "targeted_fixture_expansion_harness.py",
         "controlled internal targeted fixture expansion validation passed",
@@ -265,13 +286,17 @@ def validate_harnesses() -> bool:
 
 def validate_governance() -> bool:
     ok = True
-    if "DEC-094" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
-        error("DEC-094 missing from DECISION_LOG.md")
+    if "DEC-097" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
+        error("DEC-097 missing from DECISION_LOG.md")
         ok = False
-    if "validate_targeted_synthetic_fixture_expansion_v1.py" not in (
+    if "validate_internal_prototype_output_admissibility_contract_v1.py" not in (
         ROOT / "validators/validate_all.py"
     ).read_text(encoding="utf-8"):
-        error("validate_all.py must include Sprint 76 validator")
+        error("validate_all.py must include Sprint 79 validator")
+        ok = False
+    policy = load_json("data/publisher-governance-policy.json")
+    if policy.get("current_publisher_status") != PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_VALIDATION:
+        error("publisher status must be blocked_until_internal_prototype_output_admissibility_contract_validation")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}
     for loc in SOURCE_LOCS:
@@ -279,17 +304,17 @@ def validate_governance() -> bool:
             error(f"source registry missing {loc}")
             ok = False
     claims = load_json("data/evidence-ledger.json").get("claims", [])
-    if not any(c.get("claim_id") == "CLAIM-0078" for c in claims):
-        error("CLAIM-0078 missing")
+    if not any(c.get("claim_id") == "CLAIM-0081" for c in claims):
+        error("CLAIM-0081 missing")
         ok = False
     gates = load_json("data/publisher-quality-gates.json").get("gates", [])
-    if not any(g.get("gate_id") == "PUB-GATE-0071" for g in gates):
-        error("PUB-GATE-0071 missing")
+    if not any(g.get("gate_id") == "PUB-GATE-0074" for g in gates):
+        error("PUB-GATE-0074 missing")
         ok = False
-    if "Sprint 76 | COMPLETE | G76 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
-        error("master execution plan missing Sprint 76 completion row")
+    if "Sprint 79 | COMPLETE | G79 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
+        error("master execution plan missing Sprint 79 completion row")
         ok = False
-    for rel in [EXPANSION_DOC, ADMISSION_LOG, COVERAGE_DELTA, AUDIT]:
+    for rel in [CONTRACT, MATRIX, FAILURE_MODES, REPAIR_POLICY, AUDIT]:
         lower = (ROOT / rel).read_text(encoding="utf-8").lower()
         for term in FORBIDDEN_TERMS:
             if term in lower:
@@ -319,10 +344,10 @@ def main() -> int:
         fn()
         for fn in [
             validate_artifacts,
-            validate_expansion_json,
+            validate_contract_json,
             validate_surface,
-            validate_fixtures,
-            validate_prototype_code,
+            validate_fixtures_unchanged,
+            validate_contract_code,
             validate_harnesses,
             validate_governance,
             validate_cache,

@@ -20,6 +20,7 @@ from public_surface_checks import (  # noqa: E402
     PUBLISHER_STATUS_POST_TARGETED_SYNTHETIC_FIXTURE_EXPANSION_V1_VALIDATION,
     PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_COMPOUND_BOUNDARY_STRESS_TEST_VALIDATION,
     PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_GUARDRAIL_RED_TEAM_PACK_VALIDATION,
+    PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_OUTPUT_ADMISSIBILITY_CONTRACT_VALIDATION,
     validate_public_surface,
 )
 
@@ -191,7 +192,7 @@ def validate_traceability_code() -> bool:
     for path in list(PROTOTYPE_DIR.rglob("*.py")):
         text = path.read_text(encoding="utf-8")
         lower = text.lower()
-        phrase_scan = path.name not in {"output_guardrail_checker.py", "guardrail_regression.py", "guardrail_red_team_pack.py"}
+        phrase_scan = path.name not in {"output_guardrail_checker.py", "guardrail_regression.py", "guardrail_red_team_pack.py", "output_admissibility_contract.py", "output_admissibility_harness.py"}
         for term in FORBIDDEN_NETWORK + FORBIDDEN_INPUT + FORBIDDEN_FRAMEWORKS:
             if term in lower:
                 error(f"{path.relative_to(ROOT)} contains forbidden pattern: {term}")
