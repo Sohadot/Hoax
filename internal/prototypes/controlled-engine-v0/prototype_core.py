@@ -10,10 +10,23 @@ from fixture_loader import load_fixtures
 from model_loader import load_models
 from output_guardrail_checker import verify_internal_structure
 from protocol_mapper import map_protocol_steps
+from traceability_mapper import build_traceability_map
 
 ALLOWED_RESULT_KEYS = {
     "fixture_id",
+    "trace_id",
+    "traceability_map",
     "posture_state_candidate",
+    "posture_basis",
+    "protocol_step_refs",
+    "standard_principle_refs",
+    "evidence_condition_refs",
+    "boundary_check_refs",
+    "caveat_trigger_refs",
+    "guardrail_rule_refs",
+    "forbidden_transformation_refs",
+    "limitation_reason_refs",
+    "out_of_scope_reason_refs",
     "active_boundary_checks",
     "triggered_caveats",
     "prohibited_language_blocks",
@@ -22,6 +35,10 @@ ALLOWED_RESULT_KEYS = {
     "out_of_scope_reason",
     "guardrail_failure_flags",
     "validation_status",
+    "no_verdict_confirmation",
+    "no_score_confirmation",
+    "no_subject_accusation_confirmation",
+    "non_public_confirmation",
 }
 
 
@@ -38,11 +55,16 @@ def evaluate_fixture(fixture: dict[str, Any], models: dict[str, Any]) -> dict[st
     boundaries = evaluate_boundaries(fixture)
     caveats = map_caveats(fixture)
     protocol_map = map_protocol_steps(fixture)
-    _ = protocol_map  # internal mapping only; not emitted in structured output
 
     result: dict[str, Any] = {
         "fixture_id": fixture["fixture_id"],
         "posture_state_candidate": posture,
+        "posture_basis": [
+            "fixture_expected_allowed_posture_states",
+            "protocol_step_mapping",
+            "boundary_check_evaluation",
+            "guardrail_non_verdict_confirmation",
+        ],
         "active_boundary_checks": boundaries,
         "triggered_caveats": caveats,
         "required_output_constraints": fixture.get("forbidden_output_expectations", []),
@@ -55,11 +77,35 @@ def evaluate_fixture(fixture: dict[str, Any], models: dict[str, Any]) -> dict[st
         result["out_of_scope_reason"] = "scope_boundary_reached_stub"
 
     guardrail = verify_internal_structure(result)
+    traceability = build_traceability_map(
+        fixture,
+        posture,
+        fixture.get("forbidden_output_expectations", []),
+    )
+    result["trace_id"] = traceability["trace_id"]
+    result["traceability_map"] = traceability
+    result["protocol_step_refs"] = traceability["protocol_step_refs"]
+    result["standard_principle_refs"] = traceability["standard_principle_refs"]
+    result["evidence_condition_refs"] = traceability["evidence_condition_refs"]
+    result["boundary_check_refs"] = traceability["boundary_check_refs"]
+    result["caveat_trigger_refs"] = traceability["caveat_trigger_refs"]
+    result["guardrail_rule_refs"] = traceability["guardrail_rule_refs"]
+    result["forbidden_transformation_refs"] = traceability["forbidden_transformation_refs"]
+    result["limitation_reason_refs"] = (
+        ["limitation_status_dimension", "EPS-012"] if posture == "Not Assessable" else []
+    )
+    result["out_of_scope_reason_refs"] = (
+        ["scope_boundary_reached_stub", "output_boundary_status"] if posture == "Out of Scope" else []
+    )
     result["prohibited_language_blocks"] = guardrail["prohibited_language_blocks"]
     result["guardrail_failure_flags"] = guardrail["guardrail_failure_flags"]
     result["validation_status"] = "pass" if guardrail["passed"] else "guardrail_blocked"
+    result["no_verdict_confirmation"] = True
+    result["no_score_confirmation"] = True
+    result["no_subject_accusation_confirmation"] = True
+    result["non_public_confirmation"] = True
 
-    _ = models  # models loaded to confirm governed dependencies are present
+    _ = models, protocol_map  # governed dependencies loaded for internal traceability only
     return result
 
 

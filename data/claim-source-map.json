@@ -1637,6 +1637,40 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Controlled Internal Prototype v0 hardening per DEC-091."
+    },
+    {
+      "claim_id": "CLAIM-0076",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "INTERNAL_PROTOTYPE_TRACEABILITY_MATRIX_V1.md",
+        "INTERNAL_PROTOTYPE_INTERPRETABILITY_AUDIT_V1.md",
+        "INTERNAL_PROTOTYPE_TRACEABILITY_FAILURE_MODES.md",
+        "data/internal-prototype-traceability-map-v1.json",
+        "data/internal-prototype-traceability-map-v1.schema.json",
+        "internal/prototypes/controlled-engine-v0/traceability_mapper.py",
+        "internal/prototypes/controlled-engine-v0/interpretability_auditor.py",
+        "internal/prototypes/controlled-engine-v0/traceability_harness.py",
+        "validators/validate_internal_prototype_traceability_interpretability_audit_v1.py",
+        "SPRINT_74_INTERNAL_PROTOTYPE_TRACEABILITY_INTERPRETABILITY_AUDIT_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0453",
+        "SOURCE-0454",
+        "SOURCE-0455",
+        "SOURCE-0456",
+        "SOURCE-0457",
+        "SOURCE-0458",
+        "SOURCE-0459",
+        "SOURCE-0460",
+        "SOURCE-0461",
+        "SOURCE-0462"
+      ],
+      "support_scope": "internal prototype traceability and interpretability audit v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Internal Prototype Traceability and Interpretability Audit v1 per DEC-092."
     }
   ],
   "last_reviewed": "2026-06-20"

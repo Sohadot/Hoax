@@ -75,7 +75,7 @@ REQUIRED_STATES = [
     "retired",
 ]
 
-REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 69)]
+REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 70)]
 
 REQUIRED_WORKFLOW_IDS = [f"PUB-WORKFLOW-{i:04d}" for i in range(1, 16)]
 
@@ -377,6 +377,7 @@ def validate_state_machine() -> bool:
         "blocked_until_controlled_internal_prototype_v0_implementation_sprint",
         "blocked_until_controlled_internal_prototype_v0_validation",
         "blocked_until_controlled_internal_prototype_v0_hardening_validation",
+        "blocked_until_internal_prototype_traceability_interpretability_audit_validation",
     ):
         error(f"publisher-state-machine.json: invalid current_system_state {current}")
         ok = False

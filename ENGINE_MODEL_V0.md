@@ -228,6 +228,10 @@ Controlled Internal Prototype v0 Authorization Package (Sprint 71, DEC-089) defi
 
 Controlled Internal Prototype v0 was implemented in Sprint 72 (DEC-090) under `internal/prototypes/controlled-engine-v0/`. See `internal/prototypes/controlled-engine-v0/prototype_core.py` and `SPRINT_72_CONTROLLED_INTERNAL_PROTOTYPE_V0_IMPLEMENTATION_AUDIT.md`.
 
+## Internal Traceability and Interpretability Audit Status
+
+Internal Prototype Traceability and Interpretability Audit v1 (Sprint 74, DEC-092) adds deterministic trace IDs, fixture-to-protocol mappings, protocol-to-standard mappings, boundary-to-caveat mappings, and guardrail-to-forbidden-transformation mappings for internal auditability only. It does not authorize public explanation output.
+
 No prototype, public route, sitemap entry, input system, output generator, classifier, scorer, API, JavaScript surface, or public tool behavior is authorized by this document.
 
 ---
@@ -237,5 +241,6 @@ No prototype, public route, sitemap entry, input system, output generator, class
 *Updated Sprint 70 — Internal Non-Public Engine Prototype Charter dependency (DEC-088)*
 *Updated Sprint 71 — Authorization Package dependency (DEC-089)*
 *Updated Sprint 72 — Controlled Internal Prototype v0 implementation status (DEC-090)*
+*Updated Sprint 74 — Internal traceability and interpretability audit status (DEC-092)*
 *Decision: DEC-086*
 *Date: 2026-06-20*

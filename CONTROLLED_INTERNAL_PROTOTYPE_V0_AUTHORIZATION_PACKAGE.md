@@ -222,6 +222,10 @@ Sprint 72 must be separately prompted, separately validated, and separately comm
 
 Controlled Internal Prototype v0 was implemented in Sprint 72 (DEC-090) under `internal/prototypes/controlled-engine-v0/` as a local-only, non-public architecture test. It remains non-operational as a public product.
 
+## Sprint 74 Traceability Status
+
+Sprint 74 adds internal traceability and interpretability audit infrastructure only. It does not authorize public explanations, public reports, or public explanation UI.
+
 ---
 
 *Sprint 71 — Controlled Internal Prototype v0 Authorization Package*

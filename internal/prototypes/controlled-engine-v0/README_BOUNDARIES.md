@@ -8,6 +8,7 @@ This internal prototype **cannot be linked publicly**, **cannot be deployed**, a
 
 - Cannot accept uploads
 - Cannot generate reports or result cards
+- Cannot generate public explanations or explanation UI
 - Cannot expose API, UI, JavaScript, scoring, or analytics behavior
 - Cannot call external data sources or live web services
 

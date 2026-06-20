@@ -72,6 +72,13 @@ Before Sprint 72 implementation begins:
 - No URL submission ingestion
 - No account or private data ingestion
 
+## Traceability and Interpretability Checks
+
+- Every result must carry a deterministic `trace_id`
+- Every posture candidate must expose protocol, standard, boundary, caveat, and guardrail refs
+- Traceability must remain structured internal data only
+- No natural-language report generation or public explanation rendering
+
 ## Prototype Rollback Checks
 
 If disqualification triggers:

@@ -915,6 +915,7 @@ def validate_governance() -> bool:
         "blocked_until_controlled_internal_prototype_v0_implementation_sprint",
         "blocked_until_controlled_internal_prototype_v0_validation",
         "blocked_until_controlled_internal_prototype_v0_hardening_validation",
+        "blocked_until_internal_prototype_traceability_interpretability_audit_validation",
     ):
         error("publisher status must be blocked until public route candidate registration authorization governance")
         ok = False

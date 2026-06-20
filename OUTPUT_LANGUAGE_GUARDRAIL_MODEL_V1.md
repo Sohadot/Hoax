@@ -261,6 +261,10 @@ Controlled Internal Prototype v0 Authorization Package (Sprint 71, DEC-089) is t
 
 Controlled Internal Prototype v0 was implemented in Sprint 72 (DEC-090) under `internal/prototypes/controlled-engine-v0/` as a local-only, non-public, synthetic-fixture-bound architecture test. It remains non-operational as a public product. See `internal/prototypes/controlled-engine-v0/README.md` and `SPRINT_72_CONTROLLED_INTERNAL_PROTOTYPE_V0_IMPLEMENTATION_AUDIT.md`.
 
+## Internal Traceability and Interpretability Audit Status
+
+Internal Prototype Traceability and Interpretability Audit v1 (Sprint 74, DEC-092) links prohibited output families and forbidden transformations to structured internal audit refs. It permits internal traceability objects only and does not authorize public explanation rendering or report generation.
+
 No prototype, public route, sitemap entry, input system, output generator, classifier, scorer, API, JavaScript surface, or public tool behavior is authorized by this document.
 
 ---
@@ -269,5 +273,6 @@ No prototype, public route, sitemap entry, input system, output generator, class
 *Updated Sprint 70 — Internal Non-Public Engine Prototype Charter dependency (DEC-088)*
 *Updated Sprint 71 — Authorization Package dependency (DEC-089)*
 *Updated Sprint 72 — Controlled Internal Prototype v0 implementation status (DEC-090)*
+*Updated Sprint 74 — Internal traceability and interpretability audit status (DEC-092)*
 *Decision: DEC-087*
 *Date: 2026-06-20*

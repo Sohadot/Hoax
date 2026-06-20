@@ -996,6 +996,24 @@
       "failure_condition": "controlled_internal_prototype_v0_hardening_not_met",
       "bypassable": false,
       "notes": "Controlled Internal Prototype v0 hardened Sprint 73 (DEC-091). Ten synthetic fixtures, guardrail regression, regression harness. Sitemap remains nineteen URLs. No public engine, input system, output generator, classifier, upload, scoring, API, analytics, forms, JavaScript, external connector, monetization, or public tool behavior authorized."
+    },
+    {
+      "gate_id": "PUB-GATE-0069",
+      "name": "Internal Prototype Traceability and Interpretability Audit v1 Gate",
+      "status": "internal_prototype_traceability_interpretability_audit_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_74_INTERNAL_PROTOTYPE_TRACEABILITY_INTERPRETABILITY_AUDIT_V1.md",
+      "failure_condition": "internal_prototype_traceability_interpretability_audit_v1_not_met",
+      "bypassable": false,
+      "notes": "Internal Prototype Traceability and Interpretability Audit v1 completed Sprint 74 (DEC-092). Traceability matrix, interpretability audit, traceability map, and harness documented. Sitemap remains nineteen URLs. No public explanation layer, report generator, public engine, classifier, upload, scoring, API, analytics, forms, JavaScript, external connector, monetization, or public tool behavior authorized."
     }
   ],
   "last_reviewed": "2026-06-20"

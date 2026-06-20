@@ -81,6 +81,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_controlled_internal_prototype_v0_authorization_package.py",
     ROOT / "validators" / "validate_controlled_internal_prototype_v0_implementation.py",
     ROOT / "validators" / "validate_controlled_internal_prototype_v0_hardening.py",
+    ROOT / "validators" / "validate_internal_prototype_traceability_interpretability_audit_v1.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

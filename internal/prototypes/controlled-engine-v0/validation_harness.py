@@ -12,6 +12,21 @@ if str(PROTOTYPE_ROOT) not in sys.path:
 from prototype_core import ALLOWED_RESULT_KEYS, run_prototype  # noqa: E402
 
 REQUIRED_POSTURES = {"Supported", "Qualified", "Limited", "Not Assessable", "Out of Scope"}
+REQUIRED_TRACE_FIELDS = {
+    "trace_id",
+    "posture_basis",
+    "protocol_step_refs",
+    "standard_principle_refs",
+    "evidence_condition_refs",
+    "boundary_check_refs",
+    "caveat_trigger_refs",
+    "guardrail_rule_refs",
+    "forbidden_transformation_refs",
+    "no_verdict_confirmation",
+    "no_score_confirmation",
+    "no_subject_accusation_confirmation",
+    "non_public_confirmation",
+}
 
 
 def main() -> int:
@@ -21,6 +36,8 @@ def main() -> int:
     seen_postures: set[str] = set()
     for result in results:
         if set(result.keys()) - ALLOWED_RESULT_KEYS:
+            return 1
+        if not REQUIRED_TRACE_FIELDS.issubset(result.keys()):
             return 1
         if result.get("validation_status") != "pass":
             return 1

@@ -827,6 +827,17 @@
       "status": "active",
       "last_reviewed": "2026-06-20",
       "notes": "Sprint 73 prototype hardening. Sitemap remains nineteen URLs. No public operational capability."
+    },
+    {
+      "claim_id": "CLAIM-0076",
+      "claim_text": "Hoax.ai has adopted Internal Prototype Traceability and Interpretability Audit v1 to trace controlled internal prototype results to fixture basis, protocol steps, standard principles, boundary checks, caveat triggers, guardrail rules, and forbidden-transformation blocks.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "INTERNAL_PROTOTYPE_TRACEABILITY_MATRIX_V1.md, INTERNAL_PROTOTYPE_INTERPRETABILITY_AUDIT_V1.md, INTERNAL_PROTOTYPE_TRACEABILITY_FAILURE_MODES.md, data/internal-prototype-traceability-map-v1.json, data/internal-prototype-traceability-map-v1.schema.json, internal/prototypes/controlled-engine-v0/traceability_mapper.py, internal/prototypes/controlled-engine-v0/interpretability_auditor.py, internal/prototypes/controlled-engine-v0/traceability_harness.py, validators/validate_internal_prototype_traceability_interpretability_audit_v1.py, SPRINT_74_INTERNAL_PROTOTYPE_TRACEABILITY_INTERPRETABILITY_AUDIT_V1.md, DECISION_LOG.md (DEC-092)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-20",
+      "notes": "Sprint 74 traceability and interpretability audit. Sitemap remains nineteen URLs. No public explanation or report generation authorized."
     }
   ]
 }

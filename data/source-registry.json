@@ -5531,6 +5531,106 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 73 hardening validator."
+    },
+    {
+      "source_id": "SOURCE-0453",
+      "source_title": "INTERNAL_PROTOTYPE_TRACEABILITY_MATRIX_V1.md",
+      "source_type": "internal_governance",
+      "location": "INTERNAL_PROTOTYPE_TRACEABILITY_MATRIX_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 74 traceability matrix."
+    },
+    {
+      "source_id": "SOURCE-0454",
+      "source_title": "INTERNAL_PROTOTYPE_INTERPRETABILITY_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "INTERNAL_PROTOTYPE_INTERPRETABILITY_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 74 interpretability audit."
+    },
+    {
+      "source_id": "SOURCE-0455",
+      "source_title": "INTERNAL_PROTOTYPE_TRACEABILITY_FAILURE_MODES.md",
+      "source_type": "internal_governance",
+      "location": "INTERNAL_PROTOTYPE_TRACEABILITY_FAILURE_MODES.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 74 traceability failure modes."
+    },
+    {
+      "source_id": "SOURCE-0456",
+      "source_title": "data/internal-prototype-traceability-map-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/internal-prototype-traceability-map-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 74 traceability map JSON."
+    },
+    {
+      "source_id": "SOURCE-0457",
+      "source_title": "data/internal-prototype-traceability-map-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/internal-prototype-traceability-map-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 74 traceability map schema."
+    },
+    {
+      "source_id": "SOURCE-0458",
+      "source_title": "internal/prototypes/controlled-engine-v0/traceability_mapper.py",
+      "source_type": "internal_governance",
+      "location": "internal/prototypes/controlled-engine-v0/traceability_mapper.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 74 traceability mapper."
+    },
+    {
+      "source_id": "SOURCE-0459",
+      "source_title": "internal/prototypes/controlled-engine-v0/interpretability_auditor.py",
+      "source_type": "internal_governance",
+      "location": "internal/prototypes/controlled-engine-v0/interpretability_auditor.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 74 interpretability auditor."
+    },
+    {
+      "source_id": "SOURCE-0460",
+      "source_title": "internal/prototypes/controlled-engine-v0/traceability_harness.py",
+      "source_type": "internal_governance",
+      "location": "internal/prototypes/controlled-engine-v0/traceability_harness.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 74 traceability harness."
+    },
+    {
+      "source_id": "SOURCE-0461",
+      "source_title": "SPRINT_74_INTERNAL_PROTOTYPE_TRACEABILITY_INTERPRETABILITY_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_74_INTERNAL_PROTOTYPE_TRACEABILITY_INTERPRETABILITY_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 74 traceability and interpretability audit record."
+    },
+    {
+      "source_id": "SOURCE-0462",
+      "source_title": "validators/validate_internal_prototype_traceability_interpretability_audit_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_internal_prototype_traceability_interpretability_audit_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 74 traceability validator."
     }
   ]
 }

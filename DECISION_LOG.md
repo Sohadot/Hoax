@@ -2410,3 +2410,31 @@ Sprint 72 implemented the smallest admissible controlled internal prototype. Spr
 - No public engine, classifier, upload, scoring, API, analytics, JavaScript, form, report generator, result card, external connector, or public tool behavior is authorized.
 - Further prototype expansion requires separate explicit sprint authorization.
 
+---
+
+## DEC-092 — Internal Prototype Traceability and Interpretability Audit v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Internal Prototype Traceability and Interpretability Audit v1 as an internal, non-public traceability layer for Controlled Internal Prototype v0. The sprint defines traceability chain, fixture-to-protocol mapping, protocol-to-standard mapping, boundary-to-caveat mapping, guardrail-to-forbidden-transformation mapping, required internal explanation fields, interpretability audit rules, and traceability failure modes. This sprint may add internal traceability mapper, interpretability auditor, and traceability harness files, but it does not create public explanations, rendered reports, public routes, sitemap entries, public engine behavior, classifier behavior, upload workflows, scoring systems, APIs, analytics, forms, JavaScript, DNS/Cloudflare changes, custom-domain launch, monetization, external communication, public output generator, or public tool behavior.
+
+### Rationale
+
+Sprint 72 implemented Controlled Internal Prototype v0, and Sprint 73 hardened fixtures and guardrail regression. A controlled internal prototype must now prove not only that it can produce internal structured posture candidates, but that each internal result can be traced to its fixture basis, protocol steps, standard principles, boundary checks, caveat triggers, guardrail rules, and forbidden-transformation blocks. This prevents opaque prototype behavior and protects Hoax.ai from report-shape drift, verdict leakage, and public explanation drift.
+
+### Implications
+
+- Internal Prototype Traceability Matrix v1 may be created.
+- Internal Prototype Interpretability Audit v1 may be created.
+- Internal Prototype Traceability Failure Modes document may be created.
+- Internal traceability mapper may be added.
+- Internal interpretability auditor may be added.
+- Internal traceability harness may be added.
+- No public route may be created.
+- Sitemap remains exactly 19 URLs.
+- No public explanation layer, report generator, public engine, classifier, upload, scoring, API, analytics, JavaScript, form, report exporter, external connector, or public tool behavior is authorized.
+- Any future public-facing interpretability or reporting concept requires separate explicit sprint authorization.
+
