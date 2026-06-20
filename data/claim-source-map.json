@@ -1407,6 +1407,25 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Evidence Field Interface Thesis per DEC-081. First public interface-thesis route."
+    },
+    {
+      "claim_id": "CLAIM-0066",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "SPRINT_64_EVIDENCE_FIELD_STATIC_INTERFACE_EMBODIMENT_V1_AUDIT.md",
+        "DECISION_LOG.md",
+        "interface/evidence-field/index.html"
+      ],
+      "source_refs": [
+        "SOURCE-0401",
+        "SOURCE-0402",
+        "SOURCE-0400"
+      ],
+      "support_scope": "evidence field static interface embodiment v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Evidence Field Static Interface Embodiment v1 per DEC-082. In-place enhancement of interface thesis page."
     }
   ],
   "last_reviewed": "2026-06-19"

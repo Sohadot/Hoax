@@ -2162,3 +2162,27 @@ Hoax.ai has established a reference layer, Evidence Posture Standard v1, Evidenc
 - No public operational interface, engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
 - Future interface embodiment may be considered only after Sprint 63 validation passes.
 
+---
+
+## DEC-082 — Evidence Field Static Interface Embodiment v1 Adopted
+
+**Date:** 2026-06-19
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Evidence Field Static Interface Embodiment v1 to visually embody the Evidence Field Interface Thesis inside the existing /interface/evidence-field/ page. This sprint adds a static, accessible, non-operational interface embodiment that shows evidence layers, protocol path, standard alignment, boundary rails, posture states, and output restraint without creating a public tool, engine, classifier, upload workflow, scoring system, API, analytics, forms, JavaScript, DNS/Cloudflare change, custom domain launch, monetization, or public operational interface.
+
+### Rationale
+
+Sprint 63 established the public interface thesis. The next step is to demonstrate that Hoax.ai's interface can embody the asset's thesis rather than merely describe it. A static embodiment allows the evidence-field model to become visible while preserving all boundaries: no detector dashboard, no upload workflow, no scan action, no score, no fake/real verdict, and no automated result. This strengthens Hoax.ai's interface layer without prematurely creating tool behavior.
+
+### Implications
+
+- /interface/evidence-field/ may be enhanced in place.
+- Static HTML/CSS visual structures may be added.
+- Sitemap remains exactly 19 URLs.
+- No new public route is authorized.
+- No public operational interface, engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
+- Future interface work may proceed only if it remains standard-aligned, protocol-aware, and non-operational until explicitly authorized.
+

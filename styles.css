@@ -550,6 +550,169 @@ strong {
   .site-footer { padding: 2.5rem var(--gutter); }
 }
 
+/* ─── Evidence Field Static Embodiment v1 ───────────── */
+
+.evidence-field-embodiment-section {
+  border-top: 1px solid var(--border);
+}
+
+.evidence-field-fallback {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.evidence-field-embodiment {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+}
+
+.evidence-field-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.evidence-field-zone {
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent);
+  background: var(--bg);
+}
+
+.evidence-field-zone h3 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.65rem;
+}
+
+.evidence-field-zone p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.evidence-field-zone-boundary {
+  border-left-color: var(--amber);
+  background: var(--bg-surface);
+}
+
+.evidence-field-zone-boundary h3 {
+  color: var(--amber-text);
+}
+
+.evidence-field-zone-posture .posture-state-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+
+.evidence-field-zone-posture .posture-state-list li {
+  padding: 0.35rem 0 0.35rem 0.75rem;
+  border-left: 2px solid var(--border);
+  margin-bottom: 0.35rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.protocol-path-list {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  counter-reset: protocol-step;
+}
+
+.protocol-path-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.protocol-step-id {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  flex-shrink: 0;
+  min-width: 4.5rem;
+}
+
+.boundary-rail {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.boundary-rail-block {
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+}
+
+.boundary-rail-block h3 {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.boundary-rail-allowed {
+  border-left: 3px solid var(--accent);
+}
+
+.boundary-rail-allowed h3 {
+  color: var(--accent);
+}
+
+.boundary-rail-prohibited {
+  border-left: 3px solid var(--amber);
+}
+
+.boundary-rail-prohibited h3 {
+  color: var(--amber-text);
+}
+
+.boundary-rail-block ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.boundary-rail-block li {
+  padding: 0.3rem 0;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+@media (min-width: 640px) {
+  .evidence-field-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .evidence-field-zone-boundary,
+  .evidence-field-zone-posture {
+    grid-column: 1 / -1;
+  }
+
+  .boundary-rail {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* ─── Reduced Motion ────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {

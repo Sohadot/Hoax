@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hoax.ai Evidence Field Interface Thesis</title>
-  <meta name="description" content="Hoax.ai Evidence Field Interface Thesis defines the public interface direction for visualizing evidence posture, protocol sequence, boundaries, and interpretation risk without detector-dashboard, upload, scoring, or automated verdict behavior.">
+  <meta name="description" content="Hoax.ai Evidence Field Interface Thesis and Static Embodiment v1 define the public interface direction for visualizing evidence posture, protocol sequence, boundaries, and interpretation risk without detector-dashboard, upload, scoring, or automated verdict behavior.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://hoax.ai/interface/evidence-field/">
   <meta property="og:type" content="website">
@@ -80,6 +80,148 @@
         <p>Posture State Layer displays categorical labels from the standard—never numeric ranks. Supported does not mean true; Not Assessable does not mean false. Visual treatment must reinforce that discipline with typography and hierarchy, not with traffic-light color logic.</p>
       </section>
 
+      <section class="reference-section evidence-field-embodiment-section" aria-labelledby="static-embodiment">
+        <h2 id="static-embodiment">Evidence Field Static Embodiment v1</h2>
+        <p>Sprint 64 adds a static, accessible visual structure that embodies the interface thesis below. This is semantic HTML and CSS only—no JavaScript, no forms, no inputs, no upload areas, no scan controls, no score meters, and no result cards. Each zone represents an evidence condition or boundary, not an automated output. Read top to bottom; zones are related conditions, not steps toward a verdict.</p>
+        <p class="evidence-field-fallback">If styles are unavailable, the ordered list below still conveys the full evidence-field structure. No color, animation, or layout is required for comprehension.</p>
+
+        <div class="evidence-field-embodiment" role="region" aria-label="Evidence field static embodiment with eleven conceptual zones">
+          <ol class="evidence-field-grid">
+            <li class="evidence-field-zone">
+              <h3>Artifact Layer</h3>
+              <p>Observed object under review—format, structure, and observable properties. Artifact condition is described; no subject guilt or intent is assigned. This layer anchors review in what can be seen on the artifact, not who produced it.</p>
+            </li>
+            <li class="evidence-field-zone">
+              <h3>Claim Layer</h3>
+              <p>Statement attached to or derived from the artifact. Claims may drift across circulation; traceability to source basis remains required. A claim is evaluated as text-in-context, not as a truth verdict.</p>
+            </li>
+            <li class="evidence-field-zone">
+              <h3>Source Basis Layer</h3>
+              <p>Available source records within scope. Source confidence describes chain posture—not truth certification. Weak source basis limits how strongly any posture may be stated.</p>
+            </li>
+            <li class="evidence-field-zone">
+              <h3>Provenance Layer</h3>
+              <p>Custody path or documented gap. Provenance gaps limit interpretation but do not prove manipulation. A gap is a boundary fact, not an accusation.</p>
+            </li>
+            <li class="evidence-field-zone">
+              <h3>Context Layer</h3>
+              <p>Situational frames affecting interpretive reach. Missing context limits posture; context collapse must be visible before stronger language appears.</p>
+            </li>
+            <li class="evidence-field-zone">
+              <h3>Traceability Layer</h3>
+              <p>Claim-to-source linkage integrity from <a href="/reference/claim-source-traceability/">Claim–Source Traceability</a>. Weak traceability limits output strength; the interface shows the link, not a fact-check authority.</p>
+            </li>
+            <li class="evidence-field-zone">
+              <h3>Evidence Limitation Layer</h3>
+              <p>Support envelope from <a href="/reference/evidence-limitation/">Evidence Limitation</a>. Shows what can be said, what must be qualified, and what cannot be decided from available evidence.</p>
+            </li>
+            <li class="evidence-field-zone">
+              <h3>Interpretation Risk Layer</h3>
+              <p>Overreading danger from <a href="/reference/interpretation-risk/">Interpretation Risk</a>. Risk is a restraint signal—not a verdict about truth or falsity.</p>
+            </li>
+            <li class="evidence-field-zone evidence-field-zone-boundary">
+              <h3>Attribution Boundary Layer</h3>
+              <p>Barrier preventing artifact condition from becoming subject accusation. Governed by <a href="/reference/attribution-boundary/">Attribution Boundary</a> and <a href="/reference/artifact-subject-separation/">Artifact–Subject Separation</a>. This layer is visually and textually prominent because subject-transfer is the highest-risk interface failure mode.</p>
+            </li>
+            <li class="evidence-field-zone">
+              <h3>Output Boundary Layer</h3>
+              <p>Allowed and prohibited output language from <a href="/reference/output-boundary/">Output Boundary</a>. Output restraint is part of the interface—not an afterthought panel.</p>
+            </li>
+            <li class="evidence-field-zone evidence-field-zone-posture">
+              <h3>Evidence Posture Layer</h3>
+              <p>Categorical posture states only—no numeric ranks:</p>
+              <ul class="posture-state-list">
+                <li><strong>Supported</strong> — evidence supports stated artifact condition within boundaries</li>
+                <li><strong>Qualified</strong> — support exists with explicit caveats</li>
+                <li><strong>Limited</strong> — narrow support envelope; strong claims refused</li>
+                <li><strong>Not Assessable</strong> — insufficient basis for posture assignment</li>
+                <li><strong>Out of Scope</strong> — review outside governed artifact scope</li>
+              </ul>
+              <p>Supported does not mean true. Not Assessable does not mean false. No traffic-light presentation. No headline “result” dominates this field.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="reference-section" aria-labelledby="protocol-path-static">
+        <h2 id="protocol-path-static">Protocol Path</h2>
+        <p>The following path maps the static embodiment to <a href="/protocol/evidence-posture/">Evidence Posture Protocol v1 Draft</a> steps EP-P01 through EP-P17. It is a non-scoring progression showing review sequence—not automated execution.</p>
+        <p><strong>This path is explanatory and non-operational.</strong> It does not execute review, produce a result, classify an artifact, or generate a score. No public protocol runner exists on this surface.</p>
+        <ol class="protocol-path-list">
+          <li><span class="protocol-step-id">EP-P01</span> Identify the artifact</li>
+          <li><span class="protocol-step-id">EP-P02</span> Identify the claim</li>
+          <li><span class="protocol-step-id">EP-P03</span> Locate the source basis</li>
+          <li><span class="protocol-step-id">EP-P04</span> Assess source confidence</li>
+          <li><span class="protocol-step-id">EP-P05</span> Review provenance continuity</li>
+          <li><span class="protocol-step-id">EP-P06</span> Review context completeness</li>
+          <li><span class="protocol-step-id">EP-P07</span> Check claim-source traceability</li>
+          <li><span class="protocol-step-id">EP-P08</span> Review evidence chain continuity</li>
+          <li><span class="protocol-step-id">EP-P09</span> Check synthetic fragility</li>
+          <li><span class="protocol-step-id">EP-P10</span> Check context collapse</li>
+          <li><span class="protocol-step-id">EP-P11</span> Check claim drift</li>
+          <li><span class="protocol-step-id">EP-P12</span> Define evidence limitation</li>
+          <li><span class="protocol-step-id">EP-P13</span> Assess interpretation risk</li>
+          <li><span class="protocol-step-id">EP-P14</span> Apply attribution boundary</li>
+          <li><span class="protocol-step-id">EP-P15</span> Apply output boundary</li>
+          <li><span class="protocol-step-id">EP-P16</span> Assign evidence posture state</li>
+          <li><span class="protocol-step-id">EP-P17</span> Produce bounded language only</li>
+        </ol>
+        <p>Each step relates to EPS principles and reference concepts. Visualization documents sequence for institutional audit; the interface does not walk the path on behalf of the reviewer.</p>
+      </section>
+
+      <section class="reference-section" aria-labelledby="boundary-rail">
+        <h2 id="boundary-rail">Boundary Rail</h2>
+        <p>The boundary rail makes allowed and prohibited inference visible before any output language forms. It is a static guardrail—not an interactive control.</p>
+        <div class="boundary-rail">
+          <div class="boundary-rail-block boundary-rail-allowed">
+            <h3>Allowed</h3>
+            <ul>
+              <li>evidence condition</li>
+              <li>limited posture</li>
+              <li>source caveat</li>
+              <li>provenance caveat</li>
+              <li>context caveat</li>
+              <li>traceability caveat</li>
+              <li>interpretation risk caveat</li>
+              <li>attribution boundary caveat</li>
+              <li>bounded output language</li>
+            </ul>
+          </div>
+          <div class="boundary-rail-block boundary-rail-prohibited">
+            <h3>Prohibited</h3>
+            <ul>
+              <li>fake/real verdict</li>
+              <li>subject guilt</li>
+              <li>deception intent</li>
+              <li>source fraud claim</li>
+              <li>manipulation proof</li>
+              <li>responsibility assignment</li>
+              <li>score</li>
+              <li>automated result</li>
+              <li>upload classification</li>
+            </ul>
+          </div>
+        </div>
+        <p>The terms <strong>fake</strong> and <strong>real</strong> appear here only as prohibited-language examples—not as interface states, labels, or posture values.</p>
+      </section>
+
+      <section class="reference-section" aria-labelledby="reading-the-field">
+        <h2 id="reading-the-field">Reading the Field</h2>
+        <p>Read the static embodiment from top to bottom. Each zone is a condition under review—not a step toward a single outcome. Layers coexist; none should dominate as a “detection result.”</p>
+        <ul class="related-concepts">
+          <li>Zones represent artifact, claim, source, provenance, context, traceability, limitation, interpretation risk, attribution boundary, output boundary, and posture—together, not as a funnel.</li>
+          <li>Boundaries constrain what may be said; they are not decorative borders.</li>
+          <li>Posture state emerges conceptually from reviewed conditions—it is not auto-generated by this page.</li>
+          <li>No result is generated here. This is evidence-field and protocol-visualization doctrine embodied in static HTML.</li>
+          <li>Reject upload-centered layout, scan metaphor, traffic-light verdict presentation, confidence-score meter, and result-card framing.</li>
+        </ul>
+      </section>
+
+      <section class="reference-section" aria-labelledby="embodiment-non-operational">
+        <h2 id="embodiment-non-operational">Static Embodiment Non-Operational Status</h2>
+        <p>Evidence Field Static Embodiment v1 is not a tool and is not an engine, classifier, scanner, detector, upload interface, scoring system, API, analytics system, automated report, moderation action, or verdict behavior. It is not a detector dashboard. It is not a scanner. It is not a classifier. It is not an upload interface. It is not a scoring system. It is not an API. It is not an automated verdict interface. The static field shows relationships and boundaries only.</p>
+      </section>
+
       <section class="reference-section" aria-labelledby="evidence-field-diagram" role="region" aria-label="Evidence field diagram text fallback">
         <h2 id="evidence-field-diagram">Evidence Field Map (Text Diagram)</h2>
         <p>The following static text diagram is the accessible fallback for any future visual evidence-field layout. No animation or color-only meaning is required to understand it.</p>
@@ -108,8 +250,17 @@
 
       <section class="reference-section" aria-labelledby="standard-alignment">
         <h2 id="standard-alignment">Standard Alignment</h2>
-        <p>The interface must obey <a href="/standard/evidence-posture/">Evidence Posture Standard v1</a>. Allowed language boundaries and prohibited language boundaries must be visible—not buried. Posture states and support conditions from the standard govern any future posture display. The interface must not convert Supported into truth certification, Limited into weakness accusation, or Not Assessable into hidden false judgment.</p>
-        <p>No verdict conversion. No subject accusation. Standard Alignment Markers in a future interface would indicate which EPS principles constrain the current view. This thesis page does not implement markers; it defines the requirement.</p>
+        <p>The static embodiment must obey <a href="/standard/evidence-posture/">Evidence Posture Standard v1</a>. Selected EPS principles govern how each zone may be read:</p>
+        <ul class="related-concepts">
+          <li><strong>EPS-001</strong> — evidence condition before conclusion; zones precede any posture label</li>
+          <li><strong>EPS-002</strong> — artifact condition is not subject guilt; Artifact and Attribution Boundary layers enforce this</li>
+          <li><strong>EPS-006</strong> — output must remain inside support boundaries; Output Boundary and Evidence Limitation layers make this visible</li>
+          <li><strong>EPS-012</strong> — evidence limitation defines responsible speech; limitation is a first-class zone</li>
+          <li><strong>EPS-013</strong> — interpretation risk requires output restraint; risk is visible, not hidden</li>
+          <li><strong>EPS-014</strong> — attribution boundary prevents subject-transfer overclaim; boundary rail reinforces refusal</li>
+        </ul>
+        <p>Allowed language boundaries and prohibited language boundaries must remain visible—not buried. Posture states and support conditions from the standard govern the Evidence Posture Layer. The interface must not convert Supported into truth certification, Limited into weakness accusation, or Not Assessable into hidden false judgment.</p>
+        <p>No verdict conversion. No subject accusation. Standard Alignment Markers in a future interactive layer would indicate which EPS principles constrain each view; this static embodiment demonstrates the requirement without implementing markers.</p>
       </section>
 
       <section class="reference-section" aria-labelledby="boundary-viz">

@@ -19,6 +19,7 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_STANDARD_V1,
     PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_PROTOCOL_V1_DRAFT,
     PUBLISHER_STATUS_POST_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD,
+    PUBLISHER_STATUS_POST_EVIDENCE_FIELD_STATIC_INTERFACE_EMBODIMENT_V1,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PRODUCTION_BATCH_3,
     validate_public_surface,
 )
@@ -406,8 +407,9 @@ def validate_governance() -> bool:
         PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_STANDARD_V1,
         PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_PROTOCOL_V1_DRAFT,
         PUBLISHER_STATUS_POST_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD,
+        PUBLISHER_STATUS_POST_EVIDENCE_FIELD_STATIC_INTERFACE_EMBODIMENT_V1,
     ):
-        error("publisher status must be batch 3, standard v1, protocol v1 draft, or interface thesis validation")
+        error("publisher status must be batch 3, standard v1, protocol v1 draft, interface thesis, or static embodiment v1 validation")
         ok = False
     gate = next(
         (g for g in load("data/publisher-quality-gates.json").get("gates", []) if g.get("gate_id") == "PUB-GATE-0055"),

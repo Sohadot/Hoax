@@ -139,3 +139,13 @@ Sprint 63 created the public interface-thesis route at `/interface/evidence-fiel
 The public thesis makes evidence-field framing and detector-dashboard rejection legible on the public surface. Future interface embodiment remains blocked until separate governance authorizes Sprint 64+ work.
 
 **Next phase after Sprint 63 validation:** Sprint 64 — Evidence Field Static Interface Embodiment v1.
+
+---
+
+## Sprint 64 Update — Static Interface Embodiment v1 Added
+
+Sprint 64 enhanced `/interface/evidence-field/` in place with **Evidence Field Static Interface Embodiment v1** (DEC-082). The static HTML/CSS structure shows eleven evidence layers, protocol path EP-P01 through EP-P17, standard alignment markers, boundary rail, posture states, and Reading the Field guidance. Sitemap remains exactly nineteen URLs. No new route was created.
+
+This embodiment is non-operational: no engine, classifier, upload workflow, scoring system, API, analytics, forms, JavaScript, or automated verdict behavior.
+
+**Next phase after Sprint 64 validation:** Sprint 65 — Evidence Field Visual System and Accessibility Hardening.

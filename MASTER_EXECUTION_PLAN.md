@@ -103,6 +103,9 @@ A phase gate is a validation checkpoint. The next phase does not open until the 
 | G61 | Evidence Posture Protocol v1 Draft | Sprint 61 validator PASS |
 | G62 | Protocol Integration, Standard Alignment, and Interface Readiness | Sprint 62 validator PASS |
 | G63 | Public Interface Thesis and Evidence Field Design Foundation | Sprint 63 validator PASS |
+| G64 | Evidence Field Static Interface Embodiment v1 | Sprint 64 validator PASS |
+
+**Gate G64 passed.** Evidence Field Static Interface Embodiment v1 added in place at `/interface/evidence-field/`. Sitemap remains nineteen URLs. No operational interface authorized.
 
 **Gate G63 passed.** Evidence Field Interface Thesis created at `/interface/evidence-field/`. Sitemap expanded to nineteen URLs. No operational interface authorized.
 
@@ -298,6 +301,10 @@ Gate G58 is passed after the four Batch 3 pages are deepened in place with Stand
 
 Gate G59 is passed after `/standard/evidence-posture/` exists with all required standard sections, EPS-001 through EPS-014, five posture states, allowed and prohibited output language, standard matrix, and boundary rules; sitemap contains exactly 17 URLs; exactly one new standard route is created; DEC-077 exists in DECISION_LOG.md; CLAIM-0063 exists; SPRINT_59_EVIDENCE_POSTURE_STANDARD_V1_AUDIT.md exists; `validators/validate_evidence_posture_standard_v1_public.py` exists; validate_all.py PASS; DECISION_LOG chronology validator passes; prototype files are not modified; no Python cache files are tracked or staged; no meta-governance loop resumes; and no engine, classifier, upload, scoring, API, analytics, forms, JavaScript, DNS, Cloudflare, custom domain launch, monetization, or public tool behavior is introduced.
 
+## G64: Evidence Field Static Interface Embodiment v1
+
+Gate G64 is passed after `/interface/evidence-field/` includes static embodiment v1 with eleven evidence layers, protocol path EP-P01 through EP-P17, standard alignment, boundary rail, posture states without scoring, and non-operational status; no new route is created; sitemap remains exactly 19 URLs; DEC-082 exists in DECISION_LOG.md; CLAIM-0066 exists; SPRINT_64_EVIDENCE_FIELD_STATIC_INTERFACE_EMBODIMENT_V1_AUDIT.md exists; `validators/validate_evidence_field_static_interface_embodiment_v1.py` exists; validate_all.py PASS; DECISION_LOG chronology validator passes; prototype files are not modified; no Python cache files are tracked or staged; no meta-governance loop resumes; and no engine, classifier, upload, scoring, API, analytics, forms, JavaScript, DNS, Cloudflare, custom domain launch, monetization, or public tool behavior is introduced.
+
 ## G63: Public Interface Thesis and Evidence Field Design Foundation
 
 Gate G63 is passed after `/interface/evidence-field/` exists with all required interface-thesis sections, evidence-field framing, detector-dashboard rejection, standard and protocol links, and non-operational status; sitemap contains exactly 19 URLs; exactly one new interface-thesis route is created; DEC-081 exists in DECISION_LOG.md; CLAIM-0065 exists; SPRINT_63_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD_AUDIT.md exists; `validators/validate_public_interface_thesis_evidence_field.py` exists; validate_all.py PASS; DECISION_LOG chronology validator passes; prototype files are not modified; no Python cache files are tracked or staged; no meta-governance loop resumes; and no engine, classifier, upload, scoring, API, analytics, forms, JavaScript, DNS, Cloudflare, custom domain launch, monetization, or public tool behavior is introduced.
@@ -395,8 +402,9 @@ Gate G56A is passed after DECISION_LOG.md DEC entries are in ascending numeric o
 | Sprint 60 | COMPLETE | G60 passed — Standard integrated across reference layer |
 | Sprint 61 | COMPLETE | G61 passed — Evidence Posture Protocol v1 Draft created |
 | Sprint 62 | COMPLETE | G62 passed — Protocol integrated across reference and standard layers |
+| Sprint 64 | COMPLETE | G64 passed — Evidence Field Static Interface Embodiment v1 |
 | Sprint 63 | COMPLETE | G63 passed — Evidence Field Interface Thesis created |
-| Sprint 64+ | READY | G63 passed — Static interface embodiment when governance allows; engine/classifier blocked |
+| Sprint 65+ | READY | G64 passed — Visual system hardening when governance allows; engine/classifier blocked |
 
 ## Governing Sentence
 

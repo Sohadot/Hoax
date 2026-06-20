@@ -717,6 +717,17 @@
       "status": "active",
       "last_reviewed": "2026-06-19",
       "notes": "Sprint 63 creates public interface-thesis route at /interface/evidence-field/. Sitemap expands to nineteen URLs. No operational interface, engine, classifier, upload, scoring, API, analytics, forms, JavaScript, or public tool behavior authorized."
+    },
+    {
+      "claim_id": "CLAIM-0066",
+      "claim_text": "Hoax.ai has adopted Evidence Field Static Interface Embodiment v1 inside the public interface thesis page.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "SPRINT_64_EVIDENCE_FIELD_STATIC_INTERFACE_EMBODIMENT_V1_AUDIT.md, DECISION_LOG.md (DEC-082), interface/evidence-field/index.html",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-19",
+      "notes": "Sprint 64 adds static interface embodiment in place at /interface/evidence-field/. Sitemap remains nineteen URLs. No new route. No operational interface, engine, classifier, upload, scoring, API, analytics, forms, JavaScript, or public tool behavior authorized."
     }
   ]
 }

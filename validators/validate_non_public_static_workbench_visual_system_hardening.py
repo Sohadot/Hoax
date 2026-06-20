@@ -410,6 +410,7 @@ def validate_publisher_governance() -> bool:
         "blocked_until_evidence_posture_standard_v1_validation",
         "blocked_until_evidence_posture_protocol_v1_draft_validation",
         "blocked_until_public_interface_thesis_evidence_field_validation",
+        "blocked_until_evidence_field_static_interface_embodiment_v1_validation",
     ):
         error(f"publisher status must be {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_HARDENING}")
         ok = False
