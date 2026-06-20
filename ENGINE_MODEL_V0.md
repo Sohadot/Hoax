@@ -210,12 +210,17 @@ The model must prohibit:
 
 ## 13. Future Model Gate
 
-A future internal prototype may be considered only after Engine Model v0 validation passes and a separate sprint explicitly authorizes controlled non-public prototyping.
+A future internal prototype may be considered only after Engine Model v0 validation passes, Output Language Guardrail Model v1 validation passes (DEC-087), and a separate sprint explicitly authorizes controlled non-public prototyping.
+
+## Output Language Guardrail Dependency
+
+Evidence Posture Engine Model v0 maps evidence conditions and protocol structure. Output Language Guardrail Model v1 (Sprint 69, DEC-087) maps **allowed and prohibited output language**, linguistic primitives, posture-state grammar, and boundary transformation rules. Any future engine-facing output must obey both the model and the guardrail. See `OUTPUT_LANGUAGE_GUARDRAIL_MODEL_V1.md` and `data/output-language-guardrail-model-v1.json`.
 
 No prototype, public route, sitemap entry, input system, output generator, classifier, scorer, API, JavaScript surface, or public tool behavior is authorized by this document.
 
 ---
 
 *Sprint 68 — Evidence Posture Engine Model v0*
+*Updated Sprint 69 — Output Language Guardrail Model v1 dependency (DEC-087)*
 *Decision: DEC-086*
 *Date: 2026-06-20*

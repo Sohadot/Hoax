@@ -2258,6 +2258,40 @@ Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, cust
 
 ---
 
+## Sprint 69 — Output Language Guardrail Model v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Create internal non-operational Output Language Guardrail Model v1 defining allowed and prohibited output language without operational capability.
+
+### Deliverables
+
+- OUTPUT_LANGUAGE_GUARDRAIL_MODEL_V1.md
+- data/output-language-guardrail-model-v1.json
+- data/output-language-guardrail-model-v1.schema.json
+- validators/validate_output_language_guardrail_model_v1.py
+- SPRINT_69_OUTPUT_LANGUAGE_GUARDRAIL_MODEL_V1_AUDIT.md
+- ENGINE_MODEL_V0.md updated
+- ENGINE_BOUNDARY_CHARTER.md updated
+- DEC-087 appended to DECISION_LOG.md
+- PUB-GATE-0064 added
+- Publisher status → blocked_until_output_language_guardrail_model_v1_validation
+
+### Validation
+
+`py -3 validators/validate_all.py` — PASS required for sprint closure.
+
+### Gate
+
+**Gate G69 passed.** Internal Non-Public Engine Prototype Charter is the recommended next phase.
+
+### Next Phase
+
+**Sprint 70 — Internal Non-Public Engine Prototype Charter**
+
+Public engine, classifier, upload, scoring, API, analytics, monetization, and public tool behavior remain blocked until explicit governed decisions.
+
+---
+
 ## Sprint 68 — Evidence Posture Engine Model v0
 
 **Status:** COMPLETE — 2026-06-20

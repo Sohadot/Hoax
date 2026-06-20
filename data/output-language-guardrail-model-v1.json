@@ -1,0 +1,371 @@
+{
+  "guardrail_id": "output-language-guardrail-model-v1",
+  "name": "Output Language Guardrail Model v1",
+  "version": "1.0.0",
+  "status": "internal_non_operational_guardrail_model",
+  "decision_ref": "DEC-087",
+  "sprint": "Sprint 69",
+  "public_route_authorized": false,
+  "public_output_generator_authorized": false,
+  "public_engine_authorized": false,
+  "classifier_authorized": false,
+  "scoring_authorized": false,
+  "api_authorized": false,
+  "javascript_authorized": false,
+  "source_authority": [
+    "evidence_posture_standard_v1",
+    "evidence_posture_protocol_v1_draft",
+    "engine_boundary_charter",
+    "evidence_posture_engine_model_v0"
+  ],
+  "linguistic_primitives": [
+    {
+      "primitive_id": "LP-001",
+      "name": "evidence_posture_statement",
+      "definition": "Categorical posture description without verdict",
+      "function": "Name artifact/claim condition under standard vocabulary",
+      "allowed_use": "Supported, Qualified, Limited, Not Assessable, Out of Scope phrasing",
+      "forbidden_misuse": "fake/real labels, subject guilt, deception proof",
+      "standard_relation": "EPS-005, EPS-006",
+      "protocol_relation": "EP-P16",
+      "engine_model_relation": "posture_state"
+    },
+    {
+      "primitive_id": "LP-002",
+      "name": "support_limit",
+      "definition": "Boundary on how strongly language may claim support",
+      "function": "Prevent overclaim from partial evidence",
+      "allowed_use": "supports bounded reading, does not establish",
+      "forbidden_misuse": "truth certification, certainty inflation",
+      "standard_relation": "EPS-012",
+      "protocol_relation": "EP-P12",
+      "engine_model_relation": "evidence_limitation"
+    },
+    {
+      "primitive_id": "LP-003",
+      "name": "caveat",
+      "definition": "Proportionate qualification attached to output",
+      "function": "Preserve honesty under weak conditions",
+      "allowed_use": "source, provenance, context, traceability, limitation, risk caveats",
+      "forbidden_misuse": "caveat omission, headline certainty",
+      "standard_relation": "EPS-003 through EPS-004",
+      "protocol_relation": "EP-P04 through EP-P06",
+      "engine_model_relation": "permitted_output_types"
+    },
+    {
+      "primitive_id": "LP-004",
+      "name": "boundary_reminder",
+      "definition": "Explicit restatement of output boundary",
+      "function": "Block drift into verdict or subject transfer",
+      "allowed_use": "artifact condition does not support subject attribution",
+      "forbidden_misuse": "moderation action, enforcement recommendation",
+      "standard_relation": "EPS-006, EPS-014",
+      "protocol_relation": "EP-P14, EP-P15",
+      "engine_model_relation": "output_boundary_check"
+    },
+    {
+      "primitive_id": "LP-005",
+      "name": "non_transfer_rule",
+      "definition": "Prohibition on artifact-to-subject inference",
+      "function": "Preserve artifact-subject separation",
+      "allowed_use": "artifact-only scope language",
+      "forbidden_misuse": "subject guilt, responsibility assignment",
+      "standard_relation": "EPS-002, EPS-014",
+      "protocol_relation": "EP-P14",
+      "engine_model_relation": "artifact_subject_separation_check"
+    },
+    {
+      "primitive_id": "LP-006",
+      "name": "interpretation_restraint",
+      "definition": "Narrow language under high interpretive risk",
+      "function": "Prevent accusation from ambiguity",
+      "allowed_use": "interpretation risk requires restraint",
+      "forbidden_misuse": "blame, motive inference, deception default",
+      "standard_relation": "EPS-013",
+      "protocol_relation": "EP-P13",
+      "engine_model_relation": "interpretation_risk_status"
+    },
+    {
+      "primitive_id": "LP-007",
+      "name": "source_basis_qualifier",
+      "definition": "Source-relationship language without certification",
+      "function": "Describe source condition in bounds",
+      "allowed_use": "source basis is limited, requires qualification",
+      "forbidden_misuse": "fraud label, verified true/false",
+      "standard_relation": "EPS-003",
+      "protocol_relation": "EP-P03, EP-P04",
+      "engine_model_relation": "source_confidence"
+    },
+    {
+      "primitive_id": "LP-008",
+      "name": "provenance_qualifier",
+      "definition": "Chain/origin language without manipulation proof",
+      "function": "Name provenance gap or continuity",
+      "allowed_use": "provenance condition limits interpretation",
+      "forbidden_misuse": "manipulation proven, concealment proof",
+      "standard_relation": "EPS-004",
+      "protocol_relation": "EP-P05",
+      "engine_model_relation": "provenance_status"
+    },
+    {
+      "primitive_id": "LP-009",
+      "name": "traceability_qualifier",
+      "definition": "Claim-to-source mapping language",
+      "function": "Govern claim strength",
+      "allowed_use": "claim-source relationship requires qualification",
+      "forbidden_misuse": "deception default from weak traceability",
+      "standard_relation": "EPS-007",
+      "protocol_relation": "EP-P07",
+      "engine_model_relation": "traceability_status"
+    },
+    {
+      "primitive_id": "LP-010",
+      "name": "limitation_qualifier",
+      "definition": "Envelope-edge language for partial evidence",
+      "function": "Define responsible speech limits",
+      "allowed_use": "evidence limitation envelope applies",
+      "forbidden_misuse": "falsehood from gap",
+      "standard_relation": "EPS-012",
+      "protocol_relation": "EP-P12",
+      "engine_model_relation": "limitation_status"
+    },
+    {
+      "primitive_id": "LP-011",
+      "name": "attribution_boundary_qualifier",
+      "definition": "Scope lock to artifact review",
+      "function": "Block subject-transfer overclaim",
+      "allowed_use": "does not transfer to subject attribution",
+      "forbidden_misuse": "creator intent, guilt",
+      "standard_relation": "EPS-014",
+      "protocol_relation": "EP-P14",
+      "engine_model_relation": "attribution_boundary_status"
+    },
+    {
+      "primitive_id": "LP-012",
+      "name": "output_boundary_constraint",
+      "definition": "Refusal of prohibited phrasing",
+      "function": "Enforce standard language gates",
+      "allowed_use": "refuse fake/real, scores, enforcement language",
+      "forbidden_misuse": "detector result cards, public verdict framing",
+      "standard_relation": "EPS-006",
+      "protocol_relation": "EP-P15, EP-P17",
+      "engine_model_relation": "output_boundary_check"
+    }
+  ],
+  "allowed_output_families": [
+    "evidence posture statement",
+    "support condition statement",
+    "qualification statement",
+    "source caveat",
+    "provenance caveat",
+    "context caveat",
+    "traceability caveat",
+    "claim drift caveat",
+    "evidence limitation caveat",
+    "interpretation risk caveat",
+    "attribution boundary caveat",
+    "output boundary caveat",
+    "not assessable statement",
+    "out of scope statement",
+    "bounded next-reading suggestion"
+  ],
+  "prohibited_output_families": [
+    "fake/real verdict",
+    "truth/falsity verdict",
+    "lie/deception finding",
+    "deception finding",
+    "manipulation proof",
+    "fraud accusation",
+    "subject guilt",
+    "responsibility assignment",
+    "creator intent",
+    "legal conclusion",
+    "moderation/enforcement recommendation",
+    "numeric score",
+    "confidence percentage",
+    "upload classification result",
+    "automated result card",
+    "public detector result"
+  ],
+  "posture_state_language_rules": [
+    {
+      "posture_state": "Supported",
+      "allowed_phrasing": ["supports a Supported posture reading", "bounded output language"],
+      "prohibited_phrasing": ["verified true", "authentic", "not manipulated"],
+      "required_caveat_families": ["source caveat", "provenance caveat when applicable"],
+      "boundary_reminders": ["artifact-subject separation", "output boundary discipline"]
+    },
+    {
+      "posture_state": "Qualified",
+      "allowed_phrasing": ["Qualified reading with explicit conditions", "requires qualification"],
+      "prohibited_phrasing": ["full support", "confidence percentage", "detector-style labels"],
+      "required_caveat_families": ["source basis qualifier", "traceability qualifier when partial"],
+      "boundary_reminders": ["qualification is not certification"]
+    },
+    {
+      "posture_state": "Limited",
+      "allowed_phrasing": ["Limited posture reading only", "evidence limitation envelope"],
+      "prohibited_phrasing": ["likely fake", "probably deceptive", "numeric rank"],
+      "required_caveat_families": ["evidence limitation caveat", "interpretation risk caveat when active"],
+      "boundary_reminders": ["limitation is not falsehood"]
+    },
+    {
+      "posture_state": "Not Assessable",
+      "allowed_phrasing": ["not assessable from the available material", "cannot assess"],
+      "prohibited_phrasing": ["hidden judgment", "failure", "fake default"],
+      "required_caveat_families": ["not assessable statement", "prerequisite failure named"],
+      "boundary_reminders": ["not assessable is valid protected posture"]
+    },
+    {
+      "posture_state": "Out of Scope",
+      "allowed_phrasing": ["out of scope for evidence posture review", "scope boundary named"],
+      "prohibited_phrasing": ["subject accusation", "enforcement recommendation"],
+      "required_caveat_families": ["output boundary caveat"],
+      "boundary_reminders": ["scope boundary is not verdict"]
+    }
+  ],
+  "output_certainty_expressions": [
+    {"expression": "supports", "meaning": "material conditions align for bounded posture", "not_equivalent_to": "verified true"},
+    {"expression": "qualifies", "meaning": "support with explicit conditions", "not_equivalent_to": "partial score"},
+    {"expression": "limits", "meaning": "language must remain narrow", "not_equivalent_to": "low confidence percent"},
+    {"expression": "does not establish", "meaning": "insufficient for stronger posture", "not_equivalent_to": "false"},
+    {"expression": "cannot assess", "meaning": "prerequisites fail for posture", "not_equivalent_to": "hidden judgment"},
+    {"expression": "remains bounded by", "meaning": "output envelope active", "not_equivalent_to": "verdict pending"},
+    {"expression": "requires caveat", "meaning": "qualification mandatory", "not_equivalent_to": "weakness score"},
+    {"expression": "does not transfer to subject attribution", "meaning": "artifact-subject separation preserved", "not_equivalent_to": "innocence or guilt"}
+  ],
+  "template_families": [
+    {"template_id": "TF-001", "pattern": "The available evidence supports a [posture] reading.", "status": "conceptual_non_operational"},
+    {"template_id": "TF-002", "pattern": "The source basis is [condition], so the output must remain [bounded/qualified/limited].", "status": "conceptual_non_operational"},
+    {"template_id": "TF-003", "pattern": "The provenance condition limits interpretation.", "status": "conceptual_non_operational"},
+    {"template_id": "TF-004", "pattern": "The claim-source relationship requires qualification.", "status": "conceptual_non_operational"},
+    {"template_id": "TF-005", "pattern": "The artifact condition does not support subject attribution.", "status": "conceptual_non_operational"},
+    {"template_id": "TF-006", "pattern": "The evidence condition is not assessable from the available material.", "status": "conceptual_non_operational"},
+    {"template_id": "TF-007", "pattern": "Interpretation risk is high; output language must remain restrained.", "status": "conceptual_non_operational"}
+  ],
+  "required_caveat_rules": [
+    {"trigger": "source_confidence_low", "required_caveat": "source caveat"},
+    {"trigger": "provenance_gap", "required_caveat": "provenance caveat"},
+    {"trigger": "context_collapse", "required_caveat": "context caveat"},
+    {"trigger": "weak_traceability", "required_caveat": "traceability caveat"},
+    {"trigger": "claim_drift", "required_caveat": "drift caveat"},
+    {"trigger": "evidence_limitation", "required_caveat": "limitation caveat"},
+    {"trigger": "high_interpretation_risk", "required_caveat": "interpretation risk caveat"},
+    {"trigger": "attribution_boundary_risk", "required_caveat": "subject-transfer caveat"},
+    {"trigger": "output_boundary_risk", "required_caveat": "prohibited-language guardrail"}
+  ],
+  "forbidden_term_controls": {
+    "forbidden_as_output_conclusions": [
+      "fake", "real", "lie", "lied", "deception", "deceptive", "fraud", "fraudulent",
+      "manipulated", "manipulation proven", "guilty", "responsible", "intended to deceive",
+      "verified true", "verified false", "score", "confidence percent", "detection result"
+    ],
+    "allowed_only_as_prohibited_examples": ["fake", "real", "score", "detector", "upload", "scan"]
+  },
+  "boundary_transformation_rules": [
+    {
+      "rule_id": "limitation_to_falsehood",
+      "unsafe_pattern": "evidence limitation becomes falsehood",
+      "violation": "EPS-012",
+      "safe_alternative": "evidence limitation envelope applies",
+      "validator_detectable_terms": ["therefore false", "proven untrue"]
+    },
+    {
+      "rule_id": "drift_to_deception",
+      "unsafe_pattern": "claim drift becomes deception",
+      "violation": "EPS-011",
+      "safe_alternative": "claim drift caveat applies",
+      "validator_detectable_terms": ["deceptive intent", "lied"]
+    },
+    {
+      "rule_id": "gap_to_manipulation",
+      "unsafe_pattern": "provenance gap becomes manipulation",
+      "violation": "EPS-004",
+      "safe_alternative": "provenance condition limits interpretation",
+      "validator_detectable_terms": ["manipulation proven", "concealed"]
+    },
+    {
+      "rule_id": "risk_to_verdict",
+      "unsafe_pattern": "interpretation risk becomes verdict",
+      "violation": "EPS-013",
+      "safe_alternative": "interpretation risk requires restraint",
+      "validator_detectable_terms": ["guilty", "responsible"]
+    },
+    {
+      "rule_id": "artifact_to_subject_guilt",
+      "unsafe_pattern": "artifact condition becomes subject guilt",
+      "violation": "EPS-002, EPS-014",
+      "safe_alternative": "does not transfer to subject attribution",
+      "validator_detectable_terms": ["subject guilt", "creator intent"]
+    },
+    {
+      "rule_id": "synthetic_to_fake",
+      "unsafe_pattern": "synthetic fragility becomes fake label",
+      "violation": "EPS-008",
+      "safe_alternative": "synthetic fragility caveat; not fake label",
+      "validator_detectable_terms": ["fake", "not real"]
+    }
+  ],
+  "canonical_language_assets": [
+    "evidence posture",
+    "bounded output language",
+    "artifact-subject separation",
+    "non-transfer language",
+    "evidence limitation envelope",
+    "interpretation restraint",
+    "source-basis qualifier",
+    "provenance caveat",
+    "output boundary discipline",
+    "posture without verdict",
+    "evidence condition without accusation",
+    "not assessable posture",
+    "out of scope posture",
+    "claim-source traceability",
+    "attribution boundary"
+  ],
+  "failure_modes": [
+    "verdict leakage",
+    "detector drift",
+    "score drift",
+    "caveat omission",
+    "subject-transfer leakage",
+    "synthetic-to-fake leakage",
+    "limitation-to-falsehood leakage",
+    "drift-to-deception leakage",
+    "output certainty inflation",
+    "public result-card framing"
+  ],
+  "future_prototype_dependencies": [
+    "evidence_posture_engine_model_v0_validation_pass",
+    "output_language_guardrail_model_v1_validation_pass",
+    "explicit_sprint_authorization_for_controlled_non_public_prototype"
+  ],
+  "validator_targets": [
+    "posture_states_present",
+    "prohibited_outputs_present",
+    "caveat_triggers_present",
+    "transformation_rules_present",
+    "no_verdict_language_leakage",
+    "no_scoring_language_leakage",
+    "sitemap_19_urls",
+    "no_new_routes"
+  ],
+  "operational_boundaries": {
+    "no_public_engine": true,
+    "no_output_generator": true,
+    "no_classifier": true,
+    "no_detector": true,
+    "no_scanner": true,
+    "no_upload": true,
+    "no_scoring": true,
+    "no_api": true,
+    "no_analytics": true,
+    "no_forms": true,
+    "no_javascript": true,
+    "no_external_outreach": true,
+    "no_dns": true,
+    "no_monetization": true,
+    "no_public_tool_behavior": true
+  },
+  "last_reviewed": "2026-06-20"
+}

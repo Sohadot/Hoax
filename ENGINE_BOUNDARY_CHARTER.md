@@ -76,9 +76,16 @@ Evidence Posture Engine Model v0 was adopted in Sprint 68 (DEC-086) as an intern
 
 A future internal prototype may be considered only after Engine Model v0 validation passes and a separate sprint explicitly authorizes controlled non-public prototyping.
 
+## Output Language Guardrail Model v1 Status
+
+Output Language Guardrail Model v1 was adopted in Sprint 69 (DEC-087) as an internal, non-operational language-governance layer derived from the standard, protocol, Engine Boundary Charter, and Engine Model v0. The guardrail defines linguistic primitives, allowed and prohibited output families, posture-state language rules, required caveats, forbidden term controls, and boundary transformation rules without creating an output generator or public engine. See `OUTPUT_LANGUAGE_GUARDRAIL_MODEL_V1.md` and `data/output-language-guardrail-model-v1.json`.
+
+A future internal non-public prototype may be considered only after Output Language Guardrail Model v1 validation passes and a separate sprint explicitly authorizes it.
+
 ---
 
 *Sprint 67 — Engine Boundary Charter and Public Reference SEO Authority Map v1*
 *Updated Sprint 68 — Engine Model v0 adoption (DEC-086)*
+*Updated Sprint 69 — Output Language Guardrail Model v1 (DEC-087)*
 *Decision: DEC-085*
 *Date: 2026-06-20*

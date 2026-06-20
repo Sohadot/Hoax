@@ -1512,6 +1512,28 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Evidence Posture Engine Model v0 per DEC-086."
+    },
+    {
+      "claim_id": "CLAIM-0071",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "OUTPUT_LANGUAGE_GUARDRAIL_MODEL_V1.md",
+        "data/output-language-guardrail-model-v1.json",
+        "data/output-language-guardrail-model-v1.schema.json",
+        "SPRINT_69_OUTPUT_LANGUAGE_GUARDRAIL_MODEL_V1_AUDIT.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0421",
+        "SOURCE-0422",
+        "SOURCE-0423",
+        "SOURCE-0425"
+      ],
+      "support_scope": "output language guardrail model v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Output Language Guardrail Model v1 per DEC-087."
     }
   ],
   "last_reviewed": "2026-06-20"

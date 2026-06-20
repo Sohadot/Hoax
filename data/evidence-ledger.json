@@ -772,6 +772,17 @@
       "status": "active",
       "last_reviewed": "2026-06-20",
       "notes": "Sprint 68 engine model v0. Sitemap remains nineteen URLs. No public engine, input system, or output generator authorized."
+    },
+    {
+      "claim_id": "CLAIM-0071",
+      "claim_text": "Hoax.ai has adopted Output Language Guardrail Model v1 as an internal, non-operational language-governance model before any prototype is authorized.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "OUTPUT_LANGUAGE_GUARDRAIL_MODEL_V1.md, data/output-language-guardrail-model-v1.json, data/output-language-guardrail-model-v1.schema.json, SPRINT_69_OUTPUT_LANGUAGE_GUARDRAIL_MODEL_V1_AUDIT.md, DECISION_LOG.md (DEC-087)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-20",
+      "notes": "Sprint 69 output language guardrail. Sitemap remains nineteen URLs. No output generator or public engine authorized."
     }
   ]
 }

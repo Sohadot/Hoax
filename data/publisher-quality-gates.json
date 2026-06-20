@@ -908,6 +908,23 @@
       "failure_condition": "evidence_posture_engine_model_v0_not_met",
       "bypassable": false,
       "notes": "Evidence Posture Engine Model v0 completed Sprint 68 (DEC-086). Internal non-operational model maps standard, protocol, posture states, and boundaries. Sitemap remains nineteen URLs. No public engine, input system, output generator, classifier, upload, scoring, API, analytics, forms, JavaScript, monetization, or public tool behavior authorized."
+    },
+    {
+      "gate_id": "PUB-GATE-0064",
+      "name": "Output Language Guardrail Model v1 Gate",
+      "status": "output_language_guardrail_model_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "validation_source": "SPRINT_69_OUTPUT_LANGUAGE_GUARDRAIL_MODEL_V1_AUDIT.md",
+      "failure_condition": "output_language_guardrail_model_v1_not_met",
+      "bypassable": false,
+      "notes": "Output Language Guardrail Model v1 completed Sprint 69 (DEC-087). Linguistic primitives, posture-state grammar, and boundary transformation rules documented. Sitemap remains nineteen URLs. No output generator, public engine, classifier, upload, scoring, API, analytics, forms, JavaScript, monetization, or public tool behavior authorized."
     }
   ],
   "last_reviewed": "2026-06-20"

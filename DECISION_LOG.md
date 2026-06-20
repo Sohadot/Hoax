@@ -2286,3 +2286,26 @@ Sprint 67 created the Engine Boundary Charter to prevent engine drift before any
 - No input, output generator, classifier, scorer, API, JavaScript, analytics, upload, form, or public tool behavior is authorized.
 - A future internal prototype may be considered only after this model passes validation and a separate sprint explicitly authorizes it.
 
+---
+
+## DEC-087 — Output Language Guardrail Model v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Output Language Guardrail Model v1 as an internal, non-operational language-governance model derived from Evidence Posture Standard v1, Evidence Posture Protocol v1 Draft, the Engine Boundary Charter, and Evidence Posture Engine Model v0. The guardrail defines allowed output families, prohibited output families, posture-state language rules, template families, required caveats, forbidden term controls, boundary transformation rules, and failure modes. This sprint does not create new routes, sitemap entries, public engine behavior, classifier behavior, upload workflows, scoring systems, APIs, analytics, forms, JavaScript, DNS/Cloudflare changes, custom-domain launch, monetization, external communications, output generators, or public tool behavior.
+
+### Rationale
+
+Evidence Posture Engine Model v0 maps evidence conditions, protocol steps, posture states, and boundary checks, but a model without strict language guardrails can still drift into detector language, verdict leakage, scoring, fake/real framing, or subject accusation. Output Language Guardrail Model v1 protects Hoax.ai before any internal prototype is considered by defining what future outputs may and may not say.
+
+### Implications
+
+- Output Language Guardrail Model v1 may be created as internal JSON/schema/documentation.
+- No public route may be created.
+- Sitemap remains exactly 19 URLs.
+- No output generator, public engine, classifier, scorer, API, JavaScript, analytics, upload, form, or public tool behavior is authorized.
+- A future internal prototype may be considered only after this guardrail passes validation and a separate sprint explicitly authorizes it.
+
