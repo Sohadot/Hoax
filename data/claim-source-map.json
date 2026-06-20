@@ -1904,6 +1904,41 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Internal Prototype Release Blocker Board v1 per DEC-099."
+    },
+    {
+      "claim_id": "CLAIM-0084",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_EXPOSURE_PREREQUISITE_MAP_V1.md",
+        "PUBLIC_EXPOSURE_PREREQUISITE_TAXONOMY_V1.md",
+        "PUBLIC_EXPOSURE_CLEARANCE_PATHWAY_MODEL_V1.md",
+        "PUBLIC_EXPOSURE_PROHIBITED_SHORTCUTS_V1.md",
+        "data/public-exposure-prerequisite-map-v1.json",
+        "data/public-exposure-prerequisite-map-v1.schema.json",
+        "internal/prototypes/controlled-engine-v0/public_exposure_prerequisite_map.py",
+        "internal/prototypes/controlled-engine-v0/public_exposure_prerequisite_harness.py",
+        "validators/validate_public_exposure_prerequisite_map_v1.py",
+        "SPRINT_82_PUBLIC_EXPOSURE_PREREQUISITE_MAP_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0531",
+        "SOURCE-0532",
+        "SOURCE-0533",
+        "SOURCE-0534",
+        "SOURCE-0535",
+        "SOURCE-0536",
+        "SOURCE-0537",
+        "SOURCE-0538",
+        "SOURCE-0539",
+        "SOURCE-0540",
+        "SOURCE-0541"
+      ],
+      "support_scope": "public exposure prerequisite map v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Exposure Prerequisite Map v1 per DEC-100."
     }
   ],
   "last_reviewed": "2026-06-20"

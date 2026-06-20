@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Sprint 81 — Internal Prototype Release Blocker Board v1."""
+"""Validate Sprint 82 — Public Exposure Prerequisite Map v1."""
 
 from __future__ import annotations
 
@@ -15,22 +15,23 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (  # noqa: E402
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
+    PUBLISHER_STATUS_POST_PUBLIC_EXPOSURE_PREREQUISITE_MAP_VALIDATION,
     validate_public_surface,
 )
 
-BOARD = "INTERNAL_PROTOTYPE_RELEASE_BLOCKER_BOARD_V1.md"
-TAXONOMY = "INTERNAL_PROTOTYPE_RELEASE_BLOCKER_TAXONOMY_V1.md"
-DENIAL = "INTERNAL_PROTOTYPE_PUBLIC_EXPOSURE_DENIAL_POLICY_V1.md"
-CLEARANCE = "INTERNAL_PROTOTYPE_RELEASE_BLOCKER_CLEARANCE_CRITERIA_V1.md"
-BOARD_JSON = "data/internal-prototype-release-blocker-board-v1.json"
-BOARD_SCHEMA = "data/internal-prototype-release-blocker-board-v1.schema.json"
-AUDIT = "SPRINT_81_INTERNAL_PROTOTYPE_RELEASE_BLOCKER_BOARD_V1.md"
+MAP = "PUBLIC_EXPOSURE_PREREQUISITE_MAP_V1.md"
+TAXONOMY = "PUBLIC_EXPOSURE_PREREQUISITE_TAXONOMY_V1.md"
+PATHWAY = "PUBLIC_EXPOSURE_CLEARANCE_PATHWAY_MODEL_V1.md"
+SHORTCUTS = "PUBLIC_EXPOSURE_PROHIBITED_SHORTCUTS_V1.md"
+MAP_JSON = "data/public-exposure-prerequisite-map-v1.json"
+MAP_SCHEMA = "data/public-exposure-prerequisite-map-v1.schema.json"
+AUDIT = "SPRINT_82_PUBLIC_EXPOSURE_PREREQUISITE_MAP_V1.md"
 FIXTURES_JSON = "internal/prototypes/controlled-engine-v0/fixtures/synthetic-fixtures-v0.json"
 
 PROTOTYPE_DIR = ROOT / "internal" / "prototypes" / "controlled-engine-v0"
-BOARD_FILES = [
-    PROTOTYPE_DIR / "release_blocker_board.py",
-    PROTOTYPE_DIR / "release_blocker_harness.py",
+MAP_FILES = [
+    PROTOTYPE_DIR / "public_exposure_prerequisite_map.py",
+    PROTOTYPE_DIR / "public_exposure_prerequisite_harness.py",
 ]
 
 FORBIDDEN_NETWORK = ["requests", "urllib.request", "httpx", "aiohttp", "socket"]
@@ -64,19 +65,44 @@ PHRASE_SCAN_EXEMPT = {
     "admissibility_regression_harness.py",
     "release_blocker_board.py",
     "release_blocker_harness.py",
+    "public_exposure_prerequisite_map.py",
+    "public_exposure_prerequisite_harness.py",
 }
 CODE_SCAN_EXEMPT = PHRASE_SCAN_EXEMPT
-REQUIRED_BLOCKER_STATEMENTS = [
-    "no public route authorization",
-    "no public output generator authorization",
-    "no input system authorization",
-    "no upload behavior authorization",
-    "no scoring authorization",
-    "no public report authorization",
-    "no benchmark authorization",
-    "no real-world case authorization",
-    "no external data authorization",
-    "no public release clearance mechanism yet",
+REQUIRED_PREREQUISITE_STATEMENTS = [
+    "public route governance prerequisite",
+    "public copy boundary prerequisite",
+    "output-shape denial prerequisite",
+    "no-score public language prerequisite",
+    "no-verdict public language prerequisite",
+    "no-detector positioning prerequisite",
+    "claim-boundary review prerequisite",
+    "source-governance review prerequisite",
+    "abuse-case review prerequisite",
+    "safety review prerequisite",
+    "privacy review prerequisite",
+    "real-world case exclusion prerequisite",
+    "upload-denial prerequisite",
+    "input-system-denial prerequisite",
+    "API-denial prerequisite",
+    "external-data-denial prerequisite",
+    "rollback plan prerequisite",
+    "monitoring plan prerequisite",
+    "accessibility prerequisite",
+    "performance prerequisite",
+    "security prerequisite",
+    "public documentation prerequisite",
+    "monetization denial prerequisite",
+    "explicit future authorization prerequisite",
+]
+REQUIRED_SHORTCUTS = [
+    "internal validation is not public readiness",
+    "passing harnesses is not release clearance",
+    "github pages deployment is not prototype release",
+    "dns activation is not prototype release",
+    "custom domain activation is not prototype release",
+    "public homepage is not engine authorization",
+    "marketing need is not blocker clearance",
 ]
 FORBIDDEN_TERMS = [
     "rick",
@@ -87,19 +113,19 @@ FORBIDDEN_TERMS = [
     "marketing conversations",
 ]
 SOURCE_LOCS = [
-    BOARD,
+    MAP,
     TAXONOMY,
-    DENIAL,
-    CLEARANCE,
-    BOARD_JSON,
-    BOARD_SCHEMA,
-    "internal/prototypes/controlled-engine-v0/release_blocker_board.py",
-    "internal/prototypes/controlled-engine-v0/release_blocker_harness.py",
+    PATHWAY,
+    SHORTCUTS,
+    MAP_JSON,
+    MAP_SCHEMA,
+    "internal/prototypes/controlled-engine-v0/public_exposure_prerequisite_map.py",
+    "internal/prototypes/controlled-engine-v0/public_exposure_prerequisite_harness.py",
     AUDIT,
-    "validators/validate_internal_prototype_release_blocker_board_v1.py",
+    "validators/validate_public_exposure_prerequisite_map_v1.py",
 ]
 REQUIRED_FIXTURE_COUNT = 16
-REQUIRED_BLOCKER_COUNT = 20
+REQUIRED_PREREQUISITE_COUNT = 24
 
 
 def error(msg: str) -> None:
@@ -113,34 +139,36 @@ def load_json(rel: str) -> dict:
 
 def validate_artifacts() -> bool:
     ok = True
-    for rel in [BOARD, TAXONOMY, DENIAL, CLEARANCE, BOARD_JSON, BOARD_SCHEMA, AUDIT]:
+    for rel in [MAP, TAXONOMY, PATHWAY, SHORTCUTS, MAP_JSON, MAP_SCHEMA, AUDIT]:
         if not (ROOT / rel).is_file():
             error(f"missing {rel}")
             ok = False
-    for path in BOARD_FILES:
+    for path in MAP_FILES:
         if not path.is_file():
             error(f"missing {path.relative_to(ROOT)}")
             ok = False
     return ok
 
 
-def validate_board_json() -> bool:
+def validate_map_json() -> bool:
     ok = True
-    data = load_json(BOARD_JSON)
-    _ = load_json(BOARD_SCHEMA)
-    if data.get("board_id") != "internal-prototype-release-blocker-board-v1":
-        error("board_id mismatch")
+    data = load_json(MAP_JSON)
+    _ = load_json(MAP_SCHEMA)
+    if data.get("prerequisite_map_id") != "public-exposure-prerequisite-map-v1":
+        error("prerequisite_map_id mismatch")
         ok = False
-    if data.get("decision_ref") != "DEC-099":
-        error("decision_ref must be DEC-099")
+    if data.get("decision_ref") != "DEC-100":
+        error("decision_ref must be DEC-100")
         ok = False
-    if data.get("sprint") != "Sprint 81":
-        error("sprint must be Sprint 81")
+    if data.get("sprint") != "Sprint 82":
+        error("sprint must be Sprint 82")
         ok = False
-    if data.get("status") != "internal_non_public_release_blocker_board":
+    if data.get("status") != "internal_non_public_public_exposure_prerequisite_map":
         error("status mismatch")
         ok = False
     for key in [
+        "public_exposure_authorized",
+        "blocker_clearance_authorized",
         "release_authorized",
         "public_route_authorized",
         "public_benchmark_authorized",
@@ -156,26 +184,31 @@ def validate_board_json() -> bool:
         if data.get(key) is not False:
             error(f"{key} must be false")
             ok = False
-    blockers = data.get("blockers", [])
-    if len(blockers) < REQUIRED_BLOCKER_COUNT:
-        error(f"at least {REQUIRED_BLOCKER_COUNT} blockers required")
+    prerequisites = data.get("prerequisites", [])
+    if len(prerequisites) < REQUIRED_PREREQUISITE_COUNT:
+        error(f"at least {REQUIRED_PREREQUISITE_COUNT} prerequisites required")
         ok = False
-    statements = " ".join(b.get("blocker_statement", "") for b in blockers).lower()
-    for item in REQUIRED_BLOCKER_STATEMENTS:
-        if item not in statements:
-            error(f"blockers missing {item}")
+    statements = " ".join(p.get("prerequisite_statement", "") for p in prerequisites).lower()
+    for item in REQUIRED_PREREQUISITE_STATEMENTS:
+        if item.lower() not in statements:
+            error(f"prerequisites missing {item}")
             ok = False
-    for blocker in blockers:
-        if blocker.get("current_status") != "unresolved":
-            error(f"blocker {blocker.get('blocker_id')} must remain unresolved")
+    for item in prerequisites:
+        if item.get("current_status") == "cleared":
+            error(f"prerequisite {item.get('prerequisite_id')} must not be cleared")
             ok = False
-        if blocker.get("public_exposure_allowed") is not False:
-            error(f"blocker {blocker.get('blocker_id')} must deny public exposure")
+        if item.get("public_exposure_authorized") is not False:
+            error(f"prerequisite {item.get('prerequisite_id')} must deny public exposure")
             ok = False
-        sprint = str(blocker.get("authorized_clearance_sprint", "")).lower()
-        if "future" not in sprint and "explicit" not in sprint:
-            error(f"blocker {blocker.get('blocker_id')} must require explicit future authorization")
+    shortcuts = " ".join(data.get("prohibited_shortcuts", [])).lower()
+    for item in REQUIRED_SHORTCUTS:
+        if item not in shortcuts:
+            error(f"prohibited_shortcuts missing {item}")
             ok = False
+    pathway = " ".join(data.get("clearance_pathway_rules", [])).lower()
+    if "explicit" not in pathway and "future" not in pathway:
+        error("clearance pathway must require explicit future sprint authorization")
+        ok = False
     boundaries = data.get("operational_boundaries", {})
     for key in [
         "no_public_route",
@@ -192,9 +225,6 @@ def validate_board_json() -> bool:
         if boundaries.get(key) is not True:
             error(f"operational_boundaries missing {key}")
             ok = False
-    if "does not clear" not in data.get("non_release_statement", "").lower():
-        error("non_release_statement must deny clearance in Sprint 81")
-        ok = False
     return ok
 
 
@@ -234,7 +264,7 @@ def validate_fixtures_unchanged() -> bool:
     return ok
 
 
-def validate_board_code() -> bool:
+def validate_map_code() -> bool:
     ok = True
     for path in list(PROTOTYPE_DIR.rglob("*.py")):
         if path.name in CODE_SCAN_EXEMPT:
@@ -280,6 +310,11 @@ def _run_harness(rel: str, expected: str) -> bool:
 
 def validate_harnesses() -> bool:
     ok = True
+    if not _run_harness(
+        "public_exposure_prerequisite_harness.py",
+        "controlled internal public exposure prerequisite map validation passed",
+    ):
+        ok = False
     if not _run_harness(
         "release_blocker_harness.py",
         "controlled internal release blocker board validation passed",
@@ -335,30 +370,34 @@ def validate_harnesses() -> bool:
 def validate_no_output_files() -> bool:
     before = {p.name for p in PROTOTYPE_DIR.glob("*") if p.is_file()}
     proc = subprocess.run(
-        [sys.executable, str(PROTOTYPE_DIR / "release_blocker_harness.py")],
+        [sys.executable, str(PROTOTYPE_DIR / "public_exposure_prerequisite_harness.py")],
         cwd=ROOT,
         text=True,
         capture_output=True,
     )
     after = {p.name for p in PROTOTYPE_DIR.glob("*") if p.is_file()}
     if proc.returncode != 0:
-        error("release blocker harness failed during output-file check")
+        error("public exposure prerequisite harness failed during output-file check")
         return False
     if before != after:
-        error("release blocker harness must not create output files")
+        error("public exposure prerequisite harness must not create output files")
         return False
     return True
 
 
 def validate_governance() -> bool:
     ok = True
-    if "DEC-099" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
-        error("DEC-099 missing from DECISION_LOG.md")
+    if "DEC-100" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
+        error("DEC-100 missing from DECISION_LOG.md")
         ok = False
-    if "validate_internal_prototype_release_blocker_board_v1.py" not in (
+    if "validate_public_exposure_prerequisite_map_v1.py" not in (
         ROOT / "validators/validate_all.py"
     ).read_text(encoding="utf-8"):
-        error("validate_all.py must include Sprint 81 validator")
+        error("validate_all.py must include Sprint 82 validator")
+        ok = False
+    policy = load_json("data/publisher-governance-policy.json")
+    if policy.get("current_publisher_status") != PUBLISHER_STATUS_POST_PUBLIC_EXPOSURE_PREREQUISITE_MAP_VALIDATION:
+        error("publisher status must be blocked_until_public_exposure_prerequisite_map_validation")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}
     for loc in SOURCE_LOCS:
@@ -366,17 +405,17 @@ def validate_governance() -> bool:
             error(f"source registry missing {loc}")
             ok = False
     claims = load_json("data/evidence-ledger.json").get("claims", [])
-    if not any(c.get("claim_id") == "CLAIM-0083" for c in claims):
-        error("CLAIM-0083 missing")
+    if not any(c.get("claim_id") == "CLAIM-0084" for c in claims):
+        error("CLAIM-0084 missing")
         ok = False
     gates = load_json("data/publisher-quality-gates.json").get("gates", [])
-    if not any(g.get("gate_id") == "PUB-GATE-0076" for g in gates):
-        error("PUB-GATE-0076 missing")
+    if not any(g.get("gate_id") == "PUB-GATE-0077" for g in gates):
+        error("PUB-GATE-0077 missing")
         ok = False
-    if "Sprint 81 | COMPLETE | G81 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
-        error("master execution plan missing Sprint 81 completion row")
+    if "Sprint 82 | COMPLETE | G82 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
+        error("master execution plan missing Sprint 82 completion row")
         ok = False
-    for rel in [BOARD, TAXONOMY, DENIAL, CLEARANCE, AUDIT]:
+    for rel in [MAP, TAXONOMY, PATHWAY, SHORTCUTS, AUDIT]:
         lower = (ROOT / rel).read_text(encoding="utf-8").lower()
         for term in FORBIDDEN_TERMS:
             if term in lower:
@@ -406,10 +445,10 @@ def main() -> int:
         fn()
         for fn in [
             validate_artifacts,
-            validate_board_json,
+            validate_map_json,
             validate_surface,
             validate_fixtures_unchanged,
-            validate_board_code,
+            validate_map_code,
             validate_harnesses,
             validate_no_output_files,
             validate_governance,

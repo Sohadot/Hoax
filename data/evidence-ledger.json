@@ -915,6 +915,17 @@
       "status": "active",
       "last_reviewed": "2026-06-20",
       "notes": "Sprint 81 release blocker board. At least twenty blockers remain unresolved. No public release authorized."
+    },
+    {
+      "claim_id": "CLAIM-0084",
+      "claim_text": "Hoax.ai has adopted Public Exposure Prerequisite Map v1 to define future conditions required before public exposure can even be considered, without clearing blockers or authorizing release.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_EXPOSURE_PREREQUISITE_MAP_V1.md, PUBLIC_EXPOSURE_PREREQUISITE_TAXONOMY_V1.md, PUBLIC_EXPOSURE_CLEARANCE_PATHWAY_MODEL_V1.md, PUBLIC_EXPOSURE_PROHIBITED_SHORTCUTS_V1.md, data/public-exposure-prerequisite-map-v1.json, data/public-exposure-prerequisite-map-v1.schema.json, internal/prototypes/controlled-engine-v0/public_exposure_prerequisite_map.py, internal/prototypes/controlled-engine-v0/public_exposure_prerequisite_harness.py, validators/validate_public_exposure_prerequisite_map_v1.py, SPRINT_82_PUBLIC_EXPOSURE_PREREQUISITE_MAP_V1.md, DECISION_LOG.md (DEC-100)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-20",
+      "notes": "Sprint 82 public exposure prerequisite map. At least twenty-four prerequisites remain unmapped. No blockers cleared. No public release authorized."
     }
   ]
 }

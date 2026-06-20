@@ -331,6 +331,10 @@ Gate G58 is passed after the four Batch 3 pages are deepened in place with Stand
 
 Gate G59 is passed after `/standard/evidence-posture/` exists with all required standard sections, EPS-001 through EPS-014, five posture states, allowed and prohibited output language, standard matrix, and boundary rules; sitemap contains exactly 17 URLs; exactly one new standard route is created; DEC-077 exists in DECISION_LOG.md; CLAIM-0063 exists; SPRINT_59_EVIDENCE_POSTURE_STANDARD_V1_AUDIT.md exists; `validators/validate_evidence_posture_standard_v1_public.py` exists; validate_all.py PASS; DECISION_LOG chronology validator passes; prototype files are not modified; no Python cache files are tracked or staged; no meta-governance loop resumes; and no engine, classifier, upload, scoring, API, analytics, forms, JavaScript, DNS, Cloudflare, custom domain launch, monetization, or public tool behavior is introduced.
 
+## G82: Public Exposure Prerequisite Map v1
+
+Gate G82 is passed after `PUBLIC_EXPOSURE_PREREQUISITE_MAP_V1.md`, `PUBLIC_EXPOSURE_PREREQUISITE_TAXONOMY_V1.md`, `PUBLIC_EXPOSURE_CLEARANCE_PATHWAY_MODEL_V1.md`, and `PUBLIC_EXPOSURE_PROHIBITED_SHORTCUTS_V1.md` exist; `data/public-exposure-prerequisite-map-v1.json` and `data/public-exposure-prerequisite-map-v1.schema.json` exist; `internal/prototypes/controlled-engine-v0/public_exposure_prerequisite_map.py` and `public_exposure_prerequisite_harness.py` exist; public exposure prerequisite harness passes; at least 24 prerequisites exist; no prerequisites are cleared; no blockers are cleared; fixture count remains 16; no new fixtures are added; decision_ref is DEC-100; sitemap remains exactly 19 URLs; route registry remains 19 entries; no new public route is created; no public benchmark/report/generator is introduced; no public output generator, engine, tool, API, upload, or scoring behavior is introduced; no external API/network behavior exists; `validators/validate_public_exposure_prerequisite_map_v1.py` passes; release blocker harness, admissibility regression harness, output admissibility harness, guardrail red-team harness, compound boundary stress harness, targeted fixture expansion harness, fixture coverage harness, traceability harness, and regression harness pass; validate_all.py PASS; DECISION_LOG chronology validator passes; no meta-governance loop resumes; and no unrelated untracked files remain.
+
 ## G81: Internal Prototype Release Blocker Board v1
 
 Gate G81 is passed after `INTERNAL_PROTOTYPE_RELEASE_BLOCKER_BOARD_V1.md`, `INTERNAL_PROTOTYPE_RELEASE_BLOCKER_TAXONOMY_V1.md`, `INTERNAL_PROTOTYPE_PUBLIC_EXPOSURE_DENIAL_POLICY_V1.md`, and `INTERNAL_PROTOTYPE_RELEASE_BLOCKER_CLEARANCE_CRITERIA_V1.md` exist; `data/internal-prototype-release-blocker-board-v1.json` and `data/internal-prototype-release-blocker-board-v1.schema.json` exist; `internal/prototypes/controlled-engine-v0/release_blocker_board.py` and `release_blocker_harness.py` exist; release blocker harness passes; at least 20 blockers exist; no blockers are cleared; fixture count remains 16; no new fixtures are added; decision_ref is DEC-099; sitemap remains exactly 19 URLs; route registry remains 19 entries; no new public route is created; no public benchmark/report/generator is introduced; no public output generator, engine, tool, API, upload, or scoring behavior is introduced; no external API/network behavior exists; `validators/validate_internal_prototype_release_blocker_board_v1.py` passes; admissibility regression harness, output admissibility harness, guardrail red-team harness, compound boundary stress harness, targeted fixture expansion harness, fixture coverage harness, traceability harness, and regression harness pass; validate_all.py PASS; DECISION_LOG chronology validator passes; no meta-governance loop resumes; and no unrelated untracked files remain.
@@ -500,6 +504,7 @@ Gate G56A is passed after DECISION_LOG.md DEC entries are in ascending numeric o
 | Sprint 60 | COMPLETE | G60 passed — Standard integrated across reference layer |
 | Sprint 61 | COMPLETE | G61 passed — Evidence Posture Protocol v1 Draft created |
 | Sprint 62 | COMPLETE | G62 passed — Protocol integrated across reference and standard layers |
+| Sprint 82 | COMPLETE | G82 passed — Public Exposure Prerequisite Map v1 |
 | Sprint 81 | COMPLETE | G81 passed — Internal Prototype Release Blocker Board v1 |
 | Sprint 80 | COMPLETE | G80 passed — Internal Prototype Admissibility Regression Suite v1 |
 | Sprint 79 | COMPLETE | G79 passed — Internal Prototype Output Admissibility Contract v1 |
@@ -519,7 +524,7 @@ Gate G56A is passed after DECISION_LOG.md DEC entries are in ascending numeric o
 | Sprint 65 | COMPLETE | G65 passed — Evidence Field visual system and accessibility hardened |
 | Sprint 64 | COMPLETE | G64 passed — Evidence Field Static Interface Embodiment v1 |
 | Sprint 63 | COMPLETE | G63 passed — Evidence Field Interface Thesis created |
-| Sprint 76+ | READY | G81 passed — Public Exposure Prerequisite Map v1 when governed; public benchmark blocked |
+| Sprint 76+ | READY | G82 passed — Public Copy Boundary Framework v1 when governed; public benchmark blocked |
 
 ## Governing Sentence
 

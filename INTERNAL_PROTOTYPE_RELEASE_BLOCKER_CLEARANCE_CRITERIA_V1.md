@@ -56,3 +56,5 @@ Any clearance that introduces public exposure drift triggers rollback and re-blo
 ## Required Explicit Authorization
 
 Passing internal harnesses, regression suites, or admissibility checks alone is insufficient to clear any blocker.
+
+Sprint 82 Public Exposure Prerequisite Map v1 (DEC-100) defines prerequisite conditions that future clearance sprints must satisfy. Prerequisites do not clear blockers.

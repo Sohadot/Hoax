@@ -2631,3 +2631,32 @@ Sprint 80 created the admissibility regression suite. Sprint 81 prevents success
 - No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, JavaScript, form, report exporter, external connector, monetization, or public tool behavior is authorized.
 - Any future public exposure requires separate explicit sprint authorization.
 
+---
+
+## DEC-100 — Public Exposure Prerequisite Map v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Exposure Prerequisite Map v1 as an internal, non-public prerequisite-governance layer. The sprint defines prerequisite domains, prerequisite map, public exposure clearance pathway model, and prohibited shortcuts. It may add internal prerequisite map and harness files that verify no public exposure, blocker clearance, release, route, engine, report, benchmark, output generator, input system, upload behavior, scoring system, API, JavaScript, monetization, or public tool behavior is authorized. This sprint does not clear blockers and does not authorize public exposure.
+
+### Rationale
+
+Sprint 81 created the Release Blocker Board. Sprint 82 prevents blocker governance from becoming ambiguous by defining future prerequisite conditions without clearing any blocker. Public exposure must be earned through explicit future authorization, evidence, validators, decision logs, rollback conditions, public-copy review, abuse-case review, claim-boundary review, source-governance review, and safety review.
+
+### Implications
+
+- Public Exposure Prerequisite Map v1 may be created.
+- Prerequisite taxonomy may be created.
+- Public exposure clearance pathway model may be created.
+- Prohibited shortcuts doctrine may be created.
+- Internal prerequisite map module and harness may be added.
+- No blocker may be cleared in Sprint 82.
+- No public exposure may be authorized.
+- No public route may be created.
+- Sitemap remains exactly 19 URLs.
+- No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, JavaScript, form, report exporter, external connector, monetization, or public tool behavior is authorized.
+- Any future public exposure requires separate explicit sprint authorization.
+

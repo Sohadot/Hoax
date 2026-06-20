@@ -84,3 +84,5 @@ A blocker cannot be cleared by passing existing internal harnesses. It requires 
 ## 7. Non-Release Statement
 
 Sprint 81 does not clear any blocker. It creates the blocker board only.
+
+Sprint 82 Public Exposure Prerequisite Map v1 (DEC-100) defines prerequisite conditions for future clearance without clearing any blocker. All blockers RB-001 through RB-020 remain unresolved.

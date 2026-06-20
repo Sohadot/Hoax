@@ -59,3 +59,5 @@ No monetization, pricing surface, or commercial product positioning is authorize
 ## Required Response If Public Exposure Appears
 
 Stop work, do not deploy, revert public exposure, document the violation, restore non-public boundary, and require separate explicit sprint authorization before any retry.
+
+Sprint 82 Public Exposure Prerequisite Map v1 (DEC-100) defines prerequisite conditions required before any future public exposure can even be considered. Prerequisites do not authorize public exposure.

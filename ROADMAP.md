@@ -2331,6 +2331,41 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+## Sprint 82 — Public Exposure Prerequisite Map v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Define prerequisite map required before any future public exposure can even be considered, without clearing blockers or authorizing public exposure.
+
+### Deliverables
+
+- PUBLIC_EXPOSURE_PREREQUISITE_MAP_V1.md
+- PUBLIC_EXPOSURE_PREREQUISITE_TAXONOMY_V1.md
+- PUBLIC_EXPOSURE_CLEARANCE_PATHWAY_MODEL_V1.md
+- PUBLIC_EXPOSURE_PROHIBITED_SHORTCUTS_V1.md
+- data/public-exposure-prerequisite-map-v1.json
+- data/public-exposure-prerequisite-map-v1.schema.json
+- internal/prototypes/controlled-engine-v0/public_exposure_prerequisite_map.py
+- internal/prototypes/controlled-engine-v0/public_exposure_prerequisite_harness.py
+- validators/validate_public_exposure_prerequisite_map_v1.py
+- SPRINT_82_PUBLIC_EXPOSURE_PREREQUISITE_MAP_V1.md
+- DEC-100 appended to DECISION_LOG.md
+- PUB-GATE-0077 added
+- Publisher status -> blocked_until_public_exposure_prerequisite_map_validation
+
+### Validation
+
+All harnesses and `validate_all.py` — PASS required.
+
+### Gate
+
+**Gate G82 passed.** Public Copy Boundary Framework v1 is the recommended next phase.
+
+### Next Phase
+
+**Sprint 83 — Public Copy Boundary Framework v1**
+
+---
+
 **Sprint 80 — Internal Prototype Admissibility Regression Suite v1**
 
 ---

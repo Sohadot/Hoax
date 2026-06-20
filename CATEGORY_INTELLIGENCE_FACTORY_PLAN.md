@@ -198,6 +198,8 @@ The Category Intelligence Factory now prevents admissibility drift through regre
 
 The Category Intelligence Factory now distinguishes internal validation from public readiness. Internal Prototype Release Blocker Board v1 prevents successful internal prototype tests from being misread as authorization for public exposure. Public release, public route, public output generator, input system, API, upload behavior, scoring, benchmark, report, external data behavior, monetization, and public tool behavior remain blocked until separately governed.
 
+The Category Intelligence Factory now defines prerequisites before public exposure can even be considered. Public Exposure Prerequisite Map v1 distinguishes prerequisite mapping from blocker clearance and confirms that GitHub Pages deployment, DNS activation, custom domain activation, internal validation, and passing harnesses are not public prototype release authorization.
+
 The Category Intelligence Factory treats chronology integrity as part of evidence integrity: decision records must not move backward in time unless a correction note explicitly explains and repairs the error.
 
 The category factory becomes reference-grade only when public-facing claims, evidence ledger entries, source records, and support locations are traceable as a governed system.
