@@ -23,6 +23,15 @@
                'Courier New', monospace;
   --max-width: 720px;
   --gutter:    1.5rem;
+  /* Evidence Field visual system tokens (Sprint 65) */
+  --ef-zone-label:       var(--text-muted);
+  --ef-zone-text:        var(--text-secondary);
+  --ef-zone-border:      var(--accent);
+  --ef-boundary-accent:  var(--amber);
+  --ef-container-bg:     var(--bg-surface);
+  --ef-min-readable:     0.875rem;
+  --ef-zone-gap:         1rem;
+  --ef-rail-gap:         1rem;
 }
 
 /* ─── Base ──────────────────────────────────────────── */
@@ -550,99 +559,179 @@ strong {
   .site-footer { padding: 2.5rem var(--gutter); }
 }
 
-/* ─── Evidence Field Static Embodiment v1 ───────────── */
+/* ─── Evidence Field Visual System (Sprint 64–65) ───── */
 
 .evidence-field-embodiment-section {
   border-top: 1px solid var(--border);
 }
 
 .evidence-field-fallback {
-  font-size: 0.92rem;
-  color: var(--text-secondary);
+  font-size: max(var(--ef-min-readable), 0.92rem);
+  color: var(--ef-zone-text);
   margin-bottom: 1.5rem;
+}
+
+.evidence-field-visual-grammar {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  background: var(--ef-container-bg);
+}
+
+.evidence-field-visual-grammar h3 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ef-zone-label);
+  margin-bottom: 0.85rem;
+}
+
+.visual-grammar-legend {
+  margin: 1rem 0 0;
+  display: grid;
+  gap: var(--ef-zone-gap);
+}
+
+.visual-grammar-item {
+  padding: 0.75rem 0 0.75rem 0.85rem;
+  border-left: 2px solid var(--ef-zone-border);
+}
+
+.visual-grammar-item dt {
+  font-weight: 600;
+  font-size: max(var(--ef-min-readable), 0.92rem);
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.visual-grammar-item dd {
+  font-size: max(var(--ef-min-readable), 0.92rem);
+  color: var(--ef-zone-text);
+  margin: 0;
+}
+
+.visual-grammar-note {
+  margin-top: 1rem;
+  font-size: max(var(--ef-min-readable), 0.92rem);
+  color: var(--ef-zone-text);
+}
+
+.evidence-field-layout {
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 .evidence-field-embodiment {
   margin-top: 1.5rem;
   padding: 1.25rem;
   border: 1px solid var(--border);
-  background: var(--bg-surface);
+  background: var(--ef-container-bg);
 }
 
 .evidence-field-grid {
-  list-style: none;
+  list-style: decimal;
+  list-style-position: inside;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 1rem;
+  gap: var(--ef-zone-gap);
 }
 
 .evidence-field-zone {
   padding: 1rem 1.25rem;
   border: 1px solid var(--border-subtle);
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--ef-zone-border);
   background: var(--bg);
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
 }
 
 .evidence-field-zone h3 {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: max(var(--ef-min-readable), 0.72rem);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--ef-zone-label);
   margin-bottom: 0.65rem;
 }
 
 .evidence-field-zone p {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
+  font-size: max(var(--ef-min-readable), 0.95rem);
+  color: var(--ef-zone-text);
   margin: 0;
 }
 
 .evidence-field-zone-boundary {
-  border-left-color: var(--amber);
-  background: var(--bg-surface);
+  border-left-color: var(--ef-boundary-accent);
+  background: var(--ef-container-bg);
 }
 
 .evidence-field-zone-boundary h3 {
   color: var(--amber-text);
 }
 
-.evidence-field-zone-posture .posture-state-list {
-  list-style: none;
+.posture-state-definitions {
   margin: 0.75rem 0 0;
-  padding: 0;
+  display: grid;
+  gap: 0.65rem;
 }
 
-.evidence-field-zone-posture .posture-state-list li {
-  padding: 0.35rem 0 0.35rem 0.75rem;
-  border-left: 2px solid var(--border);
+.posture-state-item {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg);
+}
+
+.posture-state-item dt {
+  font-family: var(--font-mono);
+  font-size: max(var(--ef-min-readable), 0.75rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
   margin-bottom: 0.35rem;
-  font-size: 0.92rem;
-  color: var(--text-secondary);
+}
+
+.posture-state-item dd {
+  font-size: max(var(--ef-min-readable), 0.92rem);
+  color: var(--ef-zone-text);
+  margin: 0;
+}
+
+.posture-state-note {
+  margin-top: 0.85rem;
+  font-size: max(var(--ef-min-readable), 0.92rem);
+  color: var(--ef-zone-text);
+}
+
+.protocol-path-section {
+  overflow-x: hidden;
 }
 
 .protocol-path-list {
   list-style: none;
   margin: 1.25rem 0 0;
   padding: 0;
-  counter-reset: protocol-step;
 }
 
 .protocol-path-list li {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
   align-items: baseline;
-  padding: 0.65rem 0;
+  padding: 0.75rem 0;
   border-bottom: 1px solid var(--border-subtle);
-  font-size: 0.95rem;
-  color: var(--text-secondary);
+  font-size: max(var(--ef-min-readable), 0.95rem);
+  color: var(--ef-zone-text);
+  overflow-wrap: anywhere;
 }
 
 .protocol-step-id {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: max(var(--ef-min-readable), 0.68rem);
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--accent);
@@ -650,20 +739,25 @@ strong {
   min-width: 4.5rem;
 }
 
+.standard-alignment-section {
+  overflow-x: hidden;
+}
+
 .boundary-rail {
   display: grid;
-  gap: 1rem;
+  gap: var(--ef-rail-gap);
   margin-top: 1.25rem;
 }
 
 .boundary-rail-block {
   padding: 1.25rem;
   border: 1px solid var(--border);
+  overflow-wrap: anywhere;
 }
 
 .boundary-rail-block h3 {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: max(var(--ef-min-readable), 0.68rem);
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -671,36 +765,88 @@ strong {
 }
 
 .boundary-rail-allowed {
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--ef-zone-border);
 }
 
 .boundary-rail-allowed h3 {
   color: var(--accent);
 }
 
+.boundary-rail-allowed h3::before {
+  content: "Label: ";
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--ef-zone-text);
+}
+
 .boundary-rail-prohibited {
-  border-left: 3px solid var(--amber);
+  border-left: 3px solid var(--ef-boundary-accent);
 }
 
 .boundary-rail-prohibited h3 {
   color: var(--amber-text);
 }
 
-.boundary-rail-block ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.boundary-rail-prohibited h3::before {
+  content: "Label: ";
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--ef-zone-text);
 }
 
-.boundary-rail-block li {
-  padding: 0.3rem 0;
-  font-size: 0.92rem;
-  color: var(--text-secondary);
+.boundary-rail-list {
+  list-style: disc;
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.boundary-rail-list li {
+  padding: 0.35rem 0;
+  font-size: max(var(--ef-min-readable), 0.92rem);
+  color: var(--ef-zone-text);
+}
+
+.boundary-rail-prohibited-note {
+  margin-top: 1rem;
+  font-size: max(var(--ef-min-readable), 0.92rem);
+  color: var(--ef-zone-text);
+}
+
+.reading-order-list {
+  margin: 1rem 0 1.25rem;
+  padding-left: 1.35rem;
+}
+
+.reading-order-list li {
+  padding: 0.4rem 0;
+  font-size: max(var(--ef-min-readable), 0.95rem);
+  color: var(--ef-zone-text);
+}
+
+.non-operational-banner {
+  border: 1px solid var(--border);
+  background: var(--ef-container-bg);
+}
+
+.non-operational-banner p {
+  font-size: max(var(--ef-min-readable), 0.95rem);
+}
+
+.reference-article a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 @media (min-width: 640px) {
+  .visual-grammar-legend {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .evidence-field-grid {
     grid-template-columns: 1fr 1fr;
+    list-style: none;
   }
 
   .evidence-field-zone-boundary,
@@ -708,8 +854,29 @@ strong {
     grid-column: 1 / -1;
   }
 
+  .posture-state-definitions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .posture-state-item:last-child {
+    grid-column: 1 / -1;
+  }
+
   .boundary-rail {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 639px) {
+  .evidence-field-embodiment,
+  .evidence-field-visual-grammar,
+  .boundary-rail-block {
+    padding: 1rem;
+  }
+
+  .protocol-step-id {
+    min-width: auto;
+    width: 100%;
   }
 }
 

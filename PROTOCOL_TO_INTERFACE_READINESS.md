@@ -149,3 +149,11 @@ Sprint 64 enhanced `/interface/evidence-field/` in place with **Evidence Field S
 This embodiment is non-operational: no engine, classifier, upload workflow, scoring system, API, analytics, forms, JavaScript, or automated verdict behavior.
 
 **Next phase after Sprint 64 validation:** Sprint 65 — Evidence Field Visual System and Accessibility Hardening.
+
+---
+
+## Sprint 65 Update — Visual System and Accessibility Hardening
+
+Sprint 65 hardened `/interface/evidence-field/` in place with **Evidence Field Visual System and Accessibility Hardening** (DEC-083). Visual grammar, reading order, mobile-stable CSS, boundary rail clarity, posture-state definitions, and non-operational status were strengthened. Sitemap remains exactly nineteen URLs. No new route was created.
+
+**Next phase after Sprint 65 validation:** Sprint 66 — Evidence Field Interface Trust Audit and Launch Readiness.

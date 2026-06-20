@@ -18,6 +18,7 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_PROTOCOL_V1_DRAFT,
     PUBLISHER_STATUS_POST_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD,
     PUBLISHER_STATUS_POST_EVIDENCE_FIELD_STATIC_INTERFACE_EMBODIMENT_V1,
+    PUBLISHER_STATUS_POST_EVIDENCE_FIELD_VISUAL_SYSTEM_ACCESSIBILITY_HARDENING,
     validate_public_surface,
 )
 
@@ -271,8 +272,9 @@ def validate_governance() -> bool:
         PUBLISHER_STATUS_POST_EVIDENCE_POSTURE_PROTOCOL_V1_DRAFT,
         PUBLISHER_STATUS_POST_PUBLIC_INTERFACE_THESIS_EVIDENCE_FIELD,
         PUBLISHER_STATUS_POST_EVIDENCE_FIELD_STATIC_INTERFACE_EMBODIMENT_V1,
+        PUBLISHER_STATUS_POST_EVIDENCE_FIELD_VISUAL_SYSTEM_ACCESSIBILITY_HARDENING,
     ):
-        error("publisher status must be blocked_until_evidence_posture_standard_v1_validation, protocol v1 draft validation, interface thesis validation, or static embodiment v1 validation")
+        error("publisher status must be blocked_until_evidence_posture_standard_v1_validation, protocol v1 draft validation, interface thesis validation, static embodiment v1 validation, or visual system hardening validation")
         ok = False
     locs = {s.get("location") for s in json.loads((ROOT / "data/source-registry.json").read_text(encoding="utf-8")).get("sources", [])}
     for loc in SOURCE_LOCS:

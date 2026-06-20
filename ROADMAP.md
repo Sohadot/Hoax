@@ -2258,6 +2258,37 @@ Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, cust
 
 ---
 
+## Sprint 65 — Evidence Field Visual System and Accessibility Hardening
+
+**Status:** COMPLETE — 2026-06-19
+**Goal:** Harden Evidence Field static interface visual grammar, reading order, mobile stability, accessibility, and non-operational boundaries in place.
+
+### Deliverables
+
+- interface/evidence-field/index.html hardened
+- styles.css evidence-field visual system tokens and responsive layout
+- validators/validate_evidence_field_visual_system_accessibility_hardening.py
+- SPRINT_65_EVIDENCE_FIELD_VISUAL_SYSTEM_ACCESSIBILITY_HARDENING_AUDIT.md
+- DEC-083 appended to DECISION_LOG.md
+- PUB-GATE-0060 added
+- validators/validate_all.py updated
+
+### Validation
+
+`py -3 validators/validate_all.py` — PASS required for sprint closure.
+
+### Gate
+
+**Gate G65 passed.** Evidence Field Interface Trust Audit and Launch Readiness is the recommended next phase.
+
+### Next Phase
+
+**Sprint 66 — Evidence Field Interface Trust Audit and Launch Readiness**
+
+Public engine, classifier, upload, scoring, API, analytics, DNS/Cloudflare, custom domain launch, monetization, and public tool behavior remain blocked.
+
+---
+
 ## Sprint 64 — Evidence Field Static Interface Embodiment v1
 
 **Status:** COMPLETE — 2026-06-19

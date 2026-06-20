@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hoax.ai Evidence Field Interface Thesis</title>
-  <meta name="description" content="Hoax.ai Evidence Field Interface Thesis and Static Embodiment v1 define the public interface direction for visualizing evidence posture, protocol sequence, boundaries, and interpretation risk without detector-dashboard, upload, scoring, or automated verdict behavior.">
+  <meta name="description" content="Hoax.ai Evidence Field Interface Thesis with Static Embodiment v1 and hardened visual system defines evidence-posture visualization, protocol sequence, boundaries, and interpretation risk without detector-dashboard, upload, scoring, or automated verdict behavior.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://hoax.ai/interface/evidence-field/">
   <meta property="og:type" content="website">
@@ -82,10 +82,42 @@
 
       <section class="reference-section evidence-field-embodiment-section" aria-labelledby="static-embodiment">
         <h2 id="static-embodiment">Evidence Field Static Embodiment v1</h2>
-        <p>Sprint 64 adds a static, accessible visual structure that embodies the interface thesis below. This is semantic HTML and CSS only—no JavaScript, no forms, no inputs, no upload areas, no scan controls, no score meters, and no result cards. Each zone represents an evidence condition or boundary, not an automated output. Read top to bottom; zones are related conditions, not steps toward a verdict.</p>
+        <p>Sprint 64 adds a static, accessible visual structure that embodies the interface thesis below. Sprint 65 hardens visual grammar, reading order, mobile stability, and accessibility. This is semantic HTML and CSS only—no JavaScript, no forms, no inputs, no upload areas, no scan controls, no numeric-rank displays, and no result cards. Each zone represents an evidence condition or boundary, not an automated output.</p>
         <p class="evidence-field-fallback">If styles are unavailable, the ordered list below still conveys the full evidence-field structure. No color, animation, or layout is required for comprehension.</p>
 
-        <div class="evidence-field-embodiment" role="region" aria-label="Evidence field static embodiment with eleven conceptual zones">
+        <section class="evidence-field-visual-grammar" aria-labelledby="visual-grammar">
+          <h3 id="visual-grammar">Evidence Field Visual Grammar</h3>
+          <p>The static embodiment uses labels, structure, grouping, spacing, hierarchy, borders, and explanatory text—not color alone—to distinguish evidence layers, protocol path, standard alignment, boundary rail, allowed language, prohibited inference, posture states, and non-operational status.</p>
+          <dl class="visual-grammar-legend">
+            <div class="visual-grammar-item">
+              <dt>Evidence layers</dt>
+              <dd>Bordered zones in the field grid; each zone has a text label and definition.</dd>
+            </div>
+            <div class="visual-grammar-item">
+              <dt>Protocol path</dt>
+              <dd>Ordered step list with EP-P identifiers; explanatory, not executable.</dd>
+            </div>
+            <div class="visual-grammar-item">
+              <dt>Standard alignment</dt>
+              <dd>EPS principle references tied to layer obligations.</dd>
+            </div>
+            <div class="visual-grammar-item">
+              <dt>Boundary rail</dt>
+              <dd>Allowed and Prohibited language blocks with text labels—not traffic-light verdict colors.</dd>
+            </div>
+            <div class="visual-grammar-item">
+              <dt>Posture states</dt>
+              <dd>Text-defined categories with definitions; no numeric ranks or confidence meters.</dd>
+            </div>
+            <div class="visual-grammar-item">
+              <dt>Non-operational status</dt>
+              <dd>Prominent boundary statement: interface thesis, not tool behavior.</dd>
+            </div>
+          </dl>
+          <p class="visual-grammar-note">Visual grammar must not rely on red/green fake/real logic, score-like bars, confidence meters, detector icons, scan animation, result cards, or dashboard metrics.</p>
+        </section>
+
+        <div class="evidence-field-embodiment evidence-field-layout" role="region" aria-label="Evidence field static embodiment with eleven conceptual zones">
           <ol class="evidence-field-grid">
             <li class="evidence-field-zone">
               <h3>Artifact Layer</h3>
@@ -129,25 +161,40 @@
             </li>
             <li class="evidence-field-zone evidence-field-zone-posture">
               <h3>Evidence Posture Layer</h3>
-              <p>Categorical posture states only—no numeric ranks:</p>
-              <ul class="posture-state-list">
-                <li><strong>Supported</strong> — evidence supports stated artifact condition within boundaries</li>
-                <li><strong>Qualified</strong> — support exists with explicit caveats</li>
-                <li><strong>Limited</strong> — narrow support envelope; strong claims refused</li>
-                <li><strong>Not Assessable</strong> — insufficient basis for posture assignment</li>
-                <li><strong>Out of Scope</strong> — review outside governed artifact scope</li>
-              </ul>
-              <p>Supported does not mean true. Not Assessable does not mean false. No traffic-light presentation. No headline “result” dominates this field.</p>
+              <p>Categorical posture states only—text-defined labels with no numeric ranks:</p>
+              <dl class="posture-state-definitions">
+                <div class="posture-state-item">
+                  <dt>Supported</dt>
+                  <dd>Evidence supports stated artifact condition within boundaries. Not a truth verdict.</dd>
+                </div>
+                <div class="posture-state-item">
+                  <dt>Qualified</dt>
+                  <dd>Support exists with explicit caveats. Requires visible qualification language.</dd>
+                </div>
+                <div class="posture-state-item">
+                  <dt>Limited</dt>
+                  <dd>Narrow support envelope; strong claims refused. Not weakness accusation.</dd>
+                </div>
+                <div class="posture-state-item">
+                  <dt>Not Assessable</dt>
+                  <dd>Insufficient basis for posture assignment. Not a hidden false judgment.</dd>
+                </div>
+                <div class="posture-state-item">
+                  <dt>Out of Scope</dt>
+                  <dd>Review outside governed artifact scope. Boundary refusal, not dismissal verdict.</dd>
+                </div>
+              </dl>
+              <p class="posture-state-note">Supported does not mean true. Not Assessable does not mean false. No traffic-light presentation. No confidence meter. No headline “result” dominates this field.</p>
             </li>
           </ol>
         </div>
       </section>
 
-      <section class="reference-section" aria-labelledby="protocol-path-static">
+      <section class="reference-section protocol-path-section" aria-labelledby="protocol-path-static">
         <h2 id="protocol-path-static">Protocol Path</h2>
         <p>The following path maps the static embodiment to <a href="/protocol/evidence-posture/">Evidence Posture Protocol v1 Draft</a> steps EP-P01 through EP-P17. It is a non-scoring progression showing review sequence—not automated execution.</p>
         <p><strong>This path is explanatory and non-operational.</strong> It does not execute review, produce a result, classify an artifact, or generate a score. No public protocol runner exists on this surface.</p>
-        <ol class="protocol-path-list">
+        <ol class="protocol-path-list" aria-label="Evidence Posture Protocol steps EP-P01 through EP-P17">
           <li><span class="protocol-step-id">EP-P01</span> Identify the artifact</li>
           <li><span class="protocol-step-id">EP-P02</span> Identify the claim</li>
           <li><span class="protocol-step-id">EP-P03</span> Locate the source basis</li>
@@ -169,13 +216,28 @@
         <p>Each step relates to EPS principles and reference concepts. Visualization documents sequence for institutional audit; the interface does not walk the path on behalf of the reviewer.</p>
       </section>
 
+      <section class="reference-section standard-alignment-section" aria-labelledby="standard-alignment">
+        <h2 id="standard-alignment">Standard Alignment</h2>
+        <p>The static embodiment must obey <a href="/standard/evidence-posture/">Evidence Posture Standard v1</a>. Selected EPS principles govern how each zone may be read:</p>
+        <ul class="related-concepts">
+          <li><strong>EPS-001</strong> — evidence condition before conclusion; zones precede any posture label</li>
+          <li><strong>EPS-002</strong> — artifact condition is not subject guilt; Artifact and Attribution Boundary layers enforce this</li>
+          <li><strong>EPS-006</strong> — output must remain inside support boundaries; Output Boundary and Evidence Limitation layers make this visible</li>
+          <li><strong>EPS-012</strong> — evidence limitation defines responsible speech; limitation is a first-class zone</li>
+          <li><strong>EPS-013</strong> — interpretation risk requires output restraint; risk is visible, not hidden</li>
+          <li><strong>EPS-014</strong> — attribution boundary prevents subject-transfer overclaim; boundary rail reinforces refusal</li>
+        </ul>
+        <p>Allowed language boundaries and prohibited language boundaries must remain visible—not buried. Posture states and support conditions from the standard govern the Evidence Posture Layer. The interface must not convert Supported into truth certification, Limited into weakness accusation, or Not Assessable into hidden false judgment.</p>
+        <p>No verdict conversion. No subject accusation. Standard alignment is shown through labeled EPS references and layer structure—not through color-only cues.</p>
+      </section>
+
       <section class="reference-section" aria-labelledby="boundary-rail">
         <h2 id="boundary-rail">Boundary Rail</h2>
-        <p>The boundary rail makes allowed and prohibited inference visible before any output language forms. It is a static guardrail—not an interactive control.</p>
-        <div class="boundary-rail">
-          <div class="boundary-rail-block boundary-rail-allowed">
-            <h3>Allowed</h3>
-            <ul>
+        <p>The boundary rail makes allowed and prohibited inference visible before any output language forms. It is a static guardrail—not an interactive control. Prohibited terms are examples of what the interface must not output or imply; they are not interface states.</p>
+        <div class="boundary-rail" role="group" aria-label="Allowed and prohibited inference boundary rail">
+          <div class="boundary-rail-block boundary-rail-allowed" aria-labelledby="boundary-allowed-heading">
+            <h3 id="boundary-allowed-heading">Allowed</h3>
+            <ul class="boundary-rail-list">
               <li>evidence condition</li>
               <li>limited posture</li>
               <li>source caveat</li>
@@ -187,9 +249,9 @@
               <li>bounded output language</li>
             </ul>
           </div>
-          <div class="boundary-rail-block boundary-rail-prohibited">
-            <h3>Prohibited</h3>
-            <ul>
+          <div class="boundary-rail-block boundary-rail-prohibited" aria-labelledby="boundary-prohibited-heading">
+            <h3 id="boundary-prohibited-heading">Prohibited</h3>
+            <ul class="boundary-rail-list">
               <li>fake/real verdict</li>
               <li>subject guilt</li>
               <li>deception intent</li>
@@ -202,24 +264,34 @@
             </ul>
           </div>
         </div>
-        <p>The terms <strong>fake</strong> and <strong>real</strong> appear here only as prohibited-language examples—not as interface states, labels, or posture values.</p>
+        <p class="boundary-rail-prohibited-note">The terms <strong>fake</strong> and <strong>real</strong> appear here only as prohibited-language examples—not as interface states, labels, posture values, or color-coded verdict indicators.</p>
       </section>
 
-      <section class="reference-section" aria-labelledby="reading-the-field">
-        <h2 id="reading-the-field">Reading the Field</h2>
-        <p>Read the static embodiment from top to bottom. Each zone is a condition under review—not a step toward a single outcome. Layers coexist; none should dominate as a “detection result.”</p>
+      <section class="reference-section" aria-labelledby="reading-order">
+        <h2 id="reading-order">Reading Order and Interpretation</h2>
+        <p>Reading the Field: this page is designed to read logically without CSS. Follow this order for the static embodiment:</p>
+        <ol class="reading-order-list">
+          <li><strong>Interface thesis</strong> — governing purpose and non-tool boundary</li>
+          <li><strong>Evidence field layers</strong> — artifact through posture; conditions, not results</li>
+          <li><strong>Protocol path</strong> — EP-P01 through EP-P17; explanatory, not executable</li>
+          <li><strong>Standard alignment</strong> — EPS obligations visible in structure and labels</li>
+          <li><strong>Boundary rail</strong> — allowed and prohibited inference before output language</li>
+          <li><strong>Reading guidance</strong> — how to interpret layers without expecting a verdict</li>
+          <li><strong>Non-operational status</strong> — no tool, engine, classifier, or automated result</li>
+          <li><strong>Related pages</strong> — standard, protocol, and reference layer links</li>
+        </ol>
         <ul class="related-concepts">
-          <li>Zones represent artifact, claim, source, provenance, context, traceability, limitation, interpretation risk, attribution boundary, output boundary, and posture—together, not as a funnel.</li>
-          <li>Boundaries constrain what may be said; they are not decorative borders.</li>
-          <li>Posture state emerges conceptually from reviewed conditions—it is not auto-generated by this page.</li>
-          <li>No result is generated here. This is evidence-field and protocol-visualization doctrine embodied in static HTML.</li>
-          <li>Reject upload-centered layout, scan metaphor, traffic-light verdict presentation, confidence-score meter, and result-card framing.</li>
+          <li>Layers are evidence conditions, not results. None should dominate as a “detection result” or result-card headline.</li>
+          <li>The protocol path is explanatory, not executable. No scan action, upload workflow, or progress bar toward verdict.</li>
+          <li>Posture states are bounded language categories, not scores. No confidence meter or fake/real implication.</li>
+          <li>Boundaries constrain output language; they are not decorative borders.</li>
+          <li>This page does not generate a result. Reject upload-centered layout, traffic-light verdict presentation, confidence-score meter, and detector-dashboard framing.</li>
         </ul>
       </section>
 
-      <section class="reference-section" aria-labelledby="embodiment-non-operational">
-        <h2 id="embodiment-non-operational">Static Embodiment Non-Operational Status</h2>
-        <p>Evidence Field Static Embodiment v1 is not a tool and is not an engine, classifier, scanner, detector, upload interface, scoring system, API, analytics system, automated report, moderation action, or verdict behavior. It is not a detector dashboard. It is not a scanner. It is not a classifier. It is not an upload interface. It is not a scoring system. It is not an API. It is not an automated verdict interface. The static field shows relationships and boundaries only.</p>
+      <section class="reference-section reference-boundary non-operational-banner" aria-labelledby="embodiment-non-operational">
+        <h2 id="embodiment-non-operational">Non-Operational Status</h2>
+        <p>This static embodiment is not a tool and is not an engine, classifier, scanner, detector, upload workflow, scoring system, API, analytics system, automated report, moderation system, or verdict behavior. It is not a detector dashboard. It is not a scanner. It is not a classifier. It is not an upload interface. It is not a scoring system. It is not an API. It is not an automated verdict interface. The evidence field shows relationships and boundaries only—no operational interface capability on this surface.</p>
       </section>
 
       <section class="reference-section" aria-labelledby="evidence-field-diagram" role="region" aria-label="Evidence field diagram text fallback">
@@ -246,21 +318,6 @@
         <p>Protocol visualization must show step relationships without numeric ranking, without percentage confidence for public ordering, and without classifier-style labels presented as verdicts. Steps may appear complete or incomplete in institutional review records; they must not auto-advance based on hidden models. Human-readable protocol visualization is authorized in principle; public engine behavior is not.</p>
         <p>Each EP-P step links to hardened reference pages. Interface panels—if ever authorized—should cite those links rather than invent parallel vocabulary. EP-P01 and EP-P02 establish scope before any posture display. EP-P12 through EP-P14 must appear before EP-P16 in visual flow so limitation and boundaries precede posture labels. EP-P17 remains terminal: no “preview result” panel may appear before output boundary review is represented.</p>
         <p>Protocol visualization is documentation of sequence for institutional audit—not a progress bar toward verdict. Steps may be marked complete in internal records; the public thesis does not implement completion tracking. Reviewers walk the path; the interface does not walk it for them.</p>
-      </section>
-
-      <section class="reference-section" aria-labelledby="standard-alignment">
-        <h2 id="standard-alignment">Standard Alignment</h2>
-        <p>The static embodiment must obey <a href="/standard/evidence-posture/">Evidence Posture Standard v1</a>. Selected EPS principles govern how each zone may be read:</p>
-        <ul class="related-concepts">
-          <li><strong>EPS-001</strong> — evidence condition before conclusion; zones precede any posture label</li>
-          <li><strong>EPS-002</strong> — artifact condition is not subject guilt; Artifact and Attribution Boundary layers enforce this</li>
-          <li><strong>EPS-006</strong> — output must remain inside support boundaries; Output Boundary and Evidence Limitation layers make this visible</li>
-          <li><strong>EPS-012</strong> — evidence limitation defines responsible speech; limitation is a first-class zone</li>
-          <li><strong>EPS-013</strong> — interpretation risk requires output restraint; risk is visible, not hidden</li>
-          <li><strong>EPS-014</strong> — attribution boundary prevents subject-transfer overclaim; boundary rail reinforces refusal</li>
-        </ul>
-        <p>Allowed language boundaries and prohibited language boundaries must remain visible—not buried. Posture states and support conditions from the standard govern the Evidence Posture Layer. The interface must not convert Supported into truth certification, Limited into weakness accusation, or Not Assessable into hidden false judgment.</p>
-        <p>No verdict conversion. No subject accusation. Standard Alignment Markers in a future interactive layer would indicate which EPS principles constrain each view; this static embodiment demonstrates the requirement without implementing markers.</p>
       </section>
 
       <section class="reference-section" aria-labelledby="boundary-viz">
@@ -406,7 +463,7 @@
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <p class="footer-mark">Hoax.ai</p>
-      <p class="footer-caption">Public interface thesis — Evidence Field design foundation.</p>
+      <p class="footer-caption">Public interface thesis — Evidence Field design foundation with static visual system hardening.</p>
       <p class="footer-sentence">Classify the evidence artifact. Do not perform the verdict.</p>
     </div>
   </footer>

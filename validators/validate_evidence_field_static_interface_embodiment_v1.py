@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_EVIDENCE_FIELD_STATIC_INTERFACE_EMBODIMENT_V1,
+    PUBLISHER_STATUS_POST_EVIDENCE_FIELD_VISUAL_SYSTEM_ACCESSIBILITY_HARDENING,
     validate_public_surface,
 )
 
@@ -256,8 +257,11 @@ def validate_governance() -> bool:
         error("validate_all.py must include Sprint 64 validator")
         ok = False
     policy = json.loads((ROOT / "data/publisher-governance-policy.json").read_text(encoding="utf-8"))
-    if policy.get("current_publisher_status") != PUBLISHER_STATUS_POST_EVIDENCE_FIELD_STATIC_INTERFACE_EMBODIMENT_V1:
-        error("publisher status must be blocked_until_evidence_field_static_interface_embodiment_v1_validation")
+    if policy.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_EVIDENCE_FIELD_STATIC_INTERFACE_EMBODIMENT_V1,
+        PUBLISHER_STATUS_POST_EVIDENCE_FIELD_VISUAL_SYSTEM_ACCESSIBILITY_HARDENING,
+    ):
+        error("publisher status must be blocked_until_evidence_field_static_interface_embodiment_v1_validation or visual system hardening validation")
         ok = False
     locs = {s.get("location") for s in json.loads((ROOT / "data/source-registry.json").read_text(encoding="utf-8")).get("sources", [])}
     for loc in SOURCE_LOCS:

@@ -2186,3 +2186,27 @@ Sprint 63 established the public interface thesis. The next step is to demonstra
 - No public operational interface, engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
 - Future interface work may proceed only if it remains standard-aligned, protocol-aware, and non-operational until explicitly authorized.
 
+---
+
+## DEC-083 — Evidence Field Visual System and Accessibility Hardening Adopted
+
+**Date:** 2026-06-19
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Evidence Field Visual System and Accessibility Hardening to strengthen the static Evidence Field embodiment inside /interface/evidence-field/. This sprint improves visual grammar, reading order, mobile stability, accessibility, boundary rail clarity, posture-state clarity, and non-operational interface language without creating new routes, JavaScript, forms, uploads, scoring, API behavior, analytics, engine behavior, classifier behavior, DNS/Cloudflare change, custom domain launch, monetization, or public tool behavior.
+
+### Rationale
+
+Sprint 64 proved that Hoax.ai can embody its evidence-posture thesis through a static interface model. Sprint 65 hardens that model so it becomes trustworthy, readable, accessible, and resilient across devices. The interface layer must remain evidence-field oriented rather than detector-dashboard oriented. Visual design must clarify evidence conditions, protocol sequence, standard boundaries, and output restraint without implying automated review or verdict generation.
+
+### Implications
+
+- /interface/evidence-field/ may be strengthened in place.
+- styles.css may be updated for static visual system and accessibility hardening.
+- Sitemap remains exactly 19 URLs.
+- No new public route is authorized.
+- No public operational interface, engine, classifier, upload, scoring, API, analytics, forms, DNS/Cloudflare, custom domain launch, monetization, or public tool behavior is authorized.
+- Future interface work may proceed only if it remains static, accessible, standard-aligned, protocol-aware, and non-operational until explicitly authorized.
+

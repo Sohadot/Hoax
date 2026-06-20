@@ -1426,6 +1426,27 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Evidence Field Static Interface Embodiment v1 per DEC-082. In-place enhancement of interface thesis page."
+    },
+    {
+      "claim_id": "CLAIM-0067",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "SPRINT_65_EVIDENCE_FIELD_VISUAL_SYSTEM_ACCESSIBILITY_HARDENING_AUDIT.md",
+        "DECISION_LOG.md",
+        "interface/evidence-field/index.html",
+        "styles.css"
+      ],
+      "source_refs": [
+        "SOURCE-0403",
+        "SOURCE-0404",
+        "SOURCE-0400",
+        "SOURCE-0405"
+      ],
+      "support_scope": "evidence field visual system accessibility hardening",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Evidence Field Visual System and Accessibility Hardening per DEC-083."
     }
   ],
   "last_reviewed": "2026-06-19"

@@ -728,6 +728,17 @@
       "status": "active",
       "last_reviewed": "2026-06-19",
       "notes": "Sprint 64 adds static interface embodiment in place at /interface/evidence-field/. Sitemap remains nineteen URLs. No new route. No operational interface, engine, classifier, upload, scoring, API, analytics, forms, JavaScript, or public tool behavior authorized."
+    },
+    {
+      "claim_id": "CLAIM-0067",
+      "claim_text": "Hoax.ai has hardened its Evidence Field static interface visual system and accessibility posture without introducing operational tool behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "SPRINT_65_EVIDENCE_FIELD_VISUAL_SYSTEM_ACCESSIBILITY_HARDENING_AUDIT.md, DECISION_LOG.md (DEC-083), interface/evidence-field/index.html, styles.css",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-19",
+      "notes": "Sprint 65 hardens visual grammar, reading order, mobile stability, and accessibility in place. Sitemap remains nineteen URLs. No operational interface authorized."
     }
   ]
 }

@@ -71,6 +71,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_protocol_integration_standard_alignment_interface_readiness.py",
     ROOT / "validators" / "validate_public_interface_thesis_evidence_field.py",
     ROOT / "validators" / "validate_evidence_field_static_interface_embodiment_v1.py",
+    ROOT / "validators" / "validate_evidence_field_visual_system_accessibility_hardening.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 
