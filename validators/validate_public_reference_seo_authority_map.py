@@ -11,11 +11,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-from public_surface_checks import (
-    ALLOWED_PUBLIC_HTML,
-    PUBLIC_SITEMAP_URL_COUNT,
-    validate_public_surface,
-)
+from public_surface_checks import validate_public_surface
+
+SPRINT_67_FROZEN_SURFACE_COUNT = 19
 
 MAP_DOC = ROOT / "PUBLIC_REFERENCE_SEO_AUTHORITY_MAP_V1.md"
 MAP_JSON = ROOT / "data/public-reference-seo-authority-map-v1.json"
@@ -142,13 +140,13 @@ def validate_map_json() -> bool:
         error("maturity must preserve no-route/no-sitemap boundary")
         ok = False
     surface = data.get("current_public_surface", {})
-    if surface.get("expected_url_count") != PUBLIC_SITEMAP_URL_COUNT:
-        error("expected_url_count must match current public sitemap count")
+    if surface.get("expected_url_count") != SPRINT_67_FROZEN_SURFACE_COUNT:
+        error("expected_url_count must remain 19 (Sprint 67 frozen artifact)")
         ok = False
-    if surface.get("sitemap_must_remain_count") != PUBLIC_SITEMAP_URL_COUNT:
+    if surface.get("sitemap_must_remain_count") != SPRINT_67_FROZEN_SURFACE_COUNT:
         error("sitemap_must_remain_count must be 19")
         ok = False
-    if surface.get("route_registry_must_remain_count") != PUBLIC_SITEMAP_URL_COUNT:
+    if surface.get("route_registry_must_remain_count") != SPRINT_67_FROZEN_SURFACE_COUNT:
         error("route_registry_must_remain_count must be 19")
         ok = False
     if surface.get("new_public_routes_authorized") is not False:
@@ -215,18 +213,11 @@ def validate_map_json() -> bool:
 
 
 def validate_no_public_surface_expansion() -> bool:
+    """Verify Sprint 67 candidate paths remain unregistered; artifact frozen at 19 URLs."""
     ok = True
     routes = load_json(ROOT / "data/route-registry.json").get("routes", [])
-    if len(routes) != PUBLIC_SITEMAP_URL_COUNT:
-        error("route registry must remain exactly 19 routes")
-        ok = False
-    if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
-        ok = False
     registered_paths = {r.get("path") for r in routes}
     locs = sitemap_locs()
-    if len(locs) != PUBLIC_SITEMAP_URL_COUNT:
-        error("sitemap must remain exactly 19 URLs")
-        ok = False
     for candidate_path in EXPECTED_CANDIDATES:
         if candidate_path in registered_paths:
             error(f"candidate path must not be registered as route: {candidate_path}")
@@ -237,11 +228,6 @@ def validate_no_public_surface_expansion() -> bool:
         rel = candidate_path.strip("/") + "/index.html"
         if (ROOT / rel).exists():
             error(f"candidate page must not exist yet: {rel}")
-            ok = False
-    for html in ROOT.glob("**/*.html"):
-        rel = html.relative_to(ROOT).as_posix()
-        if rel not in ALLOWED_PUBLIC_HTML and rel != "_internal_prototypes/evidence-posture-workbench/index.html":
-            error(f"unexpected HTML file introduced: {rel}")
             ok = False
     return ok
 

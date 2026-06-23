@@ -4,7 +4,14 @@
 
 Hoax.ai helps people read evidence risk in the synthetic media age — without issuing verdicts, scores, uploads, or fake/real labels.
 
-Hoax.ai is a governed public evidence-risk reference system and manual evidence posture guide. It is useful as a non-verdict public utility: guided evidence questions, synthetic media risk literacy, and evidence posture reference — not a verdict engine, upload detector, fake/real classifier, scoring system, or public automated report generator.
+Hoax.ai is a governed public evidence-risk reference system with live manual utilities:
+
+- [Manual Evidence Checklist](manual-evidence-checklist/index.html)
+- [Evidence Posture Map](evidence-posture-map/index.html)
+- [Synthetic Examples](synthetic-examples/index.html)
+- [Evidence-Risk Questions](evidence-risk-questions/index.html)
+
+These utilities are non-verdict reference tools — not a verdict engine, upload detector, fake/real classifier, scoring system, or public automated report generator.
 
 Hoax.ai is not a truth machine, a political fact-checking site, or a generic AI detector.
 

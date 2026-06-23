@@ -1,0 +1,51 @@
+{
+  "surface_id": "public-evidence-risk-utility-surface-v1",
+  "name": "Public Evidence-Risk Utility Surface v1",
+  "version": "1.0.0",
+  "decision_ref": "DEC-102",
+  "sprint": "Sprint 84",
+  "status": "public_reference_utility_surface",
+  "production_first": true,
+  "governance_after_production": true,
+  "public_routes_added": [
+    "/manual-evidence-checklist/",
+    "/evidence-posture-map/",
+    "/synthetic-examples/",
+    "/evidence-risk-questions/"
+  ],
+  "expected_sitemap_url_count_after": 23,
+  "expected_route_registry_count_after": 23,
+  "upload_authorized": false,
+  "scoring_authorized": false,
+  "verdict_authorized": false,
+  "detector_claim_authorized": false,
+  "public_api_authorized": false,
+  "automated_report_authorized": false,
+  "javascript_authorized": false,
+  "public_utility_authorized": true,
+  "manual_reference_utility_authorized": true,
+  "synthetic_examples_authorized": true,
+  "visual_map_authorized": true,
+  "checklist_authorized": true,
+  "allowed_public_utility_types": [
+    "manual checklist",
+    "visual evidence posture map",
+    "synthetic examples",
+    "guided evidence-risk questions"
+  ],
+  "forbidden_public_behavior": [
+    "upload",
+    "score",
+    "verdict",
+    "fake_real_label",
+    "automated_detection",
+    "public_api",
+    "automated_report",
+    "real_world_case_evaluation",
+    "user_input_submission",
+    "analytics",
+    "monetization"
+  ],
+  "non_verdict_boundary": "Public utilities guide manual evidence-risk reading. They do not judge artifacts, issue fake/real labels, accept uploads, or produce automated reports.",
+  "public_value_statement": "Hoax.ai is useful now through manual evidence-risk utilities that preserve non-verdict, non-detector boundaries."
+}

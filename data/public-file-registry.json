@@ -1,7 +1,7 @@
 {
   "registry_id": "PUBLIC-FILE-REGISTRY-001",
   "name": "Hoax.ai Public File Registry",
-  "version": "v1.3.0",
+  "version": "v1.4.0",
   "status": "active",
   "maturity": "public_reference_production_batch_1",
   "public_files": [
@@ -268,7 +268,55 @@
       "allowed_dependencies": ["../../styles.css"],
       "prohibited_content": "forms, scripts, javascript, external deps, active tool claims, upload, scoring, classifier, detector, engine",
       "notes": "Hoax.ai Evidence Field Interface Thesis public interface-thesis page."
+    },
+    {
+      "file_id": "PUB-FILE-0020",
+      "path": "manual-evidence-checklist/index.html",
+      "file_type": "html",
+      "public_role": "public_reference_utility_page",
+      "route_id_if_applicable": "ROUTE-0020",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Manual Evidence Checklist public utility page per DEC-102."
+    },
+    {
+      "file_id": "PUB-FILE-0021",
+      "path": "evidence-posture-map/index.html",
+      "file_type": "html",
+      "public_role": "public_reference_utility_page",
+      "route_id_if_applicable": "ROUTE-0021",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Evidence Posture Map public utility page per DEC-102."
+    },
+    {
+      "file_id": "PUB-FILE-0022",
+      "path": "synthetic-examples/index.html",
+      "file_type": "html",
+      "public_role": "public_reference_utility_page",
+      "route_id_if_applicable": "ROUTE-0022",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, real_world_cases",
+      "notes": "Synthetic Evidence-Risk Examples public utility page per DEC-102."
+    },
+    {
+      "file_id": "PUB-FILE-0023",
+      "path": "evidence-risk-questions/index.html",
+      "file_type": "html",
+      "public_role": "public_reference_utility_page",
+      "route_id_if_applicable": "ROUTE-0023",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Evidence-Risk Questions public utility page per DEC-102."
     }
   ],
-  "last_reviewed": "2026-06-19"
+  "last_reviewed": "2026-06-20"
 }

@@ -14,7 +14,6 @@ ROOT = Path(__file__).resolve().parent.parent
 
 from public_surface_checks import (  # noqa: E402
     PUBLIC_SITEMAP_URL_COUNT,
-    PUBLISHER_STATUS_POST_PUBLIC_COPY_BOUNDARY_FRAMEWORK_VALIDATION,
     validate_public_surface,
 )
 
@@ -200,9 +199,6 @@ def validate_homepage() -> bool:
 def validate_surface() -> bool:
     ok = True
     routes = load_json("data/route-registry.json").get("routes", [])
-    if len(routes) != 19:
-        error("route registry must remain 19 entries")
-        ok = False
     if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
         ok = False
     locs = [
@@ -231,10 +227,6 @@ def validate_governance() -> bool:
         ROOT / "validators/validate_all.py"
     ).read_text(encoding="utf-8"):
         error("validate_all.py must include Sprint 83 validator")
-        ok = False
-    policy = load_json("data/publisher-governance-policy.json")
-    if policy.get("current_publisher_status") != PUBLISHER_STATUS_POST_PUBLIC_COPY_BOUNDARY_FRAMEWORK_VALIDATION:
-        error("publisher status must be blocked_until_public_copy_boundary_framework_validation")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}
     for loc in SOURCE_LOCS:

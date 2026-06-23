@@ -1176,6 +1176,24 @@
       "failure_condition": "public_copy_boundary_framework_v1_not_met",
       "bypassable": false,
       "notes": "Public Copy Boundary Framework v1 completed Sprint 83 (DEC-101). Copy boundary framework, utility language standard, hero copy model, detector misreading prevention, and homepage utility repositioning documented. No upload, scoring, verdict, detector claim, public API, or automated report behavior authorized. Sitemap remains nineteen URLs."
+    },
+    {
+      "gate_id": "PUB-GATE-0079",
+      "name": "Public Evidence-Risk Utility Surface v1 Gate",
+      "status": "public_evidence_risk_utility_surface_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_84_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_V1.md",
+      "failure_condition": "public_evidence_risk_utility_surface_v1_not_met",
+      "bypassable": false,
+      "notes": "Public Evidence-Risk Utility Surface v1 completed Sprint 84 (DEC-102). Four public utility routes created. Sitemap twenty-three URLs. No upload, scoring, verdict, detector claim, public API, automated report, JavaScript, or form behavior authorized."
     }
   ],
   "last_reviewed": "2026-06-20"

@@ -2394,9 +2394,43 @@ All harnesses and `validate_all.py` — PASS required.
 
 **Gate G83 passed.**
 
+**Sprint 84 — Public Evidence-Risk Utility Surface v1**
+
+---
+
+## Sprint 84 — Public Evidence-Risk Utility Surface v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Create visible public evidence-risk utility routes that give visitors immediate practical value without detector, upload, score, or verdict behavior.
+
+### Deliverables
+
+- PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_V1.md
+- PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_AUDIT_V1.md
+- data/public-evidence-risk-utility-surface-v1.json
+- data/public-evidence-risk-utility-surface-v1.schema.json
+- manual-evidence-checklist/index.html
+- evidence-posture-map/index.html
+- synthetic-examples/index.html
+- evidence-risk-questions/index.html
+- validators/validate_public_evidence_risk_utility_surface_v1.py
+- SPRINT_84_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_V1.md
+- Homepage utility section and links
+- DEC-102 appended to DECISION_LOG.md
+- PUB-GATE-0079 added
+- Publisher status -> blocked_until_public_evidence_risk_utility_surface_validation
+
+### Validation
+
+All harnesses and `validate_all.py` — PASS required.
+
+### Gate
+
+**Gate G84 passed.** Public Reference Route Expansion v1 is the recommended next phase.
+
 ### Next Phase
 
-Governed public utility expansion when separately authorized.
+**Sprint 85 — Public Reference Route Expansion v1**
 
 ---
 

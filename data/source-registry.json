@@ -6511,6 +6511,116 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 83 decision record."
+    },
+    {
+      "source_id": "SOURCE-0551",
+      "source_title": "PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 84 public utility surface."
+    },
+    {
+      "source_id": "SOURCE-0552",
+      "source_title": "PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 84 utility surface audit."
+    },
+    {
+      "source_id": "SOURCE-0553",
+      "source_title": "data/public-evidence-risk-utility-surface-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/public-evidence-risk-utility-surface-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 84 utility surface JSON."
+    },
+    {
+      "source_id": "SOURCE-0554",
+      "source_title": "data/public-evidence-risk-utility-surface-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/public-evidence-risk-utility-surface-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 84 utility surface schema."
+    },
+    {
+      "source_id": "SOURCE-0555",
+      "source_title": "manual-evidence-checklist/index.html",
+      "source_type": "public_surface",
+      "location": "manual-evidence-checklist/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 84 manual evidence checklist utility."
+    },
+    {
+      "source_id": "SOURCE-0556",
+      "source_title": "evidence-posture-map/index.html",
+      "source_type": "public_surface",
+      "location": "evidence-posture-map/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 84 evidence posture map utility."
+    },
+    {
+      "source_id": "SOURCE-0557",
+      "source_title": "synthetic-examples/index.html",
+      "source_type": "public_surface",
+      "location": "synthetic-examples/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 84 synthetic examples utility."
+    },
+    {
+      "source_id": "SOURCE-0558",
+      "source_title": "evidence-risk-questions/index.html",
+      "source_type": "public_surface",
+      "location": "evidence-risk-questions/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 84 evidence-risk questions utility."
+    },
+    {
+      "source_id": "SOURCE-0559",
+      "source_title": "validators/validate_public_evidence_risk_utility_surface_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_evidence_risk_utility_surface_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 84 utility surface validator."
+    },
+    {
+      "source_id": "SOURCE-0560",
+      "source_title": "SPRINT_84_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_84_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 84 audit record."
+    },
+    {
+      "source_id": "SOURCE-0561",
+      "source_title": "DECISION_LOG.md (DEC-102)",
+      "source_type": "internal_governance",
+      "location": "DECISION_LOG.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 84 decision record."
     }
   ]
 }

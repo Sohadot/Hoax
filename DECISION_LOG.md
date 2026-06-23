@@ -2687,3 +2687,30 @@ Hoax.ai must not remain a hidden-governance asset or a mere article site. It mus
 - Sitemap remains exactly 19 URLs unless separately governed.
 - Future public utility pages require separate sprint authorization.
 
+---
+
+## DEC-102 — Public Evidence-Risk Utility Surface v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Evidence-Risk Utility Surface v1 by adding four public utility routes: Manual Evidence Checklist, Evidence Posture Map, Synthetic Evidence-Risk Examples, and Evidence-Risk Questions. The sprint makes Hoax.ai useful to visitors without creating upload behavior, scoring, verdicts, fake/real labels, public API, automated reports, detector claims, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 83 corrected the public copy boundary, Hoax.ai needed visible public utility rather than additional abstract governance. This decision governs a real production surface that visitors can use immediately.
+
+### Implications
+
+- Four public utility routes are authorized.
+- Sitemap may increase from 19 to 23 URLs.
+- Route registry may increase from 19 to 23 entries.
+- Homepage may link to the public utility routes.
+- Manual reference utilities are authorized.
+- Synthetic examples are authorized.
+- Visual evidence posture map is authorized.
+- Guided evidence-risk questions are authorized.
+- Upload, scoring, verdict, detector, API, automated report, and real-world case evaluation remain unauthorized.
+

@@ -937,6 +937,17 @@
       "status": "active",
       "last_reviewed": "2026-06-20",
       "notes": "Sprint 83 public copy boundary framework. Homepage hero repositioned. No upload, scoring, verdict, or detector behavior authorized."
+    },
+    {
+      "claim_id": "CLAIM-0086",
+      "claim_text": "Hoax.ai has adopted Public Evidence-Risk Utility Surface v1 with four public utility routes for manual evidence-risk reading without upload, scoring, verdicts, or detector behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_V1.md, PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_AUDIT_V1.md, data/public-evidence-risk-utility-surface-v1.json, manual-evidence-checklist/index.html, evidence-posture-map/index.html, synthetic-examples/index.html, evidence-risk-questions/index.html, validators/validate_public_evidence_risk_utility_surface_v1.py, SPRINT_84_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_V1.md, DECISION_LOG.md (DEC-102)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-20",
+      "notes": "Sprint 84 public utility surface. Sitemap twenty-three URLs. No upload or detector behavior."
     }
   ]
 }

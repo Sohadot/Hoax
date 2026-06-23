@@ -1970,6 +1970,40 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Copy Boundary Framework v1 per DEC-101."
+    },
+    {
+      "claim_id": "CLAIM-0086",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_V1.md",
+        "PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_AUDIT_V1.md",
+        "data/public-evidence-risk-utility-surface-v1.json",
+        "manual-evidence-checklist/index.html",
+        "evidence-posture-map/index.html",
+        "synthetic-examples/index.html",
+        "evidence-risk-questions/index.html",
+        "validators/validate_public_evidence_risk_utility_surface_v1.py",
+        "SPRINT_84_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0551",
+        "SOURCE-0552",
+        "SOURCE-0553",
+        "SOURCE-0554",
+        "SOURCE-0555",
+        "SOURCE-0556",
+        "SOURCE-0557",
+        "SOURCE-0558",
+        "SOURCE-0559",
+        "SOURCE-0560",
+        "SOURCE-0561"
+      ],
+      "support_scope": "public evidence-risk utility surface v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Evidence-Risk Utility Surface v1 per DEC-102."
     }
   ],
   "last_reviewed": "2026-06-20"

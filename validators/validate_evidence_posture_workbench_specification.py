@@ -473,7 +473,7 @@ def validate_publisher_governance() -> bool:
         "blocked_until_targeted_synthetic_fixture_expansion_v1_validation",
         "blocked_until_internal_prototype_compound_boundary_stress_test_validation",
         "blocked_until_internal_prototype_guardrail_red_team_pack_validation",
-        "blocked_until_public_copy_boundary_framework_validation",
+        "blocked_until_public_evidence_risk_utility_surface_validation",
     }
     if pub.get("current_publisher_status") not in allowed:
         error(f"publisher status must be one of {sorted(allowed)}")

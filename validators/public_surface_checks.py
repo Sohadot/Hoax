@@ -13,6 +13,7 @@ PUBLIC_ROUTE_IDS = [
     "ROUTE-0009", "ROUTE-0010", "ROUTE-0011", "ROUTE-0012",
     "ROUTE-0013", "ROUTE-0014", "ROUTE-0015", "ROUTE-0016",
     "ROUTE-0017", "ROUTE-0018", "ROUTE-0019",
+    "ROUTE-0020", "ROUTE-0021", "ROUTE-0022", "ROUTE-0023",
 ]
 
 PILOT_ROUTE_IDS = PUBLIC_ROUTE_IDS  # backward compatibility
@@ -44,6 +45,10 @@ ALLOWED_PUBLIC_HTML = {
     "standard/evidence-posture/index.html",
     "protocol/evidence-posture/index.html",
     "interface/evidence-field/index.html",
+    "manual-evidence-checklist/index.html",
+    "evidence-posture-map/index.html",
+    "synthetic-examples/index.html",
+    "evidence-risk-questions/index.html",
 }
 
 ALLOWED_INTERNAL_PROTOTYPE_HTML = {
@@ -58,7 +63,7 @@ ALLOWED_PUBLIC_ROOT_FILES = ALLOWED_PUBLIC_HTML | {
     "sitemap.xml",
 }
 
-PUBLIC_SITEMAP_URL_COUNT = 19
+PUBLIC_SITEMAP_URL_COUNT = 23
 
 PILOT_SITEMAP_URL_COUNT = PUBLIC_SITEMAP_URL_COUNT  # backward compatibility
 
@@ -204,6 +209,10 @@ PUBLISHER_STATUS_POST_PUBLIC_COPY_BOUNDARY_FRAMEWORK_VALIDATION = (
     "blocked_until_public_copy_boundary_framework_validation"
 )
 
+PUBLISHER_STATUS_POST_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_VALIDATION = (
+    "blocked_until_public_evidence_risk_utility_surface_validation"
+)
+
 PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_reference_candidate_pack",
     "blocked_until_internal_draft_blueprint",
@@ -267,6 +276,7 @@ PUBLISHER_STATUSES_ALLOWED = (
     PUBLISHER_STATUS_POST_INTERNAL_PROTOTYPE_RELEASE_BLOCKER_BOARD_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_EXPOSURE_PREREQUISITE_MAP_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_COPY_BOUNDARY_FRAMEWORK_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_VALIDATION,
 )
 
 

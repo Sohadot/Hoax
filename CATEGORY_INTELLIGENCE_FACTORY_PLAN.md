@@ -202,6 +202,8 @@ The Category Intelligence Factory now defines prerequisites before public exposu
 
 The Category Intelligence Factory now governs public copy so Hoax.ai can be useful without becoming a detector. Public Copy Boundary Framework v1 repositions the homepage from defensive negation to evidence-first utility language while preserving strict non-verdict, non-upload, non-score, and non-verdict-engine boundaries.
 
+The Category Intelligence Factory now includes visible public utility. Public Evidence-Risk Utility Surface v1 gives visitors manual evidence-risk checklists, visual posture mapping, synthetic examples, and guided evidence-risk questions while preserving Hoax.ai's non-verdict, non-detector boundary.
+
 The Category Intelligence Factory treats chronology integrity as part of evidence integrity: decision records must not move backward in time unless a correction note explicitly explains and repairs the error.
 
 The category factory becomes reference-grade only when public-facing claims, evidence ledger entries, source records, and support locations are traceable as a governed system.
