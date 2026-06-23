@@ -94,6 +94,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_public_evidence_risk_utility_surface_v1.py",
     ROOT / "validators" / "validate_public_reference_route_expansion_v1.py",
     ROOT / "validators" / "validate_public_reference_authority_internal_linking_v1.py",
+    ROOT / "validators" / "validate_public_reference_source_confidence_layer_v1.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

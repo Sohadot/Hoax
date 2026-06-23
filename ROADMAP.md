@@ -2469,7 +2469,40 @@ All harnesses and `validate_all.py` — PASS required.
 
 ### Next Phase
 
-**Sprint 88 — Public Reference Source Confidence Layer v1**
+**Sprint 89 — Public Reference Answer Surface v1**
+
+---
+
+## Sprint 88 — Public Reference Source Confidence Layer v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Add visible source-confidence blocks across homepage and ten public utility/reference pages without new routes or tool behavior.
+
+### Deliverables
+
+- PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_V1.md
+- PUBLIC_SOURCE_CONFIDENCE_COMPONENT_STANDARD_V1.md
+- PUBLIC_SOURCE_CONFIDENCE_AUDIT_V1.md
+- data/public-reference-source-confidence-layer-v1.json
+- data/public-reference-source-confidence-layer-v1.schema.json
+- validators/validate_public_reference_source_confidence_layer_v1.py
+- SPRINT_88_PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_V1.md
+- Source Confidence blocks on homepage and ten utility/reference pages
+- DEC-106 appended to DECISION_LOG.md
+- PUB-GATE-0082 added
+- Publisher status -> blocked_until_public_reference_source_confidence_layer_validation
+
+### Validation
+
+All harnesses and `validate_all.py` — PASS required.
+
+### Gate
+
+**Gate G88 passed.** Public Reference Answer Surface v1 is the recommended next phase.
+
+### Next Phase
+
+**Sprint 89 — Public Reference Answer Surface v1**
 
 ---
 

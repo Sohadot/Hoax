@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Public Reference Source Confidence Layer v1",
+  "type": "object",
+  "required": [
+    "source_confidence_layer_id",
+    "name",
+    "version",
+    "decision_ref",
+    "sprint",
+    "status",
+    "production_first",
+    "governance_after_production",
+    "new_public_routes_added",
+    "expected_sitemap_url_count_after",
+    "expected_route_registry_count_after",
+    "human_readable",
+    "ai_readable",
+    "source_confidence_is_not_score",
+    "source_confidence_is_not_verification",
+    "source_confidence_clarifies_support_type",
+    "pages_updated",
+    "allowed_support_types",
+    "forbidden_support_types",
+    "upload_authorized",
+    "scoring_authorized",
+    "verdict_authorized",
+    "detector_claim_authorized",
+    "public_api_authorized",
+    "automated_report_authorized",
+    "javascript_authorized",
+    "forms_authorized",
+    "real_world_case_evaluation_authorized",
+    "forbidden_public_behavior"
+  ],
+  "properties": {
+    "source_confidence_layer_id": { "const": "public-reference-source-confidence-layer-v1" },
+    "decision_ref": { "const": "DEC-106" },
+    "sprint": { "const": "Sprint 88" },
+    "status": { "const": "public_reference_source_confidence_layer" },
+    "production_first": { "const": true },
+    "new_public_routes_added": { "const": false },
+    "expected_sitemap_url_count_after": { "const": 29 },
+    "expected_route_registry_count_after": { "const": 29 },
+    "human_readable": { "const": true },
+    "ai_readable": { "const": true },
+    "source_confidence_is_not_score": { "const": true },
+    "source_confidence_is_not_verification": { "const": true },
+    "pages_updated": {
+      "type": "array",
+      "minItems": 11,
+      "maxItems": 11,
+      "uniqueItems": true,
+      "items": { "type": "string" }
+    },
+    "allowed_support_types": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "Conceptual Definition",
+          "Manual Utility Guidance",
+          "Synthetic Example",
+          "Boundary Statement",
+          "Repository-Governed Reference"
+        ]
+      }
+    },
+    "forbidden_support_types": {
+      "type": "array",
+      "minItems": 9,
+      "uniqueItems": true,
+      "items": { "type": "string" }
+    },
+    "upload_authorized": { "const": false },
+    "scoring_authorized": { "const": false },
+    "verdict_authorized": { "const": false },
+    "detector_claim_authorized": { "const": false },
+    "public_api_authorized": { "const": false },
+    "automated_report_authorized": { "const": false },
+    "javascript_authorized": { "const": false },
+    "forms_authorized": { "const": false },
+    "real_world_case_evaluation_authorized": { "const": false }
+  },
+  "additionalProperties": true
+}

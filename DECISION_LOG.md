@@ -2762,3 +2762,28 @@ After Sprint 84 created public utilities, Sprint 85 created human-readable and A
 - Reference paths, related concept links, use-next guidance, AI-readable link capsules, homepage reference graph framing, and page-end reference navigation are authorized.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-106 — Public Reference Source Confidence Layer v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Source Confidence Layer v1 by adding visible source-confidence blocks to the homepage, public utility pages, and public reference routes. The layer clarifies each page's support type, what the page can support, what it cannot support, and the relevant non-verdict boundary without creating new routes, uploads, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 87 strengthened the internal reference graph, Hoax.ai needed a visible trust layer that helps humans and AI agents distinguish conceptual definitions, manual utility guidance, synthetic examples, boundary statements, and repository-governed reference material. This increases credibility and interpretability without turning source confidence into a score or verification claim.
+
+### Implications
+
+- Existing public pages may receive visible source-confidence blocks.
+- No new public route is authorized.
+- Sitemap remains 29 URLs.
+- Route registry remains 29 entries.
+- Allowed support types are Conceptual Definition, Manual Utility Guidance, Synthetic Example, Boundary Statement, and Repository-Governed Reference.
+- Source confidence is not a score, verdict, detection result, or truth verification.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, and real-world case evaluation remain unauthorized.
+

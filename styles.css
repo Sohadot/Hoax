@@ -489,6 +489,42 @@ a.utility-card:focus-visible {
   margin-top: 2rem;
 }
 
+.source-confidence-block {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border-subtle, #2a3441);
+  border-radius: 6px;
+  background: var(--bg-surface, #141a22);
+}
+
+.source-confidence-block h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.source-confidence-dl {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.source-confidence-dl dt {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-top: 0.85rem;
+}
+
+.source-confidence-dl dt:first-child {
+  margin-top: 0;
+}
+
+.source-confidence-dl dd {
+  margin: 0.35rem 0 0 0;
+  color: var(--text-secondary, #a8b3c2);
+}
+
 @media (max-width: 640px) {
   .utility-card-grid,
   .posture-utility-cards,

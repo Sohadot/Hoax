@@ -16,6 +16,7 @@ from public_surface_checks import (  # noqa: E402
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_UTILITY_INTERFACE_EMBODIMENT_VALIDATION,
     validate_public_surface,
 )
@@ -332,7 +333,7 @@ def validate_governance() -> bool:
     policy = load_json("data/publisher-governance-policy.json")
     if policy.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_UTILITY_INTERFACE_EMBODIMENT_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_VALIDATION,
     ):
         error("publisher status must reflect Sprint 87 internal linking validation")
         ok = False

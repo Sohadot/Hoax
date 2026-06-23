@@ -7498,6 +7498,97 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 87 homepage reference graph."
+    },
+    {
+      "source_id": "SOURCE-0584",
+      "source_title": "PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_V1.md",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 88 source confidence layer policy."
+    },
+    {
+      "source_id": "SOURCE-0585",
+      "source_title": "PUBLIC_SOURCE_CONFIDENCE_COMPONENT_STANDARD_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_SOURCE_CONFIDENCE_COMPONENT_STANDARD_V1.md",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 88 component standard."
+    },
+    {
+      "source_id": "SOURCE-0586",
+      "source_title": "PUBLIC_SOURCE_CONFIDENCE_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_SOURCE_CONFIDENCE_AUDIT_V1.md",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 88 audit."
+    },
+    {
+      "source_id": "SOURCE-0587",
+      "source_title": "data/public-reference-source-confidence-layer-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-source-confidence-layer-v1.json",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 88 layer JSON."
+    },
+    {
+      "source_id": "SOURCE-0588",
+      "source_title": "data/public-reference-source-confidence-layer-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-source-confidence-layer-v1.schema.json",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 88 layer schema."
+    },
+    {
+      "source_id": "SOURCE-0589",
+      "source_title": "SPRINT_88_PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_88_PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_V1.md",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 88 record."
+    },
+    {
+      "source_id": "SOURCE-0590",
+      "source_title": "validators/validate_public_reference_source_confidence_layer_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_reference_source_confidence_layer_v1.py",
+      "supports": [
+        "governance_claim",
+        "operational_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 88 validator."
     }
   ]
 }

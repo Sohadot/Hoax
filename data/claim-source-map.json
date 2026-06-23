@@ -2077,6 +2077,35 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Authority Internal Linking v1 per DEC-105."
+    },
+    {
+      "claim_id": "CLAIM-0089",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_V1.md",
+        "PUBLIC_SOURCE_CONFIDENCE_COMPONENT_STANDARD_V1.md",
+        "PUBLIC_SOURCE_CONFIDENCE_AUDIT_V1.md",
+        "data/public-reference-source-confidence-layer-v1.json",
+        "index.html",
+        "manual-evidence-checklist/index.html",
+        "validators/validate_public_reference_source_confidence_layer_v1.py",
+        "SPRINT_88_PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0584",
+        "SOURCE-0585",
+        "SOURCE-0586",
+        "SOURCE-0587",
+        "SOURCE-0588",
+        "SOURCE-0589",
+        "SOURCE-0590"
+      ],
+      "support_scope": "public reference source confidence layer v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Source Confidence Layer v1 per DEC-106."
     }
   ],
   "last_reviewed": "2026-06-20"
