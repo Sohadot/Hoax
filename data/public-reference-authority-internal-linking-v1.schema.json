@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Public Reference Authority Internal Linking v1",
+  "type": "object",
+  "required": [
+    "linking_id",
+    "name",
+    "version",
+    "decision_ref",
+    "sprint",
+    "status",
+    "production_first",
+    "governance_after_production",
+    "new_public_routes_added",
+    "expected_sitemap_url_count_after",
+    "expected_route_registry_count_after",
+    "human_readable",
+    "ai_readable",
+    "authority_linking",
+    "concept_graph_embodied",
+    "utility_routes",
+    "reference_routes",
+    "required_components",
+    "upload_authorized",
+    "scoring_authorized",
+    "verdict_authorized",
+    "detector_claim_authorized",
+    "public_api_authorized",
+    "automated_report_authorized",
+    "javascript_authorized",
+    "forms_authorized",
+    "real_world_case_evaluation_authorized",
+    "forbidden_public_behavior"
+  ],
+  "properties": {
+    "linking_id": { "const": "public-reference-authority-internal-linking-v1" },
+    "decision_ref": { "const": "DEC-105" },
+    "sprint": { "const": "Sprint 87" },
+    "status": { "const": "public_reference_authority_internal_linking" },
+    "production_first": { "const": true },
+    "new_public_routes_added": { "const": false },
+    "expected_sitemap_url_count_after": { "const": 29 },
+    "expected_route_registry_count_after": { "const": 29 },
+    "human_readable": { "const": true },
+    "ai_readable": { "const": true },
+    "authority_linking": { "const": true },
+    "concept_graph_embodied": { "const": true },
+    "utility_routes": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "uniqueItems": true,
+      "items": { "type": "string" }
+    },
+    "reference_routes": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": { "type": "string" }
+    },
+    "required_components": {
+      "type": "array",
+      "minItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "reference_path",
+          "related_concepts",
+          "use_next",
+          "ai_readable_link_capsule",
+          "homepage_reference_graph",
+          "page_end_reference_navigation"
+        ]
+      }
+    },
+    "upload_authorized": { "const": false },
+    "scoring_authorized": { "const": false },
+    "verdict_authorized": { "const": false },
+    "detector_claim_authorized": { "const": false },
+    "public_api_authorized": { "const": false },
+    "automated_report_authorized": { "const": false },
+    "javascript_authorized": { "const": false },
+    "forms_authorized": { "const": false },
+    "real_world_case_evaluation_authorized": { "const": false }
+  },
+  "additionalProperties": true
+}

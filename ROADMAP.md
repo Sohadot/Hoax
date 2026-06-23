@@ -2465,6 +2465,54 @@ All harnesses and `validate_all.py` — PASS required.
 
 ### Gate
 
+**Gate G85 passed.** Public Reference Authority Internal Linking v1 completed as Sprint 87.
+
+### Next Phase
+
+**Sprint 88 — Public Reference Source Confidence Layer v1**
+
+---
+
+## Sprint 87 — Public Reference Authority Internal Linking v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Strengthen internal authority linking across homepage and ten public utility/reference pages without new routes or tool behavior.
+
+### Deliverables
+
+- PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_V1.md
+- HUMAN_AI_INTERNAL_LINKING_STANDARD_V1.md
+- PUBLIC_REFERENCE_LINK_GRAPH_AUDIT_V1.md
+- data/public-reference-authority-internal-linking-v1.json
+- data/public-reference-authority-internal-linking-v1.schema.json
+- validators/validate_public_reference_authority_internal_linking_v1.py
+- SPRINT_87_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_V1.md
+- Homepage reference graph and evidence-before-verdict sections
+- Reference paths, related concepts, continue-with guidance, AI link capsules, page-end navigation on ten pages
+- DEC-105 appended to DECISION_LOG.md
+- PUB-GATE-0081 added
+- Publisher status -> blocked_until_public_reference_authority_internal_linking_validation
+
+### Validation
+
+All harnesses and `validate_all.py` — PASS required.
+
+### Gate
+
+**Gate G87 passed.** Public Reference Source Confidence Layer v1 is the recommended next phase.
+
+### Next Phase
+
+**Sprint 88 — Public Reference Source Confidence Layer v1**
+
+---
+
+**Sprint 85 — Public Reference Route Expansion v1**
+
+**Status:** COMPLETE — 2026-06-20
+
+### Gate
+
 **Gate G85 passed.** Public Utility Interface Embodiment v1 is the recommended next phase.
 
 ### Next Phase

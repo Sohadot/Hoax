@@ -1,0 +1,62 @@
+{
+  "linking_id": "public-reference-authority-internal-linking-v1",
+  "name": "Public Reference Authority Internal Linking v1",
+  "version": "1.0.0",
+  "decision_ref": "DEC-105",
+  "sprint": "Sprint 87",
+  "status": "public_reference_authority_internal_linking",
+  "production_first": true,
+  "governance_after_production": true,
+  "new_public_routes_added": false,
+  "expected_sitemap_url_count_after": 29,
+  "expected_route_registry_count_after": 29,
+  "human_readable": true,
+  "ai_readable": true,
+  "authority_linking": true,
+  "concept_graph_embodied": true,
+  "utility_routes": [
+    "/manual-evidence-checklist/",
+    "/evidence-posture-map/",
+    "/synthetic-examples/",
+    "/evidence-risk-questions/"
+  ],
+  "reference_routes": [
+    "/evidence-risk/",
+    "/provenance-risk/",
+    "/context-collapse/",
+    "/claim-drift/",
+    "/traceability-gap/",
+    "/why-hoax-ai-is-not-a-detector/"
+  ],
+  "required_components": [
+    "reference_path",
+    "related_concepts",
+    "use_next",
+    "ai_readable_link_capsule",
+    "homepage_reference_graph",
+    "page_end_reference_navigation"
+  ],
+  "upload_authorized": false,
+  "scoring_authorized": false,
+  "verdict_authorized": false,
+  "detector_claim_authorized": false,
+  "public_api_authorized": false,
+  "automated_report_authorized": false,
+  "javascript_authorized": false,
+  "forms_authorized": false,
+  "real_world_case_evaluation_authorized": false,
+  "forbidden_public_behavior": [
+    "upload",
+    "score",
+    "verdict",
+    "binary_authenticity_label_output",
+    "automated_detection",
+    "public_api",
+    "automated_report",
+    "real_world_case_evaluation",
+    "user_input_submission",
+    "analytics",
+    "monetization"
+  ],
+  "public_value_statement": "Hoax.ai strengthens public reference authority by connecting utilities and reference routes into a coherent human-readable and AI-readable evidence-risk concept graph without new routes or tool behavior."
+}

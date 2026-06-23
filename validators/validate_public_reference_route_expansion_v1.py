@@ -16,6 +16,7 @@ from public_surface_checks import (  # noqa: E402
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_EXPANSION_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_UTILITY_INTERFACE_EMBODIMENT_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_VALIDATION,
     validate_public_surface,
 )
 
@@ -208,7 +209,7 @@ def validate_reference_pages() -> bool:
         if wc < MIN_VISIBLE_WORDS:
             error(f"{rel}: expected at least {MIN_VISIBLE_WORDS} visible words, found {wc}")
             ok = False
-        if "ai-readable reference capsule" not in lower:
+        if "ai-readable reference capsule" not in lower and "ai-readable link capsule" not in lower:
             error(f"{rel}: missing AI-readable reference capsule")
             ok = False
         if "what not to conclude" not in lower:
@@ -310,6 +311,7 @@ def validate_governance() -> bool:
     if policy.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_EXPANSION_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_UTILITY_INTERFACE_EMBODIMENT_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_VALIDATION,
     ):
         error("publisher status must be blocked_until_public_reference_route_expansion_validation")
         ok = False

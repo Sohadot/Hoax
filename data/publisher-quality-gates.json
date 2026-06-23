@@ -1212,6 +1212,24 @@
       "failure_condition": "public_reference_route_expansion_v1_not_met",
       "bypassable": false,
       "notes": "Public Reference Route Expansion v1 completed Sprint 85 (DEC-103). Six human/AI reference routes created. Sitemap twenty-nine URLs. AI retrieval capsules authorized. No upload, scoring, verdict, detector claim, public API, automated report, JavaScript, or form behavior authorized."
+    },
+    {
+      "gate_id": "PUB-GATE-0081",
+      "name": "Public Reference Authority Internal Linking v1 Gate",
+      "status": "public_reference_authority_internal_linking_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_87_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_V1.md",
+      "failure_condition": "public_reference_authority_internal_linking_v1_not_met",
+      "bypassable": false,
+      "notes": "Public Reference Authority Internal Linking v1 completed Sprint 87 (DEC-105). Internal concept graph linking across homepage and ten utility/reference pages. Sitemap remains twenty-nine URLs. No new routes. No upload, scoring, verdict, detector claim, public API, automated report, JavaScript, or form behavior authorized."
     }
   ],
   "last_reviewed": "2026-06-20"

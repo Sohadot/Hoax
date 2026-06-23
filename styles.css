@@ -363,9 +363,137 @@ a.utility-card:focus-visible {
   padding-top: 2rem;
 }
 
+.authority-reference-path {
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-subtle, #2a3441);
+  border-radius: 6px;
+  background: var(--bg-surface, #141a22);
+  font-size: 0.9rem;
+}
+
+.authority-reference-path h2 {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.authority-reference-path ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.authority-related-concepts,
+.authority-use-next {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  border-left: 2px solid var(--amber, #c9a227);
+  background: var(--bg-surface, #141a22);
+}
+
+.authority-related-concepts h2,
+.authority-use-next h2 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.authority-related-concepts ul,
+.authority-use-next ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.page-end-reference-nav {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle, #2a3441);
+}
+
+.page-end-reference-nav h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.page-end-ref-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-end-ref-grid h3 {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.page-end-boundary {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #a8b3c2);
+  margin: 0;
+}
+
+.boundary-strip {
+  margin: 2rem 0 1rem;
+  padding: 1rem 1.25rem;
+  border-left: 2px solid var(--amber, #c9a227);
+  background: var(--bg-surface, #141a22);
+  font-size: 0.9rem;
+}
+
+.boundary-strip-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+}
+
+.use-page-box {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--border-subtle, #2a3441);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.iface-nav-cluster {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.iface-nav-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.section-reference-graph {
+  border-top: 1px solid var(--border-subtle, #2a3441);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.section-evidence-before-verdict {
+  margin-top: 2rem;
+}
+
 @media (max-width: 640px) {
   .utility-card-grid,
-  .posture-utility-cards {
+  .posture-utility-cards,
+  .page-end-ref-grid,
+  .use-page-box {
     grid-template-columns: 1fr;
   }
 }

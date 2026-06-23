@@ -2738,4 +2738,27 @@ After Sprint 84 created visible public utility, Hoax.ai needs deeper reference-g
 - AI-readable reference capsules are authorized.
 - Non-verdict public reference units are authorized.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, and real-world case evaluation remain unauthorized.
+---
+
+## DEC-105 — Public Reference Authority Internal Linking v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Authority Internal Linking v1 by strengthening the internal link structure across the homepage, public utility pages, and public reference routes. The sprint adds reference paths, related concept links, use-next guidance, AI-readable link capsules, homepage reference graph framing, and page-end reference navigation without creating new routes, uploads, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 84 created public utilities, Sprint 85 created human-readable and AI-readable reference routes, and Sprint 86 embodied the interface, Hoax.ai needed authority-grade internal linking so the public surface reads as a coherent evidence-risk reference system rather than a collection of pages. This decision governs visible production links and supports both human navigation and AI retrieval.
+
+### Implications
+
+- Existing public pages may receive stronger internal links.
+- No new public route is authorized.
+- Sitemap remains 29 URLs.
+- Route registry remains 29 entries.
+- Reference paths, related concept links, use-next guidance, AI-readable link capsules, homepage reference graph framing, and page-end reference navigation are authorized.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, and real-world case evaluation remain unauthorized.
 

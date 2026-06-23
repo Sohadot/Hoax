@@ -30,11 +30,11 @@
       "claim_text": "Hoax.ai classifies evidence artifacts, not connected subjects.",
       "claim_type": "governance_claim",
       "evidence_posture": "repository_supported",
-      "support_location": "DECISION_LOG.md (DEC-012), GOVERNANCE_BOUNDARY.md (Artifact–Subject Separation Doctrine), CLAIM_POLICY.md",
+      "support_location": "DECISION_LOG.md (DEC-012), GOVERNANCE_BOUNDARY.md (Artifact\u2013Subject Separation Doctrine), CLAIM_POLICY.md",
       "source_type": "decision_log",
       "status": "active",
       "last_reviewed": "2026-06-17",
-      "notes": "Artifact–Subject Separation Doctrine. Evidence risk on artifacts does not transfer to persons or institutions."
+      "notes": "Artifact\u2013Subject Separation Doctrine. Evidence risk on artifacts does not transfer to persons or institutions."
     },
     {
       "claim_id": "CLAIM-0004",
@@ -661,7 +661,7 @@
       "source_type": "governance_file",
       "status": "active",
       "last_reviewed": "2026-06-17",
-      "notes": "Batch 2 adds Synthetic Fragility, Evidence Chain, Context Collapse, and Claim–Source Traceability reference pages. Public surface expanded to twelve URLs. No engine, classifier, upload, scoring, API, analytics, or public tool behavior authorized."
+      "notes": "Batch 2 adds Synthetic Fragility, Evidence Chain, Context Collapse, and Claim\u2013Source Traceability reference pages. Public surface expanded to twelve URLs. No engine, classifier, upload, scoring, API, analytics, or public tool behavior authorized."
     },
     {
       "claim_id": "CLAIM-0061",
@@ -959,6 +959,17 @@
       "status": "active",
       "last_reviewed": "2026-06-20",
       "notes": "Sprint 85 public reference route expansion. Sitemap twenty-nine URLs."
+    },
+    {
+      "claim_id": "CLAIM-0088",
+      "claim_text": "Hoax.ai has adopted Public Reference Authority Internal Linking v1, strengthening internal concept-graph links across the homepage and ten public utility/reference pages without new routes or tool behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_V1.md, HUMAN_AI_INTERNAL_LINKING_STANDARD_V1.md, PUBLIC_REFERENCE_LINK_GRAPH_AUDIT_V1.md, data/public-reference-authority-internal-linking-v1.json, index.html, validators/validate_public_reference_authority_internal_linking_v1.py, SPRINT_87_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_V1.md, DECISION_LOG.md (DEC-105)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-20",
+      "notes": "Sprint 87 internal linking. Sitemap remains twenty-nine URLs."
     }
   ]
 }

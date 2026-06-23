@@ -2043,6 +2043,40 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Route Expansion v1 per DEC-103."
+    },
+    {
+      "claim_id": "CLAIM-0088",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_V1.md",
+        "HUMAN_AI_INTERNAL_LINKING_STANDARD_V1.md",
+        "PUBLIC_REFERENCE_LINK_GRAPH_AUDIT_V1.md",
+        "data/public-reference-authority-internal-linking-v1.json",
+        "index.html",
+        "manual-evidence-checklist/index.html",
+        "evidence-posture-map/index.html",
+        "synthetic-examples/index.html",
+        "evidence-risk-questions/index.html",
+        "evidence-risk/index.html",
+        "validators/validate_public_reference_authority_internal_linking_v1.py",
+        "SPRINT_87_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0576",
+        "SOURCE-0577",
+        "SOURCE-0578",
+        "SOURCE-0579",
+        "SOURCE-0580",
+        "SOURCE-0581",
+        "SOURCE-0582",
+        "SOURCE-0583"
+      ],
+      "support_scope": "public reference authority internal linking v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Authority Internal Linking v1 per DEC-105."
     }
   ],
   "last_reviewed": "2026-06-20"

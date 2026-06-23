@@ -30,6 +30,16 @@
 
       <h1>Traceability Gap</h1>
       <p class="page-thesis">A traceability gap means the path from artifact to claim is incomplete — making many verdicts unsafe without proving fraud.</p>
+      <nav class="authority-reference-path" aria-label="Reference path">
+        <h2>Reference Path</h2>
+        <ol>
+          <li><a href="/">Homepage</a></li>
+          <li><a href="/evidence-risk/">Evidence-Risk Reference Layer</a></li>
+          <li><a href="/traceability-gap/">Traceability Gap</a></li>
+          <li>Utility pages</li>
+        </ol>
+      </nav>
+
 
       <div class="evidence-layer-stack evidence-layer-stack--compact" role="list" aria-label="Evidence layer sequence">
         <p class="evidence-layer-stack-fallback">Evidence layers: Source, Provenance, Context, Traceability, Claim Drift, Boundary Integrity, Evidence Posture.</p>
@@ -115,15 +125,29 @@
         <p>Partial traceability still matters for responsible review.</p>
       </section>
 
-      <section class="reference-section reference-capsule-section" aria-labelledby="ai-capsule">
-        <h2 id="ai-capsule">AI-Readable Reference Capsule</h2>
-        <dl class="ai-capsule">
-          <dt>Concept:</dt><dd>Traceability Gap</dd>
-          <dt>Definition:</dt><dd>Incomplete linkage between artifact, source, context, transformation path, and claim.</dd>
-          <dt>Use:</dt><dd>Determine whether the path from artifact to claim can be followed before concluding.</dd>
-          <dt>Not:</dt><dd>Fraud proof, manipulation detection, or automated chain verification.</dd>
-          <dt>Related concepts:</dt><dd>Provenance Risk, Claim Drift, Evidence Risk, Not Assessable</dd>
-          <dt>Public utility routes:</dt><dd><a href="/manual-evidence-checklist/">Manual Evidence Checklist</a>, <a href="/evidence-posture-map/">Evidence Posture Map</a>, <a href="/evidence-risk-questions/">Evidence-Risk Questions</a></dd>
+      
+      <section class="authority-related-concepts" aria-labelledby="related-concepts-heading">
+        <h2 id="related-concepts-heading">Related concepts</h2>
+        <ul>
+          <li><a href="/evidence-risk/">Evidence Risk</a> — Broken traceability elevates structural evidence risk.</li>
+          <li><a href="/provenance-risk/">Provenance Risk</a> — Custody gaps often produce traceability gaps.</li>
+          <li><a href="/context-collapse/">Context Collapse</a> — Missing frames can sever artifact-to-claim linkage.</li>
+          <li><a href="/claim-drift/">Claim Drift</a> — Drift worsens when traceability is incomplete.</li>
+          <li><a href="/manual-evidence-checklist/">Manual Evidence Checklist</a> — Use traceability question groups after this concept.</li>
+          <li><a href="/evidence-posture-map/">Evidence Posture Map</a> — Place traceability on the layer sequence.</li>
+        </ul>
+      </section>
+
+      <section class="reference-section reference-capsule-section" aria-labelledby="ai-link-capsule">
+        <h2 id="ai-link-capsule">AI-Readable Link Capsule</h2>
+        <dl class="ai-capsule ai-link-capsule">
+          <dt>Primary concept:</dt><dd>Traceability Gap</dd>
+          <dt>Page role:</dt><dd>Reference concept for incomplete artifact-to-claim paths.</dd>
+          <dt>Upstream concepts:</dt><dd>Evidence Risk, Provenance Risk</dd>
+          <dt>Downstream concepts:</dt><dd>Claim Drift, responsible pause before escalation</dd>
+          <dt>Utility routes:</dt><dd>Manual Evidence Checklist, Evidence Posture Map</dd>
+          <dt>Reference routes:</dt><dd>Evidence Risk, Provenance Risk, Context Collapse, Claim Drift</dd>
+          <dt>Boundary rule:</dt><dd>Not fraud proof, wrongdoing conclusion, or automated authenticity detection.</dd>
         </dl>
       </section>
 
@@ -152,25 +176,33 @@
         <p class="boundary-strip-label">Category boundary</p>
         <p>Hoax.ai is a non-verdict reference surface. It does not issue verdicts, scores, uploads, binary authenticity labels, or produce automated reports. It helps people read evidence conditions before conclusions.</p>
       </aside>
-      <nav class="iface-nav-cluster iface-utility-nav" aria-labelledby="utility-nav-label">
-        <p id="utility-nav-label" class="iface-nav-label">Public utilities</p>
-        <ul>
-          <li><a href="/manual-evidence-checklist/">Manual Evidence Checklist</a></li>
-          <li><a href="/evidence-posture-map/">Evidence Posture Map</a></li>
-          <li><a href="/synthetic-examples/">Synthetic Examples</a></li>
-          <li><a href="/evidence-risk-questions/">Evidence-Risk Questions</a></li>
-        </ul>
-      </nav>
-      <nav class="iface-nav-cluster iface-reference-nav" aria-labelledby="reference-nav-label">
-        <p id="reference-nav-label" class="iface-nav-label">Evidence-risk reference layer</p>
-        <ul>
-          <li><a href="/evidence-risk/">Evidence Risk</a></li>
-          <li><a href="/provenance-risk/">Provenance Risk</a></li>
-          <li><a href="/context-collapse/">Context Collapse</a></li>
-          <li><a href="/claim-drift/">Claim Drift</a></li>
-          <li><a href="/traceability-gap/">Traceability Gap</a></li>
-          <li><a href="/why-hoax-ai-is-not-a-detector/">Why Hoax.ai Is Not a Detector</a></li>
-        </ul>
+
+    
+      <nav class="page-end-reference-nav" aria-labelledby="page-end-ref-nav-label">
+        <h2 id="page-end-ref-nav-label">Hoax.ai public reference system</h2>
+        <div class="page-end-ref-grid">
+          <div>
+            <h3>Public utilities</h3>
+            <ul>
+              <li><a href="/manual-evidence-checklist/">Manual Evidence Checklist</a></li>
+              <li><a href="/evidence-posture-map/">Evidence Posture Map</a></li>
+              <li><a href="/synthetic-examples/">Synthetic Examples</a></li>
+              <li><a href="/evidence-risk-questions/">Evidence-Risk Questions</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Reference concepts</h3>
+            <ul>
+              <li><a href="/evidence-risk/">Evidence Risk</a></li>
+              <li><a href="/provenance-risk/">Provenance Risk</a></li>
+              <li><a href="/context-collapse/">Context Collapse</a></li>
+              <li><a href="/claim-drift/">Claim Drift</a></li>
+              <li><a href="/traceability-gap/">Traceability Gap</a></li>
+              <li><a href="/why-hoax-ai-is-not-a-detector/">Why Hoax.ai Is Not a Detector</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="page-end-boundary">Hoax.ai helps people read evidence conditions before conclusions. It does not produce automated authenticity labels, numeric certainty outputs, verdicts, uploads, or public reports.</p>
       </nav>
 
     </article>

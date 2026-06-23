@@ -598,6 +598,7 @@ def validate_cross_file() -> bool:
         "blocked_until_internal_prototype_guardrail_red_team_pack_validation",
         "blocked_until_public_reference_route_expansion_validation",
         "blocked_until_public_utility_interface_embodiment_validation",
+        "blocked_until_public_reference_authority_internal_linking_validation",
     ):
         error(
             "publisher-governance-policy: current_publisher_status must be "

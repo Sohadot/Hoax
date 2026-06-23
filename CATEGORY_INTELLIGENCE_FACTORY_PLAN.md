@@ -206,6 +206,8 @@ The Category Intelligence Factory now includes visible public utility. Public Ev
 
 The Category Intelligence Factory now includes a public reference layer built for both human understanding and AI retrieval. Public Reference Route Expansion v1 defines evidence risk, provenance risk, context collapse, claim drift, traceability gap, and the non-detector boundary as stable reference units with AI-readable capsules.
 
+The Category Intelligence Factory now includes an authority-grade internal reference graph. Public Reference Authority Internal Linking v1 connects Hoax.ai's public utilities and reference routes into a coherent human-readable and AI-readable evidence-risk concept system without new routes, uploads, scoring, verdicts, detector claims, public API, automated reports, JavaScript, forms, or real-world case evaluation.
+
 The Category Intelligence Factory treats chronology integrity as part of evidence integrity: decision records must not move backward in time unless a correction note explicitly explains and repairs the error.
 
 The category factory becomes reference-grade only when public-facing claims, evidence ledger entries, source records, and support locations are traceable as a governed system.

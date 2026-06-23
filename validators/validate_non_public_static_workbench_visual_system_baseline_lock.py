@@ -272,6 +272,7 @@ def validate_governance_and_registry() -> bool:
         "blocked_until_internal_prototype_guardrail_red_team_pack_validation",
         "blocked_until_public_reference_route_expansion_validation",
         "blocked_until_public_utility_interface_embodiment_validation",
+        "blocked_until_public_reference_authority_internal_linking_validation",
     ):
         error(f"publisher status must be {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_BASELINE_LOCK_VALIDATION}")
         ok = False
