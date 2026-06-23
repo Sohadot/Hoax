@@ -15,6 +15,7 @@ from public_surface_checks import (  # noqa: E402
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ANSWER_SURFACE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_CITATION_RETRIEVAL_HARDENING_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_VALIDATION,
     validate_public_surface,
 )
 
@@ -187,7 +188,10 @@ def validate_page(rel: str, is_home: bool = False) -> bool:
     if not is_home and "reference summary" not in lower:
         error(f"{rel}: missing reference summary line")
         ok = False
-    cite_region = lower.split("cite-this-reference", 1)[-1].split("retrieval-capsule", 1)[0]
+    if "cite-this-reference-block" in lower:
+        cite_region = lower.split("cite-this-reference-block", 1)[-1].split("retrieval-capsule", 1)[0]
+    else:
+        cite_region = lower.split("cite-this-reference", 1)[-1].split("retrieval-capsule", 1)[0]
     if "https://hoax.ai" not in cite_region:
         error(f"{rel}: missing canonical URL in citation block")
         ok = False
@@ -242,7 +246,7 @@ def validate_governance() -> bool:
     if policy.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_CITATION_RETRIEVAL_HARDENING_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ANSWER_SURFACE_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_CITATION_RETRIEVAL_HARDENING_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_VALIDATION,
     ):
         error("publisher status must reflect Sprint 90 citation retrieval hardening validation")
         ok = False

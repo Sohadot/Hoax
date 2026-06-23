@@ -1003,6 +1003,17 @@
       "status": "active",
       "last_reviewed": "2026-06-20",
       "notes": "Sprint 90 citation retrieval hardening. Sitemap remains twenty-nine URLs."
+    },
+    {
+      "claim_id": "CLAIM-0092",
+      "claim_text": "Hoax.ai has adopted Public Reference Quality Consolidation Audit v1, applying visible quality repairs across the 29-route public surface without new routes, chatbots, generators, or verdict behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_AUDIT_V1.md, PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_STANDARD_V1.md, data/public-reference-quality-consolidation-audit-v1.json, index.html, validators/validate_public_reference_quality_consolidation_audit_v1.py, SPRINT_91_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_AUDIT_V1.md, DECISION_LOG.md (DEC-109)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-20",
+      "notes": "Sprint 91 quality consolidation. Sitemap remains twenty-nine URLs."
     }
   ]
 }

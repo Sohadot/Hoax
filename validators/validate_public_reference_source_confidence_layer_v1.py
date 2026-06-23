@@ -227,6 +227,7 @@ def validate_governance() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_VALIDATION,
         "blocked_until_public_reference_answer_surface_validation",
         "blocked_until_public_reference_citation_retrieval_hardening_validation",
+        "blocked_until_public_reference_quality_consolidation_validation",
     ):
         error("publisher status must reflect Sprint 88 source confidence layer validation")
         ok = False

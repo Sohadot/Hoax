@@ -7739,6 +7739,76 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 90 validator."
+    },
+    {
+      "source_id": "SOURCE-0606",
+      "source_title": "PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 91 quality consolidation audit."
+    },
+    {
+      "source_id": "SOURCE-0607",
+      "source_title": "PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_REPAIR_LOG_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_REPAIR_LOG_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 91 repair log."
+    },
+    {
+      "source_id": "SOURCE-0608",
+      "source_title": "PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_STANDARD_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_STANDARD_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 91 quality standard."
+    },
+    {
+      "source_id": "SOURCE-0609",
+      "source_title": "data/public-reference-quality-consolidation-audit-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-quality-consolidation-audit-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 91 consolidation JSON."
+    },
+    {
+      "source_id": "SOURCE-0610",
+      "source_title": "data/public-reference-quality-consolidation-audit-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-quality-consolidation-audit-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 91 consolidation schema."
+    },
+    {
+      "source_id": "SOURCE-0611",
+      "source_title": "SPRINT_91_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_91_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 91 record."
+    },
+    {
+      "source_id": "SOURCE-0612",
+      "source_title": "validators/validate_public_reference_quality_consolidation_audit_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_reference_quality_consolidation_audit_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 91 validator."
     }
   ]
 }

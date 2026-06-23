@@ -377,7 +377,7 @@ def validate_index_html_links(by_path: dict[str, dict]) -> bool:
         if href in FIRST_PARTY_ASSETS or (ROOT / href).exists():
             continue
 
-        route_path = normalize_route_path(href)
+        route_path = normalize_route_path(href.split("#", 1)[0])
         if route_path not in by_path:
             error(f"index.html: href '{href}' points to unregistered route")
             ok = False

@@ -2165,6 +2165,34 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Citation and Retrieval Hardening v1 per DEC-108."
+    },
+    {
+      "claim_id": "CLAIM-0092",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_AUDIT_V1.md",
+        "PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_REPAIR_LOG_V1.md",
+        "PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_STANDARD_V1.md",
+        "data/public-reference-quality-consolidation-audit-v1.json",
+        "index.html",
+        "validators/validate_public_reference_quality_consolidation_audit_v1.py",
+        "SPRINT_91_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_AUDIT_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0606",
+        "SOURCE-0607",
+        "SOURCE-0608",
+        "SOURCE-0609",
+        "SOURCE-0610",
+        "SOURCE-0611",
+        "SOURCE-0612"
+      ],
+      "support_scope": "public reference quality consolidation audit v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Quality Consolidation Audit v1 per DEC-109."
     }
   ],
   "last_reviewed": "2026-06-20"

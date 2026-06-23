@@ -2473,6 +2473,32 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+## Sprint 91 — Public Reference Quality Consolidation Audit v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Inspect all 29 public routes and apply visible quality repairs to metadata, boundaries, internal links, and citation/retrieval language without new routes or tool behavior.
+
+### Deliverables
+
+- PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_AUDIT_V1.md
+- PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_REPAIR_LOG_V1.md
+- PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_STANDARD_V1.md
+- data/public-reference-quality-consolidation-audit-v1.json
+- validators/validate_public_reference_quality_consolidation_audit_v1.py
+- 28 visible production repairs on eleven core pages
+- DEC-109, PUB-GATE-0085
+- Publisher status -> blocked_until_public_reference_quality_consolidation_validation
+
+### Gate
+
+**Gate G91 passed.** Sprint 92 — Public Reference Depth Expansion v1 is next.
+
+### Next Phase
+
+**Sprint 92 — Public Reference Depth Expansion v1**
+
+---
+
 ## Sprint 90 — Public Reference Citation and Retrieval Hardening v1
 
 **Status:** COMPLETE — 2026-06-20
@@ -2492,11 +2518,11 @@ All harnesses and `validate_all.py` — PASS required.
 
 ### Gate
 
-**Gate G90 passed.** Sprint 91 — Public Reference Quality Consolidation Audit v1 is next.
+**Gate G90 passed.** Sprint 92 — Public Reference Depth Expansion v1 is next.
 
 ### Next Phase
 
-**Sprint 91 — Public Reference Quality Consolidation Audit v1**
+**Sprint 92 — Public Reference Depth Expansion v1**
 
 ---
 

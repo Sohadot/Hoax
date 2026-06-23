@@ -2837,3 +2837,28 @@ After Sprint 89 added Reference Answer blocks, Hoax.ai needed citation-safe and 
 - Citation support is not a verdict, score, detector result, public report, chatbot, generator, or truth verification.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-109 — Public Reference Quality Consolidation Audit v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Quality Consolidation Audit v1 by inspecting the 29-route public surface and applying visible quality repairs to existing public pages, metadata, internal links, citation/retrieval components, source-confidence language, Reference Answer blocks, and boundary wording where needed. The sprint consolidates public quality without creating new routes, chatbot behavior, generator behavior, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 90 added citation and retrieval hardening, Hoax.ai needed a public-surface quality consolidation pass to ensure the growing reference system remained coherent, readable, trustworthy, citation-safe, and AI-retrievable. This decision governs visible repairs made to existing production pages, not abstract preparatory governance.
+
+### Implications
+
+- Existing public pages may receive quality repairs.
+- No new public route is authorized.
+- Sitemap remains 29 URLs.
+- Route registry remains 29 entries.
+- Metadata, page wording, internal links, citation/retrieval blocks, source-confidence blocks, Reference Answer blocks, and boundary wording may be repaired.
+- Quality consolidation is not a detector, score, verdict, chatbot, generator, or report system.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, and real-world case evaluation remain unauthorized.
+
