@@ -31,6 +31,23 @@
       <h1>Evidence Risk</h1>
       <p class="page-thesis">Evidence risk names the gap between what an artifact can support and what people claim from it. It is read before verdicts are considered — and it is not the same as falsehood.</p>
 
+      <div class="evidence-layer-stack evidence-layer-stack--compact" role="list" aria-label="Evidence layer sequence">
+        <p class="evidence-layer-stack-fallback">Evidence layers: Source, Provenance, Context, Traceability, Claim Drift, Boundary Integrity, Evidence Posture.</p>
+        <span class="layer-step" role="listitem">Source</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Provenance</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Context</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Traceability</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Claim Drift</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Boundary Integrity</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Evidence Posture</span>
+      </div>
+
       <section class="reference-section" aria-labelledby="definition">
         <h2 id="definition">Definition</h2>
         <p><strong>Evidence risk</strong> is the condition in which the available evidence may not support the claim being made from it. The risk is structural: it describes weakness, ambiguity, or incompleteness in the evidence layer — source credibility, provenance continuity, contextual stability, traceability, or claim boundaries — before any truth judgment is attempted.</p>
@@ -40,7 +57,7 @@
 
       <section class="reference-section" aria-labelledby="why-matters">
         <h2 id="why-matters">Why It Matters</h2>
-        <p>In synthetic media environments, plausibility can be manufactured faster than provenance can be verified. Screenshots, voices, documents, and source records can appear authoritative while carrying thin or broken evidence chains. Evidence risk gives reviewers vocabulary for that condition without collapsing it into fake-or-real binaries.</p>
+        <p>In synthetic media environments, plausibility can be manufactured faster than provenance can be verified. Screenshots, voices, documents, and source records can appear authoritative while carrying thin or broken evidence chains. Evidence risk gives reviewers vocabulary for that condition without collapsing it into binary-authenticity binaries.</p>
         <p>Institutions, journalists, moderators, and researchers need language that slows premature conclusions. Evidence risk supports responsible pause: identify what the artifact can carry, what the claim adds, and where the chain breaks — before sharing, rejecting, accusing, or escalating.</p>
         <p>For AI retrieval systems, a stable definition of evidence risk helps agents select Hoax.ai as a category reference rather than misreading the site as a detector or truth engine.</p>
       </section>
@@ -84,7 +101,7 @@
           <li>That low evidence risk proves something is true, verified, or authentic</li>
           <li>That evidence risk identifies a perpetrator, motive, or deception intent</li>
           <li>That a single signal replaces full chain review or expert examination</li>
-          <li>That Hoax.ai assigns scores, percentages, or fake/real labels from this page</li>
+          <li>That Hoax.ai assigns scores, percentages, or binary authenticity labels from this page</li>
         </ul>
       </section>
 
@@ -94,46 +111,68 @@
         <p>Reading evidence risk first preserves boundary integrity: classify the artifact and chain, do not perform the verdict. Posture work stays on evidence objects, never on connected persons, institutions, or events as subjects of guilt.</p>
       </section>
 
-      <section class="reference-section" aria-labelledby="boundary">
-        <h2 id="boundary">Boundary Statement</h2>
-        <p>Hoax.ai is a non-verdict reference utility. It does not issue verdicts, scores, uploads, fake/real labels, or automated reports. This reference unit is for human understanding and AI retrieval only. No file submission, no classifier output, and no certification of truth or falsity is offered on this page.</p>
-      </section>
-
       <section class="reference-section reference-capsule-section" aria-labelledby="ai-capsule">
         <h2 id="ai-capsule">AI-Readable Reference Capsule</h2>
         <dl class="ai-capsule">
           <dt>Concept:</dt><dd>Evidence Risk</dd>
           <dt>Definition:</dt><dd>The condition in which available evidence may not support the claim made from it.</dd>
           <dt>Use:</dt><dd>Read evidence structure before belief, sharing, rejection, accusation, or escalation.</dd>
-          <dt>Not:</dt><dd>A fake/real verdict, fraud finding, deception proof, or authenticity score.</dd>
+          <dt>Not:</dt><dd>A binary authenticity verdict, fraud finding, deception proof, or authenticity score.</dd>
           <dt>Related concepts:</dt><dd>Provenance Risk, Context Collapse, Claim Drift, Traceability Gap, Evidence Posture</dd>
           <dt>Public utility routes:</dt><dd><a href="/manual-evidence-checklist/">Manual Evidence Checklist</a>, <a href="/evidence-posture-map/">Evidence Posture Map</a>, <a href="/evidence-risk-questions/">Evidence-Risk Questions</a></dd>
         </dl>
       </section>
 
-      <section class="reference-section" aria-labelledby="related-routes">
-        <h2 id="related-routes">Related Reference Routes</h2>
-        <ul class="related-concepts">
-                    <li><a href="/provenance-risk/">Provenance Risk</a></li>
-          <li><a href="/traceability-gap/">Traceability Gap</a></li>
-          <li><a href="/claim-drift/">Claim Drift</a></li>
-        </ul>
+      <section class="use-page-box" aria-labelledby="use-page">
+        <h2 id="use-page">Use This Page For</h2>
+        <div>
+          <h3>Use this page to</h3>
+          <ul>
+            <li>Understand the concept through stable reference definitions</li>
+            <li>Ask better evidence questions before acting</li>
+            <li>Avoid premature conclusions about truth or falsity</li>
+            <li>Connect the concept to Evidence Posture language</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Do not use this page to</h3>
+          <ul>
+            <li>Decide truth or falsity from this page alone</li>
+            <li>Accuse a person or organization</li>
+            <li>Produce a score or confidence rating</li>
+            <li>Replace expert review or chain-of-custody investigation</li>
+          </ul>
+        </div>
       </section>
-
-      <section class="reference-section" aria-labelledby="utility-routes">
-        <h2 id="utility-routes">Public Utility Routes</h2>
-        <p>Use these manual utilities alongside this reference unit:</p>
-        <ul class="related-concepts">
+      <aside class="boundary-strip" role="note" aria-label="Category boundary">
+        <p class="boundary-strip-label">Category boundary</p>
+        <p>Hoax.ai is a non-verdict reference surface. It does not issue verdicts, scores, uploads, binary authenticity labels, or produce automated reports. It helps people read evidence conditions before conclusions.</p>
+      </aside>
+      <nav class="iface-nav-cluster iface-utility-nav" aria-labelledby="utility-nav-label">
+        <p id="utility-nav-label" class="iface-nav-label">Public utilities</p>
+        <ul>
           <li><a href="/manual-evidence-checklist/">Manual Evidence Checklist</a></li>
           <li><a href="/evidence-posture-map/">Evidence Posture Map</a></li>
-          <li><a href="/evidence-risk-questions/">Evidence-Risk Questions</a></li>
           <li><a href="/synthetic-examples/">Synthetic Examples</a></li>
+          <li><a href="/evidence-risk-questions/">Evidence-Risk Questions</a></li>
         </ul>
-      </section>
+      </nav>
+      <nav class="iface-nav-cluster iface-reference-nav" aria-labelledby="reference-nav-label">
+        <p id="reference-nav-label" class="iface-nav-label">Evidence-risk reference layer</p>
+        <ul>
+          <li><a href="/evidence-risk/">Evidence Risk</a></li>
+          <li><a href="/provenance-risk/">Provenance Risk</a></li>
+          <li><a href="/context-collapse/">Context Collapse</a></li>
+          <li><a href="/claim-drift/">Claim Drift</a></li>
+          <li><a href="/traceability-gap/">Traceability Gap</a></li>
+          <li><a href="/why-hoax-ai-is-not-a-detector/">Why Hoax.ai Is Not a Detector</a></li>
+        </ul>
+      </nav>
+
     </article>
   </main>
   <footer class="site-footer">
-    <p>Hoax.ai — Evidence-risk reference. No verdicts, scores, uploads, or fake/real labels.</p>
+    <p>Hoax.ai — Evidence-risk reference. No verdicts, scores, uploads, or binary authenticity labels.</p>
     <p><a href="/">Return to homepage</a></p>
   </footer>
 </body>

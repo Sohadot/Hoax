@@ -29,7 +29,7 @@ INDEX = "index.html"
 REQUIRED_HERO_PHRASES = [
     "truth is no longer the first layer",
     "evidence is",
-    "without issuing verdicts, scores, uploads, or fake/real labels",
+    "without issuing verdicts, scores, uploads, or binary authenticity labels",
 ]
 
 REQUIRED_UTILITY_PHRASES = [

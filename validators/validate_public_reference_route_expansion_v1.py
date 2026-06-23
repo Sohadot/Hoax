@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (  # noqa: E402
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_EXPANSION_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_UTILITY_INTERFACE_EMBODIMENT_VALIDATION,
     validate_public_surface,
 )
 
@@ -306,7 +307,10 @@ def validate_governance() -> bool:
         error("validate_all.py must include Sprint 85 validator")
         ok = False
     policy = load_json("data/publisher-governance-policy.json")
-    if policy.get("current_publisher_status") != PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_EXPANSION_VALIDATION:
+    if policy.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_EXPANSION_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_UTILITY_INTERFACE_EMBODIMENT_VALIDATION,
+    ):
         error("publisher status must be blocked_until_public_reference_route_expansion_validation")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}

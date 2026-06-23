@@ -31,6 +31,23 @@
       <h1>Traceability Gap</h1>
       <p class="page-thesis">A traceability gap means the path from artifact to claim is incomplete — making many verdicts unsafe without proving fraud.</p>
 
+      <div class="evidence-layer-stack evidence-layer-stack--compact" role="list" aria-label="Evidence layer sequence">
+        <p class="evidence-layer-stack-fallback">Evidence layers: Source, Provenance, Context, Traceability, Claim Drift, Boundary Integrity, Evidence Posture.</p>
+        <span class="layer-step" role="listitem">Source</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Provenance</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Context</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Traceability</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Claim Drift</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Boundary Integrity</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Evidence Posture</span>
+      </div>
+
       <section class="reference-section" aria-labelledby="definition">
         <h2 id="definition">Definition</h2>
         <p>A <strong>traceability gap</strong> is the absence of enough links between an evidence artifact, its source, its context, its transformation path, and the claim being made from it. Traceability is the connective tissue that lets reviewers follow how an assertion maps back to inspectable records.</p>
@@ -98,11 +115,6 @@
         <p>Partial traceability still matters for responsible review.</p>
       </section>
 
-      <section class="reference-section" aria-labelledby="boundary">
-        <h2 id="boundary">Boundary Statement</h2>
-        <p>Hoax.ai is a non-verdict reference utility. It does not rebuild chains automatically, accept uploads, or issue verdicts. This reference unit is static guidance for evidence-risk reading only.</p>
-      </section>
-
       <section class="reference-section reference-capsule-section" aria-labelledby="ai-capsule">
         <h2 id="ai-capsule">AI-Readable Reference Capsule</h2>
         <dl class="ai-capsule">
@@ -115,29 +127,56 @@
         </dl>
       </section>
 
-      <section class="reference-section" aria-labelledby="related-routes">
-        <h2 id="related-routes">Related Reference Routes</h2>
-        <ul class="related-concepts">
-                    <li><a href="/provenance-risk/">Provenance Risk</a></li>
-          <li><a href="/evidence-risk/">Evidence Risk</a></li>
-          <li><a href="/claim-drift/">Claim Drift</a></li>
-        </ul>
+      <section class="use-page-box" aria-labelledby="use-page">
+        <h2 id="use-page">Use This Page For</h2>
+        <div>
+          <h3>Use this page to</h3>
+          <ul>
+            <li>Understand the concept through stable reference definitions</li>
+            <li>Ask better evidence questions before acting</li>
+            <li>Avoid premature conclusions about truth or falsity</li>
+            <li>Connect the concept to Evidence Posture language</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Do not use this page to</h3>
+          <ul>
+            <li>Decide truth or falsity from this page alone</li>
+            <li>Accuse a person or organization</li>
+            <li>Produce a score or confidence rating</li>
+            <li>Replace expert review or chain-of-custody investigation</li>
+          </ul>
+        </div>
       </section>
-
-      <section class="reference-section" aria-labelledby="utility-routes">
-        <h2 id="utility-routes">Public Utility Routes</h2>
-        <p>Use these manual utilities alongside this reference unit:</p>
-        <ul class="related-concepts">
+      <aside class="boundary-strip" role="note" aria-label="Category boundary">
+        <p class="boundary-strip-label">Category boundary</p>
+        <p>Hoax.ai is a non-verdict reference surface. It does not issue verdicts, scores, uploads, binary authenticity labels, or produce automated reports. It helps people read evidence conditions before conclusions.</p>
+      </aside>
+      <nav class="iface-nav-cluster iface-utility-nav" aria-labelledby="utility-nav-label">
+        <p id="utility-nav-label" class="iface-nav-label">Public utilities</p>
+        <ul>
           <li><a href="/manual-evidence-checklist/">Manual Evidence Checklist</a></li>
           <li><a href="/evidence-posture-map/">Evidence Posture Map</a></li>
-          <li><a href="/evidence-risk-questions/">Evidence-Risk Questions</a></li>
           <li><a href="/synthetic-examples/">Synthetic Examples</a></li>
+          <li><a href="/evidence-risk-questions/">Evidence-Risk Questions</a></li>
         </ul>
-      </section>
+      </nav>
+      <nav class="iface-nav-cluster iface-reference-nav" aria-labelledby="reference-nav-label">
+        <p id="reference-nav-label" class="iface-nav-label">Evidence-risk reference layer</p>
+        <ul>
+          <li><a href="/evidence-risk/">Evidence Risk</a></li>
+          <li><a href="/provenance-risk/">Provenance Risk</a></li>
+          <li><a href="/context-collapse/">Context Collapse</a></li>
+          <li><a href="/claim-drift/">Claim Drift</a></li>
+          <li><a href="/traceability-gap/">Traceability Gap</a></li>
+          <li><a href="/why-hoax-ai-is-not-a-detector/">Why Hoax.ai Is Not a Detector</a></li>
+        </ul>
+      </nav>
+
     </article>
   </main>
   <footer class="site-footer">
-    <p>Hoax.ai — Evidence-risk reference. No verdicts, scores, uploads, or fake/real labels.</p>
+    <p>Hoax.ai — Evidence-risk reference. No verdicts, scores, uploads, or binary authenticity labels.</p>
     <p><a href="/">Return to homepage</a></p>
   </footer>
 </body>

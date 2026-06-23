@@ -9,7 +9,7 @@
   <link rel="canonical" href="https://hoax.ai/evidence-posture-map/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Evidence Posture Map — Hoax.ai">
-  <meta property="og:description" content="Visual evidence posture map for manual, non-verdict evidence-risk reading. No scores or fake/real labels.">
+  <meta property="og:description" content="Visual evidence posture map for manual, non-verdict evidence-risk reading. No scores or binary authenticity labels.">
   <meta property="og:url" content="https://hoax.ai/evidence-posture-map/">
   <meta name="theme-color" content="#0c1117">
   <link rel="stylesheet" href="../styles.css">
@@ -33,25 +33,26 @@
 
     <article class="reference-article">
       <h1>Evidence Posture Map</h1>
-      <p class="page-thesis">This map shows how evidence posture is read as a sequence of structural questions — manually and conceptually — without issuing a verdict, score, or fake/real label.</p>
+      <p class="page-thesis">This map shows how evidence posture is read as a sequence of structural questions — manually and conceptually — without issuing a verdict, score, or binary authenticity label.</p>
 
       <section class="reference-section" aria-labelledby="visual-map">
         <h2 id="visual-map">Posture Flow Map</h2>
-        <div class="posture-map" role="list" aria-label="Evidence posture flow">
-          <span class="posture-step" role="listitem">Source</span>
-          <span class="posture-arrow" aria-hidden="true">→</span>
-          <span class="posture-step" role="listitem">Provenance</span>
-          <span class="posture-arrow" aria-hidden="true">→</span>
-          <span class="posture-step" role="listitem">Context</span>
-          <span class="posture-arrow" aria-hidden="true">→</span>
-          <span class="posture-step" role="listitem">Traceability</span>
-          <span class="posture-arrow" aria-hidden="true">→</span>
-          <span class="posture-step" role="listitem">Claim Drift</span>
-          <span class="posture-arrow" aria-hidden="true">→</span>
-          <span class="posture-step" role="listitem">Boundary Integrity</span>
-          <span class="posture-arrow" aria-hidden="true">→</span>
-          <span class="posture-step" role="listitem">Evidence Posture</span>
-        </div>
+        <div class="evidence-layer-stack evidence-layer-stack" role="list" aria-label="Evidence layer stack">
+        <p class="evidence-layer-stack-fallback">Evidence layers: Source, Provenance, Context, Traceability, Claim Drift, Boundary Integrity, Evidence Posture.</p>
+        <span class="layer-step" role="listitem">Source</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Provenance</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Context</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Traceability</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Claim Drift</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Boundary Integrity</span>
+        <span class="layer-arrow" aria-hidden="true">→</span>
+        <span class="layer-step" role="listitem">Evidence Posture</span>
+      </div>
       </section>
 
       <section class="reference-section" aria-labelledby="what-posture">
@@ -97,19 +98,52 @@
         <p>Hoax.ai preserves boundaries before conclusions. The map teaches when evidence becomes judgeable — or when disciplined uncertainty is the only honest posture.</p>
       </section>
 
-      <section class="utility-boundary" aria-labelledby="boundary">
-        <h2 id="boundary">Non-Verdict Boundary</h2>
-        <p>This map is a public reference utility. It does not operate a detector, accept uploads, or produce automated reports. Classify the evidence artifact. Do not perform the verdict.</p>
+      <section class="use-page-box" aria-labelledby="use-page">
+        <h2 id="use-page">Use This Page For</h2>
+        <div>
+          <h3>Use this page to</h3>
+          <ul>
+            <li>Understand the utility through manual reference reading</li>
+            <li>Ask better evidence questions before acting</li>
+            <li>Avoid premature conclusions about truth or falsity</li>
+            <li>Connect the workflow to Evidence Posture language</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Do not use this page to</h3>
+          <ul>
+            <li>Decide binary authenticity outcome from this page alone</li>
+            <li>Accuse a person or organization</li>
+            <li>Produce a score or confidence rating</li>
+            <li>Replace expert review or chain-of-custody investigation</li>
+          </ul>
+        </div>
       </section>
-
-      <section class="reference-section" aria-labelledby="related">
-        <h2 id="related">Related Public Utilities</h2>
-        <ul class="related-concepts">
+      <aside class="boundary-strip" role="note" aria-label="Category boundary">
+        <p class="boundary-strip-label">Category boundary</p>
+        <p>Hoax.ai does not issue verdicts, scores, uploads, binary authenticity labels, or produce automated reports. It helps people read evidence conditions before conclusions.</p>
+      </aside>
+      <nav class="iface-nav-cluster iface-reference-nav" aria-labelledby="reference-nav-label">
+        <p id="reference-nav-label" class="iface-nav-label">Evidence-risk reference layer</p>
+        <ul>
+          <li><a href="/evidence-risk/">Evidence Risk</a></li>
+          <li><a href="/provenance-risk/">Provenance Risk</a></li>
+          <li><a href="/context-collapse/">Context Collapse</a></li>
+          <li><a href="/claim-drift/">Claim Drift</a></li>
+          <li><a href="/traceability-gap/">Traceability Gap</a></li>
+          <li><a href="/why-hoax-ai-is-not-a-detector/">Why Hoax.ai Is Not a Detector</a></li>
+        </ul>
+      </nav>
+      <nav class="iface-nav-cluster iface-utility-nav" aria-labelledby="utility-nav-label">
+        <p id="utility-nav-label" class="iface-nav-label">Public utilities</p>
+        <ul>
           <li><a href="/manual-evidence-checklist/">Manual Evidence Checklist</a></li>
-          <li><a href="/synthetic-examples/">Synthetic Evidence-Risk Examples</a></li>
+          <li><a href="/evidence-posture-map/">Evidence Posture Map</a></li>
+          <li><a href="/synthetic-examples/">Synthetic Examples</a></li>
           <li><a href="/evidence-risk-questions/">Evidence-Risk Questions</a></li>
         </ul>
-      </section>
+      </nav>
+
     </article>
   </main>
 
