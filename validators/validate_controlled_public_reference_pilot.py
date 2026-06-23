@@ -400,7 +400,7 @@ def validate_publisher_governance() -> bool:
         "blocked_until_targeted_synthetic_fixture_expansion_v1_validation",
         "blocked_until_internal_prototype_compound_boundary_stress_test_validation",
         "blocked_until_internal_prototype_guardrail_red_team_pack_validation",
-        "blocked_until_public_evidence_risk_utility_surface_validation",
+        "blocked_until_public_reference_route_expansion_validation",
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_PILOT}, "

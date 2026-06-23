@@ -1,7 +1,7 @@
 {
   "registry_id": "PUBLIC-FILE-REGISTRY-001",
   "name": "Hoax.ai Public File Registry",
-  "version": "v1.4.0",
+  "version": "v1.5.0",
   "status": "active",
   "maturity": "public_reference_production_batch_1",
   "public_files": [
@@ -316,6 +316,78 @@
       "allowed_dependencies": ["../styles.css"],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Evidence-Risk Questions public utility page per DEC-102."
+    },
+    {
+      "file_id": "PUB-FILE-0024",
+      "path": "evidence-risk/index.html",
+      "file_type": "html",
+      "public_role": "human_ai_reference_unit",
+      "route_id_if_applicable": "ROUTE-0024",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Evidence Risk reference unit per DEC-103."
+    },
+    {
+      "file_id": "PUB-FILE-0025",
+      "path": "provenance-risk/index.html",
+      "file_type": "html",
+      "public_role": "human_ai_reference_unit",
+      "route_id_if_applicable": "ROUTE-0025",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Provenance Risk reference unit per DEC-103."
+    },
+    {
+      "file_id": "PUB-FILE-0026",
+      "path": "context-collapse/index.html",
+      "file_type": "html",
+      "public_role": "human_ai_reference_unit",
+      "route_id_if_applicable": "ROUTE-0026",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Context Collapse reference unit per DEC-103."
+    },
+    {
+      "file_id": "PUB-FILE-0027",
+      "path": "claim-drift/index.html",
+      "file_type": "html",
+      "public_role": "human_ai_reference_unit",
+      "route_id_if_applicable": "ROUTE-0027",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Claim Drift reference unit per DEC-103."
+    },
+    {
+      "file_id": "PUB-FILE-0028",
+      "path": "traceability-gap/index.html",
+      "file_type": "html",
+      "public_role": "human_ai_reference_unit",
+      "route_id_if_applicable": "ROUTE-0028",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Traceability Gap reference unit per DEC-103."
+    },
+    {
+      "file_id": "PUB-FILE-0029",
+      "path": "why-hoax-ai-is-not-a-detector/index.html",
+      "file_type": "html",
+      "public_role": "human_ai_reference_unit",
+      "route_id_if_applicable": "ROUTE-0029",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Why Hoax.ai Is Not a Detector reference unit per DEC-103."
     }
   ],
   "last_reviewed": "2026-06-20"

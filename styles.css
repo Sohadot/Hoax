@@ -340,6 +340,29 @@ a.utility-card:focus-visible {
   font-size: 0.9rem;
 }
 
+.ai-capsule dt {
+  font-weight: 600;
+  margin-top: 0.75rem;
+  color: var(--text-primary, #e8edf4);
+}
+
+.ai-capsule dd {
+  margin: 0.25rem 0 0 0;
+  color: var(--text-secondary, #a8b3c2);
+}
+
+.reference-capsule-section {
+  border: 1px solid var(--border-subtle, #2a3441);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  background: var(--surface-raised, #141a22);
+}
+
+.section-reference-layer {
+  border-top: 1px solid var(--border-subtle, #2a3441);
+  padding-top: 2rem;
+}
+
 @media (max-width: 640px) {
   .utility-card-grid,
   .posture-utility-cards {

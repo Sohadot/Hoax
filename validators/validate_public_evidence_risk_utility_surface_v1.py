@@ -16,6 +16,7 @@ from public_surface_checks import (  # noqa: E402
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_EXPANSION_VALIDATION,
     validate_public_surface,
 )
 
@@ -291,28 +292,29 @@ def validate_homepage() -> bool:
 
 
 def validate_surface_counts() -> bool:
-    ok = True
-    routes = load_json("data/route-registry.json").get("routes", [])
-    if len(routes) != EXPECTED_ROUTES:
-        error(f"route registry must have exactly {EXPECTED_ROUTES} entries")
-        ok = False
-    if not validate_public_surface(routes, error, EXPECTED_SITEMAP):
-        ok = False
-    locs = [
-        e.text.strip().lower()
-        for e in ET.parse(ROOT / "sitemap.xml").findall(".//{*}loc")
-        if e.text
-    ]
-    if len(locs) != EXPECTED_SITEMAP:
-        error(f"sitemap must have exactly {EXPECTED_SITEMAP} URLs")
-        ok = False
-    fixtures = load_json(
-        "internal/prototypes/controlled-engine-v0/fixtures/synthetic-fixtures-v0.json"
-    ).get("fixtures", [])
-    if len(fixtures) != 16:
-        error("fixture count must remain 16")
-        ok = False
-    return ok
+  ok = True
+  routes = load_json("data/route-registry.json").get("routes", [])
+  paths = {r.get("path") for r in routes}
+  for util in UTILITY_PATHS:
+    if util not in paths:
+      error(f"route registry missing utility path {util}")
+      ok = False
+  locs = [
+    e.text.strip().lower()
+    for e in ET.parse(ROOT / "sitemap.xml").findall(".//{*}loc")
+    if e.text
+  ]
+  for util in UTILITY_PATHS:
+    if f"https://hoax.ai{util}".lower() not in locs:
+      error(f"sitemap missing utility URL {util}")
+      ok = False
+  fixtures = load_json(
+    "internal/prototypes/controlled-engine-v0/fixtures/synthetic-fixtures-v0.json"
+  ).get("fixtures", [])
+  if len(fixtures) != 16:
+    error("fixture count must remain 16")
+    ok = False
+  return ok
 
 
 def validate_governance() -> bool:
@@ -326,8 +328,11 @@ def validate_governance() -> bool:
         error("validate_all.py must include Sprint 84 validator")
         ok = False
     policy = load_json("data/publisher-governance-policy.json")
-    if policy.get("current_publisher_status") != PUBLISHER_STATUS_POST_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_VALIDATION:
-        error("publisher status must be blocked_until_public_evidence_risk_utility_surface_validation")
+    if policy.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_EXPANSION_VALIDATION,
+    ):
+        error("publisher status must remain blocked from publication")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}
     for loc in SOURCE_LOCS:

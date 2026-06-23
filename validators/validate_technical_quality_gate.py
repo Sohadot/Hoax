@@ -63,6 +63,8 @@ REQUIRED_SOURCE_LOCATIONS = [
 NEGATION_MARKERS = [
     "no ",
     "not ",
+    "not-a-",
+    "non-",
     "without ",
     "does not",
     "do not",

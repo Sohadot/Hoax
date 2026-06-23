@@ -11,6 +11,15 @@ Hoax.ai is a governed public evidence-risk reference system with live manual uti
 - [Synthetic Examples](synthetic-examples/index.html)
 - [Evidence-Risk Questions](evidence-risk-questions/index.html)
 
+Public reference routes (human and AI readable):
+
+- [Evidence Risk](evidence-risk/index.html)
+- [Provenance Risk](provenance-risk/index.html)
+- [Context Collapse](context-collapse/index.html)
+- [Claim Drift](claim-drift/index.html)
+- [Traceability Gap](traceability-gap/index.html)
+- [Why Hoax.ai Is Not a Detector](why-hoax-ai-is-not-a-detector/index.html)
+
 These utilities are non-verdict reference tools — not a verdict engine, upload detector, fake/real classifier, scoring system, or public automated report generator.
 
 Hoax.ai is not a truth machine, a political fact-checking site, or a generic AI detector.

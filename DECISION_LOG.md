@@ -2714,3 +2714,28 @@ After Sprint 83 corrected the public copy boundary, Hoax.ai needed visible publi
 - Guided evidence-risk questions are authorized.
 - Upload, scoring, verdict, detector, API, automated report, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-103 — Public Reference Route Expansion v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Route Expansion v1 by adding six human-readable and AI-readable public reference routes: Evidence Risk, Provenance Risk, Context Collapse, Claim Drift, Traceability Gap, and Why Hoax.ai Is Not a Detector. These pages deepen the public reference surface and make Hoax.ai more useful to humans and AI agents without creating upload behavior, scoring, verdicts, fake/real labels, detector claims, public API, automated reports, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 84 created visible public utility, Hoax.ai needs deeper reference-grade routes that define the core concepts behind evidence-risk reading. This decision governs real public production routes, not abstract preparatory governance. The new pages strengthen category authority, improve human comprehension, support AI retrieval, and make the asset harder to imitate.
+
+### Implications
+
+- Six public reference routes are authorized.
+- Sitemap may increase from 23 to 29 URLs.
+- Route registry may increase from 23 to 29 entries.
+- Homepage may link to the new reference layer.
+- AI-readable reference capsules are authorized.
+- Non-verdict public reference units are authorized.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, and real-world case evaluation remain unauthorized.
+

@@ -1194,6 +1194,24 @@
       "failure_condition": "public_evidence_risk_utility_surface_v1_not_met",
       "bypassable": false,
       "notes": "Public Evidence-Risk Utility Surface v1 completed Sprint 84 (DEC-102). Four public utility routes created. Sitemap twenty-three URLs. No upload, scoring, verdict, detector claim, public API, automated report, JavaScript, or form behavior authorized."
+    },
+    {
+      "gate_id": "PUB-GATE-0080",
+      "name": "Public Reference Route Expansion v1 Gate",
+      "status": "public_reference_route_expansion_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_85_PUBLIC_REFERENCE_ROUTE_EXPANSION_V1.md",
+      "failure_condition": "public_reference_route_expansion_v1_not_met",
+      "bypassable": false,
+      "notes": "Public Reference Route Expansion v1 completed Sprint 85 (DEC-103). Six human/AI reference routes created. Sitemap twenty-nine URLs. AI retrieval capsules authorized. No upload, scoring, verdict, detector claim, public API, automated report, JavaScript, or form behavior authorized."
     }
   ],
   "last_reviewed": "2026-06-20"

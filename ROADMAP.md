@@ -2434,6 +2434,45 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+## Sprint 85 — Public Reference Route Expansion v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Create six human-readable and AI-readable public reference routes that deepen category authority without detector, upload, score, or verdict behavior.
+
+### Deliverables
+
+- PUBLIC_REFERENCE_ROUTE_EXPANSION_V1.md
+- HUMAN_AI_REFERENCE_UNIT_STANDARD_V1.md
+- PUBLIC_REFERENCE_ROUTE_EXPANSION_AUDIT_V1.md
+- data/public-reference-route-expansion-v1.json
+- data/public-reference-route-expansion-v1.schema.json
+- evidence-risk/index.html
+- provenance-risk/index.html
+- context-collapse/index.html
+- claim-drift/index.html
+- traceability-gap/index.html
+- why-hoax-ai-is-not-a-detector/index.html
+- validators/validate_public_reference_route_expansion_v1.py
+- SPRINT_85_PUBLIC_REFERENCE_ROUTE_EXPANSION_V1.md
+- Homepage reference layer section and links
+- DEC-103 appended to DECISION_LOG.md
+- PUB-GATE-0080 added
+- Publisher status -> blocked_until_public_reference_route_expansion_validation
+
+### Validation
+
+All harnesses and `validate_all.py` — PASS required.
+
+### Gate
+
+**Gate G85 passed.** Public Utility Interface Embodiment v1 is the recommended next phase.
+
+### Next Phase
+
+**Sprint 86 — Public Utility Interface Embodiment v1**
+
+---
+
 **Sprint 80 — Internal Prototype Admissibility Regression Suite v1**
 
 ---

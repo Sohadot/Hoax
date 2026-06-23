@@ -331,6 +331,10 @@ Gate G58 is passed after the four Batch 3 pages are deepened in place with Stand
 
 Gate G59 is passed after `/standard/evidence-posture/` exists with all required standard sections, EPS-001 through EPS-014, five posture states, allowed and prohibited output language, standard matrix, and boundary rules; sitemap contains exactly 17 URLs; exactly one new standard route is created; DEC-077 exists in DECISION_LOG.md; CLAIM-0063 exists; SPRINT_59_EVIDENCE_POSTURE_STANDARD_V1_AUDIT.md exists; `validators/validate_evidence_posture_standard_v1_public.py` exists; validate_all.py PASS; DECISION_LOG chronology validator passes; prototype files are not modified; no Python cache files are tracked or staged; no meta-governance loop resumes; and no engine, classifier, upload, scoring, API, analytics, forms, JavaScript, DNS, Cloudflare, custom domain launch, monetization, or public tool behavior is introduced.
 
+## G85: Public Reference Route Expansion v1
+
+Gate G85 is passed after `PUBLIC_REFERENCE_ROUTE_EXPANSION_V1.md`, `HUMAN_AI_REFERENCE_UNIT_STANDARD_V1.md`, and `PUBLIC_REFERENCE_ROUTE_EXPANSION_AUDIT_V1.md` exist; `data/public-reference-route-expansion-v1.json` and `data/public-reference-route-expansion-v1.schema.json` exist; six public reference routes exist at `/evidence-risk/`, `/provenance-risk/`, `/context-collapse/`, `/claim-drift/`, `/traceability-gap/`, and `/why-hoax-ai-is-not-a-detector/`; homepage links to all six reference routes; every page has an AI-readable reference capsule and at least 750 visible words; sitemap has exactly 29 URLs; route registry has exactly 29 entries; no upload, scoring, verdict, detector claim, public API, automated report, JavaScript, or form behavior is introduced; decision_ref is DEC-103; `validators/validate_public_reference_route_expansion_v1.py` passes; validate_all.py PASS; all internal prototype harnesses pass; DECISION_LOG chronology validator passes; no meta-governance loop resumes; and no unrelated untracked files remain.
+
 ## G84: Public Evidence-Risk Utility Surface v1
 
 Gate G84 is passed after `PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_V1.md` and `PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_AUDIT_V1.md` exist; `data/public-evidence-risk-utility-surface-v1.json` and `data/public-evidence-risk-utility-surface-v1.schema.json` exist; four public utility routes exist at `/manual-evidence-checklist/`, `/evidence-posture-map/`, `/synthetic-examples/`, and `/evidence-risk-questions/`; homepage links to all four utility routes; sitemap has exactly 23 URLs; route registry has exactly 23 entries; no upload, scoring, verdict, detector claim, public API, automated report, JavaScript, or form behavior is introduced; decision_ref is DEC-102; `validators/validate_public_evidence_risk_utility_surface_v1.py` passes; validate_all.py PASS; all internal prototype harnesses pass; DECISION_LOG chronology validator passes; no meta-governance loop resumes; and no unrelated untracked files remain.
@@ -512,6 +516,7 @@ Gate G56A is passed after DECISION_LOG.md DEC entries are in ascending numeric o
 | Sprint 60 | COMPLETE | G60 passed — Standard integrated across reference layer |
 | Sprint 61 | COMPLETE | G61 passed — Evidence Posture Protocol v1 Draft created |
 | Sprint 62 | COMPLETE | G62 passed — Protocol integrated across reference and standard layers |
+| Sprint 85 | COMPLETE | G85 passed — Public Reference Route Expansion v1 |
 | Sprint 84 | COMPLETE | G84 passed — Public Evidence-Risk Utility Surface v1 |
 | Sprint 83 | COMPLETE | G83 passed — Public Copy Boundary Framework v1 |
 | Sprint 82 | COMPLETE | G82 passed — Public Exposure Prerequisite Map v1 |

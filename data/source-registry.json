@@ -6621,6 +6621,146 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 84 decision record."
+    },
+    {
+      "source_id": "SOURCE-0562",
+      "source_title": "PUBLIC_REFERENCE_ROUTE_EXPANSION_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_ROUTE_EXPANSION_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 public reference route expansion statement."
+    },
+    {
+      "source_id": "SOURCE-0563",
+      "source_title": "HUMAN_AI_REFERENCE_UNIT_STANDARD_V1.md",
+      "source_type": "internal_governance",
+      "location": "HUMAN_AI_REFERENCE_UNIT_STANDARD_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 reference unit standard."
+    },
+    {
+      "source_id": "SOURCE-0564",
+      "source_title": "PUBLIC_REFERENCE_ROUTE_EXPANSION_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_ROUTE_EXPANSION_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 audit record."
+    },
+    {
+      "source_id": "SOURCE-0565",
+      "source_title": "data/public-reference-route-expansion-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-route-expansion-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 expansion registry."
+    },
+    {
+      "source_id": "SOURCE-0566",
+      "source_title": "evidence-risk/index.html",
+      "source_type": "public_surface",
+      "location": "evidence-risk/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 Evidence Risk reference unit."
+    },
+    {
+      "source_id": "SOURCE-0567",
+      "source_title": "provenance-risk/index.html",
+      "source_type": "public_surface",
+      "location": "provenance-risk/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 Provenance Risk reference unit."
+    },
+    {
+      "source_id": "SOURCE-0568",
+      "source_title": "context-collapse/index.html",
+      "source_type": "public_surface",
+      "location": "context-collapse/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 Context Collapse reference unit."
+    },
+    {
+      "source_id": "SOURCE-0569",
+      "source_title": "claim-drift/index.html",
+      "source_type": "public_surface",
+      "location": "claim-drift/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 Claim Drift reference unit."
+    },
+    {
+      "source_id": "SOURCE-0570",
+      "source_title": "traceability-gap/index.html",
+      "source_type": "public_surface",
+      "location": "traceability-gap/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 Traceability Gap reference unit."
+    },
+    {
+      "source_id": "SOURCE-0571",
+      "source_title": "why-hoax-ai-is-not-a-detector/index.html",
+      "source_type": "public_surface",
+      "location": "why-hoax-ai-is-not-a-detector/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 non-detector boundary reference unit."
+    },
+    {
+      "source_id": "SOURCE-0572",
+      "source_title": "validators/validate_public_reference_route_expansion_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_reference_route_expansion_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 validator."
+    },
+    {
+      "source_id": "SOURCE-0573",
+      "source_title": "SPRINT_85_PUBLIC_REFERENCE_ROUTE_EXPANSION_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_85_PUBLIC_REFERENCE_ROUTE_EXPANSION_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 sprint record."
+    },
+    {
+      "source_id": "SOURCE-0574",
+      "source_title": "DECISION_LOG.md (DEC-103)",
+      "source_type": "internal_governance",
+      "location": "DECISION_LOG.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 decision record."
+    },
+    {
+      "source_id": "SOURCE-0575",
+      "source_title": "data/public-reference-route-expansion-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-route-expansion-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 85 expansion schema."
     }
   ]
 }

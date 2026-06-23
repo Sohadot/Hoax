@@ -2004,6 +2004,45 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Evidence-Risk Utility Surface v1 per DEC-102."
+    },
+    {
+      "claim_id": "CLAIM-0087",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_ROUTE_EXPANSION_V1.md",
+        "HUMAN_AI_REFERENCE_UNIT_STANDARD_V1.md",
+        "PUBLIC_REFERENCE_ROUTE_EXPANSION_AUDIT_V1.md",
+        "data/public-reference-route-expansion-v1.json",
+        "evidence-risk/index.html",
+        "provenance-risk/index.html",
+        "context-collapse/index.html",
+        "claim-drift/index.html",
+        "traceability-gap/index.html",
+        "why-hoax-ai-is-not-a-detector/index.html",
+        "validators/validate_public_reference_route_expansion_v1.py",
+        "SPRINT_85_PUBLIC_REFERENCE_ROUTE_EXPANSION_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0562",
+        "SOURCE-0563",
+        "SOURCE-0564",
+        "SOURCE-0565",
+        "SOURCE-0566",
+        "SOURCE-0567",
+        "SOURCE-0568",
+        "SOURCE-0569",
+        "SOURCE-0570",
+        "SOURCE-0571",
+        "SOURCE-0572",
+        "SOURCE-0573",
+        "SOURCE-0574"
+      ],
+      "support_scope": "public reference route expansion v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Route Expansion v1 per DEC-103."
     }
   ],
   "last_reviewed": "2026-06-20"

@@ -948,6 +948,17 @@
       "status": "active",
       "last_reviewed": "2026-06-20",
       "notes": "Sprint 84 public utility surface. Sitemap twenty-three URLs. No upload or detector behavior."
+    },
+    {
+      "claim_id": "CLAIM-0087",
+      "claim_text": "Hoax.ai has adopted Public Reference Route Expansion v1 with six human-readable and AI-readable public reference routes defining evidence risk, provenance risk, context collapse, claim drift, traceability gap, and the non-detector boundary.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_ROUTE_EXPANSION_V1.md, HUMAN_AI_REFERENCE_UNIT_STANDARD_V1.md, PUBLIC_REFERENCE_ROUTE_EXPANSION_AUDIT_V1.md, data/public-reference-route-expansion-v1.json, evidence-risk/index.html, provenance-risk/index.html, context-collapse/index.html, claim-drift/index.html, traceability-gap/index.html, why-hoax-ai-is-not-a-detector/index.html, validators/validate_public_reference_route_expansion_v1.py, SPRINT_85_PUBLIC_REFERENCE_ROUTE_EXPANSION_V1.md, DECISION_LOG.md (DEC-103)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-20",
+      "notes": "Sprint 85 public reference route expansion. Sitemap twenty-nine URLs."
     }
   ]
 }

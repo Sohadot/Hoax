@@ -14,6 +14,8 @@ PUBLIC_ROUTE_IDS = [
     "ROUTE-0013", "ROUTE-0014", "ROUTE-0015", "ROUTE-0016",
     "ROUTE-0017", "ROUTE-0018", "ROUTE-0019",
     "ROUTE-0020", "ROUTE-0021", "ROUTE-0022", "ROUTE-0023",
+    "ROUTE-0024", "ROUTE-0025", "ROUTE-0026", "ROUTE-0027",
+    "ROUTE-0028", "ROUTE-0029",
 ]
 
 PILOT_ROUTE_IDS = PUBLIC_ROUTE_IDS  # backward compatibility
@@ -49,6 +51,12 @@ ALLOWED_PUBLIC_HTML = {
     "evidence-posture-map/index.html",
     "synthetic-examples/index.html",
     "evidence-risk-questions/index.html",
+    "evidence-risk/index.html",
+    "provenance-risk/index.html",
+    "context-collapse/index.html",
+    "claim-drift/index.html",
+    "traceability-gap/index.html",
+    "why-hoax-ai-is-not-a-detector/index.html",
 }
 
 ALLOWED_INTERNAL_PROTOTYPE_HTML = {
@@ -63,7 +71,7 @@ ALLOWED_PUBLIC_ROOT_FILES = ALLOWED_PUBLIC_HTML | {
     "sitemap.xml",
 }
 
-PUBLIC_SITEMAP_URL_COUNT = 23
+PUBLIC_SITEMAP_URL_COUNT = 29
 
 PILOT_SITEMAP_URL_COUNT = PUBLIC_SITEMAP_URL_COUNT  # backward compatibility
 
@@ -210,7 +218,11 @@ PUBLISHER_STATUS_POST_PUBLIC_COPY_BOUNDARY_FRAMEWORK_VALIDATION = (
 )
 
 PUBLISHER_STATUS_POST_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_VALIDATION = (
-    "blocked_until_public_evidence_risk_utility_surface_validation"
+    "blocked_until_public_reference_route_expansion_validation"
+)
+
+PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_EXPANSION_VALIDATION = (
+    "blocked_until_public_reference_route_expansion_validation"
 )
 
 PUBLISHER_STATUSES_ALLOWED = (
@@ -277,6 +289,7 @@ PUBLISHER_STATUSES_ALLOWED = (
     PUBLISHER_STATUS_POST_PUBLIC_EXPOSURE_PREREQUISITE_MAP_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_COPY_BOUNDARY_FRAMEWORK_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_EVIDENCE_RISK_UTILITY_SURFACE_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_EXPANSION_VALIDATION,
 )
 
 
