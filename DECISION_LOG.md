@@ -2787,3 +2787,28 @@ After Sprint 87 strengthened the internal reference graph, Hoax.ai needed a visi
 - Source confidence is not a score, verdict, detection result, or truth verification.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-107 — Public Reference Answer Surface v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Answer Surface v1 by adding visible Reference Answer blocks to the homepage, public utility pages, and public reference routes. The layer provides stable canonical answers to evidence-risk questions for humans and AI agents without creating a chatbot, answer generator, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 88 added source-confidence blocks, Hoax.ai needed concise answer surfaces that make each public page easier to understand, retrieve, and cite. The answer surface strengthens reference authority while preserving Hoax.ai's non-verdict boundary.
+
+### Implications
+
+- Existing public pages may receive Reference Answer blocks.
+- No new public route is authorized.
+- Sitemap remains 29 URLs.
+- Route registry remains 29 entries.
+- Reference Answer blocks are authorized as static public content.
+- The answer surface is not a chatbot, generator, detector, score, verdict, or report system.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, and real-world case evaluation remain unauthorized.
+

@@ -912,6 +912,7 @@ def validate_governance() -> bool:
         "blocked_until_public_utility_interface_embodiment_validation",
         "blocked_until_public_reference_authority_internal_linking_validation",
         "blocked_until_public_reference_source_confidence_layer_validation",
+        "blocked_until_public_reference_answer_surface_validation",
     ):
         error("publisher status must be blocked until public route candidate registration governance")
         ok = False

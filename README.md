@@ -105,3 +105,5 @@ Cloudflare is a later DNS, performance, and security layer.
 Hoax.ai's public surface connects four manual utility routes and six evidence-risk reference routes through authority-grade internal linking. The homepage **Hoax.ai Reference Graph** section, reference paths, related concept links, continue-with guidance, and AI-readable link capsules help humans navigate and help AI agents retrieve stable category definitions — without new routes, uploads, scoring, verdicts, or detector behavior.
 
 Each homepage and utility/reference page includes a **Source Confidence** block that clarifies support type, what the page can and cannot support, and non-verdict boundaries — source confidence is not a score, verification claim, or detection result.
+
+Each homepage and utility/reference page also includes a **Reference Answer** block with a canonical question, short answer, usage guidance, and non-verdict limits — the answer surface is not a chatbot, generator, or verdict system.

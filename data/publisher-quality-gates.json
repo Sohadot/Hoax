@@ -1248,6 +1248,24 @@
       "failure_condition": "public_reference_source_confidence_layer_v1_not_met",
       "bypassable": false,
       "notes": "Public Reference Source Confidence Layer v1 completed Sprint 88 (DEC-106). Visible source-confidence blocks on homepage and ten utility/reference pages. Source confidence clarifies support type, not score or verification. Sitemap remains twenty-nine URLs. No new routes."
+    },
+    {
+      "gate_id": "PUB-GATE-0083",
+      "name": "Public Reference Answer Surface v1 Gate",
+      "status": "public_reference_answer_surface_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_89_PUBLIC_REFERENCE_ANSWER_SURFACE_V1.md",
+      "failure_condition": "public_reference_answer_surface_v1_not_met",
+      "bypassable": false,
+      "notes": "Public Reference Answer Surface v1 completed Sprint 89 (DEC-107). Visible Reference Answer blocks on homepage and ten utility/reference pages. Answer surface is not chatbot, generator, or verdict system. Sitemap remains twenty-nine URLs. No new routes."
     }
   ],
   "last_reviewed": "2026-06-20"

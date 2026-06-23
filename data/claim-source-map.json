@@ -2106,6 +2106,35 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Source Confidence Layer v1 per DEC-106."
+    },
+    {
+      "claim_id": "CLAIM-0090",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_ANSWER_SURFACE_V1.md",
+        "PUBLIC_ANSWER_SURFACE_COMPONENT_STANDARD_V1.md",
+        "PUBLIC_REFERENCE_ANSWER_SURFACE_AUDIT_V1.md",
+        "data/public-reference-answer-surface-v1.json",
+        "index.html",
+        "manual-evidence-checklist/index.html",
+        "validators/validate_public_reference_answer_surface_v1.py",
+        "SPRINT_89_PUBLIC_REFERENCE_ANSWER_SURFACE_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0591",
+        "SOURCE-0592",
+        "SOURCE-0593",
+        "SOURCE-0594",
+        "SOURCE-0595",
+        "SOURCE-0596",
+        "SOURCE-0597"
+      ],
+      "support_scope": "public reference answer surface v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Answer Surface v1 per DEC-107."
     }
   ],
   "last_reviewed": "2026-06-20"

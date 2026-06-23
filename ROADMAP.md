@@ -2469,7 +2469,40 @@ All harnesses and `validate_all.py` — PASS required.
 
 ### Next Phase
 
-**Sprint 89 — Public Reference Answer Surface v1**
+**Sprint 90 — Public Reference Citation and Retrieval Hardening v1**
+
+---
+
+## Sprint 89 — Public Reference Answer Surface v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Add visible Reference Answer blocks across homepage and ten public utility/reference pages without new routes, chatbots, or generators.
+
+### Deliverables
+
+- PUBLIC_REFERENCE_ANSWER_SURFACE_V1.md
+- PUBLIC_ANSWER_SURFACE_COMPONENT_STANDARD_V1.md
+- PUBLIC_REFERENCE_ANSWER_SURFACE_AUDIT_V1.md
+- data/public-reference-answer-surface-v1.json
+- data/public-reference-answer-surface-v1.schema.json
+- validators/validate_public_reference_answer_surface_v1.py
+- SPRINT_89_PUBLIC_REFERENCE_ANSWER_SURFACE_V1.md
+- Reference Answer blocks on homepage and ten utility/reference pages
+- DEC-107 appended to DECISION_LOG.md
+- PUB-GATE-0083 added
+- Publisher status -> blocked_until_public_reference_answer_surface_validation
+
+### Validation
+
+All harnesses and `validate_all.py` — PASS required.
+
+### Gate
+
+**Gate G89 passed.** Public Reference Citation and Retrieval Hardening v1 is the recommended next phase.
+
+### Next Phase
+
+**Sprint 90 — Public Reference Citation and Retrieval Hardening v1**
 
 ---
 

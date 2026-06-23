@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Public Reference Answer Surface v1",
+  "type": "object",
+  "required": [
+    "answer_surface_id",
+    "name",
+    "version",
+    "decision_ref",
+    "sprint",
+    "status",
+    "production_first",
+    "governance_after_production",
+    "new_public_routes_added",
+    "expected_sitemap_url_count_after",
+    "expected_route_registry_count_after",
+    "human_readable",
+    "ai_readable",
+    "answer_surface_is_not_chatbot",
+    "answer_surface_is_not_generator",
+    "answer_surface_is_not_verdict_system",
+    "pages_updated",
+    "allowed_answer_types",
+    "forbidden_answer_types",
+    "upload_authorized",
+    "scoring_authorized",
+    "verdict_authorized",
+    "detector_claim_authorized",
+    "public_api_authorized",
+    "automated_report_authorized",
+    "javascript_authorized",
+    "forms_authorized",
+    "real_world_case_evaluation_authorized",
+    "chatbot_authorized",
+    "generator_authorized"
+  ],
+  "properties": {
+    "answer_surface_id": { "const": "public-reference-answer-surface-v1" },
+    "decision_ref": { "const": "DEC-107" },
+    "sprint": { "const": "Sprint 89" },
+    "status": { "const": "public_reference_answer_surface" },
+    "production_first": { "const": true },
+    "new_public_routes_added": { "const": false },
+    "expected_sitemap_url_count_after": { "const": 29 },
+    "expected_route_registry_count_after": { "const": 29 },
+    "human_readable": { "const": true },
+    "ai_readable": { "const": true },
+    "answer_surface_is_not_chatbot": { "const": true },
+    "answer_surface_is_not_generator": { "const": true },
+    "answer_surface_is_not_verdict_system": { "const": true },
+    "pages_updated": {
+      "type": "array",
+      "minItems": 11,
+      "maxItems": 11,
+      "uniqueItems": true,
+      "items": { "type": "string" }
+    },
+    "allowed_answer_types": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "Concept answer",
+          "Boundary answer",
+          "Utility answer",
+          "Source-confidence answer",
+          "Evidence-posture answer",
+          "Synthetic example answer"
+        ]
+      }
+    },
+    "forbidden_answer_types": {
+      "type": "array",
+      "minItems": 9,
+      "uniqueItems": true,
+      "items": { "type": "string" }
+    },
+    "upload_authorized": { "const": false },
+    "scoring_authorized": { "const": false },
+    "verdict_authorized": { "const": false },
+    "detector_claim_authorized": { "const": false },
+    "public_api_authorized": { "const": false },
+    "automated_report_authorized": { "const": false },
+    "javascript_authorized": { "const": false },
+    "forms_authorized": { "const": false },
+    "real_world_case_evaluation_authorized": { "const": false },
+    "chatbot_authorized": { "const": false },
+    "generator_authorized": { "const": false }
+  },
+  "additionalProperties": true
+}

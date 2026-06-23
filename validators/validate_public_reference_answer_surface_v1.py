@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Sprint 88 — Public Reference Source Confidence Layer v1."""
+"""Validate Sprint 89 — Public Reference Answer Surface v1."""
 
 from __future__ import annotations
 
@@ -13,18 +13,17 @@ ROOT = Path(__file__).resolve().parent.parent
 
 from public_surface_checks import (  # noqa: E402
     PUBLIC_SITEMAP_URL_COUNT,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ANSWER_SURFACE_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_VALIDATION,
     validate_public_surface,
 )
 
-LAYER_DOC = "PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_V1.md"
-STANDARD_DOC = "PUBLIC_SOURCE_CONFIDENCE_COMPONENT_STANDARD_V1.md"
-AUDIT_DOC = "PUBLIC_SOURCE_CONFIDENCE_AUDIT_V1.md"
-LAYER_JSON = "data/public-reference-source-confidence-layer-v1.json"
-LAYER_SCHEMA = "data/public-reference-source-confidence-layer-v1.schema.json"
-SPRINT_AUDIT = "SPRINT_88_PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_V1.md"
+SURFACE_DOC = "PUBLIC_REFERENCE_ANSWER_SURFACE_V1.md"
+STANDARD_DOC = "PUBLIC_ANSWER_SURFACE_COMPONENT_STANDARD_V1.md"
+AUDIT_DOC = "PUBLIC_REFERENCE_ANSWER_SURFACE_AUDIT_V1.md"
+SURFACE_JSON = "data/public-reference-answer-surface-v1.json"
+SURFACE_SCHEMA = "data/public-reference-answer-surface-v1.schema.json"
+SPRINT_AUDIT = "SPRINT_89_PUBLIC_REFERENCE_ANSWER_SURFACE_V1.md"
 INDEX = "index.html"
 EXPECTED = 29
 
@@ -42,24 +41,26 @@ ALL_PAGES = {
     "why-hoax-ai-is-not-a-detector/index.html": "/why-hoax-ai-is-not-a-detector/",
 }
 
-ALLOWED_SUPPORT_MARKERS = [
-    "conceptual definition",
-    "manual utility guidance",
-    "synthetic example",
-    "boundary statement",
-    "repository-governed reference",
-]
+CANONICAL_QUESTIONS = {
+    INDEX: "what is hoax.ai?",
+    "evidence-risk/index.html": "what is evidence risk?",
+    "provenance-risk/index.html": "what is provenance risk?",
+    "context-collapse/index.html": "what is context collapse?",
+    "claim-drift/index.html": "what is claim drift?",
+    "traceability-gap/index.html": "what is a traceability gap?",
+    "why-hoax-ai-is-not-a-detector/index.html": "why is hoax.ai not a detector?",
+}
 
-FORBIDDEN_SUPPORT = [
-    "verified truth",
-    "detected authenticity",
-    "factual determination",
+FORBIDDEN_ANSWER_TYPES = [
+    "authenticity determination",
     "legal determination",
     "forensic proof",
-    "manipulation finding",
-    "user-submitted evidence",
-    "live detection result",
-    "automated confidence score",
+    "accusation",
+    "live case assessment",
+    "user-submitted artifact answer",
+    "numeric certainty output",
+    "automated report output",
+    "binary authenticity label output",
 ]
 
 FORBIDDEN_PHRASE_CHECKS = [
@@ -90,19 +91,25 @@ FORBIDDEN_CLAIMS = [
     "deceptive",
 ]
 
+CHATBOT_MARKERS = [
+    "chatbot",
+    "answer generator",
+    "automated response",
+]
+
 NEGATION_PATTERN = re.compile(
     r"(?:does not|do not|not a|not an|never|no |cannot|can't|without|not)\s+[\w\s\-/]{0,50}",
     re.IGNORECASE,
 )
 
 SOURCE_LOCS = [
-    LAYER_DOC,
+    SURFACE_DOC,
     STANDARD_DOC,
     AUDIT_DOC,
-    LAYER_JSON,
-    LAYER_SCHEMA,
+    SURFACE_JSON,
+    SURFACE_SCHEMA,
     SPRINT_AUDIT,
-    "validators/validate_public_reference_source_confidence_layer_v1.py",
+    "validators/validate_public_reference_answer_surface_v1.py",
     INDEX,
     *[p for p in ALL_PAGES if p != INDEX],
 ]
@@ -134,13 +141,13 @@ def line_has_unnegated_claim(line: str, claim: str) -> bool:
 
 def validate_artifacts() -> bool:
     ok = True
-    for rel in [LAYER_DOC, STANDARD_DOC, AUDIT_DOC, LAYER_JSON, LAYER_SCHEMA, SPRINT_AUDIT]:
+    for rel in [SURFACE_DOC, STANDARD_DOC, AUDIT_DOC, SURFACE_JSON, SURFACE_SCHEMA, SPRINT_AUDIT]:
         if not (ROOT / rel).is_file():
             error(f"missing {rel}")
             ok = False
-    data = load_json(LAYER_JSON)
-    if data.get("decision_ref") != "DEC-106":
-        error("decision_ref must be DEC-106")
+    data = load_json(SURFACE_JSON)
+    if data.get("decision_ref") != "DEC-107":
+        error("decision_ref must be DEC-107")
         ok = False
     if data.get("new_public_routes_added") is not False:
         error("new_public_routes_added must be false")
@@ -148,8 +155,11 @@ def validate_artifacts() -> bool:
     if len(data.get("pages_updated", [])) != 11:
         error("pages_updated must contain exactly 11 entries")
         ok = False
-    if len(data.get("allowed_support_types", [])) != 5:
-        error("allowed_support_types must contain exactly 5 types")
+    if len(data.get("allowed_answer_types", [])) != 6:
+        error("allowed_answer_types must contain exactly 6 types")
+        ok = False
+    if data.get("chatbot_authorized") is not False or data.get("generator_authorized") is not False:
+        error("chatbot_authorized and generator_authorized must be false")
         ok = False
     return ok
 
@@ -172,11 +182,17 @@ def validate_page(rel: str) -> bool:
     ok = True
     content = (ROOT / rel).read_text(encoding="utf-8")
     lower = content.lower()
+    if "reference-answer-block" not in lower:
+        error(f"{rel}: missing reference answer block")
+        return False
+    answer_lower = lower.split("reference-answer-block", 1)[1].split("</section>", 1)[0]
     for label in (
-        "source confidence",
-        "support type",
-        "what this page can support",
-        "what this page cannot support",
+        "reference answer",
+        "question",
+        "short answer",
+        "use this answer when",
+        "do not use this answer to",
+        "related pages",
     ):
         if label not in lower:
             error(f"{rel}: missing {label!r}")
@@ -184,12 +200,16 @@ def validate_page(rel: str) -> bool:
     if "automated authenticity labels" not in lower and "numeric certainty outputs" not in lower:
         error(f"{rel}: missing safe boundary language")
         ok = False
-    if not any(m in lower for m in ALLOWED_SUPPORT_MARKERS):
-        error(f"{rel}: missing allowed support type marker")
+    if '<a href="' not in content.split("reference-answer-block", 1)[-1]:
+        error(f"{rel}: missing related page links in answer block")
         ok = False
-    for forbidden in FORBIDDEN_SUPPORT:
-        if forbidden in lower:
-            error(f"{rel}: forbidden support type {forbidden!r}")
+    for forbidden in FORBIDDEN_ANSWER_TYPES:
+        if forbidden in answer_lower:
+            error(f"{rel}: forbidden answer type {forbidden!r}")
+            ok = False
+    for marker in CHATBOT_MARKERS:
+        if marker in answer_lower:
+            error(f"{rel}: forbidden chatbot/generator marker {marker!r}")
             ok = False
     for phrase in FORBIDDEN_PHRASE_CHECKS:
         if phrase in lower:
@@ -207,40 +227,43 @@ def validate_page(rel: str) -> bool:
                 error(f"{rel}: forbidden claim {claim!r}")
                 ok = False
                 break
+    if rel in CANONICAL_QUESTIONS and CANONICAL_QUESTIONS[rel] not in lower:
+        error(f"{rel}: missing canonical question {CANONICAL_QUESTIONS[rel]!r}")
+        ok = False
     return ok
 
 
 def validate_governance() -> bool:
     ok = True
-    if "DEC-106" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
-        error("DEC-106 missing")
+    if "DEC-107" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
+        error("DEC-107 missing")
         ok = False
-    if "validate_public_reference_source_confidence_layer_v1.py" not in (
+    if "validate_public_reference_answer_surface_v1.py" not in (
         ROOT / "validators/validate_all.py"
     ).read_text(encoding="utf-8"):
-        error("validate_all.py must include Sprint 88 validator")
+        error("validate_all.py must include Sprint 89 validator")
         ok = False
     policy = load_json("data/publisher-governance-policy.json")
     if policy.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ANSWER_SURFACE_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_VALIDATION,
-        "blocked_until_public_reference_answer_surface_validation",
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ANSWER_SURFACE_VALIDATION,
     ):
-        error("publisher status must reflect Sprint 88 source confidence layer validation")
+        error("publisher status must reflect Sprint 89 answer surface validation")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}
     for loc in SOURCE_LOCS:
         if loc not in locs:
             error(f"source registry missing {loc}")
             ok = False
-    if not any(c.get("claim_id") == "CLAIM-0089" for c in load_json("data/evidence-ledger.json").get("claims", [])):
-        error("CLAIM-0089 missing")
+    if not any(c.get("claim_id") == "CLAIM-0090" for c in load_json("data/evidence-ledger.json").get("claims", [])):
+        error("CLAIM-0090 missing")
         ok = False
-    if not any(g.get("gate_id") == "PUB-GATE-0082" for g in load_json("data/publisher-quality-gates.json").get("gates", [])):
-        error("PUB-GATE-0082 missing")
+    if not any(g.get("gate_id") == "PUB-GATE-0083" for g in load_json("data/publisher-quality-gates.json").get("gates", [])):
+        error("PUB-GATE-0083 missing")
         ok = False
-    if "Sprint 88 | COMPLETE | G88 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
-        error("master execution plan missing Sprint 88 row")
+    if "Sprint 89 | COMPLETE | G89 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
+        error("master execution plan missing Sprint 89 row")
         ok = False
     if (ROOT / ".nojekyll").exists():
         error(".nojekyll must not exist")
