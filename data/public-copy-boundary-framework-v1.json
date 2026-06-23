@@ -1,0 +1,69 @@
+{
+  "framework_id": "public-copy-boundary-framework-v1",
+  "name": "Public Copy Boundary Framework v1",
+  "version": "1.0.0",
+  "status": "public_copy_boundary_framework_active",
+  "decision_ref": "DEC-101",
+  "sprint": "Sprint 83",
+  "public_route_authorized": false,
+  "new_public_routes_authorized": false,
+  "upload_authorized": false,
+  "scoring_authorized": false,
+  "verdict_authorized": false,
+  "detector_claim_authorized": false,
+  "public_api_authorized": false,
+  "automated_report_authorized": false,
+  "public_utility_language_authorized": true,
+  "manual_reference_utility_authorized": true,
+  "approved_hero_headline": "Truth is no longer the first layer. Evidence is.",
+  "approved_subheadline": "Hoax.ai helps people read evidence risk in the synthetic media age — without issuing verdicts, scores, uploads, or fake/real labels.",
+  "allowed_public_language": [
+    "helps people read evidence risk",
+    "manual evidence-risk utility",
+    "evidence posture reference",
+    "guided evidence questions",
+    "non-verdict evidence map",
+    "synthetic media risk literacy",
+    "public evidence-risk reference system",
+    "manual evidence posture guide",
+    "maps evidence risk manually and conceptually",
+    "helps people ask better evidence questions"
+  ],
+  "forbidden_public_language": [
+    "detects fake media",
+    "verifies truth",
+    "scores authenticity",
+    "proves manipulation",
+    "identifies deception",
+    "certifies evidence",
+    "confirms real or fake",
+    "automated investigation",
+    "AI detector"
+  ],
+  "detector_misreading_prevention": [
+    "utility-first hero positioning",
+    "explicit non-verdict subheadline",
+    "what Hoax.ai is not boundary section",
+    "no upload or form language",
+    "no scoring or verdict output language",
+    "artifact-posture language not subject accusation",
+    "manual reference utility not automated classifier"
+  ],
+  "next_public_utility_candidates": [
+    "manual evidence checklist",
+    "synthetic examples",
+    "evidence posture reference pages",
+    "context collapse guide",
+    "claim drift guide",
+    "traceability gap guide"
+  ],
+  "homepage_sections": [
+    "hero",
+    "guided_evidence_questions",
+    "what_hoax_is",
+    "what_hoax_is_not",
+    "evidence_posture_map_preview",
+    "next_public_utility_direction"
+  ],
+  "non_authorization_statement": "Sprint 83 authorizes public copy boundary governance and existing-homepage copy updates only. No new public routes, upload, scoring, verdict, detector claims, public API, or automated report behavior is authorized."
+}

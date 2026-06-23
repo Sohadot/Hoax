@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Public Copy Boundary Framework v1",
+  "type": "object",
+  "required": [
+    "framework_id",
+    "name",
+    "version",
+    "status",
+    "decision_ref",
+    "sprint",
+    "public_route_authorized",
+    "new_public_routes_authorized",
+    "upload_authorized",
+    "scoring_authorized",
+    "verdict_authorized",
+    "detector_claim_authorized",
+    "public_api_authorized",
+    "automated_report_authorized",
+    "public_utility_language_authorized",
+    "manual_reference_utility_authorized",
+    "approved_hero_headline",
+    "approved_subheadline",
+    "allowed_public_language",
+    "forbidden_public_language",
+    "detector_misreading_prevention",
+    "next_public_utility_candidates",
+    "non_authorization_statement"
+  ],
+  "properties": {
+    "framework_id": { "const": "public-copy-boundary-framework-v1" },
+    "name": { "type": "string" },
+    "version": { "type": "string" },
+    "status": { "type": "string" },
+    "decision_ref": { "const": "DEC-101" },
+    "sprint": { "const": "Sprint 83" },
+    "public_route_authorized": { "const": false },
+    "new_public_routes_authorized": { "const": false },
+    "upload_authorized": { "const": false },
+    "scoring_authorized": { "const": false },
+    "verdict_authorized": { "const": false },
+    "detector_claim_authorized": { "const": false },
+    "public_api_authorized": { "const": false },
+    "automated_report_authorized": { "const": false },
+    "public_utility_language_authorized": { "const": true },
+    "manual_reference_utility_authorized": { "const": true },
+    "approved_hero_headline": { "type": "string", "minLength": 1 },
+    "approved_subheadline": { "type": "string", "minLength": 1 },
+    "allowed_public_language": {
+      "type": "array",
+      "minItems": 8,
+      "items": { "type": "string" }
+    },
+    "forbidden_public_language": {
+      "type": "array",
+      "minItems": 8,
+      "items": { "type": "string" }
+    },
+    "detector_misreading_prevention": {
+      "type": "array",
+      "minItems": 5,
+      "items": { "type": "string" }
+    },
+    "next_public_utility_candidates": {
+      "type": "array",
+      "minItems": 4,
+      "items": { "type": "string" }
+    },
+    "non_authorization_statement": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": true
+}

@@ -2660,3 +2660,30 @@ Sprint 81 created the Release Blocker Board. Sprint 82 prevents blocker governan
 - No public benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, JavaScript, form, report exporter, external connector, monetization, or public tool behavior is authorized.
 - Any future public exposure requires separate explicit sprint authorization.
 
+---
+
+## DEC-101 — Public Copy Boundary Framework v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Copy Boundary Framework v1 to make the public surface useful and understandable without allowing detector, upload, score, fake/real, verdict, or automated-report positioning. The homepage hero is repositioned from a defensive negation to a category-defining evidence-first statement.
+
+### Rationale
+
+Hoax.ai must not remain a hidden-governance asset or a mere article site. It must become a public evidence-risk utility while preserving strict non-verdict boundaries. Public copy must distinguish authorized utilities (manual checklists, posture maps, guided questions, reference tools) from prohibited positioning (verdict engine, upload detector, fake/real classifier, scoring system, automated report generator).
+
+### Implications
+
+- Public Copy Boundary Framework v1 may be created.
+- Public utility language standard may be created.
+- Public hero copy model may be created.
+- Public detector misreading prevention may be created.
+- Existing homepage copy may be updated under copy boundary rules.
+- No new public route may be created in Sprint 83 unless separately authorized.
+- No upload, scoring, verdict, detector claim, public API, or automated report behavior is authorized.
+- Sitemap remains exactly 19 URLs unless separately governed.
+- Future public utility pages require separate sprint authorization.
+

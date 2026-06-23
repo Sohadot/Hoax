@@ -1939,6 +1939,37 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Exposure Prerequisite Map v1 per DEC-100."
+    },
+    {
+      "claim_id": "CLAIM-0085",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_COPY_BOUNDARY_FRAMEWORK_V1.md",
+        "PUBLIC_UTILITY_LANGUAGE_STANDARD_V1.md",
+        "PUBLIC_HERO_COPY_MODEL_V1.md",
+        "PUBLIC_DETECTOR_MISREADING_PREVENTION_V1.md",
+        "data/public-copy-boundary-framework-v1.json",
+        "data/public-copy-boundary-framework-v1.schema.json",
+        "validators/validate_public_copy_boundary_framework_v1.py",
+        "SPRINT_83_PUBLIC_COPY_BOUNDARY_FRAMEWORK_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0542",
+        "SOURCE-0543",
+        "SOURCE-0544",
+        "SOURCE-0545",
+        "SOURCE-0546",
+        "SOURCE-0547",
+        "SOURCE-0548",
+        "SOURCE-0549",
+        "SOURCE-0550"
+      ],
+      "support_scope": "public copy boundary framework v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Copy Boundary Framework v1 per DEC-101."
     }
   ],
   "last_reviewed": "2026-06-20"

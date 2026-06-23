@@ -1158,6 +1158,24 @@
       "failure_condition": "public_exposure_prerequisite_map_v1_not_met",
       "bypassable": false,
       "notes": "Public Exposure Prerequisite Map v1 completed Sprint 82 (DEC-100). Prerequisite map, taxonomy, clearance pathway model, prohibited shortcuts, and harness documented. At least twenty-four prerequisites remain unmapped. No blockers cleared. Fixture count remains sixteen. Sitemap remains nineteen URLs. No public release, benchmark, report, explanation layer, public engine, classifier, upload, scoring, API, analytics, forms, JavaScript, external connector, monetization, or public tool behavior authorized."
+    },
+    {
+      "gate_id": "PUB-GATE-0078",
+      "name": "Public Copy Boundary Framework v1 Gate",
+      "status": "public_copy_boundary_framework_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_83_PUBLIC_COPY_BOUNDARY_FRAMEWORK_V1.md",
+      "failure_condition": "public_copy_boundary_framework_v1_not_met",
+      "bypassable": false,
+      "notes": "Public Copy Boundary Framework v1 completed Sprint 83 (DEC-101). Copy boundary framework, utility language standard, hero copy model, detector misreading prevention, and homepage utility repositioning documented. No upload, scoring, verdict, detector claim, public API, or automated report behavior authorized. Sitemap remains nineteen URLs."
     }
   ],
   "last_reviewed": "2026-06-20"

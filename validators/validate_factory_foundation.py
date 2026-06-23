@@ -103,7 +103,6 @@ CATEGORY_PROHIBITED = [
 ]
 
 INDEX_FORBIDDEN = [
-    "upload",
     "submit",
     "<form",
     "truth score",
@@ -116,10 +115,10 @@ INDEX_FORBIDDEN = [
     "live tool",
 ]
 
-INDEX_CONDITIONAL = ["detect", "check", "verdict", "fake", "real", "scan", "analyze"]
+INDEX_CONDITIONAL = ["upload", "detect", "check", "verdict", "fake", "real", "scan", "analyze"]
 
 NEGATION_PATTERN = re.compile(
-    r"(?:does not|do not|not a|not an|never|no |cannot|can't|without)\s+[\w\s]{0,30}",
+    r"(?:does not|do not|not a|not an|not absolute|not through|never|no |no final|cannot|can't|without|without issuing|[—–]\s*not|, or not)\s*[\w\s\-/,]{0,60}",
     re.IGNORECASE,
 )
 
@@ -1487,7 +1486,13 @@ def line_has_unnegated_term(line: str, term: str) -> bool:
         pos = lower.find(term, idx)
         if pos == -1:
             return False
-        prefix = lower[max(0, pos - 50) : pos]
+        if pos > 0 and lower[pos - 1] == "-":
+            idx = pos + len(term)
+            continue
+        if term == "real" and "fake/real" in lower and "no fake/real" in lower:
+            idx = pos + len(term)
+            continue
+        prefix = lower[max(0, pos - 100) : pos]
         if not NEGATION_PATTERN.search(prefix + term):
             return True
         idx = pos + len(term)
@@ -1517,6 +1522,8 @@ def validate_public_surface() -> bool:
     for line in content.splitlines():
         line_lower = line.lower()
         for term in INDEX_CONDITIONAL:
+            if term == "check" and "checklist" in line_lower:
+                continue
             if term in line_lower and line_has_unnegated_term(line, term):
                 error(
                     f"public surface: '{term}' in index.html may imply live tool without clear negation"

@@ -926,6 +926,17 @@
       "status": "active",
       "last_reviewed": "2026-06-20",
       "notes": "Sprint 82 public exposure prerequisite map. At least twenty-four prerequisites remain unmapped. No blockers cleared. No public release authorized."
+    },
+    {
+      "claim_id": "CLAIM-0085",
+      "claim_text": "Hoax.ai has adopted Public Copy Boundary Framework v1 to make the public surface useful without detector, upload, score, verdict, or automated-report positioning.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_COPY_BOUNDARY_FRAMEWORK_V1.md, PUBLIC_UTILITY_LANGUAGE_STANDARD_V1.md, PUBLIC_HERO_COPY_MODEL_V1.md, PUBLIC_DETECTOR_MISREADING_PREVENTION_V1.md, data/public-copy-boundary-framework-v1.json, data/public-copy-boundary-framework-v1.schema.json, validators/validate_public_copy_boundary_framework_v1.py, SPRINT_83_PUBLIC_COPY_BOUNDARY_FRAMEWORK_V1.md, DECISION_LOG.md (DEC-101)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-20",
+      "notes": "Sprint 83 public copy boundary framework. Homepage hero repositioned. No upload, scoring, verdict, or detector behavior authorized."
     }
   ]
 }

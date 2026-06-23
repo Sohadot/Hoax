@@ -10,12 +10,12 @@
     {
       "public_claim_id": "PUB-CLAIM-0001",
       "claim_id": "CLAIM-0001",
-      "statement_snippet": "Hoax.ai is not a truth machine.",
+      "statement_snippet": "Truth is no longer the first layer.",
       "public_location": "index.html#main-heading",
       "claim_role": "thesis_boundary",
       "allowed_public_use": true,
       "prohibited_interpretation": "truth verdict capability, fake/real detector, active classifier",
-      "notes": "Primary H1 governing sentence."
+      "notes": "Primary H1 evidence-first headline per PUBLIC_HERO_COPY_MODEL_V1.md (DEC-101). Boundary statement 'not a truth machine' retained in What Hoax.ai Is Not section."
     },
     {
       "public_claim_id": "PUB-CLAIM-0002",

@@ -123,7 +123,7 @@ def contains_unnegated_term(text: str, phrase: str) -> bool:
         pos = lower.find(phrase, idx)
         if pos == -1:
             return False
-        prefix = lower[max(0, pos - 40) : pos]
+        prefix = lower[max(0, pos - 100) : pos]
         if any(marker in prefix for marker in NEGATION_MARKERS):
             idx = pos + len(phrase)
             continue

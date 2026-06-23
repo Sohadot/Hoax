@@ -1,6 +1,10 @@
 # Hoax.ai
 
-**Hoax.ai is a governed evidence-risk intelligence system for the synthetic media age.**
+**Truth is no longer the first layer. Evidence is.**
+
+Hoax.ai helps people read evidence risk in the synthetic media age — without issuing verdicts, scores, uploads, or fake/real labels.
+
+Hoax.ai is a governed public evidence-risk reference system and manual evidence posture guide. It is useful as a non-verdict public utility: guided evidence questions, synthetic media risk literacy, and evidence posture reference — not a verdict engine, upload detector, fake/real classifier, scoring system, or public automated report generator.
 
 Hoax.ai is not a truth machine, a political fact-checking site, or a generic AI detector.
 

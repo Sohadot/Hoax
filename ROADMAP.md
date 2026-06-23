@@ -2366,6 +2366,40 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+## Sprint 83 — Public Copy Boundary Framework v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Make the public surface useful and visible without detector, upload, score, verdict, or automated-report misreading.
+
+### Deliverables
+
+- PUBLIC_COPY_BOUNDARY_FRAMEWORK_V1.md
+- PUBLIC_UTILITY_LANGUAGE_STANDARD_V1.md
+- PUBLIC_HERO_COPY_MODEL_V1.md
+- PUBLIC_DETECTOR_MISREADING_PREVENTION_V1.md
+- data/public-copy-boundary-framework-v1.json
+- data/public-copy-boundary-framework-v1.schema.json
+- validators/validate_public_copy_boundary_framework_v1.py
+- SPRINT_83_PUBLIC_COPY_BOUNDARY_FRAMEWORK_V1.md
+- index.html hero and utility sections updated
+- DEC-101 appended to DECISION_LOG.md
+- PUB-GATE-0078 added
+- Publisher status -> blocked_until_public_copy_boundary_framework_validation
+
+### Validation
+
+All harnesses and `validate_all.py` — PASS required.
+
+### Gate
+
+**Gate G83 passed.**
+
+### Next Phase
+
+Governed public utility expansion when separately authorized.
+
+---
+
 **Sprint 80 — Internal Prototype Admissibility Regression Suite v1**
 
 ---

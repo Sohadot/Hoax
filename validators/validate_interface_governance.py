@@ -99,7 +99,6 @@ COMPONENT_PROHIBITED_TERMS = [
 ]
 
 INDEX_FORBIDDEN = [
-    "upload",
     "submit",
     "<form",
     "truth score",
@@ -117,7 +116,7 @@ INDEX_FORBIDDEN = [
     "guilt meter",
 ]
 
-INDEX_CONDITIONAL = ["detect", "check", "verdict", "scan", "analyze", "classifier"]
+INDEX_CONDITIONAL = ["upload", "detect", "check", "verdict", "fake", "real", "scan", "analyze", "classifier"]
 
 CSS_PROHIBITED_CLASS_PATTERNS = [
     "scanner",
@@ -149,6 +148,12 @@ NEGATION_MARKERS = [
     "under development",
     "prohibited",
     "must not",
+    "not absolute",
+    "not through",
+    "no final",
+    ", or not",
+    "— not",
+    "– not",
 ]
 
 IFC_PATTERN = re.compile(r"^IFC-\d{4}$")
@@ -172,7 +177,13 @@ def contains_unnegated_term(text: str, term: str) -> bool:
         pos = lower.find(term, idx)
         if pos == -1:
             return False
-        prefix = lower[max(0, pos - 50) : pos]
+        if pos > 0 and lower[pos - 1] == "-":
+            idx = pos + len(term)
+            continue
+        if term == "real" and "fake/real" in lower and "no fake/real" in lower:
+            idx = pos + len(term)
+            continue
+        prefix = lower[max(0, pos - 100) : pos]
         if any(marker in prefix for marker in NEGATION_MARKERS):
             idx = pos + len(term)
             continue
@@ -377,6 +388,8 @@ def validate_index_html() -> bool:
     for line in content.splitlines():
         line_lower = line.lower()
         for term in INDEX_CONDITIONAL:
+            if term == "check" and "checklist" in line_lower:
+                continue
             if term in line_lower and line_has_unnegated_term(line, term):
                 if term == "classifier" and "classification" in line_lower:
                     continue

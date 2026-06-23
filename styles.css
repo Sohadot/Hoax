@@ -168,6 +168,60 @@ strong {
   max-width: 56ch;
 }
 
+.hero-line {
+  display: block;
+}
+
+.hero-accent {
+  color: var(--amber-text);
+}
+
+.utility-list {
+  margin: 0 0 1rem 1.25rem;
+  padding: 0;
+  max-width: 64ch;
+}
+
+.utility-list li {
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.posture-map {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  background: var(--bg-surface);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  max-width: 100%;
+}
+
+.posture-step {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg);
+}
+
+.posture-arrow {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  user-select: none;
+}
+
+.section-utility-positive {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.25rem;
+  margin-left: -1.25rem;
+}
+
 /* ─── Core Question ────────────────────────────────── */
 
 .section-question {
