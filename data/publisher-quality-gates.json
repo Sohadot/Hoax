@@ -1374,6 +1374,24 @@
       "failure_condition": "public_reference_surface_authority_review_v1_not_met",
       "bypassable": false,
       "notes": "Public Reference Surface Authority Review v1 completed Sprint 95 (DEC-113). Authority repairs on legacy/support pages across 41-route surface. No new routes. Not chatbot, generator, or verdict system."
+    },
+    {
+      "gate_id": "PUB-GATE-0090",
+      "name": "Public Reference Strategic Entry Points v1 Gate",
+      "status": "public_reference_strategic_entry_points_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_96_PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_V1.md",
+      "failure_condition": "public_reference_strategic_entry_points_v1_not_met",
+      "bypassable": false,
+      "notes": "Public Reference Strategic Entry Points v1 completed Sprint 96 (DEC-114). Six entry-point routes. Sitemap forty-seven URLs. Not chatbot, generator, or verdict system."
     }
   ],
   "last_reviewed": "2026-06-26"

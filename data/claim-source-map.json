@@ -2304,6 +2304,34 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Surface Authority Review v1 per DEC-113."
+    },
+    {
+      "claim_id": "CLAIM-0097",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_V1.md",
+        "PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_AUDIT_V1.md",
+        "PUBLIC_STRATEGIC_ENTRY_POINT_STANDARD_V1.md",
+        "data/public-reference-strategic-entry-points-v1.json",
+        "entry-points/index.html",
+        "validators/validate_public_reference_strategic_entry_points_v1.py",
+        "SPRINT_96_PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0641",
+        "SOURCE-0642",
+        "SOURCE-0643",
+        "SOURCE-0644",
+        "SOURCE-0645",
+        "SOURCE-0646",
+        "SOURCE-0647"
+      ],
+      "support_scope": "public reference strategic entry points v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Strategic Entry Points v1 per DEC-114."
     }
   ],
   "last_reviewed": "2026-06-26"

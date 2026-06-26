@@ -2958,3 +2958,27 @@ After Sprint 94 consolidated navigation and information architecture across the 
 - Page role labels, system placement notes, internal authority links, citation-safe wording, and AI-readable role language are authorized as visible repairs.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-114 — Public Reference Strategic Entry Points v1 Adopted
+
+**Date:** 2026-06-26
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Strategic Entry Points v1 by adding six public entry-point routes: Hoax.ai Entry Points, For Human Readers, For AI Agents, For Research and Review, For Trust and Safety Teams, and For Education and Literacy. These pages help different readers and AI agents enter the evidence-risk reference system by role and intent without creating upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 95 strengthened the full public reference surface, Hoax.ai needed strategic entry points that make the system easier to enter by audience, role, and retrieval intent. This decision governs visible public pages, not abstract preparatory governance. The entry points improve human usability, AI retrieval, category clarity, and strategic asset value.
+
+### Implications
+
+- Six public entry-point routes are authorized.
+- Sitemap may increase from 41 to 47 URLs.
+- Route registry may increase from 41 to 47 entries.
+- New route registry entries ROUTE-0042 through ROUTE-0047 are authorized.
+- Strategic entry-point pages are authorized as static, non-verdict reference routes.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+

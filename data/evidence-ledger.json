@@ -1058,6 +1058,17 @@
       "status": "active",
       "last_reviewed": "2026-06-26",
       "notes": "Sprint 95 surface authority review. Sitemap forty-one URLs unchanged."
+    },
+    {
+      "claim_id": "CLAIM-0097",
+      "claim_text": "Hoax.ai has adopted Public Reference Strategic Entry Points v1, adding six audience-specific entry routes that help humans and AI agents enter the evidence-risk reference system by role and intent without chatbots, generators, verdicts, or detector behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_V1.md, PUBLIC_STRATEGIC_ENTRY_POINT_STANDARD_V1.md, data/public-reference-strategic-entry-points-v1.json, entry-points/index.html, validators/validate_public_reference_strategic_entry_points_v1.py, SPRINT_96_PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_V1.md, DECISION_LOG.md (DEC-114)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-26",
+      "notes": "Sprint 96 strategic entry points. Sitemap forty-seven URLs."
     }
   ]
 }

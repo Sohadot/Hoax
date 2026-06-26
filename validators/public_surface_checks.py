@@ -18,6 +18,7 @@ PUBLIC_ROUTE_IDS = [
     "ROUTE-0028", "ROUTE-0029",
     "ROUTE-0030", "ROUTE-0031", "ROUTE-0032", "ROUTE-0033", "ROUTE-0034", "ROUTE-0035",
     "ROUTE-0036", "ROUTE-0037", "ROUTE-0038", "ROUTE-0039", "ROUTE-0040", "ROUTE-0041",
+    "ROUTE-0042", "ROUTE-0043", "ROUTE-0044", "ROUTE-0045", "ROUTE-0046", "ROUTE-0047",
 ]
 
 PILOT_ROUTE_IDS = PUBLIC_ROUTE_IDS  # backward compatibility
@@ -71,6 +72,12 @@ ALLOWED_PUBLIC_HTML = {
     "pathways/claim-overextended/index.html",
     "pathways/traceability-incomplete/index.html",
     "pathways/posture-not-assessable/index.html",
+    "entry-points/index.html",
+    "entry-points/human-readers/index.html",
+    "entry-points/ai-agents/index.html",
+    "entry-points/research-review/index.html",
+    "entry-points/trust-safety/index.html",
+    "entry-points/education-literacy/index.html",
 }
 
 ALLOWED_INTERNAL_PROTOTYPE_HTML = {
@@ -85,7 +92,7 @@ ALLOWED_PUBLIC_ROOT_FILES = ALLOWED_PUBLIC_HTML | {
     "sitemap.xml",
 }
 
-PUBLIC_SITEMAP_URL_COUNT = 41
+PUBLIC_SITEMAP_URL_COUNT = 47
 
 PILOT_SITEMAP_URL_COUNT = PUBLIC_SITEMAP_URL_COUNT  # backward compatibility
 
@@ -279,6 +286,10 @@ PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_VALIDATION = (
     "blocked_until_public_reference_surface_authority_review_validation"
 )
 
+PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_VALIDATION = (
+    "blocked_until_public_reference_strategic_entry_points_validation"
+)
+
 PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_reference_candidate_pack",
     "blocked_until_internal_draft_blueprint",
@@ -354,6 +365,7 @@ PUBLISHER_STATUSES_ALLOWED = (
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PATHWAY_PAGES_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_VALIDATION,
 )
 
 

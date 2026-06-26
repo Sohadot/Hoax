@@ -15,6 +15,7 @@ from public_surface_checks import (  # noqa: E402
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PATHWAY_PAGES_VALIDATION,
     validate_public_surface,
 )
@@ -176,12 +177,13 @@ def validate_artifacts() -> bool:
 
 def validate_counts() -> bool:
     ok = True
-    if (ROOT / "sitemap.xml").read_text(encoding="utf-8").count("<loc>") != EXPECTED:
-        error(f"sitemap must have exactly {EXPECTED} URLs")
+    count = PUBLIC_SITEMAP_URL_COUNT
+    if (ROOT / "sitemap.xml").read_text(encoding="utf-8").count("<loc>") != count:
+        error(f"sitemap must have exactly {count} URLs")
         ok = False
     routes = load_json("data/route-registry.json").get("routes", [])
-    if len(routes) != EXPECTED:
-        error(f"route registry must have exactly {EXPECTED} entries")
+    if len(routes) != count:
+        error(f"route registry must have exactly {count} entries")
         ok = False
     if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
         ok = False
@@ -273,7 +275,8 @@ def validate_governance() -> bool:
     if policy.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PATHWAY_PAGES_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PATHWAY_PAGES_VALIDATION,
     ):
         error("publisher status must reflect Sprint 94 navigation IA consolidation validation")
         ok = False

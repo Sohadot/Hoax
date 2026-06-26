@@ -2477,6 +2477,30 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+## Sprint 96 — Public Reference Strategic Entry Points v1
+
+**Status:** COMPLETE — 2026-06-26
+**Goal:** Create six strategic entry-point routes that help humans and AI agents enter Hoax.ai by role and intent without tool or verdict behavior.
+
+### Deliverables
+
+- Six entry-point routes under `/entry-points/` with 800+ words and full component stacks
+- Homepage Choose Your Entry Point section with six cards
+- PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_V1.md, standard, audit, JSON/schema, validator
+- Sitemap 47 URLs; route registry ROUTE-0042–ROUTE-0047
+- DEC-114, PUB-GATE-0090, CLAIM-0097
+- Publisher status -> blocked_until_public_reference_strategic_entry_points_validation
+
+### Gate
+
+**Gate G96 passed.** Sprint 97 — Public Reference Strategic Narrative Surface v1 is next.
+
+### Next Phase
+
+**Sprint 97 — Public Reference Strategic Narrative Surface v1**
+
+---
+
 ## Sprint 95 — Public Reference Surface Authority Review v1
 
 **Status:** COMPLETE — 2026-06-26

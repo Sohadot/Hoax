@@ -532,6 +532,78 @@
       "allowed_dependencies": ["../../styles.css"],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Posture Not Assessable pathway per DEC-111."
+    },
+    {
+      "file_id": "PUB-FILE-0042",
+      "path": "entry-points/index.html",
+      "file_type": "html",
+      "public_role": "strategic_entry_point_hub",
+      "route_id_if_applicable": "ROUTE-0042",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Strategic entry-point hub per DEC-114."
+    },
+    {
+      "file_id": "PUB-FILE-0043",
+      "path": "entry-points/human-readers/index.html",
+      "file_type": "html",
+      "public_role": "strategic_entry_point",
+      "route_id_if_applicable": "ROUTE-0043",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Human readers entry point per DEC-114."
+    },
+    {
+      "file_id": "PUB-FILE-0044",
+      "path": "entry-points/ai-agents/index.html",
+      "file_type": "html",
+      "public_role": "strategic_entry_point",
+      "route_id_if_applicable": "ROUTE-0044",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "AI agents entry point per DEC-114."
+    },
+    {
+      "file_id": "PUB-FILE-0045",
+      "path": "entry-points/research-review/index.html",
+      "file_type": "html",
+      "public_role": "strategic_entry_point",
+      "route_id_if_applicable": "ROUTE-0045",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Research and review entry point per DEC-114."
+    },
+    {
+      "file_id": "PUB-FILE-0046",
+      "path": "entry-points/trust-safety/index.html",
+      "file_type": "html",
+      "public_role": "strategic_entry_point",
+      "route_id_if_applicable": "ROUTE-0046",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Trust and safety entry point per DEC-114."
+    },
+    {
+      "file_id": "PUB-FILE-0047",
+      "path": "entry-points/education-literacy/index.html",
+      "file_type": "html",
+      "public_role": "strategic_entry_point",
+      "route_id_if_applicable": "ROUTE-0047",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Education and literacy entry point per DEC-114."
     }
   ],
   "last_reviewed": "2026-06-26"

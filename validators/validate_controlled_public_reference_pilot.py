@@ -411,6 +411,7 @@ def validate_publisher_governance() -> bool:
         "blocked_until_public_reference_pathway_pages_validation",
         "blocked_until_public_reference_navigation_ia_consolidation_validation",
         "blocked_until_public_reference_surface_authority_review_validation",
+        "blocked_until_public_reference_strategic_entry_points_validation",
     ):
         error(
             f"publisher status must be {PUBLISHER_STATUS_POST_PILOT}, "
