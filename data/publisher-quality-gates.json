@@ -1338,6 +1338,24 @@
       "failure_condition": "public_reference_pathway_pages_v1_not_met",
       "bypassable": false,
       "notes": "Public Reference Pathway Pages v1 completed Sprint 93 (DEC-111). Six pathway routes with full component stacks. Sitemap forty-one URLs. Not chatbot, generator, or verdict system."
+    },
+    {
+      "gate_id": "PUB-GATE-0088",
+      "name": "Public Reference Navigation IA Consolidation v1 Gate",
+      "status": "public_reference_navigation_ia_consolidation_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_94_PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_V1.md",
+      "failure_condition": "public_reference_navigation_ia_consolidation_v1_not_met",
+      "bypassable": false,
+      "notes": "Public Reference Navigation IA Consolidation v1 completed Sprint 94 (DEC-112). IA improvements across 41-route surface. No new routes. Not chatbot, generator, or verdict system."
     }
   ],
   "last_reviewed": "2026-06-26"

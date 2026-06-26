@@ -434,6 +434,7 @@ def validate_publisher_governance() -> bool:
         "blocked_until_public_reference_quality_consolidation_validation",
         "blocked_until_public_reference_depth_expansion_validation",
         "blocked_until_public_reference_pathway_pages_validation",
+        "blocked_until_public_reference_navigation_ia_consolidation_validation",
     ):
         error(f"publisher status must be {PUBLISHER_STATUS_POST_NON_PUBLIC_STATIC_WORKBENCH_VISUAL_SYSTEM_HARDENING}")
         ok = False

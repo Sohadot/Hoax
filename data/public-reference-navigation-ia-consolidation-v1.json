@@ -1,0 +1,43 @@
+{
+  "ia_id": "public-reference-navigation-ia-consolidation-v1",
+  "name": "Public Reference Navigation and IA Consolidation v1",
+  "version": "1.0.0",
+  "decision_ref": "DEC-112",
+  "sprint": "Sprint 94",
+  "status": "public_reference_navigation_ia_consolidation",
+  "production_first": true,
+  "governance_after_production": true,
+  "new_public_routes_added": false,
+  "expected_sitemap_url_count_after": 41,
+  "expected_route_registry_count_after": 41,
+  "human_readable": true,
+  "ai_readable": true,
+  "ia_consolidated": true,
+  "route_groups": [
+    "Public Utilities",
+    "Core Reference Concepts",
+    "Deep Reference Concepts",
+    "Evidence-Risk Pathways",
+    "Boundary and Standard References"
+  ],
+  "pages_updated_minimum": 23,
+  "required_components": [
+    "homepage_ia_section",
+    "page_role_label",
+    "system_navigation_block",
+    "where_to_go_next_refinement",
+    "pathway_entry_points",
+    "ia_capsule"
+  ],
+  "upload_authorized": false,
+  "scoring_authorized": false,
+  "verdict_authorized": false,
+  "detector_claim_authorized": false,
+  "public_api_authorized": false,
+  "automated_report_authorized": false,
+  "javascript_authorized": false,
+  "forms_authorized": false,
+  "real_world_case_evaluation_authorized": false,
+  "chatbot_authorized": false,
+  "generator_authorized": false
+}

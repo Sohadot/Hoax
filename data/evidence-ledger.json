@@ -1036,6 +1036,17 @@
       "status": "active",
       "last_reviewed": "2026-06-26",
       "notes": "Sprint 93 pathway pages. Sitemap forty-one URLs."
+    },
+    {
+      "claim_id": "CLAIM-0095",
+      "claim_text": "Hoax.ai has adopted Public Reference Navigation and IA Consolidation v1, improving visible information architecture across the 41-route public surface without new routes, chatbots, generators, or verdict behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_V1.md, PUBLIC_NAVIGATION_IA_STANDARD_V1.md, data/public-reference-navigation-ia-consolidation-v1.json, index.html, validators/validate_public_reference_navigation_ia_consolidation_v1.py, SPRINT_94_PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_V1.md, DECISION_LOG.md (DEC-112)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-26",
+      "notes": "Sprint 94 navigation IA consolidation. Sitemap forty-one URLs unchanged."
     }
   ]
 }

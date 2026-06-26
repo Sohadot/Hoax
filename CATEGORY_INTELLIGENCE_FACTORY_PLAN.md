@@ -220,6 +220,8 @@ The Category Intelligence Factory now includes selective public reference depth 
 
 The Category Intelligence Factory now includes public reference pathway pages. Public Reference Pathway Pages v1 helps humans and AI agents move through Hoax.ai by evidence condition: unclear source, weak provenance, missing context, overextended claim, incomplete traceability, and not-assessable posture. These pathways connect utility pages, reference concepts, and non-verdict boundaries into usable reference journeys.
 
+The Category Intelligence Factory now includes public navigation and information architecture consolidation. Public Reference Navigation and IA Consolidation v1 makes Hoax.ai's utilities, core concepts, deep concepts, pathways, and boundary references easier for humans to navigate and easier for AI agents to parse as a coherent evidence-risk reference system.
+
 The Category Intelligence Factory treats chronology integrity as part of evidence integrity: decision records must not move backward in time unless a correction note explicitly explains and repairs the error.
 
 The category factory becomes reference-grade only when public-facing claims, evidence ledger entries, source records, and support locations are traceable as a governed system.

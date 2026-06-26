@@ -2249,6 +2249,34 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Pathway Pages v1 per DEC-111."
+    },
+    {
+      "claim_id": "CLAIM-0095",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_V1.md",
+        "PUBLIC_REFERENCE_NAVIGATION_IA_AUDIT_V1.md",
+        "PUBLIC_NAVIGATION_IA_STANDARD_V1.md",
+        "data/public-reference-navigation-ia-consolidation-v1.json",
+        "index.html",
+        "validators/validate_public_reference_navigation_ia_consolidation_v1.py",
+        "SPRINT_94_PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0627",
+        "SOURCE-0628",
+        "SOURCE-0629",
+        "SOURCE-0630",
+        "SOURCE-0631",
+        "SOURCE-0632",
+        "SOURCE-0633"
+      ],
+      "support_scope": "public reference navigation ia consolidation v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Navigation IA Consolidation v1 per DEC-112."
     }
   ],
   "last_reviewed": "2026-06-26"

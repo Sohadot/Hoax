@@ -7949,6 +7949,76 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 93 validator."
+    },
+    {
+      "source_id": "SOURCE-0627",
+      "source_title": "PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 94 navigation IA statement."
+    },
+    {
+      "source_id": "SOURCE-0628",
+      "source_title": "PUBLIC_REFERENCE_NAVIGATION_IA_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_NAVIGATION_IA_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 94 navigation IA audit."
+    },
+    {
+      "source_id": "SOURCE-0629",
+      "source_title": "PUBLIC_NAVIGATION_IA_STANDARD_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_NAVIGATION_IA_STANDARD_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 94 navigation IA standard."
+    },
+    {
+      "source_id": "SOURCE-0630",
+      "source_title": "data/public-reference-navigation-ia-consolidation-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-navigation-ia-consolidation-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 94 navigation IA JSON."
+    },
+    {
+      "source_id": "SOURCE-0631",
+      "source_title": "data/public-reference-navigation-ia-consolidation-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-navigation-ia-consolidation-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 94 navigation IA schema."
+    },
+    {
+      "source_id": "SOURCE-0632",
+      "source_title": "SPRINT_94_PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_94_PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 94 record."
+    },
+    {
+      "source_id": "SOURCE-0633",
+      "source_title": "validators/validate_public_reference_navigation_ia_consolidation_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_reference_navigation_ia_consolidation_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 94 validator."
     }
   ]
 }

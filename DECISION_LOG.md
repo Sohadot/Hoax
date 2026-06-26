@@ -2910,3 +2910,27 @@ After Sprint 92 expanded the deep reference layer, Hoax.ai needed pathway pages 
 - Pathway pages are authorized as static, non-verdict reference routes.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-112 — Public Reference Navigation and IA Consolidation v1 Adopted
+
+**Date:** 2026-06-26
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Navigation and IA Consolidation v1 by improving the visible information architecture across the existing public reference surface. The sprint adds homepage route-group navigation, page role labels, Hoax.ai System Navigation blocks, IA Capsules, pathway entry points, and more contextual where-to-go-next guidance without creating new public routes, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 93 added pathway pages, Hoax.ai needed visible navigation and information architecture consolidation so the growing 41-route public surface reads as a coherent evidence-risk reference system rather than disconnected clusters. This decision governs visible production navigation changes, not abstract preparatory governance.
+
+### Implications
+
+- Existing public pages may receive navigation and IA improvements.
+- No new public route is authorized.
+- Sitemap remains 41 URLs.
+- Route registry remains 41 entries.
+- Page role labels, system navigation blocks, IA Capsules, homepage route-group navigation, and pathway entry links are authorized.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+

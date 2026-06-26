@@ -2473,11 +2473,36 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
-**Sprint 93 — Public Reference Pathway Pages v1**
+**Sprint 94 — Public Reference Navigation and IA Consolidation v1**
 
 ---
 
-## Sprint 93 — Public Reference Pathway Pages v1
+## Sprint 94 — Public Reference Navigation and IA Consolidation v1
+
+**Status:** COMPLETE — 2026-06-26
+**Goal:** Consolidate visible navigation and IA across the 41-route public surface without new routes or tool behavior.
+
+### Deliverables
+
+- Homepage Navigate Hoax.ai by Evidence-Risk Layer with five route groups
+- Page role labels, system navigation, IA Capsules on 22 pages
+- Pathway entry points and Where to go next refinements
+- PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_V1.md, PUBLIC_NAVIGATION_IA_STANDARD_V1.md, audit, JSON/schema, validator
+- Sitemap 41 URLs unchanged; route registry 41 entries unchanged
+- DEC-112, PUB-GATE-0088
+- Publisher status -> blocked_until_public_reference_navigation_ia_consolidation_validation
+
+### Gate
+
+**Gate G94 passed.** Sprint 95 — Public Reference Surface Authority Review v1 is next.
+
+### Next Phase
+
+**Sprint 95 — Public Reference Surface Authority Review v1**
+
+---
+
+**Sprint 93 — Public Reference Pathway Pages v1**
 
 **Status:** COMPLETE — 2026-06-26
 **Goal:** Add six public evidence-risk pathway routes that guide humans and AI agents by condition without tool, verdict, or detector behavior.
