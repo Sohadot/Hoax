@@ -8159,6 +8159,76 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 96 validator."
+    },
+    {
+      "source_id": "SOURCE-0648",
+      "source_title": "PUBLIC_REFERENCE_STRATEGIC_NARRATIVE_SURFACE_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_STRATEGIC_NARRATIVE_SURFACE_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 97 narrative statement."
+    },
+    {
+      "source_id": "SOURCE-0649",
+      "source_title": "PUBLIC_REFERENCE_STRATEGIC_NARRATIVE_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_STRATEGIC_NARRATIVE_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 97 audit."
+    },
+    {
+      "source_id": "SOURCE-0650",
+      "source_title": "PUBLIC_STRATEGIC_NARRATIVE_STANDARD_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_STRATEGIC_NARRATIVE_STANDARD_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 97 standard."
+    },
+    {
+      "source_id": "SOURCE-0651",
+      "source_title": "data/public-reference-strategic-narrative-surface-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-strategic-narrative-surface-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 97 JSON."
+    },
+    {
+      "source_id": "SOURCE-0652",
+      "source_title": "data/public-reference-strategic-narrative-surface-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-strategic-narrative-surface-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 97 schema."
+    },
+    {
+      "source_id": "SOURCE-0653",
+      "source_title": "SPRINT_97_PUBLIC_REFERENCE_STRATEGIC_NARRATIVE_SURFACE_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_97_PUBLIC_REFERENCE_STRATEGIC_NARRATIVE_SURFACE_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 97 record."
+    },
+    {
+      "source_id": "SOURCE-0654",
+      "source_title": "validators/validate_public_reference_strategic_narrative_surface_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_reference_strategic_narrative_surface_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 97 validator."
     }
   ]
 }

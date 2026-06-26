@@ -699,6 +699,7 @@ def validate_governance() -> bool:
         "blocked_until_public_reference_navigation_ia_consolidation_validation",
         "blocked_until_public_reference_surface_authority_review_validation",
         "blocked_until_public_reference_strategic_entry_points_validation",
+        "blocked_until_public_reference_strategic_narrative_surface_validation",
     ):
         error("publisher status must be blocked until public route candidate assessment governance validation")
         ok = False

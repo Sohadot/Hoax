@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (  # noqa: E402
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_NARRATIVE_SURFACE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_VALIDATION,
     validate_public_surface,
 )
@@ -260,12 +261,12 @@ def validate_artifacts() -> bool:
 
 def validate_counts() -> bool:
     ok = True
-    if (ROOT / "sitemap.xml").read_text(encoding="utf-8").count("<loc>") != EXPECTED:
-        error(f"sitemap must have exactly {EXPECTED} URLs")
+    if (ROOT / "sitemap.xml").read_text(encoding="utf-8").count("<loc>") != PUBLIC_SITEMAP_URL_COUNT:
+        error(f"sitemap must have exactly {PUBLIC_SITEMAP_URL_COUNT} URLs")
         ok = False
     routes = load_json("data/route-registry.json").get("routes", [])
-    if len(routes) != EXPECTED:
-        error(f"route registry must have exactly {EXPECTED} entries")
+    if len(routes) != PUBLIC_SITEMAP_URL_COUNT:
+        error(f"route registry must have exactly {PUBLIC_SITEMAP_URL_COUNT} entries")
         ok = False
     if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
         ok = False
@@ -376,9 +377,9 @@ def validate_governance() -> bool:
         ok = False
     policy = load_json("data/publisher-governance-policy.json")
     if policy.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_NARRATIVE_SURFACE_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_ENTRY_POINTS_VALIDATION,
     ):
         error("publisher status must reflect Sprint 96 strategic entry points validation")
         ok = False

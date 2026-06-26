@@ -604,6 +604,66 @@
       "allowed_dependencies": ["../../styles.css"],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Education and literacy entry point per DEC-114."
+    },
+    {
+      "file_id": "PUB-FILE-0048",
+      "path": "narrative/index.html",
+      "file_type": "html",
+      "public_role": "strategic_narrative_hub",
+      "route_id_if_applicable": "ROUTE-0048",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Strategic narrative hub per DEC-115."
+    },
+    {
+      "file_id": "PUB-FILE-0049",
+      "path": "narrative/evidence-before-verdict/index.html",
+      "file_type": "html",
+      "public_role": "strategic_narrative",
+      "route_id_if_applicable": "ROUTE-0049",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Evidence before verdict narrative per DEC-115."
+    },
+    {
+      "file_id": "PUB-FILE-0050",
+      "path": "narrative/why-evidence-risk/index.html",
+      "file_type": "html",
+      "public_role": "strategic_narrative",
+      "route_id_if_applicable": "ROUTE-0050",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Why evidence risk matters narrative per DEC-115."
+    },
+    {
+      "file_id": "PUB-FILE-0051",
+      "path": "narrative/reference-before-detection/index.html",
+      "file_type": "html",
+      "public_role": "strategic_narrative",
+      "route_id_if_applicable": "ROUTE-0051",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Reference before detection narrative per DEC-115."
+    },
+    {
+      "file_id": "PUB-FILE-0052",
+      "path": "narrative/non-verdict-trust/index.html",
+      "file_type": "html",
+      "public_role": "strategic_narrative",
+      "route_id_if_applicable": "ROUTE-0052",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Non-verdict trust narrative per DEC-115."
     }
   ],
   "last_reviewed": "2026-06-26"

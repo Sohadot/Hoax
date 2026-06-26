@@ -2982,3 +2982,27 @@ After Sprint 95 strengthened the full public reference surface, Hoax.ai needed s
 - Strategic entry-point pages are authorized as static, non-verdict reference routes.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-115 — Public Reference Strategic Narrative Surface v1 Adopted
+
+**Date:** 2026-06-26
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Strategic Narrative Surface v1 by adding five public narrative routes: Hoax.ai Strategic Narrative, Evidence Before Verdict, Why Evidence Risk Matters, Reference Before Detection, and Non-Verdict Trust. These pages explain Hoax.ai's category thesis, contextual frame, and reference-first logic without creating upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 96 added strategic entry points, Hoax.ai needed a public narrative surface that explains why the evidence-risk category exists and why reference-first, non-verdict infrastructure is the correct public foundation. This decision governs visible public pages, not abstract preparatory governance. The narrative surface strengthens conceptual story, contextual authority, human usability, AI retrieval, and strategic asset value.
+
+### Implications
+
+- Five public strategic narrative routes are authorized.
+- Sitemap may increase from 47 to 52 URLs.
+- Route registry may increase from 47 to 52 entries.
+- New route registry entries ROUTE-0048 through ROUTE-0052 are authorized.
+- Strategic narrative pages are authorized as static, non-verdict reference routes.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+

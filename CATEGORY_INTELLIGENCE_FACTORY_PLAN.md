@@ -222,6 +222,8 @@ The Category Intelligence Factory now includes public reference pathway pages. P
 
 The Category Intelligence Factory now includes strategic public entry points. Public Reference Strategic Entry Points v1 helps humans and AI agents enter Hoax.ai by role and intent: human readers, AI agents, research/review contexts, trust and safety teams, and education/literacy contexts. These entry points route visitors into utilities, reference concepts, pathways, and boundary pages without creating verdicts, detector behavior, scoring, upload behavior, or automated reports.
 
+The Category Intelligence Factory now includes a public strategic narrative surface. Public Reference Strategic Narrative Surface v1 explains Hoax.ai's category thesis, contextual frame, evidence-before-verdict logic, reference-before-detection discipline, and non-verdict trust architecture for humans and AI agents without creating verdicts, detector behavior, scoring, upload behavior, or automated reports.
+
 The Category Intelligence Factory now includes public surface authority review. Public Reference Surface Authority Review v1 strengthens the full 41-route Hoax.ai public surface by improving page role clarity, system placement, internal authority links, citation safety, AI readability, and boundary language through visible repairs rather than abstract governance.
 
 The Category Intelligence Factory now includes public navigation and information architecture consolidation. Public Reference Navigation and IA Consolidation v1 makes Hoax.ai's utilities, core concepts, deep concepts, pathways, and boundary references easier for humans to navigate and easier for AI agents to parse as a coherent evidence-risk reference system.

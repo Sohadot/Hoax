@@ -103,6 +103,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_public_reference_navigation_ia_consolidation_v1.py",
     ROOT / "validators" / "validate_public_reference_surface_authority_review_v1.py",
     ROOT / "validators" / "validate_public_reference_strategic_entry_points_v1.py",
+    ROOT / "validators" / "validate_public_reference_strategic_narrative_surface_v1.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

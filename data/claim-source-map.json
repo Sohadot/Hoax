@@ -2332,6 +2332,34 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Strategic Entry Points v1 per DEC-114."
+    },
+    {
+      "claim_id": "CLAIM-0098",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_STRATEGIC_NARRATIVE_SURFACE_V1.md",
+        "PUBLIC_REFERENCE_STRATEGIC_NARRATIVE_AUDIT_V1.md",
+        "PUBLIC_STRATEGIC_NARRATIVE_STANDARD_V1.md",
+        "data/public-reference-strategic-narrative-surface-v1.json",
+        "narrative/index.html",
+        "validators/validate_public_reference_strategic_narrative_surface_v1.py",
+        "SPRINT_97_PUBLIC_REFERENCE_STRATEGIC_NARRATIVE_SURFACE_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0648",
+        "SOURCE-0649",
+        "SOURCE-0650",
+        "SOURCE-0651",
+        "SOURCE-0652",
+        "SOURCE-0653",
+        "SOURCE-0654"
+      ],
+      "support_scope": "public reference strategic narrative surface v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Strategic Narrative Surface v1 per DEC-115."
     }
   ],
   "last_reviewed": "2026-06-26"
