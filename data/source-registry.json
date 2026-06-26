@@ -8019,6 +8019,76 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 94 validator."
+    },
+    {
+      "source_id": "SOURCE-0634",
+      "source_title": "PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 95 authority review statement."
+    },
+    {
+      "source_id": "SOURCE-0635",
+      "source_title": "PUBLIC_REFERENCE_SURFACE_AUTHORITY_REPAIR_LOG_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_SURFACE_AUTHORITY_REPAIR_LOG_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 95 repair log."
+    },
+    {
+      "source_id": "SOURCE-0636",
+      "source_title": "PUBLIC_REFERENCE_SURFACE_AUTHORITY_STANDARD_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_SURFACE_AUTHORITY_STANDARD_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 95 authority standard."
+    },
+    {
+      "source_id": "SOURCE-0637",
+      "source_title": "data/public-reference-surface-authority-review-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-surface-authority-review-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 95 authority review JSON."
+    },
+    {
+      "source_id": "SOURCE-0638",
+      "source_title": "data/public-reference-surface-authority-review-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-surface-authority-review-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 95 authority review schema."
+    },
+    {
+      "source_id": "SOURCE-0639",
+      "source_title": "SPRINT_95_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_95_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 95 completion record."
+    },
+    {
+      "source_id": "SOURCE-0640",
+      "source_title": "validators/validate_public_reference_surface_authority_review_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_reference_surface_authority_review_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 95 validator."
     }
   ]
 }

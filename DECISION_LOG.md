@@ -2934,3 +2934,27 @@ After Sprint 93 added pathway pages, Hoax.ai needed visible navigation and infor
 - Page role labels, system navigation blocks, IA Capsules, homepage route-group navigation, and pathway entry links are authorized.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-113 — Public Reference Surface Authority Review v1 Adopted
+
+**Date:** 2026-06-26
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Surface Authority Review v1 by inspecting the full 41-route public surface and applying visible authority repairs to existing public pages, especially legacy, boundary, standard, governance, protocol, ontology, registry, and reference-support pages where needed. The sprint strengthens page role clarity, system placement, internal authority links, citation safety, AI readability, and boundary language without creating new public routes, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 94 consolidated navigation and information architecture across the main public utility, reference, depth, and pathway layers, Hoax.ai needed a surface authority review to ensure the remaining public-support pages also read as part of one coherent evidence-risk reference system. This decision governs visible repairs made to existing production pages, not abstract preparatory governance.
+
+### Implications
+
+- Existing public pages may receive authority repairs.
+- No new public route is authorized.
+- Sitemap remains 41 URLs.
+- Route registry remains 41 entries.
+- Page role labels, system placement notes, internal authority links, citation-safe wording, and AI-readable role language are authorized as visible repairs.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+

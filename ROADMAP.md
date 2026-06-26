@@ -2477,6 +2477,30 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+## Sprint 95 — Public Reference Surface Authority Review v1
+
+**Status:** COMPLETE — 2026-06-26
+**Goal:** Strengthen authority of the full 41-route public surface through visible repairs on legacy and support pages without new routes or tool behavior.
+
+### Deliverables
+
+- Eighteen legacy/support pages: page role labels, How this page fits Hoax.ai, System Navigation, authority links
+- Citation-safe wording repairs on boundary and standard pages
+- PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_V1.md, repair log, standard, JSON/schema, validator
+- Sitemap 41 URLs unchanged; route registry 41 entries unchanged
+- DEC-113, PUB-GATE-0089, CLAIM-0096
+- Publisher status -> blocked_until_public_reference_surface_authority_review_validation
+
+### Gate
+
+**Gate G95 passed.** Sprint 96 — Public Reference Strategic Entry Points v1 is next.
+
+### Next Phase
+
+**Sprint 96 — Public Reference Strategic Entry Points v1**
+
+---
+
 ## Sprint 94 — Public Reference Navigation and IA Consolidation v1
 
 **Status:** COMPLETE — 2026-06-26

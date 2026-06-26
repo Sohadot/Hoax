@@ -2277,6 +2277,33 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Navigation IA Consolidation v1 per DEC-112."
+    },
+    {
+      "claim_id": "CLAIM-0096",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_V1.md",
+        "PUBLIC_REFERENCE_SURFACE_AUTHORITY_REPAIR_LOG_V1.md",
+        "PUBLIC_REFERENCE_SURFACE_AUTHORITY_STANDARD_V1.md",
+        "data/public-reference-surface-authority-review-v1.json",
+        "validators/validate_public_reference_surface_authority_review_v1.py",
+        "SPRINT_95_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0634",
+        "SOURCE-0635",
+        "SOURCE-0636",
+        "SOURCE-0637",
+        "SOURCE-0638",
+        "SOURCE-0639",
+        "SOURCE-0640"
+      ],
+      "support_scope": "public reference surface authority review v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Surface Authority Review v1 per DEC-113."
     }
   ],
   "last_reviewed": "2026-06-26"

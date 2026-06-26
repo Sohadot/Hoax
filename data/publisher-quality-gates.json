@@ -1356,6 +1356,24 @@
       "failure_condition": "public_reference_navigation_ia_consolidation_v1_not_met",
       "bypassable": false,
       "notes": "Public Reference Navigation IA Consolidation v1 completed Sprint 94 (DEC-112). IA improvements across 41-route surface. No new routes. Not chatbot, generator, or verdict system."
+    },
+    {
+      "gate_id": "PUB-GATE-0089",
+      "name": "Public Reference Surface Authority Review v1 Gate",
+      "status": "public_reference_surface_authority_review_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_95_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_V1.md",
+      "failure_condition": "public_reference_surface_authority_review_v1_not_met",
+      "bypassable": false,
+      "notes": "Public Reference Surface Authority Review v1 completed Sprint 95 (DEC-113). Authority repairs on legacy/support pages across 41-route surface. No new routes. Not chatbot, generator, or verdict system."
     }
   ],
   "last_reviewed": "2026-06-26"

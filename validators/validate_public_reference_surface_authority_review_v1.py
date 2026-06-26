@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Sprint 94 — Public Reference Navigation and IA Consolidation v1."""
+"""Validate Sprint 95 — Public Reference Surface Authority Review v1."""
 
 from __future__ import annotations
 
@@ -12,19 +12,19 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 from public_surface_checks import (  # noqa: E402
+    ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PATHWAY_PAGES_VALIDATION,
     validate_public_surface,
 )
 
-IA_DOC = "PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_V1.md"
-AUDIT_DOC = "PUBLIC_REFERENCE_NAVIGATION_IA_AUDIT_V1.md"
-STANDARD_DOC = "PUBLIC_NAVIGATION_IA_STANDARD_V1.md"
-IA_JSON = "data/public-reference-navigation-ia-consolidation-v1.json"
-IA_SCHEMA = "data/public-reference-navigation-ia-consolidation-v1.schema.json"
-SPRINT_DOC = "SPRINT_94_PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_V1.md"
+REVIEW_DOC = "PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_V1.md"
+REPAIR_LOG = "PUBLIC_REFERENCE_SURFACE_AUTHORITY_REPAIR_LOG_V1.md"
+STANDARD_DOC = "PUBLIC_REFERENCE_SURFACE_AUTHORITY_STANDARD_V1.md"
+REVIEW_JSON = "data/public-reference-surface-authority-review-v1.json"
+REVIEW_SCHEMA = "data/public-reference-surface-authority-review-v1.schema.json"
+SPRINT_DOC = "SPRINT_95_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_V1.md"
 INDEX = "index.html"
 EXPECTED = 41
 
@@ -64,36 +64,49 @@ PATHWAY_PAGES = [
 
 ALL_22 = UTILITY_PAGES + CORE_PAGES + DEEP_PAGES + PATHWAY_PAGES
 
-PATHWAY_LINKS = {
-    "source-ambiguity/index.html": "/pathways/source-unclear/",
-    "provenance-risk/index.html": "/pathways/provenance-weak/",
-    "context-collapse/index.html": "/pathways/context-missing/",
-    "interpretation-risk/index.html": "/pathways/context-missing/",
-    "claim-drift/index.html": "/pathways/claim-overextended/",
-    "artifact-claim-gap/index.html": "/pathways/claim-overextended/",
-    "traceability-gap/index.html": "/pathways/traceability-incomplete/",
-    "not-assessable-posture/index.html": "/pathways/posture-not-assessable/",
-}
-
-UTILITY_ROUTES = [f"/{p.replace('/index.html', '')}/" for p in UTILITY_PAGES]
-CORE_ROUTES = [f"/{p.replace('/index.html', '')}/" for p in CORE_PAGES]
-DEEP_ROUTES = [f"/{p.replace('/index.html', '')}/" for p in DEEP_PAGES]
-PATHWAY_ROUTES = [
-    "/pathways/source-unclear/",
-    "/pathways/provenance-weak/",
-    "/pathways/context-missing/",
-    "/pathways/claim-overextended/",
-    "/pathways/traceability-incomplete/",
-    "/pathways/posture-not-assessable/",
+LEGACY_SUPPORT_PAGES = [
+    "language/index.html",
+    "reference/evidence-posture/index.html",
+    "reference/artifact-subject-separation/index.html",
+    "reference/source-confidence/index.html",
+    "reference/provenance-gap/index.html",
+    "reference/not-assessable/index.html",
+    "reference/output-boundary/index.html",
+    "reference/synthetic-fragility/index.html",
+    "reference/evidence-chain/index.html",
+    "reference/context-collapse/index.html",
+    "reference/claim-source-traceability/index.html",
+    "reference/attribution-boundary/index.html",
+    "reference/claim-drift/index.html",
+    "reference/evidence-limitation/index.html",
+    "reference/interpretation-risk/index.html",
+    "standard/evidence-posture/index.html",
+    "protocol/evidence-posture/index.html",
+    "interface/evidence-field/index.html",
 ]
 
-ROUTE_GROUPS = [
-    "Public Utilities",
-    "Core Reference Concepts",
-    "Deep Reference Concepts",
-    "Evidence-Risk Pathways",
-    "Boundary and Standard References",
-]
+PUBLIC_LINK_PREFIXES = (
+    "/manual-evidence-checklist/",
+    "/evidence-posture-map/",
+    "/synthetic-examples/",
+    "/evidence-risk-questions/",
+    "/evidence-risk/",
+    "/provenance-risk/",
+    "/context-collapse/",
+    "/claim-drift/",
+    "/traceability-gap/",
+    "/why-hoax-ai-is-not-a-detector/",
+    "/source-ambiguity/",
+    "/artifact-claim-gap/",
+    "/boundary-integrity/",
+    "/evidence-weight/",
+    "/interpretation-risk/",
+    "/not-assessable-posture/",
+    "/pathways/",
+    "/standard/",
+    "/protocol/",
+    "/reference/",
+)
 
 FORBIDDEN_CLAIMS = [
     "real or fake",
@@ -120,14 +133,21 @@ NEGATION_PATTERN = re.compile(
     re.IGNORECASE,
 )
 
+EXTERNAL_OPS_TERMS = [
+    "github pages enablement",
+    "cloudflare dns",
+    "deploy to production",
+    "custom domain launch",
+]
+
 SOURCE_LOCS = [
-    IA_DOC,
-    AUDIT_DOC,
+    REVIEW_DOC,
+    REPAIR_LOG,
     STANDARD_DOC,
-    IA_JSON,
-    IA_SCHEMA,
+    REVIEW_JSON,
+    REVIEW_SCHEMA,
     SPRINT_DOC,
-    "validators/validate_public_reference_navigation_ia_consolidation_v1.py",
+    "validators/validate_public_reference_surface_authority_review_v1.py",
 ]
 
 
@@ -157,20 +177,45 @@ def line_has_unnegated_claim(line: str, claim: str) -> bool:
 
 def validate_artifacts() -> bool:
     ok = True
-    for rel in [IA_DOC, AUDIT_DOC, STANDARD_DOC, IA_JSON, IA_SCHEMA, SPRINT_DOC]:
+    for rel in [REVIEW_DOC, REPAIR_LOG, STANDARD_DOC, REVIEW_JSON, REVIEW_SCHEMA, SPRINT_DOC]:
         if not (ROOT / rel).is_file():
             error(f"missing {rel}")
             ok = False
-    data = load_json(IA_JSON)
-    if data.get("decision_ref") != "DEC-112":
-        error("decision_ref must be DEC-112")
+    data = load_json(REVIEW_JSON)
+    if data.get("decision_ref") != "DEC-113":
+        error("decision_ref must be DEC-113")
         ok = False
     if data.get("new_public_routes_added") is not False:
         error("new_public_routes_added must be false")
         ok = False
-    if sorted(data.get("route_groups", [])) != sorted(ROUTE_GROUPS):
-        error("route_groups must list exactly five IA groups")
+    if not data.get("visible_repairs_made"):
+        error("visible_repairs_made must be true")
         ok = False
+    if data.get("total_repairs_made", 0) <= 0:
+        error("total_repairs_made must be greater than 0")
+        ok = False
+    for flag in (
+        "upload_authorized",
+        "scoring_authorized",
+        "verdict_authorized",
+        "detector_claim_authorized",
+        "public_api_authorized",
+        "automated_report_authorized",
+        "javascript_authorized",
+        "forms_authorized",
+        "real_world_case_evaluation_authorized",
+        "chatbot_authorized",
+        "generator_authorized",
+    ):
+        if data.get(flag) is not False:
+            error(f"{flag} must be false")
+            ok = False
+    for rel in [REVIEW_DOC, REPAIR_LOG, STANDARD_DOC, REVIEW_JSON, SPRINT_DOC]:
+        text = (ROOT / rel).read_text(encoding="utf-8").lower()
+        for term in EXTERNAL_OPS_TERMS:
+            if term in text:
+                error(f"{rel}: external operations content {term!r}")
+                ok = False
     return ok
 
 
@@ -188,6 +233,26 @@ def validate_counts() -> bool:
     return ok
 
 
+def validate_html_meta(rel: str) -> bool:
+    ok = True
+    content = (ROOT / rel).read_text(encoding="utf-8")
+    lower = content.lower()
+    h1s = len(re.findall(r"<h1\b", content, re.I))
+    if h1s != 1:
+        error(f"{rel}: expected exactly one H1, found {h1s}")
+        ok = False
+    if 'rel="canonical"' not in lower:
+        error(f"{rel}: missing canonical URL")
+        ok = False
+    if 'name="description"' not in lower:
+        error(f"{rel}: missing meta description")
+        ok = False
+    if 'property="og:title"' not in lower or 'property="og:description"' not in lower:
+        error(f"{rel}: missing Open Graph title/description")
+        ok = False
+    return ok
+
+
 def validate_homepage() -> bool:
     ok = True
     content = (ROOT / INDEX).read_text(encoding="utf-8")
@@ -195,21 +260,13 @@ def validate_homepage() -> bool:
     if "navigate hoax.ai by evidence-risk layer" not in lower:
         error("homepage missing Navigate Hoax.ai by Evidence-Risk Layer section")
         ok = False
-    for group in ROUTE_GROUPS:
-        if group.lower() not in lower:
-            error(f"homepage missing route group {group!r}")
-            ok = False
     if "hoax.ai system navigation" not in lower:
         error("homepage missing Hoax.ai System Navigation")
         ok = False
-    for route in UTILITY_ROUTES + CORE_ROUTES + DEEP_ROUTES + PATHWAY_ROUTES:
-        if route not in content:
-            error(f"homepage missing link to {route}")
-            ok = False
     return ok
 
 
-def validate_page(rel: str) -> bool:
+def validate_consolidated_page(rel: str) -> bool:
     ok = True
     content = (ROOT / rel).read_text(encoding="utf-8")
     lower = content.lower()
@@ -222,28 +279,31 @@ def validate_page(rel: str) -> bool:
     if "ia capsule" not in lower:
         error(f"{rel}: missing IA Capsule")
         ok = False
-    if "where to go next" not in lower:
-        error(f"{rel}: missing Where to go next refinement")
+    return ok
+
+
+def validate_legacy_page(rel: str) -> bool:
+    ok = True
+    content = (ROOT / rel).read_text(encoding="utf-8")
+    lower = content.lower()
+    has_role = "page role:" in lower
+    has_fit = "how this page fits hoax.ai" in lower
+    if not has_role and not has_fit:
+        error(f"{rel}: missing page role label or How this page fits Hoax.ai")
         ok = False
-    util_count = sum(1 for u in UTILITY_ROUTES if u in content)
-    if util_count < 3 and rel in PATHWAY_PAGES:
-        error(f"{rel}: must link to at least 3 utility routes")
+    if not any(prefix in content for prefix in PUBLIC_LINK_PREFIXES):
+        error(f"{rel}: must link to at least one public utility or reference route")
         ok = False
-    ref_routes = CORE_ROUTES + DEEP_ROUTES + ["/reference/evidence-posture/", "/why-hoax-ai-is-not-a-detector/"]
-    ref_count = sum(1 for r in ref_routes if r in content)
-    if ref_count < 5 and rel in PATHWAY_PAGES:
-        error(f"{rel}: must link to at least 5 reference routes")
+    if "hoax.ai system navigation" not in lower:
+        error(f"{rel}: missing Hoax.ai System Navigation")
         ok = False
-    if rel in PATHWAY_PAGES:
-        page_path = "/" + rel.replace("index.html", "")
-        siblings = [r for r in PATHWAY_ROUTES if r != page_path]
-        sib_count = sum(1 for s in siblings if s in content)
-        if sib_count < 2:
-            error(f"{rel}: must link to at least 2 sibling pathway routes")
-            ok = False
-    if rel in PATHWAY_LINKS and PATHWAY_LINKS[rel] not in content:
-        error(f"{rel}: missing pathway link {PATHWAY_LINKS[rel]}")
-        ok = False
+    return ok
+
+
+def validate_surface_behavior(rel: str) -> bool:
+    ok = True
+    content = (ROOT / rel).read_text(encoding="utf-8")
+    lower = content.lower()
     if "<form" in lower or "<input" in lower:
         error(f"{rel}: forms/inputs forbidden")
         ok = False
@@ -261,35 +321,35 @@ def validate_page(rel: str) -> bool:
 
 def validate_governance() -> bool:
     ok = True
-    if "DEC-112" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
-        error("DEC-112 missing")
+    if "DEC-113" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
+        error("DEC-113 missing")
         ok = False
-    if "validate_public_reference_navigation_ia_consolidation_v1.py" not in (
+    if "validate_public_reference_surface_authority_review_v1.py" not in (
         ROOT / "validators/validate_all.py"
     ).read_text(encoding="utf-8"):
-        error("validate_all.py must include Sprint 94 validator")
+        error("validate_all.py must include Sprint 95 validator")
         ok = False
     policy = load_json("data/publisher-governance-policy.json")
     if policy.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PATHWAY_PAGES_VALIDATION,
     ):
-        error("publisher status must reflect Sprint 94 navigation IA consolidation validation")
+        error("publisher status must reflect Sprint 95 authority review validation")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}
     for loc in SOURCE_LOCS:
         if loc not in locs:
             error(f"source registry missing {loc}")
             ok = False
-    if not any(c.get("claim_id") == "CLAIM-0095" for c in load_json("data/evidence-ledger.json").get("claims", [])):
-        error("CLAIM-0095 missing")
+    if not any(c.get("claim_id") == "CLAIM-0096" for c in load_json("data/evidence-ledger.json").get("claims", [])):
+        error("CLAIM-0096 missing")
         ok = False
-    if not any(g.get("gate_id") == "PUB-GATE-0088" for g in load_json("data/publisher-quality-gates.json").get("gates", [])):
-        error("PUB-GATE-0088 missing")
+    if not any(g.get("gate_id") == "PUB-GATE-0089" for g in load_json("data/publisher-quality-gates.json").get("gates", [])):
+        error("PUB-GATE-0089 missing")
         ok = False
-    if "Sprint 94 | COMPLETE | G94 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
-        error("master execution plan missing Sprint 94 row")
+    if "Sprint 95 | COMPLETE | G95 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
+        error("master execution plan missing Sprint 95 row")
         ok = False
     if (ROOT / ".nojekyll").exists():
         error(".nojekyll must not exist")
@@ -318,8 +378,16 @@ def main() -> int:
         ok = False
     if not validate_homepage():
         ok = False
+    for rel in sorted(ALLOWED_PUBLIC_HTML):
+        if not validate_html_meta(rel):
+            ok = False
+        if not validate_surface_behavior(rel):
+            ok = False
     for rel in ALL_22:
-        if not validate_page(rel):
+        if not validate_consolidated_page(rel):
+            ok = False
+    for rel in LEGACY_SUPPORT_PAGES:
+        if not validate_legacy_page(rel):
             ok = False
     if not validate_governance():
         ok = False

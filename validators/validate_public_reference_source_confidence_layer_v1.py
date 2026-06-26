@@ -21,6 +21,7 @@ from public_surface_checks import (  # noqa: E402
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_DEPTH_EXPANSION_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PATHWAY_PAGES_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_IA_CONSOLIDATION_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_VALIDATION,
     validate_public_surface,
 )
 
@@ -235,6 +236,7 @@ def validate_governance() -> bool:
         "blocked_until_public_reference_depth_expansion_validation",
         "blocked_until_public_reference_pathway_pages_validation",
         "blocked_until_public_reference_navigation_ia_consolidation_validation",
+        "blocked_until_public_reference_surface_authority_review_validation",
     ):
         error("publisher status must reflect Sprint 88 source confidence layer validation")
         ok = False

@@ -1047,6 +1047,17 @@
       "status": "active",
       "last_reviewed": "2026-06-26",
       "notes": "Sprint 94 navigation IA consolidation. Sitemap forty-one URLs unchanged."
+    },
+    {
+      "claim_id": "CLAIM-0096",
+      "claim_text": "Hoax.ai has adopted Public Reference Surface Authority Review v1, strengthening page role clarity, system placement, internal authority links, citation safety, AI readability, and boundary language across the 41-route public surface without new routes, chatbots, generators, or verdict behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_V1.md, PUBLIC_REFERENCE_SURFACE_AUTHORITY_STANDARD_V1.md, data/public-reference-surface-authority-review-v1.json, validators/validate_public_reference_surface_authority_review_v1.py, SPRINT_95_PUBLIC_REFERENCE_SURFACE_AUTHORITY_REVIEW_V1.md, DECISION_LOG.md (DEC-113)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-26",
+      "notes": "Sprint 95 surface authority review. Sitemap forty-one URLs unchanged."
     }
   ]
 }
