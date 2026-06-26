@@ -3006,3 +3006,28 @@ After Sprint 96 added strategic entry points, Hoax.ai needed a public narrative 
 - Strategic narrative pages are authorized as static, non-verdict reference routes.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-116 — Public Reference Acquisition Readiness Surface v1 Adopted
+
+**Date:** 2026-06-26
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Acquisition Readiness Surface v1 by adding six public readiness routes: Hoax.ai Acquisition Readiness, Category Asset Readiness, Public Reference Surface Readiness, Governance Traceability Readiness, AI Retrieval Readiness, and Non-Detector Moat. These pages make the asset more inspectable for strategic review without creating pricing statements, transaction pages, acquisition term documents, representative mandates, legal or financial representations, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 97 created the strategic narrative surface, Hoax.ai needed a public readiness layer that lets serious reviewers understand the asset as a category-grade evidence-risk reference system. This decision governs visible public pages, not abstract preparatory governance. The readiness surface strengthens strategic clarity, reviewability, AI retrieval, and acquisition preparedness while remaining non-transactional.
+
+### Implications
+
+- Six public acquisition-readiness routes are authorized.
+- Sitemap may increase from 52 to 58 URLs.
+- Route registry may increase from 52 to 58 entries.
+- New route registry entries ROUTE-0053 through ROUTE-0058 are authorized.
+- Acquisition-readiness pages are authorized as static, non-transactional reference routes.
+- Pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+

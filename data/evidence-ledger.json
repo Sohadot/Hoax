@@ -1080,6 +1080,17 @@
       "status": "active",
       "last_reviewed": "2026-06-26",
       "notes": "Sprint 97 strategic narrative surface. Sitemap fifty-two URLs."
+    },
+    {
+      "claim_id": "CLAIM-0099",
+      "claim_text": "Hoax.ai has adopted Public Reference Acquisition Readiness Surface v1, adding six acquisition-readiness routes that make the asset inspectable for strategic review without pricing statements, transaction pages, representative mandates, chatbots, generators, verdicts, or detector behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_ACQUISITION_READINESS_SURFACE_V1.md, PUBLIC_ACQUISITION_READINESS_STANDARD_V1.md, data/public-reference-acquisition-readiness-surface-v1.json, acquisition-readiness/index.html, validators/validate_public_reference_acquisition_readiness_surface_v1.py, SPRINT_98_PUBLIC_REFERENCE_ACQUISITION_READINESS_SURFACE_V1.md, DECISION_LOG.md (DEC-116)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-26",
+      "notes": "Sprint 98 acquisition readiness surface. Sitemap fifty-eight URLs."
     }
   ]
 }

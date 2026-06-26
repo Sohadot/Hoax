@@ -1410,6 +1410,24 @@
       "failure_condition": "public_reference_strategic_narrative_surface_v1_not_met",
       "bypassable": false,
       "notes": "Public Reference Strategic Narrative Surface v1 completed Sprint 97 (DEC-115). Five narrative routes. Sitemap fifty-two URLs. Not chatbot, generator, or verdict system."
+    },
+    {
+      "gate_id": "PUB-GATE-0092",
+      "name": "Public Reference Acquisition Readiness Surface v1 Gate",
+      "status": "public_reference_acquisition_readiness_surface_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_98_PUBLIC_REFERENCE_ACQUISITION_READINESS_SURFACE_V1.md",
+      "failure_condition": "public_reference_acquisition_readiness_surface_v1_not_met",
+      "bypassable": false,
+      "notes": "Public Reference Acquisition Readiness Surface v1 completed Sprint 98 (DEC-116). Six readiness routes. Sitemap fifty-eight URLs. Non-transactional. Not chatbot, generator, or verdict system."
     }
   ],
   "last_reviewed": "2026-06-26"

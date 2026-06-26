@@ -2360,6 +2360,34 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Strategic Narrative Surface v1 per DEC-115."
+    },
+    {
+      "claim_id": "CLAIM-0099",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_ACQUISITION_READINESS_SURFACE_V1.md",
+        "PUBLIC_REFERENCE_ACQUISITION_READINESS_AUDIT_V1.md",
+        "PUBLIC_ACQUISITION_READINESS_STANDARD_V1.md",
+        "data/public-reference-acquisition-readiness-surface-v1.json",
+        "acquisition-readiness/index.html",
+        "validators/validate_public_reference_acquisition_readiness_surface_v1.py",
+        "SPRINT_98_PUBLIC_REFERENCE_ACQUISITION_READINESS_SURFACE_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0655",
+        "SOURCE-0656",
+        "SOURCE-0657",
+        "SOURCE-0658",
+        "SOURCE-0659",
+        "SOURCE-0660",
+        "SOURCE-0661"
+      ],
+      "support_scope": "public reference acquisition readiness surface v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Acquisition Readiness Surface v1 per DEC-116."
     }
   ],
   "last_reviewed": "2026-06-26"

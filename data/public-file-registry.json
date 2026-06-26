@@ -664,6 +664,78 @@
       "allowed_dependencies": ["../../styles.css"],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Non-verdict trust narrative per DEC-115."
+    },
+    {
+      "file_id": "PUB-FILE-0053",
+      "path": "acquisition-readiness/index.html",
+      "file_type": "html",
+      "public_role": "acquisition_readiness_hub",
+      "route_id_if_applicable": "ROUTE-0053",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
+      "notes": "Acquisition readiness hub per DEC-116."
+    },
+    {
+      "file_id": "PUB-FILE-0054",
+      "path": "acquisition-readiness/category-asset/index.html",
+      "file_type": "html",
+      "public_role": "acquisition_readiness",
+      "route_id_if_applicable": "ROUTE-0054",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
+      "notes": "Category asset readiness per DEC-116."
+    },
+    {
+      "file_id": "PUB-FILE-0055",
+      "path": "acquisition-readiness/public-reference-surface/index.html",
+      "file_type": "html",
+      "public_role": "acquisition_readiness",
+      "route_id_if_applicable": "ROUTE-0055",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
+      "notes": "Public reference surface readiness per DEC-116."
+    },
+    {
+      "file_id": "PUB-FILE-0056",
+      "path": "acquisition-readiness/governance-traceability/index.html",
+      "file_type": "html",
+      "public_role": "acquisition_readiness",
+      "route_id_if_applicable": "ROUTE-0056",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
+      "notes": "Governance traceability readiness per DEC-116."
+    },
+    {
+      "file_id": "PUB-FILE-0057",
+      "path": "acquisition-readiness/ai-retrieval-readiness/index.html",
+      "file_type": "html",
+      "public_role": "acquisition_readiness",
+      "route_id_if_applicable": "ROUTE-0057",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
+      "notes": "AI retrieval readiness per DEC-116."
+    },
+    {
+      "file_id": "PUB-FILE-0058",
+      "path": "acquisition-readiness/non-detector-moat/index.html",
+      "file_type": "html",
+      "public_role": "acquisition_readiness",
+      "route_id_if_applicable": "ROUTE-0058",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
+      "notes": "Non-detector moat readiness per DEC-116."
     }
   ],
   "last_reviewed": "2026-06-26"

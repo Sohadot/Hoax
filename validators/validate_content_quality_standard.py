@@ -484,6 +484,7 @@ def validate_cross_file_integration() -> bool:
         "blocked_until_public_reference_surface_authority_review_validation",
         "blocked_until_public_reference_strategic_entry_points_validation",
         "blocked_until_public_reference_strategic_narrative_surface_validation",
+        "blocked_until_public_reference_acquisition_readiness_surface_validation",
     ):
         error(f"publisher-governance-policy: publisher must remain blocked from drafts and publication, got {status}")
         ok = False
