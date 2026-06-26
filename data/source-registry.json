@@ -8719,6 +8719,76 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 104 validator."
+    },
+    {
+      "source_id": "SOURCE-0704",
+      "source_title": "PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 105 executive overview integrity audit."
+    },
+    {
+      "source_id": "SOURCE-0705",
+      "source_title": "PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_REPAIR_LOG_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_REPAIR_LOG_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 105 repair log."
+    },
+    {
+      "source_id": "SOURCE-0706",
+      "source_title": "PUBLIC_EXECUTIVE_OVERVIEW_INTEGRITY_STANDARD_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_EXECUTIVE_OVERVIEW_INTEGRITY_STANDARD_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 105 integrity standard."
+    },
+    {
+      "source_id": "SOURCE-0707",
+      "source_title": "data/public-reference-executive-overview-integrity-audit-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-executive-overview-integrity-audit-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 105 audit JSON."
+    },
+    {
+      "source_id": "SOURCE-0708",
+      "source_title": "data/public-reference-executive-overview-integrity-audit-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-executive-overview-integrity-audit-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 105 audit schema."
+    },
+    {
+      "source_id": "SOURCE-0709",
+      "source_title": "SPRINT_105_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_105_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 105 record."
+    },
+    {
+      "source_id": "SOURCE-0710",
+      "source_title": "validators/validate_public_reference_executive_overview_integrity_audit_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_reference_executive_overview_integrity_audit_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 105 validator."
     }
   ]
 }

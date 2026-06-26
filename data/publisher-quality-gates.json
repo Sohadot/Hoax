@@ -1536,6 +1536,24 @@
       "failure_condition": "public_reference_executive_overview_surface_v1_not_met",
       "bypassable": false,
       "notes": "Public Reference Executive Overview Surface v1 completed Sprint 104 (DEC-122). Five executive-overview routes. Sitemap seventy-three URLs."
+    },
+    {
+      "gate_id": "PUB-GATE-0099",
+      "name": "Public Reference Executive Overview Integrity Audit v1 Gate",
+      "status": "public_reference_executive_overview_integrity_audit_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_105_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_V1.md",
+      "failure_condition": "public_reference_executive_overview_integrity_audit_v1_not_met",
+      "bypassable": false,
+      "notes": "Public Reference Executive Overview Integrity Audit v1 completed Sprint 105 (DEC-123). Executive Overview Integrity Snapshot. Sitemap seventy-three URLs unchanged."
     }
   ],
   "last_reviewed": "2026-06-26"

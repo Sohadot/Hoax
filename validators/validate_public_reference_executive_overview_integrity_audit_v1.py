@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Sprint 104 — Public Reference Executive Overview Surface v1."""
+"""Validate Sprint 105 — Public Reference Executive Overview Integrity Audit v1."""
 
 from __future__ import annotations
 
@@ -15,25 +15,20 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (  # noqa: E402
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXTERNAL_REVIEW_READINESS_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_REVIEWER_PACKET_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_REVIEW_PACKET_INTEGRITY_AUDIT_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_SURFACE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_VALIDATION,
     validate_public_surface,
 )
 
-OVERVIEW_DOC = "PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_SURFACE_V1.md"
-AUDIT_DOC = "PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_AUDIT_V1.md"
-STANDARD_DOC = "PUBLIC_EXECUTIVE_OVERVIEW_STANDARD_V1.md"
-OVERVIEW_JSON = "data/public-reference-executive-overview-surface-v1.json"
-OVERVIEW_SCHEMA = "data/public-reference-executive-overview-surface-v1.schema.json"
-SPRINT_DOC = "SPRINT_104_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_SURFACE_V1.md"
-INDEX = "index.html"
-EXPECTED = 73
-MIN_WORDS = 750
+AUDIT_DOC = "PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_V1.md"
+REPAIR_DOC = "PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_REPAIR_LOG_V1.md"
+STANDARD_DOC = "PUBLIC_EXECUTIVE_OVERVIEW_INTEGRITY_STANDARD_V1.md"
+AUDIT_JSON = "data/public-reference-executive-overview-integrity-audit-v1.json"
+AUDIT_SCHEMA = "data/public-reference-executive-overview-integrity-audit-v1.schema.json"
+SPRINT_DOC = "SPRINT_105_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_V1.md"
+OVERVIEW_HUB = "executive-overview/index.html"
 
-NEW_PAGES = [
+EXECUTIVE_OVERVIEW_PAGES = [
     "executive-overview/index.html",
     "executive-overview/category-thesis/index.html",
     "executive-overview/public-reference-system/index.html",
@@ -41,7 +36,7 @@ NEW_PAGES = [
     "executive-overview/boundary-model/index.html",
 ]
 
-NEW_PATHS = [
+EXECUTIVE_OVERVIEW_PATHS = [
     "/executive-overview/",
     "/executive-overview/category-thesis/",
     "/executive-overview/public-reference-system/",
@@ -49,10 +44,7 @@ NEW_PATHS = [
     "/executive-overview/boundary-model/",
 ]
 
-ROUTE_IDS = [f"ROUTE-{i:04d}" for i in range(69, 74)]
-PUB_FILE_IDS = [f"PUB-FILE-{i:04d}" for i in range(69, 74)]
-
-REQUIRED_SECTIONS = [
+REQUIRED_OVERVIEW_SECTIONS = [
     "Reference summary",
     "Overview purpose",
     "Executive reading path",
@@ -66,15 +58,13 @@ REQUIRED_SECTIONS = [
     "Non-transactional review boundary",
 ]
 
-REQUIRED_ANCHORS = [
-    "reference-summary",
-    "overview-purpose",
-    "executive-reading-path",
-    "reference-answer",
-    "source-confidence",
-    "cite-this-reference",
-    "retrieval-capsule",
-    "boundary",
+STALE_ROUTE_COUNTS = [
+    "58-route",
+    "58 routes",
+    "63-route",
+    "63 routes",
+    "68-route",
+    "68 routes",
 ]
 
 FORBIDDEN_CLAIMS = [
@@ -109,6 +99,8 @@ FORBIDDEN_CLAIMS = [
     "listed for sale",
     "private data room",
     "downloadable report",
+    "pitch deck",
+    "sales page",
 ]
 
 NEGATION_PATTERN = re.compile(
@@ -116,7 +108,7 @@ NEGATION_PATTERN = re.compile(
     re.IGNORECASE,
 )
 
-SOURCE_LOCS = [OVERVIEW_DOC, AUDIT_DOC, STANDARD_DOC, OVERVIEW_JSON, OVERVIEW_SCHEMA, SPRINT_DOC]
+SOURCE_LOCS = [AUDIT_DOC, REPAIR_DOC, STANDARD_DOC, AUDIT_JSON, AUDIT_SCHEMA, SPRINT_DOC]
 
 
 def error(msg: str) -> None:
@@ -127,9 +119,9 @@ def load_json(rel: str) -> dict:
     return json.loads((ROOT / rel).read_text(encoding="utf-8"))
 
 
-def visible_words(html: str) -> int:
-    text = re.sub(r"<[^>]+>", " ", html)
-    return len(re.findall(r"[A-Za-z0-9']+", text))
+def route_to_file(path: str) -> str:
+    p = path.strip("/")
+    return "index.html" if not p else f"{p}/index.html"
 
 
 def line_has_unnegated_claim(line: str, claim: str) -> bool:
@@ -151,28 +143,55 @@ def line_has_unnegated_claim(line: str, claim: str) -> bool:
     return False
 
 
+def internal_route_set() -> set[str]:
+    routes = load_json("data/route-registry.json").get("routes", [])
+    out = set()
+    for r in routes:
+        p = r.get("path", "/").rstrip("/") or "/"
+        out.add(p)
+    return out
+
+
 def validate_artifacts() -> bool:
     ok = True
     for rel in SOURCE_LOCS:
         if not (ROOT / rel).is_file():
             error(f"missing {rel}")
             ok = False
-    data = load_json(OVERVIEW_JSON)
-    if data.get("decision_ref") != "DEC-122":
-        error("decision_ref must be DEC-122")
+    data = load_json(AUDIT_JSON)
+    if data.get("decision_ref") != "DEC-123":
+        error("decision_ref must be DEC-123")
         ok = False
-    if data.get("homepage_release_snapshot_updated") is not True:
-        error("homepage_release_snapshot_updated must be true")
+    if data.get("new_public_routes_added") is not False:
+        error("new_public_routes_added must be false")
         ok = False
-    if data.get("new_public_routes_added") is not True:
-        error("new_public_routes_added must be true")
+    if data.get("total_repairs_made", 0) < 1:
+        error("total_repairs_made must be at least 1")
         ok = False
-    if set(data.get("public_routes_added", [])) != set(NEW_PATHS):
-        error("public_routes_added must list exactly the five new routes")
+    if data.get("executive_overview_integrity_snapshot_added") is not True:
+        error("executive_overview_integrity_snapshot_added must be true")
         ok = False
-    if data.get("expected_sitemap_url_count_after") != EXPECTED:
-        error("expected_sitemap_url_count_after must be 68")
-        ok = False
+    for key in (
+        "executive_overview_snapshot_counts_as_visible_repair",
+        "visible_repairs_made",
+        "route_count_integrity_checked",
+        "file_existence_integrity_checked",
+        "metadata_integrity_checked",
+        "link_integrity_checked",
+        "executive_overview_component_integrity_checked",
+        "boundary_integrity_checked",
+        "pitch_deck_drift_checked",
+        "sales_page_drift_checked",
+        "private_data_room_drift_checked",
+        "downloadable_report_drift_checked",
+        "pricing_transaction_drift_checked",
+        "stale_route_count_language_checked",
+        "public_html_checked_only_for_current_forbidden_copy",
+        "historical_governance_not_rewritten_for_current_copy_rules",
+    ):
+        if data.get(key) is not True:
+            error(f"{key} must be true")
+            ok = False
     for flag in (
         "upload_authorized",
         "scoring_authorized",
@@ -191,8 +210,10 @@ def validate_artifacts() -> bool:
         "representative_mandate_authorized",
         "legal_representation_authorized",
         "financial_representation_authorized",
-        "downloadable_report_authorized",
         "private_data_room_authorized",
+        "downloadable_report_authorized",
+        "pitch_deck_authorized",
+        "sales_page_authorized",
     ):
         if data.get(flag) is not False:
             error(f"{flag} must be false")
@@ -203,65 +224,43 @@ def validate_artifacts() -> bool:
 def validate_counts() -> bool:
     ok = True
     sitemap_count = len([u for u in ET.parse(ROOT / "sitemap.xml").getroot().iter() if u.tag.endswith("loc")])
-    routes = load_json("data/route-registry.json").get("routes", [])
-    if sitemap_count != EXPECTED:
-        error(f"sitemap must have {EXPECTED} URLs, found {sitemap_count}")
+    registry_count = len(load_json("data/route-registry.json").get("routes", []))
+    if sitemap_count != PUBLIC_SITEMAP_URL_COUNT:
+        error(f"sitemap must have {PUBLIC_SITEMAP_URL_COUNT} URLs, found {sitemap_count}")
         ok = False
-    if len(routes) != EXPECTED:
-        error(f"route registry must have {EXPECTED} entries, found {len(routes)}")
+    if registry_count != PUBLIC_SITEMAP_URL_COUNT:
+        error(f"route registry must have {PUBLIC_SITEMAP_URL_COUNT} entries, found {registry_count}")
         ok = False
-    by_id = {r.get("route_id"): r for r in routes}
-    for rid, path in zip(ROUTE_IDS, NEW_PATHS):
-        if rid not in by_id:
-            error(f"route registry missing {rid}")
-            ok = False
-        elif by_id[rid].get("path") != path:
-            error(f"{rid} path mismatch")
-            ok = False
     return ok
 
 
-def validate_public_file_registry() -> bool:
+def validate_overview_hub_snapshot() -> bool:
     ok = True
-    pfr = load_json("data/public-file-registry.json")
-    by_id = {f.get("file_id"): f for f in pfr.get("public_files", [])}
-    for fid, rel in zip(PUB_FILE_IDS, NEW_PAGES):
-        if fid not in by_id:
-            error(f"public-file-registry missing {fid}")
-            ok = False
-        elif by_id[fid].get("path") != rel:
-            error(f"{fid} path mismatch")
-            ok = False
-    return ok
-
-
-def validate_homepage() -> bool:
-    ok = True
-    content = (ROOT / INDEX).read_text(encoding="utf-8")
-    if "Executive Overview" not in content:
-        error("homepage must include Executive Overview section")
+    content = (ROOT / OVERVIEW_HUB).read_text(encoding="utf-8")
+    if "Executive Overview Integrity Snapshot" not in content:
+        error("/executive-overview/ must include Executive Overview Integrity Snapshot")
         ok = False
-    if "Current public route count: 73" not in content:
-        error("homepage snapshot must include Current public route count: 73")
+    if f"Current public route count: {PUBLIC_SITEMAP_URL_COUNT}" not in content:
+        error(f"/executive-overview/ must include Current public route count: {PUBLIC_SITEMAP_URL_COUNT}")
         ok = False
-    for path in NEW_PATHS:
+    if "Executive overview route count: 5" not in content:
+        error("/executive-overview/ must include Executive overview route count: 5")
+        ok = False
+    for path in EXECUTIVE_OVERVIEW_PATHS:
         if f'href="{path}' not in content and f"href='{path}" not in content:
-            error(f"homepage must link to {path}")
+            error(f"/executive-overview/ must link to {path}")
             ok = False
     return ok
 
 
-def validate_new_page(rel: str) -> bool:
+def validate_executive_overview_page(rel: str) -> bool:
     ok = True
     fp = ROOT / rel
     if not fp.is_file():
         error(f"missing {rel}")
         return False
     content = fp.read_text(encoding="utf-8")
-    wc = visible_words(content)
-    if wc < MIN_WORDS:
-        error(f"{rel}: need at least {MIN_WORDS} visible words, found {wc}")
-        ok = False
+    lower = content.lower()
     if len(re.findall(r"<h1\b", content, re.I)) != 1:
         error(f"{rel}: expected exactly one H1")
         ok = False
@@ -269,20 +268,22 @@ def validate_new_page(rel: str) -> bool:
         if field not in content.lower():
             error(f"{rel}: missing {field}")
             ok = False
-    for section in REQUIRED_SECTIONS:
+    for section in REQUIRED_OVERVIEW_SECTIONS:
         if section not in content:
             error(f"{rel}: missing section {section!r}")
-            ok = False
-    for anchor in REQUIRED_ANCHORS:
-        if f'id="{anchor}"' not in content:
-            error(f"{rel}: missing anchor {anchor}")
             ok = False
     if 'href="/executive-overview/"' not in content and 'href="/executive-overview/#' not in content:
         error(f"{rel}: must link to /executive-overview/")
         ok = False
     strategic_external = sum(
         1
-        for p in ("/entry-points/", "/narrative/", "/acquisition-readiness/", "/external-review/", "/reviewer-packet/")
+        for p in (
+            "/entry-points/",
+            "/narrative/",
+            "/acquisition-readiness/",
+            "/external-review/",
+            "/reviewer-packet/",
+        )
         if p in content
     )
     if strategic_external < 3:
@@ -308,28 +309,53 @@ def validate_new_page(rel: str) -> bool:
         if p in content
     )
     if utility_ref < 5:
-        error(f"{rel}: must link to at least 5 reference or utility routes")
+        error(f"{rel}: must link to at least 5 reference, utility, or pathway routes")
         ok = False
-    sibling_links = sum(1 for p in NEW_PATHS if f'href="{p}' in content or f"href='{p}" in content)
+    sibling_links = sum(1 for p in EXECUTIVE_OVERVIEW_PATHS if f'href="{p}' in content or f"href='{p}" in content)
     if sibling_links < 2:
         error(f"{rel}: must link to at least 2 sibling executive-overview routes")
         ok = False
-    if "Non-transactional review boundary" not in content:
-        error(f"{rel}: missing non-transactional review boundary")
-        ok = False
-    if "<form" in content.lower() or "<input" in content.lower():
-        error(f"{rel}: forms/inputs forbidden")
-        ok = False
-    if re.search(r'<script\b(?![^>]*type=["\']application/ld\+json["\'])', content, re.I):
-        error(f"{rel}: JavaScript forbidden")
+    if "pitch deck" not in lower or "sales page" not in lower:
+        error(f"{rel}: must include pitch-deck and sales-page role clarity (safe negative language)")
         ok = False
     return ok
 
 
+def validate_route_files_and_metadata() -> bool:
+    ok = True
+    routes = load_json("data/route-registry.json").get("routes", [])
+    for r in routes:
+        rel = route_to_file(r["path"])
+        fp = ROOT / rel
+        if not fp.is_file():
+            error(f"missing route file {rel} for {r['path']}")
+            ok = False
+            continue
+        content = fp.read_text(encoding="utf-8")
+        if len(re.findall(r"<h1\b", content, re.I)) != 1:
+            error(f"{rel}: expected exactly one H1")
+            ok = False
+        for field in ('rel="canonical"', 'name="description"', "og:title", "og:description"):
+            if field not in content.lower():
+                error(f"{rel}: missing {field}")
+                ok = False
+    return ok
 
-STALE_ROUTE_COUNTS = [
-    "58-route", "58 routes", "63-route", "63 routes", "68-route", "68 routes",
-]
+
+def validate_internal_links() -> bool:
+    ok = True
+    routes = internal_route_set()
+    for rel in sorted(ALLOWED_PUBLIC_HTML):
+        content = (ROOT / rel).read_text(encoding="utf-8")
+        for m in re.finditer(r'href="(/[^"]*)"', content):
+            href = m.group(1)
+            if href.startswith("//"):
+                continue
+            base = href.split("#", 1)[0].rstrip("/") or "/"
+            if base not in routes:
+                error(f"{rel}: broken internal route link {href}")
+                ok = False
+    return ok
 
 
 def validate_stale_route_counts() -> bool:
@@ -343,11 +369,15 @@ def validate_stale_route_counts() -> bool:
     return ok
 
 
-def validate_reviewer_packet_index() -> bool:
+def validate_public_file_registry_scope() -> bool:
     ok = True
-    content = (ROOT / "reviewer-packet/public-surface-index/index.html").read_text(encoding="utf-8")
-    if "Executive overview" not in content and "Executive Overview" not in content:
-        error("reviewer packet public surface index must include Executive Overview route group")
+    pfr = load_json("data/public-file-registry.json")
+    files = pfr.get("public_files", [])
+    reg_paths = {f["path"] for f in files}
+    route_files = {route_to_file(r["path"]) for r in load_json("data/route-registry.json").get("routes", [])}
+    missing = sorted(route_files - reg_paths)
+    if missing:
+        error(f"public-file-registry missing route HTML files: {missing[:5]}")
         ok = False
     return ok
 
@@ -356,6 +386,13 @@ def validate_public_html_copy() -> bool:
     ok = True
     for rel in sorted(ALLOWED_PUBLIC_HTML):
         content = (ROOT / rel).read_text(encoding="utf-8")
+        lower = content.lower()
+        if "<form" in lower or "<input" in lower:
+            error(f"{rel}: forms/inputs forbidden")
+            ok = False
+        if re.search(r'<script\b(?![^>]*type=["\']application/ld\+json["\'])', content, re.I):
+            error(f"{rel}: JavaScript forbidden")
+            ok = False
         for claim in FORBIDDEN_CLAIMS:
             for line in content.splitlines():
                 if line_has_unnegated_claim(line, claim):
@@ -365,37 +402,60 @@ def validate_public_html_copy() -> bool:
     return ok
 
 
+def validate_repair_log() -> bool:
+    ok = True
+    text = (ROOT / REPAIR_DOC).read_text(encoding="utf-8")
+    for col in (
+        "repair_id",
+        "page_path",
+        "issue_or_improvement_target",
+        "repair_applied",
+        "route_group_affected",
+        "executive_overview_integrity_impact",
+        "human_readability_impact",
+        "ai_retrieval_impact",
+        "non_verdict_impact",
+        "non_transactional_impact",
+        "validator_protection",
+    ):
+        if col not in text:
+            error(f"repair log missing column {col}")
+            ok = False
+    if "EOIA-001" not in text:
+        error("repair log must include EOIA-001")
+        ok = False
+    return ok
+
+
 def validate_governance() -> bool:
     ok = True
-    if "DEC-122" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
-        error("DEC-122 missing")
+    if "DEC-123" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
+        error("DEC-123 missing")
         ok = False
-    if "validate_public_reference_executive_overview_surface_v1.py" not in (
+    if "validate_public_reference_executive_overview_integrity_audit_v1.py" not in (
         ROOT / "validators/validate_all.py"
     ).read_text(encoding="utf-8"):
-        error("validate_all.py must include Sprint 104 validator")
+        error("validate_all.py must include Sprint 105 validator")
         ok = False
     policy = load_json("data/publisher-governance-policy.json")
     if policy.get("current_publisher_status") not in (
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_SURFACE_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_REVIEW_PACKET_INTEGRITY_AUDIT_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_VALIDATION,
     ):
-        error("publisher status must reflect Sprint 104 executive overview surface validation")
+        error("publisher status must reflect Sprint 105 executive overview integrity audit validation")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}
-    for loc in SOURCE_LOCS + ["validators/validate_public_reference_executive_overview_surface_v1.py"]:
+    for loc in SOURCE_LOCS + ["validators/validate_public_reference_executive_overview_integrity_audit_v1.py"]:
         if loc not in locs:
             error(f"source registry missing {loc}")
             ok = False
-    if not any(c.get("claim_id") == "CLAIM-0105" for c in load_json("data/evidence-ledger.json").get("claims", [])):
-        error("CLAIM-0105 missing")
+    if not any(c.get("claim_id") == "CLAIM-0106" for c in load_json("data/evidence-ledger.json").get("claims", [])):
+        error("CLAIM-0106 missing")
         ok = False
-    if not any(g.get("gate_id") == "PUB-GATE-0098" for g in load_json("data/publisher-quality-gates.json").get("gates", [])):
-        error("PUB-GATE-0098 missing")
+    if not any(g.get("gate_id") == "PUB-GATE-0099" for g in load_json("data/publisher-quality-gates.json").get("gates", [])):
+        error("PUB-GATE-0099 missing")
         ok = False
-    if "Sprint 104 | COMPLETE | G104 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
-        error("master execution plan missing Sprint 104 row")
+    if "Sprint 105 | COMPLETE | G105 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
+        error("master execution plan missing Sprint 105 row")
         ok = False
     if (ROOT / ".nojekyll").exists():
         error(".nojekyll must not exist")
@@ -422,18 +482,22 @@ def main() -> int:
         ok = False
     if not validate_counts():
         ok = False
-    if not validate_public_file_registry():
+    if not validate_overview_hub_snapshot():
         ok = False
-    if not validate_homepage():
+    if not validate_public_file_registry_scope():
         ok = False
-    for rel in NEW_PAGES:
-        if not validate_new_page(rel):
+    for rel in EXECUTIVE_OVERVIEW_PAGES:
+        if not validate_executive_overview_page(rel):
             ok = False
+    if not validate_route_files_and_metadata():
+        ok = False
+    if not validate_internal_links():
+        ok = False
     if not validate_stale_route_counts():
         ok = False
-    if not validate_reviewer_packet_index():
-        ok = False
     if not validate_public_html_copy():
+        ok = False
+    if not validate_repair_log():
         ok = False
     routes = load_json("data/route-registry.json").get("routes", [])
     if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):

@@ -3185,3 +3185,30 @@ After Sprint 103 protected the reviewer packet, Hoax.ai needed an executive over
 - Private data-room access, downloadable reports, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-123 — Public Reference Executive Overview Integrity Audit v1 Adopted
+
+**Date:** 2026-06-26
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Executive Overview Integrity Audit v1 by inspecting the full 73-route public surface, adding an Executive Overview Integrity Snapshot to `/executive-overview/`, and applying visible executive-overview integrity repairs where needed. The sprint validates executive-overview route integrity, metadata integrity, link integrity, component preservation, boundary discipline, pitch-deck prohibition, sales-page prohibition, private-data-room prohibition, downloadable-report prohibition, and pricing/transaction drift protection without creating new public routes, private data-room access, downloadable reports, pitch decks, sales pages, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, real-world case evaluation, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, or financial representations.
+
+### Rationale
+
+After Sprint 104 added the public executive overview surface, Hoax.ai needed an integrity audit to ensure the overview remains a concise public reference orientation layer rather than a pitch deck, sales page, report, private data room, transaction surface, scorecard, verdict system, or operational review tool. This decision governs visible public-surface inspection, the Executive Overview Integrity Snapshot, and any repairs made to production pages. It is not abstract preparatory governance.
+
+### Implications
+
+- Existing executive-overview pages may receive integrity repairs.
+- No new public route is authorized.
+- Sitemap remains 73 URLs.
+- Route registry remains 73 entries.
+- An Executive Overview Integrity Snapshot on `/executive-overview/` is authorized.
+- The Executive Overview Integrity Snapshot counts as visible production contact.
+- Executive-overview integrity validation is authorized across route counts, metadata, links, components, boundaries, pitch-deck prohibition, sales-page prohibition, private-data-room prohibition, downloadable-report prohibition, and transaction drift.
+- Pitch decks, sales pages, private data-room access, downloadable reports, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+

@@ -19,6 +19,7 @@ from public_surface_checks import (  # noqa: E402
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_REVIEWER_PACKET_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_REVIEW_PACKET_INTEGRITY_AUDIT_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_SURFACE_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_RELEASE_INTEGRITY_AUDIT_VALIDATION,
     validate_public_surface,
 )
@@ -349,6 +350,7 @@ def validate_governance() -> bool:
         "blocked_until_public_reference_reviewer_packet_validation",
         "blocked_until_public_reference_review_packet_integrity_audit_validation",
         "blocked_until_public_reference_executive_overview_surface_validation",
+        "blocked_until_public_reference_executive_overview_integrity_audit_validation",
     ):
         error("publisher status must reflect Sprint 101 external review readiness validation")
         ok = False

@@ -2477,6 +2477,26 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+## Sprint 105 — Public Reference Executive Overview Integrity Audit v1
+
+**Status:** COMPLETE — 2026-06-26
+**Goal:** Inspect full 73-route public surface; add Executive Overview Integrity Snapshot; repair executive-overview integrity without new routes.
+
+### Deliverables
+
+- Executive Overview Integrity Snapshot on `/executive-overview/`
+- Pitch-deck and sales-page role clarity on all five executive-overview routes
+- PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_V1.md, repair log, standard, JSON/schema, validator
+- Sitemap 73 URLs unchanged; route registry 73 entries unchanged
+- DEC-123, PUB-GATE-0099, CLAIM-0106
+- total_repairs_made: 2
+
+### Gate
+
+**Gate G105 passed.** Sprint 106 — Public Reference Strategic Review Index v1 is next.
+
+---
+
 ## Sprint 104 — Public Reference Executive Overview Surface v1
 
 **Status:** COMPLETE — 2026-06-26
