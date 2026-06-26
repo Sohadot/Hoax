@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (  # noqa: E402
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXTERNAL_REVIEW_READINESS_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_RELEASE_INTEGRITY_AUDIT_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_SURFACE_CONSOLIDATION_VALIDATION,
     validate_public_surface,
@@ -159,11 +160,15 @@ def validate_counts() -> bool:
     ok = True
     sitemap_count = len([u for u in ET.parse(ROOT / "sitemap.xml").getroot().iter() if u.tag.endswith("loc")])
     registry_count = len(load_json("data/route-registry.json").get("routes", []))
-    if sitemap_count != EXPECTED:
-        error(f"sitemap must have {EXPECTED} URLs, found {sitemap_count}")
+    if sitemap_count != PUBLIC_SITEMAP_URL_COUNT:
+        error(f"sitemap must have {PUBLIC_SITEMAP_URL_COUNT} URLs, found {sitemap_count}")
         ok = False
-    if registry_count != EXPECTED:
-        error(f"route registry must have {EXPECTED} entries, found {registry_count}")
+    if registry_count != PUBLIC_SITEMAP_URL_COUNT:
+        error(f"route registry must have {PUBLIC_SITEMAP_URL_COUNT} entries, found {registry_count}")
+        ok = False
+    data = load_json(AUDIT_JSON)
+    if data.get("expected_sitemap_url_count_after") != 58:
+        error("historical expected_sitemap_url_count_after must remain 58 for Sprint 100")
         ok = False
     return ok
 
@@ -178,7 +183,7 @@ def validate_homepage_snapshot() -> bool:
         error("homepage snapshot section id missing")
         ok = False
     required_phrases = [
-        "58-route public evidence-risk reference system",
+        "public evidence-risk reference system",
         "strategic entry points",
         "strategic narrative pages",
         "strategic readiness pages",
@@ -363,6 +368,7 @@ def validate_governance() -> bool:
     policy = load_json("data/publisher-governance-policy.json")
     if policy.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_RELEASE_INTEGRITY_AUDIT_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXTERNAL_REVIEW_READINESS_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_SURFACE_CONSOLIDATION_VALIDATION,
     ):
         error("publisher status must reflect Sprint 100 release integrity audit validation")

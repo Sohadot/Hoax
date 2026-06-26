@@ -2477,6 +2477,24 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+## Sprint 101 — Public Reference External Review Readiness v1
+
+**Status:** COMPLETE — 2026-06-26
+**Goal:** Add five external-review readiness routes for structured public inspection without transaction or operational tool behavior.
+
+### Deliverables
+
+- 5 routes: hub, reviewer map, public surface checklist, AI review guide, boundary review guide
+- Homepage External Review Readiness section
+- Sitemap 63 URLs; route registry 63 entries (ROUTE-0059–0063)
+- DEC-119, PUB-GATE-0095, CLAIM-0102
+
+### Gate
+
+**Gate G101 passed.** Sprint 102 — Public Reference Reviewer Packet v1 is next.
+
+---
+
 ## Sprint 100 — Public Reference Release Integrity Audit v1
 
 **Status:** COMPLETE — 2026-06-26

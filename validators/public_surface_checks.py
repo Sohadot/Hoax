@@ -21,6 +21,7 @@ PUBLIC_ROUTE_IDS = [
     "ROUTE-0042", "ROUTE-0043", "ROUTE-0044", "ROUTE-0045", "ROUTE-0046", "ROUTE-0047",
     "ROUTE-0048", "ROUTE-0049", "ROUTE-0050", "ROUTE-0051", "ROUTE-0052",
     "ROUTE-0053", "ROUTE-0054", "ROUTE-0055", "ROUTE-0056", "ROUTE-0057", "ROUTE-0058",
+    "ROUTE-0059", "ROUTE-0060", "ROUTE-0061", "ROUTE-0062", "ROUTE-0063",
 ]
 
 PILOT_ROUTE_IDS = PUBLIC_ROUTE_IDS  # backward compatibility
@@ -91,6 +92,11 @@ ALLOWED_PUBLIC_HTML = {
     "acquisition-readiness/governance-traceability/index.html",
     "acquisition-readiness/ai-retrieval-readiness/index.html",
     "acquisition-readiness/non-detector-moat/index.html",
+    "external-review/index.html",
+    "external-review/reviewer-map/index.html",
+    "external-review/public-surface-checklist/index.html",
+    "external-review/ai-review-guide/index.html",
+    "external-review/boundary-review-guide/index.html",
 }
 
 ALLOWED_INTERNAL_PROTOTYPE_HTML = {
@@ -105,7 +111,7 @@ ALLOWED_PUBLIC_ROOT_FILES = ALLOWED_PUBLIC_HTML | {
     "sitemap.xml",
 }
 
-PUBLIC_SITEMAP_URL_COUNT = 58
+PUBLIC_SITEMAP_URL_COUNT = 63
 
 PILOT_SITEMAP_URL_COUNT = PUBLIC_SITEMAP_URL_COUNT  # backward compatibility
 
@@ -319,6 +325,10 @@ PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_RELEASE_INTEGRITY_AUDIT_VALIDATION = (
     "blocked_until_public_reference_release_integrity_audit_validation"
 )
 
+PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXTERNAL_REVIEW_READINESS_VALIDATION = (
+    "blocked_until_public_reference_external_review_readiness_validation"
+)
+
 PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_reference_candidate_pack",
     "blocked_until_internal_draft_blueprint",
@@ -399,6 +409,7 @@ PUBLISHER_STATUSES_ALLOWED = (
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ACQUISITION_READINESS_SURFACE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_SURFACE_CONSOLIDATION_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_RELEASE_INTEGRITY_AUDIT_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXTERNAL_REVIEW_READINESS_VALIDATION,
 )
 
 

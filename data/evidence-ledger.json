@@ -1112,7 +1112,18 @@
       "source_type": "governance_file",
       "status": "active",
       "last_reviewed": "2026-06-26",
-      "notes": "Sprint 100 release integrity audit. Sitemap fifty-eight URLs unchanged. total_repairs_made 1."
+      "notes": "Sprint 100 release integrity audit. Sitemap fifty-eight URLs at completion. total_repairs_made 1."
+    },
+    {
+      "claim_id": "CLAIM-0102",
+      "claim_text": "Hoax.ai has adopted Public Reference External Review Readiness v1, adding five external-review readiness routes that help human reviewers and AI agents inspect the public reference system without new tools, pricing statements, transaction pages, chatbots, generators, verdicts, or detector behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_EXTERNAL_REVIEW_READINESS_V1.md, PUBLIC_EXTERNAL_REVIEW_READINESS_STANDARD_V1.md, data/public-reference-external-review-readiness-v1.json, external-review/index.html, validators/validate_public_reference_external_review_readiness_v1.py, SPRINT_101_PUBLIC_REFERENCE_EXTERNAL_REVIEW_READINESS_V1.md, DECISION_LOG.md (DEC-119)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-26",
+      "notes": "Sprint 101 external review readiness. Sitemap sixty-three URLs."
     }
   ]
 }

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hoax.ai/schemas/public-reference-external-review-readiness-v1.schema.json",
+  "title": "Public Reference External Review Readiness v1",
+  "type": "object",
+  "required": [
+    "external_review_id",
+    "decision_ref",
+    "sprint",
+    "status",
+    "production_first",
+    "governance_after_production",
+    "new_public_routes_added",
+    "expected_sitemap_url_count_after",
+    "expected_route_registry_count_after",
+    "public_routes_added",
+    "minimum_visible_words_per_new_route",
+    "required_components",
+    "human_readable",
+    "ai_readable",
+    "citation_safe",
+    "retrieval_hardened",
+    "external_review_readiness",
+    "non_verdict",
+    "non_transactional_review_surface",
+    "public_review_surface"
+  ],
+  "properties": {
+    "external_review_id": { "const": "public-reference-external-review-readiness-v1" },
+    "decision_ref": { "const": "DEC-119" },
+    "sprint": { "const": "Sprint 101" },
+    "status": { "const": "public_reference_external_review_readiness" },
+    "production_first": { "const": true },
+    "governance_after_production": { "const": true },
+    "new_public_routes_added": { "const": true },
+    "expected_sitemap_url_count_after": { "const": 63 },
+    "expected_route_registry_count_after": { "const": 63 },
+    "public_routes_added": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true
+    },
+    "minimum_visible_words_per_new_route": { "const": 850 },
+    "required_components": {
+      "type": "array",
+      "contains": {
+        "enum": [
+          "reference_summary",
+          "review_purpose",
+          "review_path",
+          "reference_answer",
+          "source_confidence",
+          "cite_this_reference",
+          "retrieval_capsule",
+          "page_end_reference_navigation",
+          "boundary_reminder",
+          "non_transactional_review_boundary"
+        ]
+      },
+      "minItems": 10
+    },
+    "human_readable": { "const": true },
+    "ai_readable": { "const": true },
+    "citation_safe": { "const": true },
+    "retrieval_hardened": { "const": true },
+    "external_review_readiness": { "const": true },
+    "non_verdict": { "const": true },
+    "non_transactional_review_surface": { "const": true },
+    "public_review_surface": { "const": true }
+  },
+  "additionalProperties": true
+}

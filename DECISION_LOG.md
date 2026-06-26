@@ -3083,3 +3083,28 @@ After Sprint 99 consolidated the strategic surface, Hoax.ai needed a release-int
 - Pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-119 — Public Reference External Review Readiness v1 Adopted
+
+**Date:** 2026-06-26
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference External Review Readiness v1 by adding five public external-review readiness routes: Hoax.ai External Review Readiness, External Reviewer Map, Public Surface Review Checklist, AI Review Guide, and Boundary Review Guide. These pages help human reviewers and AI agents inspect Hoax.ai as a public evidence-risk reference system without creating new public tools, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, real-world case evaluation, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, or financial representations.
+
+### Rationale
+
+After Sprint 100 validated release integrity across the 58-route public surface, Hoax.ai needed an external-review readiness layer that gives reviewers a structured way to inspect the asset's public utility, concept system, strategic narrative, AI retrieval readiness, and boundary discipline. This decision governs visible public pages, not abstract preparatory governance.
+
+### Implications
+
+- Five public external-review readiness routes are authorized.
+- Sitemap may increase from 58 to 63 URLs.
+- Route registry may increase from 58 to 63 entries.
+- New route registry entries ROUTE-0059 through ROUTE-0063 are authorized.
+- External-review pages are authorized as static, non-verdict, non-transactional reference routes.
+- Pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+

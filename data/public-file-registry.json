@@ -13,7 +13,9 @@
       "route_id_if_applicable": "ROUTE-0001",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["styles.css"],
+      "allowed_dependencies": [
+        "styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring",
       "notes": "Primary public thesis surface."
     },
@@ -25,7 +27,9 @@
       "route_id_if_applicable": "ROUTE-0002",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Evidence Posture controlled public reference pilot page."
     },
@@ -37,7 +41,9 @@
       "route_id_if_applicable": "ROUTE-0004",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Public category language layer page."
     },
@@ -49,7 +55,9 @@
       "route_id_if_applicable": "ROUTE-0003",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Artifact–Subject Separation controlled public reference pilot page."
     },
@@ -61,7 +69,9 @@
       "route_id_if_applicable": "ROUTE-0005",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Source Confidence public reference production batch 1 page."
     },
@@ -73,7 +83,9 @@
       "route_id_if_applicable": "ROUTE-0006",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Provenance Gap public reference production batch 1 page."
     },
@@ -85,7 +97,9 @@
       "route_id_if_applicable": "ROUTE-0007",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Not Assessable public reference production batch 1 page."
     },
@@ -97,7 +111,9 @@
       "route_id_if_applicable": "ROUTE-0008",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Output Boundary public reference production batch 1 page."
     },
@@ -109,7 +125,9 @@
       "route_id_if_applicable": "ROUTE-0009",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Synthetic Fragility public reference production batch 2 page."
     },
@@ -121,7 +139,9 @@
       "route_id_if_applicable": "ROUTE-0010",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Evidence Chain public reference production batch 2 page."
     },
@@ -133,7 +153,9 @@
       "route_id_if_applicable": "ROUTE-0011",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Context Collapse public reference production batch 2 page."
     },
@@ -145,7 +167,9 @@
       "route_id_if_applicable": "ROUTE-0012",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Claim–Source Traceability public reference production batch 2 page."
     },
@@ -157,7 +181,9 @@
       "route_id_if_applicable": "ROUTE-0013",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Attribution Boundary public reference production batch 3 page."
     },
@@ -169,7 +195,9 @@
       "route_id_if_applicable": "ROUTE-0014",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Claim Drift public reference production batch 3 page."
     },
@@ -181,7 +209,9 @@
       "route_id_if_applicable": "ROUTE-0015",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Evidence Limitation public reference production batch 3 page."
     },
@@ -193,7 +223,9 @@
       "route_id_if_applicable": "ROUTE-0016",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector",
       "notes": "Interpretation Risk public reference production batch 3 page."
     },
@@ -241,7 +273,9 @@
       "route_id_if_applicable": "ROUTE-0017",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, engine",
       "notes": "Hoax.ai Evidence Posture Standard v1 public authority-layer page."
     },
@@ -253,7 +287,9 @@
       "route_id_if_applicable": "ROUTE-0018",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, engine",
       "notes": "Hoax.ai Evidence Posture Protocol v1 Draft public protocol-layer page."
     },
@@ -265,7 +301,9 @@
       "route_id_if_applicable": "ROUTE-0019",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, javascript, external deps, active tool claims, upload, scoring, classifier, detector, engine",
       "notes": "Hoax.ai Evidence Field Interface Thesis public interface-thesis page."
     },
@@ -277,7 +315,9 @@
       "route_id_if_applicable": "ROUTE-0020",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Manual Evidence Checklist public utility page per DEC-102."
     },
@@ -289,7 +329,9 @@
       "route_id_if_applicable": "ROUTE-0021",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Evidence Posture Map public utility page per DEC-102."
     },
@@ -301,7 +343,9 @@
       "route_id_if_applicable": "ROUTE-0022",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, real_world_cases",
       "notes": "Synthetic Evidence-Risk Examples public utility page per DEC-102."
     },
@@ -313,7 +357,9 @@
       "route_id_if_applicable": "ROUTE-0023",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Evidence-Risk Questions public utility page per DEC-102."
     },
@@ -325,7 +371,9 @@
       "route_id_if_applicable": "ROUTE-0024",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Evidence Risk reference unit per DEC-103."
     },
@@ -337,7 +385,9 @@
       "route_id_if_applicable": "ROUTE-0025",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Provenance Risk reference unit per DEC-103."
     },
@@ -349,7 +399,9 @@
       "route_id_if_applicable": "ROUTE-0026",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Context Collapse reference unit per DEC-103."
     },
@@ -361,7 +413,9 @@
       "route_id_if_applicable": "ROUTE-0027",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Claim Drift reference unit per DEC-103."
     },
@@ -373,7 +427,9 @@
       "route_id_if_applicable": "ROUTE-0028",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Traceability Gap reference unit per DEC-103."
     },
@@ -385,7 +441,9 @@
       "route_id_if_applicable": "ROUTE-0029",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Why Hoax.ai Is Not a Detector reference unit per DEC-103."
     },
@@ -397,7 +455,9 @@
       "route_id_if_applicable": "ROUTE-0030",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Source Ambiguity deep reference unit per DEC-110."
     },
@@ -409,7 +469,9 @@
       "route_id_if_applicable": "ROUTE-0031",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Artifact-Claim Gap deep reference unit per DEC-110."
     },
@@ -421,7 +483,9 @@
       "route_id_if_applicable": "ROUTE-0032",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Boundary Integrity deep reference unit per DEC-110."
     },
@@ -433,7 +497,9 @@
       "route_id_if_applicable": "ROUTE-0033",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Evidence Weight deep reference unit per DEC-110."
     },
@@ -445,7 +511,9 @@
       "route_id_if_applicable": "ROUTE-0034",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Interpretation Risk deep reference unit per DEC-110."
     },
@@ -457,7 +525,9 @@
       "route_id_if_applicable": "ROUTE-0035",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Not-Assessable Posture deep reference unit per DEC-110."
     },
@@ -469,7 +539,9 @@
       "route_id_if_applicable": "ROUTE-0036",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Source Unclear pathway per DEC-111."
     },
@@ -481,7 +553,9 @@
       "route_id_if_applicable": "ROUTE-0037",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Provenance Weak pathway per DEC-111."
     },
@@ -493,7 +567,9 @@
       "route_id_if_applicable": "ROUTE-0038",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Context Missing pathway per DEC-111."
     },
@@ -505,7 +581,9 @@
       "route_id_if_applicable": "ROUTE-0039",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Claim Overextended pathway per DEC-111."
     },
@@ -517,7 +595,9 @@
       "route_id_if_applicable": "ROUTE-0040",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Traceability Incomplete pathway per DEC-111."
     },
@@ -529,7 +609,9 @@
       "route_id_if_applicable": "ROUTE-0041",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Posture Not Assessable pathway per DEC-111."
     },
@@ -541,7 +623,9 @@
       "route_id_if_applicable": "ROUTE-0042",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Strategic entry-point hub per DEC-114."
     },
@@ -553,7 +637,9 @@
       "route_id_if_applicable": "ROUTE-0043",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Human readers entry point per DEC-114."
     },
@@ -565,7 +651,9 @@
       "route_id_if_applicable": "ROUTE-0044",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "AI agents entry point per DEC-114."
     },
@@ -577,7 +665,9 @@
       "route_id_if_applicable": "ROUTE-0045",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Research and review entry point per DEC-114."
     },
@@ -589,7 +679,9 @@
       "route_id_if_applicable": "ROUTE-0046",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Trust and safety entry point per DEC-114."
     },
@@ -601,7 +693,9 @@
       "route_id_if_applicable": "ROUTE-0047",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Education and literacy entry point per DEC-114."
     },
@@ -613,7 +707,9 @@
       "route_id_if_applicable": "ROUTE-0048",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Strategic narrative hub per DEC-115."
     },
@@ -625,7 +721,9 @@
       "route_id_if_applicable": "ROUTE-0049",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Evidence before verdict narrative per DEC-115."
     },
@@ -637,7 +735,9 @@
       "route_id_if_applicable": "ROUTE-0050",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Why evidence risk matters narrative per DEC-115."
     },
@@ -649,7 +749,9 @@
       "route_id_if_applicable": "ROUTE-0051",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Reference before detection narrative per DEC-115."
     },
@@ -661,7 +763,9 @@
       "route_id_if_applicable": "ROUTE-0052",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Non-verdict trust narrative per DEC-115."
     },
@@ -673,7 +777,9 @@
       "route_id_if_applicable": "ROUTE-0053",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../styles.css"],
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
       "notes": "Acquisition readiness hub per DEC-116."
     },
@@ -685,7 +791,9 @@
       "route_id_if_applicable": "ROUTE-0054",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
       "notes": "Category asset readiness per DEC-116."
     },
@@ -697,7 +805,9 @@
       "route_id_if_applicable": "ROUTE-0055",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
       "notes": "Public reference surface readiness per DEC-116."
     },
@@ -709,7 +819,9 @@
       "route_id_if_applicable": "ROUTE-0056",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
       "notes": "Governance traceability readiness per DEC-116."
     },
@@ -721,7 +833,9 @@
       "route_id_if_applicable": "ROUTE-0057",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
       "notes": "AI retrieval readiness per DEC-116."
     },
@@ -733,9 +847,81 @@
       "route_id_if_applicable": "ROUTE-0058",
       "required": true,
       "validation_scope": "html_metadata_accessibility_security",
-      "allowed_dependencies": ["../../styles.css"],
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
       "notes": "Non-detector moat readiness per DEC-116."
+    },
+    {
+      "file_id": "PUB-FILE-0059",
+      "path": "external-review/index.html",
+      "file_type": "html",
+      "public_role": "external_review_readiness",
+      "route_id_if_applicable": "ROUTE-0059",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
+      "notes": "External review hub per DEC-119."
+    },
+    {
+      "file_id": "PUB-FILE-0060",
+      "path": "external-review/reviewer-map/index.html",
+      "file_type": "html",
+      "public_role": "external_review_readiness",
+      "route_id_if_applicable": "ROUTE-0060",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
+      "notes": "Reviewer map per DEC-119."
+    },
+    {
+      "file_id": "PUB-FILE-0061",
+      "path": "external-review/public-surface-checklist/index.html",
+      "file_type": "html",
+      "public_role": "external_review_readiness",
+      "route_id_if_applicable": "ROUTE-0061",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
+      "notes": "Public surface checklist per DEC-119."
+    },
+    {
+      "file_id": "PUB-FILE-0062",
+      "path": "external-review/ai-review-guide/index.html",
+      "file_type": "html",
+      "public_role": "external_review_readiness",
+      "route_id_if_applicable": "ROUTE-0062",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
+      "notes": "AI review guide per DEC-119."
+    },
+    {
+      "file_id": "PUB-FILE-0063",
+      "path": "external-review/boundary-review-guide/index.html",
+      "file_type": "html",
+      "public_role": "external_review_readiness",
+      "route_id_if_applicable": "ROUTE-0063",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
+      "notes": "Boundary review guide per DEC-119."
     }
   ],
   "last_reviewed": "2026-06-26"
