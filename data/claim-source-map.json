@@ -2388,6 +2388,35 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Acquisition Readiness Surface v1 per DEC-116."
+    },
+    {
+      "claim_id": "CLAIM-0100",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_STRATEGIC_SURFACE_CONSOLIDATION_V1.md",
+        "PUBLIC_REFERENCE_STRATEGIC_SURFACE_CONSOLIDATION_AUDIT_V1.md",
+        "PUBLIC_STRATEGIC_SURFACE_CONSOLIDATION_STANDARD_V1.md",
+        "data/public-reference-strategic-surface-consolidation-v1.json",
+        "index.html",
+        "validators/validate_public_reference_strategic_surface_consolidation_v1.py",
+        "SPRINT_99_PUBLIC_REFERENCE_STRATEGIC_SURFACE_CONSOLIDATION_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0662",
+        "SOURCE-0663",
+        "SOURCE-0664",
+        "SOURCE-0665",
+        "SOURCE-0666",
+        "SOURCE-0667",
+        "SOURCE-0668",
+        "SOURCE-0669"
+      ],
+      "support_scope": "public reference strategic surface consolidation v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Strategic Surface Consolidation v1 per DEC-117."
     }
   ],
   "last_reviewed": "2026-06-26"

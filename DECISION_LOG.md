@@ -3031,3 +3031,28 @@ After Sprint 97 created the strategic narrative surface, Hoax.ai needed a public
 - Pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-117 — Public Reference Strategic Surface Consolidation v1 Adopted
+
+**Date:** 2026-06-26
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Strategic Surface Consolidation v1 by improving the visible strategic surface across the homepage, strategic entry points, strategic narrative pages, and acquisition-readiness pages. The sprint adds a Strategic Surface Map, Hoax.ai Strategic Surface Navigation, Strategic Surface Capsules, cross-layer links, and page-specific strategic next steps without creating new public routes, pricing statements, transaction pages, acquisition term documents, representative mandates, legal or financial representations, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 98 added acquisition-readiness pages, Hoax.ai needed visible consolidation across its strategic layers so readers and AI agents could move from role, to category thesis, to strategic inspectability without confusing the asset for a transaction surface, detector, or operational case-assessment system. This decision governs visible public-surface improvements, not abstract preparatory governance.
+
+### Implications
+
+- Existing strategic pages may receive navigation, capsule, and cross-link improvements.
+- No new public route is authorized.
+- Sitemap remains 58 URLs.
+- Route registry remains 58 entries.
+- Strategic Surface Map, Strategic Surface Navigation, Strategic Surface Capsules, cross-layer links, and Strategic next step sections are authorized.
+- Pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+
