@@ -1302,6 +1302,24 @@
       "failure_condition": "public_reference_quality_consolidation_v1_not_met",
       "bypassable": false,
       "notes": "Public Reference Quality Consolidation Audit v1 completed Sprint 91 (DEC-109). Visible repairs to metadata, boundaries, internal links, and citation reminders on eleven core pages. Not chatbot, generator, or verdict system. Sitemap remains twenty-nine URLs."
+    },
+    {
+      "gate_id": "PUB-GATE-0086",
+      "name": "Public Reference Depth Expansion v1 Gate",
+      "status": "public_reference_depth_expansion_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_92_PUBLIC_REFERENCE_DEPTH_EXPANSION_V1.md",
+      "failure_condition": "public_reference_depth_expansion_v1_not_met",
+      "bypassable": false,
+      "notes": "Public Reference Depth Expansion v1 completed Sprint 92 (DEC-110). Six deep reference routes with full component stacks. Sitemap thirty-five URLs. Not chatbot, generator, or verdict system."
     }
   ],
   "last_reviewed": "2026-06-20"

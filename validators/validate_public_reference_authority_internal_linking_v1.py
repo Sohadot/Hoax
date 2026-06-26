@@ -20,6 +20,7 @@ from public_surface_checks import (  # noqa: E402
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ANSWER_SURFACE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_CITATION_RETRIEVAL_HARDENING_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_DEPTH_EXPANSION_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_UTILITY_INTERFACE_EMBODIMENT_VALIDATION,
     validate_public_surface,
 )
@@ -31,8 +32,8 @@ LINKING_JSON = "data/public-reference-authority-internal-linking-v1.json"
 LINKING_SCHEMA = "data/public-reference-authority-internal-linking-v1.schema.json"
 SPRINT_AUDIT = "SPRINT_87_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_V1.md"
 INDEX = "index.html"
-EXPECTED_ROUTES = 29
-EXPECTED_SITEMAP = 29
+EXPECTED_ROUTES = PUBLIC_SITEMAP_URL_COUNT
+EXPECTED_SITEMAP = PUBLIC_SITEMAP_URL_COUNT
 
 UTILITY_PAGES = {
     "manual-evidence-checklist/index.html": "/manual-evidence-checklist/",
@@ -234,11 +235,11 @@ def validate_artifacts() -> bool:
 def validate_surface_counts() -> bool:
     ok = True
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
-    if sitemap.count("<loc>") != EXPECTED_SITEMAP:
+    if sitemap.count("<loc>") != PUBLIC_SITEMAP_URL_COUNT:
         error(f"sitemap must have exactly {EXPECTED_SITEMAP} URLs")
         ok = False
     routes = load_json("data/route-registry.json").get("routes", [])
-    if len(routes) != EXPECTED_ROUTES:
+    if len(routes) != PUBLIC_SITEMAP_URL_COUNT:
         error(f"route registry must have exactly {EXPECTED_ROUTES} entries")
         ok = False
     if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
@@ -337,9 +338,10 @@ def validate_governance() -> bool:
     if policy.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_AUTHORITY_INTERNAL_LINKING_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SOURCE_CONFIDENCE_LAYER_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ANSWER_SURFACE_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_CITATION_RETRIEVAL_HARDENING_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ANSWER_SURFACE_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_CITATION_RETRIEVAL_HARDENING_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_DEPTH_EXPANSION_VALIDATION,
     ):
         error("publisher status must reflect Sprint 87 internal linking validation")
         ok = False

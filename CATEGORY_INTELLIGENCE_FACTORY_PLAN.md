@@ -216,6 +216,8 @@ The Category Intelligence Factory now includes citation-safe and retrieval-stabl
 
 The Category Intelligence Factory now includes a public quality consolidation layer. Public Reference Quality Consolidation Audit v1 keeps Hoax.ai's 29-route public reference surface coherent, citation-safe, human-readable, AI-retrievable, and boundary-stable through visible repairs rather than abstract governance.
 
+The Category Intelligence Factory now includes selective public reference depth expansion. Public Reference Depth Expansion v1 adds Source Ambiguity, Artifact-Claim Gap, Boundary Integrity, Evidence Weight, Interpretation Risk, and Not-Assessable Posture as deep reference units for human understanding, AI retrieval, citation safety, and non-verdict evidence-risk reasoning.
+
 The Category Intelligence Factory treats chronology integrity as part of evidence integrity: decision records must not move backward in time unless a correction note explicitly explains and repairs the error.
 
 The category factory becomes reference-grade only when public-facing claims, evidence ledger entries, source records, and support locations are traceable as a governed system.

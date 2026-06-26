@@ -2473,6 +2473,34 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+**Sprint 92 — Public Reference Depth Expansion v1**
+
+---
+
+## Sprint 92 — Public Reference Depth Expansion v1
+
+**Status:** COMPLETE — 2026-06-20
+**Goal:** Add six deep public reference routes with full component stacks and 900+ words each without tool, verdict, or detector behavior.
+
+### Deliverables
+
+- Six deep routes: Source Ambiguity, Artifact-Claim Gap, Boundary Integrity, Evidence Weight, Interpretation Risk, Not-Assessable Posture
+- PUBLIC_REFERENCE_DEPTH_EXPANSION_V1.md, DEEP_REFERENCE_UNIT_STANDARD_V1.md, audit doc, JSON/schema, validator
+- Homepage Deeper Evidence-Risk Concepts section
+- Sitemap 35 URLs; route registry ROUTE-0030–ROUTE-0035
+- DEC-110, PUB-GATE-0086
+- Publisher status -> blocked_until_public_reference_depth_expansion_validation
+
+### Gate
+
+**Gate G92 passed.** Sprint 93 — Public Reference Pathway Pages v1 is next.
+
+### Next Phase
+
+**Sprint 93 — Public Reference Pathway Pages v1**
+
+---
+
 ## Sprint 91 — Public Reference Quality Consolidation Audit v1
 
 **Status:** COMPLETE — 2026-06-20

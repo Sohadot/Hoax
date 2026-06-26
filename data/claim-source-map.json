@@ -2193,6 +2193,34 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Quality Consolidation Audit v1 per DEC-109."
+    },
+    {
+      "claim_id": "CLAIM-0093",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_DEPTH_EXPANSION_V1.md",
+        "PUBLIC_REFERENCE_DEPTH_EXPANSION_AUDIT_V1.md",
+        "DEEP_REFERENCE_UNIT_STANDARD_V1.md",
+        "data/public-reference-depth-expansion-v1.json",
+        "source-ambiguity/index.html",
+        "validators/validate_public_reference_depth_expansion_v1.py",
+        "SPRINT_92_PUBLIC_REFERENCE_DEPTH_EXPANSION_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0613",
+        "SOURCE-0614",
+        "SOURCE-0615",
+        "SOURCE-0616",
+        "SOURCE-0617",
+        "SOURCE-0618",
+        "SOURCE-0619"
+      ],
+      "support_scope": "public reference depth expansion v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Depth Expansion v1 per DEC-110."
     }
   ],
   "last_reviewed": "2026-06-20"

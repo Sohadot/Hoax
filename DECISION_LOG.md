@@ -2862,3 +2862,27 @@ After Sprint 90 added citation and retrieval hardening, Hoax.ai needed a public-
 - Quality consolidation is not a detector, score, verdict, chatbot, generator, or report system.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-110 — Public Reference Depth Expansion v1 Adopted
+
+**Date:** 2026-06-20
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Depth Expansion v1 by adding six deep public reference routes: Source Ambiguity, Artifact-Claim Gap, Boundary Integrity, Evidence Weight, Interpretation Risk, and Not-Assessable Posture. These pages deepen the evidence-risk concept system for human understanding and AI retrieval without creating upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 91 consolidated public reference quality, Hoax.ai needed selective depth expansion rather than broad page growth. The new routes stabilize important evidence-risk concepts that support the asset's category authority, conceptual story, citation safety, and AI retrievability. This decision governs visible public pages, not abstract preparatory governance.
+
+### Implications
+
+- Six deep public reference routes are authorized.
+- Sitemap may increase from 29 to 35 URLs.
+- Route registry may increase from 29 to 35 entries.
+- New route registry entries ROUTE-0030 through ROUTE-0035 are authorized.
+- Deep reference units are authorized with citation, retrieval, source-confidence, and non-verdict components.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+

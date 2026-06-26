@@ -7809,6 +7809,76 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 91 validator."
+    },
+    {
+      "source_id": "SOURCE-0613",
+      "source_title": "PUBLIC_REFERENCE_DEPTH_EXPANSION_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_DEPTH_EXPANSION_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 92 depth expansion."
+    },
+    {
+      "source_id": "SOURCE-0614",
+      "source_title": "PUBLIC_REFERENCE_DEPTH_EXPANSION_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_DEPTH_EXPANSION_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 92 depth audit."
+    },
+    {
+      "source_id": "SOURCE-0615",
+      "source_title": "DEEP_REFERENCE_UNIT_STANDARD_V1.md",
+      "source_type": "internal_governance",
+      "location": "DEEP_REFERENCE_UNIT_STANDARD_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 92 deep reference standard."
+    },
+    {
+      "source_id": "SOURCE-0616",
+      "source_title": "data/public-reference-depth-expansion-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-depth-expansion-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 92 depth JSON."
+    },
+    {
+      "source_id": "SOURCE-0617",
+      "source_title": "data/public-reference-depth-expansion-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-depth-expansion-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 92 depth schema."
+    },
+    {
+      "source_id": "SOURCE-0618",
+      "source_title": "SPRINT_92_PUBLIC_REFERENCE_DEPTH_EXPANSION_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_92_PUBLIC_REFERENCE_DEPTH_EXPANSION_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 92 record."
+    },
+    {
+      "source_id": "SOURCE-0619",
+      "source_title": "validators/validate_public_reference_depth_expansion_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_reference_depth_expansion_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 92 validator."
     }
   ]
 }

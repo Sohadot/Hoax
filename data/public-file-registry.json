@@ -388,6 +388,78 @@
       "allowed_dependencies": ["../styles.css"],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Why Hoax.ai Is Not a Detector reference unit per DEC-103."
+    },
+    {
+      "file_id": "PUB-FILE-0030",
+      "path": "source-ambiguity/index.html",
+      "file_type": "html",
+      "public_role": "deep_reference_unit",
+      "route_id_if_applicable": "ROUTE-0030",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Source Ambiguity deep reference unit per DEC-110."
+    },
+    {
+      "file_id": "PUB-FILE-0031",
+      "path": "artifact-claim-gap/index.html",
+      "file_type": "html",
+      "public_role": "deep_reference_unit",
+      "route_id_if_applicable": "ROUTE-0031",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Artifact-Claim Gap deep reference unit per DEC-110."
+    },
+    {
+      "file_id": "PUB-FILE-0032",
+      "path": "boundary-integrity/index.html",
+      "file_type": "html",
+      "public_role": "deep_reference_unit",
+      "route_id_if_applicable": "ROUTE-0032",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Boundary Integrity deep reference unit per DEC-110."
+    },
+    {
+      "file_id": "PUB-FILE-0033",
+      "path": "evidence-weight/index.html",
+      "file_type": "html",
+      "public_role": "deep_reference_unit",
+      "route_id_if_applicable": "ROUTE-0033",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Evidence Weight deep reference unit per DEC-110."
+    },
+    {
+      "file_id": "PUB-FILE-0034",
+      "path": "interpretation-risk/index.html",
+      "file_type": "html",
+      "public_role": "deep_reference_unit",
+      "route_id_if_applicable": "ROUTE-0034",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Interpretation Risk deep reference unit per DEC-110."
+    },
+    {
+      "file_id": "PUB-FILE-0035",
+      "path": "not-assessable-posture/index.html",
+      "file_type": "html",
+      "public_role": "deep_reference_unit",
+      "route_id_if_applicable": "ROUTE-0035",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Not-Assessable Posture deep reference unit per DEC-110."
     }
   ],
   "last_reviewed": "2026-06-20"

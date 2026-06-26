@@ -98,6 +98,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_public_reference_answer_surface_v1.py",
     ROOT / "validators" / "validate_public_reference_citation_retrieval_hardening_v1.py",
     ROOT / "validators" / "validate_public_reference_quality_consolidation_audit_v1.py",
+    ROOT / "validators" / "validate_public_reference_depth_expansion_v1.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

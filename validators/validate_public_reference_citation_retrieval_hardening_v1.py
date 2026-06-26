@@ -16,6 +16,7 @@ from public_surface_checks import (  # noqa: E402
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ANSWER_SURFACE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_CITATION_RETRIEVAL_HARDENING_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_DEPTH_EXPANSION_VALIDATION,
     validate_public_surface,
 )
 
@@ -159,11 +160,11 @@ def validate_artifacts() -> bool:
 
 def validate_counts() -> bool:
     ok = True
-    if (ROOT / "sitemap.xml").read_text(encoding="utf-8").count("<loc>") != EXPECTED:
+    if (ROOT / "sitemap.xml").read_text(encoding="utf-8").count("<loc>") != PUBLIC_SITEMAP_URL_COUNT:
         error(f"sitemap must have exactly {EXPECTED} URLs")
         ok = False
     routes = load_json("data/route-registry.json").get("routes", [])
-    if len(routes) != EXPECTED:
+    if len(routes) != PUBLIC_SITEMAP_URL_COUNT:
         error(f"route registry must have exactly {EXPECTED} entries")
         ok = False
     if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
@@ -247,6 +248,7 @@ def validate_governance() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_CITATION_RETRIEVAL_HARDENING_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ANSWER_SURFACE_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_DEPTH_EXPANSION_VALIDATION,
     ):
         error("publisher status must reflect Sprint 90 citation retrieval hardening validation")
         ok = False

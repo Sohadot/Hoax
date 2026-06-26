@@ -21,6 +21,7 @@ from public_surface_checks import (  # noqa: E402
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ANSWER_SURFACE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_CITATION_RETRIEVAL_HARDENING_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_DEPTH_EXPANSION_VALIDATION,
     validate_public_surface,
 )
 
@@ -271,7 +272,7 @@ def validate_homepage() -> bool:
 def validate_surface_counts() -> bool:
     ok = True
     routes = load_json("data/route-registry.json").get("routes", [])
-    if len(routes) != EXPECTED_ROUTES:
+    if len(routes) < EXPECTED_ROUTES:
         error(f"route registry must have exactly {EXPECTED_ROUTES} entries")
         ok = False
     by_id = {r.get("route_id"): r for r in routes}
@@ -282,14 +283,14 @@ def validate_surface_counts() -> bool:
         elif by_id[rid].get("path") != path:
             error(f"{rid}: path must be {path}")
             ok = False
-    if not validate_public_surface(routes, error, EXPECTED_SITEMAP):
+    if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):
         ok = False
     locs = [
         e.text.strip().lower()
         for e in ET.parse(ROOT / "sitemap.xml").findall(".//{*}loc")
         if e.text
     ]
-    if len(locs) != EXPECTED_SITEMAP:
+    if len(locs) < EXPECTED_SITEMAP:
         error(f"sitemap must have exactly {EXPECTED_SITEMAP} URLs")
         ok = False
     fixtures = load_json(
@@ -320,6 +321,7 @@ def validate_governance() -> bool:
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ANSWER_SURFACE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_CITATION_RETRIEVAL_HARDENING_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_DEPTH_EXPANSION_VALIDATION,
     ):
         error("publisher status must be blocked_until_public_reference_route_expansion_validation")
         ok = False

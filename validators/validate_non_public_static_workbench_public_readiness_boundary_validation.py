@@ -710,6 +710,7 @@ def validate_governance_and_registry() -> bool:
         "blocked_until_public_reference_answer_surface_validation",
         "blocked_until_public_reference_citation_retrieval_hardening_validation",
         "blocked_until_public_reference_quality_consolidation_validation",
+        "blocked_until_public_reference_depth_expansion_validation",
     ):
         error("publisher status must be blocked until public route eligibility governance")
         ok = False
