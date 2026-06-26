@@ -1124,6 +1124,17 @@
       "status": "active",
       "last_reviewed": "2026-06-26",
       "notes": "Sprint 101 external review readiness. Sitemap sixty-three URLs."
+    },
+    {
+      "claim_id": "CLAIM-0103",
+      "claim_text": "Hoax.ai has adopted Public Reference Reviewer Packet v1, adding five reviewer-packet routes that organize public inspection for human reviewers and AI agents without new tools, private data-room access, downloadable reports, pricing statements, transaction pages, chatbots, generators, verdicts, or detector behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_REVIEWER_PACKET_V1.md, PUBLIC_REVIEWER_PACKET_STANDARD_V1.md, data/public-reference-reviewer-packet-v1.json, reviewer-packet/index.html, validators/validate_public_reference_reviewer_packet_v1.py, SPRINT_102_PUBLIC_REFERENCE_REVIEWER_PACKET_V1.md, DECISION_LOG.md (DEC-120)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-26",
+      "notes": "Sprint 102 reviewer packet. Sitemap sixty-eight URLs."
     }
   ]
 }

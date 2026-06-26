@@ -2471,6 +2471,34 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference External Review Readiness v1 per DEC-119."
+    },
+    {
+      "claim_id": "CLAIM-0103",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_REVIEWER_PACKET_V1.md",
+        "PUBLIC_REFERENCE_REVIEWER_PACKET_AUDIT_V1.md",
+        "PUBLIC_REVIEWER_PACKET_STANDARD_V1.md",
+        "data/public-reference-reviewer-packet-v1.json",
+        "reviewer-packet/index.html",
+        "validators/validate_public_reference_reviewer_packet_v1.py",
+        "SPRINT_102_PUBLIC_REFERENCE_REVIEWER_PACKET_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0683",
+        "SOURCE-0684",
+        "SOURCE-0685",
+        "SOURCE-0686",
+        "SOURCE-0687",
+        "SOURCE-0688",
+        "SOURCE-0689"
+      ],
+      "support_scope": "public reference reviewer packet v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Reviewer Packet v1 per DEC-120."
     }
   ],
   "last_reviewed": "2026-06-26"

@@ -922,6 +922,76 @@
       ],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict, pricing, transaction",
       "notes": "Boundary review guide per DEC-119."
+    },
+    {
+      "file_id": "PUB-FILE-0064",
+      "path": "reviewer-packet/index.html",
+      "file_type": "html",
+      "public_role": "reviewer_packet",
+      "route_id_if_applicable": "ROUTE-0064",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction",
+      "notes": "Sprint 102 reviewer packet per DEC-120."
+    },
+    {
+      "file_id": "PUB-FILE-0065",
+      "path": "reviewer-packet/review-sequence/index.html",
+      "file_type": "html",
+      "public_role": "reviewer_packet",
+      "route_id_if_applicable": "ROUTE-0065",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction",
+      "notes": "Sprint 102 reviewer packet per DEC-120."
+    },
+    {
+      "file_id": "PUB-FILE-0066",
+      "path": "reviewer-packet/public-surface-index/index.html",
+      "file_type": "html",
+      "public_role": "reviewer_packet",
+      "route_id_if_applicable": "ROUTE-0066",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction",
+      "notes": "Sprint 102 reviewer packet per DEC-120."
+    },
+    {
+      "file_id": "PUB-FILE-0067",
+      "path": "reviewer-packet/citation-and-retrieval-map/index.html",
+      "file_type": "html",
+      "public_role": "reviewer_packet",
+      "route_id_if_applicable": "ROUTE-0067",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction",
+      "notes": "Sprint 102 reviewer packet per DEC-120."
+    },
+    {
+      "file_id": "PUB-FILE-0068",
+      "path": "reviewer-packet/boundary-and-readiness-summary/index.html",
+      "file_type": "html",
+      "public_role": "reviewer_packet",
+      "route_id_if_applicable": "ROUTE-0068",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction",
+      "notes": "Sprint 102 reviewer packet per DEC-120."
     }
   ],
   "last_reviewed": "2026-06-26"

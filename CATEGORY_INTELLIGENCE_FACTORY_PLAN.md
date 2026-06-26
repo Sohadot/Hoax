@@ -230,6 +230,8 @@ The Category Intelligence Factory now includes public strategic surface consolid
 
 The Category Intelligence Factory now includes public release integrity audit. Public Reference Release Integrity Audit v1 inspects the full 58-route public surface, adds a homepage Public Release Integrity Snapshot, and validates route-count, file, metadata, link, component, and boundary integrity without creating new routes, pricing statements, transaction pages, or operational tool behavior.
 
+The Category Intelligence Factory now includes a public reviewer packet. Public Reference Reviewer Packet v1 organizes review sequence, public surface indexing, citation and retrieval guidance, and boundary summaries for human reviewers and AI agents without creating transaction behavior, pricing statements, private data-room access, downloadable reports, verdicts, detector behavior, scoring, upload behavior, or automated reports.
+
 The Category Intelligence Factory now includes public external-review readiness. Public Reference External Review Readiness v1 gives human reviewers and AI agents structured review paths for Hoax.ai's public surface, AI retrieval behavior, and boundary discipline without creating transaction behavior, pricing statements, verdicts, detector behavior, scoring, upload behavior, or automated reports.
 
 The Category Intelligence Factory now includes public surface authority review. Public Reference Surface Authority Review v1 strengthens the full 41-route Hoax.ai public surface by improving page role clarity, system placement, internal authority links, citation safety, AI readability, and boundary language through visible repairs rather than abstract governance.

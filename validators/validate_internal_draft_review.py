@@ -749,6 +749,7 @@ def validate_publisher_and_gates() -> bool:
         "blocked_until_public_reference_strategic_surface_consolidation_validation",
         "blocked_until_public_reference_release_integrity_audit_validation",
         "blocked_until_public_reference_external_review_readiness_validation",
+        "blocked_until_public_reference_reviewer_packet_validation",
     ):
         error(
             f"publisher-governance-policy: current_publisher_status must be "

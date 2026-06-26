@@ -16,6 +16,7 @@ from public_surface_checks import (  # noqa: E402
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXTERNAL_REVIEW_READINESS_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_REVIEWER_PACKET_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_RELEASE_INTEGRITY_AUDIT_VALIDATION,
     validate_public_surface,
 )
@@ -194,11 +195,11 @@ def validate_counts() -> bool:
     ok = True
     sitemap_count = len([u for u in ET.parse(ROOT / "sitemap.xml").getroot().iter() if u.tag.endswith("loc")])
     routes = load_json("data/route-registry.json").get("routes", [])
-    if sitemap_count != EXPECTED:
-        error(f"sitemap must have {EXPECTED} URLs, found {sitemap_count}")
+    if sitemap_count != PUBLIC_SITEMAP_URL_COUNT:
+        error(f"sitemap must have {PUBLIC_SITEMAP_URL_COUNT} URLs, found {sitemap_count}")
         ok = False
-    if len(routes) != EXPECTED:
-        error(f"route registry must have {EXPECTED} entries, found {len(routes)}")
+    if len(routes) != PUBLIC_SITEMAP_URL_COUNT:
+        error(f"route registry must have {PUBLIC_SITEMAP_URL_COUNT} entries, found {len(routes)}")
         ok = False
     by_id = {r.get("route_id"): r for r in routes}
     for rid, path in zip(ROUTE_IDS, NEW_PATHS):
@@ -339,7 +340,9 @@ def validate_governance() -> bool:
     policy = load_json("data/publisher-governance-policy.json")
     if policy.get("current_publisher_status") not in (
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXTERNAL_REVIEW_READINESS_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_REVIEWER_PACKET_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_RELEASE_INTEGRITY_AUDIT_VALIDATION,
+        "blocked_until_public_reference_reviewer_packet_validation",
     ):
         error("publisher status must reflect Sprint 101 external review readiness validation")
         ok = False

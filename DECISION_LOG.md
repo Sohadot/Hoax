@@ -3108,3 +3108,28 @@ After Sprint 100 validated release integrity across the 58-route public surface,
 - Pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-120 — Public Reference Reviewer Packet v1 Adopted
+
+**Date:** 2026-06-26
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Reviewer Packet v1 by adding five public reviewer-packet routes: Hoax.ai Reviewer Packet, Reviewer Sequence, Public Surface Index for Reviewers, Citation and Retrieval Map, and Boundary and Readiness Summary. These pages organize public inspection of Hoax.ai's reference surface without creating new public tools, private data-room access, downloadable reports, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, real-world case evaluation, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, or financial representations.
+
+### Rationale
+
+After Sprint 101 added external-review readiness, Hoax.ai needed a public reviewer packet that organizes the most important review sequences, public surface index, citation and retrieval guidance, and boundary summaries for human reviewers and AI agents. This decision governs visible public pages, not abstract preparatory governance.
+
+### Implications
+
+- Five public reviewer-packet routes are authorized.
+- Sitemap may increase from 63 to 68 URLs.
+- Route registry may increase from 63 to 68 entries.
+- New route registry entries ROUTE-0064 through ROUTE-0068 are authorized.
+- Reviewer-packet pages are authorized as static, non-verdict, non-transactional public reference routes.
+- Private data-room access, downloadable reports, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+

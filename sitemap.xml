@@ -378,4 +378,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
   </url>
+  <url>
+    <loc>https://hoax.ai/reviewer-packet/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/reviewer-packet/review-sequence/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/reviewer-packet/public-surface-index/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/reviewer-packet/citation-and-retrieval-map/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/reviewer-packet/boundary-and-readiness-summary/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+  </url>
 </urlset>
