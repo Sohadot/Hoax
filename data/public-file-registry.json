@@ -460,7 +460,79 @@
       "allowed_dependencies": ["../styles.css"],
       "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
       "notes": "Not-Assessable Posture deep reference unit per DEC-110."
+    },
+    {
+      "file_id": "PUB-FILE-0036",
+      "path": "pathways/source-unclear/index.html",
+      "file_type": "html",
+      "public_role": "pathway_page",
+      "route_id_if_applicable": "ROUTE-0036",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Source Unclear pathway per DEC-111."
+    },
+    {
+      "file_id": "PUB-FILE-0037",
+      "path": "pathways/provenance-weak/index.html",
+      "file_type": "html",
+      "public_role": "pathway_page",
+      "route_id_if_applicable": "ROUTE-0037",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Provenance Weak pathway per DEC-111."
+    },
+    {
+      "file_id": "PUB-FILE-0038",
+      "path": "pathways/context-missing/index.html",
+      "file_type": "html",
+      "public_role": "pathway_page",
+      "route_id_if_applicable": "ROUTE-0038",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Context Missing pathway per DEC-111."
+    },
+    {
+      "file_id": "PUB-FILE-0039",
+      "path": "pathways/claim-overextended/index.html",
+      "file_type": "html",
+      "public_role": "pathway_page",
+      "route_id_if_applicable": "ROUTE-0039",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Claim Overextended pathway per DEC-111."
+    },
+    {
+      "file_id": "PUB-FILE-0040",
+      "path": "pathways/traceability-incomplete/index.html",
+      "file_type": "html",
+      "public_role": "pathway_page",
+      "route_id_if_applicable": "ROUTE-0040",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Traceability Incomplete pathway per DEC-111."
+    },
+    {
+      "file_id": "PUB-FILE-0041",
+      "path": "pathways/posture-not-assessable/index.html",
+      "file_type": "html",
+      "public_role": "pathway_page",
+      "route_id_if_applicable": "ROUTE-0041",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": ["../../styles.css"],
+      "prohibited_content": "forms, scripts, external deps, active tool claims, upload, scoring, classifier, detector, verdict",
+      "notes": "Posture Not Assessable pathway per DEC-111."
     }
   ],
-  "last_reviewed": "2026-06-20"
+  "last_reviewed": "2026-06-26"
 }

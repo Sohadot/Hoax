@@ -17,6 +17,7 @@ PUBLIC_ROUTE_IDS = [
     "ROUTE-0024", "ROUTE-0025", "ROUTE-0026", "ROUTE-0027",
     "ROUTE-0028", "ROUTE-0029",
     "ROUTE-0030", "ROUTE-0031", "ROUTE-0032", "ROUTE-0033", "ROUTE-0034", "ROUTE-0035",
+    "ROUTE-0036", "ROUTE-0037", "ROUTE-0038", "ROUTE-0039", "ROUTE-0040", "ROUTE-0041",
 ]
 
 PILOT_ROUTE_IDS = PUBLIC_ROUTE_IDS  # backward compatibility
@@ -64,6 +65,12 @@ ALLOWED_PUBLIC_HTML = {
     "evidence-weight/index.html",
     "interpretation-risk/index.html",
     "not-assessable-posture/index.html",
+    "pathways/source-unclear/index.html",
+    "pathways/provenance-weak/index.html",
+    "pathways/context-missing/index.html",
+    "pathways/claim-overextended/index.html",
+    "pathways/traceability-incomplete/index.html",
+    "pathways/posture-not-assessable/index.html",
 }
 
 ALLOWED_INTERNAL_PROTOTYPE_HTML = {
@@ -78,7 +85,7 @@ ALLOWED_PUBLIC_ROOT_FILES = ALLOWED_PUBLIC_HTML | {
     "sitemap.xml",
 }
 
-PUBLIC_SITEMAP_URL_COUNT = 35
+PUBLIC_SITEMAP_URL_COUNT = 41
 
 PILOT_SITEMAP_URL_COUNT = PUBLIC_SITEMAP_URL_COUNT  # backward compatibility
 
@@ -260,6 +267,10 @@ PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_DEPTH_EXPANSION_VALIDATION = (
     "blocked_until_public_reference_depth_expansion_validation"
 )
 
+PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PATHWAY_PAGES_VALIDATION = (
+    "blocked_until_public_reference_pathway_pages_validation"
+)
+
 PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_reference_candidate_pack",
     "blocked_until_internal_draft_blueprint",
@@ -332,6 +343,7 @@ PUBLISHER_STATUSES_ALLOWED = (
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_CITATION_RETRIEVAL_HARDENING_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_DEPTH_EXPANSION_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PATHWAY_PAGES_VALIDATION,
 )
 
 

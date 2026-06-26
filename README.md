@@ -112,4 +112,4 @@ Each page also includes **Cite This Reference** and **Retrieval Capsule** blocks
 
 Sprint 91 consolidated public reference quality across the 29-route surface: page-specific boundary and citation reminders, stronger homepage deep links to answer anchors, and safer Open Graph wording — without new routes, tools, or verdict behavior.
 
-Sprint 92 added six deep reference routes — Source Ambiguity, Artifact-Claim Gap, Boundary Integrity, Evidence Weight, Interpretation Risk, and Not-Assessable Posture — each with 900+ words and full citation/retrieval component stacks. The public surface is now 35 routes.
+Sprint 93 added six public evidence-risk pathway routes — When the Source Is Unclear, When Provenance Is Weak, When Context Is Missing, When the Claim Goes Beyond the Artifact, When Traceability Is Incomplete, and When Evidence Is Not Assessable — each with 850+ words and full pathway/reference component stacks. The public surface is now 41 routes.

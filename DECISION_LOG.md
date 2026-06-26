@@ -2886,3 +2886,27 @@ After Sprint 91 consolidated public reference quality, Hoax.ai needed selective 
 - Deep reference units are authorized with citation, retrieval, source-confidence, and non-verdict components.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-111 — Public Reference Pathway Pages v1 Adopted
+
+**Date:** 2026-06-26
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Pathway Pages v1 by adding six public pathway routes: When the Source Is Unclear, When Provenance Is Weak, When Context Is Missing, When the Claim Goes Beyond the Artifact, When Traceability Is Incomplete, and When Evidence Is Not Assessable. These pages guide humans and AI agents through Hoax.ai's evidence-risk concepts by condition without creating upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, or real-world case evaluation.
+
+### Rationale
+
+After Sprint 92 expanded the deep reference layer, Hoax.ai needed pathway pages that help visitors navigate the concept system by evidence condition rather than by generic menu structure. This decision governs visible public pages, not abstract preparatory governance. The pathway pages strengthen human usability, AI retrieval, internal authority, and category inevitability.
+
+### Implications
+
+- Six public pathway routes are authorized.
+- Sitemap may increase from 35 to 41 URLs.
+- Route registry may increase from 35 to 41 entries.
+- New route registry entries ROUTE-0036 through ROUTE-0041 are authorized.
+- Pathway pages are authorized as static, non-verdict reference routes.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+

@@ -2473,6 +2473,34 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+**Sprint 93 — Public Reference Pathway Pages v1**
+
+---
+
+## Sprint 93 — Public Reference Pathway Pages v1
+
+**Status:** COMPLETE — 2026-06-26
+**Goal:** Add six public evidence-risk pathway routes that guide humans and AI agents by condition without tool, verdict, or detector behavior.
+
+### Deliverables
+
+- Six pathway routes: Source Unclear, Provenance Weak, Context Missing, Claim Overextended, Traceability Incomplete, Posture Not Assessable
+- PUBLIC_REFERENCE_PATHWAY_PAGES_V1.md, PUBLIC_PATHWAY_PAGE_STANDARD_V1.md, audit doc, JSON/schema, validator
+- Homepage Evidence-Risk Pathways section
+- Sitemap 41 URLs; route registry ROUTE-0036–ROUTE-0041
+- DEC-111, PUB-GATE-0087
+- Publisher status -> blocked_until_public_reference_pathway_pages_validation
+
+### Gate
+
+**Gate G93 passed.** Sprint 94 — Public Reference Navigation and IA Consolidation v1 is next.
+
+### Next Phase
+
+**Sprint 94 — Public Reference Navigation and IA Consolidation v1**
+
+---
+
 **Sprint 92 — Public Reference Depth Expansion v1**
 
 ---

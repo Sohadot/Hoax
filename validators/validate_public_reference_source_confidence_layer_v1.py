@@ -19,6 +19,7 @@ from public_surface_checks import (  # noqa: E402
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_CITATION_RETRIEVAL_HARDENING_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_QUALITY_CONSOLIDATION_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_DEPTH_EXPANSION_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_PATHWAY_PAGES_VALIDATION,
     validate_public_surface,
 )
 
@@ -231,6 +232,7 @@ def validate_governance() -> bool:
         "blocked_until_public_reference_citation_retrieval_hardening_validation",
         "blocked_until_public_reference_quality_consolidation_validation",
         "blocked_until_public_reference_depth_expansion_validation",
+        "blocked_until_public_reference_pathway_pages_validation",
     ):
         error("publisher status must reflect Sprint 88 source confidence layer validation")
         ok = False

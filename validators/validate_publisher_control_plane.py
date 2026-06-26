@@ -75,7 +75,7 @@ REQUIRED_STATES = [
     "retired",
 ]
 
-REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 87)]
+REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 88)]
 
 REQUIRED_WORKFLOW_IDS = [f"PUB-WORKFLOW-{i:04d}" for i in range(1, 16)]
 
@@ -394,6 +394,7 @@ def validate_state_machine() -> bool:
         "blocked_until_public_reference_citation_retrieval_hardening_validation",
         "blocked_until_public_reference_quality_consolidation_validation",
         "blocked_until_public_reference_depth_expansion_validation",
+        "blocked_until_public_reference_pathway_pages_validation",
     ):
         error(f"publisher-state-machine.json: invalid current_system_state {current}")
         ok = False

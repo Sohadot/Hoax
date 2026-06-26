@@ -2221,7 +2221,35 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Depth Expansion v1 per DEC-110."
+    },
+    {
+      "claim_id": "CLAIM-0094",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_PATHWAY_PAGES_V1.md",
+        "PUBLIC_REFERENCE_PATHWAY_PAGES_AUDIT_V1.md",
+        "PUBLIC_PATHWAY_PAGE_STANDARD_V1.md",
+        "data/public-reference-pathway-pages-v1.json",
+        "pathways/source-unclear/index.html",
+        "validators/validate_public_reference_pathway_pages_v1.py",
+        "SPRINT_93_PUBLIC_REFERENCE_PATHWAY_PAGES_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0620",
+        "SOURCE-0621",
+        "SOURCE-0622",
+        "SOURCE-0623",
+        "SOURCE-0624",
+        "SOURCE-0625",
+        "SOURCE-0626"
+      ],
+      "support_scope": "public reference pathway pages v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Pathway Pages v1 per DEC-111."
     }
   ],
-  "last_reviewed": "2026-06-20"
+  "last_reviewed": "2026-06-26"
 }

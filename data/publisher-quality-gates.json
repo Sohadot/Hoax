@@ -1320,7 +1320,25 @@
       "failure_condition": "public_reference_depth_expansion_v1_not_met",
       "bypassable": false,
       "notes": "Public Reference Depth Expansion v1 completed Sprint 92 (DEC-110). Six deep reference routes with full component stacks. Sitemap thirty-five URLs. Not chatbot, generator, or verdict system."
+    },
+    {
+      "gate_id": "PUB-GATE-0087",
+      "name": "Public Reference Pathway Pages v1 Gate",
+      "status": "public_reference_pathway_pages_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_93_PUBLIC_REFERENCE_PATHWAY_PAGES_V1.md",
+      "failure_condition": "public_reference_pathway_pages_v1_not_met",
+      "bypassable": false,
+      "notes": "Public Reference Pathway Pages v1 completed Sprint 93 (DEC-111). Six pathway routes with full component stacks. Sitemap forty-one URLs. Not chatbot, generator, or verdict system."
     }
   ],
-  "last_reviewed": "2026-06-20"
+  "last_reviewed": "2026-06-26"
 }
