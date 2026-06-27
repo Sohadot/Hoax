@@ -117,6 +117,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_public_reference_system_map_surface_v1.py",
     ROOT / "validators" / "validate_public_reference_system_map_integrity_audit_v1.py",
     ROOT / "validators" / "validate_public_reference_navigation_backbone_consolidation_v1.py",
+    ROOT / "validators" / "validate_public_reference_navigation_backbone_integrity_audit_v1.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

@@ -2518,6 +2518,26 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+## Sprint 111 — Public Reference Navigation Backbone Integrity Audit v1
+
+**Status:** COMPLETE — 2026-06-27
+**Goal:** Inspect full 83-route public surface; add Navigation Backbone Integrity Snapshot and system-map integrity note; repair navigation-backbone integrity issues without new routes.
+
+### Deliverables
+
+- Navigation Backbone Integrity Snapshot on homepage
+- Navigation Backbone Integrity Note on `/system-map/`
+- PUBLIC_REFERENCE_NAVIGATION_BACKBONE_INTEGRITY_AUDIT_V1.md, repair log, standard, JSON/schema, validator
+- Sitemap 83 URLs unchanged; route registry 83 entries unchanged
+- DEC-129, PUB-GATE-0105, CLAIM-0112
+- `total_repairs_made`: 2
+
+### Gate
+
+**Gate G111 passed.** Sprint 112 — Public Reference Route Group Deepening v1 is next.
+
+---
+
 ## Sprint 108 — Public Reference System Map Surface v1
 
 **Status:** COMPLETE — 2026-06-27

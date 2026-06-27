@@ -2725,6 +2725,35 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Navigation Backbone Consolidation v1 per DEC-128."
+    },
+    {
+      "claim_id": "CLAIM-0112",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_NAVIGATION_BACKBONE_INTEGRITY_AUDIT_V1.md",
+        "PUBLIC_REFERENCE_NAVIGATION_BACKBONE_INTEGRITY_REPAIR_LOG_V1.md",
+        "PUBLIC_NAVIGATION_BACKBONE_INTEGRITY_STANDARD_V1.md",
+        "data/public-reference-navigation-backbone-integrity-audit-v1.json",
+        "index.html",
+        "system-map/index.html",
+        "validators/validate_public_reference_navigation_backbone_integrity_audit_v1.py",
+        "SPRINT_111_PUBLIC_REFERENCE_NAVIGATION_BACKBONE_INTEGRITY_AUDIT_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0747",
+        "SOURCE-0748",
+        "SOURCE-0749",
+        "SOURCE-0750",
+        "SOURCE-0751",
+        "SOURCE-0752",
+        "SOURCE-0753"
+      ],
+      "support_scope": "public reference navigation backbone integrity audit v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Navigation Backbone Integrity Audit v1 per DEC-129."
     }
   ],
   "last_reviewed": "2026-06-27"

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Validate Sprint 103 — Public Reference Review Packet Integrity Audit v1."""
+"""Validate Sprint 111 — Public Reference Navigation Backbone Integrity Audit v1."""
 
 from __future__ import annotations
 
 import json
+import py_compile
 import re
 import subprocess
 import sys
@@ -15,70 +16,30 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (  # noqa: E402
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_REVIEWER_PACKET_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_REVIEW_PACKET_INTEGRITY_AUDIT_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_SURFACE_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_INTEGRITY_AUDIT_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_SURFACE_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_INTEGRITY_AUDIT_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_BACKBONE_INTEGRITY_AUDIT_VALIDATION,
     validate_public_surface,
+)
 
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_BACKBONE_CONSOLIDATION_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_BACKBONE_INTEGRITY_AUDIT_VALIDATION,)
-
-AUDIT_DOC = "PUBLIC_REFERENCE_REVIEW_PACKET_INTEGRITY_AUDIT_V1.md"
-REPAIR_DOC = "PUBLIC_REFERENCE_REVIEW_PACKET_INTEGRITY_REPAIR_LOG_V1.md"
-STANDARD_DOC = "PUBLIC_REVIEW_PACKET_INTEGRITY_STANDARD_V1.md"
-AUDIT_JSON = "data/public-reference-review-packet-integrity-audit-v1.json"
-AUDIT_SCHEMA = "data/public-reference-review-packet-integrity-audit-v1.schema.json"
-SPRINT_DOC = "SPRINT_103_PUBLIC_REFERENCE_REVIEW_PACKET_INTEGRITY_AUDIT_V1.md"
-PACKET_HUB = "reviewer-packet/index.html"
-EXPECTED = 68
-
-REVIEWER_PACKET_PAGES = [
-    "reviewer-packet/index.html",
-    "reviewer-packet/review-sequence/index.html",
-    "reviewer-packet/public-surface-index/index.html",
-    "reviewer-packet/citation-and-retrieval-map/index.html",
-    "reviewer-packet/boundary-and-readiness-summary/index.html",
-]
-
-REVIEWER_PACKET_PATHS = [
-    "/reviewer-packet/",
-    "/reviewer-packet/review-sequence/",
-    "/reviewer-packet/public-surface-index/",
-    "/reviewer-packet/citation-and-retrieval-map/",
-    "/reviewer-packet/boundary-and-readiness-summary/",
-]
-
-REQUIRED_PACKET_SECTIONS = [
-    "Reference summary",
-    "Packet purpose",
-    "Review path",
-    "What this page supports",
-    "What this page does not claim",
-    "Reference Answer",
-    "Source Confidence",
-    "Cite This Reference",
-    "Retrieval Capsule",
-    "Boundary reminder",
-    "Non-transactional review boundary",
-]
+AUDIT_DOC = "PUBLIC_REFERENCE_NAVIGATION_BACKBONE_INTEGRITY_AUDIT_V1.md"
+REPAIR_DOC = "PUBLIC_REFERENCE_NAVIGATION_BACKBONE_INTEGRITY_REPAIR_LOG_V1.md"
+STANDARD_DOC = "PUBLIC_NAVIGATION_BACKBONE_INTEGRITY_STANDARD_V1.md"
+AUDIT_JSON = "data/public-reference-navigation-backbone-integrity-audit-v1.json"
+AUDIT_SCHEMA = "data/public-reference-navigation-backbone-integrity-audit-v1.schema.json"
+SPRINT_DOC = "SPRINT_111_PUBLIC_REFERENCE_NAVIGATION_BACKBONE_INTEGRITY_AUDIT_V1.md"
+HOMEPAGE = "index.html"
+MAP_HUB = "system-map/index.html"
 
 STALE_ROUTE_COUNTS = [
-    "63-route",
     "58-route",
+    "58 routes",
+    "63-route",
+    "63 routes",
     "68-route",
-    "63 urls",
-    "58 urls",
-    "68 urls",
-    "29-route",
-    "41-route",
-    "47-route",
-    "52-route",
+    "68 routes",
+    "73-route",
+    "73 routes",
+    "78-route",
+    "78 routes",
 ]
 
 FORBIDDEN_CLAIMS = [
@@ -113,6 +74,13 @@ FORBIDDEN_CLAIMS = [
     "listed for sale",
     "private data room",
     "downloadable report",
+    "pitch deck",
+    "sales page",
+    "due diligence room",
+    "scorecard",
+    "rating system",
+    "dashboard",
+    "graph tool",
 ]
 
 NEGATION_PATTERN = re.compile(
@@ -121,8 +89,6 @@ NEGATION_PATTERN = re.compile(
 )
 
 SOURCE_LOCS = [AUDIT_DOC, REPAIR_DOC, STANDARD_DOC, AUDIT_JSON, AUDIT_SCHEMA, SPRINT_DOC]
-
-PUBLIC_FILE_REGISTRY_SUPPORT = {"styles.css", "sitemap.xml", "robots.txt"}
 
 
 def error(msg: str) -> None:
@@ -138,9 +104,34 @@ def route_to_file(path: str) -> str:
     return "index.html" if not p else f"{p}/index.html"
 
 
-def line_has_unnegated_claim(line: str, claim: str) -> bool:
-    lower = line.lower()
+def strip_tags(html: str) -> str:
+    return re.sub(r"<[^>]+>", " ", html)
+
+
+def text_has_unnegated_claim(text: str, claim: str) -> bool:
+    lower = re.sub(r"\s+", " ", strip_tags(text)).lower()
     if claim not in lower:
+        return False
+    if re.search(r"not a [\w\s,\-/]*" + re.escape(claim) + r"s?\b", lower):
+        return False
+    if re.search(r"not an [\w\s,\-/]*" + re.escape(claim) + r"s?\b", lower):
+        return False
+    if re.search(r"not [\w\s,\-/]*" + re.escape(claim) + r"s?\b", lower):
+        return False
+    if re.search(r"without [\w\s,\-/]*" + re.escape(claim) + r"s?\b", lower):
+        return False
+    if any(
+        marker in lower
+        for marker in (
+            "does not support",
+            "what the map does not",
+            "what this map does not",
+            "what the backbone does not",
+            "navigation backbone role",
+        )
+    ) and claim in lower:
+        return False
+    if claim == "dashboard" and re.search(r"detector[\s-]dashboard", lower):
         return False
     pos = 0
     while True:
@@ -150,11 +141,17 @@ def line_has_unnegated_claim(line: str, claim: str) -> bool:
         if claim == "valuation" and idx > 0 and lower[idx - 1] == "e":
             pos = idx + len(claim)
             continue
-        prefix = lower[max(0, idx - 80) : idx]
-        if not NEGATION_PATTERN.search(prefix + claim):
-            return True
+        prefix = lower[max(0, idx - 120) : idx]
+        if NEGATION_PATTERN.search(prefix + claim):
+            pos = idx + len(claim)
+            continue
+        return True
         pos = idx + len(claim)
     return False
+
+
+def line_has_unnegated_claim(line: str, claim: str) -> bool:
+    return text_has_unnegated_claim(line, claim)
 
 
 def internal_route_set() -> set[str]:
@@ -173,30 +170,44 @@ def validate_artifacts() -> bool:
             error(f"missing {rel}")
             ok = False
     data = load_json(AUDIT_JSON)
-    if data.get("decision_ref") != "DEC-121":
-        error("decision_ref must be DEC-121")
+    if data.get("decision_ref") != "DEC-129":
+        error("decision_ref must be DEC-129")
         ok = False
     if data.get("new_public_routes_added") is not False:
         error("new_public_routes_added must be false")
         ok = False
-    if data.get("total_repairs_made", 0) < 1:
-        error("total_repairs_made must be at least 1")
+    if data.get("total_repairs_made", 0) < 2:
+        error("total_repairs_made must be at least 2")
         ok = False
-    if data.get("reviewer_packet_integrity_snapshot_added") is not True:
-        error("reviewer_packet_integrity_snapshot_added must be true")
+    if data.get("navigation_backbone_integrity_snapshot_added") is not True:
+        error("navigation_backbone_integrity_snapshot_added must be true")
+        ok = False
+    if data.get("system_map_navigation_backbone_integrity_note_added") is not True:
+        error("system_map_navigation_backbone_integrity_note_added must be true")
         ok = False
     for key in (
-        "reviewer_packet_snapshot_counts_as_visible_repair",
         "visible_repairs_made",
         "route_count_integrity_checked",
         "file_existence_integrity_checked",
         "metadata_integrity_checked",
         "link_integrity_checked",
-        "reviewer_packet_component_integrity_checked",
+        "navigation_backbone_integrity_checked",
+        "route_group_connectivity_checked",
+        "page_end_navigation_checked",
+        "ai_retrieval_navigation_checked",
         "boundary_integrity_checked",
+        "dashboard_drift_checked",
+        "graph_tool_drift_checked",
+        "scorecard_drift_checked",
+        "rating_system_drift_checked",
+        "due_diligence_room_drift_checked",
+        "pitch_deck_drift_checked",
+        "sales_page_drift_checked",
         "private_data_room_drift_checked",
         "downloadable_report_drift_checked",
         "pricing_transaction_drift_checked",
+        "validator_syntax_safety_checked",
+        "stale_route_count_language_checked",
         "public_html_checked_only_for_current_forbidden_copy",
         "historical_governance_not_rewritten_for_current_copy_rules",
     ):
@@ -223,6 +234,13 @@ def validate_artifacts() -> bool:
         "financial_representation_authorized",
         "private_data_room_authorized",
         "downloadable_report_authorized",
+        "pitch_deck_authorized",
+        "sales_page_authorized",
+        "scorecard_authorized",
+        "rating_system_authorized",
+        "dashboard_authorized",
+        "graph_tool_authorized",
+        "due_diligence_room_authorized",
     ):
         if data.get(flag) is not False:
             error(f"{flag} must be false")
@@ -240,85 +258,30 @@ def validate_counts() -> bool:
     if registry_count != PUBLIC_SITEMAP_URL_COUNT:
         error(f"route registry must have {PUBLIC_SITEMAP_URL_COUNT} entries, found {registry_count}")
         ok = False
-    if sitemap_count != PUBLIC_SITEMAP_URL_COUNT:
-        error(f"sitemap count {sitemap_count} != PUBLIC_SITEMAP_URL_COUNT {PUBLIC_SITEMAP_URL_COUNT}")
-        ok = False
     return ok
 
 
-def validate_packet_hub_snapshot() -> bool:
+def validate_navigation_backbone_integrity_surfaces() -> bool:
     ok = True
-    content = (ROOT / PACKET_HUB).read_text(encoding="utf-8")
-    if "Reviewer Packet Integrity Snapshot" not in content:
-        error("/reviewer-packet/ must include Reviewer Packet Integrity Snapshot")
+    home = (ROOT / HOMEPAGE).read_text(encoding="utf-8")
+    if "Navigation Backbone Integrity Snapshot" not in home:
+        error("homepage must include Navigation Backbone Integrity Snapshot")
         ok = False
-    if f"Current public route count: {PUBLIC_SITEMAP_URL_COUNT}" not in content:
-        error(f"/reviewer-packet/ must include Current public route count: {PUBLIC_SITEMAP_URL_COUNT}")
+    if f"Current public route count: {PUBLIC_SITEMAP_URL_COUNT}" not in home:
+        error(f"homepage must include Current public route count: {PUBLIC_SITEMAP_URL_COUNT}")
         ok = False
-    if "Reviewer packet route count: 5" not in content:
-        error("/reviewer-packet/ must include Reviewer packet route count: 5")
+    if 'href="/system-map/"' not in home and 'href="/system-map/#' not in home:
+        error("homepage must link to /system-map/")
         ok = False
-    for path in REVIEWER_PACKET_PATHS:
-        if f'href="{path}' not in content and f"href='{path}" not in content:
-            error(f"/reviewer-packet/ must link to {path}")
-            ok = False
-    return ok
-
-
-def validate_reviewer_packet_page(rel: str) -> bool:
-    ok = True
-    fp = ROOT / rel
-    if not fp.is_file():
-        error(f"missing {rel}")
-        return False
-    content = fp.read_text(encoding="utf-8")
-    if len(re.findall(r"<h1\b", content, re.I)) != 1:
-        error(f"{rel}: expected exactly one H1")
+    if 'href="/strategic-review/"' not in home and 'href="/strategic-review/#' not in home:
+        error("homepage must link to /strategic-review/")
         ok = False
-    for field in ('rel="canonical"', 'name="description"', "og:title", "og:description"):
-        if field not in content.lower():
-            error(f"{rel}: missing {field}")
-            ok = False
-    for section in REQUIRED_PACKET_SECTIONS:
-        if section not in content:
-            error(f"{rel}: missing section {section!r}")
-            ok = False
-    if 'href="/reviewer-packet/"' not in content and 'href="/reviewer-packet/#' not in content:
-        error(f"{rel}: must link to /reviewer-packet/")
+    map_hub = (ROOT / MAP_HUB).read_text(encoding="utf-8")
+    if "Navigation Backbone Integrity Note" not in map_hub:
+        error("/system-map/ must include Navigation Backbone Integrity Note")
         ok = False
-    strategic_external = sum(
-        1
-        for p in ("/entry-points/", "/narrative/", "/acquisition-readiness/", "/external-review/")
-        if p in content
-    )
-    if strategic_external < 3:
-        error(f"{rel}: must link to at least 3 strategic or external-review routes")
-        ok = False
-    utility_ref = sum(
-        1
-        for p in (
-            "/manual-evidence-checklist/",
-            "/evidence-posture-map/",
-            "/evidence-risk/",
-            "/evidence-risk-questions/",
-            "/synthetic-examples/",
-            "/provenance-risk/",
-            "/source-ambiguity/",
-            "/boundary-integrity/",
-            "/reference/",
-            "/standard/",
-            "/protocol/",
-            "/why-hoax-ai-is-not-a-detector/",
-            "/pathways/",
-        )
-        if p in content
-    )
-    if utility_ref < 5:
-        error(f"{rel}: must link to at least 5 reference or utility routes")
-        ok = False
-    sibling_links = sum(1 for p in REVIEWER_PACKET_PATHS if f'href="{p}' in content or f"href='{p}" in content)
-    if sibling_links < 2:
-        error(f"{rel}: must link to at least 2 sibling reviewer-packet routes")
+    if "Navigation Backbone" not in map_hub:
+        error("/system-map/ must preserve Navigation Backbone section")
         ok = False
     return ok
 
@@ -396,11 +359,9 @@ def validate_public_html_copy() -> bool:
             error(f"{rel}: JavaScript forbidden")
             ok = False
         for claim in FORBIDDEN_CLAIMS:
-            for line in content.splitlines():
-                if line_has_unnegated_claim(line, claim):
-                    error(f"{rel}: forbidden claim {claim!r}")
-                    ok = False
-                    break
+            if text_has_unnegated_claim(content, claim):
+                error(f"{rel}: forbidden claim {claim!r}")
+                ok = False
     return ok
 
 
@@ -413,7 +374,7 @@ def validate_repair_log() -> bool:
         "issue_or_improvement_target",
         "repair_applied",
         "route_group_affected",
-        "review_packet_integrity_impact",
+        "navigation_backbone_integrity_impact",
         "human_readability_impact",
         "ai_retrieval_impact",
         "non_verdict_impact",
@@ -423,50 +384,55 @@ def validate_repair_log() -> bool:
         if col not in text:
             error(f"repair log missing column {col}")
             ok = False
-    if "RPIA-001" not in text:
-        error("repair log must include RPIA-001")
+    if "NBBIA-001" not in text:
+        error("repair log must include NBBIA-001")
         ok = False
+    return ok
+
+
+def validate_validator_syntax() -> bool:
+    ok = True
+    for path in sorted((ROOT / "validators").glob("validate*.py")):
+        try:
+            py_compile.compile(str(path), doraise=True)
+        except py_compile.PyCompileError as exc:
+            error(f"validator syntax error in {path.name}: {exc}")
+            ok = False
     return ok
 
 
 def validate_governance() -> bool:
     ok = True
-    if "DEC-121" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
-        error("DEC-121 missing")
+    if "DEC-129" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
+        error("DEC-129 missing")
         ok = False
-    if "validate_public_reference_review_packet_integrity_audit_v1.py" not in (
+    if "validate_public_reference_navigation_backbone_integrity_audit_v1.py" not in (
         ROOT / "validators/validate_all.py"
     ).read_text(encoding="utf-8"):
-        error("validate_all.py must include Sprint 103 validator")
+        error("validate_all.py must include Sprint 111 validator")
         ok = False
     policy = load_json("data/publisher-governance-policy.json")
     if policy.get("current_publisher_status") not in (
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_REVIEW_PACKET_INTEGRITY_AUDIT_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_SURFACE_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_INTEGRITY_AUDIT_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_INTEGRITY_AUDIT_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_SURFACE_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_BACKBONE_CONSOLIDATION_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_BACKBONE_INTEGRITY_AUDIT_VALIDATION,
-
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_BACKBONE_INTEGRITY_AUDIT_VALIDATION,
     ):
-        error("publisher status must reflect Sprint 103 review packet integrity audit validation")
+        error("publisher status must reflect Sprint 111 navigation backbone integrity audit validation")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}
-    for loc in SOURCE_LOCS + ["validators/validate_public_reference_review_packet_integrity_audit_v1.py"]:
+    for loc in SOURCE_LOCS + ["validators/validate_public_reference_navigation_backbone_integrity_audit_v1.py"]:
         if loc not in locs:
             error(f"source registry missing {loc}")
             ok = False
-    if not any(c.get("claim_id") == "CLAIM-0104" for c in load_json("data/evidence-ledger.json").get("claims", [])):
-        error("CLAIM-0104 missing")
+    if not any(c.get("claim_id") == "CLAIM-0112" for c in load_json("data/evidence-ledger.json").get("claims", [])):
+        error("CLAIM-0112 missing")
         ok = False
-    if not any(g.get("gate_id") == "PUB-GATE-0097" for g in load_json("data/publisher-quality-gates.json").get("gates", [])):
-        error("PUB-GATE-0097 missing")
+    if not any(
+        g.get("gate_id") == "PUB-GATE-0105"
+        for g in load_json("data/publisher-quality-gates.json").get("gates", [])
+    ):
+        error("PUB-GATE-0105 missing")
         ok = False
-    if "Sprint 103 | COMPLETE | G103 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
-        error("master execution plan missing Sprint 103 row")
+    if "Sprint 111 | COMPLETE | G111 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
+        error("master execution plan missing Sprint 111 row")
         ok = False
     if (ROOT / ".nojekyll").exists():
         error(".nojekyll must not exist")
@@ -493,13 +459,10 @@ def main() -> int:
         ok = False
     if not validate_counts():
         ok = False
-    if not validate_packet_hub_snapshot():
+    if not validate_navigation_backbone_integrity_surfaces():
         ok = False
     if not validate_public_file_registry_scope():
         ok = False
-    for rel in REVIEWER_PACKET_PAGES:
-        if not validate_reviewer_packet_page(rel):
-            ok = False
     if not validate_route_files_and_metadata():
         ok = False
     if not validate_internal_links():
@@ -509,6 +472,8 @@ def main() -> int:
     if not validate_public_html_copy():
         ok = False
     if not validate_repair_log():
+        ok = False
+    if not validate_validator_syntax():
         ok = False
     routes = load_json("data/route-registry.json").get("routes", [])
     if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):

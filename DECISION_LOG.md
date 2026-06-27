@@ -3337,6 +3337,32 @@ After Sprint 109 protected the system map, Hoax.ai needed a navigation backbone 
 - Route registry remains 83 entries.
 - A homepage Navigation Backbone Snapshot is authorized.
 - A Navigation Backbone section on `/system-map/` is authorized.
-- Navigation-backbone validation is authorized across route counts, links, route groups, page-end navigation, AI retrieval navigation, boundary discipline, and validator syntax safety.
+- Dashboards, graph tools, scorecards, rating systems, due-diligence rooms, pitch decks, sales pages, private data-room access, downloadable reports, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+
+---
+
+## DEC-129 — Public Reference Navigation Backbone Integrity Audit v1 Adopted
+
+**Date:** 2026-06-27
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Navigation Backbone Integrity Audit v1 by inspecting the full 83-route public surface, adding a Navigation Backbone Integrity Snapshot to the homepage, adding a Navigation Backbone Integrity Note to `/system-map/`, and applying visible navigation-backbone integrity repairs where needed. The sprint validates route count integrity, file existence integrity, metadata integrity, internal link integrity, route-group connectivity, page-end navigation coherence, AI retrieval navigation, boundary discipline, dashboard prohibition, graph-tool prohibition, scorecard prohibition, rating-system prohibition, due-diligence-room prohibition, pitch-deck prohibition, sales-page prohibition, private-data-room prohibition, downloadable-report prohibition, pricing/transaction drift protection, and validator syntax safety after publisher-status updates without creating new public routes, dashboards, graph tools, scorecards, rating systems, due-diligence rooms, private data-room access, downloadable reports, pitch decks, sales pages, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, real-world case evaluation, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, or financial representations.
+
+### Rationale
+
+After Sprint 110 consolidated the public navigation backbone, Hoax.ai needed an integrity audit to ensure the backbone remains a public structural navigation layer rather than a dashboard, graph tool, scorecard, rating system, due-diligence room, pitch deck, sales page, report, private data room, transaction surface, verdict system, or operational review tool. This decision governs visible public-surface inspection, the Navigation Backbone Integrity Snapshot, the `/system-map/` Navigation Backbone Integrity Note, and any repairs made to production pages. It is not abstract preparatory governance.
+
+### Implications
+
+- Existing public pages may receive navigation-backbone integrity repairs.
+- No new public route is authorized.
+- Sitemap remains 83 URLs.
+- Route registry remains 83 entries.
+- A homepage Navigation Backbone Integrity Snapshot is authorized.
+- A Navigation Backbone Integrity Note on `/system-map/` is authorized.
+- Navigation-backbone integrity validation is authorized across route counts, files, metadata, internal links, route-group connectivity, page-end navigation, AI retrieval navigation, boundaries, dashboard prohibition, graph-tool prohibition, scorecard prohibition, rating-system prohibition, due-diligence-room prohibition, pitch-deck prohibition, sales-page prohibition, private-data-room prohibition, downloadable-report prohibition, transaction drift, and validator syntax safety.
 - Dashboards, graph tools, scorecards, rating systems, due-diligence rooms, pitch decks, sales pages, private data-room access, downloadable reports, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
