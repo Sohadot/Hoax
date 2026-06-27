@@ -2477,6 +2477,26 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+## Sprint 109 — Public Reference System Map Integrity Audit v1
+
+**Status:** COMPLETE — 2026-06-27
+**Goal:** Inspect full 83-route public surface; add System Map Integrity Snapshot; repair stale route-count language without new routes.
+
+### Deliverables
+
+- System Map Integrity Snapshot on `/system-map/`
+- Stale 78-route language repaired on four public HTML pages
+- PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_V1.md, repair log, standard, JSON/schema, validator
+- Sitemap 83 URLs unchanged; route registry 83 entries unchanged
+- DEC-127, PUB-GATE-0103, CLAIM-0110
+- `total_repairs_made`: 5
+
+### Gate
+
+**Gate G109 passed.** Sprint 110 — Public Reference Navigation Backbone Consolidation v1 is next.
+
+---
+
 ## Sprint 108 — Public Reference System Map Surface v1
 
 **Status:** COMPLETE — 2026-06-27

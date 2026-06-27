@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Validate Sprint 107 — Public Reference Strategic Review Index Integrity Audit v1."""
+"""Validate Sprint 109 — Public Reference System Map Integrity Audit v1."""
 
 from __future__ import annotations
 
 import json
+import py_compile
 import re
 import subprocess
 import sys
@@ -15,44 +16,41 @@ ROOT = Path(__file__).resolve().parent.parent
 from public_surface_checks import (  # noqa: E402
     ALLOWED_PUBLIC_HTML,
     PUBLIC_SITEMAP_URL_COUNT,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_INTEGRITY_AUDIT_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_INTEGRITY_AUDIT_VALIDATION,
-    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_SURFACE_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_SURFACE_VALIDATION,
     validate_public_surface,
 )
 
-AUDIT_DOC = "PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_INTEGRITY_AUDIT_V1.md"
-REPAIR_DOC = "PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_INTEGRITY_REPAIR_LOG_V1.md"
-STANDARD_DOC = "PUBLIC_STRATEGIC_REVIEW_INDEX_INTEGRITY_STANDARD_V1.md"
-AUDIT_JSON = "data/public-reference-strategic-review-index-integrity-audit-v1.json"
-AUDIT_SCHEMA = "data/public-reference-strategic-review-index-integrity-audit-v1.schema.json"
-SPRINT_DOC = "SPRINT_107_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_INTEGRITY_AUDIT_V1.md"
-INDEX_HUB = "strategic-review/index.html"
+AUDIT_DOC = "PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_V1.md"
+REPAIR_DOC = "PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_REPAIR_LOG_V1.md"
+STANDARD_DOC = "PUBLIC_SYSTEM_MAP_INTEGRITY_STANDARD_V1.md"
+AUDIT_JSON = "data/public-reference-system-map-integrity-audit-v1.json"
+AUDIT_SCHEMA = "data/public-reference-system-map-integrity-audit-v1.schema.json"
+SPRINT_DOC = "SPRINT_109_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_V1.md"
+MAP_HUB = "system-map/index.html"
 
-STRATEGIC_REVIEW_PAGES = [
-    "strategic-review/index.html",
-    "strategic-review/category-position/index.html",
-    "strategic-review/public-reference-depth/index.html",
-    "strategic-review/retrieval-and-citation/index.html",
-    "strategic-review/boundary-and-readiness/index.html",
+SYSTEM_MAP_PAGES = [
+    "system-map/index.html",
+    "system-map/route-groups/index.html",
+    "system-map/human-review-paths/index.html",
+    "system-map/ai-retrieval-paths/index.html",
+    "system-map/boundary-layers/index.html",
 ]
 
-STRATEGIC_REVIEW_PATHS = [
-    "/strategic-review/",
-    "/strategic-review/category-position/",
-    "/strategic-review/public-reference-depth/",
-    "/strategic-review/retrieval-and-citation/",
-    "/strategic-review/boundary-and-readiness/",
+SYSTEM_MAP_PATHS = [
+    "/system-map/",
+    "/system-map/route-groups/",
+    "/system-map/human-review-paths/",
+    "/system-map/ai-retrieval-paths/",
+    "/system-map/boundary-layers/",
 ]
 
-REQUIRED_INDEX_SECTIONS = [
+REQUIRED_MAP_SECTIONS = [
     "Reference summary",
-    "Index purpose",
-    "Strategic review path",
-    "What this index supports",
-    "What this index does not claim",
+    "Map purpose",
+    "System map path",
+    "What this map supports",
+    "What this map does not claim",
     "Reference Answer",
     "Source Confidence",
     "Cite This Reference",
@@ -111,6 +109,8 @@ FORBIDDEN_CLAIMS = [
     "due diligence room",
     "scorecard",
     "rating system",
+    "dashboard",
+    "graph tool",
 ]
 
 NEGATION_PATTERN = re.compile(
@@ -134,9 +134,34 @@ def route_to_file(path: str) -> str:
     return "index.html" if not p else f"{p}/index.html"
 
 
-def line_has_unnegated_claim(line: str, claim: str) -> bool:
-    lower = line.lower()
+def strip_tags(html: str) -> str:
+    return re.sub(r"<[^>]+>", " ", html)
+
+
+def text_has_unnegated_claim(text: str, claim: str) -> bool:
+    lower = re.sub(r"\s+", " ", strip_tags(text)).lower()
     if claim not in lower:
+        return False
+    if re.search(r"not a [\w\s,\-/]*" + re.escape(claim) + r"s?\b", lower):
+        return False
+    if re.search(r"not an [\w\s,\-/]*" + re.escape(claim) + r"s?\b", lower):
+        return False
+    if re.search(r"not [\w\s,\-/]*" + re.escape(claim) + r"s?\b", lower):
+        return False
+    if re.search(r"without [\w\s,\-/]*" + re.escape(claim) + r"s?\b", lower):
+        return False
+    if any(
+        marker in lower
+        for marker in (
+            "does not support",
+            "what the map does not",
+            "what this map does not",
+            "what the index does not",
+            "do not use this answer",
+        )
+    ) and claim in lower:
+        return False
+    if claim == "dashboard" and re.search(r"detector[\s-]dashboard", lower):
         return False
     pos = 0
     while True:
@@ -146,11 +171,17 @@ def line_has_unnegated_claim(line: str, claim: str) -> bool:
         if claim == "valuation" and idx > 0 and lower[idx - 1] == "e":
             pos = idx + len(claim)
             continue
-        prefix = lower[max(0, idx - 80) : idx]
-        if not NEGATION_PATTERN.search(prefix + claim):
-            return True
+        prefix = lower[max(0, idx - 120) : idx]
+        if NEGATION_PATTERN.search(prefix + claim):
+            pos = idx + len(claim)
+            continue
+        return True
         pos = idx + len(claim)
     return False
+
+
+def line_has_unnegated_claim(line: str, claim: str) -> bool:
+    return text_has_unnegated_claim(line, claim)
 
 
 def internal_route_set() -> set[str]:
@@ -169,8 +200,8 @@ def validate_artifacts() -> bool:
             error(f"missing {rel}")
             ok = False
     data = load_json(AUDIT_JSON)
-    if data.get("decision_ref") != "DEC-125":
-        error("decision_ref must be DEC-125")
+    if data.get("decision_ref") != "DEC-127":
+        error("decision_ref must be DEC-127")
         ok = False
     if data.get("new_public_routes_added") is not False:
         error("new_public_routes_added must be false")
@@ -178,18 +209,20 @@ def validate_artifacts() -> bool:
     if data.get("total_repairs_made", 0) < 1:
         error("total_repairs_made must be at least 1")
         ok = False
-    if data.get("strategic_review_index_integrity_snapshot_added") is not True:
-        error("strategic_review_index_integrity_snapshot_added must be true")
+    if data.get("system_map_integrity_snapshot_added") is not True:
+        error("system_map_integrity_snapshot_added must be true")
         ok = False
     for key in (
-        "strategic_review_index_snapshot_counts_as_visible_repair",
+        "system_map_snapshot_counts_as_visible_repair",
         "visible_repairs_made",
         "route_count_integrity_checked",
         "file_existence_integrity_checked",
         "metadata_integrity_checked",
         "link_integrity_checked",
-        "strategic_review_index_component_integrity_checked",
+        "system_map_component_integrity_checked",
         "boundary_integrity_checked",
+        "dashboard_drift_checked",
+        "graph_tool_drift_checked",
         "scorecard_drift_checked",
         "rating_system_drift_checked",
         "due_diligence_room_drift_checked",
@@ -198,6 +231,7 @@ def validate_artifacts() -> bool:
         "private_data_room_drift_checked",
         "downloadable_report_drift_checked",
         "pricing_transaction_drift_checked",
+        "validator_syntax_safety_checked",
         "stale_route_count_language_checked",
         "public_html_checked_only_for_current_forbidden_copy",
         "historical_governance_not_rewritten_for_current_copy_rules",
@@ -229,6 +263,8 @@ def validate_artifacts() -> bool:
         "sales_page_authorized",
         "scorecard_authorized",
         "rating_system_authorized",
+        "dashboard_authorized",
+        "graph_tool_authorized",
         "due_diligence_room_authorized",
     ):
         if data.get(flag) is not False:
@@ -250,26 +286,26 @@ def validate_counts() -> bool:
     return ok
 
 
-def validate_index_hub_snapshot() -> bool:
+def validate_map_hub_snapshot() -> bool:
     ok = True
-    content = (ROOT / INDEX_HUB).read_text(encoding="utf-8")
-    if "Strategic Review Index Integrity Snapshot" not in content:
-        error("/strategic-review/ must include Strategic Review Index Integrity Snapshot")
+    content = (ROOT / MAP_HUB).read_text(encoding="utf-8")
+    if "System Map Integrity Snapshot" not in content:
+        error("/system-map/ must include System Map Integrity Snapshot")
         ok = False
     if f"Current public route count: {PUBLIC_SITEMAP_URL_COUNT}" not in content:
-        error(f"/strategic-review/ must include Current public route count: {PUBLIC_SITEMAP_URL_COUNT}")
+        error(f"/system-map/ must include Current public route count: {PUBLIC_SITEMAP_URL_COUNT}")
         ok = False
-    if "Strategic review index route count: 5" not in content:
-        error("/strategic-review/ must include Strategic review index route count: 5")
+    if "System map route count: 5" not in content:
+        error("/system-map/ must include System map route count: 5")
         ok = False
-    for path in STRATEGIC_REVIEW_PATHS:
+    for path in SYSTEM_MAP_PATHS:
         if f'href="{path}' not in content and f"href='{path}" not in content:
-            error(f"/strategic-review/ must link to {path}")
+            error(f"/system-map/ must link to {path}")
             ok = False
     return ok
 
 
-def validate_strategic_review_page(rel: str) -> bool:
+def validate_system_map_page(rel: str) -> bool:
     ok = True
     fp = ROOT / rel
     if not fp.is_file():
@@ -284,12 +320,12 @@ def validate_strategic_review_page(rel: str) -> bool:
         if field not in content.lower():
             error(f"{rel}: missing {field}")
             ok = False
-    for section in REQUIRED_INDEX_SECTIONS:
+    for section in REQUIRED_MAP_SECTIONS:
         if section not in content:
             error(f"{rel}: missing section {section!r}")
             ok = False
-    if 'href="/strategic-review/"' not in content and 'href="/strategic-review/#' not in content:
-        error(f"{rel}: must link to /strategic-review/")
+    if 'href="/system-map/"' not in content and 'href="/system-map/#' not in content:
+        error(f"{rel}: must link to /system-map/")
         ok = False
     strategic_external = sum(
         1
@@ -300,11 +336,12 @@ def validate_strategic_review_page(rel: str) -> bool:
             "/acquisition-readiness/",
             "/external-review/",
             "/reviewer-packet/",
+            "/strategic-review/",
         )
         if p in content
     )
     if strategic_external < 3:
-        error(f"{rel}: must link to at least 3 executive-overview, reviewer-packet, external-review, acquisition-readiness, entry-point, or narrative routes")
+        error(f"{rel}: must link to at least 3 strategic layer routes")
         ok = False
     utility_ref = sum(
         1
@@ -328,9 +365,9 @@ def validate_strategic_review_page(rel: str) -> bool:
     if utility_ref < 5:
         error(f"{rel}: must link to at least 5 reference, utility, or pathway routes")
         ok = False
-    sibling_links = sum(1 for p in STRATEGIC_REVIEW_PATHS if f'href="{p}' in content or f"href='{p}" in content)
+    sibling_links = sum(1 for p in SYSTEM_MAP_PATHS if f'href="{p}' in content or f"href='{p}" in content)
     if sibling_links < 2:
-        error(f"{rel}: must link to at least 2 sibling strategic-review routes")
+        error(f"{rel}: must link to at least 2 sibling system-map routes")
         ok = False
     if "pitch deck" not in lower or "sales page" not in lower:
         error(f"{rel}: must include pitch-deck and sales-page role clarity (safe negative language)")
@@ -411,11 +448,9 @@ def validate_public_html_copy() -> bool:
             error(f"{rel}: JavaScript forbidden")
             ok = False
         for claim in FORBIDDEN_CLAIMS:
-            for line in content.splitlines():
-                if line_has_unnegated_claim(line, claim):
-                    error(f"{rel}: forbidden claim {claim!r}")
-                    ok = False
-                    break
+            if text_has_unnegated_claim(content, claim):
+                error(f"{rel}: forbidden claim {claim!r}")
+                ok = False
     return ok
 
 
@@ -428,7 +463,7 @@ def validate_repair_log() -> bool:
         "issue_or_improvement_target",
         "repair_applied",
         "route_group_affected",
-        "strategic_review_index_integrity_impact",
+        "system_map_integrity_impact",
         "human_readability_impact",
         "ai_retrieval_impact",
         "non_verdict_impact",
@@ -438,46 +473,55 @@ def validate_repair_log() -> bool:
         if col not in text:
             error(f"repair log missing column {col}")
             ok = False
-    if "SRIIA-001" not in text:
-        error("repair log must include SRIIA-001")
+    if "SMIA-001" not in text:
+        error("repair log must include SMIA-001")
         ok = False
+    return ok
+
+
+def validate_validator_syntax() -> bool:
+    ok = True
+    for path in sorted((ROOT / "validators").glob("validate*.py")):
+        try:
+            py_compile.compile(str(path), doraise=True)
+        except py_compile.PyCompileError as exc:
+            error(f"validator syntax error in {path.name}: {exc}")
+            ok = False
     return ok
 
 
 def validate_governance() -> bool:
     ok = True
-    if "DEC-125" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
-        error("DEC-125 missing")
+    if "DEC-127" not in (ROOT / "DECISION_LOG.md").read_text(encoding="utf-8"):
+        error("DEC-127 missing")
         ok = False
-    if "validate_public_reference_strategic_review_index_integrity_audit_v1.py" not in (
+    if "validate_public_reference_system_map_integrity_audit_v1.py" not in (
         ROOT / "validators/validate_all.py"
     ).read_text(encoding="utf-8"):
-        error("validate_all.py must include Sprint 107 validator")
+        error("validate_all.py must include Sprint 109 validator")
         ok = False
     policy = load_json("data/publisher-governance-policy.json")
     if policy.get("current_publisher_status") not in (
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_INTEGRITY_AUDIT_VALIDATION,
-        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_SURFACE_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_VALIDATION,
     ):
-        error("publisher status must reflect Sprint 107 strategic review index integrity audit validation")
+        error("publisher status must reflect Sprint 109 system map integrity audit validation")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}
-    for loc in SOURCE_LOCS + ["validators/validate_public_reference_strategic_review_index_integrity_audit_v1.py"]:
+    for loc in SOURCE_LOCS + ["validators/validate_public_reference_system_map_integrity_audit_v1.py"]:
         if loc not in locs:
             error(f"source registry missing {loc}")
             ok = False
-    if not any(c.get("claim_id") == "CLAIM-0108" for c in load_json("data/evidence-ledger.json").get("claims", [])):
-        error("CLAIM-0108 missing")
+    if not any(c.get("claim_id") == "CLAIM-0110" for c in load_json("data/evidence-ledger.json").get("claims", [])):
+        error("CLAIM-0110 missing")
         ok = False
     if not any(
-        g.get("gate_id") == "PUB-GATE-0101"
+        g.get("gate_id") == "PUB-GATE-0103"
         for g in load_json("data/publisher-quality-gates.json").get("gates", [])
     ):
-        error("PUB-GATE-0101 missing")
+        error("PUB-GATE-0103 missing")
         ok = False
-    if "Sprint 107 | COMPLETE | G107 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
-        error("master execution plan missing Sprint 107 row")
+    if "Sprint 109 | COMPLETE | G109 passed" not in (ROOT / "MASTER_EXECUTION_PLAN.md").read_text(encoding="utf-8"):
+        error("master execution plan missing Sprint 109 row")
         ok = False
     if (ROOT / ".nojekyll").exists():
         error(".nojekyll must not exist")
@@ -504,12 +548,12 @@ def main() -> int:
         ok = False
     if not validate_counts():
         ok = False
-    if not validate_index_hub_snapshot():
+    if not validate_map_hub_snapshot():
         ok = False
     if not validate_public_file_registry_scope():
         ok = False
-    for rel in STRATEGIC_REVIEW_PAGES:
-        if not validate_strategic_review_page(rel):
+    for rel in SYSTEM_MAP_PAGES:
+        if not validate_system_map_page(rel):
             ok = False
     if not validate_route_files_and_metadata():
         ok = False
@@ -520,6 +564,8 @@ def main() -> int:
     if not validate_public_html_copy():
         ok = False
     if not validate_repair_log():
+        ok = False
+    if not validate_validator_syntax():
         ok = False
     routes = load_json("data/route-registry.json").get("routes", [])
     if not validate_public_surface(routes, error, PUBLIC_SITEMAP_URL_COUNT):

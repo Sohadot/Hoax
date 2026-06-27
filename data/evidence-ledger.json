@@ -1201,6 +1201,17 @@
       "status": "active",
       "last_reviewed": "2026-06-27",
       "notes": "Sprint 108 system map surface. Sitemap eighty-three URLs."
+    },
+    {
+      "claim_id": "CLAIM-0110",
+      "claim_text": "Hoax.ai has adopted Public Reference System Map Integrity Audit v1, inspecting the full 83-route public surface, adding a System Map Integrity Snapshot to /system-map/, and repairing stale route-count language without new routes, scorecards, rating systems, dashboards, graph tools, pitch decks, sales pages, private data-room access, downloadable reports, pricing statements, transaction pages, verdicts, or detector behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_V1.md, PUBLIC_SYSTEM_MAP_INTEGRITY_STANDARD_V1.md, data/public-reference-system-map-integrity-audit-v1.json, system-map/index.html, validators/validate_public_reference_system_map_integrity_audit_v1.py, SPRINT_109_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_V1.md, DECISION_LOG.md (DEC-127)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-27",
+      "notes": "Sprint 109 system map integrity audit. Sitemap eighty-three URLs unchanged. total_repairs_made 5."
     }
   ]
 }

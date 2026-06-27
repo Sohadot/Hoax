@@ -9009,6 +9009,76 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 108 system map hub."
+    },
+    {
+      "source_id": "SOURCE-0733",
+      "source_title": "PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 109 system map integrity audit."
+    },
+    {
+      "source_id": "SOURCE-0734",
+      "source_title": "PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_REPAIR_LOG_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_REPAIR_LOG_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 109 repair log."
+    },
+    {
+      "source_id": "SOURCE-0735",
+      "source_title": "PUBLIC_SYSTEM_MAP_INTEGRITY_STANDARD_V1.md",
+      "source_type": "internal_governance",
+      "location": "PUBLIC_SYSTEM_MAP_INTEGRITY_STANDARD_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 109 integrity standard."
+    },
+    {
+      "source_id": "SOURCE-0736",
+      "source_title": "data/public-reference-system-map-integrity-audit-v1.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-system-map-integrity-audit-v1.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 109 integrity audit JSON."
+    },
+    {
+      "source_id": "SOURCE-0737",
+      "source_title": "data/public-reference-system-map-integrity-audit-v1.schema.json",
+      "source_type": "internal_governance",
+      "location": "data/public-reference-system-map-integrity-audit-v1.schema.json",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 109 integrity audit schema."
+    },
+    {
+      "source_id": "SOURCE-0738",
+      "source_title": "SPRINT_109_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_V1.md",
+      "source_type": "internal_governance",
+      "location": "SPRINT_109_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_V1.md",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 109 record."
+    },
+    {
+      "source_id": "SOURCE-0739",
+      "source_title": "validators/validate_public_reference_system_map_integrity_audit_v1.py",
+      "source_type": "internal_governance",
+      "location": "validators/validate_public_reference_system_map_integrity_audit_v1.py",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 109 validator."
     }
   ]
 }

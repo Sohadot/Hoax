@@ -3287,3 +3287,29 @@ After Sprint 107 protected the strategic review index integrity, Hoax.ai needed 
 - Scorecards, rating systems, dashboards, pitch decks, sales pages, private data-room access, downloadable reports, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
 
+---
+
+## DEC-127 — Public Reference System Map Integrity Audit v1 Adopted
+
+**Date:** 2026-06-27
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference System Map Integrity Audit v1 by inspecting the full 83-route public surface, adding a System Map Integrity Snapshot to `/system-map/`, and applying visible system-map integrity repairs where needed. The sprint validates system-map route integrity, metadata integrity, link integrity, component preservation, boundary discipline, dashboard prohibition, graph-tool prohibition, scorecard prohibition, rating-system prohibition, due-diligence-room prohibition, pitch-deck prohibition, sales-page prohibition, private-data-room prohibition, downloadable-report prohibition, pricing/transaction drift protection, and validator syntax safety after publisher-status updates without creating new public routes, dashboards, graph tools, scorecards, rating systems, due-diligence rooms, private data-room access, downloadable reports, pitch decks, sales pages, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, real-world case evaluation, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, or financial representations.
+
+### Rationale
+
+After Sprint 108 added the public system map surface, Hoax.ai needed an integrity audit to ensure the map remains a public structural reference layer rather than a dashboard, graph tool, scorecard, rating system, due-diligence room, pitch deck, sales page, report, private data room, transaction surface, verdict system, or operational review tool. This decision governs visible public-surface inspection, the System Map Integrity Snapshot, and repairs made to production pages. It is not abstract preparatory governance.
+
+### Implications
+
+- Existing system-map pages may receive integrity repairs.
+- No new public route is authorized.
+- Sitemap remains 83 URLs.
+- Route registry remains 83 entries.
+- A System Map Integrity Snapshot on `/system-map/` is authorized.
+- The System Map Integrity Snapshot counts as visible production contact.
+- System-map integrity validation is authorized across route counts, metadata, links, components, boundaries, dashboard prohibition, graph-tool prohibition, scorecard prohibition, rating-system prohibition, due-diligence-room prohibition, pitch-deck prohibition, sales-page prohibition, private-data-room prohibition, downloadable-report prohibition, transaction drift, and validator syntax safety.
+- Dashboards, graph tools, scorecards, rating systems, due-diligence rooms, pitch decks, sales pages, private data-room access, downloadable reports, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, and financial representations remain unauthorized.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.

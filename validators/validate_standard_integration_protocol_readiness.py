@@ -76,7 +76,8 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_REVIEW_PACKET_INTEGRITY_AUDIT_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_SURFACE_VALIDATION,
     validate_public_surface,
-)
+
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_VALIDATION,)
 
 STANDARD_PATH = "standard/evidence-posture/index.html"
 STANDARD_LINK = "/standard/evidence-posture/"
@@ -369,6 +370,7 @@ def validate_governance() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_INTEGRITY_AUDIT_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_SURFACE_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_VALIDATION,
     ):
         error("publisher status must be blocked_until_evidence_posture_standard_v1_validation, protocol v1 draft validation, interface thesis validation, static embodiment v1 validation, visual system hardening validation, or controlled domain connection decision")
         ok = False

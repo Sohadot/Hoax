@@ -2668,6 +2668,34 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference System Map Surface v1 per DEC-126."
+    },
+    {
+      "claim_id": "CLAIM-0110",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_V1.md",
+        "PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_REPAIR_LOG_V1.md",
+        "PUBLIC_SYSTEM_MAP_INTEGRITY_STANDARD_V1.md",
+        "data/public-reference-system-map-integrity-audit-v1.json",
+        "system-map/index.html",
+        "validators/validate_public_reference_system_map_integrity_audit_v1.py",
+        "SPRINT_109_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0733",
+        "SOURCE-0734",
+        "SOURCE-0735",
+        "SOURCE-0736",
+        "SOURCE-0737",
+        "SOURCE-0738",
+        "SOURCE-0739"
+      ],
+      "support_scope": "public reference system map integrity audit v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference System Map Integrity Audit v1 per DEC-127."
     }
   ],
   "last_reviewed": "2026-06-27"

@@ -73,7 +73,8 @@ from public_surface_checks import (
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_REVIEW_PACKET_INTEGRITY_AUDIT_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EXECUTIVE_OVERVIEW_SURFACE_VALIDATION,
     validate_public_surface,
-)
+
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_VALIDATION,)
 
 INTERFACE_PATH = "interface/evidence-field/index.html"
 INTERFACE_URL = "https://hoax.ai/interface/evidence-field/"
@@ -356,6 +357,7 @@ def validate_governance() -> bool:
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_VALIDATION,
         PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INDEX_INTEGRITY_AUDIT_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_SURFACE_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_VALIDATION,
     ):
         error("publisher status must be blocked_until_evidence_field_static_interface_embodiment_v1_validation, visual system hardening validation, or controlled domain connection decision")
         ok = False
