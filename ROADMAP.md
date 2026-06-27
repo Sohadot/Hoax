@@ -2581,6 +2581,28 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+## Sprint 114 — Public Reference Evidence Condition Library v1
+
+**Status:** COMPLETE — 2026-06-27
+**Goal:** Add six evidence-condition library routes; update homepage, system map, and related pages; increase public surface from 93 to 99 routes.
+
+### Deliverables
+
+- Six `/evidence-conditions/` routes (hub plus five conditions)
+- Homepage Evidence Condition Library section with six cards
+- `/system-map/` Evidence Condition Library Layer
+- Route-group and audience-path pages linked to Evidence Condition Library
+- Public Release Integrity Snapshot updated to 99 routes
+- PUBLIC_REFERENCE_EVIDENCE_CONDITION_LIBRARY_V1.md, standard, audit, JSON/schema, validator
+- Sitemap 99 URLs; route registry 99 entries; PUB-FILE-0094–0099
+- DEC-132, PUB-GATE-0108, CLAIM-0115
+
+### Gate
+
+**Gate G114 passed.** Sprint 115 — Public Reference Evidence Condition Crosswalk v1 is next.
+
+---
+
 ## Sprint 108 — Public Reference System Map Surface v1
 
 **Status:** COMPLETE — 2026-06-27

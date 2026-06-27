@@ -558,4 +558,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.89</priority>
   </url>
+  <url>
+    <loc>https://hoax.ai/evidence-conditions/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/evidence-conditions/source-uncertainty/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.89</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/evidence-conditions/provenance-discontinuity/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.89</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/evidence-conditions/context-loss/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.89</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/evidence-conditions/claim-evidence-misalignment/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.89</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/evidence-conditions/traceability-break/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.89</priority>
+  </url>
 </urlset>

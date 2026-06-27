@@ -9509,6 +9509,156 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 113 audience path expansion schema."
+    },
+    {
+      "source_id": "SOURCE-0783",
+      "source_title": "PUBLIC_REFERENCE_EVIDENCE_CONDITION_LIBRARY_V1.md",
+      "source_type": "governance_file",
+      "location": "PUBLIC_REFERENCE_EVIDENCE_CONDITION_LIBRARY_V1.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 evidence condition library statement."
+    },
+    {
+      "source_id": "SOURCE-0784",
+      "source_title": "PUBLIC_EVIDENCE_CONDITION_LIBRARY_STANDARD_V1.md",
+      "source_type": "governance_file",
+      "location": "PUBLIC_EVIDENCE_CONDITION_LIBRARY_STANDARD_V1.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 evidence condition standard."
+    },
+    {
+      "source_id": "SOURCE-0785",
+      "source_title": "PUBLIC_REFERENCE_EVIDENCE_CONDITION_LIBRARY_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "location": "PUBLIC_REFERENCE_EVIDENCE_CONDITION_LIBRARY_AUDIT_V1.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 evidence condition audit."
+    },
+    {
+      "source_id": "SOURCE-0786",
+      "source_title": "data/public-reference-evidence-condition-library-v1.json",
+      "source_type": "governance_file",
+      "location": "data/public-reference-evidence-condition-library-v1.json",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 evidence condition JSON."
+    },
+    {
+      "source_id": "SOURCE-0787",
+      "source_title": "data/public-reference-evidence-condition-library-v1.schema.json",
+      "source_type": "governance_file",
+      "location": "data/public-reference-evidence-condition-library-v1.schema.json",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 evidence condition schema."
+    },
+    {
+      "source_id": "SOURCE-0788",
+      "source_title": "validators/validate_public_reference_evidence_condition_library_v1.py",
+      "source_type": "governance_file",
+      "location": "validators/validate_public_reference_evidence_condition_library_v1.py",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 evidence condition validator."
+    },
+    {
+      "source_id": "SOURCE-0789",
+      "source_title": "SPRINT_114_PUBLIC_REFERENCE_EVIDENCE_CONDITION_LIBRARY_V1.md",
+      "source_type": "governance_file",
+      "location": "SPRINT_114_PUBLIC_REFERENCE_EVIDENCE_CONDITION_LIBRARY_V1.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 sprint record."
+    },
+    {
+      "source_id": "SOURCE-0790",
+      "source_title": "evidence-conditions/index.html",
+      "source_type": "public_reference_page",
+      "location": "evidence-conditions/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 evidence condition hub."
+    },
+    {
+      "source_id": "SOURCE-0791",
+      "source_title": "evidence-conditions/source-uncertainty/index.html",
+      "source_type": "public_reference_page",
+      "location": "evidence-conditions/source-uncertainty/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 source uncertainty condition."
+    },
+    {
+      "source_id": "SOURCE-0792",
+      "source_title": "evidence-conditions/provenance-discontinuity/index.html",
+      "source_type": "public_reference_page",
+      "location": "evidence-conditions/provenance-discontinuity/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 provenance discontinuity condition."
+    },
+    {
+      "source_id": "SOURCE-0793",
+      "source_title": "evidence-conditions/context-loss/index.html",
+      "source_type": "public_reference_page",
+      "location": "evidence-conditions/context-loss/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 context loss condition."
+    },
+    {
+      "source_id": "SOURCE-0794",
+      "source_title": "evidence-conditions/claim-evidence-misalignment/index.html",
+      "source_type": "public_reference_page",
+      "location": "evidence-conditions/claim-evidence-misalignment/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 claim-evidence misalignment condition."
+    },
+    {
+      "source_id": "SOURCE-0795",
+      "source_title": "evidence-conditions/traceability-break/index.html",
+      "source_type": "public_reference_page",
+      "location": "evidence-conditions/traceability-break/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 traceability break condition."
+    },
+    {
+      "source_id": "SOURCE-0796",
+      "source_title": "index.html",
+      "source_type": "public_reference_page",
+      "location": "index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 114 homepage evidence condition library section."
+    },
+    {
+      "source_id": "SOURCE-0797",
+      "source_title": "DECISION_LOG.md",
+      "source_type": "governance_file",
+      "location": "DECISION_LOG.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "DEC-132 evidence condition library decision."
     }
   ]
 }

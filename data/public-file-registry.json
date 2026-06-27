@@ -1342,6 +1342,90 @@
       ],
       "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
       "notes": "Sprint 113 per DEC-131."
+    },
+    {
+      "file_id": "PUB-FILE-0094",
+      "path": "evidence-conditions/index.html",
+      "file_type": "html",
+      "public_role": "evidence_condition_library_hub",
+      "route_id_if_applicable": "ROUTE-0094",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
+      "notes": "Sprint 114 per DEC-132."
+    },
+    {
+      "file_id": "PUB-FILE-0095",
+      "path": "evidence-conditions/source-uncertainty/index.html",
+      "file_type": "html",
+      "public_role": "evidence_condition_source_uncertainty",
+      "route_id_if_applicable": "ROUTE-0095",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
+      "notes": "Sprint 114 per DEC-132."
+    },
+    {
+      "file_id": "PUB-FILE-0096",
+      "path": "evidence-conditions/provenance-discontinuity/index.html",
+      "file_type": "html",
+      "public_role": "evidence_condition_provenance_discontinuity",
+      "route_id_if_applicable": "ROUTE-0096",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
+      "notes": "Sprint 114 per DEC-132."
+    },
+    {
+      "file_id": "PUB-FILE-0097",
+      "path": "evidence-conditions/context-loss/index.html",
+      "file_type": "html",
+      "public_role": "evidence_condition_context_loss",
+      "route_id_if_applicable": "ROUTE-0097",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
+      "notes": "Sprint 114 per DEC-132."
+    },
+    {
+      "file_id": "PUB-FILE-0098",
+      "path": "evidence-conditions/claim-evidence-misalignment/index.html",
+      "file_type": "html",
+      "public_role": "evidence_condition_claim_evidence_misalignment",
+      "route_id_if_applicable": "ROUTE-0098",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
+      "notes": "Sprint 114 per DEC-132."
+    },
+    {
+      "file_id": "PUB-FILE-0099",
+      "path": "evidence-conditions/traceability-break/index.html",
+      "file_type": "html",
+      "public_role": "evidence_condition_traceability_break",
+      "route_id_if_applicable": "ROUTE-0099",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
+      "notes": "Sprint 114 per DEC-132."
     }
   ],
   "last_reviewed": "2026-06-27"

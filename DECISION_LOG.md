@@ -3416,3 +3416,28 @@ After Sprint 112 deepened major route groups, Hoax.ai needed visible audience-pa
 - Homepage, `/system-map/`, and route-group deepening pages may be updated to link the new audience-path surface.
 - No dashboard, graph tool, scorecard, rating system, due-diligence room, private data-room access, downloadable report, pitch deck, sales page, consulting offer, service funnel, pricing statement, transaction page, acquisition term document, representative mandate, legal representation, or financial representation is authorized.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+
+---
+
+## DEC-132 — Public Reference Evidence Condition Library v1 Adopted
+
+**Date:** 2026-06-27
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Evidence Condition Library v1 by adding six public reference pages that define recurring evidence conditions: Evidence Condition Library, Source Uncertainty, Provenance Discontinuity, Context Loss, Claim-Evidence Misalignment, and Traceability Break. These pages help humans and AI agents read evidence conditions before conclusions without creating dashboards, graph tools, scorecards, rating systems, due-diligence rooms, private data-room access, downloadable reports, pitch decks, sales pages, consulting offers, service funnels, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, real-world case evaluation, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, or financial representations.
+
+### Rationale
+
+After Sprint 113 added audience paths, Hoax.ai needed visible evidence-condition reference pages that define recurring conditions readers and AI agents can identify conceptually before forming conclusions. This decision governs pages built in this sprint and is not preparatory governance. The Evidence Condition Library strengthens public reference depth by naming conditions that preserve uncertainty, route readers toward relevant concepts and pathways, and prevent premature verdicts.
+
+### Implications
+
+- Six new public evidence-condition routes are authorized.
+- Sitemap may increase from 93 to 99 URLs.
+- Route registry may increase from 93 to 99 entries.
+- Public-file-registry may receive PUB-FILE-0094 through PUB-FILE-0099.
+- Homepage, `/system-map/`, related route-group pages, and related audience-path pages may be updated to link the new Evidence Condition Library.
+- No dashboard, graph tool, scorecard, rating system, due-diligence room, private data-room access, downloadable report, pitch deck, sales page, consulting offer, service funnel, pricing statement, transaction page, acquisition term document, representative mandate, legal representation, or financial representation is authorized.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.

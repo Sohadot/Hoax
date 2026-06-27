@@ -28,6 +28,7 @@ PUBLIC_ROUTE_IDS = [
     "ROUTE-0079", "ROUTE-0080", "ROUTE-0081", "ROUTE-0082", "ROUTE-0083",
     "ROUTE-0084", "ROUTE-0085", "ROUTE-0086", "ROUTE-0087", "ROUTE-0088",
     "ROUTE-0089", "ROUTE-0090", "ROUTE-0091", "ROUTE-0092", "ROUTE-0093",
+    "ROUTE-0094", "ROUTE-0095", "ROUTE-0096", "ROUTE-0097", "ROUTE-0098", "ROUTE-0099",
 ]
 
 PILOT_ROUTE_IDS = PUBLIC_ROUTE_IDS  # backward compatibility
@@ -133,6 +134,12 @@ ALLOWED_PUBLIC_HTML = {
     "audience-paths/trust-safety-readers/index.html",
     "audience-paths/education-literacy/index.html",
     "audience-paths/ai-agents/index.html",
+    "evidence-conditions/index.html",
+    "evidence-conditions/source-uncertainty/index.html",
+    "evidence-conditions/provenance-discontinuity/index.html",
+    "evidence-conditions/context-loss/index.html",
+    "evidence-conditions/claim-evidence-misalignment/index.html",
+    "evidence-conditions/traceability-break/index.html",
 }
 
 ALLOWED_INTERNAL_PROTOTYPE_HTML = {
@@ -147,7 +154,7 @@ ALLOWED_PUBLIC_ROOT_FILES = ALLOWED_PUBLIC_HTML | {
     "sitemap.xml",
 }
 
-PUBLIC_SITEMAP_URL_COUNT = 93
+PUBLIC_SITEMAP_URL_COUNT = 99
 
 PILOT_SITEMAP_URL_COUNT = PUBLIC_SITEMAP_URL_COUNT  # backward compatibility
 
@@ -413,6 +420,10 @@ PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_VALIDATION = (
     "blocked_until_public_reference_audience_path_expansion_validation"
 )
 
+PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EVIDENCE_CONDITION_LIBRARY_VALIDATION = (
+    "blocked_until_public_reference_evidence_condition_library_validation"
+)
+
 PUBLISHER_STATUSES_ALLOWED = (
     "blocked_until_first_reference_candidate_pack",
     "blocked_until_internal_draft_blueprint",
@@ -506,6 +517,7 @@ PUBLISHER_STATUSES_ALLOWED = (
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_BACKBONE_INTEGRITY_AUDIT_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_GROUP_DEEPENING_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_EVIDENCE_CONDITION_LIBRARY_VALIDATION,
 )
 
 

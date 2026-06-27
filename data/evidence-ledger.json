@@ -1256,6 +1256,17 @@
       "status": "active",
       "last_reviewed": "2026-06-27",
       "notes": "Sprint 113 audience path expansion. Sitemap ninety-three URLs. Five new public routes."
+    },
+    {
+      "claim_id": "CLAIM-0115",
+      "claim_text": "Hoax.ai has adopted Public Reference Evidence Condition Library v1, adding six evidence-condition pages for source uncertainty, provenance discontinuity, context loss, claim-evidence misalignment, and traceability break on a 99-route public surface, with homepage, system map, and related page links, without dashboards, graph tools, scorecards, rating systems, due-diligence rooms, private data-room access, downloadable reports, pitch decks, sales pages, consulting offers, service funnels, pricing statements, transaction pages, verdicts, or detector behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_EVIDENCE_CONDITION_LIBRARY_V1.md, PUBLIC_EVIDENCE_CONDITION_LIBRARY_STANDARD_V1.md, data/public-reference-evidence-condition-library-v1.json, index.html, system-map/index.html, evidence-conditions/index.html, evidence-conditions/source-uncertainty/index.html, evidence-conditions/provenance-discontinuity/index.html, evidence-conditions/context-loss/index.html, evidence-conditions/claim-evidence-misalignment/index.html, evidence-conditions/traceability-break/index.html, validators/validate_public_reference_evidence_condition_library_v1.py, SPRINT_114_PUBLIC_REFERENCE_EVIDENCE_CONDITION_LIBRARY_V1.md, DECISION_LOG.md (DEC-132)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-27",
+      "notes": "Sprint 114 evidence condition library. Sitemap ninety-nine URLs. Six new public routes."
     }
   ]
 }
