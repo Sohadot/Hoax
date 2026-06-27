@@ -1272,6 +1272,76 @@
       ],
       "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
       "notes": "Sprint 112 per DEC-130."
+    },
+    {
+      "file_id": "PUB-FILE-0089",
+      "path": "audience-paths/index.html",
+      "file_type": "html",
+      "public_role": "audience_paths_hub",
+      "route_id_if_applicable": "ROUTE-0089",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
+      "notes": "Sprint 113 per DEC-131."
+    },
+    {
+      "file_id": "PUB-FILE-0090",
+      "path": "audience-paths/research-reviewers/index.html",
+      "file_type": "html",
+      "public_role": "audience_path_research_reviewers",
+      "route_id_if_applicable": "ROUTE-0090",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
+      "notes": "Sprint 113 per DEC-131."
+    },
+    {
+      "file_id": "PUB-FILE-0091",
+      "path": "audience-paths/trust-safety-readers/index.html",
+      "file_type": "html",
+      "public_role": "audience_path_trust_safety",
+      "route_id_if_applicable": "ROUTE-0091",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
+      "notes": "Sprint 113 per DEC-131."
+    },
+    {
+      "file_id": "PUB-FILE-0092",
+      "path": "audience-paths/education-literacy/index.html",
+      "file_type": "html",
+      "public_role": "audience_path_education_literacy",
+      "route_id_if_applicable": "ROUTE-0092",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
+      "notes": "Sprint 113 per DEC-131."
+    },
+    {
+      "file_id": "PUB-FILE-0093",
+      "path": "audience-paths/ai-agents/index.html",
+      "file_type": "html",
+      "public_role": "audience_path_ai_agents",
+      "route_id_if_applicable": "ROUTE-0093",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../../styles.css"
+      ],
+      "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
+      "notes": "Sprint 113 per DEC-131."
     }
   ],
   "last_reviewed": "2026-06-27"

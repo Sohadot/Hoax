@@ -528,4 +528,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
   </url>
+  <url>
+    <loc>https://hoax.ai/audience-paths/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.89</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/audience-paths/research-reviewers/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.89</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/audience-paths/trust-safety-readers/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.89</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/audience-paths/education-literacy/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.89</priority>
+  </url>
+  <url>
+    <loc>https://hoax.ai/audience-paths/ai-agents/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.89</priority>
+  </url>
 </urlset>

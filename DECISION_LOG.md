@@ -3391,3 +3391,28 @@ After Sprint 111 protected the navigation backbone, Hoax.ai needed visible refer
 - Homepage and `/system-map/` may be updated to link the new route-group deepening layer.
 - No dashboard, graph tool, scorecard, rating system, due-diligence room, private data-room access, downloadable report, pitch deck, sales page, pricing statement, transaction page, acquisition term document, representative mandate, legal representation, or financial representation is authorized.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+
+---
+
+## DEC-131 — Public Reference Audience Path Expansion v1 Adopted
+
+**Date:** 2026-06-27
+**Status:** Active
+
+### Decision
+
+Hoax.ai adopts Public Reference Audience Path Expansion v1 by adding five public reference pages that explain safe audience paths through the public evidence-risk reference surface: Audience Paths, Research Reviewers, Trust and Safety Readers, Education and Literacy, and AI Agents. These pages help humans and AI agents move through Hoax.ai's utilities, concepts, pathways, route-group deepening pages, review layers, system map, and boundaries without creating dashboards, graph tools, scorecards, rating systems, due-diligence rooms, private data-room access, downloadable reports, pitch decks, sales pages, consulting offers, service funnels, upload behavior, scoring, verdicts, binary authenticity label outputs, detector claims, public API, automated reports, JavaScript, forms, chatbot behavior, generator behavior, real-world case evaluation, pricing statements, transaction pages, acquisition term documents, representative mandates, legal representations, or financial representations.
+
+### Rationale
+
+After Sprint 112 deepened major route groups, Hoax.ai needed visible audience-path reference pages that help different reader types traverse the public reference system safely. This decision governs pages built in this sprint and is not preparatory governance. The audience-path surface strengthens public comprehension and AI retrieval without turning Hoax.ai into a service funnel, consulting surface, operational tool, dashboard, detector, scorecard, rating system, report, transaction surface, or private review room.
+
+### Implications
+
+- Five new public audience-path routes are authorized.
+- Sitemap may increase from 88 to 93 URLs.
+- Route registry may increase from 88 to 93 entries.
+- Public-file-registry may receive PUB-FILE-0089 through PUB-FILE-0093.
+- Homepage, `/system-map/`, and route-group deepening pages may be updated to link the new audience-path surface.
+- No dashboard, graph tool, scorecard, rating system, due-diligence room, private data-room access, downloadable report, pitch deck, sales page, consulting offer, service funnel, pricing statement, transaction page, acquisition term document, representative mandate, legal representation, or financial representation is authorized.
+- Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.

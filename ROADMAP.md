@@ -2555,7 +2555,29 @@ All harnesses and `validate_all.py` — PASS required.
 
 ### Gate
 
-**Gate G112 passed.** Sprint 113 — Public Reference Route Group Deepening Integrity Audit v1 only if real production defects appear. Otherwise proceed to Sprint 113 — Public Reference Audience Path Expansion v1.
+**Gate G112 passed.** Sprint 113 — Public Reference Audience Path Expansion v1 is next.
+
+---
+
+## Sprint 113 — Public Reference Audience Path Expansion v1
+
+**Status:** COMPLETE — 2026-06-27
+**Goal:** Add five audience-path reference pages; update homepage, system map, and route-group pages; increase public surface from 88 to 93 routes.
+
+### Deliverables
+
+- Five `/audience-paths/` routes (hub plus four child paths)
+- Homepage Audience Paths section with five cards
+- `/system-map/` Audience Path Layer
+- Route-group deepening pages linked to relevant audience paths
+- Public Release Integrity Snapshot updated to 93 routes
+- PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_V1.md, standard, audit, JSON/schema, validator
+- Sitemap 93 URLs; route registry 93 entries; PUB-FILE-0089–0093
+- DEC-131, PUB-GATE-0107, CLAIM-0114
+
+### Gate
+
+**Gate G113 passed.** Sprint 114 — Public Reference Evidence Condition Library v1 is next.
 
 ---
 

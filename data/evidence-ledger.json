@@ -1245,6 +1245,17 @@
       "status": "active",
       "last_reviewed": "2026-06-27",
       "notes": "Sprint 112 route group deepening. Sitemap eighty-eight URLs. Five new public routes."
+    },
+    {
+      "claim_id": "CLAIM-0114",
+      "claim_text": "Hoax.ai has adopted Public Reference Audience Path Expansion v1, adding five audience-path pages for research reviewers, trust and safety readers, education and literacy readers, and AI agents on a 93-route public surface, with homepage, system map, and route-group links, without dashboards, graph tools, scorecards, rating systems, due-diligence rooms, private data-room access, downloadable reports, pitch decks, sales pages, consulting offers, service funnels, pricing statements, transaction pages, verdicts, or detector behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_V1.md, PUBLIC_AUDIENCE_PATH_STANDARD_V1.md, data/public-reference-audience-path-expansion-v1.json, index.html, system-map/index.html, audience-paths/index.html, audience-paths/research-reviewers/index.html, audience-paths/trust-safety-readers/index.html, audience-paths/education-literacy/index.html, audience-paths/ai-agents/index.html, validators/validate_public_reference_audience_path_expansion_v1.py, SPRINT_113_PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_V1.md, DECISION_LOG.md (DEC-131)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-06-27",
+      "notes": "Sprint 113 audience path expansion. Sitemap ninety-three URLs. Five new public routes."
     }
   ]
 }

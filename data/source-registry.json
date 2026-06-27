@@ -9359,6 +9359,156 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 112 system map route group deepening layer."
+    },
+    {
+      "source_id": "SOURCE-0768",
+      "source_title": "PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_V1.md",
+      "source_type": "governance_file",
+      "location": "PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_V1.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 audience path expansion statement."
+    },
+    {
+      "source_id": "SOURCE-0769",
+      "source_title": "PUBLIC_AUDIENCE_PATH_STANDARD_V1.md",
+      "source_type": "governance_file",
+      "location": "PUBLIC_AUDIENCE_PATH_STANDARD_V1.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 audience path standard."
+    },
+    {
+      "source_id": "SOURCE-0770",
+      "source_title": "PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "location": "PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_AUDIT_V1.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 audience path expansion audit."
+    },
+    {
+      "source_id": "SOURCE-0771",
+      "source_title": "data/public-reference-audience-path-expansion-v1.json",
+      "source_type": "governance_file",
+      "location": "data/public-reference-audience-path-expansion-v1.json",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 audience path expansion JSON."
+    },
+    {
+      "source_id": "SOURCE-0772",
+      "source_title": "validators/validate_public_reference_audience_path_expansion_v1.py",
+      "source_type": "governance_file",
+      "location": "validators/validate_public_reference_audience_path_expansion_v1.py",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 audience path expansion validator."
+    },
+    {
+      "source_id": "SOURCE-0773",
+      "source_title": "SPRINT_113_PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_V1.md",
+      "source_type": "governance_file",
+      "location": "SPRINT_113_PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_V1.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 sprint record."
+    },
+    {
+      "source_id": "SOURCE-0774",
+      "source_title": "audience-paths/index.html",
+      "source_type": "public_reference_page",
+      "location": "audience-paths/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 audience paths hub."
+    },
+    {
+      "source_id": "SOURCE-0775",
+      "source_title": "audience-paths/research-reviewers/index.html",
+      "source_type": "public_reference_page",
+      "location": "audience-paths/research-reviewers/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 research reviewers audience path."
+    },
+    {
+      "source_id": "SOURCE-0776",
+      "source_title": "audience-paths/trust-safety-readers/index.html",
+      "source_type": "public_reference_page",
+      "location": "audience-paths/trust-safety-readers/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 trust and safety readers audience path."
+    },
+    {
+      "source_id": "SOURCE-0777",
+      "source_title": "audience-paths/education-literacy/index.html",
+      "source_type": "public_reference_page",
+      "location": "audience-paths/education-literacy/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 education and literacy audience path."
+    },
+    {
+      "source_id": "SOURCE-0778",
+      "source_title": "audience-paths/ai-agents/index.html",
+      "source_type": "public_reference_page",
+      "location": "audience-paths/ai-agents/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 AI agents audience path."
+    },
+    {
+      "source_id": "SOURCE-0779",
+      "source_title": "index.html",
+      "source_type": "public_reference_page",
+      "location": "index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 homepage audience paths section."
+    },
+    {
+      "source_id": "SOURCE-0780",
+      "source_title": "system-map/index.html",
+      "source_type": "public_reference_page",
+      "location": "system-map/index.html",
+      "supports": ["governance_claim", "operational_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 system map audience path layer."
+    },
+    {
+      "source_id": "SOURCE-0781",
+      "source_title": "DECISION_LOG.md",
+      "source_type": "governance_file",
+      "location": "DECISION_LOG.md",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "DEC-131 audience path expansion decision."
+    },
+    {
+      "source_id": "SOURCE-0782",
+      "source_title": "data/public-reference-audience-path-expansion-v1.schema.json",
+      "source_type": "governance_file",
+      "location": "data/public-reference-audience-path-expansion-v1.schema.json",
+      "supports": ["governance_claim"],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 113 audience path expansion schema."
     }
   ]
 }

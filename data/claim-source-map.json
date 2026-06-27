@@ -2795,6 +2795,48 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Public Reference Route Group Deepening v1 per DEC-130."
+    },
+    {
+      "claim_id": "CLAIM-0114",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_V1.md",
+        "PUBLIC_AUDIENCE_PATH_STANDARD_V1.md",
+        "PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_AUDIT_V1.md",
+        "data/public-reference-audience-path-expansion-v1.json",
+        "index.html",
+        "system-map/index.html",
+        "audience-paths/index.html",
+        "audience-paths/research-reviewers/index.html",
+        "audience-paths/trust-safety-readers/index.html",
+        "audience-paths/education-literacy/index.html",
+        "audience-paths/ai-agents/index.html",
+        "validators/validate_public_reference_audience_path_expansion_v1.py",
+        "SPRINT_113_PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_V1.md",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0768",
+        "SOURCE-0769",
+        "SOURCE-0770",
+        "SOURCE-0771",
+        "SOURCE-0772",
+        "SOURCE-0773",
+        "SOURCE-0774",
+        "SOURCE-0775",
+        "SOURCE-0776",
+        "SOURCE-0777",
+        "SOURCE-0778",
+        "SOURCE-0779",
+        "SOURCE-0780",
+        "SOURCE-0781",
+        "SOURCE-0782"
+      ],
+      "support_scope": "public reference audience path expansion v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Public Reference Audience Path Expansion v1 per DEC-131."
     }
   ],
   "last_reviewed": "2026-06-27"

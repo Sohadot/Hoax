@@ -20,6 +20,7 @@ from public_surface_checks import (  # noqa: E402
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_SYSTEM_MAP_INTEGRITY_AUDIT_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_NAVIGATION_BACKBONE_CONSOLIDATION_VALIDATION,
     PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_GROUP_DEEPENING_VALIDATION,
+    PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_VALIDATION,
     validate_public_surface,
 )
 
@@ -477,7 +478,10 @@ def validate_governance() -> bool:
         error("validate_all.py must include Sprint 112 validator")
         ok = False
     policy = load_json("data/publisher-governance-policy.json")
-    if policy.get("current_publisher_status") != PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_GROUP_DEEPENING_VALIDATION:
+    if policy.get("current_publisher_status") not in (
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_ROUTE_GROUP_DEEPENING_VALIDATION,
+        PUBLISHER_STATUS_POST_PUBLIC_REFERENCE_AUDIENCE_PATH_EXPANSION_VALIDATION,
+    ):
         error("publisher status must reflect Sprint 112 route group deepening validation")
         ok = False
     locs = {s.get("location") for s in load_json("data/source-registry.json").get("sources", [])}
