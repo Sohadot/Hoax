@@ -1333,6 +1333,17 @@
       "status": "active",
       "last_reviewed": "2026-07-02",
       "notes": "Sprint 120 citation orientation route."
+    },
+    {
+      "claim_id": "CLAIM-0122",
+      "claim_text": "Hoax.ai completed Public Reference Citation Walkthrough Audit v1 on the live /citation-orientation/ route with 24 citation scenarios, all passing after three scenario-backed hardening patches, while preserving a 103-route public surface with no new routes, no citation-generator behavior, and no DEC-138 decision requirement.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_CITATION_WALKTHROUGH_AUDIT_V1.md, data/public-reference-citation-walkthrough-audit-v1.json, citation-orientation/index.html, validators/validate_public_reference_citation_walkthrough_audit_v1.py, SPRINT_121_PUBLIC_REFERENCE_CITATION_WALKTHROUGH_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-07-02",
+      "notes": "Sprint 121 audit-only citation walkthrough hardening."
     }
   ]
 }

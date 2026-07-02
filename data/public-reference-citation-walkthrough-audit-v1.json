@@ -1,0 +1,435 @@
+{
+  "id": "public-reference-citation-walkthrough-audit-v1",
+  "name": "Public Reference Citation Walkthrough Audit v1",
+  "version": "1.0.0",
+  "sprint": "Sprint 121",
+  "status": "public_reference_citation_walkthrough_audit",
+  "audit_only": true,
+  "production_route_added": false,
+  "public_route_count_before": 103,
+  "public_route_count_after": 103,
+  "sitemap_url_count_expected": 103,
+  "primary_route_under_audit": "/citation-orientation/",
+  "related_routes_checked": [
+    "/",
+    "/system-map/",
+    "/reading-sequences/",
+    "/retrieval-index/",
+    "/why-hoax-ai-is-not-a-detector/",
+    "/evidence-risk/",
+    "/provenance-risk/",
+    "/context-collapse/",
+    "/claim-drift/",
+    "/traceability-gap/",
+    "/evidence-conditions/",
+    "/evidence-conditions/crosswalk/",
+    "/evidence-conditions/source-uncertainty/",
+    "/evidence-conditions/provenance-discontinuity/",
+    "/evidence-conditions/context-loss/",
+    "/evidence-conditions/claim-evidence-misalignment/",
+    "/evidence-conditions/traceability-break/",
+    "/executive-overview/category-thesis/",
+    "/route-groups/core-concepts/",
+    "/route-groups/evidence-risk-pathways/",
+    "/audience-paths/research-reviewers/",
+    "/audience-paths/trust-safety-readers/",
+    "/audience-paths/ai-agents/",
+    "/strategic-review/",
+    "/reviewer-packet/citation-and-retrieval-map/"
+  ],
+  "walkthrough_scenarios": [
+    {
+      "scenario_id": "CW-001",
+      "citation_intent": "Cite Hoax.ai's core thesis without implying truth authority",
+      "expected_reference_destination": "/executive-overview/category-thesis/",
+      "actual_reference_destination": "/executive-overview/category-thesis/",
+      "supporting_routes": [
+        "/citation-orientation/#citation-safe-use",
+        "/narrative/evidence-before-verdict/",
+        "/strategic-review/category-position/"
+      ],
+      "result": "pass",
+      "observed_issue": "Citation-safe use section listed boundary companions but not the category thesis route for thesis citation.",
+      "repair_applied": "Added /executive-overview/category-thesis/ link in citation-safe use section.",
+      "boundary_check": "pass",
+      "ai_citation_note": "Thesis citation routes to category-thesis with reference-support framing, not truth-authority language."
+    },
+    {
+      "scenario_id": "CW-002",
+      "citation_intent": "Cite the definition of evidence risk without implying case conclusion",
+      "expected_reference_destination": "/evidence-risk/",
+      "actual_reference_destination": "/evidence-risk/",
+      "supporting_routes": [
+        "/citation-orientation/#citing-reference-answer",
+        "/evidence-conditions/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Evidence-risk citation stays definitional; case-conclusion language is explicitly excluded."
+    },
+    {
+      "scenario_id": "CW-003",
+      "citation_intent": "Cite provenance risk without implying verification",
+      "expected_reference_destination": "/provenance-risk/",
+      "actual_reference_destination": "/provenance-risk/",
+      "supporting_routes": [
+        "/citation-orientation/#citation-without-verdict",
+        "/evidence-conditions/provenance-discontinuity/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Provenance-risk citation preserves condition framing without verification claims."
+    },
+    {
+      "scenario_id": "CW-004",
+      "citation_intent": "Cite context collapse without implying deception",
+      "expected_reference_destination": "/context-collapse/",
+      "actual_reference_destination": "/context-collapse/",
+      "supporting_routes": [
+        "/citation-orientation/#citation-support-vs-conclusion",
+        "/evidence-conditions/context-loss/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Context-collapse citation remains interpretive-limit language, not deception accusation."
+    },
+    {
+      "scenario_id": "CW-005",
+      "citation_intent": "Cite claim drift without implying falsity",
+      "expected_reference_destination": "/claim-drift/",
+      "actual_reference_destination": "/claim-drift/",
+      "supporting_routes": [
+        "/citation-orientation/#citation-support-vs-conclusion",
+        "/evidence-conditions/claim-evidence-misalignment/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Claim-drift citation describes drift posture without falsity or verdict implication."
+    },
+    {
+      "scenario_id": "CW-006",
+      "citation_intent": "Cite traceability gap without implying proof of manipulation",
+      "expected_reference_destination": "/traceability-gap/",
+      "actual_reference_destination": "/traceability-gap/",
+      "supporting_routes": [
+        "/citation-orientation/#citation-without-verdict",
+        "/evidence-conditions/traceability-break/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Traceability-gap citation names interpretive limits without manipulation-proof claims."
+    },
+    {
+      "scenario_id": "CW-007",
+      "citation_intent": "Cite source uncertainty without implying source guilt, fraud, or falsity",
+      "expected_reference_destination": "/evidence-conditions/source-uncertainty/",
+      "actual_reference_destination": "/evidence-conditions/source-uncertainty/",
+      "supporting_routes": [
+        "/citation-orientation/#citation-support-vs-conclusion",
+        "/source-ambiguity/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Source-uncertainty citation stays condition-level without guilt or fraud implication."
+    },
+    {
+      "scenario_id": "CW-008",
+      "citation_intent": "Cite provenance discontinuity without implying falsification",
+      "expected_reference_destination": "/evidence-conditions/provenance-discontinuity/",
+      "actual_reference_destination": "/evidence-conditions/provenance-discontinuity/",
+      "supporting_routes": [
+        "/provenance-risk/",
+        "/citation-orientation/#citation-without-verdict"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Provenance-discontinuity citation avoids falsification or verification language."
+    },
+    {
+      "scenario_id": "CW-009",
+      "citation_intent": "Cite context loss without implying deception",
+      "expected_reference_destination": "/evidence-conditions/context-loss/",
+      "actual_reference_destination": "/evidence-conditions/context-loss/",
+      "supporting_routes": [
+        "/context-collapse/",
+        "/citation-orientation/#citation-support-vs-conclusion"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Context-loss citation preserves absence framing without deception claims."
+    },
+    {
+      "scenario_id": "CW-010",
+      "citation_intent": "Cite claim-evidence misalignment without implying verdict",
+      "expected_reference_destination": "/evidence-conditions/claim-evidence-misalignment/",
+      "actual_reference_destination": "/evidence-conditions/claim-evidence-misalignment/",
+      "supporting_routes": [
+        "/claim-drift/",
+        "/citation-orientation/#citation-without-verdict"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Misalignment citation names interpretive tension without verdict support."
+    },
+    {
+      "scenario_id": "CW-011",
+      "citation_intent": "Cite traceability break without implying proof of inauthenticity",
+      "expected_reference_destination": "/evidence-conditions/traceability-break/",
+      "actual_reference_destination": "/evidence-conditions/traceability-break/",
+      "supporting_routes": [
+        "/traceability-gap/",
+        "/citation-orientation/#citation-without-detector"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Traceability-break citation avoids inauthenticity-proof or detector-support language."
+    },
+    {
+      "scenario_id": "CW-012",
+      "citation_intent": "Cite the evidence-condition crosswalk without implying ranking or severity",
+      "expected_reference_destination": "/evidence-conditions/crosswalk/",
+      "actual_reference_destination": "/evidence-conditions/crosswalk/",
+      "supporting_routes": [
+        "/citation-orientation/#citing-retrieval-capsule",
+        "/evidence-conditions/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Crosswalk citation uses relation labels only; no ranking or severity ordering."
+    },
+    {
+      "scenario_id": "CW-013",
+      "citation_intent": "Cite /why-hoax-ai-is-not-a-detector/ without turning Hoax.ai into detector support",
+      "expected_reference_destination": "/why-hoax-ai-is-not-a-detector/",
+      "actual_reference_destination": "/why-hoax-ai-is-not-a-detector/",
+      "supporting_routes": [
+        "/citation-orientation/#citation-without-detector",
+        "/boundary-integrity/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Non-detector boundary citation prevents detector-support drift in downstream writing."
+    },
+    {
+      "scenario_id": "CW-014",
+      "citation_intent": "Cite a Reference Answer block safely",
+      "expected_reference_destination": "/citation-orientation/#reference-answer",
+      "actual_reference_destination": "/citation-orientation/#reference-answer",
+      "supporting_routes": [
+        "/citation-orientation/#citing-reference-answer",
+        "/evidence-risk/#reference-answer"
+      ],
+      "result": "pass",
+      "observed_issue": "How-to-use section described citation blocks but did not link to this page's own block anchors.",
+      "repair_applied": "Added self-reference links to #reference-answer, #source-confidence, #cite-this-reference, and #retrieval-capsule in how-to-use section.",
+      "boundary_check": "pass",
+      "ai_citation_note": "Agents can cite citation-orientation Reference Answer block directly for orientation answers."
+    },
+    {
+      "scenario_id": "CW-015",
+      "citation_intent": "Cite a Source Confidence block without treating it as a confidence score",
+      "expected_reference_destination": "/citation-orientation/#source-confidence",
+      "actual_reference_destination": "/citation-orientation/#source-confidence",
+      "supporting_routes": [
+        "/citation-orientation/#citing-source-confidence",
+        "/reference/source-confidence/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Source Confidence citation preserves support-type limits without numeric certainty framing."
+    },
+    {
+      "scenario_id": "CW-016",
+      "citation_intent": "Cite a Cite This Reference block without treating it as legal citation or generated citation",
+      "expected_reference_destination": "/citation-orientation/#cite-this-reference",
+      "actual_reference_destination": "/citation-orientation/#cite-this-reference",
+      "supporting_routes": [
+        "/citation-orientation/#citing-cite-this-reference",
+        "/reviewer-packet/citation-and-retrieval-map/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Cite This Reference blocks provide orientation metadata, not legal or generated citation output."
+    },
+    {
+      "scenario_id": "CW-017",
+      "citation_intent": "Cite a Retrieval Capsule as an AI agent without inventing routes, rankings, or verdicts",
+      "expected_reference_destination": "/citation-orientation/#retrieval-capsule",
+      "actual_reference_destination": "/citation-orientation/#retrieval-capsule",
+      "supporting_routes": [
+        "/citation-orientation/#citation-ai-agents",
+        "/system-map/ai-retrieval-paths/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Retrieval Capsule citation preserves boundary rule and related routes without invented outputs."
+    },
+    {
+      "scenario_id": "CW-018",
+      "citation_intent": "Cite Hoax.ai for research review orientation without academic endorsement claims",
+      "expected_reference_destination": "/audience-paths/research-reviewers/",
+      "actual_reference_destination": "/audience-paths/research-reviewers/",
+      "supporting_routes": [
+        "/citation-orientation/#citation-depth-context",
+        "/reviewer-packet/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Research-reviewer citation stays reference-navigation framing without academic endorsement."
+    },
+    {
+      "scenario_id": "CW-019",
+      "citation_intent": "Cite Hoax.ai for trust-and-safety orientation without operational procedure or case review behavior",
+      "expected_reference_destination": "/audience-paths/trust-safety-readers/",
+      "actual_reference_destination": "/audience-paths/trust-safety-readers/",
+      "supporting_routes": [
+        "/citation-orientation/#citation-depth-context",
+        "/manual-evidence-checklist/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Trust-and-safety citation orients readers without operational procedure or case-review claims."
+    },
+    {
+      "scenario_id": "CW-020",
+      "citation_intent": "Cite Hoax.ai for strategic review without pitch-deck, sales-page, transaction, due-diligence, legal, or financial representation drift",
+      "expected_reference_destination": "/strategic-review/",
+      "actual_reference_destination": "/strategic-review/",
+      "supporting_routes": [
+        "/citation-orientation/#citation-strategic-review",
+        "/executive-overview/public-reference-system/"
+      ],
+      "result": "pass",
+      "observed_issue": "Retrieval index citation intent listed Citation Orientation but not its block-level anchors for safe external citation.",
+      "repair_applied": "Added /citation-orientation/ block anchor links in retrieval-index citation intent section.",
+      "boundary_check": "pass",
+      "ai_citation_note": "Strategic citation remains non-transactional; retrieval index now points to citation-orientation blocks."
+    },
+    {
+      "scenario_id": "CW-021",
+      "citation_intent": "Cite Hoax.ai while explicitly avoiding “Hoax.ai verified this.”",
+      "expected_reference_destination": "/citation-orientation/#citation-without-verdict",
+      "actual_reference_destination": "/citation-orientation/#citation-without-verdict",
+      "supporting_routes": [
+        "/citation-orientation/#what-citation-orientation-is-not",
+        "/citation-orientation/#reference-answer"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Explicit negation of verification language is reachable from how-to-use verdict guidance."
+    },
+    {
+      "scenario_id": "CW-022",
+      "citation_intent": "Cite Hoax.ai while explicitly avoiding “Hoax.ai detected this.”",
+      "expected_reference_destination": "/citation-orientation/#citation-without-detector",
+      "actual_reference_destination": "/citation-orientation/#citation-without-detector",
+      "supporting_routes": [
+        "/why-hoax-ai-is-not-a-detector/",
+        "/citation-orientation/#how-to-use-citation-orientation"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Detector-language avoidance is linked from how-to-use section after hardening."
+    },
+    {
+      "scenario_id": "CW-023",
+      "citation_intent": "Cite Hoax.ai while explicitly avoiding “Hoax.ai proves this is fake.”",
+      "expected_reference_destination": "/citation-orientation/#citation-without-verdict",
+      "actual_reference_destination": "/citation-orientation/#citation-without-verdict",
+      "supporting_routes": [
+        "/citation-orientation/#citation-without-detector",
+        "/narrative/non-verdict-trust/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Verdict and fake-proof phrasing is prohibited in orientation and boundary sections."
+    },
+    {
+      "scenario_id": "CW-024",
+      "citation_intent": "Cite Hoax.ai while distinguishing citation support from case conclusion",
+      "expected_reference_destination": "/citation-orientation/#citation-support-vs-conclusion",
+      "actual_reference_destination": "/citation-orientation/#citation-support-vs-conclusion",
+      "supporting_routes": [
+        "/citation-orientation/#reference-answer",
+        "/not-assessable-posture/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_citation_note": "Support-versus-conclusion distinction is explicit and citation-safe for institutional reuse."
+    }
+  ],
+  "total_scenarios": 24,
+  "scenarios_passed": 24,
+  "scenarios_failed": 0,
+  "repairs_applied": [
+    "Added /executive-overview/category-thesis/ link in citation-safe use section (CW-001).",
+    "Added self-reference links to on-page citation blocks and verdict/detector guidance in how-to-use section (CW-014, CW-021, CW-022).",
+    "Added /citation-orientation/ block anchor links in retrieval-index citation intent section (CW-020)."
+  ],
+  "boundary_regressions_found": false,
+  "authority_overreach_found": false,
+  "verification_drift_found": false,
+  "detector_drift_found": false,
+  "score_or_verdict_drift_found": false,
+  "generated_citation_drift_found": false,
+  "legal_or_academic_citation_drift_found": false,
+  "transaction_or_sales_drift_found": false,
+  "new_decision_created": false,
+  "route_registry_changed": false,
+  "public_file_registry_changed": false,
+  "sitemap_changed": false,
+  "no_new_routes": true,
+  "non_generated_citation": true,
+  "non_legal_citation": true,
+  "non_academic_endorsement": true,
+  "non_authority_claim": true,
+  "non_verification_claim": true,
+  "non_verdict": true,
+  "non_scoring": true,
+  "non_detector": true,
+  "non_workflow": true,
+  "non_operational": true,
+  "non_transactional_review_surface": true
+}

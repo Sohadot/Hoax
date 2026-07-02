@@ -4228,6 +4228,7 @@ Future layers may include:
 ---
 
 ## Sprint 119 — retrieval walkthrough audit complete (102 routes).
+- Sprint 121 — citation walkthrough audit complete (103 routes, audit-only).
 - Sprint 120 — Public Reference Citation Orientation v1 (`/citation-orientation/`, 103 routes).
 - Sprint 119 — Public Reference Retrieval Walkthrough Audit v1
 
