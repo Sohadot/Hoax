@@ -1734,7 +1734,25 @@
       "failure_condition": "public_reference_evidence_condition_crosswalk_v1_not_met",
       "bypassable": false,
       "notes": "Public Reference Evidence Condition Crosswalk v1 completed Sprint 115 (DEC-133). One crosswalk page; homepage, hub, system map, and related pages updated. Sitemap one hundred URLs."
+    },
+    {
+      "gate_id": "PUB-GATE-0110",
+      "name": "Public Reference 100-Route Surface Integrity Audit v1 Gate",
+      "status": "public_reference_100_route_surface_integrity_audit_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_116_PUBLIC_REFERENCE_100_ROUTE_SURFACE_INTEGRITY_AUDIT_V1.md",
+      "failure_condition": "public_reference_100_route_surface_integrity_audit_v1_not_met",
+      "bypassable": false,
+      "notes": "Sprint 116 completed milestone integrity audit at 100 routes with no route expansion (DEC-134)."
     }
   ],
-  "last_reviewed": "2026-06-27"
+  "last_reviewed": "2026-07-02"
 }

@@ -3464,3 +3464,24 @@ After Sprint 114 added the Evidence Condition Library, readers and AI agents nee
 - Homepage, /evidence-conditions/, /system-map/, related route-group pages, and related audience-path pages may be updated to link the crosswalk.
 - No ranking, severity ordering, risk matrix, scorecard, rating system, dashboard, graph tool, due-diligence room, private data-room access, downloadable report, pitch deck, sales page, consulting offer, service funnel, pricing statement, transaction page, acquisition term document, representative mandate, legal representation, or financial representation is authorized.
 - Upload, scoring, verdict, detector, API, automated report, JavaScript, forms, chatbot, generator, and real-world case evaluation remain unauthorized.
+
+
+## DEC-134 — 100-Route Public Surface Integrity Audit Rule Adopted
+
+**Date:** 2026-07-02
+**Status:** Active
+
+### Decision
+
+After reaching a major public route milestone, Hoax.ai must complete an integrity audit before further public route expansion.
+
+### Rationale
+
+At 100 public routes, structural drift risk increases faster than surface value if growth continues without verification. A milestone integrity audit preserves route alignment, metadata consistency, boundary discipline, and retrieval clarity across the full public reference system.
+
+### Implications
+
+- Sprint 116 is audit-only with no new public route.
+- Expansion pauses until milestone integrity validation passes.
+- Route integrity, boundary integrity, registry integrity, and retrieval integrity must be proven at the full 100-route surface.
+- Upload, scoring, verdict, detector, API, dashboard, graph-tool, transaction, sales, and private-room behaviors remain unauthorized.

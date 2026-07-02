@@ -2933,6 +2933,33 @@
         "SOURCE-0804",
         "SOURCE-0805"
       ]
+    },
+    {
+      "claim_id": "CLAIM-0117",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_100_ROUTE_SURFACE_INTEGRITY_AUDIT_V1.md",
+        "PUBLIC_REFERENCE_100_ROUTE_SURFACE_INTEGRITY_STANDARD_V1.md",
+        "SPRINT_116_PUBLIC_REFERENCE_100_ROUTE_SURFACE_INTEGRITY_AUDIT_V1.md",
+        "data/public-reference-100-route-surface-integrity-audit-v1.json",
+        "data/public-reference-100-route-surface-integrity-audit-v1.schema.json",
+        "validators/validate_public_reference_100_route_surface_integrity_audit_v1.py",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0806",
+        "SOURCE-0807",
+        "SOURCE-0808",
+        "SOURCE-0809",
+        "SOURCE-0810",
+        "SOURCE-0811",
+        "SOURCE-0797"
+      ],
+      "support_scope": "100-route public surface integrity audit",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Sprint 116 milestone integrity rule and audit."
     }
   ],
   "last_reviewed": "2026-07-02"

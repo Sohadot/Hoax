@@ -2621,7 +2621,29 @@ All harnesses and `validate_all.py` — PASS required.
 
 ### Gate
 
-**Gate G115 passed.** Sprint 116 — next phase to be defined through governance.
+**Gate G115 passed.** Sprint 116 — Public Reference 100-Route Surface Integrity Audit v1 is next.
+
+---
+
+## Sprint 116 — Public Reference 100-Route Surface Integrity Audit v1
+
+**Status:** COMPLETE — 2026-07-02
+**Goal:** Freeze expansion at the 100-route milestone and verify route integrity, boundary integrity, registry integrity, and retrieval integrity across the full public surface.
+
+### Deliverables
+
+- Audit-only sprint with no new routes
+- `PUBLIC_REFERENCE_100_ROUTE_SURFACE_INTEGRITY_AUDIT_V1.md`
+- `PUBLIC_REFERENCE_100_ROUTE_SURFACE_INTEGRITY_STANDARD_V1.md`
+- `SPRINT_116_PUBLIC_REFERENCE_100_ROUTE_SURFACE_INTEGRITY_AUDIT_V1.md`
+- `data/public-reference-100-route-surface-integrity-audit-v1.json` and schema
+- `validators/validate_public_reference_100_route_surface_integrity_audit_v1.py`
+- Full route-count, metadata, link-integrity, boundary-language, and retrieval checks at 100 routes
+- DEC-134, PUB-GATE-0110, CLAIM-0117
+
+### Gate
+
+**Gate G116 passed.** Sprint 117 — Public Reference Reading Sequences v1 is next.
 
 ---
 

@@ -1278,6 +1278,17 @@
       "status": "active",
       "last_reviewed": "2026-06-27",
       "notes": "Sprint 114 evidence condition library. Sitemap ninety-nine URLs. Six new public routes."
+    },
+    {
+      "claim_id": "CLAIM-0117",
+      "claim_text": "Hoax.ai has adopted Public Reference 100-Route Surface Integrity Audit v1 as an audit-only milestone sprint at 100 routes, validating route-count integrity, metadata consistency, boundary-language integrity, registry alignment, internal-link integrity, and retrieval integrity before further public route expansion.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_100_ROUTE_SURFACE_INTEGRITY_AUDIT_V1.md, PUBLIC_REFERENCE_100_ROUTE_SURFACE_INTEGRITY_STANDARD_V1.md, data/public-reference-100-route-surface-integrity-audit-v1.json, validators/validate_public_reference_100_route_surface_integrity_audit_v1.py, SPRINT_116_PUBLIC_REFERENCE_100_ROUTE_SURFACE_INTEGRITY_AUDIT_V1.md, DECISION_LOG.md (DEC-134)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-07-02",
+      "notes": "Sprint 116 audit-only milestone hardening at 100 routes."
     }
   ]
 }
