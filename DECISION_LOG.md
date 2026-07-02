@@ -3485,3 +3485,24 @@ At 100 public routes, structural drift risk increases faster than surface value 
 - Expansion pauses until milestone integrity validation passes.
 - Route integrity, boundary integrity, registry integrity, and retrieval integrity must be proven at the full 100-route surface.
 - Upload, scoring, verdict, detector, API, dashboard, graph-tool, transaction, sales, and private-room behaviors remain unauthorized.
+
+
+## DEC-135 — Public Reference Reading Sequences Rule Adopted
+
+**Date:** 2026-07-02
+**Status:** Active
+
+### Decision
+
+Public reading sequences may guide reference navigation across Hoax.ai, but must not create workflows, rankings, assessments, procedures, verdicts, scores, detections, operational instructions, case evaluations, or transaction surfaces.
+
+### Rationale
+
+At 101 routes, navigation ambiguity can weaken interpretive safety even when route content is valid. A governed reading-sequence surface improves consistency for humans and AI agents while preserving non-verdict and non-transactional boundaries.
+
+### Implications
+
+- One new public route is authorized: `/reading-sequences/` (ROUTE-0101).
+- Reading sequences remain navigation guidance only.
+- No workflow, procedure, assessment, score, ranking, detector output, or case-handling logic is authorized.
+- Upload, API, dashboard, graph-tool, report generation, due-diligence room, sales page, consulting funnel, and transaction behavior remain unauthorized.

@@ -1289,6 +1289,17 @@
       "status": "active",
       "last_reviewed": "2026-07-02",
       "notes": "Sprint 116 audit-only milestone hardening at 100 routes."
+    },
+    {
+      "claim_id": "CLAIM-0118",
+      "claim_text": "Hoax.ai has adopted Public Reference Reading Sequences v1 by adding one public reading-sequence route at /reading-sequences/ on a 101-route surface, providing navigation guidance only without workflows, assessments, rankings, scores, detections, operational procedures, case evaluations, APIs, dashboards, graph tools, or transaction/sales surfaces.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_READING_SEQUENCES_V1.md, PUBLIC_REFERENCE_READING_SEQUENCE_STANDARD_V1.md, data/public-reference-reading-sequences-v1.json, reading-sequences/index.html, validators/validate_public_reference_reading_sequences_v1.py, SPRINT_117_PUBLIC_REFERENCE_READING_SEQUENCES_V1.md, DECISION_LOG.md (DEC-135)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-07-02",
+      "notes": "Sprint 117 reading sequences route and governance."
     }
   ]
 }

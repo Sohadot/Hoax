@@ -2647,6 +2647,26 @@ All harnesses and `validate_all.py` — PASS required.
 
 ---
 
+## Sprint 117 — Public Reference Reading Sequences v1
+
+**Status:** COMPLETE — 2026-07-02
+**Goal:** Add one governed reading-sequence navigation route to guide humans and AI agents across the public reference surface without creating workflow behavior.
+
+### Deliverables
+
+- `/reading-sequences/` route (ROUTE-0101)
+- Homepage, system-map, and crosswalk links to reading sequences
+- Route-group and audience-path link updates
+- Sitemap 101 URLs; route registry 101 entries; PUB-FILE-0101
+- Reading-sequences governance pack, JSON/schema, validator
+- DEC-135, PUB-GATE-0111, CLAIM-0118
+
+### Gate
+
+**Gate G117 passed.** Sprint 118 — next phase to be defined through governance.
+
+---
+
 ## Sprint 108 — Public Reference System Map Surface v1
 
 **Status:** COMPLETE — 2026-06-27

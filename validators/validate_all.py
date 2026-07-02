@@ -123,6 +123,7 @@ VALIDATORS = [
     ROOT / "validators" / "validate_public_reference_evidence_condition_library_v1.py",
     ROOT / "validators" / "validate_public_reference_evidence_condition_crosswalk_v1.py",
     ROOT / "validators" / "validate_public_reference_100_route_surface_integrity_audit_v1.py",
+    ROOT / "validators" / "validate_public_reference_reading_sequences_v1.py",
 ]
 MANIFEST_GENERATOR = ROOT / "validators" / "generate_build_manifest.py"
 

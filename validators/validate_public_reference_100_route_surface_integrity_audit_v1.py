@@ -175,11 +175,12 @@ def validate_counts_and_alignment() -> bool:
     if len(route_ids) != len(set(route_ids)):
         error("duplicate route_id entries in route registry")
         ok = False
-    if "ROUTE-0100" not in route_ids:
-        error("ROUTE-0100 missing")
+    expected_max_route = f"ROUTE-{PUBLIC_SITEMAP_URL_COUNT:04d}"
+    if expected_max_route not in route_ids:
+        error(f"{expected_max_route} missing")
         ok = False
-    if any(rid > "ROUTE-0100" for rid in route_ids):
-        error("route_id beyond ROUTE-0100 found")
+    if any(rid > expected_max_route for rid in route_ids):
+        error(f"route_id beyond {expected_max_route} found")
         ok = False
 
     route_paths = {r.get("path") for r in reg}
@@ -254,8 +255,8 @@ def validate_hubs_and_retrieval() -> bool:
         if "Reference summary" not in content and rel != INDEX:
             error(f"{rel}: missing reference summary wording")
             ok = False
-    if "Current public route count: 100" not in (ROOT / INDEX).read_text(encoding="utf-8"):
-        error("index.html must include Current public route count: 100")
+    if f"Current public route count: {PUBLIC_SITEMAP_URL_COUNT}" not in (ROOT / INDEX).read_text(encoding="utf-8"):
+        error(f"index.html must include Current public route count: {PUBLIC_SITEMAP_URL_COUNT}")
         ok = False
     return ok
 

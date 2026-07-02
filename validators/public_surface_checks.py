@@ -30,6 +30,7 @@ PUBLIC_ROUTE_IDS = [
     "ROUTE-0089", "ROUTE-0090", "ROUTE-0091", "ROUTE-0092", "ROUTE-0093",
     "ROUTE-0094", "ROUTE-0095", "ROUTE-0096", "ROUTE-0097", "ROUTE-0098", "ROUTE-0099",
     "ROUTE-0100",
+    "ROUTE-0101",
 ]
 
 PILOT_ROUTE_IDS = PUBLIC_ROUTE_IDS  # backward compatibility
@@ -142,6 +143,7 @@ ALLOWED_PUBLIC_HTML = {
     "evidence-conditions/claim-evidence-misalignment/index.html",
     "evidence-conditions/traceability-break/index.html",
     "evidence-conditions/crosswalk/index.html",
+    "reading-sequences/index.html",
 }
 
 ALLOWED_INTERNAL_PROTOTYPE_HTML = {
@@ -156,7 +158,7 @@ ALLOWED_PUBLIC_ROOT_FILES = ALLOWED_PUBLIC_HTML | {
     "sitemap.xml",
 }
 
-PUBLIC_SITEMAP_URL_COUNT = 100
+PUBLIC_SITEMAP_URL_COUNT = 101
 
 PILOT_SITEMAP_URL_COUNT = PUBLIC_SITEMAP_URL_COUNT  # backward compatibility
 

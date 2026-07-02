@@ -2960,6 +2960,37 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Sprint 116 milestone integrity rule and audit."
+    },
+    {
+      "claim_id": "CLAIM-0118",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_READING_SEQUENCES_V1.md",
+        "PUBLIC_REFERENCE_READING_SEQUENCE_STANDARD_V1.md",
+        "PUBLIC_REFERENCE_READING_SEQUENCES_AUDIT_V1.md",
+        "SPRINT_117_PUBLIC_REFERENCE_READING_SEQUENCES_V1.md",
+        "data/public-reference-reading-sequences-v1.json",
+        "data/public-reference-reading-sequences-v1.schema.json",
+        "validators/validate_public_reference_reading_sequences_v1.py",
+        "reading-sequences/index.html",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0812",
+        "SOURCE-0813",
+        "SOURCE-0814",
+        "SOURCE-0815",
+        "SOURCE-0816",
+        "SOURCE-0817",
+        "SOURCE-0818",
+        "SOURCE-0819",
+        "SOURCE-0797"
+      ],
+      "support_scope": "public reference reading sequences v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Sprint 117 reading sequences governance and production."
     }
   ],
   "last_reviewed": "2026-07-02"
