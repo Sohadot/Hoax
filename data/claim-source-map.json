@@ -3307,6 +3307,39 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Sprint 128 audit-only Phase 3 integrity closure validation."
+    },
+    {
+      "claim_id": "CLAIM-0130",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_VALUE_BOUNDARY_AUDIT_V1.md",
+        "SPRINT_129_PUBLIC_REFERENCE_VALUE_BOUNDARY_AUDIT_V1.md",
+        "data/public-reference-value-boundary-audit-v1.json",
+        "data/public-reference-value-boundary-audit-v1.schema.json",
+        "validators/validate_public_reference_value_boundary_audit_v1.py",
+        "strategic-review/index.html",
+        "index.html",
+        "route-groups/review-and-overview-layers/index.html",
+        "route-groups/boundary-and-support-references/index.html",
+        "route-groups/core-concepts/index.html",
+        "route-groups/evidence-risk-pathways/index.html",
+        "source-use-orientation/index.html",
+        "system-map/index.html",
+        "executive-overview/index.html",
+        "reviewer-packet/public-surface-index/index.html"
+      ],
+      "source_refs": [
+        "SOURCE-0884",
+        "SOURCE-0885",
+        "SOURCE-0886",
+        "SOURCE-0887",
+        "SOURCE-0888"
+      ],
+      "support_scope": "public reference value boundary audit v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Sprint 129 audit-only Phase 4 value boundary validation."
     }
   ],
   "last_reviewed": "2026-07-02"

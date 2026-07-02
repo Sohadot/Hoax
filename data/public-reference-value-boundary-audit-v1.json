@@ -1,0 +1,1188 @@
+{
+  "id": "public-reference-value-boundary-audit-v1",
+  "name": "Public Reference Value Boundary Audit v1",
+  "version": "1.0.0",
+  "sprint": "Sprint 129",
+  "status": "public_reference_value_boundary_audit",
+  "audit_only": true,
+  "phase": "Phase 4",
+  "phase_entry_audit": true,
+  "production_route_added": false,
+  "public_route_count_before": 104,
+  "public_route_count_after": 104,
+  "sitemap_url_count_expected": 104,
+  "value_language_inventory": [
+    {
+      "value_language_id": "VL-001",
+      "language_text": "104-route public evidence-risk reference system",
+      "public_page": "/",
+      "anchor_or_section": "#public-release-integrity-snapshot",
+      "language_category": "Public reference value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Visible production depth",
+      "actual_interpretation": "Release snapshot value framing",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Visible production depth"
+    },
+    {
+      "value_language_id": "VL-002",
+      "language_text": "Phase 4 public reference value boundary",
+      "public_page": "/",
+      "anchor_or_section": "#public-release-integrity-snapshot",
+      "language_category": "Commercial-risk boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Value without monetization",
+      "actual_interpretation": "Phase 4 entry boundary on homepage",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added Phase 4 value boundary paragraph with strategic-review link",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Value without monetization"
+    },
+    {
+      "value_language_id": "VL-003",
+      "language_text": "Public reference value boundary",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#public-reference-value-boundary",
+      "language_category": "Strategic-review integrity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Value as maturity not commercial surface",
+      "actual_interpretation": "Central Phase 4 value boundary section",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added public-reference-value-boundary section",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Value as maturity not commercial surface"
+    },
+    {
+      "value_language_id": "VL-004",
+      "language_text": "visible production maturity",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#public-reference-value-boundary",
+      "language_category": "Public reference value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Production depth value",
+      "actual_interpretation": "Not monetization or pricing",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Production depth value"
+    },
+    {
+      "value_language_id": "VL-005",
+      "language_text": "Phase 3 strategic review integrity",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#phase-3-strategic-review-integrity",
+      "language_category": "Strategic-review integrity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Connected review layer value",
+      "actual_interpretation": "Not pitch deck or sales",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Connected review layer value"
+    },
+    {
+      "value_language_id": "VL-006",
+      "language_text": "public reference maturity",
+      "public_page": "/route-groups/review-and-overview-layers/",
+      "anchor_or_section": "#strategic-reference-value",
+      "language_category": "Strategic value language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Inspectable asset depth",
+      "actual_interpretation": "Not sales proof",
+      "status": "repaired",
+      "observed_issue": "Strategic value phrasing could read as commercial pitch",
+      "repair_applied": "Replaced with public reference maturity and value boundary paragraph",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Inspectable asset depth"
+    },
+    {
+      "value_language_id": "VL-007",
+      "language_text": "Value boundary: cite review layers",
+      "public_page": "/route-groups/review-and-overview-layers/",
+      "anchor_or_section": "#public-reference-value-boundary",
+      "language_category": "Commercial-risk boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Non-commercial citation framing",
+      "actual_interpretation": "Explicit value boundary anchor",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Non-commercial citation framing"
+    },
+    {
+      "value_language_id": "VL-008",
+      "language_text": "Public reference maturity: visible boundary architecture",
+      "public_page": "/route-groups/boundary-and-support-references/",
+      "anchor_or_section": "#strategic-reference-value",
+      "language_category": "Governance-traceability value language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Boundary architecture as maturity",
+      "actual_interpretation": "Not commercial product pitch",
+      "status": "repaired",
+      "observed_issue": "Strategic value on 88 routes stale",
+      "repair_applied": "Softened language and corrected to 104 routes",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Boundary architecture as maturity"
+    },
+    {
+      "value_language_id": "VL-009",
+      "language_text": "Public reference maturity: six governed pathways",
+      "public_page": "/route-groups/evidence-risk-pathways/",
+      "anchor_or_section": "#strategic-reference-value",
+      "language_category": "Reference infrastructure language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Condition-native design depth",
+      "actual_interpretation": "Not service offering",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Replaced Strategic value with public reference maturity",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Condition-native design depth"
+    },
+    {
+      "value_language_id": "VL-010",
+      "language_text": "Public reference maturity: core concepts",
+      "public_page": "/route-groups/core-concepts/",
+      "anchor_or_section": "#strategic-reference-value",
+      "language_category": "Category asset language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Governed vocabulary depth",
+      "actual_interpretation": "Not consulting positioning",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Replaced Strategic value phrasing",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Governed vocabulary depth"
+    },
+    {
+      "value_language_id": "VL-011",
+      "language_text": "reference discipline without consulting funnels",
+      "public_page": "/reading-sequences/",
+      "anchor_or_section": "#reading-sequences",
+      "language_category": "External-use discipline language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Phase 2 value without funnel",
+      "actual_interpretation": "Reading sequences as navigation",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Phase 2 value without funnel"
+    },
+    {
+      "value_language_id": "VL-012",
+      "language_text": "not commercial service claims",
+      "public_page": "/retrieval-index/",
+      "anchor_or_section": "#reference-answer",
+      "language_category": "Retrieval value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Retrieval organization not product",
+      "actual_interpretation": "Negated commercial claims",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Retrieval organization not product"
+    },
+    {
+      "value_language_id": "VL-013",
+      "language_text": "not commercial promises",
+      "public_page": "/citation-orientation/",
+      "anchor_or_section": "#citation-orientation-depth",
+      "language_category": "Citation value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Citation-safe not paid service",
+      "actual_interpretation": "Boundary on commercial promises",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Citation-safe not paid service"
+    },
+    {
+      "value_language_id": "VL-014",
+      "language_text": "public reference value boundary",
+      "public_page": "/source-use-orientation/",
+      "anchor_or_section": "#public-reference-value-boundary",
+      "language_category": "Source-use value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Source discipline value",
+      "actual_interpretation": "Not pricing or consulting",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added value boundary paragraph with strategic-review link",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Source discipline value"
+    },
+    {
+      "value_language_id": "VL-015",
+      "language_text": "public reference maturity for external reviewers",
+      "public_page": "/acquisition-readiness/",
+      "anchor_or_section": "#acquisition-language-boundary",
+      "language_category": "Acquisition-readability language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Readiness as maturity",
+      "actual_interpretation": "Not buyer solicitation",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Readiness as maturity"
+    },
+    {
+      "value_language_id": "VL-016",
+      "language_text": "protects public reference value",
+      "public_page": "/acquisition-readiness/governance-traceability/",
+      "anchor_or_section": "meta description",
+      "language_category": "Governance-traceability value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Governance protects reference value",
+      "actual_interpretation": "Not revenue claim",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Governance protects reference value"
+    },
+    {
+      "value_language_id": "VL-017",
+      "language_text": "Reviewer Packet Integrity Snapshot",
+      "public_page": "/reviewer-packet/",
+      "anchor_or_section": "#reviewer-packet-integrity-snapshot",
+      "language_category": "Reviewer value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Organized inspection value",
+      "actual_interpretation": "Not buyer packet",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Organized inspection value"
+    },
+    {
+      "value_language_id": "VL-018",
+      "language_text": "104 public routes",
+      "public_page": "/reviewer-packet/public-surface-index/",
+      "anchor_or_section": "#reference-answer",
+      "language_category": "Route-count maturity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Accurate route count",
+      "actual_interpretation": "Not commercial proof",
+      "status": "repaired",
+      "observed_issue": "Stale 88 route count",
+      "repair_applied": "Corrected to 104 public routes",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Accurate route count"
+    },
+    {
+      "value_language_id": "VL-019",
+      "language_text": "104 public routes",
+      "public_page": "/system-map/",
+      "anchor_or_section": "#reference-answer",
+      "language_category": "Route-count maturity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Structural map at 104 routes",
+      "actual_interpretation": "Not sales hype",
+      "status": "repaired",
+      "observed_issue": "Stale 88 in meta and reference answer",
+      "repair_applied": "Corrected to 104 routes",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Structural map at 104 routes"
+    },
+    {
+      "value_language_id": "VL-020",
+      "language_text": "104 public routes",
+      "public_page": "/executive-overview/",
+      "anchor_or_section": "#reference-answer",
+      "language_category": "Route-count maturity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Overview at current release",
+      "actual_interpretation": "Not valuation",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Corrected reference answer from 88 to 104",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Overview at current release"
+    },
+    {
+      "value_language_id": "VL-021",
+      "language_text": "evidence-risk reference infrastructure",
+      "public_page": "/executive-overview/category-thesis/",
+      "anchor_or_section": "#reference-summary",
+      "language_category": "Reference infrastructure language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Category infrastructure thesis",
+      "actual_interpretation": "Not investment advice",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Category infrastructure thesis"
+    },
+    {
+      "value_language_id": "VL-022",
+      "language_text": "governed reference infrastructure",
+      "public_page": "/acquisition-readiness/",
+      "anchor_or_section": "#strategic-inspectability",
+      "language_category": "Strategic value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Infrastructure not product demo",
+      "actual_interpretation": "Not hidden product marketing",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Infrastructure not product demo"
+    },
+    {
+      "value_language_id": "VL-023",
+      "language_text": "Audits are integrity checks, not certification",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#strategic-claim-traceability",
+      "language_category": "Audit-result maturity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Audit as integrity not proof",
+      "actual_interpretation": "Not value certification",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Audit as integrity not proof"
+    },
+    {
+      "value_language_id": "VL-024",
+      "language_text": "not certification or sales proof",
+      "public_page": "/reviewer-packet/",
+      "anchor_or_section": "#reviewer-packet-integrity-snapshot",
+      "language_category": "Claim-traceability value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Traceability bounded",
+      "actual_interpretation": "Not sales proof",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Traceability bounded"
+    },
+    {
+      "value_language_id": "VL-025",
+      "language_text": "not workflows, assessments, rankings",
+      "public_page": "/reading-sequences/",
+      "anchor_or_section": "#reading-sequences",
+      "language_category": "Reading-sequence value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Sequences not assessment product",
+      "actual_interpretation": "Homepage reading sequences boundary",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Sequences not assessment product"
+    },
+    {
+      "value_language_id": "VL-026",
+      "language_text": "not a pricing page, not a transaction page",
+      "public_page": "/",
+      "anchor_or_section": "#public-release-integrity-snapshot",
+      "language_category": "Non-transactional review boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Homepage commercial negation",
+      "actual_interpretation": "Value legible without pricing",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Homepage commercial negation"
+    },
+    {
+      "value_language_id": "VL-027",
+      "language_text": "not monetization surface is authorized",
+      "public_page": "/",
+      "anchor_or_section": "#governance-and-boundary-references",
+      "language_category": "Revenue-adjacent language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Explicit negation of monetization",
+      "actual_interpretation": "Governance boundary in interface thesis note",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Explicit negation of monetization"
+    },
+    {
+      "value_language_id": "VL-028",
+      "language_text": "not consulting funnels",
+      "public_page": "/",
+      "anchor_or_section": "#evidence-condition-library",
+      "language_category": "Commercial-risk boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Library value without funnel",
+      "actual_interpretation": "Negated consulting offers",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Library value without funnel"
+    },
+    {
+      "value_language_id": "VL-029",
+      "language_text": "not contact-oriented funnels",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#index-depth",
+      "language_category": "Buyer-logic-adjacent language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Links to vocabulary not leads",
+      "actual_interpretation": "Anti-funnel framing",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Links to vocabulary not leads"
+    },
+    {
+      "value_language_id": "VL-030",
+      "language_text": "Phase 2 external-use layer",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#public-reference-value-boundary",
+      "language_category": "External-use discipline language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Value through discipline routes",
+      "actual_interpretation": "Not commercial products",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Value through discipline routes"
+    },
+    {
+      "value_language_id": "VL-031",
+      "language_text": "104-route public surface",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#reference-answer",
+      "language_category": "Route-count maturity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Accurate strategic review scope",
+      "actual_interpretation": "Not commercial proof",
+      "status": "repaired",
+      "observed_issue": "Reference answer said 88 routes",
+      "repair_applied": "Corrected to 104 public routes",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Accurate strategic review scope"
+    },
+    {
+      "value_language_id": "VL-032",
+      "language_text": "review source governance as reference infrastructure",
+      "public_page": "/source-use-orientation/",
+      "anchor_or_section": "#source-use-strategic-review",
+      "language_category": "Source-use value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Infrastructure framing",
+      "actual_interpretation": "Not commercial promises",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Infrastructure framing"
+    }
+  ],
+  "total_value_language_inventory_count": 32,
+  "safe_value_language_count": 21,
+  "repaired_value_language_count": 11,
+  "unsafe_value_language_count": 0,
+  "value_surfaces_checked": [
+    "/",
+    "/system-map/",
+    "/strategic-review/",
+    "/strategic-review/retrieval-and-citation/",
+    "/strategic-review/public-reference-depth/",
+    "/reviewer-packet/",
+    "/reviewer-packet/citation-and-retrieval-map/",
+    "/route-groups/review-and-overview-layers/",
+    "/route-groups/core-concepts/",
+    "/route-groups/evidence-risk-pathways/",
+    "/route-groups/boundary-and-support-references/",
+    "/audience-paths/",
+    "/reading-sequences/",
+    "/retrieval-index/",
+    "/citation-orientation/",
+    "/source-use-orientation/"
+  ],
+  "strategic_reviewer_surfaces_checked": [
+    "/strategic-review/",
+    "/reviewer-packet/",
+    "/executive-overview/",
+    "/system-map/"
+  ],
+  "acquisition_readiness_surfaces_checked": [
+    "/acquisition-readiness/",
+    "/acquisition-readiness/governance-traceability/",
+    "/acquisition-readiness/category-asset/"
+  ],
+  "external_use_layers_checked": {
+    "/reading-sequences/": true,
+    "/retrieval-index/": true,
+    "/citation-orientation/": true,
+    "/source-use-orientation/": true
+  },
+  "related_routes_checked": [
+    "/reference/claim-source-traceability/",
+    "/external-review/",
+    "/acquisition-readiness/#acquisition-language-boundary",
+    "/strategic-review/#phase-3-strategic-review-integrity"
+  ],
+  "walkthrough_scenarios": [
+    {
+      "scenario_id": "VB-001",
+      "value_boundary_intent": "Public reference value without product offer",
+      "expected_pages_checked": [
+        "/",
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Maturity not product",
+      "actual_interpretation": "Value boundary sections present",
+      "supporting_routes_or_artifacts": [
+        "index.html",
+        "strategic-review/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Maturity not product"
+    },
+    {
+      "scenario_id": "VB-002",
+      "value_boundary_intent": "Strategic value without sales page",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Review index not sales",
+      "actual_interpretation": "Negation lists on strategic review",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Review index not sales"
+    },
+    {
+      "scenario_id": "VB-003",
+      "value_boundary_intent": "Category asset without investment opportunity",
+      "expected_pages_checked": [
+        "/acquisition-readiness/category-asset/"
+      ],
+      "expected_safe_interpretation": "Category infrastructure",
+      "actual_interpretation": "No investment opportunity language",
+      "supporting_routes_or_artifacts": [
+        "/acquisition-readiness/category-asset/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Category infrastructure"
+    },
+    {
+      "scenario_id": "VB-004",
+      "value_boundary_intent": "Reference infrastructure without service offering",
+      "expected_pages_checked": [
+        "/executive-overview/category-thesis/"
+      ],
+      "expected_safe_interpretation": "Infrastructure thesis",
+      "actual_interpretation": "Reference infrastructure framing",
+      "supporting_routes_or_artifacts": [
+        "/executive-overview/category-thesis/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Infrastructure thesis"
+    },
+    {
+      "scenario_id": "VB-005",
+      "value_boundary_intent": "External-use without consulting funnel",
+      "expected_pages_checked": [
+        "/reading-sequences/",
+        "/source-use-orientation/"
+      ],
+      "expected_safe_interpretation": "Discipline not funnel",
+      "actual_interpretation": "Consulting funnel negated",
+      "supporting_routes_or_artifacts": [
+        "/reading-sequences/",
+        "/source-use-orientation/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Discipline not funnel"
+    },
+    {
+      "scenario_id": "VB-006",
+      "value_boundary_intent": "Strategic-review integrity without pitch deck",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Phase 3 integrity",
+      "actual_interpretation": "Not pitch deck negation",
+      "supporting_routes_or_artifacts": [
+        "#phase-3-strategic-review-integrity"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Phase 3 integrity"
+    },
+    {
+      "scenario_id": "VB-007",
+      "value_boundary_intent": "Acquisition-readability without buyer solicitation",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Maturity not solicitation",
+      "actual_interpretation": "Acquisition language boundary",
+      "supporting_routes_or_artifacts": [
+        "#acquisition-language-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Maturity not solicitation"
+    },
+    {
+      "scenario_id": "VB-008",
+      "value_boundary_intent": "Route-count without sales proof",
+      "expected_pages_checked": [
+        "/",
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "104 integrity metric",
+      "actual_interpretation": "Route count not hype",
+      "supporting_routes_or_artifacts": [
+        "#public-release-integrity-snapshot"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "104 integrity metric"
+    },
+    {
+      "scenario_id": "VB-009",
+      "value_boundary_intent": "Audits without certification",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Integrity checks",
+      "actual_interpretation": "Not certification language",
+      "supporting_routes_or_artifacts": [
+        "#strategic-claim-traceability"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Integrity checks"
+    },
+    {
+      "scenario_id": "VB-010",
+      "value_boundary_intent": "Claim traceability without legal/financial proof",
+      "expected_pages_checked": [
+        "/acquisition-readiness/governance-traceability/"
+      ],
+      "expected_safe_interpretation": "Inspectability support",
+      "actual_interpretation": "Traceability negations",
+      "supporting_routes_or_artifacts": [
+        "governance-traceability/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Inspectability support"
+    },
+    {
+      "scenario_id": "VB-011",
+      "value_boundary_intent": "Source-use without source-as-proof",
+      "expected_pages_checked": [
+        "/source-use-orientation/"
+      ],
+      "expected_safe_interpretation": "Source discipline",
+      "actual_interpretation": "Not detector evidence",
+      "supporting_routes_or_artifacts": [
+        "#source-use-without-detector"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Source discipline"
+    },
+    {
+      "scenario_id": "VB-012",
+      "value_boundary_intent": "Citation without paid citation service",
+      "expected_pages_checked": [
+        "/citation-orientation/"
+      ],
+      "expected_safe_interpretation": "Citation orientation",
+      "actual_interpretation": "Not commercial promises",
+      "supporting_routes_or_artifacts": [
+        "/citation-orientation/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Citation orientation"
+    },
+    {
+      "scenario_id": "VB-013",
+      "value_boundary_intent": "Retrieval index without search product",
+      "expected_pages_checked": [
+        "/retrieval-index/"
+      ],
+      "expected_safe_interpretation": "Retrieval organization",
+      "actual_interpretation": "Not commercial service claims",
+      "supporting_routes_or_artifacts": [
+        "/retrieval-index/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Retrieval organization"
+    },
+    {
+      "scenario_id": "VB-014",
+      "value_boundary_intent": "Reading sequences without assessment product",
+      "expected_pages_checked": [
+        "/reading-sequences/"
+      ],
+      "expected_safe_interpretation": "Navigation only",
+      "actual_interpretation": "Not workflow or assessment",
+      "supporting_routes_or_artifacts": [
+        "/reading-sequences/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Navigation only"
+    },
+    {
+      "scenario_id": "VB-015",
+      "value_boundary_intent": "Homepage without pricing subscription lead-gen",
+      "expected_pages_checked": [
+        "/"
+      ],
+      "expected_safe_interpretation": "Phase 4 value boundary",
+      "actual_interpretation": "Homepage value boundary paragraph",
+      "supporting_routes_or_artifacts": [
+        "index.html#public-release-integrity-snapshot"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added Phase 4 value boundary on homepage",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Phase 4 value boundary"
+    },
+    {
+      "scenario_id": "VB-016",
+      "value_boundary_intent": "System map without dashboard product-suite",
+      "expected_pages_checked": [
+        "/system-map/"
+      ],
+      "expected_safe_interpretation": "Structural map",
+      "actual_interpretation": "Not dashboard negation",
+      "supporting_routes_or_artifacts": [
+        "system-map/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Structural map"
+    },
+    {
+      "scenario_id": "VB-017",
+      "value_boundary_intent": "Strategic-review without monetization drift",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Value boundary section",
+      "actual_interpretation": "public-reference-value-boundary present",
+      "supporting_routes_or_artifacts": [
+        "#public-reference-value-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added value boundary section",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Value boundary section"
+    },
+    {
+      "scenario_id": "VB-018",
+      "value_boundary_intent": "Reviewer packet without paid report or buyer packet",
+      "expected_pages_checked": [
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Public inspection packet",
+      "actual_interpretation": "Not downloadable report negation",
+      "supporting_routes_or_artifacts": [
+        "reviewer-packet/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Public inspection packet"
+    },
+    {
+      "scenario_id": "VB-019",
+      "value_boundary_intent": "Acquisition-readiness without transaction valuation drift",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Readiness inspectability",
+      "actual_interpretation": "Not pricing or valuation claims",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Readiness inspectability"
+    },
+    {
+      "scenario_id": "VB-020",
+      "value_boundary_intent": "Non-transactional boundary across value pages",
+      "expected_pages_checked": [
+        "/",
+        "/strategic-review/",
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Consistent boundaries",
+      "actual_interpretation": "Non-transactional paragraphs",
+      "supporting_routes_or_artifacts": [
+        "multiple surfaces"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Consistent boundaries"
+    },
+    {
+      "scenario_id": "VB-021",
+      "value_boundary_intent": "AI agent value without pricing subscription revenue",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Value boundary orientation",
+      "actual_interpretation": "Explicit monetization negation list",
+      "supporting_routes_or_artifacts": [
+        "#public-reference-value-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Value boundary orientation"
+    },
+    {
+      "scenario_id": "VB-022",
+      "value_boundary_intent": "AI agent strategic value without investment claims",
+      "expected_pages_checked": [
+        "/acquisition-readiness/",
+        "/route-groups/"
+      ],
+      "expected_safe_interpretation": "Maturity language",
+      "actual_interpretation": "No investment opportunity phrasing",
+      "supporting_routes_or_artifacts": [
+        "route-groups/review-and-overview-layers/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Maturity language"
+    },
+    {
+      "scenario_id": "VB-023",
+      "value_boundary_intent": "AI agent avoids audit-as-certification",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Integrity checks",
+      "actual_interpretation": "Audits not certification",
+      "supporting_routes_or_artifacts": [
+        "#strategic-claim-traceability"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Integrity checks"
+    },
+    {
+      "scenario_id": "VB-024",
+      "value_boundary_intent": "AI agent avoids source-as-proof of value",
+      "expected_pages_checked": [
+        "/source-use-orientation/"
+      ],
+      "expected_safe_interpretation": "Source discipline",
+      "actual_interpretation": "Value boundary on source-use",
+      "supporting_routes_or_artifacts": [
+        "#public-reference-value-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Source discipline"
+    },
+    {
+      "scenario_id": "VB-025",
+      "value_boundary_intent": "Human traces value to production depth",
+      "expected_pages_checked": [
+        "/route-groups/review-and-overview-layers/"
+      ],
+      "expected_safe_interpretation": "Public reference maturity",
+      "actual_interpretation": "Route counts and snapshots linked",
+      "supporting_routes_or_artifacts": [
+        "#strategic-reference-value"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Public reference maturity"
+    },
+    {
+      "scenario_id": "VB-026",
+      "value_boundary_intent": "Human understands value through Phase 2 and Phase 3",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Connected integrity",
+      "actual_interpretation": "Phase 2 and Phase 3 links in value boundary",
+      "supporting_routes_or_artifacts": [
+        "#public-reference-value-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Connected integrity"
+    },
+    {
+      "scenario_id": "VB-027",
+      "value_boundary_intent": "Value pages avoid conflict with acquisition-readiness",
+      "expected_pages_checked": [
+        "/strategic-review/",
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Distinct roles",
+      "actual_interpretation": "Cross-linked boundaries",
+      "supporting_routes_or_artifacts": [
+        "acquisition-language-boundary",
+        "public-reference-value-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Distinct roles"
+    },
+    {
+      "scenario_id": "VB-028",
+      "value_boundary_intent": "Value pages avoid conflict with strategic-review",
+      "expected_pages_checked": [
+        "/route-groups/",
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Coherent framing",
+      "actual_interpretation": "Review layer value boundary links strategic review",
+      "supporting_routes_or_artifacts": [
+        "route-groups/review-and-overview-layers/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added value boundary cross-links on route-group and source-use pages",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Coherent framing"
+    },
+    {
+      "scenario_id": "VB-029",
+      "value_boundary_intent": "Strong value phrases bounded or linked",
+      "expected_pages_checked": [
+        "/route-groups/core-concepts/",
+        "/route-groups/evidence-risk-pathways/"
+      ],
+      "expected_safe_interpretation": "Public reference maturity",
+      "actual_interpretation": "Strategic value phrasing softened",
+      "supporting_routes_or_artifacts": [
+        "route-groups"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Softened Strategic value to public reference maturity on route-group pages",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Public reference maturity"
+    },
+    {
+      "scenario_id": "VB-030",
+      "value_boundary_intent": "Route-count remains 104 not commercial proof",
+      "expected_pages_checked": [
+        "/strategic-review/",
+        "/system-map/",
+        "/executive-overview/"
+      ],
+      "expected_safe_interpretation": "104 routes consistent",
+      "actual_interpretation": "Stale 88 counts repaired",
+      "supporting_routes_or_artifacts": [
+        "multiple pages"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Corrected stale 88 route copy to 104 on value-facing pages",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "104 routes consistent"
+    },
+    {
+      "scenario_id": "VB-031",
+      "value_boundary_intent": "No support sponsorship pricing subscription after hardening",
+      "expected_pages_checked": [
+        "/"
+      ],
+      "expected_safe_interpretation": "Commercial surface absent",
+      "actual_interpretation": "No monetization routes or CTAs",
+      "supporting_routes_or_artifacts": [
+        "route-registry.json",
+        "sitemap.xml"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Commercial surface absent"
+    },
+    {
+      "scenario_id": "VB-032",
+      "value_boundary_intent": "Value-legible without new monetization route",
+      "expected_pages_checked": [
+        "repository"
+      ],
+      "expected_safe_interpretation": "Phase 4 entry audit only",
+      "actual_interpretation": "104 routes unchanged",
+      "supporting_routes_or_artifacts": [
+        "public-reference-value-boundary-audit-v1.json"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Phase 4 entry audit only"
+    }
+  ],
+  "total_scenarios": 32,
+  "scenarios_passed": 32,
+  "scenarios_failed": 0,
+  "repairs_applied": [
+    "strategic-review/index.html \u2014 public-reference-value-boundary section and 104-route reference answer (VB-017, VB-030)",
+    "index.html \u2014 Phase 4 value boundary in release snapshot (VB-015)",
+    "route-groups/review-and-overview-layers/index.html \u2014 public reference maturity and value boundary (VB-006, VB-028)",
+    "route-groups/boundary-and-support-references/index.html \u2014 maturity language and 104 routes (VB-008, VB-029)",
+    "route-groups/core-concepts/index.html \u2014 public reference maturity wording (VB-029)",
+    "route-groups/evidence-risk-pathways/index.html \u2014 public reference maturity wording (VB-029)",
+    "source-use-orientation/index.html \u2014 value boundary paragraph (VB-024, VB-028)",
+    "system-map/index.html, executive-overview/index.html, reviewer-packet/public-surface-index/index.html \u2014 stale 88 to 104 (VB-030)"
+  ],
+  "boundary_regressions_found": false,
+  "value_boundary_confirmed": true,
+  "value_legibility_without_commercial_surface_confirmed": true,
+  "public_reference_value_as_maturity_confirmed": true,
+  "ai_agent_value_interpretation_confirmed": true,
+  "human_reviewer_value_interpretation_confirmed": true,
+  "route_count_drift_found": false,
+  "stale_copy_found": false,
+  "unsafe_value_language_found": false,
+  "monetization_drift_found": false,
+  "pricing_drift_found": false,
+  "subscription_drift_found": false,
+  "consulting_drift_found": false,
+  "lead_generation_drift_found": false,
+  "paid_report_drift_found": false,
+  "private_access_drift_found": false,
+  "sales_page_drift_found": false,
+  "pitch_deck_drift_found": false,
+  "acquisition_solicitation_drift_found": false,
+  "buyer_solicitation_drift_found": false,
+  "pricing_or_valuation_drift_found": false,
+  "transaction_readiness_drift_found": false,
+  "due_diligence_room_drift_found": false,
+  "private_data_room_drift_found": false,
+  "buyer_packet_drift_found": false,
+  "investor_packet_drift_found": false,
+  "legal_or_financial_representation_drift_found": false,
+  "investment_claim_drift_found": false,
+  "authority_claim_drift_found": false,
+  "verification_drift_found": false,
+  "proof_drift_found": false,
+  "detector_drift_found": false,
+  "score_or_verdict_drift_found": false,
+  "case_conclusion_drift_found": false,
+  "audit_as_certification_drift_found": false,
+  "source_as_proof_drift_found": false,
+  "sponsorship_drift_found": false,
+  "donation_drift_found": false,
+  "support_surface_drift_found": false,
+  "revenue_claim_drift_found": false,
+  "new_decision_created": false,
+  "route_registry_changed": false,
+  "public_file_registry_changed": false,
+  "sitemap_changed": false,
+  "no_new_routes": true,
+  "non_sales_surface": true,
+  "non_pitch_deck": true,
+  "non_acquisition_solicitation": true,
+  "non_buyer_solicitation": true,
+  "non_pricing": true,
+  "non_valuation": true,
+  "non_transaction_surface": true,
+  "non_due_diligence_room": true,
+  "non_private_data_room": true,
+  "non_buyer_packet": true,
+  "non_investor_packet": true,
+  "non_investment_claim": true,
+  "non_authority_claim": true,
+  "non_verification_claim": true,
+  "non_proof": true,
+  "non_detector": true,
+  "non_scoring": true,
+  "non_verdict": true,
+  "non_case_conclusion": true,
+  "non_legal_representation": true,
+  "non_financial_representation": true,
+  "non_transactional_review_surface": true,
+  "non_monetization_surface": true,
+  "non_subscription": true,
+  "non_consulting": true,
+  "non_lead_generation": true,
+  "non_paid_report": true,
+  "non_private_access": true
+}
