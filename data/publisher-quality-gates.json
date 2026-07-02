@@ -1950,6 +1950,24 @@
       "failure_condition": "public_reference_acquisition_language_boundary_audit_v1_not_met",
       "bypassable": false,
       "notes": "Sprint 127 acquisition language boundary audit with 28 language records and 28 scenarios, no route expansion."
+    },
+    {
+      "gate_id": "PUB-GATE-0122",
+      "name": "Public Reference Strategic Review Integrity Closure Audit v1 Gate",
+      "status": "public_reference_strategic_review_integrity_closure_audit_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_128_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INTEGRITY_CLOSURE_AUDIT_V1.md",
+      "failure_condition": "public_reference_strategic_review_integrity_closure_audit_v1_not_met",
+      "bypassable": false,
+      "notes": "Sprint 128 Phase 3 strategic review integrity closure audit with 35 scenarios, no route expansion."
     }
   ],
   "last_reviewed": "2026-07-02"

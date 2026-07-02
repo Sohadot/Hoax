@@ -1410,6 +1410,17 @@
       "status": "active",
       "last_reviewed": "2026-07-02",
       "notes": "Sprint 127 audit-only acquisition language boundary hardening."
+    },
+    {
+      "claim_id": "CLAIM-0129",
+      "claim_text": "Hoax.ai completed Public Reference Strategic Review Integrity Closure Audit v1 with 35 walkthrough scenarios (all pass), Phase 3 closure recommended, six scenario-backed hardening patches connecting reviewer legibility, strategic claim traceability, and acquisition-language boundaries with Phase 2 external-use support, and no route expansion while keeping the public surface at 104 routes and preserving non-sales, non-pitch, non-acquisition-solicitation, non-proof, non-verification, non-detector, and non-transaction boundaries.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_STRATEGIC_REVIEW_INTEGRITY_CLOSURE_AUDIT_V1.md, data/public-reference-strategic-review-integrity-closure-audit-v1.json, strategic-review/index.html, validators/validate_public_reference_strategic_review_integrity_closure_audit_v1.py, SPRINT_128_PUBLIC_REFERENCE_STRATEGIC_REVIEW_INTEGRITY_CLOSURE_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-07-02",
+      "notes": "Sprint 128 audit-only Phase 3 strategic review integrity closure."
     }
   ]
 }

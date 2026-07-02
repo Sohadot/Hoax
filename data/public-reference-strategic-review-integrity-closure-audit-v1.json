@@ -1,0 +1,789 @@
+{
+  "id": "public-reference-strategic-review-integrity-closure-audit-v1",
+  "name": "Public Reference Strategic Review Integrity Closure Audit v1",
+  "version": "1.0.0",
+  "sprint": "Sprint 128",
+  "status": "public_reference_strategic_review_integrity_closure_audit",
+  "audit_only": true,
+  "phase": "Phase 3",
+  "phase_closure_candidate": true,
+  "production_route_added": false,
+  "public_route_count_before": 104,
+  "public_route_count_after": 104,
+  "sitemap_url_count_expected": 104,
+  "phase_3_components_checked": {
+    "strategic_reviewer_surface_integrity": true,
+    "strategic_claim_traceability": true,
+    "acquisition_language_boundary": true
+  },
+  "phase_2_support_layers_checked": {
+    "/reading-sequences/": true,
+    "/retrieval-index/": true,
+    "/citation-orientation/": true,
+    "/source-use-orientation/": true
+  },
+  "strategic_reviewer_surfaces_checked": [
+    "/strategic-review/",
+    "/strategic-review/category-position/",
+    "/strategic-review/public-reference-depth/",
+    "/strategic-review/retrieval-and-citation/",
+    "/strategic-review/boundary-and-readiness/",
+    "/reviewer-packet/",
+    "/reviewer-packet/review-sequence/",
+    "/reviewer-packet/public-surface-index/",
+    "/reviewer-packet/citation-and-retrieval-map/",
+    "/reviewer-packet/boundary-and-readiness-summary/",
+    "/executive-overview/",
+    "/system-map/"
+  ],
+  "acquisition_readiness_surfaces_checked": [
+    "/acquisition-readiness/",
+    "/acquisition-readiness/category-asset/",
+    "/acquisition-readiness/public-reference-surface/",
+    "/acquisition-readiness/governance-traceability/",
+    "/acquisition-readiness/ai-retrieval-readiness/",
+    "/acquisition-readiness/non-detector-moat/"
+  ],
+  "related_routes_checked": [
+    "/",
+    "/reference/claim-source-traceability/",
+    "/external-review/",
+    "/route-groups/review-and-overview-layers/",
+    "/audience-paths/research-reviewers/"
+  ],
+  "walkthrough_scenarios": [
+    {
+      "scenario_id": "SRIC-001",
+      "strategic_review_intent": "External reviewer understands governed public reference asset without sales-page drift",
+      "expected_pages_checked": [
+        "/",
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "104-route reference system with boundary negation",
+      "actual_interpretation": "Homepage and strategic review index negate sales pages",
+      "supporting_routes_or_artifacts": [
+        "index.html",
+        "strategic-review/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "104-route reference system with boundary negation"
+    },
+    {
+      "scenario_id": "SRIC-002",
+      "strategic_review_intent": "Strategic reviewer surfaces without pitch-deck framing",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Route index not pitch deck",
+      "actual_interpretation": "does-not-claim and integrity snapshot negate pitch deck",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html#strategic-review-index-integrity-snapshot"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Route index not pitch deck"
+    },
+    {
+      "scenario_id": "SRIC-003",
+      "strategic_review_intent": "Strategic claim traceability without proof or certification drift",
+      "expected_pages_checked": [
+        "/strategic-review/",
+        "/acquisition-readiness/governance-traceability/"
+      ],
+      "expected_safe_interpretation": "Traceability as inspectability",
+      "actual_interpretation": "strategic-claim-traceability and claim-traceability-support sections present",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html#strategic-claim-traceability"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Traceability as inspectability"
+    },
+    {
+      "scenario_id": "SRIC-004",
+      "strategic_review_intent": "Acquisition-readiness as public reference maturity not buyer solicitation",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Acquisition language boundary section",
+      "actual_interpretation": "acquisition-language-boundary with non-solicitation list",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html#acquisition-language-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Acquisition language boundary section"
+    },
+    {
+      "scenario_id": "SRIC-005",
+      "strategic_review_intent": "Acquisition-readability as reviewability not transaction readiness",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Reviewability framing",
+      "actual_interpretation": "acquisition-readability sentence in readiness-purpose",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html#readiness-purpose"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Reviewability framing"
+    },
+    {
+      "scenario_id": "SRIC-006",
+      "strategic_review_intent": "Move from strategic review to Phase 2 without workflow drift",
+      "expected_pages_checked": [
+        "/strategic-review/",
+        "/reading-sequences/"
+      ],
+      "expected_safe_interpretation": "Phase 2 links in strategic path",
+      "actual_interpretation": "strategic-review-path links to external-use layer",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html#strategic-review-path",
+        "/reading-sequences/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Phase 2 links in strategic path"
+    },
+    {
+      "scenario_id": "SRIC-007",
+      "strategic_review_intent": "Reviewer packet to Phase 2 without buyer-packet drift",
+      "expected_pages_checked": [
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Public inspection packet",
+      "actual_interpretation": "Phase 3 integrity line distinguishes from buyer packet",
+      "supporting_routes_or_artifacts": [
+        "reviewer-packet/index.html#reviewer-packet-integrity-snapshot"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added Phase 3 integrity paragraph in reviewer packet snapshot",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Public inspection packet"
+    },
+    {
+      "scenario_id": "SRIC-008",
+      "strategic_review_intent": "Acquisition-readiness to governance traceability without DD-room drift",
+      "expected_pages_checked": [
+        "/acquisition-readiness/governance-traceability/"
+      ],
+      "expected_safe_interpretation": "Governance discipline not DD room",
+      "actual_interpretation": "acquisition-language-boundary and traceability negations",
+      "supporting_routes_or_artifacts": [
+        "governance-traceability/index.html#acquisition-language-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Governance discipline not DD room"
+    },
+    {
+      "scenario_id": "SRIC-009",
+      "strategic_review_intent": "Route-count maturity without sales proof",
+      "expected_pages_checked": [
+        "/",
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "104-route integrity metric",
+      "actual_interpretation": "Consistent 104 count in snapshots",
+      "supporting_routes_or_artifacts": [
+        "index.html#public-release-integrity-snapshot",
+        "strategic-review/index.html#strategic-review-index-integrity-snapshot"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "104-route integrity metric"
+    },
+    {
+      "scenario_id": "SRIC-010",
+      "strategic_review_intent": "Audit results as integrity checks not certifications",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Audits bounded",
+      "actual_interpretation": "Audits are integrity checks language in claim traceability",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html#strategic-claim-traceability"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Audits bounded"
+    },
+    {
+      "scenario_id": "SRIC-011",
+      "strategic_review_intent": "Claim-source mapping without proof or legal-review drift",
+      "expected_pages_checked": [
+        "/reference/claim-source-traceability/",
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Bounded claim support",
+      "actual_interpretation": "Claim-Source Traceability linked as concept not proof engine",
+      "supporting_routes_or_artifacts": [
+        "/reference/claim-source-traceability/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Bounded claim support"
+    },
+    {
+      "scenario_id": "SRIC-012",
+      "strategic_review_intent": "Publisher gates without authority certification drift",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Gates as repository discipline",
+      "actual_interpretation": "No official certification language on strategic surfaces",
+      "supporting_routes_or_artifacts": [
+        "data/publisher-quality-gates.json"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Gates as repository discipline"
+    },
+    {
+      "scenario_id": "SRIC-013",
+      "strategic_review_intent": "Source-use orientation without source-as-proof drift",
+      "expected_pages_checked": [
+        "/source-use-orientation/"
+      ],
+      "expected_safe_interpretation": "Source discipline orientation",
+      "actual_interpretation": "Boundary language on source-use route",
+      "supporting_routes_or_artifacts": [
+        "/source-use-orientation/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Source discipline orientation"
+    },
+    {
+      "scenario_id": "SRIC-014",
+      "strategic_review_intent": "Citation orientation without generated-citation or legal endorsement drift",
+      "expected_pages_checked": [
+        "/citation-orientation/"
+      ],
+      "expected_safe_interpretation": "Citation-safe orientation",
+      "actual_interpretation": "No generated citation or legal certification claims",
+      "supporting_routes_or_artifacts": [
+        "/citation-orientation/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Citation-safe orientation"
+    },
+    {
+      "scenario_id": "SRIC-015",
+      "strategic_review_intent": "Retrieval index without search ranking or generated-answer drift",
+      "expected_pages_checked": [
+        "/retrieval-index/"
+      ],
+      "expected_safe_interpretation": "Retrieval organization not search engine",
+      "actual_interpretation": "No search API or generated-answer on retrieval index",
+      "supporting_routes_or_artifacts": [
+        "/retrieval-index/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Retrieval organization not search engine"
+    },
+    {
+      "scenario_id": "SRIC-016",
+      "strategic_review_intent": "Reading sequences without workflow or assessment-path drift",
+      "expected_pages_checked": [
+        "/reading-sequences/"
+      ],
+      "expected_safe_interpretation": "Reading guidance not workflow",
+      "actual_interpretation": "Static sequences without forms or scoring",
+      "supporting_routes_or_artifacts": [
+        "/reading-sequences/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Reading guidance not workflow"
+    },
+    {
+      "scenario_id": "SRIC-017",
+      "strategic_review_intent": "System map without product-suite or dashboard drift",
+      "expected_pages_checked": [
+        "/system-map/"
+      ],
+      "expected_safe_interpretation": "Structural map not dashboard",
+      "actual_interpretation": "Maps as orientation not grading surfaces",
+      "supporting_routes_or_artifacts": [
+        "system-map/index.html#map-depth"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Structural map not dashboard"
+    },
+    {
+      "scenario_id": "SRIC-018",
+      "strategic_review_intent": "Homepage strategic language without sales or contact-to-buy",
+      "expected_pages_checked": [
+        "/"
+      ],
+      "expected_safe_interpretation": "Non-transactional boundaries",
+      "actual_interpretation": "Phase 3 integrity line added to release snapshot",
+      "supporting_routes_or_artifacts": [
+        "index.html#public-release-integrity-snapshot"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added Phase 3 strategic review integrity orientation to homepage snapshot",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Non-transactional boundaries"
+    },
+    {
+      "scenario_id": "SRIC-019",
+      "strategic_review_intent": "Strategic maturity without investment-claim drift",
+      "expected_pages_checked": [
+        "/acquisition-readiness/",
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Maturity through production depth",
+      "actual_interpretation": "No investment opportunity language",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html#acquisition-language-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Maturity through production depth"
+    },
+    {
+      "scenario_id": "SRIC-020",
+      "strategic_review_intent": "Non-transactional review boundaries across strategic pages",
+      "expected_pages_checked": [
+        "/strategic-review/",
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Consistent boundary blocks",
+      "actual_interpretation": "Non-transactional review boundary on hub pages",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html",
+        "reviewer-packet/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Consistent boundary blocks"
+    },
+    {
+      "scenario_id": "SRIC-021",
+      "strategic_review_intent": "AI agent summarizes Phase 3 without sales or transaction claims",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Phase 3 as three components",
+      "actual_interpretation": "phase-3-strategic-review-integrity section orients agents",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html#phase-3-strategic-review-integrity"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added Phase 3 strategic review integrity closure section",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Phase 3 as three components"
+    },
+    {
+      "scenario_id": "SRIC-022",
+      "strategic_review_intent": "AI agent cites strategic claims only when support targets exist",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Traceability links to live routes",
+      "actual_interpretation": "Claim traceability lists visible support targets",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html#strategic-claim-traceability"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Traceability links to live routes"
+    },
+    {
+      "scenario_id": "SRIC-023",
+      "strategic_review_intent": "AI agent avoids turning audits into certification",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Audit integrity check framing",
+      "actual_interpretation": "Explicit not certification in claim traceability",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html#strategic-claim-traceability"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Audit integrity check framing"
+    },
+    {
+      "scenario_id": "SRIC-024",
+      "strategic_review_intent": "AI agent avoids turning source support into proof",
+      "expected_pages_checked": [
+        "/source-use-orientation/",
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Source discipline not proof",
+      "actual_interpretation": "Source-as-proof negation in audit flags",
+      "supporting_routes_or_artifacts": [
+        "/source-use-orientation/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Source discipline not proof"
+    },
+    {
+      "scenario_id": "SRIC-025",
+      "strategic_review_intent": "AI agent avoids acquisition-readiness as acquisition solicitation",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Maturity not solicitation",
+      "actual_interpretation": "Acquisition language boundary cross-linked from Phase 3",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html",
+        "strategic-review/index.html#phase-3-strategic-review-integrity"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Maturity not solicitation"
+    },
+    {
+      "scenario_id": "SRIC-026",
+      "strategic_review_intent": "Human reviewer moves from claim to support without broken links",
+      "expected_pages_checked": [
+        "/strategic-review/",
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Functional cross-links",
+      "actual_interpretation": "Phase 2 and Phase 3 anchors link correctly",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html",
+        "reviewer-packet/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Functional cross-links"
+    },
+    {
+      "scenario_id": "SRIC-027",
+      "strategic_review_intent": "Human reviewer understands strategic value through production depth",
+      "expected_pages_checked": [
+        "/",
+        "/system-map/"
+      ],
+      "expected_safe_interpretation": "Visible 104-route depth",
+      "actual_interpretation": "Release snapshot and system map describe production",
+      "supporting_routes_or_artifacts": [
+        "index.html",
+        "system-map/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Visible 104-route depth"
+    },
+    {
+      "scenario_id": "SRIC-028",
+      "strategic_review_intent": "Reviewer pages connect to Phase 2 external-use layers",
+      "expected_pages_checked": [
+        "/reviewer-packet/",
+        "/reading-sequences/"
+      ],
+      "expected_safe_interpretation": "Phase 2 in review path",
+      "actual_interpretation": "Review path and integrity snapshot link Phase 2",
+      "supporting_routes_or_artifacts": [
+        "reviewer-packet/index.html#review-path"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Phase 2 in review path"
+    },
+    {
+      "scenario_id": "SRIC-029",
+      "strategic_review_intent": "Strategic/reviewer pages avoid role conflict with acquisition-readiness",
+      "expected_pages_checked": [
+        "/strategic-review/",
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Distinct roles clarified",
+      "actual_interpretation": "Phase 3 section separates review index from readiness maturity",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html#phase-3-strategic-review-integrity",
+        "acquisition-readiness/index.html#acquisition-language-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Cross-linked Phase 3 and acquisition-language-boundary sections",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Distinct roles clarified"
+    },
+    {
+      "scenario_id": "SRIC-030",
+      "strategic_review_intent": "Acquisition-readiness avoids conflict with strategic-review and reviewer-packet",
+      "expected_pages_checked": [
+        "/acquisition-readiness/",
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Readiness inspectability vs packet organization",
+      "actual_interpretation": "Acquisition hub links Phase 3 integrity",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html#acquisition-language-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added Phase 3 strategic review integrity link on acquisition hub",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Readiness inspectability vs packet organization"
+    },
+    {
+      "scenario_id": "SRIC-031",
+      "strategic_review_intent": "Phase 3 pages avoid duplicate conflicting maturity descriptions",
+      "expected_pages_checked": [
+        "/strategic-review/",
+        "/reviewer-packet/",
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Coherent maturity framing",
+      "actual_interpretation": "Single Phase 3 closure section on strategic review index",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html#phase-3-strategic-review-integrity"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Coherent maturity framing"
+    },
+    {
+      "scenario_id": "SRIC-032",
+      "strategic_review_intent": "Route-count copy remains 104 on impacted pages",
+      "expected_pages_checked": [
+        "/",
+        "/strategic-review/",
+        "/reviewer-packet/",
+        "/system-map/"
+      ],
+      "expected_safe_interpretation": "104 routes consistent",
+      "actual_interpretation": "No stale route counts found",
+      "supporting_routes_or_artifacts": [
+        "sitemap.xml",
+        "route-registry.json"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "104 routes consistent"
+    },
+    {
+      "scenario_id": "SRIC-033",
+      "strategic_review_intent": "No route drift stale copy or link imbalance after Sprint 127",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Post-127 coherence",
+      "actual_interpretation": "diligence notes softened to review notes on strategic review index",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html#index-depth"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Softened diligence notes to review notes in index-depth",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Post-127 coherence"
+    },
+    {
+      "scenario_id": "SRIC-034",
+      "strategic_review_intent": "Strong strategic phrases traceable bounded or linked",
+      "expected_pages_checked": [
+        "/system-map/",
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Traceable strategic language",
+      "actual_interpretation": "System map links Phase 3 integrity",
+      "supporting_routes_or_artifacts": [
+        "system-map/index.html#map-depth"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added Phase 3 strategic review integrity link on system map",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Traceable strategic language"
+    },
+    {
+      "scenario_id": "SRIC-035",
+      "strategic_review_intent": "Connected Phase 3 layer describable as closed without new route or DEC",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Phase 3 closure candidate",
+      "actual_interpretation": "phase-3-strategic-review-integrity declares closure without new routes",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html#phase-3-strategic-review-integrity",
+        "data/public-reference-strategic-review-integrity-closure-audit-v1.json"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "strategic_integrity_check": "confirmed",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Phase 3 closure candidate"
+    }
+  ],
+  "total_scenarios": 35,
+  "scenarios_passed": 35,
+  "scenarios_failed": 0,
+  "repairs_applied": [
+    "strategic-review/index.html \u2014 phase-3-strategic-review-integrity closure section (SRIC-021, SRIC-029, SRIC-031, SRIC-035)",
+    "strategic-review/index.html \u2014 review notes wording in index-depth (SRIC-033)",
+    "reviewer-packet/index.html \u2014 Phase 3 integrity paragraph in integrity snapshot (SRIC-007)",
+    "system-map/index.html \u2014 Phase 3 strategic review integrity link (SRIC-034)",
+    "acquisition-readiness/index.html \u2014 Phase 3 integrity cross-link (SRIC-030)",
+    "index.html \u2014 Phase 3 strategic review integrity in release snapshot (SRIC-018)"
+  ],
+  "boundary_regressions_found": false,
+  "strategic_review_integrity_confirmed": true,
+  "reviewer_legibility_confirmed": true,
+  "strategic_claim_traceability_confirmed": true,
+  "acquisition_language_boundary_confirmed": true,
+  "phase_2_support_confirmed": true,
+  "phase_3_closure_recommended": true,
+  "ai_agent_strategic_interpretation_confirmed": true,
+  "human_reviewer_strategic_interpretation_confirmed": true,
+  "route_count_drift_found": false,
+  "stale_copy_found": false,
+  "role_confusion_found": false,
+  "link_imbalance_found": false,
+  "unsupported_claim_found": false,
+  "overclaim_found": false,
+  "trace_gap_found": false,
+  "sales_page_drift_found": false,
+  "pitch_deck_drift_found": false,
+  "acquisition_solicitation_drift_found": false,
+  "buyer_solicitation_drift_found": false,
+  "pricing_or_valuation_drift_found": false,
+  "transaction_readiness_drift_found": false,
+  "due_diligence_room_drift_found": false,
+  "private_data_room_drift_found": false,
+  "buyer_packet_drift_found": false,
+  "investor_packet_drift_found": false,
+  "legal_or_financial_representation_drift_found": false,
+  "investment_claim_drift_found": false,
+  "authority_claim_drift_found": false,
+  "verification_drift_found": false,
+  "proof_drift_found": false,
+  "detector_drift_found": false,
+  "score_or_verdict_drift_found": false,
+  "case_conclusion_drift_found": false,
+  "audit_as_certification_drift_found": false,
+  "source_as_proof_drift_found": false,
+  "new_decision_created": false,
+  "route_registry_changed": false,
+  "public_file_registry_changed": false,
+  "sitemap_changed": false,
+  "no_new_routes": true,
+  "non_sales_surface": true,
+  "non_pitch_deck": true,
+  "non_acquisition_solicitation": true,
+  "non_buyer_solicitation": true,
+  "non_pricing": true,
+  "non_valuation": true,
+  "non_transaction_surface": true,
+  "non_due_diligence_room": true,
+  "non_private_data_room": true,
+  "non_buyer_packet": true,
+  "non_investor_packet": true,
+  "non_investment_claim": true,
+  "non_authority_claim": true,
+  "non_verification_claim": true,
+  "non_proof": true,
+  "non_detector": true,
+  "non_scoring": true,
+  "non_verdict": true,
+  "non_case_conclusion": true,
+  "non_legal_representation": true,
+  "non_financial_representation": true,
+  "non_transactional_review_surface": true
+}
