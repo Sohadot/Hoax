@@ -336,6 +336,8 @@ Public Reference Source Use Orientation v1 extends the category intelligence fac
 
 Public Reference Source Use Walkthrough Audit v1 validates that the live `/source-use-orientation/` route supports safe external source interpretation through 24 walkthrough scenarios without adding routes, source indexes, proof claims, verification claims, or transaction surfaces.
 
+Public Reference External Use Integrity Audit v1 validates that Hoax.ai's reading, retrieval, citation, and source-use layers work together as public reference infrastructure through 28 system walkthrough scenarios without adding routes, tools, workflows, or transaction surfaces.
+
 Public Reference Citation Walkthrough Audit v1 validates that the live `/citation-orientation/` route supports citation-safe external use through 24 walkthrough scenarios without adding routes, citation-generator behavior, or transaction surfaces.
 
 Public Reference Citation Orientation v1 extends the category intelligence factory with citation-safe reference guidance at `/citation-orientation/` across the 103-route public surface. The route teaches humans and AI agents how to cite Reference Answer, Source Confidence, Cite This Reference, and Retrieval Capsule blocks safely without citation-generator behavior, generated-citation output, legal citation claims, academic endorsement, verification claims, detector support, score support, verdict support, or transaction surfaces.

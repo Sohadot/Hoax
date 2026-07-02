@@ -10996,6 +10996,66 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 123 audit validator."
+    },
+    {
+      "source_id": "SOURCE-0859",
+      "source_title": "PUBLIC_REFERENCE_EXTERNAL_USE_INTEGRITY_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "location": "PUBLIC_REFERENCE_EXTERNAL_USE_INTEGRITY_AUDIT_V1.md",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 124 external use integrity audit."
+    },
+    {
+      "source_id": "SOURCE-0860",
+      "source_title": "SPRINT_124_PUBLIC_REFERENCE_EXTERNAL_USE_INTEGRITY_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "location": "SPRINT_124_PUBLIC_REFERENCE_EXTERNAL_USE_INTEGRITY_AUDIT_V1.md",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 124 sprint record."
+    },
+    {
+      "source_id": "SOURCE-0861",
+      "source_title": "public-reference-external-use-integrity-audit-v1.json",
+      "source_type": "governance_file",
+      "location": "data/public-reference-external-use-integrity-audit-v1.json",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 124 audit JSON."
+    },
+    {
+      "source_id": "SOURCE-0862",
+      "source_title": "public-reference-external-use-integrity-audit-v1.schema.json",
+      "source_type": "governance_file",
+      "location": "data/public-reference-external-use-integrity-audit-v1.schema.json",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 124 audit schema."
+    },
+    {
+      "source_id": "SOURCE-0863",
+      "source_title": "validate_public_reference_external_use_integrity_audit_v1.py",
+      "source_type": "governance_file",
+      "location": "validators/validate_public_reference_external_use_integrity_audit_v1.py",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 124 audit validator."
     }
   ]
 }

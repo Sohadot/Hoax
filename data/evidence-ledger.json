@@ -1366,6 +1366,17 @@
       "status": "active",
       "last_reviewed": "2026-07-02",
       "notes": "Sprint 123 audit-only source use walkthrough hardening."
+    },
+    {
+      "claim_id": "CLAIM-0125",
+      "claim_text": "Hoax.ai completed Public Reference External Use Integrity Audit v1 across the live reading, retrieval, citation, and source-use layers with 28 system walkthrough scenarios (all pass), six scenario-backed hardening patches, and no route expansion while keeping the public surface at 104 routes and preserving non-tool, non-workflow, non-authority, non-verification, non-proof, non-detector, and non-transaction boundaries.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_EXTERNAL_USE_INTEGRITY_AUDIT_V1.md, data/public-reference-external-use-integrity-audit-v1.json, reading-sequences/index.html, retrieval-index/index.html, citation-orientation/index.html, source-use-orientation/index.html, validators/validate_public_reference_external_use_integrity_audit_v1.py, SPRINT_124_PUBLIC_REFERENCE_EXTERNAL_USE_INTEGRITY_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-07-02",
+      "notes": "Sprint 124 audit-only external use integrity hardening."
     }
   ]
 }

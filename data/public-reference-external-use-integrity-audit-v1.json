@@ -1,0 +1,977 @@
+{
+  "id": "public-reference-external-use-integrity-audit-v1",
+  "name": "Public Reference External Use Integrity Audit v1",
+  "version": "1.0.0",
+  "sprint": "Sprint 124",
+  "status": "public_reference_external_use_integrity_audit",
+  "audit_only": true,
+  "production_route_added": false,
+  "public_route_count_before": 104,
+  "public_route_count_after": 104,
+  "sitemap_url_count_expected": 104,
+  "primary_layers_under_audit": [
+    "/reading-sequences/",
+    "/retrieval-index/",
+    "/citation-orientation/",
+    "/source-use-orientation/"
+  ],
+  "related_routes_checked": [
+    "/",
+    "/system-map/",
+    "/evidence-conditions/",
+    "/evidence-conditions/crosswalk/",
+    "/route-groups/core-concepts/",
+    "/route-groups/public-utilities/",
+    "/route-groups/evidence-risk-pathways/",
+    "/route-groups/boundary-and-support-references/",
+    "/route-groups/review-and-overview-layers/",
+    "/audience-paths/ai-agents/",
+    "/audience-paths/research-reviewers/",
+    "/audience-paths/trust-safety-readers/",
+    "/audience-paths/education-literacy/",
+    "/strategic-review/",
+    "/reviewer-packet/citation-and-retrieval-map/",
+    "/reference/source-confidence/",
+    "/reference/claim-source-traceability/",
+    "/why-hoax-ai-is-not-a-detector/"
+  ],
+  "walkthrough_scenarios": [
+    {
+      "scenario_id": "EU-001",
+      "external_use_intent": "First-time reader moves from homepage through reading, retrieval, citation, and source-use layers",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/",
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/",
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "supporting_routes": [
+        "/",
+        "/reading-sequences/#external-use-layer-sequence"
+      ],
+      "result": "pass",
+      "observed_issue": "Reading sequences lacked a dedicated external-use layer sequence for first-time readers.",
+      "repair_applied": "Added external-use layer sequence section with ordered links across all four layers.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Four-layer path is explicit without workflow or tool implication."
+    },
+    {
+      "scenario_id": "EU-002",
+      "external_use_intent": "AI agent moves from system map to retrieval index without inventing routes or generated answers",
+      "expected_layer_sequence": [
+        "/system-map/",
+        "/retrieval-index/"
+      ],
+      "expected_reference_destinations": [
+        "/system-map/ai-retrieval-paths/",
+        "/retrieval-index/"
+      ],
+      "actual_layer_sequence": [
+        "/system-map/",
+        "/retrieval-index/"
+      ],
+      "actual_reference_destinations": [
+        "/system-map/ai-retrieval-paths/",
+        "/retrieval-index/"
+      ],
+      "supporting_routes": [
+        "/reading-sequences/#ai-agent-retrieval-sequence",
+        "/audience-paths/ai-agents/"
+      ],
+      "result": "pass",
+      "observed_issue": "AI agent retrieval sequence did not include retrieval index and companion citation/source layers.",
+      "repair_applied": "Added retrieval, citation, and source-use orientation steps to AI agent retrieval sequence.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Agent path stays static-orientation without generated-answer behavior."
+    },
+    {
+      "scenario_id": "EU-003",
+      "external_use_intent": "Research reviewer finds reading order, retrieval destination, citation guidance, and source-use limits",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/reading-sequences/#research-reviewer-sequence",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/reading-sequences/#research-reviewer-sequence",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "supporting_routes": [
+        "/audience-paths/research-reviewers/",
+        "/reviewer-packet/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Research reviewer path connects all four layers through audience and reviewer surfaces."
+    },
+    {
+      "scenario_id": "EU-004",
+      "external_use_intent": "Trust-and-safety reader finds concepts without operational procedure or case-review drift",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/evidence-risk/"
+      ],
+      "expected_reference_destinations": [
+        "/reading-sequences/#trust-safety-sequence",
+        "/boundary-integrity/"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/evidence-risk/"
+      ],
+      "actual_reference_destinations": [
+        "/reading-sequences/#trust-safety-sequence",
+        "/boundary-integrity/"
+      ],
+      "supporting_routes": [
+        "/audience-paths/trust-safety-readers/",
+        "/source-use-orientation/#what-source-use-orientation-is-not"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Trust-and-safety sequence avoids operational procedure framing."
+    },
+    {
+      "scenario_id": "EU-005",
+      "external_use_intent": "Education/literacy reader finds concept pages without detector or verdict drift",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/narrative/evidence-before-verdict/"
+      ],
+      "expected_reference_destinations": [
+        "/reading-sequences/#education-literacy-sequence"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/narrative/evidence-before-verdict/"
+      ],
+      "actual_reference_destinations": [
+        "/reading-sequences/#education-literacy-sequence"
+      ],
+      "supporting_routes": [
+        "/audience-paths/education-literacy/",
+        "/why-hoax-ai-is-not-a-detector/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Literacy sequence preserves non-verdict and non-detector boundaries."
+    },
+    {
+      "scenario_id": "EU-006",
+      "external_use_intent": "Strategic reviewer understands external-use discipline without sales or transaction drift",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/strategic-review/"
+      ],
+      "expected_reference_destinations": [
+        "/reading-sequences/#strategic-reviewer-sequence",
+        "/source-use-orientation/#source-use-strategic-review"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/strategic-review/"
+      ],
+      "actual_reference_destinations": [
+        "/reading-sequences/#strategic-reviewer-sequence",
+        "/source-use-orientation/#source-use-strategic-review"
+      ],
+      "supporting_routes": [
+        "/acquisition-readiness/",
+        "/executive-overview/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Strategic reading stays non-transactional across external-use companions."
+    },
+    {
+      "scenario_id": "EU-007",
+      "external_use_intent": "Reader moves from evidence-condition crosswalk to retrieval index and reading sequences without ranking",
+      "expected_layer_sequence": [
+        "/evidence-conditions/crosswalk/",
+        "/retrieval-index/",
+        "/reading-sequences/"
+      ],
+      "expected_reference_destinations": [
+        "/evidence-conditions/crosswalk/",
+        "/retrieval-index/",
+        "/reading-sequences/"
+      ],
+      "actual_layer_sequence": [
+        "/evidence-conditions/crosswalk/",
+        "/retrieval-index/",
+        "/reading-sequences/"
+      ],
+      "actual_reference_destinations": [
+        "/evidence-conditions/crosswalk/",
+        "/retrieval-index/",
+        "/reading-sequences/"
+      ],
+      "supporting_routes": [
+        "/evidence-conditions/crosswalk/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Crosswalk links use relation-safe language without severity or ranking."
+    },
+    {
+      "scenario_id": "EU-008",
+      "external_use_intent": "Reader moves from retrieval index to citation orientation without generated-citation or authority drift",
+      "expected_layer_sequence": [
+        "/retrieval-index/",
+        "/citation-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/retrieval-index/#retrieval-intent-citation-retrieval-blocks",
+        "/citation-orientation/"
+      ],
+      "actual_layer_sequence": [
+        "/retrieval-index/",
+        "/citation-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/retrieval-index/#retrieval-intent-citation-retrieval-blocks",
+        "/citation-orientation/"
+      ],
+      "supporting_routes": [
+        "/citation-orientation/#what-citation-orientation-is-not"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Retrieval-to-citation path avoids authority and generated-citation implication."
+    },
+    {
+      "scenario_id": "EU-009",
+      "external_use_intent": "Reader moves from citation orientation to source-use orientation without proof or verification drift",
+      "expected_layer_sequence": [
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/citation-orientation/#source-use-citation-orientation",
+        "/source-use-orientation/#source-use-citation-orientation"
+      ],
+      "actual_layer_sequence": [
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/citation-orientation/#source-use-citation-orientation",
+        "/source-use-orientation/#source-use-citation-orientation"
+      ],
+      "supporting_routes": [
+        "/source-use-orientation/#source-use-without-proof"
+      ],
+      "result": "pass",
+      "observed_issue": "Citation orientation Reference Answer related pages did not list Source Use Orientation.",
+      "repair_applied": "Added Source Use Orientation to citation-orientation Reference Answer and retrieval capsule related links.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Citation-to-source path preserves non-proof and non-verification boundaries."
+    },
+    {
+      "scenario_id": "EU-010",
+      "external_use_intent": "Reader moves from source-use orientation back to citation orientation without legal or academic authority drift",
+      "expected_layer_sequence": [
+        "/source-use-orientation/",
+        "/citation-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/source-use-orientation/#relation-citation-orientation",
+        "/citation-orientation/#what-citation-orientation-is-not"
+      ],
+      "actual_layer_sequence": [
+        "/source-use-orientation/",
+        "/citation-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/source-use-orientation/#relation-citation-orientation",
+        "/citation-orientation/#what-citation-orientation-is-not"
+      ],
+      "supporting_routes": [
+        "/citation-orientation/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Round-trip source-use and citation orientation avoids legal or academic authority framing."
+    },
+    {
+      "scenario_id": "EU-011",
+      "external_use_intent": "Reader finds how to cite Reference Answer blocks without case-conclusion drift",
+      "expected_layer_sequence": [
+        "/citation-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/citation-orientation/#reference-answer",
+        "/citation-orientation/#cite-this-reference"
+      ],
+      "actual_layer_sequence": [
+        "/citation-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/citation-orientation/#reference-answer",
+        "/citation-orientation/#cite-this-reference"
+      ],
+      "supporting_routes": [
+        "/not-assessable-posture/",
+        "/narrative/non-verdict-trust/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Reference Answer citation guidance separates orientation from case conclusions."
+    },
+    {
+      "scenario_id": "EU-012",
+      "external_use_intent": "Reader finds how to interpret Source Confidence without confidence-score drift",
+      "expected_layer_sequence": [
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/citation-orientation/#source-confidence",
+        "/source-use-orientation/#source-confidence-blocks"
+      ],
+      "actual_layer_sequence": [
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/citation-orientation/#source-confidence",
+        "/source-use-orientation/#source-confidence-blocks"
+      ],
+      "supporting_routes": [
+        "/reference/source-confidence/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Source Confidence remains support-type language across citation and source-use layers."
+    },
+    {
+      "scenario_id": "EU-013",
+      "external_use_intent": "Reader finds claim-source traceability without adjudication drift",
+      "expected_layer_sequence": [
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/source-use-orientation/#claim-source-relationship",
+        "/reference/claim-source-traceability/"
+      ],
+      "actual_layer_sequence": [
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/source-use-orientation/#claim-source-relationship",
+        "/reference/claim-source-traceability/"
+      ],
+      "supporting_routes": [
+        "/acquisition-readiness/governance-traceability/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Claim-source mapping supports traceability without adjudication language."
+    },
+    {
+      "scenario_id": "EU-014",
+      "external_use_intent": "AI agent identifies citation-safe routes without inventing verdicts, rankings, or source authority",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/reading-sequences/#ai-agent-retrieval-sequence",
+        "/retrieval-index/",
+        "/citation-orientation/"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/reading-sequences/#ai-agent-retrieval-sequence",
+        "/retrieval-index/",
+        "/citation-orientation/"
+      ],
+      "supporting_routes": [
+        "/system-map/ai-retrieval-paths/",
+        "/audience-paths/ai-agents/"
+      ],
+      "result": "pass",
+      "observed_issue": "AI agent sequence needed explicit retrieval and citation layer steps.",
+      "repair_applied": "Extended AI agent retrieval sequence with retrieval index, citation orientation, and source use orientation.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Agent guidance avoids verdict, ranking, and authority invention."
+    },
+    {
+      "scenario_id": "EU-015",
+      "external_use_intent": "AI agent identifies source-supported context without verified or detected claims",
+      "expected_layer_sequence": [
+        "/source-use-orientation/",
+        "/retrieval-index/"
+      ],
+      "expected_reference_destinations": [
+        "/source-use-orientation/#source-use-ai-agents",
+        "/source-use-orientation/#source-use-without-detector"
+      ],
+      "actual_layer_sequence": [
+        "/source-use-orientation/",
+        "/retrieval-index/"
+      ],
+      "actual_reference_destinations": [
+        "/source-use-orientation/#source-use-ai-agents",
+        "/source-use-orientation/#source-use-without-detector"
+      ],
+      "supporting_routes": [
+        "/why-hoax-ai-is-not-a-detector/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Source-use AI guidance negates verification and detector overreach."
+    },
+    {
+      "scenario_id": "EU-016",
+      "external_use_intent": "Route-group pages connect to external-use layer without link imbalance",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/route-groups/core-concepts/",
+        "/route-groups/public-utilities/"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/route-groups/core-concepts/",
+        "/route-groups/public-utilities/"
+      ],
+      "supporting_routes": [
+        "/route-groups/evidence-risk-pathways/",
+        "/route-groups/boundary-and-support-references/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Route groups link reading, retrieval, citation, and source-use companions consistently."
+    },
+    {
+      "scenario_id": "EU-017",
+      "external_use_intent": "Audience-path pages connect to external-use layer without workflow or assessment drift",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/audience-paths/ai-agents/",
+        "/audience-paths/research-reviewers/"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/audience-paths/ai-agents/",
+        "/audience-paths/research-reviewers/"
+      ],
+      "supporting_routes": [
+        "/audience-paths/trust-safety-readers/",
+        "/audience-paths/education-literacy/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Audience paths reference external-use layers without workflow implication."
+    },
+    {
+      "scenario_id": "EU-018",
+      "external_use_intent": "System map reflects four external-use layers as public reference infrastructure",
+      "expected_layer_sequence": [
+        "/system-map/",
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/system-map/#external-use-layer",
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_layer_sequence": [
+        "/system-map/",
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/system-map/#external-use-layer",
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "supporting_routes": [
+        "/system-map/#system-map-layers"
+      ],
+      "result": "pass",
+      "observed_issue": "System map listed four external-use cards but lacked explicit external-use layer framing.",
+      "repair_applied": "Added external-use layer summary paragraph with links to all four routes.",
+      "boundary_check": "pass",
+      "ai_agent_note": "System map presents external-use layer as infrastructure, not a product suite."
+    },
+    {
+      "scenario_id": "EU-019",
+      "external_use_intent": "Homepage reflects external-use layer without product-suite or sales-funnel drift",
+      "expected_layer_sequence": [
+        "/",
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/",
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_layer_sequence": [
+        "/",
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/",
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "supporting_routes": [
+        "/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "Homepage reading sequences section did not cross-link all four external-use companions.",
+      "repair_applied": "Added retrieval, citation, and source-use companion links plus system-map external-use anchor on homepage.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Homepage sections remain reference infrastructure, not a tool or sales funnel."
+    },
+    {
+      "scenario_id": "EU-020",
+      "external_use_intent": "Retrieval index sufficiently points to reading, citation, and source-use routes",
+      "expected_layer_sequence": [
+        "/retrieval-index/"
+      ],
+      "expected_reference_destinations": [
+        "/reading-sequences/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_layer_sequence": [
+        "/retrieval-index/"
+      ],
+      "actual_reference_destinations": [
+        "/reading-sequences/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "supporting_routes": [
+        "/retrieval-index/#retrieval-intent-citation-retrieval-blocks"
+      ],
+      "result": "pass",
+      "observed_issue": "Retrieval index Reference Answer related pages omitted citation and source-use orientation.",
+      "repair_applied": "Added Citation Orientation and Source Use Orientation to retrieval-index Reference Answer related pages.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Retrieval index points to full external-use companion set."
+    },
+    {
+      "scenario_id": "EU-021",
+      "external_use_intent": "Reading sequences explain when retrieval, citation, and source-use orientation matter",
+      "expected_layer_sequence": [
+        "/reading-sequences/"
+      ],
+      "expected_reference_destinations": [
+        "/reading-sequences/#how-to-use-page",
+        "/reading-sequences/#external-use-layer-sequence"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/"
+      ],
+      "actual_reference_destinations": [
+        "/reading-sequences/#how-to-use-page",
+        "/reading-sequences/#external-use-layer-sequence"
+      ],
+      "supporting_routes": [
+        "/reading-sequences/"
+      ],
+      "result": "pass",
+      "observed_issue": "How-to-use section did not explain when retrieval, citation, and source-use layers matter.",
+      "repair_applied": "Added external-use layer sequence section and how-to-use cross-link.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Reading sequences clarify layer roles without role confusion."
+    },
+    {
+      "scenario_id": "EU-022",
+      "external_use_intent": "Citation orientation explains relation to retrieval and source-use pages",
+      "expected_layer_sequence": [
+        "/citation-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/citation-orientation/#relation-retrieval-index",
+        "/citation-orientation/#relation-reading-sequences",
+        "/source-use-orientation/#source-use-citation-orientation"
+      ],
+      "actual_layer_sequence": [
+        "/citation-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/citation-orientation/#relation-retrieval-index",
+        "/citation-orientation/#relation-reading-sequences",
+        "/source-use-orientation/#source-use-citation-orientation"
+      ],
+      "supporting_routes": [
+        "/citation-orientation/"
+      ],
+      "result": "pass",
+      "observed_issue": "Citation orientation retrieval capsule omitted source-use orientation in related utilities.",
+      "repair_applied": "Added Source Use Orientation to citation-orientation retrieval capsule related utilities.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Citation orientation relations stay distinct from authority layers."
+    },
+    {
+      "scenario_id": "EU-023",
+      "external_use_intent": "Source-use orientation explains relation to citation, retrieval, and reading pages",
+      "expected_layer_sequence": [
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/source-use-orientation/#relation-citation-orientation",
+        "/source-use-orientation/#relation-retrieval-index",
+        "/source-use-orientation/#relation-reading-sequences"
+      ],
+      "actual_layer_sequence": [
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/source-use-orientation/#relation-citation-orientation",
+        "/source-use-orientation/#relation-retrieval-index",
+        "/source-use-orientation/#relation-reading-sequences"
+      ],
+      "supporting_routes": [
+        "/source-use-orientation/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Source-use orientation relation sections already connect all companion layers."
+    },
+    {
+      "scenario_id": "EU-024",
+      "external_use_intent": "Route-count copy remains consistent at 104 across impacted public pages",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "supporting_routes": [
+        "/",
+        "/system-map/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "External-use pages and homepage use 104-route copy consistently."
+    },
+    {
+      "scenario_id": "EU-025",
+      "external_use_intent": "External-use pages avoid duplicate or conflicting role descriptions",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "supporting_routes": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Each layer retains distinct reading, retrieval, citation, or source-use role language."
+    },
+    {
+      "scenario_id": "EU-026",
+      "external_use_intent": "External-use system avoids authority, proof, verification, detector, score, and transaction drift",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "supporting_routes": [
+        "/why-hoax-ai-is-not-a-detector/",
+        "/boundary-integrity/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "System-wide boundary negations remain consistent across four layers."
+    },
+    {
+      "scenario_id": "EU-027",
+      "external_use_intent": "AI agent can summarize external-use layer as reading + retrieval + citation + source-use without tool behavior",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/reading-sequences/#external-use-layer-sequence",
+        "/system-map/#external-use-layer"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/reading-sequences/#external-use-layer-sequence",
+        "/system-map/#external-use-layer"
+      ],
+      "supporting_routes": [
+        "/audience-paths/ai-agents/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "External-use layer is summarizable as four orientation surfaces without tool claims."
+    },
+    {
+      "scenario_id": "EU-028",
+      "external_use_intent": "Human reader moves across four pages without broken links, stale anchors, or unclear roles",
+      "expected_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "expected_reference_destinations": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_layer_sequence": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_reference_destinations": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "supporting_routes": [
+        "/",
+        "/evidence-conditions/crosswalk/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Cross-layer links and anchors function after hardening patches."
+    }
+  ],
+  "total_scenarios": 28,
+  "scenarios_passed": 28,
+  "scenarios_failed": 0,
+  "repairs_applied": [
+    "Added external-use layer sequence section and how-to-use cross-link on reading-sequences (EU-001, EU-021).",
+    "Extended AI agent retrieval sequence with retrieval, citation, and source-use orientation steps (EU-002, EU-014).",
+    "Added Source Use Orientation to citation-orientation Reference Answer and retrieval capsule related links (EU-009, EU-022).",
+    "Added Citation Orientation and Source Use Orientation to retrieval-index Reference Answer related pages (EU-020).",
+    "Added external-use layer summary paragraph on system-map (EU-018).",
+    "Added external-use companion cross-links on homepage reading sequences section (EU-019)."
+  ],
+  "boundary_regressions_found": false,
+  "external_use_layer_coherence_confirmed": true,
+  "reading_layer_integrity_confirmed": true,
+  "retrieval_layer_integrity_confirmed": true,
+  "citation_layer_integrity_confirmed": true,
+  "source_use_layer_integrity_confirmed": true,
+  "cross_layer_link_integrity_confirmed": true,
+  "ai_agent_use_integrity_confirmed": true,
+  "human_reader_use_integrity_confirmed": true,
+  "route_count_drift_found": false,
+  "stale_copy_found": false,
+  "role_confusion_found": false,
+  "link_imbalance_found": false,
+  "authority_claim_drift_found": false,
+  "verification_drift_found": false,
+  "proof_drift_found": false,
+  "detector_drift_found": false,
+  "score_or_verdict_drift_found": false,
+  "case_conclusion_drift_found": false,
+  "generated_output_drift_found": false,
+  "workflow_or_operational_drift_found": false,
+  "transaction_or_sales_drift_found": false,
+  "legal_or_financial_representation_drift_found": false,
+  "new_decision_created": false,
+  "route_registry_changed": false,
+  "public_file_registry_changed": false,
+  "sitemap_changed": false,
+  "no_new_routes": true,
+  "non_tool": true,
+  "non_workflow": true,
+  "non_operational": true,
+  "non_authority_claim": true,
+  "non_verification_claim": true,
+  "non_proof": true,
+  "non_detector": true,
+  "non_scoring": true,
+  "non_verdict": true,
+  "non_case_conclusion": true,
+  "non_generated_output": true,
+  "non_transactional_review_surface": true
+}
