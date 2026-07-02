@@ -1,0 +1,1034 @@
+{
+  "id": "public-reference-acquisition-language-boundary-audit-v1",
+  "name": "Public Reference Acquisition Language Boundary Audit v1",
+  "version": "1.0.0",
+  "sprint": "Sprint 127",
+  "status": "public_reference_acquisition_language_boundary_audit",
+  "audit_only": true,
+  "production_route_added": false,
+  "public_route_count_before": 104,
+  "public_route_count_after": 104,
+  "sitemap_url_count_expected": 104,
+  "acquisition_language_inventory": [
+    {
+      "language_id": "AL-LANG-001",
+      "language_text": "Hoax.ai Acquisition Readiness",
+      "public_page": "/",
+      "anchor_or_section": "#strategic-readiness",
+      "language_category": "Acquisition-readiness language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Strategic readiness hub label for public reference inspection",
+      "actual_interpretation": "Readiness hub for six inspection routes, not a sale listing",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Do not infer for-sale intent from hub title"
+    },
+    {
+      "language_id": "AL-LANG-002",
+      "language_text": "Acquisition Readiness Hub",
+      "public_page": "/acquisition-readiness/",
+      "anchor_or_section": "#page-role-label",
+      "language_category": "Acquisition-readiness language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Hub role describes inspectability layer",
+      "actual_interpretation": "Six-route readiness map without transaction behavior",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Hub role describes inspectability layer"
+    },
+    {
+      "language_id": "AL-LANG-003",
+      "language_text": "Readiness is not a solicitation",
+      "public_page": "/acquisition-readiness/",
+      "anchor_or_section": "#readiness-purpose",
+      "language_category": "Boundary language around sales/pitch/transaction",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Explicit non-solicitation boundary",
+      "actual_interpretation": "Public reference review map, not buyer outreach",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Explicit non-solicitation boundary"
+    },
+    {
+      "language_id": "AL-LANG-004",
+      "language_text": "acquisition-readability as reviewability",
+      "public_page": "/acquisition-readiness/",
+      "anchor_or_section": "#readiness-purpose",
+      "language_category": "Acquisition-readability language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Reviewability framing",
+      "actual_interpretation": "Inspect published routes without due-diligence-room implication",
+      "status": "repaired",
+      "observed_issue": "Prior copy used diligence without acquisition-readability qualifier",
+      "repair_applied": "Added acquisition-readability and non-DD-room boundary sentence",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Reviewability framing"
+    },
+    {
+      "language_id": "AL-LANG-005",
+      "language_text": "Acquisition language boundary",
+      "public_page": "/acquisition-readiness/",
+      "anchor_or_section": "#acquisition-language-boundary",
+      "language_category": "Boundary language around sales/pitch/transaction",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Central boundary section for maturity vs solicitation",
+      "actual_interpretation": "Documents public reference maturity boundaries",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added acquisition-language-boundary section with cross-links",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Central boundary section for maturity vs solicitation"
+    },
+    {
+      "language_id": "AL-LANG-006",
+      "language_text": "not a due-diligence room, buyer packet, pricing statement, or transaction surface",
+      "public_page": "/acquisition-readiness/",
+      "anchor_or_section": "#acquisition-language-boundary",
+      "language_category": "Boundary language around due diligence/private data room",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Negated DD-room and transaction surfaces",
+      "actual_interpretation": "Boundary negation only",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Negated DD-room and transaction surfaces"
+    },
+    {
+      "language_id": "AL-LANG-007",
+      "language_text": "Strategic inspectability",
+      "public_page": "/acquisition-readiness/",
+      "anchor_or_section": "#strategic-inspectability",
+      "language_category": "Strategic-readiness language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Inspectability of reference infrastructure",
+      "actual_interpretation": "Not a product demo or pitch deck",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Inspectability of reference infrastructure"
+    },
+    {
+      "language_id": "AL-LANG-008",
+      "language_text": "non-transactional review surface",
+      "public_page": "/acquisition-readiness/",
+      "anchor_or_section": "#strategic-inspectability",
+      "language_category": "Non-transactional review boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Review without pricing or mandates",
+      "actual_interpretation": "Partners understand build without transaction pages",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Review without pricing or mandates"
+    },
+    {
+      "language_id": "AL-LANG-009",
+      "language_text": "Category Asset Readiness",
+      "public_page": "/acquisition-readiness/category-asset/",
+      "anchor_or_section": "h1",
+      "language_category": "Category asset language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Category infrastructure maturity",
+      "actual_interpretation": "Evidence-risk reference infrastructure thesis",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Category infrastructure maturity"
+    },
+    {
+      "language_id": "AL-LANG-010",
+      "language_text": "Category asset review pairs",
+      "public_page": "/acquisition-readiness/category-asset/",
+      "anchor_or_section": "#strategic-surface-navigation",
+      "language_category": "Buyer-logic-adjacent language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Category review navigation",
+      "actual_interpretation": "Research entry pairing, not buyer diligence",
+      "status": "repaired",
+      "observed_issue": "Category asset diligence implied buyer diligence",
+      "repair_applied": "Replaced diligence with review in nav intro",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Category review navigation"
+    },
+    {
+      "language_id": "AL-LANG-011",
+      "language_text": "Strategic category review",
+      "public_page": "/acquisition-readiness/category-asset/",
+      "anchor_or_section": "#reference-answer",
+      "language_category": "Strategic-readiness language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Category comparison for reviewers",
+      "actual_interpretation": "Not investment advice",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Reference Answer use-when softened from category diligence",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Category comparison for reviewers"
+    },
+    {
+      "language_id": "AL-LANG-012",
+      "language_text": "Governance Traceability Readiness",
+      "public_page": "/acquisition-readiness/governance-traceability/",
+      "anchor_or_section": "h1",
+      "language_category": "Governance-traceability language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Production discipline inspectability",
+      "actual_interpretation": "Not due-diligence-room access",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Production discipline inspectability"
+    },
+    {
+      "language_id": "AL-LANG-013",
+      "language_text": "not proof, verification, due-diligence-room access, or financial review",
+      "public_page": "/acquisition-readiness/governance-traceability/",
+      "anchor_or_section": "#claim-traceability-support",
+      "language_category": "Boundary language around due diligence/private data room",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Traceability bounded from DD and financial review",
+      "actual_interpretation": "Inspectability support only",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Traceability bounded from DD and financial review"
+    },
+    {
+      "language_id": "AL-LANG-014",
+      "language_text": "governance traceability as public reference discipline",
+      "public_page": "/acquisition-readiness/governance-traceability/",
+      "anchor_or_section": "#acquisition-language-boundary",
+      "language_category": "Governance-traceability language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Discipline framing not DD room",
+      "actual_interpretation": "Public reference governance maturity",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added acquisition-language-boundary paragraph with hub link",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Discipline framing not DD room"
+    },
+    {
+      "language_id": "AL-LANG-015",
+      "language_text": "Public Reference Surface Readiness",
+      "public_page": "/acquisition-readiness/public-reference-surface/",
+      "anchor_or_section": "h1",
+      "language_category": "Public reference asset language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Visible route depth maturity",
+      "actual_interpretation": "Not valuation or sales proof",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Visible route depth maturity"
+    },
+    {
+      "language_id": "AL-LANG-016",
+      "language_text": "hard to review as a public reference surface",
+      "public_page": "/acquisition-readiness/public-reference-surface/",
+      "anchor_or_section": "#strategic-inspectability",
+      "language_category": "Public reference asset language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Public reviewability of depth",
+      "actual_interpretation": "Indexable static routes for inspection",
+      "status": "repaired",
+      "observed_issue": "hard to diligence implied DD room",
+      "repair_applied": "Replaced diligence with public reference review wording",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Public reviewability of depth"
+    },
+    {
+      "language_id": "AL-LANG-017",
+      "language_text": "Strategic Readiness",
+      "public_page": "/",
+      "anchor_or_section": "#strategic-readiness",
+      "language_category": "Strategic-readiness language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Non-transactional readiness section",
+      "actual_interpretation": "104-route inspectability without pricing",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Non-transactional readiness section"
+    },
+    {
+      "language_id": "AL-LANG-018",
+      "language_text": "not a pricing statement, transaction page, legal representation, or financial representation",
+      "public_page": "/",
+      "anchor_or_section": "#strategic-readiness",
+      "language_category": "Boundary language around legal/financial representation",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Homepage readiness boundary",
+      "actual_interpretation": "Strategic review only",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Homepage readiness boundary"
+    },
+    {
+      "language_id": "AL-LANG-019",
+      "language_text": "acquisition language boundary on the readiness hub",
+      "public_page": "/",
+      "anchor_or_section": "#strategic-readiness",
+      "language_category": "Boundary language around sales/pitch/transaction",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Homepage links to hub boundary section",
+      "actual_interpretation": "Maturity framing without buyer solicitation",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Homepage strategic readiness links to acquisition-language-boundary",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Homepage links to hub boundary section"
+    },
+    {
+      "language_id": "AL-LANG-020",
+      "language_text": "Strategic claim traceability",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#strategic-claim-traceability",
+      "language_category": "Claim-traceability language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Claims trace to visible routes",
+      "actual_interpretation": "Not sales proof or authority certification",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Claims trace to visible routes"
+    },
+    {
+      "language_id": "AL-LANG-021",
+      "language_text": "Acquisition language boundary",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#strategic-claim-traceability",
+      "language_category": "Acquisition-readiness language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Cross-link to hub boundary",
+      "actual_interpretation": "Readiness as maturity not solicitation",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added hub acquisition-language-boundary link in strategic review",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Cross-link to hub boundary"
+    },
+    {
+      "language_id": "AL-LANG-022",
+      "language_text": "not a pitch deck, and not a sales page",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#does-not-claim",
+      "language_category": "Boundary language around sales/pitch/transaction",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Explicit negation list",
+      "actual_interpretation": "Strategic review index boundaries",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Explicit negation list"
+    },
+    {
+      "language_id": "AL-LANG-023",
+      "language_text": "Reviewer Packet",
+      "public_page": "/reviewer-packet/",
+      "anchor_or_section": "h1",
+      "language_category": "Strategic/reviewer surface language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Public inspection packet",
+      "actual_interpretation": "Not a buyer packet or investor packet",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Public inspection packet"
+    },
+    {
+      "language_id": "AL-LANG-024",
+      "language_text": "104-route public surface",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#strategic-claim-traceability",
+      "language_category": "Route-count maturity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Production depth count",
+      "actual_interpretation": "Integrity snapshot metric not sales proof",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Production depth count"
+    },
+    {
+      "language_id": "AL-LANG-025",
+      "language_text": "Phase 2 external-use layer",
+      "public_page": "/reading-sequences/",
+      "anchor_or_section": "#external-use-layer-sequence",
+      "language_category": "External-use discipline language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Reference discipline routes",
+      "actual_interpretation": "No consulting funnel",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Reference discipline routes"
+    },
+    {
+      "language_id": "AL-LANG-026",
+      "language_text": "not a private due-diligence room",
+      "public_page": "/strategic-review/boundary-and-readiness/",
+      "anchor_or_section": "#does-not-claim",
+      "language_category": "Boundary language around due diligence/private data room",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Boundary index negation",
+      "actual_interpretation": "No private data room",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Boundary index negation"
+    },
+    {
+      "language_id": "AL-LANG-027",
+      "language_text": "Strategic review without transaction pages",
+      "public_page": "/system-map/",
+      "anchor_or_section": "#system-map-depth",
+      "language_category": "Strategic/reviewer surface language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "System map inspection orientation",
+      "actual_interpretation": "Not product suite sales",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "System map inspection orientation"
+    },
+    {
+      "language_id": "AL-LANG-028",
+      "language_text": "Orienting reviewers to public reference depth",
+      "public_page": "/acquisition-readiness/",
+      "anchor_or_section": "#source-confidence",
+      "language_category": "Reviewer-facing maturity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Source confidence for readiness hub",
+      "actual_interpretation": "Non-transactional diligence paths bounded in cannot-support",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Source confidence for readiness hub"
+    }
+  ],
+  "total_language_inventory_count": 28,
+  "safe_language_count": 20,
+  "repaired_language_count": 8,
+  "unsafe_language_count": 0,
+  "acquisition_readiness_surfaces_checked": [
+    "/acquisition-readiness/",
+    "/acquisition-readiness/category-asset/",
+    "/acquisition-readiness/public-reference-surface/",
+    "/acquisition-readiness/governance-traceability/",
+    "/acquisition-readiness/ai-retrieval-readiness/",
+    "/acquisition-readiness/non-detector-moat/"
+  ],
+  "strategic_reviewer_surfaces_checked": [
+    "/strategic-review/",
+    "/strategic-review/retrieval-and-citation/",
+    "/strategic-review/public-reference-depth/",
+    "/strategic-review/boundary-and-readiness/",
+    "/reviewer-packet/",
+    "/reviewer-packet/citation-and-retrieval-map/",
+    "/executive-overview/",
+    "/system-map/"
+  ],
+  "external_use_layers_checked": {
+    "/reading-sequences/": true,
+    "/retrieval-index/": true,
+    "/citation-orientation/": true,
+    "/source-use-orientation/": true
+  },
+  "related_routes_checked": [
+    "/",
+    "/route-groups/review-and-overview-layers/",
+    "/reference/claim-source-traceability/",
+    "/external-review/"
+  ],
+  "walkthrough_scenarios": [
+    {
+      "scenario_id": "AL-001",
+      "acquisition_language_intent": "External reviewer reads governance traceability without sales-page interpretation",
+      "expected_pages_checked": [
+        "/acquisition-readiness/governance-traceability/"
+      ],
+      "expected_safe_interpretation": "Governance maturity inspectability",
+      "actual_interpretation": "Traceability and acquisition-language-boundary sections present",
+      "supporting_routes_or_artifacts": [
+        "governance-traceability/index.html",
+        "AL-LANG-012"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Governance maturity inspectability"
+    },
+    {
+      "scenario_id": "AL-002",
+      "acquisition_language_intent": "External reviewer reads acquisition-readiness without for-sale interpretation",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Public reference maturity hub",
+      "actual_interpretation": "Readiness-purpose and acquisition-language-boundary confirm non-solicitation",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html",
+        "AL-LANG-003"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Public reference maturity hub"
+    },
+    {
+      "scenario_id": "AL-003",
+      "acquisition_language_intent": "Governance traceability not interpreted as due-diligence room",
+      "expected_pages_checked": [
+        "/acquisition-readiness/governance-traceability/"
+      ],
+      "expected_safe_interpretation": "Public reference discipline",
+      "actual_interpretation": "DD-room and financial review explicitly negated",
+      "supporting_routes_or_artifacts": [
+        "AL-LANG-013",
+        "AL-LANG-014"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Public reference discipline"
+    },
+    {
+      "scenario_id": "AL-004",
+      "acquisition_language_intent": "Strategic maturity not interpreted as pitch deck",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Strategic review index",
+      "actual_interpretation": "does-not-claim negates pitch deck and sales page",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html",
+        "AL-LANG-022"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Strategic review index"
+    },
+    {
+      "scenario_id": "AL-005",
+      "acquisition_language_intent": "Reviewer packet not interpreted as buyer packet",
+      "expected_pages_checked": [
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Public inspection orientation",
+      "actual_interpretation": "Reviewer packet framing without buyer packet language",
+      "supporting_routes_or_artifacts": [
+        "reviewer-packet/index.html",
+        "AL-LANG-023"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Public inspection orientation"
+    },
+    {
+      "scenario_id": "AL-006",
+      "acquisition_language_intent": "Strategic-review not acquisition solicitation",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Non-transactional strategic review",
+      "actual_interpretation": "Boundary paragraphs and claim traceability",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Non-transactional strategic review"
+    },
+    {
+      "scenario_id": "AL-007",
+      "acquisition_language_intent": "Public reference asset language not valuation claim",
+      "expected_pages_checked": [
+        "/acquisition-readiness/public-reference-surface/"
+      ],
+      "expected_safe_interpretation": "Visible depth maturity",
+      "actual_interpretation": "Surface readiness without pricing or valuation",
+      "supporting_routes_or_artifacts": [
+        "public-reference-surface/index.html",
+        "AL-LANG-015"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Visible depth maturity"
+    },
+    {
+      "scenario_id": "AL-008",
+      "acquisition_language_intent": "Category asset not investment advice",
+      "expected_pages_checked": [
+        "/acquisition-readiness/category-asset/"
+      ],
+      "expected_safe_interpretation": "Category infrastructure thesis",
+      "actual_interpretation": "Category review wording without investment opportunity",
+      "supporting_routes_or_artifacts": [
+        "category-asset/index.html",
+        "AL-LANG-011"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Category infrastructure thesis"
+    },
+    {
+      "scenario_id": "AL-009",
+      "acquisition_language_intent": "Route-count maturity not sales proof",
+      "expected_pages_checked": [
+        "/strategic-review/",
+        "/"
+      ],
+      "expected_safe_interpretation": "104-route integrity metric",
+      "actual_interpretation": "Route count linked to integrity snapshot not revenue proof",
+      "supporting_routes_or_artifacts": [
+        "AL-LANG-024"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "104-route integrity metric"
+    },
+    {
+      "scenario_id": "AL-010",
+      "acquisition_language_intent": "Audit-result maturity not certification",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Audits as integrity checks",
+      "actual_interpretation": "Audits explicitly not certification or verification",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html#strategic-claim-traceability"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Audits as integrity checks"
+    },
+    {
+      "scenario_id": "AL-011",
+      "acquisition_language_intent": "Claim traceability not legal proof",
+      "expected_pages_checked": [
+        "/acquisition-readiness/governance-traceability/"
+      ],
+      "expected_safe_interpretation": "Inspectability support",
+      "actual_interpretation": "Traceability negates proof and legal review",
+      "supporting_routes_or_artifacts": [
+        "AL-LANG-013"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Inspectability support"
+    },
+    {
+      "scenario_id": "AL-012",
+      "acquisition_language_intent": "Source-use discipline not acquisition proof",
+      "expected_pages_checked": [
+        "/source-use-orientation/"
+      ],
+      "expected_safe_interpretation": "Source discipline orientation",
+      "actual_interpretation": "External-use layer without proof engine framing",
+      "supporting_routes_or_artifacts": [
+        "source-use-orientation/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Source discipline orientation"
+    },
+    {
+      "scenario_id": "AL-013",
+      "acquisition_language_intent": "Citation orientation not legal/financial review support",
+      "expected_pages_checked": [
+        "/citation-orientation/"
+      ],
+      "expected_safe_interpretation": "Citation-safe orientation",
+      "actual_interpretation": "No legal or financial representation on citation route",
+      "supporting_routes_or_artifacts": [
+        "citation-orientation/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Citation-safe orientation"
+    },
+    {
+      "scenario_id": "AL-014",
+      "acquisition_language_intent": "System map not product suite",
+      "expected_pages_checked": [
+        "/system-map/"
+      ],
+      "expected_safe_interpretation": "Reference system map",
+      "actual_interpretation": "Inspection map without product sales funnel",
+      "supporting_routes_or_artifacts": [
+        "system-map/index.html",
+        "AL-LANG-027"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Reference system map"
+    },
+    {
+      "scenario_id": "AL-015",
+      "acquisition_language_intent": "Homepage strategic language without pricing or contact-to-buy",
+      "expected_pages_checked": [
+        "/"
+      ],
+      "expected_safe_interpretation": "Strategic readiness section",
+      "actual_interpretation": "Non-transactional boundary and hub boundary link",
+      "supporting_routes_or_artifacts": [
+        "index.html#strategic-readiness",
+        "AL-LANG-019"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Strategic readiness section"
+    },
+    {
+      "scenario_id": "AL-016",
+      "acquisition_language_intent": "Phase 2 external-use without consulting funnel",
+      "expected_pages_checked": [
+        "/reading-sequences/"
+      ],
+      "expected_safe_interpretation": "External-use discipline",
+      "actual_interpretation": "Layer sequence without service funnel",
+      "supporting_routes_or_artifacts": [
+        "reading-sequences/index.html",
+        "AL-LANG-025"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "External-use discipline"
+    },
+    {
+      "scenario_id": "AL-017",
+      "acquisition_language_intent": "AI agent must not invent for sale or buyer opportunity",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Agent-safe readiness summary",
+      "actual_interpretation": "Boundary section lists prohibited solicitations",
+      "supporting_routes_or_artifacts": [
+        "AL-LANG-005",
+        "AL-LANG-006"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Agent-safe readiness summary"
+    },
+    {
+      "scenario_id": "AL-018",
+      "acquisition_language_intent": "AI agent must not invent due-diligence readiness",
+      "expected_pages_checked": [
+        "/acquisition-readiness/governance-traceability/"
+      ],
+      "expected_safe_interpretation": "Governance inspectability",
+      "actual_interpretation": "DD-room negated in traceability and boundary copy",
+      "supporting_routes_or_artifacts": [
+        "AL-LANG-013",
+        "AL-LANG-014"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Governance inspectability"
+    },
+    {
+      "scenario_id": "AL-019",
+      "acquisition_language_intent": "AI agent must not invent pitch-deck or investor-packet framing",
+      "expected_pages_checked": [
+        "/strategic-review/",
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Reviewer surfaces bounded",
+      "actual_interpretation": "Explicit not-pitch-deck and not-buyer-packet boundaries",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html",
+        "reviewer-packet/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Reviewer surfaces bounded"
+    },
+    {
+      "scenario_id": "AL-020",
+      "acquisition_language_intent": "AI agent must not invent valuation or transaction behavior",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Non-transaction readiness",
+      "actual_interpretation": "Hub does-not-claim and acquisition-language-boundary",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Non-transaction readiness"
+    },
+    {
+      "scenario_id": "AL-021",
+      "acquisition_language_intent": "Human reviewer reads acquisition-readability as reviewability",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Reviewability not solicitation",
+      "actual_interpretation": "acquisition-readability sentence in readiness-purpose",
+      "supporting_routes_or_artifacts": [
+        "AL-LANG-004"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Reviewability not solicitation"
+    },
+    {
+      "scenario_id": "AL-022",
+      "acquisition_language_intent": "Human reviewer moves from readiness to reference layers without transaction drift",
+      "expected_pages_checked": [
+        "/acquisition-readiness/",
+        "/reading-sequences/"
+      ],
+      "expected_safe_interpretation": "Cross-layer inspection path",
+      "actual_interpretation": "Links to Phase 2 and strategic review without transaction pages",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html#acquisition-language-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Cross-layer inspection path"
+    },
+    {
+      "scenario_id": "AL-023",
+      "acquisition_language_intent": "Acquisition pages avoid legal and financial representation",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "does-not-claim boundaries",
+      "actual_interpretation": "Legal and financial representation negated on hub",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html#does-not-claim"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "does-not-claim boundaries"
+    },
+    {
+      "scenario_id": "AL-024",
+      "acquisition_language_intent": "Strategic/reviewer pages avoid investment and buyer solicitation",
+      "expected_pages_checked": [
+        "/strategic-review/",
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Non-solicitation surfaces",
+      "actual_interpretation": "Boundary lists without investment opportunity language",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Non-solicitation surfaces"
+    },
+    {
+      "scenario_id": "AL-025",
+      "acquisition_language_intent": "Strong acquisition-adjacent phrases bounded or softened",
+      "expected_pages_checked": [
+        "/acquisition-readiness/category-asset/",
+        "/acquisition-readiness/public-reference-surface/"
+      ],
+      "expected_safe_interpretation": "Softened diligence phrasing",
+      "actual_interpretation": "Category review and public review wording applied",
+      "supporting_routes_or_artifacts": [
+        "AL-LANG-010",
+        "AL-LANG-016"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Softened diligence phrasing"
+    },
+    {
+      "scenario_id": "AL-026",
+      "acquisition_language_intent": "Non-transactional review boundary visible across acquisition pages",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Consistent page-end boundary",
+      "actual_interpretation": "page-end-boundary reminder on readiness routes",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Consistent page-end boundary"
+    },
+    {
+      "scenario_id": "AL-027",
+      "acquisition_language_intent": "Route-count copy remains 104 not sales proof",
+      "expected_pages_checked": [
+        "/",
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "104-route integrity",
+      "actual_interpretation": "No route-count inflation; framed as integrity snapshot",
+      "supporting_routes_or_artifacts": [
+        "AL-LANG-024"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "104-route integrity"
+    },
+    {
+      "scenario_id": "AL-028",
+      "acquisition_language_intent": "No new buyer, sales, pricing, or transaction behavior after hardening",
+      "expected_pages_checked": [
+        "repository"
+      ],
+      "expected_safe_interpretation": "Audit-only sprint",
+      "actual_interpretation": "No new routes or transaction surfaces introduced",
+      "supporting_routes_or_artifacts": [
+        "route-registry.json",
+        "sitemap.xml"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Audit-only sprint"
+    }
+  ],
+  "total_scenarios": 28,
+  "scenarios_passed": 28,
+  "scenarios_failed": 0,
+  "repairs_applied": [
+    "acquisition-readiness/index.html \u2014 acquisition-language-boundary section and readiness-purpose softening (AL-002, AL-004, AL-005)",
+    "acquisition-readiness/governance-traceability/index.html \u2014 acquisition-language-boundary paragraph (AL-003, AL-014)",
+    "acquisition-readiness/category-asset/index.html \u2014 category review wording (AL-010, AL-011)",
+    "acquisition-readiness/public-reference-surface/index.html \u2014 public review wording (AL-016)",
+    "index.html \u2014 strategic readiness hub boundary link (AL-019)",
+    "strategic-review/index.html \u2014 acquisition language boundary cross-link (AL-021)"
+  ],
+  "boundary_regressions_found": false,
+  "acquisition_language_boundary_confirmed": true,
+  "acquisition_readability_without_solicitation_confirmed": true,
+  "strategic_readiness_as_reference_maturity_confirmed": true,
+  "ai_agent_acquisition_interpretation_confirmed": true,
+  "human_reviewer_acquisition_interpretation_confirmed": true,
+  "route_count_drift_found": false,
+  "stale_copy_found": false,
+  "unsafe_acquisition_language_found": false,
+  "sales_page_drift_found": false,
+  "pitch_deck_drift_found": false,
+  "acquisition_solicitation_drift_found": false,
+  "buyer_solicitation_drift_found": false,
+  "pricing_or_valuation_drift_found": false,
+  "transaction_readiness_drift_found": false,
+  "due_diligence_room_drift_found": false,
+  "private_data_room_drift_found": false,
+  "buyer_packet_drift_found": false,
+  "investor_packet_drift_found": false,
+  "legal_or_financial_representation_drift_found": false,
+  "investment_claim_drift_found": false,
+  "authority_claim_drift_found": false,
+  "verification_drift_found": false,
+  "proof_drift_found": false,
+  "detector_drift_found": false,
+  "score_or_verdict_drift_found": false,
+  "case_conclusion_drift_found": false,
+  "audit_as_certification_drift_found": false,
+  "source_as_proof_drift_found": false,
+  "new_decision_created": false,
+  "route_registry_changed": false,
+  "public_file_registry_changed": false,
+  "sitemap_changed": false,
+  "no_new_routes": true,
+  "non_sales_surface": true,
+  "non_pitch_deck": true,
+  "non_acquisition_solicitation": true,
+  "non_buyer_solicitation": true,
+  "non_pricing": true,
+  "non_valuation": true,
+  "non_transaction_surface": true,
+  "non_due_diligence_room": true,
+  "non_private_data_room": true,
+  "non_buyer_packet": true,
+  "non_investor_packet": true,
+  "non_legal_representation": true,
+  "non_financial_representation": true,
+  "non_investment_claim": true,
+  "non_authority_claim": true,
+  "non_verification_claim": true,
+  "non_proof": true,
+  "non_detector": true,
+  "non_scoring": true,
+  "non_verdict": true,
+  "non_case_conclusion": true,
+  "non_transactional_review_surface": true
+}

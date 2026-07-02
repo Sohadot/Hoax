@@ -3250,6 +3250,35 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Sprint 126 audit-only strategic claim traceability validation."
+    },
+    {
+      "claim_id": "CLAIM-0128",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_ACQUISITION_LANGUAGE_BOUNDARY_AUDIT_V1.md",
+        "SPRINT_127_PUBLIC_REFERENCE_ACQUISITION_LANGUAGE_BOUNDARY_AUDIT_V1.md",
+        "data/public-reference-acquisition-language-boundary-audit-v1.json",
+        "data/public-reference-acquisition-language-boundary-audit-v1.schema.json",
+        "validators/validate_public_reference_acquisition_language_boundary_audit_v1.py",
+        "acquisition-readiness/index.html",
+        "acquisition-readiness/governance-traceability/index.html",
+        "acquisition-readiness/category-asset/index.html",
+        "acquisition-readiness/public-reference-surface/index.html",
+        "index.html",
+        "strategic-review/index.html"
+      ],
+      "source_refs": [
+        "SOURCE-0874",
+        "SOURCE-0875",
+        "SOURCE-0876",
+        "SOURCE-0877",
+        "SOURCE-0878"
+      ],
+      "support_scope": "public reference acquisition language boundary audit v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Sprint 127 audit-only acquisition language boundary validation."
     }
   ],
   "last_reviewed": "2026-07-02"

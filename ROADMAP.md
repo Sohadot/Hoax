@@ -4228,6 +4228,7 @@ Future layers may include:
 ---
 
 ## Sprint 119 — retrieval walkthrough audit complete (102 routes).
+- Sprint 127 — acquisition language boundary audit complete (104 routes, audit-only).
 - Sprint 126 — strategic claim traceability audit complete (104 routes, audit-only).
 - Sprint 125 — strategic reviewer surface audit complete (104 routes, audit-only, Phase 3 entry).
 - Sprint 124 — external use integrity audit complete (104 routes, audit-only).

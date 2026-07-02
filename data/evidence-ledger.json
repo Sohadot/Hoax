@@ -1399,6 +1399,17 @@
       "status": "active",
       "last_reviewed": "2026-07-02",
       "notes": "Sprint 126 audit-only strategic claim traceability hardening."
+    },
+    {
+      "claim_id": "CLAIM-0128",
+      "claim_text": "Hoax.ai completed Public Reference Acquisition Language Boundary Audit v1 with 28 acquisition-language records inventoried (21 safe, 7 repaired, 0 unsafe), 28 walkthrough scenarios (all pass), six scenario-backed hardening patches, and no route expansion while keeping the public surface at 104 routes and preserving non-sales, non-pitch, non-acquisition-solicitation, non-buyer-solicitation, non-pricing, non-valuation, non-transaction, non-due-diligence-room, non-investment, non-legal, and non-financial boundaries.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_ACQUISITION_LANGUAGE_BOUNDARY_AUDIT_V1.md, data/public-reference-acquisition-language-boundary-audit-v1.json, acquisition-readiness/index.html, validators/validate_public_reference_acquisition_language_boundary_audit_v1.py, SPRINT_127_PUBLIC_REFERENCE_ACQUISITION_LANGUAGE_BOUNDARY_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-07-02",
+      "notes": "Sprint 127 audit-only acquisition language boundary hardening."
     }
   ]
 }
