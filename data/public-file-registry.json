@@ -1454,6 +1454,20 @@
       ],
       "prohibited_content": "forms, scripts, upload, scoring, detector, verdict, pricing, transaction, dashboard",
       "notes": "Sprint 117 per DEC-135."
+    },
+    {
+      "file_id": "PUB-FILE-0102",
+      "path": "retrieval-index/index.html",
+      "file_type": "html",
+      "public_role": "public_reference_retrieval_index",
+      "route_id_if_applicable": "ROUTE-0102",
+      "required": true,
+      "validation_scope": "html_metadata_accessibility_security",
+      "allowed_dependencies": [
+        "../styles.css"
+      ],
+      "prohibited_content": "scripts, forms, uploads, api behavior, search behavior, ranking, generated answers, scoring, detector, verdict, transaction, sales",
+      "notes": "Sprint 118 per DEC-136."
     }
   ],
   "last_reviewed": "2026-07-02"

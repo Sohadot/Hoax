@@ -2991,6 +2991,37 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Sprint 117 reading sequences governance and production."
+    },
+    {
+      "claim_id": "CLAIM-0119",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_RETRIEVAL_INDEX_V1.md",
+        "PUBLIC_REFERENCE_RETRIEVAL_INDEX_STANDARD_V1.md",
+        "PUBLIC_REFERENCE_RETRIEVAL_INDEX_AUDIT_V1.md",
+        "SPRINT_118_PUBLIC_REFERENCE_RETRIEVAL_INDEX_V1.md",
+        "data/public-reference-retrieval-index-v1.json",
+        "data/public-reference-retrieval-index-v1.schema.json",
+        "validators/validate_public_reference_retrieval_index_v1.py",
+        "retrieval-index/index.html",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0820",
+        "SOURCE-0821",
+        "SOURCE-0822",
+        "SOURCE-0823",
+        "SOURCE-0824",
+        "SOURCE-0825",
+        "SOURCE-0826",
+        "SOURCE-0827",
+        "SOURCE-0797"
+      ],
+      "support_scope": "public reference retrieval index v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Sprint 118 retrieval-index governance and production."
     }
   ],
   "last_reviewed": "2026-07-02"

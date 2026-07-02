@@ -325,3 +325,6 @@ This plan defines what the factory produces and why it creates durable strategic
 **The domain is the category signal. The system must become the category operation.**
 
 The Category Intelligence Factory now includes a public Reading Sequences layer. Public Reference Reading Sequences v1 guides humans and AI agents through citation-safe, boundary-safe, and retrieval-safe reference navigation across the public surface without creating workflows, assessments, rankings, scores, detector behavior, operational procedures, or transaction surfaces.
+
+
+Public Reference Retrieval Index v1 extends the category intelligence factory with intent-indexed reference retrieval infrastructure. The route organizes existing references for citation-safe retrieval without search-engine behavior, ranking outputs, generated-answer behavior, workflow behavior, or transaction behavior.

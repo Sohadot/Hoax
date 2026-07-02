@@ -4203,3 +4203,23 @@ Future layers may include:
 ## Governing Roadmap Sentence
 
 **Build category infrastructure before building scale.**
+
+---
+
+## Sprint 118 — Public Reference Retrieval Index v1
+
+**Status:** COMPLETE — 2026-07-02  
+**Goal:** Add one retrieval-intent index route to improve external usability of the public reference surface.
+
+### Deliverables
+
+- `/retrieval-index/` route (ROUTE-0102)
+- Retrieval-index links from homepage, system-map, reading-sequences, and crosswalk
+- Route-group and audience-path retrieval-index links
+- Sitemap and registries aligned at 102
+- Retrieval-index governance pack, JSON/schema, validator, DEC-136
+- CLAIM-0119 and PUB-GATE-0112
+
+### Gate
+
+**Gate G118 passed.** Next sprint continues from 102-route governed surface.

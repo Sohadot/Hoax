@@ -1770,6 +1770,24 @@
       "failure_condition": "public_reference_reading_sequences_v1_not_met",
       "bypassable": false,
       "notes": "Sprint 117 completed reading-sequences layer with one new public route and no workflow/operational behavior (DEC-135)."
+    },
+    {
+      "gate_id": "PUB-GATE-0112",
+      "name": "Public Reference Retrieval Index v1 Gate",
+      "status": "public_reference_retrieval_index_v1_complete_pre_validation",
+      "required_currently": true,
+      "required_before_public_release": true,
+      "required_before_broader_public_release": true,
+      "required_before_engine_governance": true,
+      "required_before_any_public_route": true,
+      "required_before_any_sitemap_expansion": true,
+      "required_before_any_public_navigation": true,
+      "required_before_engine_prototype": true,
+      "required_before_engine_prototype_implementation": true,
+      "validation_source": "SPRINT_118_PUBLIC_REFERENCE_RETRIEVAL_INDEX_V1.md",
+      "failure_condition": "public_reference_retrieval_index_v1_not_met",
+      "bypassable": false,
+      "notes": "Sprint 118 delivered retrieval-index route with no search/ranking/generated-answer behavior (DEC-136)."
     }
   ],
   "last_reviewed": "2026-07-02"

@@ -3506,3 +3506,23 @@ At 101 routes, navigation ambiguity can weaken interpretive safety even when rou
 - Reading sequences remain navigation guidance only.
 - No workflow, procedure, assessment, score, ranking, detector output, or case-handling logic is authorized.
 - Upload, API, dashboard, graph-tool, report generation, due-diligence room, sales page, consulting funnel, and transaction behavior remain unauthorized.
+
+
+## DEC-136 — Public Reference Retrieval Index Rule Adopted
+
+**Date:** 2026-07-02
+**Status:** Active
+
+### Decision
+
+Sprint 118 adds a visible retrieval-index route at `/retrieval-index/`. Public retrieval indexes may organize Hoax.ai routes by retrieval intent, but must not create search behavior, ranking, scoring, generated answers, verification, detection, case assessment, operational review, workflow behavior, dashboard behavior, API behavior, upload behavior, report generation, or transaction surfaces.
+
+### Rationale
+
+At 102 routes, external usability requires intent-based retrieval orientation so humans and AI agents can find stable references without route-by-guessing or inferred outputs.
+
+### Implications
+
+- DEC-136 governs the visible Sprint 118 route `/retrieval-index/`.
+- Retrieval index behavior is static route orientation only.
+- Search interface behavior, ranking outputs, generated-answer behavior, detector behavior, and transaction behavior remain unauthorized.

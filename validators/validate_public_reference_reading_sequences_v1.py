@@ -308,8 +308,8 @@ def validate_navigation_and_registries() -> bool:
         ok = False
 
     route_mapped = [f for f in pfr if f.get("route_id_if_applicable")]
-    if len(route_mapped) != 101:
-        error("public-file registry route-mapped count must be 101")
+    if len(route_mapped) != PUBLIC_SITEMAP_URL_COUNT:
+        error(f"public-file registry route-mapped count must be {PUBLIC_SITEMAP_URL_COUNT}")
         ok = False
     return ok
 

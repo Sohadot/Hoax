@@ -331,6 +331,10 @@ Gate G58 is passed after the four Batch 3 pages are deepened in place with Stand
 
 Gate G59 is passed after `/standard/evidence-posture/` exists with all required standard sections, EPS-001 through EPS-014, five posture states, allowed and prohibited output language, standard matrix, and boundary rules; sitemap contains exactly 17 URLs; exactly one new standard route is created; DEC-077 exists in DECISION_LOG.md; CLAIM-0063 exists; SPRINT_59_EVIDENCE_POSTURE_STANDARD_V1_AUDIT.md exists; `validators/validate_evidence_posture_standard_v1_public.py` exists; validate_all.py PASS; DECISION_LOG chronology validator passes; prototype files are not modified; no Python cache files are tracked or staged; no meta-governance loop resumes; and no engine, classifier, upload, scoring, API, analytics, forms, JavaScript, DNS, Cloudflare, custom domain launch, monetization, or public tool behavior is introduced.
 
+## G118: Public Reference Retrieval Index v1
+
+Gate G118 passes after `/retrieval-index/` exists with required retrieval-intent sections and at least 2,000 visible words; homepage/system-map/reading-sequences/crosswalk link to `/retrieval-index/`; route-group and audience-path pages include retrieval-index links; sitemap has 102 URLs; route registry has 102 entries including ROUTE-0102; public-file-registry includes PUB-FILE-0102; shared public surface constants reflect 102; DEC-136 governs the visible route (not abstract preparation); `validators/validate_public_reference_retrieval_index_v1.py` passes; validate_all passes; and internal harnesses pass.
+
 ## G117: Public Reference Reading Sequences v1
 
 Gate G117 is passed after `/reading-sequences/` exists with required reading-sequence sections and at least 2,000 visible words; homepage, `/system-map/`, and `/evidence-conditions/crosswalk/` link to `/reading-sequences/`; relevant route-group and audience-path pages include reading-sequence links; sitemap has exactly 101 URLs; route registry has exactly 101 entries including ROUTE-0101; public-file-registry includes PUB-FILE-0101; current-state route-count copy reflects 101; no workflow/assessment/procedure/ranking/score/detector/API/dashboard/graph-tool/transaction/sales/consulting/legal/financial behavior is introduced; decision_ref is DEC-135; `validators/validate_public_reference_reading_sequences_v1.py` passes; validate_all.py PASS; internal harnesses pass; and working tree is clean.
@@ -640,6 +644,7 @@ Gate G56A is passed after DECISION_LOG.md DEC entries are in ascending numeric o
 | Sprint 60 | COMPLETE | G60 passed — Standard integrated across reference layer |
 | Sprint 61 | COMPLETE | G61 passed — Evidence Posture Protocol v1 Draft created |
 | Sprint 62 | COMPLETE | G62 passed — Protocol integrated across reference and standard layers |
+| Sprint 118 | COMPLETE | G118 passed — Public Reference Retrieval Index v1 |
 | Sprint 117 | COMPLETE | G117 passed — Public Reference Reading Sequences v1 |
 | Sprint 116 | COMPLETE | G116 passed — Public Reference 100-Route Surface Integrity Audit v1 |
 | Sprint 115 | COMPLETE | G115 passed — Public Reference Evidence Condition Crosswalk v1 |

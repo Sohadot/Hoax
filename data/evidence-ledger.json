@@ -1300,6 +1300,17 @@
       "status": "active",
       "last_reviewed": "2026-07-02",
       "notes": "Sprint 117 reading sequences route and governance."
+    },
+    {
+      "claim_id": "CLAIM-0119",
+      "claim_text": "Hoax.ai Sprint 118 adds `/retrieval-index/` as a visible public retrieval-intent route on a 102-route surface, enabling citation-safe route orientation for humans and AI agents without search interfaces, ranking, generated answers, workflow outputs, case assessment, detector behavior, or transaction behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_RETRIEVAL_INDEX_V1.md, PUBLIC_REFERENCE_RETRIEVAL_INDEX_STANDARD_V1.md, PUBLIC_REFERENCE_RETRIEVAL_INDEX_AUDIT_V1.md, data/public-reference-retrieval-index-v1.json, retrieval-index/index.html, validators/validate_public_reference_retrieval_index_v1.py, SPRINT_118_PUBLIC_REFERENCE_RETRIEVAL_INDEX_V1.md, DECISION_LOG.md (DEC-136)",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-07-02",
+      "notes": "Sprint 118 retrieval-index implementation and governance."
     }
   ]
 }
