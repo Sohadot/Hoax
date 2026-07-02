@@ -4223,3 +4223,23 @@ Future layers may include:
 ### Gate
 
 **Gate G118 passed.** Next sprint continues from 102-route governed surface.
+
+
+---
+
+## Sprint 119 — Public Reference Retrieval Walkthrough Audit v1
+
+**Status:** COMPLETE — 2026-07-02  
+**Goal:** Audit live `/retrieval-index/` usability through 20 retrieval walkthrough scenarios without route expansion.
+
+### Deliverables
+
+- 20 walkthrough scenarios (20/20 pass)
+- Two scenario-backed hardening patches on `/retrieval-index/`
+- Walkthrough audit JSON/schema and validator
+- CLAIM-0120 and PUB-GATE-0113
+- No DEC-137 (no new decision required)
+
+### Gate
+
+**Gate G119 passed.** Public surface remains 102 routes.

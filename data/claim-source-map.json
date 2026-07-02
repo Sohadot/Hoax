@@ -3022,6 +3022,31 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Sprint 118 retrieval-index governance and production."
+    },
+    {
+      "claim_id": "CLAIM-0120",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_RETRIEVAL_WALKTHROUGH_AUDIT_V1.md",
+        "SPRINT_119_PUBLIC_REFERENCE_RETRIEVAL_WALKTHROUGH_AUDIT_V1.md",
+        "data/public-reference-retrieval-walkthrough-audit-v1.json",
+        "data/public-reference-retrieval-walkthrough-audit-v1.schema.json",
+        "validators/validate_public_reference_retrieval_walkthrough_audit_v1.py",
+        "retrieval-index/index.html"
+      ],
+      "source_refs": [
+        "SOURCE-0828",
+        "SOURCE-0829",
+        "SOURCE-0830",
+        "SOURCE-0831",
+        "SOURCE-0832",
+        "SOURCE-0827"
+      ],
+      "support_scope": "public reference retrieval walkthrough audit v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Sprint 119 audit-only walkthrough validation."
     }
   ],
   "last_reviewed": "2026-07-02"
