@@ -340,6 +340,8 @@ Public Reference External Use Integrity Audit v1 validates that Hoax.ai's readin
 
 Public Reference Strategic Reviewer Surface Audit v1 validates that existing strategic-review and reviewer-packet surfaces support external reviewer legibility through 28 walkthrough scenarios without adding routes, sales surfaces, pitch decks, due-diligence rooms, or transaction mechanisms.
 
+Public Reference Strategic Claim Traceability Audit v1 validates that strategic and reviewer-facing public claims trace to visible production routes, audits, and governed artifacts through 32 claim inventory records and 28 walkthrough scenarios without adding claim proof pages, sales proof, or transaction surfaces.
+
 Public Reference Citation Walkthrough Audit v1 validates that the live `/citation-orientation/` route supports citation-safe external use through 24 walkthrough scenarios without adding routes, citation-generator behavior, or transaction surfaces.
 
 Public Reference Citation Orientation v1 extends the category intelligence factory with citation-safe reference guidance at `/citation-orientation/` across the 103-route public surface. The route teaches humans and AI agents how to cite Reference Answer, Source Confidence, Cite This Reference, and Retrieval Capsule blocks safely without citation-generator behavior, generated-citation output, legal citation claims, academic endorsement, verification claims, detector support, score support, verdict support, or transaction surfaces.

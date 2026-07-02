@@ -11116,6 +11116,66 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 125 audit validator."
+    },
+    {
+      "source_id": "SOURCE-0869",
+      "source_title": "PUBLIC_REFERENCE_STRATEGIC_CLAIM_TRACEABILITY_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "location": "PUBLIC_REFERENCE_STRATEGIC_CLAIM_TRACEABILITY_AUDIT_V1.md",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 126 strategic claim traceability audit."
+    },
+    {
+      "source_id": "SOURCE-0870",
+      "source_title": "SPRINT_126_PUBLIC_REFERENCE_STRATEGIC_CLAIM_TRACEABILITY_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "location": "SPRINT_126_PUBLIC_REFERENCE_STRATEGIC_CLAIM_TRACEABILITY_AUDIT_V1.md",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 126 sprint record."
+    },
+    {
+      "source_id": "SOURCE-0871",
+      "source_title": "public-reference-strategic-claim-traceability-audit-v1.json",
+      "source_type": "governance_file",
+      "location": "data/public-reference-strategic-claim-traceability-audit-v1.json",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 126 audit JSON."
+    },
+    {
+      "source_id": "SOURCE-0872",
+      "source_title": "public-reference-strategic-claim-traceability-audit-v1.schema.json",
+      "source_type": "governance_file",
+      "location": "data/public-reference-strategic-claim-traceability-audit-v1.schema.json",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 126 audit schema."
+    },
+    {
+      "source_id": "SOURCE-0873",
+      "source_title": "validate_public_reference_strategic_claim_traceability_audit_v1.py",
+      "source_type": "governance_file",
+      "location": "validators/validate_public_reference_strategic_claim_traceability_audit_v1.py",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 126 audit validator."
     }
   ]
 }

@@ -75,7 +75,7 @@ REQUIRED_STATES = [
     "retired",
 ]
 
-REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 120)]
+REQUIRED_GATE_IDS = [f"PUB-GATE-{i:04d}" for i in range(1, 121)]
 
 REQUIRED_WORKFLOW_IDS = [f"PUB-WORKFLOW-{i:04d}" for i in range(1, 16)]
 

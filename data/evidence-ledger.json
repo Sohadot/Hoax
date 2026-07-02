@@ -1388,6 +1388,17 @@
       "status": "active",
       "last_reviewed": "2026-07-02",
       "notes": "Sprint 125 audit-only strategic reviewer surface hardening."
+    },
+    {
+      "claim_id": "CLAIM-0127",
+      "claim_text": "Hoax.ai completed Public Reference Strategic Claim Traceability Audit v1 with 32 strategic claims inventoried (all traceable), 28 walkthrough scenarios (all pass), six scenario-backed hardening patches, and no route expansion while keeping the public surface at 104 routes and preserving non-sales, non-proof, non-verification, non-detector, and non-transaction boundaries.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_STRATEGIC_CLAIM_TRACEABILITY_AUDIT_V1.md, data/public-reference-strategic-claim-traceability-audit-v1.json, strategic-review/index.html, validators/validate_public_reference_strategic_claim_traceability_audit_v1.py, SPRINT_126_PUBLIC_REFERENCE_STRATEGIC_CLAIM_TRACEABILITY_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-07-02",
+      "notes": "Sprint 126 audit-only strategic claim traceability hardening."
     }
   ]
 }

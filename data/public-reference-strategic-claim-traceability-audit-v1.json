@@ -1,0 +1,1215 @@
+{
+  "id": "public-reference-strategic-claim-traceability-audit-v1",
+  "name": "Public Reference Strategic Claim Traceability Audit v1",
+  "version": "1.0.0",
+  "sprint": "Sprint 126",
+  "status": "public_reference_strategic_claim_traceability_audit",
+  "audit_only": true,
+  "production_route_added": false,
+  "public_route_count_before": 104,
+  "public_route_count_after": 104,
+  "sitemap_url_count_expected": 104,
+  "strategic_claims_inventory": [
+    {
+      "claim_id": "SC-001",
+      "claim_text": "Hoax.ai is a governed public reference asset",
+      "public_page": "/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "reference_infrastructure_claims",
+      "expected_trace_type": "public_page",
+      "actual_trace_target": "/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Homepage reference summary anchors governed asset framing."
+    },
+    {
+      "claim_id": "SC-002",
+      "claim_text": "Hoax.ai is a public reference system rather than a detector",
+      "public_page": "/why-hoax-ai-is-not-a-detector/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "non_detector_boundary_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/why-hoax-ai-is-not-a-detector/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Non-detector route is the primary support target."
+    },
+    {
+      "claim_id": "SC-003",
+      "claim_text": "Hoax.ai uses evidence-risk framing",
+      "public_page": "/evidence-risk/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "category_thesis_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/evidence-risk/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Evidence-risk concept route supports thesis framing."
+    },
+    {
+      "claim_id": "SC-004",
+      "claim_text": "Hoax.ai has a 104-route public surface",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "strategic-review-index-integrity-snapshot",
+      "claim_category": "104_route_public_surface_claims",
+      "expected_trace_type": "public_page_section",
+      "actual_trace_target": "/#public-release-integrity-snapshot",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Integrity snapshots on homepage and strategic review align to 104 routes."
+    },
+    {
+      "claim_id": "SC-005",
+      "claim_text": "Phase 2 external-use layer exists",
+      "public_page": "/reading-sequences/",
+      "anchor_or_section": "external-use-layer-sequence",
+      "claim_category": "phase_2_external_use_layer_claims",
+      "expected_trace_type": "public_page_section",
+      "actual_trace_target": "/reading-sequences/#external-use-layer-sequence",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Four-layer sequence links all Phase 2 routes."
+    },
+    {
+      "claim_id": "SC-006",
+      "claim_text": "Reading sequences guide reference navigation",
+      "public_page": "/reading-sequences/",
+      "anchor_or_section": "purpose-reading-sequences",
+      "claim_category": "reading_sequence_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/reading-sequences/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Reading sequences page defines navigation role."
+    },
+    {
+      "claim_id": "SC-007",
+      "claim_text": "Retrieval index organizes retrieval intent",
+      "public_page": "/retrieval-index/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "retrieval_index_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/retrieval-index/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Retrieval index states intent-based orientation."
+    },
+    {
+      "claim_id": "SC-008",
+      "claim_text": "Citation orientation supports safe reference citation",
+      "public_page": "/citation-orientation/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "citation_orientation_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/citation-orientation/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Citation orientation defines citation-safe role."
+    },
+    {
+      "claim_id": "SC-009",
+      "claim_text": "Source-use orientation explains source-supported reference boundaries",
+      "public_page": "/source-use-orientation/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "source_use_orientation_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/source-use-orientation/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Source-use orientation defines boundary role."
+    },
+    {
+      "claim_id": "SC-010",
+      "claim_text": "Retrieval walkthrough audit validated the retrieval index route",
+      "public_page": "/retrieval-index/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "audit_completion_claims",
+      "expected_trace_type": "prior_sprint_audit",
+      "actual_trace_target": "data/public-reference-retrieval-walkthrough-audit-v1.json",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Audit artifact supports live retrieval-index route; public trace via route itself."
+    },
+    {
+      "claim_id": "SC-011",
+      "claim_text": "Citation walkthrough audit validated citation orientation",
+      "public_page": "/citation-orientation/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "audit_completion_claims",
+      "expected_trace_type": "prior_sprint_audit",
+      "actual_trace_target": "data/public-reference-citation-walkthrough-audit-v1.json",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Live citation-orientation route is audit support surface."
+    },
+    {
+      "claim_id": "SC-012",
+      "claim_text": "Source-use walkthrough audit validated source-use orientation",
+      "public_page": "/source-use-orientation/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "audit_completion_claims",
+      "expected_trace_type": "prior_sprint_audit",
+      "actual_trace_target": "data/public-reference-source-use-walkthrough-audit-v1.json",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Live source-use-orientation route is audit support surface."
+    },
+    {
+      "claim_id": "SC-013",
+      "claim_text": "External-use integrity audit validated the four-layer system",
+      "public_page": "/reading-sequences/",
+      "anchor_or_section": "external-use-layer-sequence",
+      "claim_category": "audit_completion_claims",
+      "expected_trace_type": "prior_sprint_audit",
+      "actual_trace_target": "data/public-reference-external-use-integrity-audit-v1.json",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Phase 2 layer sequence is public trace target."
+    },
+    {
+      "claim_id": "SC-014",
+      "claim_text": "Strategic reviewer surface audit validated strategic/reviewer legibility",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "audit_completion_claims",
+      "expected_trace_type": "prior_sprint_audit",
+      "actual_trace_target": "data/public-reference-strategic-reviewer-surface-audit-v1.json",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Strategic review hub is primary audit support surface."
+    },
+    {
+      "claim_id": "SC-015",
+      "claim_text": "Governance traceability supports inspectability without due-diligence rooms",
+      "public_page": "/acquisition-readiness/governance-traceability/",
+      "anchor_or_section": "readiness-purpose",
+      "claim_category": "governance_traceability_claims",
+      "expected_trace_type": "public_page_section",
+      "actual_trace_target": "/acquisition-readiness/governance-traceability/",
+      "trace_status": "traceable",
+      "observed_issue": "Governance page described traceability without explicit public cross-links to claim traceability orientation.",
+      "repair_applied": "Added claim traceability support section and cross-links to claim-source traceability and strategic review.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Traceability is inspectability, not due-diligence access."
+    },
+    {
+      "claim_id": "SC-016",
+      "claim_text": "Claim-source mapping supports bounded public claims",
+      "public_page": "/reference/claim-source-traceability/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "claim_source_mapping_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/reference/claim-source-traceability/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Claim-source traceability concept route supports mapping claims."
+    },
+    {
+      "claim_id": "SC-017",
+      "claim_text": "Publisher gates protect public surface quality",
+      "public_page": "/acquisition-readiness/governance-traceability/",
+      "anchor_or_section": "strategic-inspectability",
+      "claim_category": "publisher_gate_claims",
+      "expected_trace_type": "governance_artifact",
+      "actual_trace_target": "data/publisher-quality-gates.json",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Publisher gates are repository artifacts; public framing on governance page."
+    },
+    {
+      "claim_id": "SC-018",
+      "claim_text": "Evidence condition library provides definitional condition pages",
+      "public_page": "/evidence-conditions/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "evidence_condition_library_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/evidence-conditions/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Evidence condition hub is visible support."
+    },
+    {
+      "claim_id": "SC-019",
+      "claim_text": "Evidence-condition crosswalk relates conditions without ranking",
+      "public_page": "/evidence-conditions/crosswalk/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "evidence_condition_crosswalk_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/evidence-conditions/crosswalk/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Crosswalk uses relation-safe language."
+    },
+    {
+      "claim_id": "SC-020",
+      "claim_text": "Route groups organize public surface structurally",
+      "public_page": "/route-groups/core-concepts/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "route_group_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/route-groups/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Route group pages are structural shelves."
+    },
+    {
+      "claim_id": "SC-021",
+      "claim_text": "Audience paths orient readers without workflows",
+      "public_page": "/audience-paths/research-reviewers/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "audience_path_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/audience-paths/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Audience paths state non-workflow role."
+    },
+    {
+      "claim_id": "SC-022",
+      "claim_text": "Strategic maturity is shown through reference structure",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "index-purpose",
+      "claim_category": "strategic_reviewer_legibility_claims",
+      "expected_trace_type": "public_page_section",
+      "actual_trace_target": "/strategic-review/",
+      "trace_status": "traceable",
+      "observed_issue": "Strategic review index lacked explicit claim-to-support traceability orientation.",
+      "repair_applied": "Added strategic claim traceability section with support route links.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Maturity via structure, not sales solicitation."
+    },
+    {
+      "claim_id": "SC-023",
+      "claim_text": "Source Confidence is support-type language, not a confidence score",
+      "public_page": "/reference/source-confidence/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "source_confidence_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/reference/source-confidence/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Source Confidence concept defines support type."
+    },
+    {
+      "claim_id": "SC-024",
+      "claim_text": "Hoax.ai is non-verification and non-proof in public framing",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "does-not-claim",
+      "claim_category": "non_proof_boundary_claims",
+      "expected_trace_type": "public_page_section",
+      "actual_trace_target": "/boundary-integrity/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Boundary pages negate proof and verification drift."
+    },
+    {
+      "claim_id": "SC-025",
+      "claim_text": "Strategic review is non-transactional",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "non-transactional-boundary",
+      "claim_category": "non_sales_transactional_boundary_claims",
+      "expected_trace_type": "public_page_section",
+      "actual_trace_target": "/strategic-review/#non-transactional-boundary",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Explicit non-transactional boundary on strategic review."
+    },
+    {
+      "claim_id": "SC-026",
+      "claim_text": "Reviewer packet organizes inspection without private data rooms",
+      "public_page": "/reviewer-packet/",
+      "anchor_or_section": "reviewer-packet-integrity-snapshot",
+      "claim_category": "strategic_reviewer_legibility_claims",
+      "expected_trace_type": "public_page_section",
+      "actual_trace_target": "/reviewer-packet/",
+      "trace_status": "traceable",
+      "observed_issue": "Reviewer packet integrity snapshot did not state how packet claims trace to support routes.",
+      "repair_applied": "Added claim traceability line linking public surface index and Phase 2 layer.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Packet is public inspection, not private data room."
+    },
+    {
+      "claim_id": "SC-027",
+      "claim_text": "System map orients strategic structure without dashboards",
+      "public_page": "/system-map/",
+      "anchor_or_section": "map-depth",
+      "claim_category": "governed_public_reference_system_claims",
+      "expected_trace_type": "public_page_section",
+      "actual_trace_target": "/system-map/",
+      "trace_status": "traceable",
+      "observed_issue": "System map did not link strategic claims to traceability orientation surfaces.",
+      "repair_applied": "Added strategic claim traceability cross-links in system map depth.",
+      "boundary_check": "pass",
+      "ai_agent_note": "System map is orientation, not dashboard."
+    },
+    {
+      "claim_id": "SC-028",
+      "claim_text": "Retrieval and citation strategic claims trace to Phase 2 routes",
+      "public_page": "/strategic-review/retrieval-and-citation/",
+      "anchor_or_section": "index-purpose",
+      "claim_category": "walkthrough_scenario_claims",
+      "expected_trace_type": "public_page_section",
+      "actual_trace_target": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "trace_status": "traceable",
+      "observed_issue": "Retrieval-and-citation page did not name walkthrough-validated Phase 2 support routes.",
+      "repair_applied": "Added Phase 2 walkthrough-validated surface links in index purpose.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Audits trace to live routes, not certification."
+    },
+    {
+      "claim_id": "SC-029",
+      "claim_text": "Citation and retrieval map claims trace to Phase 2 support",
+      "public_page": "/reviewer-packet/citation-and-retrieval-map/",
+      "anchor_or_section": "packet-purpose",
+      "claim_category": "walkthrough_scenario_claims",
+      "expected_trace_type": "public_page_section",
+      "actual_trace_target": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "trace_status": "traceable",
+      "observed_issue": "Citation map packet purpose did not state claim traceability to Phase 2 routes.",
+      "repair_applied": "Added traceability sentence with Phase 2 route links in packet purpose.",
+      "boundary_check": "pass",
+      "ai_agent_note": "Map is citation orientation, not sales proof."
+    },
+    {
+      "claim_id": "SC-030",
+      "claim_text": "Public reference asset claims trace to executive and strategic layers",
+      "public_page": "/executive-overview/public-reference-system/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "public_reference_asset_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/executive-overview/public-reference-system/",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Executive overview explains reference system asset."
+    },
+    {
+      "claim_id": "SC-031",
+      "claim_text": "Walkthrough scenarios validate integrity without certification",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "strategic-claim-traceability",
+      "claim_category": "walkthrough_scenario_claims",
+      "expected_trace_type": "public_page_section",
+      "actual_trace_target": "/strategic-review/#strategic-claim-traceability",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Traceability section states audits are integrity checks."
+    },
+    {
+      "claim_id": "SC-032",
+      "claim_text": "AI agents should cite strategic claims only when support targets exist",
+      "public_page": "/audience-paths/ai-agents/",
+      "anchor_or_section": "reference-summary",
+      "claim_category": "strategic_reviewer_legibility_claims",
+      "expected_trace_type": "public_route",
+      "actual_trace_target": "/strategic-review/#strategic-claim-traceability",
+      "trace_status": "traceable",
+      "observed_issue": null,
+      "repair_applied": null,
+      "boundary_check": "pass",
+      "ai_agent_note": "Strategic traceability orientation supports AI citation discipline."
+    }
+  ],
+  "total_claims_inventory_count": 32,
+  "traceable_claims_count": 32,
+  "untraceable_claims_count": 0,
+  "repaired_claims_count": 6,
+  "strategic_reviewer_surfaces_checked": [
+    "/",
+    "/system-map/",
+    "/strategic-review/",
+    "/strategic-review/retrieval-and-citation/",
+    "/strategic-review/public-reference-depth/",
+    "/reviewer-packet/",
+    "/reviewer-packet/citation-and-retrieval-map/",
+    "/acquisition-readiness/governance-traceability/",
+    "/executive-overview/public-reference-system/",
+    "/reference/claim-source-traceability/"
+  ],
+  "external_use_layers_checked": [
+    "/reading-sequences/",
+    "/retrieval-index/",
+    "/citation-orientation/",
+    "/source-use-orientation/"
+  ],
+  "related_routes_checked": [
+    "/why-hoax-ai-is-not-a-detector/",
+    "/evidence-risk/",
+    "/evidence-conditions/",
+    "/evidence-conditions/crosswalk/",
+    "/route-groups/core-concepts/",
+    "/audience-paths/research-reviewers/",
+    "/audience-paths/ai-agents/",
+    "/reference/source-confidence/",
+    "/boundary-integrity/",
+    "/reading-sequences/",
+    "/retrieval-index/",
+    "/citation-orientation/",
+    "/source-use-orientation/"
+  ],
+  "walkthrough_scenarios": [
+    {
+      "scenario_id": "ST-001",
+      "strategic_claim_intent": "Trace governed public reference asset claim",
+      "expected_claims_checked": [
+        "SC-001"
+      ],
+      "expected_trace_targets": [
+        "/"
+      ],
+      "actual_trace_targets": [
+        "/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/",
+        "/executive-overview/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Asset claim traces to homepage and executive overview."
+    },
+    {
+      "scenario_id": "ST-002",
+      "strategic_claim_intent": "Trace non-detector public reference system claim",
+      "expected_claims_checked": [
+        "SC-002"
+      ],
+      "expected_trace_targets": [
+        "/why-hoax-ai-is-not-a-detector/"
+      ],
+      "actual_trace_targets": [
+        "/why-hoax-ai-is-not-a-detector/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/strategic-review/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Non-detector boundary is route-backed."
+    },
+    {
+      "scenario_id": "ST-003",
+      "strategic_claim_intent": "Trace evidence-risk framing claim",
+      "expected_claims_checked": [
+        "SC-003"
+      ],
+      "expected_trace_targets": [
+        "/evidence-risk/"
+      ],
+      "actual_trace_targets": [
+        "/evidence-risk/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/narrative/why-evidence-risk/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Evidence-risk concept is publicly defined."
+    },
+    {
+      "scenario_id": "ST-004",
+      "strategic_claim_intent": "Trace 104-route public surface claim",
+      "expected_claims_checked": [
+        "SC-004"
+      ],
+      "expected_trace_targets": [
+        "/strategic-review/#strategic-review-index-integrity-snapshot",
+        "/"
+      ],
+      "actual_trace_targets": [
+        "/strategic-review/#strategic-review-index-integrity-snapshot",
+        "/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "data/route-registry.json"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "104-route claim aligns to integrity snapshots and registry."
+    },
+    {
+      "scenario_id": "ST-005",
+      "strategic_claim_intent": "Trace Phase 2 external-use layer claim",
+      "expected_claims_checked": [
+        "SC-005"
+      ],
+      "expected_trace_targets": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_trace_targets": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/reading-sequences/#external-use-layer-sequence"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Four-layer sequence is public trace target."
+    },
+    {
+      "scenario_id": "ST-006",
+      "strategic_claim_intent": "Trace reading sequences navigation claim",
+      "expected_claims_checked": [
+        "SC-006"
+      ],
+      "expected_trace_targets": [
+        "/reading-sequences/"
+      ],
+      "actual_trace_targets": [
+        "/reading-sequences/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/reading-sequences/#purpose-reading-sequences"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Reading role is on live route."
+    },
+    {
+      "scenario_id": "ST-007",
+      "strategic_claim_intent": "Trace retrieval index intent claim",
+      "expected_claims_checked": [
+        "SC-007"
+      ],
+      "expected_trace_targets": [
+        "/retrieval-index/"
+      ],
+      "actual_trace_targets": [
+        "/retrieval-index/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/retrieval-index/#reference-summary"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Retrieval intent stated on live route."
+    },
+    {
+      "scenario_id": "ST-008",
+      "strategic_claim_intent": "Trace citation orientation claim",
+      "expected_claims_checked": [
+        "SC-008"
+      ],
+      "expected_trace_targets": [
+        "/citation-orientation/"
+      ],
+      "actual_trace_targets": [
+        "/citation-orientation/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/citation-orientation/#reference-summary"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Citation-safe role is route-backed."
+    },
+    {
+      "scenario_id": "ST-009",
+      "strategic_claim_intent": "Trace source-use orientation claim",
+      "expected_claims_checked": [
+        "SC-009"
+      ],
+      "expected_trace_targets": [
+        "/source-use-orientation/"
+      ],
+      "actual_trace_targets": [
+        "/source-use-orientation/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/source-use-orientation/#reference-summary"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Source-use boundaries on live route."
+    },
+    {
+      "scenario_id": "ST-010",
+      "strategic_claim_intent": "Trace retrieval walkthrough audit claim",
+      "expected_claims_checked": [
+        "SC-010"
+      ],
+      "expected_trace_targets": [
+        "/retrieval-index/"
+      ],
+      "actual_trace_targets": [
+        "/retrieval-index/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "data/public-reference-retrieval-walkthrough-audit-v1.json"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Audit traces to live retrieval-index route."
+    },
+    {
+      "scenario_id": "ST-011",
+      "strategic_claim_intent": "Trace citation walkthrough audit claim",
+      "expected_claims_checked": [
+        "SC-011"
+      ],
+      "expected_trace_targets": [
+        "/citation-orientation/"
+      ],
+      "actual_trace_targets": [
+        "/citation-orientation/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "data/public-reference-citation-walkthrough-audit-v1.json"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Audit traces to live citation-orientation route."
+    },
+    {
+      "scenario_id": "ST-012",
+      "strategic_claim_intent": "Trace source-use walkthrough audit claim",
+      "expected_claims_checked": [
+        "SC-012"
+      ],
+      "expected_trace_targets": [
+        "/source-use-orientation/"
+      ],
+      "actual_trace_targets": [
+        "/source-use-orientation/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "data/public-reference-source-use-walkthrough-audit-v1.json"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Audit traces to live source-use route."
+    },
+    {
+      "scenario_id": "ST-013",
+      "strategic_claim_intent": "Trace external-use integrity audit claim",
+      "expected_claims_checked": [
+        "SC-013"
+      ],
+      "expected_trace_targets": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_trace_targets": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "data/public-reference-external-use-integrity-audit-v1.json"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "System audit traces to Phase 2 layer sequence."
+    },
+    {
+      "scenario_id": "ST-014",
+      "strategic_claim_intent": "Trace strategic reviewer surface audit claim",
+      "expected_claims_checked": [
+        "SC-014"
+      ],
+      "expected_trace_targets": [
+        "/strategic-review/"
+      ],
+      "actual_trace_targets": [
+        "/strategic-review/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "data/public-reference-strategic-reviewer-surface-audit-v1.json"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Strategic audit traces to strategic-review hub."
+    },
+    {
+      "scenario_id": "ST-015",
+      "strategic_claim_intent": "Trace governance traceability without due-diligence drift",
+      "expected_claims_checked": [
+        "SC-015"
+      ],
+      "expected_trace_targets": [
+        "/acquisition-readiness/governance-traceability/"
+      ],
+      "actual_trace_targets": [
+        "/acquisition-readiness/governance-traceability/#claim-traceability-support"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/acquisition-readiness/governance-traceability/#claim-traceability-support",
+        "/reference/claim-source-traceability/"
+      ],
+      "result": "pass",
+      "observed_issue": "Governance traceability lacked explicit claim traceability cross-links.",
+      "repair_applied": "Added claim-traceability-support section and cross-links.",
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Governance traceability is not a diligence room."
+    },
+    {
+      "scenario_id": "ST-016",
+      "strategic_claim_intent": "Trace claim-source mapping without proof drift",
+      "expected_claims_checked": [
+        "SC-016"
+      ],
+      "expected_trace_targets": [
+        "/reference/claim-source-traceability/"
+      ],
+      "actual_trace_targets": [
+        "/reference/claim-source-traceability/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/source-use-orientation/#claim-source-relationship"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Mapping is traceability, not verification."
+    },
+    {
+      "scenario_id": "ST-017",
+      "strategic_claim_intent": "Trace publisher gates without certification drift",
+      "expected_claims_checked": [
+        "SC-017"
+      ],
+      "expected_trace_targets": [
+        "data/publisher-quality-gates.json"
+      ],
+      "actual_trace_targets": [
+        "data/publisher-quality-gates.json"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/acquisition-readiness/governance-traceability/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Gates are integrity checks, not certification."
+    },
+    {
+      "scenario_id": "ST-018",
+      "strategic_claim_intent": "Trace evidence condition library without ranking drift",
+      "expected_claims_checked": [
+        "SC-018"
+      ],
+      "expected_trace_targets": [
+        "/evidence-conditions/"
+      ],
+      "actual_trace_targets": [
+        "/evidence-conditions/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/evidence-conditions/source-uncertainty/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Conditions are definitional, not ranked."
+    },
+    {
+      "scenario_id": "ST-019",
+      "strategic_claim_intent": "Trace crosswalk without operational procedure drift",
+      "expected_claims_checked": [
+        "SC-019"
+      ],
+      "expected_trace_targets": [
+        "/evidence-conditions/crosswalk/"
+      ],
+      "actual_trace_targets": [
+        "/evidence-conditions/crosswalk/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/reading-sequences/#evidence-condition-sequence"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Crosswalk is relation navigation."
+    },
+    {
+      "scenario_id": "ST-020",
+      "strategic_claim_intent": "Trace route groups without SEO doorway drift",
+      "expected_claims_checked": [
+        "SC-020"
+      ],
+      "expected_trace_targets": [
+        "/route-groups/"
+      ],
+      "actual_trace_targets": [
+        "/route-groups/core-concepts/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/system-map/route-groups/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Route groups are structural shelves."
+    },
+    {
+      "scenario_id": "ST-021",
+      "strategic_claim_intent": "Trace audience paths without workflow drift",
+      "expected_claims_checked": [
+        "SC-021"
+      ],
+      "expected_trace_targets": [
+        "/audience-paths/"
+      ],
+      "actual_trace_targets": [
+        "/audience-paths/research-reviewers/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/reading-sequences/#research-reviewer-sequence"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Audience paths avoid workflow framing."
+    },
+    {
+      "scenario_id": "ST-022",
+      "strategic_claim_intent": "Trace strategic maturity without sales or transaction drift",
+      "expected_claims_checked": [
+        "SC-022",
+        "SC-025"
+      ],
+      "expected_trace_targets": [
+        "/strategic-review/"
+      ],
+      "actual_trace_targets": [
+        "/strategic-review/#strategic-claim-traceability"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/strategic-review/#strategic-claim-traceability",
+        "/acquisition-readiness/category-asset/"
+      ],
+      "result": "pass",
+      "observed_issue": "Strategic review lacked claim traceability orientation.",
+      "repair_applied": "Added strategic-claim-traceability section.",
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Maturity via structure, not sales."
+    },
+    {
+      "scenario_id": "ST-023",
+      "strategic_claim_intent": "Trace non-detector boundary without detector-support drift",
+      "expected_claims_checked": [
+        "SC-002",
+        "SC-024"
+      ],
+      "expected_trace_targets": [
+        "/why-hoax-ai-is-not-a-detector/"
+      ],
+      "actual_trace_targets": [
+        "/why-hoax-ai-is-not-a-detector/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/acquisition-readiness/non-detector-moat/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Non-detector claims are route-backed."
+    },
+    {
+      "scenario_id": "ST-024",
+      "strategic_claim_intent": "Trace non-transactional boundary without legal or financial drift",
+      "expected_claims_checked": [
+        "SC-025"
+      ],
+      "expected_trace_targets": [
+        "/strategic-review/#non-transactional-boundary"
+      ],
+      "actual_trace_targets": [
+        "/strategic-review/#non-transactional-boundary"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/reviewer-packet/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Non-transactional boundaries are explicit."
+    },
+    {
+      "scenario_id": "ST-025",
+      "strategic_claim_intent": "AI agent cites strategic claims only when support exists",
+      "expected_claims_checked": [
+        "SC-032"
+      ],
+      "expected_trace_targets": [
+        "/strategic-review/#strategic-claim-traceability"
+      ],
+      "actual_trace_targets": [
+        "/strategic-review/#strategic-claim-traceability"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/audience-paths/ai-agents/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Traceability orientation guides AI citation."
+    },
+    {
+      "scenario_id": "ST-026",
+      "strategic_claim_intent": "AI agent does not invent unsupported strategic claims",
+      "expected_claims_checked": [
+        "SC-031"
+      ],
+      "expected_trace_targets": [
+        "/strategic-review/#strategic-claim-traceability"
+      ],
+      "actual_trace_targets": [
+        "/strategic-review/#strategic-claim-traceability"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/system-map/ai-retrieval-paths/"
+      ],
+      "result": "pass",
+      "observed_issue": null,
+      "repair_applied": null,
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Audits framed as integrity checks, not certification."
+    },
+    {
+      "scenario_id": "ST-027",
+      "strategic_claim_intent": "Human reviewer moves from claim to support without broken links",
+      "expected_claims_checked": [
+        "SC-026",
+        "SC-027"
+      ],
+      "expected_trace_targets": [
+        "/reviewer-packet/",
+        "/system-map/"
+      ],
+      "actual_trace_targets": [
+        "/reviewer-packet/",
+        "/system-map/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/reviewer-packet/public-surface-index/"
+      ],
+      "result": "pass",
+      "observed_issue": "Reviewer packet and system map lacked claim traceability cross-links.",
+      "repair_applied": "Added traceability lines on reviewer-packet hub and system-map depth.",
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Support links are functional after hardening."
+    },
+    {
+      "scenario_id": "ST-028",
+      "strategic_claim_intent": "Strong strategic phrases are traceable, softened, or linked",
+      "expected_claims_checked": [
+        "SC-028",
+        "SC-029"
+      ],
+      "expected_trace_targets": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "actual_trace_targets": [
+        "/reading-sequences/",
+        "/retrieval-index/",
+        "/citation-orientation/",
+        "/source-use-orientation/"
+      ],
+      "supporting_routes_or_artifacts": [
+        "/strategic-review/retrieval-and-citation/",
+        "/reviewer-packet/citation-and-retrieval-map/"
+      ],
+      "result": "pass",
+      "observed_issue": "Retrieval/citation strategic pages lacked explicit Phase 2 trace targets.",
+      "repair_applied": "Added Phase 2 trace links on retrieval-and-citation and citation-and-retrieval-map.",
+      "traceability_check": "pass",
+      "boundary_check": "pass",
+      "ai_agent_note": "Strong phrases now link to support routes."
+    }
+  ],
+  "total_scenarios": 28,
+  "scenarios_passed": 28,
+  "scenarios_failed": 0,
+  "repairs_applied": [
+    "Added strategic claim traceability section on strategic-review index (SC-022, ST-022).",
+    "Added claim-traceability-support section on governance-traceability (SC-015, ST-015).",
+    "Added claim traceability line on reviewer-packet hub integrity snapshot (SC-026, ST-027).",
+    "Added Phase 2 walkthrough-validated surface links on strategic-review retrieval-and-citation (SC-028, ST-028).",
+    "Added traceability sentence with Phase 2 links on citation-and-retrieval-map packet purpose (SC-029, ST-028).",
+    "Added strategic claim traceability cross-links on system-map depth (SC-027, ST-027)."
+  ],
+  "boundary_regressions_found": false,
+  "strategic_claim_traceability_confirmed": true,
+  "reviewer_surface_claim_integrity_confirmed": true,
+  "phase_2_claim_support_confirmed": true,
+  "ai_agent_claim_interpretation_confirmed": true,
+  "human_reviewer_claim_interpretation_confirmed": true,
+  "route_count_drift_found": false,
+  "stale_copy_found": false,
+  "unsupported_claim_found": false,
+  "overclaim_found": false,
+  "vague_claim_found": false,
+  "trace_gap_found": false,
+  "pitch_deck_drift_found": false,
+  "sales_page_drift_found": false,
+  "acquisition_solicitation_drift_found": false,
+  "due_diligence_room_drift_found": false,
+  "private_data_room_drift_found": false,
+  "authority_claim_drift_found": false,
+  "verification_drift_found": false,
+  "proof_drift_found": false,
+  "detector_drift_found": false,
+  "score_or_verdict_drift_found": false,
+  "case_conclusion_drift_found": false,
+  "legal_or_financial_representation_drift_found": false,
+  "transaction_or_pricing_drift_found": false,
+  "audit_as_certification_drift_found": false,
+  "source_as_proof_drift_found": false,
+  "new_decision_created": false,
+  "route_registry_changed": false,
+  "public_file_registry_changed": false,
+  "sitemap_changed": false,
+  "no_new_routes": true,
+  "non_sales_surface": true,
+  "non_pitch_deck": true,
+  "non_acquisition_solicitation": true,
+  "non_due_diligence_room": true,
+  "non_private_data_room": true,
+  "non_authority_claim": true,
+  "non_verification_claim": true,
+  "non_proof": true,
+  "non_detector": true,
+  "non_scoring": true,
+  "non_verdict": true,
+  "non_case_conclusion": true,
+  "non_legal_representation": true,
+  "non_financial_representation": true,
+  "non_transactional_review_surface": true
+}

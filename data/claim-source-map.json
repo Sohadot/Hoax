@@ -3221,6 +3221,35 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Sprint 125 audit-only strategic reviewer surface validation."
+    },
+    {
+      "claim_id": "CLAIM-0127",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_STRATEGIC_CLAIM_TRACEABILITY_AUDIT_V1.md",
+        "SPRINT_126_PUBLIC_REFERENCE_STRATEGIC_CLAIM_TRACEABILITY_AUDIT_V1.md",
+        "data/public-reference-strategic-claim-traceability-audit-v1.json",
+        "data/public-reference-strategic-claim-traceability-audit-v1.schema.json",
+        "validators/validate_public_reference_strategic_claim_traceability_audit_v1.py",
+        "strategic-review/index.html",
+        "strategic-review/retrieval-and-citation/index.html",
+        "reviewer-packet/index.html",
+        "reviewer-packet/citation-and-retrieval-map/index.html",
+        "acquisition-readiness/governance-traceability/index.html",
+        "system-map/index.html"
+      ],
+      "source_refs": [
+        "SOURCE-0869",
+        "SOURCE-0870",
+        "SOURCE-0871",
+        "SOURCE-0872",
+        "SOURCE-0873"
+      ],
+      "support_scope": "public reference strategic claim traceability audit v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Sprint 126 audit-only strategic claim traceability validation."
     }
   ],
   "last_reviewed": "2026-07-02"
