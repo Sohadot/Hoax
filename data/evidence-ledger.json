@@ -1432,6 +1432,17 @@
       "status": "active",
       "last_reviewed": "2026-07-02",
       "notes": "Sprint 129 audit-only Phase 4 value boundary hardening."
+    },
+    {
+      "claim_id": "CLAIM-0131",
+      "claim_text": "Hoax.ai completed Public Reference Non-Transactional Revenue Boundary Audit v1 with 36 revenue-boundary language records inventoried (25 safe, 11 repaired, 0 unsafe), 36 walkthrough scenarios (all pass), eight scenario-backed hardening patches, and no route expansion while keeping the public surface at 104 routes and preserving non-monetization, non-revenue-claim, non-pricing, non-subscription, non-support, non-sponsorship, non-donation, non-paid-report, non-private-access, non-consulting, non-lead-generation, and non-transaction boundaries.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_NON_TRANSACTIONAL_REVENUE_BOUNDARY_AUDIT_V1.md, data/public-reference-non-transactional-revenue-boundary-audit-v1.json, strategic-review/index.html, validators/validate_public_reference_non_transactional_revenue_boundary_audit_v1.py, SPRINT_130_PUBLIC_REFERENCE_NON_TRANSACTIONAL_REVENUE_BOUNDARY_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-07-02",
+      "notes": "Sprint 130 audit-only non-transactional revenue boundary hardening."
     }
   ]
 }

@@ -3340,6 +3340,37 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Sprint 129 audit-only Phase 4 value boundary validation."
+    },
+    {
+      "claim_id": "CLAIM-0131",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_NON_TRANSACTIONAL_REVENUE_BOUNDARY_AUDIT_V1.md",
+        "SPRINT_130_PUBLIC_REFERENCE_NON_TRANSACTIONAL_REVENUE_BOUNDARY_AUDIT_V1.md",
+        "data/public-reference-non-transactional-revenue-boundary-audit-v1.json",
+        "data/public-reference-non-transactional-revenue-boundary-audit-v1.schema.json",
+        "validators/validate_public_reference_non_transactional_revenue_boundary_audit_v1.py",
+        "strategic-review/index.html",
+        "index.html",
+        "acquisition-readiness/index.html",
+        "citation-orientation/index.html",
+        "reading-sequences/index.html",
+        "narrative/why-evidence-risk/index.html",
+        "reviewer-packet/index.html",
+        "system-map/index.html"
+      ],
+      "source_refs": [
+        "SOURCE-0889",
+        "SOURCE-0890",
+        "SOURCE-0891",
+        "SOURCE-0892",
+        "SOURCE-0893"
+      ],
+      "support_scope": "public reference non-transactional revenue boundary audit v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Sprint 130 audit-only non-transactional revenue boundary validation."
     }
   ],
   "last_reviewed": "2026-07-02"

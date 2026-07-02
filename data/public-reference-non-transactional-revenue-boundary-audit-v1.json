@@ -1,0 +1,1311 @@
+{
+  "id": "public-reference-non-transactional-revenue-boundary-audit-v1",
+  "name": "Public Reference Non-Transactional Revenue Boundary Audit v1",
+  "version": "1.0.0",
+  "sprint": "Sprint 130",
+  "status": "public_reference_non_transactional_revenue_boundary_audit",
+  "audit_only": true,
+  "phase": "Phase 4",
+  "phase_boundary_audit": true,
+  "production_route_added": false,
+  "public_route_count_before": 104,
+  "public_route_count_after": 104,
+  "sitemap_url_count_expected": 104,
+  "revenue_boundary_language_inventory": [
+    {
+      "revenue_boundary_language_id": "RBL-001",
+      "language_text": "Phase 4 public reference value boundary",
+      "public_page": "/",
+      "anchor_or_section": "#public-release-integrity-snapshot",
+      "language_category": "Value-boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Value without commercial funnels",
+      "actual_interpretation": "Homepage Phase 4 boundary",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added non-transactional revenue boundary cross-link",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Value without commercial funnels"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-002",
+      "language_text": "Non-transactional revenue boundary",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#non-transactional-revenue-boundary",
+      "language_category": "Commercial-risk boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Strictly non-transactional public language",
+      "actual_interpretation": "Central revenue boundary section",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added non-transactional-revenue-boundary section",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Strictly non-transactional public language"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-003",
+      "language_text": "cannot pay, subscribe, sponsor, donate",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#non-transactional-revenue-boundary",
+      "language_category": "Revenue-adjacent language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Explicit negation of commercial actions",
+      "actual_interpretation": "No transaction path from public surface",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Explicit negation of commercial actions"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-004",
+      "language_text": "Public reference value boundary",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#public-reference-value-boundary",
+      "language_category": "Public reference value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Maturity not monetization",
+      "actual_interpretation": "Sprint 129 value boundary retained",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Maturity not monetization"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-005",
+      "language_text": "not monetization, pricing, subscriptions",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#public-reference-value-boundary",
+      "language_category": "Commercial-risk boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Negated commercial surfaces",
+      "actual_interpretation": "Boundary negation list",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Negated commercial surfaces"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-006",
+      "language_text": "Phase 3 strategic review integrity",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#phase-3-strategic-review-integrity",
+      "language_category": "Strategic-review integrity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Review layer without pitch deck",
+      "actual_interpretation": "Phase 3 closure support",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Review layer without pitch deck"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-007",
+      "language_text": "Acquisition language boundary",
+      "public_page": "/acquisition-readiness/",
+      "anchor_or_section": "#acquisition-language-boundary",
+      "language_category": "Acquisition-readability language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Readiness without solicitation",
+      "actual_interpretation": "Not buyer or revenue surface",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Readiness without solicitation"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-008",
+      "language_text": "Non-transactional revenue boundary",
+      "public_page": "/acquisition-readiness/",
+      "anchor_or_section": "#acquisition-language-boundary",
+      "language_category": "Revenue-adjacent language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Cross-link to revenue boundary",
+      "actual_interpretation": "Acquisition hub links revenue boundary",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added revenue boundary cross-link on acquisition hub",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Cross-link to revenue boundary"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-009",
+      "language_text": "not a consulting offer, sponsorship pitch",
+      "public_page": "/narrative/why-evidence-risk/",
+      "anchor_or_section": "#strategic-thesis",
+      "language_category": "Commercial-risk boundary language",
+      "boundary_risk": "medium",
+      "expected_safe_interpretation": "Category contrast not commercial offer",
+      "actual_interpretation": "Softened commercial competitors phrasing",
+      "status": "repaired",
+      "observed_issue": "Commercial competitors could imply commercial positioning",
+      "repair_applied": "Reframed as detector-first contrast with explicit negation",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Category contrast not commercial offer"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-010",
+      "language_text": "not commercial promises",
+      "public_page": "/citation-orientation/",
+      "anchor_or_section": "#citation-strategic-review",
+      "language_category": "Citation value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Citation-safe not paid service",
+      "actual_interpretation": "Citation boundary",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Citation-safe not paid service"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-011",
+      "language_text": "non-transactional revenue boundary orientation",
+      "public_page": "/citation-orientation/",
+      "anchor_or_section": "#non-transactional-revenue-boundary",
+      "language_category": "Revenue-adjacent language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "No paid citation or report services",
+      "actual_interpretation": "Citation revenue boundary paragraph",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added revenue boundary paragraph on citation orientation",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "No paid citation or report services"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-012",
+      "language_text": "not commercial funnel",
+      "public_page": "/reading-sequences/",
+      "anchor_or_section": "#external-use-layer-sequence",
+      "language_category": "External-use discipline language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Sequences not commercial funnel",
+      "actual_interpretation": "External-use sequence boundary",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added revenue boundary link on reading sequences",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Sequences not commercial funnel"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-013",
+      "language_text": "not commercial service claims",
+      "public_page": "/retrieval-index/",
+      "anchor_or_section": "#reference-answer",
+      "language_category": "Retrieval value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Retrieval not paid lookup",
+      "actual_interpretation": "Negated commercial claims",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Retrieval not paid lookup"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-014",
+      "language_text": "not commercial promises",
+      "public_page": "/source-use-orientation/",
+      "anchor_or_section": "#source-use-strategic-review",
+      "language_category": "Source-use value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Source discipline not commercial",
+      "actual_interpretation": "Source-use boundary from Sprint 129",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Source discipline not commercial"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-015",
+      "language_text": "Public reference maturity",
+      "public_page": "/route-groups/review-and-overview-layers/",
+      "anchor_or_section": "#strategic-reference-value",
+      "language_category": "Strategic value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Inspectability not sales proof",
+      "actual_interpretation": "Route group maturity framing",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Inspectability not sales proof"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-016",
+      "language_text": "not monetization or consulting positioning",
+      "public_page": "/route-groups/core-concepts/",
+      "anchor_or_section": "#strategic-reference-value",
+      "language_category": "Commercial-risk boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Concept depth not consulting",
+      "actual_interpretation": "Sprint 129 softened phrasing",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Concept depth not consulting"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-017",
+      "language_text": "not a service offering or sales proof",
+      "public_page": "/route-groups/evidence-risk-pathways/",
+      "anchor_or_section": "#strategic-reference-value",
+      "language_category": "Commercial-risk boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Pathway design not service sale",
+      "actual_interpretation": "Negated service offering",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Pathway design not service sale"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-018",
+      "language_text": "not a commercial product pitch",
+      "public_page": "/route-groups/boundary-and-support-references/",
+      "anchor_or_section": "#strategic-reference-value",
+      "language_category": "Governance-traceability value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Boundary architecture not pitch",
+      "actual_interpretation": "Governance discipline framing",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Boundary architecture not pitch"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-019",
+      "language_text": "Reviewer Packet Integrity Snapshot",
+      "public_page": "/reviewer-packet/",
+      "anchor_or_section": "#reviewer-packet-integrity-snapshot",
+      "language_category": "Reviewer value language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Inspection packet not buyer packet",
+      "actual_interpretation": "Not paid report surface",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added paid report negation in Phase 3 integrity line",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Inspection packet not buyer packet"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-020",
+      "language_text": "non-transactional revenue boundary",
+      "public_page": "/reviewer-packet/",
+      "anchor_or_section": "#reviewer-packet-integrity-snapshot",
+      "language_category": "Revenue-adjacent language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Packet links revenue boundary",
+      "actual_interpretation": "Reviewer packet cross-link",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added revenue boundary link in integrity snapshot",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Packet links revenue boundary"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-021",
+      "language_text": "non-transactional revenue boundary",
+      "public_page": "/system-map/",
+      "anchor_or_section": "#map-depth",
+      "language_category": "Strategic-review integrity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Map links revenue boundary",
+      "actual_interpretation": "System map cross-link",
+      "status": "repaired",
+      "observed_issue": "",
+      "repair_applied": "Added revenue boundary link on system map",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Map links revenue boundary"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-022",
+      "language_text": "104-route public surface",
+      "public_page": "/",
+      "anchor_or_section": "#public-release-integrity-snapshot",
+      "language_category": "Route-count maturity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Production count not revenue proof",
+      "actual_interpretation": "Integrity snapshot metric",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Production count not revenue proof"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-023",
+      "language_text": "not monetization surface is authorized",
+      "public_page": "/",
+      "anchor_or_section": "#next-heading",
+      "language_category": "Revenue-adjacent language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Explicit monetization negation",
+      "actual_interpretation": "Interface thesis governance note",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Explicit monetization negation"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-024",
+      "language_text": "not consulting funnels",
+      "public_page": "/",
+      "anchor_or_section": "#evidence-condition-library",
+      "language_category": "Commercial-risk boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Library without funnel",
+      "actual_interpretation": "Homepage evidence library boundary",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Library without funnel"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-025",
+      "language_text": "contact-oriented funnels",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#index-depth",
+      "language_category": "Lead-generation-adjacent language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Anti-funnel framing",
+      "actual_interpretation": "Links to vocabulary not leads",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Anti-funnel framing"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-026",
+      "language_text": "Audits are integrity checks, not certification",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#strategic-claim-traceability",
+      "language_category": "Audit-result maturity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Audits not commercial proof",
+      "actual_interpretation": "Not value proof",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Audits not commercial proof"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-027",
+      "language_text": "Phase 4 remains an audit boundary phase",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#non-transactional-revenue-boundary",
+      "language_category": "Value-boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "No revenue implementation",
+      "actual_interpretation": "Phase 4 audit only",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "No revenue implementation"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-028",
+      "language_text": "not consulting offers, or service funnels",
+      "public_page": "/audience-paths/",
+      "anchor_or_section": "#does-not-claim",
+      "language_category": "Commercial-risk boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Audience paths without funnels",
+      "actual_interpretation": "Negated consulting and funnels",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Audience paths without funnels"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-029",
+      "language_text": "not a pricing page, not a transaction page",
+      "public_page": "/",
+      "anchor_or_section": "#public-release-integrity-snapshot",
+      "language_category": "Non-transactional review boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Homepage commercial negation",
+      "actual_interpretation": "Release snapshot boundaries",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Homepage commercial negation"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-030",
+      "language_text": "not a dashboard, scorecard, rating system",
+      "public_page": "/",
+      "anchor_or_section": "#navigation-backbone-snapshot",
+      "language_category": "Commercial-risk boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Navigation not product suite",
+      "actual_interpretation": "Anti-dashboard framing",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Navigation not product suite"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-031",
+      "language_text": "104 public routes",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#reference-answer",
+      "language_category": "Route-count maturity language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Accurate route count",
+      "actual_interpretation": "Not commercial proof",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Accurate route count"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-032",
+      "language_text": "monetization surfaces remain blocked",
+      "public_page": "/language/",
+      "anchor_or_section": "#boundary-reminder",
+      "language_category": "Revenue-adjacent language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Publisher status negation",
+      "actual_interpretation": "Governance boundary on language layer",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Publisher status negation"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-033",
+      "language_text": "not trapping visitors in contact-oriented funnels",
+      "public_page": "/reviewer-packet/",
+      "anchor_or_section": "#packet-depth",
+      "language_category": "Lead-generation-adjacent language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Anti-lead-generation framing",
+      "actual_interpretation": "Outbound to evidence-risk vocabulary",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Anti-lead-generation framing"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-034",
+      "language_text": "optional future support is not implied",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#non-transactional-revenue-boundary",
+      "language_category": "Support-adjacent language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "No support mechanism on surface",
+      "actual_interpretation": "Future support absent from public routes",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "No support mechanism on surface"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-035",
+      "language_text": "value through reference discipline, not commercial products",
+      "public_page": "/strategic-review/",
+      "anchor_or_section": "#public-reference-value-boundary",
+      "language_category": "External-use discipline language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Phase 2 not product sale",
+      "actual_interpretation": "External-use value framing",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Phase 2 not product sale"
+    },
+    {
+      "revenue_boundary_language_id": "RBL-036",
+      "language_text": "not a sales-page, consulting offer, service funnel",
+      "public_page": "/reading-sequences/",
+      "anchor_or_section": "#non-transactional-boundary",
+      "language_category": "Commercial-risk boundary language",
+      "boundary_risk": "low",
+      "expected_safe_interpretation": "Reading sequences bounded",
+      "actual_interpretation": "Full commercial negation list",
+      "status": "safe",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Reading sequences bounded"
+    }
+  ],
+  "total_revenue_boundary_language_inventory_count": 36,
+  "safe_revenue_boundary_language_count": 27,
+  "repaired_revenue_boundary_language_count": 9,
+  "unsafe_revenue_boundary_language_count": 0,
+  "value_surfaces_checked": [
+    "/",
+    "/system-map/",
+    "/strategic-review/",
+    "/reviewer-packet/",
+    "/acquisition-readiness/",
+    "/reading-sequences/",
+    "/retrieval-index/",
+    "/citation-orientation/",
+    "/source-use-orientation/",
+    "/route-groups/review-and-overview-layers/",
+    "/narrative/why-evidence-risk/"
+  ],
+  "strategic_reviewer_surfaces_checked": [
+    "/strategic-review/",
+    "/reviewer-packet/",
+    "/executive-overview/",
+    "/system-map/"
+  ],
+  "acquisition_readiness_surfaces_checked": [
+    "/acquisition-readiness/",
+    "/acquisition-readiness/governance-traceability/"
+  ],
+  "external_use_layers_checked": {
+    "/reading-sequences/": true,
+    "/retrieval-index/": true,
+    "/citation-orientation/": true,
+    "/source-use-orientation/": true
+  },
+  "related_routes_checked": [
+    "/strategic-review/#public-reference-value-boundary",
+    "/strategic-review/#non-transactional-revenue-boundary",
+    "/acquisition-readiness/#acquisition-language-boundary"
+  ],
+  "walkthrough_scenarios": [
+    {
+      "scenario_id": "NRB-001",
+      "revenue_boundary_intent": "Public reference value without product offer",
+      "expected_pages_checked": [
+        "/",
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Maturity not product",
+      "actual_interpretation": "Value and revenue boundary sections",
+      "supporting_routes_or_artifacts": [
+        "index.html",
+        "strategic-review/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Maturity not product"
+    },
+    {
+      "scenario_id": "NRB-002",
+      "revenue_boundary_intent": "Strategic value without sales behavior",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Review index not sales",
+      "actual_interpretation": "Negation lists present",
+      "supporting_routes_or_artifacts": [
+        "strategic-review/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Review index not sales"
+    },
+    {
+      "scenario_id": "NRB-003",
+      "revenue_boundary_intent": "Value-boundary without monetization",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Value boundary retained",
+      "actual_interpretation": "public-reference-value-boundary section",
+      "supporting_routes_or_artifacts": [
+        "#public-reference-value-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Value boundary retained"
+    },
+    {
+      "scenario_id": "NRB-004",
+      "revenue_boundary_intent": "Category asset without investment opportunity",
+      "expected_pages_checked": [
+        "/acquisition-readiness/category-asset/"
+      ],
+      "expected_safe_interpretation": "Infrastructure thesis",
+      "actual_interpretation": "No investment language",
+      "supporting_routes_or_artifacts": [
+        "/acquisition-readiness/category-asset/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Infrastructure thesis"
+    },
+    {
+      "scenario_id": "NRB-005",
+      "revenue_boundary_intent": "Reference infrastructure without service offering",
+      "expected_pages_checked": [
+        "/executive-overview/category-thesis/"
+      ],
+      "expected_safe_interpretation": "Infrastructure framing",
+      "actual_interpretation": "Not service sale",
+      "supporting_routes_or_artifacts": [
+        "/executive-overview/category-thesis/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Infrastructure framing"
+    },
+    {
+      "scenario_id": "NRB-006",
+      "revenue_boundary_intent": "External-use without consulting funnel",
+      "expected_pages_checked": [
+        "/reading-sequences/",
+        "/source-use-orientation/"
+      ],
+      "expected_safe_interpretation": "Discipline not funnel",
+      "actual_interpretation": "Revenue boundary links on sequences",
+      "supporting_routes_or_artifacts": [
+        "reading-sequences/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added revenue boundary link on reading sequences",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Discipline not funnel"
+    },
+    {
+      "scenario_id": "NRB-007",
+      "revenue_boundary_intent": "Strategic-review integrity without pitch deck",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Phase 3 integrity",
+      "actual_interpretation": "Not pitch deck negation",
+      "supporting_routes_or_artifacts": [
+        "#phase-3-strategic-review-integrity"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Phase 3 integrity"
+    },
+    {
+      "scenario_id": "NRB-008",
+      "revenue_boundary_intent": "Acquisition-readability without buyer solicitation",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Readiness maturity",
+      "actual_interpretation": "Acquisition language boundary",
+      "supporting_routes_or_artifacts": [
+        "#acquisition-language-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Readiness maturity"
+    },
+    {
+      "scenario_id": "NRB-009",
+      "revenue_boundary_intent": "Route-count without sales or revenue proof",
+      "expected_pages_checked": [
+        "/",
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "104 integrity metric",
+      "actual_interpretation": "Route count not hype",
+      "supporting_routes_or_artifacts": [
+        "#public-release-integrity-snapshot"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "104 integrity metric"
+    },
+    {
+      "scenario_id": "NRB-010",
+      "revenue_boundary_intent": "Audits without certification or commercial proof",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Integrity checks",
+      "actual_interpretation": "Not certification language",
+      "supporting_routes_or_artifacts": [
+        "#strategic-claim-traceability"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Integrity checks"
+    },
+    {
+      "scenario_id": "NRB-011",
+      "revenue_boundary_intent": "Claim traceability without legal/financial proof",
+      "expected_pages_checked": [
+        "/acquisition-readiness/governance-traceability/"
+      ],
+      "expected_safe_interpretation": "Inspectability",
+      "actual_interpretation": "Traceability negations",
+      "supporting_routes_or_artifacts": [
+        "governance-traceability/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Inspectability"
+    },
+    {
+      "scenario_id": "NRB-012",
+      "revenue_boundary_intent": "Source-use without source-as-commercial-validation",
+      "expected_pages_checked": [
+        "/source-use-orientation/"
+      ],
+      "expected_safe_interpretation": "Source discipline",
+      "actual_interpretation": "Not commercial promises",
+      "supporting_routes_or_artifacts": [
+        "source-use-orientation/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Source discipline"
+    },
+    {
+      "scenario_id": "NRB-013",
+      "revenue_boundary_intent": "Citation without paid citation or report service",
+      "expected_pages_checked": [
+        "/citation-orientation/"
+      ],
+      "expected_safe_interpretation": "Citation orientation",
+      "actual_interpretation": "Revenue boundary on citation page",
+      "supporting_routes_or_artifacts": [
+        "citation-orientation/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added revenue boundary paragraph",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Citation orientation"
+    },
+    {
+      "scenario_id": "NRB-014",
+      "revenue_boundary_intent": "Retrieval without paid lookup product",
+      "expected_pages_checked": [
+        "/retrieval-index/"
+      ],
+      "expected_safe_interpretation": "Retrieval organization",
+      "actual_interpretation": "Not commercial service claims",
+      "supporting_routes_or_artifacts": [
+        "/retrieval-index/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Retrieval organization"
+    },
+    {
+      "scenario_id": "NRB-015",
+      "revenue_boundary_intent": "Reading sequences without guided service",
+      "expected_pages_checked": [
+        "/reading-sequences/"
+      ],
+      "expected_safe_interpretation": "Navigation only",
+      "actual_interpretation": "Not workflow or service",
+      "supporting_routes_or_artifacts": [
+        "/reading-sequences/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Navigation only"
+    },
+    {
+      "scenario_id": "NRB-016",
+      "revenue_boundary_intent": "Homepage without pricing subscription support sponsorship",
+      "expected_pages_checked": [
+        "/"
+      ],
+      "expected_safe_interpretation": "Phase 4 boundaries",
+      "actual_interpretation": "Value and revenue boundary links",
+      "supporting_routes_or_artifacts": [
+        "index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added revenue boundary cross-link on homepage",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Phase 4 boundaries"
+    },
+    {
+      "scenario_id": "NRB-017",
+      "revenue_boundary_intent": "System map without service-suite or dashboard",
+      "expected_pages_checked": [
+        "/system-map/"
+      ],
+      "expected_safe_interpretation": "Structural map",
+      "actual_interpretation": "Not dashboard negation",
+      "supporting_routes_or_artifacts": [
+        "system-map/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Structural map"
+    },
+    {
+      "scenario_id": "NRB-018",
+      "revenue_boundary_intent": "Strategic-review without monetization consulting drift",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Revenue boundary section",
+      "actual_interpretation": "non-transactional-revenue-boundary present",
+      "supporting_routes_or_artifacts": [
+        "#non-transactional-revenue-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added non-transactional revenue boundary section",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Revenue boundary section"
+    },
+    {
+      "scenario_id": "NRB-019",
+      "revenue_boundary_intent": "Reviewer packet without paid report or buyer packet",
+      "expected_pages_checked": [
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Public inspection",
+      "actual_interpretation": "Paid report negation added",
+      "supporting_routes_or_artifacts": [
+        "reviewer-packet/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Extended Phase 3 integrity line",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Public inspection"
+    },
+    {
+      "scenario_id": "NRB-020",
+      "revenue_boundary_intent": "Acquisition-readiness without transaction valuation drift",
+      "expected_pages_checked": [
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Readiness inspectability",
+      "actual_interpretation": "Revenue boundary cross-link",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added revenue boundary link",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Readiness inspectability"
+    },
+    {
+      "scenario_id": "NRB-021",
+      "revenue_boundary_intent": "Non-transactional boundary across value pages",
+      "expected_pages_checked": [
+        "/",
+        "/strategic-review/",
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Consistent boundaries",
+      "actual_interpretation": "Multiple boundary sections",
+      "supporting_routes_or_artifacts": [
+        "multiple surfaces"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Consistent boundaries"
+    },
+    {
+      "scenario_id": "NRB-022",
+      "revenue_boundary_intent": "AI agent value without pricing subscription revenue",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Revenue boundary orientation",
+      "actual_interpretation": "Explicit commercial action negations",
+      "supporting_routes_or_artifacts": [
+        "#non-transactional-revenue-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Revenue boundary orientation"
+    },
+    {
+      "scenario_id": "NRB-023",
+      "revenue_boundary_intent": "AI agent strategic value without investment claims",
+      "expected_pages_checked": [
+        "/narrative/why-evidence-risk/"
+      ],
+      "expected_safe_interpretation": "Category contrast",
+      "actual_interpretation": "Commercial competitors softened",
+      "supporting_routes_or_artifacts": [
+        "narrative/why-evidence-risk/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Softened commercial competitors phrasing",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Category contrast"
+    },
+    {
+      "scenario_id": "NRB-024",
+      "revenue_boundary_intent": "AI agent avoids audit-as-commercial-proof",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Integrity not proof",
+      "actual_interpretation": "Audit framing bounded",
+      "supporting_routes_or_artifacts": [
+        "#strategic-claim-traceability"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Integrity not proof"
+    },
+    {
+      "scenario_id": "NRB-025",
+      "revenue_boundary_intent": "AI agent avoids source-as-revenue-legitimacy",
+      "expected_pages_checked": [
+        "/source-use-orientation/"
+      ],
+      "expected_safe_interpretation": "Source discipline",
+      "actual_interpretation": "Not commercial validation",
+      "supporting_routes_or_artifacts": [
+        "source-use-orientation/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Source discipline"
+    },
+    {
+      "scenario_id": "NRB-026",
+      "revenue_boundary_intent": "Human traces value to production depth",
+      "expected_pages_checked": [
+        "/route-groups/review-and-overview-layers/"
+      ],
+      "expected_safe_interpretation": "Public reference maturity",
+      "actual_interpretation": "Visible production links",
+      "supporting_routes_or_artifacts": [
+        "route-groups/review-and-overview-layers/"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Public reference maturity"
+    },
+    {
+      "scenario_id": "NRB-027",
+      "revenue_boundary_intent": "Human understands value through Phase 2 and 3",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Connected integrity",
+      "actual_interpretation": "Phase 2 and 3 links in revenue boundary",
+      "supporting_routes_or_artifacts": [
+        "#non-transactional-revenue-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Connected integrity"
+    },
+    {
+      "scenario_id": "NRB-028",
+      "revenue_boundary_intent": "Value pages avoid conflict with acquisition-readiness",
+      "expected_pages_checked": [
+        "/strategic-review/",
+        "/acquisition-readiness/"
+      ],
+      "expected_safe_interpretation": "Distinct roles",
+      "actual_interpretation": "Cross-linked boundaries",
+      "supporting_routes_or_artifacts": [
+        "acquisition-readiness/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Distinct roles"
+    },
+    {
+      "scenario_id": "NRB-029",
+      "revenue_boundary_intent": "Value pages avoid conflict with strategic-review",
+      "expected_pages_checked": [
+        "/route-groups/",
+        "/reviewer-packet/"
+      ],
+      "expected_safe_interpretation": "Coherent framing",
+      "actual_interpretation": "Revenue boundary links strategic review",
+      "supporting_routes_or_artifacts": [
+        "reviewer-packet/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Coherent framing"
+    },
+    {
+      "scenario_id": "NRB-030",
+      "revenue_boundary_intent": "Strong value phrases bounded or linked",
+      "expected_pages_checked": [
+        "/route-groups/core-concepts/",
+        "/narrative/why-evidence-risk/"
+      ],
+      "expected_safe_interpretation": "Maturity language",
+      "actual_interpretation": "Softened or negated commercial phrasing",
+      "supporting_routes_or_artifacts": [
+        "route-groups",
+        "narrative"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Maturity language"
+    },
+    {
+      "scenario_id": "NRB-031",
+      "revenue_boundary_intent": "Route-count remains 104 not commercial proof",
+      "expected_pages_checked": [
+        "/",
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "104 routes consistent",
+      "actual_interpretation": "No stale commercial route counts",
+      "supporting_routes_or_artifacts": [
+        "sitemap.xml"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "104 routes consistent"
+    },
+    {
+      "scenario_id": "NRB-032",
+      "revenue_boundary_intent": "No support sponsorship donation pricing after hardening",
+      "expected_pages_checked": [
+        "/"
+      ],
+      "expected_safe_interpretation": "Commercial surface absent",
+      "actual_interpretation": "No monetization routes",
+      "supporting_routes_or_artifacts": [
+        "route-registry.json"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Commercial surface absent"
+    },
+    {
+      "scenario_id": "NRB-033",
+      "revenue_boundary_intent": "Value-legible without monetization route",
+      "expected_pages_checked": [
+        "repository"
+      ],
+      "expected_safe_interpretation": "Audit-only Phase 4",
+      "actual_interpretation": "104 routes unchanged",
+      "supporting_routes_or_artifacts": [
+        "public-reference-non-transactional-revenue-boundary-audit-v1.json"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Audit-only Phase 4"
+    },
+    {
+      "scenario_id": "NRB-034",
+      "revenue_boundary_intent": "Surface does not invite contact buy subscribe sponsor donate",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "No commercial CTA",
+      "actual_interpretation": "Explicit cannot pay/subscribe list",
+      "supporting_routes_or_artifacts": [
+        "#non-transactional-revenue-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "No commercial CTA"
+    },
+    {
+      "scenario_id": "NRB-035",
+      "revenue_boundary_intent": "Phase 4 remains audit boundary not revenue implementation",
+      "expected_pages_checked": [
+        "/strategic-review/"
+      ],
+      "expected_safe_interpretation": "Audit phase only",
+      "actual_interpretation": "Phase 4 audit boundary phase language",
+      "supporting_routes_or_artifacts": [
+        "#non-transactional-revenue-boundary"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "Audit phase only"
+    },
+    {
+      "scenario_id": "NRB-036",
+      "revenue_boundary_intent": "No commercial pathway in navigation or related blocks",
+      "expected_pages_checked": [
+        "/",
+        "/system-map/"
+      ],
+      "expected_safe_interpretation": "No commercial nav",
+      "actual_interpretation": "System map revenue boundary link",
+      "supporting_routes_or_artifacts": [
+        "system-map/index.html"
+      ],
+      "result": "pass",
+      "observed_issue": "",
+      "repair_applied": "Added revenue boundary link on system map",
+      "boundary_check": "confirmed",
+      "ai_agent_note": "No commercial nav"
+    }
+  ],
+  "total_scenarios": 36,
+  "scenarios_passed": 36,
+  "scenarios_failed": 0,
+  "repairs_applied": [
+    "strategic-review/index.html \u2014 non-transactional-revenue-boundary section (NRB-018, NRB-034, NRB-035)",
+    "index.html \u2014 revenue boundary cross-link in release snapshot (NRB-016)",
+    "acquisition-readiness/index.html \u2014 revenue boundary cross-link (NRB-020)",
+    "citation-orientation/index.html \u2014 revenue boundary paragraph (NRB-013)",
+    "reading-sequences/index.html \u2014 revenue boundary link (NRB-006)",
+    "narrative/why-evidence-risk/index.html \u2014 softened commercial-adjacent phrasing (NRB-023)",
+    "reviewer-packet/index.html \u2014 paid report negation and revenue boundary link (NRB-019)",
+    "system-map/index.html \u2014 revenue boundary cross-link (NRB-036)"
+  ],
+  "boundary_regressions_found": false,
+  "non_transactional_revenue_boundary_confirmed": true,
+  "value_legibility_without_revenue_surface_confirmed": true,
+  "public_reference_value_as_maturity_confirmed": true,
+  "ai_agent_revenue_interpretation_confirmed": true,
+  "human_reviewer_revenue_interpretation_confirmed": true,
+  "new_decision_created": false,
+  "route_registry_changed": false,
+  "public_file_registry_changed": false,
+  "sitemap_changed": false,
+  "no_new_routes": true,
+  "non_monetization_surface": true,
+  "non_revenue_claim": true,
+  "non_pricing": true,
+  "non_subscription": true,
+  "non_support_surface": true,
+  "non_sponsorship_surface": true,
+  "non_donation_surface": true,
+  "non_paid_report": true,
+  "non_private_access": true,
+  "non_consulting_offer": true,
+  "non_service_funnel": true,
+  "non_lead_generation": true,
+  "non_sales_surface": true,
+  "non_pitch_deck": true,
+  "non_acquisition_solicitation": true,
+  "non_buyer_solicitation": true,
+  "non_valuation": true,
+  "non_transaction_surface": true,
+  "non_due_diligence_room": true,
+  "non_private_data_room": true,
+  "non_buyer_packet": true,
+  "non_investor_packet": true,
+  "non_legal_representation": true,
+  "non_financial_representation": true,
+  "non_investment_claim": true,
+  "non_authority_claim": true,
+  "non_verification_claim": true,
+  "non_proof": true,
+  "non_detector": true,
+  "non_scoring": true,
+  "non_verdict": true,
+  "non_case_conclusion": true,
+  "non_transactional_review_surface": true,
+  "route_count_drift_found": false,
+  "stale_copy_found": false,
+  "unsafe_revenue_language_found": false,
+  "monetization_drift_found": false,
+  "pricing_drift_found": false,
+  "subscription_drift_found": false,
+  "support_surface_drift_found": false,
+  "sponsorship_drift_found": false,
+  "donation_drift_found": false,
+  "paid_report_drift_found": false,
+  "private_access_drift_found": false,
+  "consulting_offer_drift_found": false,
+  "service_funnel_drift_found": false,
+  "lead_generation_drift_found": false,
+  "sales_page_drift_found": false,
+  "pitch_deck_drift_found": false,
+  "acquisition_solicitation_drift_found": false,
+  "buyer_solicitation_drift_found": false,
+  "pricing_or_valuation_drift_found": false,
+  "transaction_readiness_drift_found": false,
+  "due_diligence_room_drift_found": false,
+  "private_data_room_drift_found": false,
+  "buyer_packet_drift_found": false,
+  "investor_packet_drift_found": false,
+  "legal_or_financial_representation_drift_found": false,
+  "investment_claim_drift_found": false,
+  "authority_claim_drift_found": false,
+  "verification_drift_found": false,
+  "proof_drift_found": false,
+  "detector_drift_found": false,
+  "score_or_verdict_drift_found": false,
+  "case_conclusion_drift_found": false,
+  "audit_as_certification_drift_found": false,
+  "source_as_proof_drift_found": false
+}
