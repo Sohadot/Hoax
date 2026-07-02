@@ -3546,3 +3546,22 @@ At 103 routes, citation-safe reuse of Reference Answer, Source Confidence, Cite 
 - Citation orientation is static reference guidance only.
 - Citation-generator behavior, generated-citation output, legal citation claims, academic endorsement, verification claims, detector support, score support, verdict support, and transaction behavior remain unauthorized.
 
+## DEC-138 — Public Reference Source Use Orientation Rule Adopted
+
+**Date:** 2026-07-02
+**Status:** Active
+
+### Decision
+
+Sprint 122 adds a visible source-use-orientation route at `/source-use-orientation/`. Public source use orientation may explain how Hoax.ai uses sources to support reference boundaries, source-confidence framing, citation-safe context, and public reference claims, but must not create proof claims, verification claims, authority certification, source endorsement, legal or academic source status, detector evidence, score basis, verdict support, case conclusions, operational procedures, report generation, or transaction surfaces.
+
+### Rationale
+
+At 104 routes, source-backed public reference claims require explicit orientation so humans and AI agents do not rewrite repository traceability as proof language, authority certification, or case-outcome support.
+
+### Implications
+
+- DEC-138 governs the visible Sprint 122 route `/source-use-orientation/`.
+- Source use orientation is static reference guidance only.
+- Proof claims, verification claims, authority certification, source endorsement, detector evidence, score basis, verdict support, and transaction behavior remain unauthorized.
+

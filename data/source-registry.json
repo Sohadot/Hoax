@@ -10840,6 +10840,102 @@
       "reliability_posture": "repository_authoritative",
       "status": "active",
       "notes": "Sprint 121 audit validator."
+    },
+    {
+      "source_id": "SOURCE-0846",
+      "source_title": "PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_V1.md",
+      "source_type": "governance_file",
+      "location": "PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_V1.md",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 122 PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_V1.md."
+    },
+    {
+      "source_id": "SOURCE-0847",
+      "source_title": "PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_STANDARD_V1.md",
+      "source_type": "governance_file",
+      "location": "PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_STANDARD_V1.md",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 122 PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_STANDARD_V1.md."
+    },
+    {
+      "source_id": "SOURCE-0848",
+      "source_title": "PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_AUDIT_V1.md",
+      "source_type": "governance_file",
+      "location": "PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_AUDIT_V1.md",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 122 PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_AUDIT_V1.md."
+    },
+    {
+      "source_id": "SOURCE-0849",
+      "source_title": "SPRINT_122_PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_V1.md",
+      "source_type": "governance_file",
+      "location": "SPRINT_122_PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_V1.md",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 122 SPRINT_122_PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_V1.md."
+    },
+    {
+      "source_id": "SOURCE-0850",
+      "source_title": "public-reference-source-use-orientation-v1.json",
+      "source_type": "governance_file",
+      "location": "data/public-reference-source-use-orientation-v1.json",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 122 public-reference-source-use-orientation-v1.json."
+    },
+    {
+      "source_id": "SOURCE-0851",
+      "source_title": "public-reference-source-use-orientation-v1.schema.json",
+      "source_type": "governance_file",
+      "location": "data/public-reference-source-use-orientation-v1.schema.json",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 122 public-reference-source-use-orientation-v1.schema.json."
+    },
+    {
+      "source_id": "SOURCE-0852",
+      "source_title": "validate_public_reference_source_use_orientation_v1.py",
+      "source_type": "governance_file",
+      "location": "validators/validate_public_reference_source_use_orientation_v1.py",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 122 validate_public_reference_source_use_orientation_v1.py."
+    },
+    {
+      "source_id": "SOURCE-0853",
+      "source_title": "source-use-orientation/index.html",
+      "source_type": "public_html",
+      "location": "source-use-orientation/index.html",
+      "supports": [
+        "governance_claim"
+      ],
+      "reliability_posture": "repository_authoritative",
+      "status": "active",
+      "notes": "Sprint 122 source-use-orientation/index.html."
     }
   ]
 }

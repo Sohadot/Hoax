@@ -1344,6 +1344,17 @@
       "status": "active",
       "last_reviewed": "2026-07-02",
       "notes": "Sprint 121 audit-only citation walkthrough hardening."
+    },
+    {
+      "claim_id": "CLAIM-0123",
+      "claim_text": "Hoax.ai added Public Reference Source Use Orientation v1 at /source-use-orientation/ as ROUTE-0104 and PUB-FILE-0104, expanding the public surface from 103 to 104 routes with source-use orientation only and no proof claims, verification claims, source endorsement, detector evidence, score basis, verdict support, workflow, API, form, upload, dashboard, transaction, or sales behavior.",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_location": "PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_V1.md, data/public-reference-source-use-orientation-v1.json, source-use-orientation/index.html, validators/validate_public_reference_source_use_orientation_v1.py, SPRINT_122_PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_V1.md",
+      "source_type": "governance_file",
+      "status": "active",
+      "last_reviewed": "2026-07-02",
+      "notes": "Sprint 122 source use orientation route."
     }
   ]
 }

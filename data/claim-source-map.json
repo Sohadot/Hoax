@@ -3105,6 +3105,37 @@
       "traceability_status": "traceable",
       "public_surface_refs": [],
       "notes": "Sprint 121 audit-only citation walkthrough validation."
+    },
+    {
+      "claim_id": "CLAIM-0123",
+      "claim_type": "governance_claim",
+      "evidence_posture": "repository_supported",
+      "support_locations": [
+        "PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_V1.md",
+        "PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_STANDARD_V1.md",
+        "PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_AUDIT_V1.md",
+        "SPRINT_122_PUBLIC_REFERENCE_SOURCE_USE_ORIENTATION_V1.md",
+        "data/public-reference-source-use-orientation-v1.json",
+        "data/public-reference-source-use-orientation-v1.schema.json",
+        "validators/validate_public_reference_source_use_orientation_v1.py",
+        "source-use-orientation/index.html",
+        "DECISION_LOG.md"
+      ],
+      "source_refs": [
+        "SOURCE-0846",
+        "SOURCE-0847",
+        "SOURCE-0848",
+        "SOURCE-0849",
+        "SOURCE-0850",
+        "SOURCE-0851",
+        "SOURCE-0852",
+        "SOURCE-0853",
+        "SOURCE-0797"
+      ],
+      "support_scope": "public reference source use orientation v1",
+      "traceability_status": "traceable",
+      "public_surface_refs": [],
+      "notes": "Sprint 122 source use orientation governance and production."
     }
   ],
   "last_reviewed": "2026-07-02"
